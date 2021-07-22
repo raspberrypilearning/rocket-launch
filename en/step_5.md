@@ -1,10 +1,11 @@
-## Step 3
+## Step 5
 
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">
-Countdown function - for loops and the range function + arguments. Sleep function
+Add an orbit elipse and explain you need to reach altitude to escape.
+>= operator
+Tint when crossing line
 
-Have them write and run range 10 to see how it goes 0, 9 and make them make the changes needed, explaining why they're needed. 
 </div>
 <div>
 Image, gif or video showing what they will achieve by the end of the step. ![](images/image.png){:width="300px"}
@@ -20,8 +21,30 @@ from time import sleep
 SCREEN_WIDTH = 480
 SCREEN_HEIGHT = 400
 PLANET_RADIUS = 150
+ROCKET_HEIGHT = 34.4 ### Can we just ask processing for the width and height?
+ROCKET_WIDTH = 20
+ORBIT_RADIUS = PLANET_RADIUS + 100
 
 planet = None
+rocket = None
+
+def fly(frames):
+  
+  distance_travelled = 10 * frames
+  
+  # Reached orbit
+  if distance_travelled >= ORBIT_RADIUS:
+    tint(0, 200, 0)
+  
+  image(
+      rocket, 
+      SCREEN_WIDTH/2, 
+      SCREEN_HEIGHT-(ROCKET_HEIGHT/2)-distance_travelled, 
+      ROCKET_WIDTH, 
+      ROCKET_HEIGHT
+      )
+  
+  no_tint()
 
 def countdown():
 
@@ -44,14 +67,25 @@ def draw_bg():
   PLANET_RADIUS*2 # sprite height
   )
 
+  # Draw an orbit around the planet
+  no_fill()
+  stroke(0, 200, 0)
+  ellipse(
+      SCREEN_WIDTH/2, 
+      SCREEN_HEIGHT, 
+      ORBIT_RADIUS*2,
+      ORBIT_RADIUS*2
+    )
+  no_stroke()
 
 def setup():
-  global planet
+  global planet, rocket
   
   frame_rate(10)
 
   # Load the sprite from file
   planet = load_image('planet.png')
+  rocket = load_image('rocket.png')
   
   # The endless void of space
   size(SCREEN_WIDTH, SCREEN_HEIGHT)
@@ -61,6 +95,8 @@ def setup():
 def draw():
   
   draw_bg()
+
+  fly(frame_count)
   
 run()
 
