@@ -150,9 +150,19 @@ def setup():
 
 --- /task ---
 
-You'll use the `image` function to draw the sprite. The function needs to be told how big the sprite should be, and where to position its top-left corner on the grid (represented by the red circle in the image below). Because you need to line the centre of the image up with the centre of the grid (represented by the pink diamond), you need to subtract half the width of the image (the value of the `PLANET_RADIUS` variable) from the x-coordinate of the centre of the grid (half of the `SCREEN_WIDTH` variable). Likewise, to have half the image hidden below the bottom of the grid, you need to subtract `PLANET_RAIUS` from the y-coordinate of the bottom of the grid (the `SCREEN_HEIGHT` variable).
+You'll use the `image` function to draw the sprite. 
+
+--- collapse ---
+---
+title: Centering the sprite with the image function
+---
+
+You'll use the `image` function to draw the sprite. The function needs to know how big the sprite should be, and where to put the sprite's top-left corner (the red circle in the image below). Because you need the centre of the image at the centre of the grid (represented by the pink diamond), you have to adjust the corner's position for that. Subtract half the width of the sprite (the `PLANET_RADIUS` variable) from the x-coordinate of the centre of the grid (half of the `SCREEN_WIDTH` variable) to get the x-coordinate of the sprite. For the y-coordinate, to keep half the image hidden below the bottom of the grid, subtract `PLANET_RAIUS` from the y-coordinate of the bottom of the grid (the `SCREEN_HEIGHT` variable).
 
 ![A blue rectangle centred on a grid, with a red circle at its upper-left corner, and a pink diamond at its upper centre.](images/image_grid.png)
+
+
+--- /collapse ---
 
 --- task ---
 
