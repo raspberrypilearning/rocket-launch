@@ -1,34 +1,31 @@
 ## Introduction
 
-In this project, <mark> short project description </mark>
-
-<mark>Boxout (wherever wanted/needed) </mark>
-
-<p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;">
-<span style="color: #0faeb0">**Term**</span> description of term or interesting phrase.
-</p>
-
-<mark>Objectives in language that learners will understand</mark>
+In this project, you will make an animation of a rocket launching into orbit. Your program will adjust the animation based on how powerful you make the engine and how much fuel you put in the rocket, to decide whether the rocket successfully enters orbit.
 
 You will:
-+ Loops
-+ Functions with parameters
-+ Using sprites
++ Use loops to repeat actions
++ Use functions with parameters
++ Use sprites in your animations
 
 --- no-print ---
 --- task ---
 ### Try it
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 175px; flex-grow: 1">  
-Description of what to do or think about when looking at the example.
+You have to supply the rocket with a certain amount of fuel. Too much fuel and it will be too heavy to lift-off. Too little, and it will run out before reaching orbit. Around 3000 kg should be enough to get you into orbit. Try a bit less and a lot more, to see how the program responds if you fail to reach orbit, of fail to even launch!
 </div>
-<div class="scratch-preview" style="margin-left: 15px;">
-  <iframe allowtransparency="true" width="485" height="402" src="https://scratch.mit.edu/projects/embed/485673032/?autostart=false" frameborder="0"></iframe>
-</div>
+<iframe src="https://trinket.io/embed/python/b8ce1a18a6?outputOnly=true&runOption=run" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
 </div>
 --- /task ---
 --- /no-print ---
 
 --- print-only ---
-![Completed project](images/showcase_static.png)
+![Completed project](images/showcase.png)
 --- /print-only ---
+
+<p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;">
+<span style="color: #0faeb0">**Computer programming and space flight:**</span> Computers, and computer programmers have been a part of spaceflight since it began. The maths needed to get spacecraft into space and move them around there are just too complex for humans to do as fast as astronauts need the answers. These days the computers go to space with the astronauts but, in the early days of spaceflight, computers were still huge machines that took up whole rooms and the results of their calculations had to be sent up to the spacecraft by radio. 
+<br>
+[Katherine Johnson](https://en.wikipedia.org/wiki/Katherine_Johnson) and her colleagues Mary Jackson and Dorothy Vaughan, mathmaticians and computer programmers who worked at NASA in the early days of spaceflight, are the subjects of the film 'Hidden Figures'. That film not only gives you a chance to understand the early days of computing, but also showcases the injustices that Johnson and her colleagues had to contend with as black women working in an environment dominated by white men.
+</p>
+
