@@ -12,7 +12,6 @@ steps:
   - title: Step title
   - title: Step title
   - title: Step title
-  - title: Step title
   - title: Reflection
     knowledge_quiz:
       path: quiz1
