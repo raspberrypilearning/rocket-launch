@@ -12,7 +12,7 @@ You will:
 ### Try it
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 175px; flex-grow: 1">  
-You have to supply the rocket with a certain amount of fuel. Too much fuel and it will be too heavy to lift-off. Too little, and it will run out before reaching orbit. Around 3000 kg should be enough to get you into orbit. Try a bit less and a lot more, to see how the program responds if you fail to reach orbit, of fail to even launch!
+You have to supply the rocket with a certain amount of fuel. Too much fuel and it will be too heavy to lift-off. Too little, and it will run out before reaching orbit. Around 3000 kg should be enough to get you into orbit. Try a bit less and a lot more, to see how the program responds if you fail to reach orbit, or fail to even launch!
 </div>
 <iframe src="https://trinket.io/embed/python/b8ce1a18a6?outputOnly=true&runOption=run" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
 </div>
