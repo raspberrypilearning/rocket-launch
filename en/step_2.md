@@ -2,35 +2,80 @@
 
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">
-What is a sprite. How to load a sprite. How to position and size a sprite relative to screen.
-
-Use gifs — use OBS > easygif workflow
+You will now create your program, and add a sprite for the planet your rocket will be launching from.
 </div>
 <div>
-Image, gif or video showing what they will achieve by the end of the step. ![](images/image.png){:width="300px"}
+![A planet against a black background](images/step_2.png){:width="300px"}
 </div>
 </div>
 
 --- task ---
 
-Open a [new Scratch project](http://rpf.io/scratch-new){:target="_blank"}. Scratch will open in another browser tab.
-
-[[[working-offline]]]
-
---- /task ---
-
---- task ---
-
-Step content... 
-Can use:
-**Test:**
-**Choose:**
-**Tip:**
-
---- /task ---
+Open the [project template](https://trinket.io/python/b0f4874ac4){:target="_blank"} and remix it.
 
 --- save ---
 
+--- /task ---
+
+First, setup the black background of space.
+
+--- task ---
+
+Add some variables for your animation's width and height where the comments tell you to create global variables:
+
+--- code ---
+---
+language: python
+filename: main.py
+line_numbers: true
+line_number_start: 6 
+line_highlights: 7-9
+---
+# Setup global variables 
+SCREEN_WIDTH = 480
+SCREEN_HEIGHT = 400
+
+--- /code ---
+
+Then use those variables to set the animation's size in the `setup` function:
+
+--- code ---
+---
+language: python
+filename: main.py
+line_numbers: true
+line_number_start: 18 
+line_highlights: 20
+---
+def setup():
+  # Setup your animation here
+  size(SCREEN_WIDTH, SCREEN_HEIGHT)
+--- /code ---
+
+--- save ---
+
+--- /task ---
+
+--- task ---
+
+Create a `draw_bg` function below the comment that tells you where it should go. Use `background` to set the background colour to black.
+
+```python
+# The draw_bg function goes here
+def draw_bg()
+  background(0,0,0)
+```
+
+**Tip:** Placing the instructions for drawing the background into their own function means that you can easily re-draw the background in every frame of your animation by calling `draw_bg`.
+--- /task ---
+
+Now you need to add the planet image to your animation.
+
+--- task ---
+
+First, you need to 
+
+--- /task ---
 
 ```python
 #!/bin/python3
