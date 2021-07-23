@@ -150,11 +150,11 @@ def setup():
 
 --- /task ---
 
---- task ---
-
-Next, add the planet sprite to your `draw_bg` function. You'll do this with the `image` function, which needs to be told how big the sprite should be, and where to position its top-left corner on the grid (represented by the red circle in the image below). Because you need to line the centre of the image up with the centre of the grid (represented by the pink diamond in the image below), you need to subtract half the width of the image (the value of the `PLANET_RADIUS` variable) from the x-coordinate of the centre of the grid (half of the `SCREEN_WIDTH` variable). Likewise, to have half the image hidden below the bottom of the grid, you need to subtract `PLANET_RAIUS` from the y-coordinate of the bottom of the grid (the `SCREEN_HEIGHT` variable).
+You'll use the `image` function to draw the sprite. The function needs to be told how big the sprite should be, and where to position its top-left corner on the grid (represented by the red circle in the image below). Because you need to line the centre of the image up with the centre of the grid (represented by the pink diamond), you need to subtract half the width of the image (the value of the `PLANET_RADIUS` variable) from the x-coordinate of the centre of the grid (half of the `SCREEN_WIDTH` variable). Likewise, to have half the image hidden below the bottom of the grid, you need to subtract `PLANET_RAIUS` from the y-coordinate of the bottom of the grid (the `SCREEN_HEIGHT` variable).
 
 ![A blue rectangle centred on a grid, with a red circle at its upper-left corner, and a pink diamond at its upper centre.](images/image_grid.png)
+
+--- task ---
 
 Update the code in `draw_bg` to draw the planet sprite:
 
