@@ -11,7 +11,6 @@ The point of launching a rocket into space is, usually, to enter orbit of the Ea
 </div>
 </div>
 
-
 --- task ---
 
 Add a variable to give the radius of the orbit circle you're drawing around the planet. Base it on the planet radius, to make sure it's always bigger.
@@ -31,8 +30,6 @@ ORBIT_RADIUS = PLANET_RADIUS + 100
 --- /code ---
 
 Then, in the `draw_bg` function, add some code to draw a circle with that radius that is centred on the same point as the planet image. You can do this with the `ellipse` function.
-
-[[[processing-python-ellipse]]]
 
 --- code ---
 ---
