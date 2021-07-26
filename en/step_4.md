@@ -5,9 +5,7 @@
 Make your rocket fly, by creating a function that accepts a parameter.
 </div>
 <div>
-Image, gif or video showing what they will achieve by the end of the step. ![](images/image.png){:width="300px"}
-
-Move setting the framerate here
+![A rocket flying at a steady speed from the bottom to the top of the screen.](images/fly.gif){:width="300px"}
 </div>
 </div>
 

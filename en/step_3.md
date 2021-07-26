@@ -7,7 +7,7 @@ Before launching, rockets have a countdown. To create this in your program, you'
 
 </div>
 <div>
-![A countdown from 10 to 0 printing out, followed by the message 'We have liftoff!' and several 🚀](images/countdown_fixed.gif)
+![A countdown from 10 to 0 printing out, followed by the message 'We have liftoff!' and several 🚀](images/countdown_fixed.gif){:width="300px"}
 </div>
 </div>
 
