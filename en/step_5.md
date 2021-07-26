@@ -31,6 +31,8 @@ ORBIT_RADIUS = PLANET_RADIUS + 100
 
 Then, in the `draw_bg` function, add some code to draw a circle with that radius that is centred on the same point as the planet image. You can do this with the `ellipse` function.
 
+[[[processing-python-ellipse]]]
+
 --- code ---
 ---
 language: python
