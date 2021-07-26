@@ -1,104 +1,107 @@
-## Step 5
+## Reaching orbit
 
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">
-Add an orbit elipse and explain you need to reach altitude to escape.
->= operator
-Tint when crossing line
+
+The point of launching a rocket into space is, usually, to enter orbit of the Earth. To enter orbit, you have to get high enough above the Earth so that you no-longer fall straight back down. In reality, this is usually at least 160 km above the Earth, but since this animation is a model, you're going to be using smller, rounder, numbers. 
 
 </div>
 <div>
-Image, gif or video showing what they will achieve by the end of the step. ![](images/image.png){:width="300px"}
+![The rocket launches from a planet encircled by a thin green line. As the rocket passes the line, it turns green.](images/tint_orbit.gif){:width="300px"}
 </div>
 </div>
 
 
-```python
-#!/bin/python3
-from p5 import *
-from time import sleep
+--- task ---
 
-SCREEN_WIDTH = 480
-SCREEN_HEIGHT = 400
+Add a variable to give the radius of the orbit circle you're drawing around the planet. Base it on the planet radius, to make sure it's always bigger.
+
+--- code ---
+---
+language: python
+filename: main.py
+line_numbers: true
+line_number_start: 10 
+line_highlights: 12-13
+---
 PLANET_RADIUS = 150
-ROCKET_HEIGHT = 34.4 ### Can we just ask processing for the width and height?
-ROCKET_WIDTH = 20
+ROCKET_HEIGHT = 30
 ORBIT_RADIUS = PLANET_RADIUS + 100
 
-planet = None
-rocket = None
+--- /code ---
 
-def fly(frames):
-  
-  distance_travelled = 10 * frames
-  
-  # Reached orbit
-  if distance_travelled >= ORBIT_RADIUS:
-    tint(0, 200, 0)
-  
-  image(
-      rocket, 
-      SCREEN_WIDTH/2, 
-      SCREEN_HEIGHT-(ROCKET_HEIGHT/2)-distance_travelled, 
-      ROCKET_WIDTH, 
-      ROCKET_HEIGHT
-      )
-  
-  no_tint()
+Then, in the `draw_bg` function, add some code to draw a circle with that radius that is centred on the same point as the planet image. You can do this with the `ellipse` function.
 
-def countdown():
+[[[processing-python-ellipse]]]
 
-  for t_minus in range(10, -1, -1):
-    print('T minus', t_minus)
-    sleep(1)
-
-  print('We have liftoff!')
-  print('🚀🚀🚀🚀🚀')
-
-def draw_bg():
-  background(0, 0, 0)
-
-  # Draw an origin planet
-  image(
-  planet, # sprite
-  (SCREEN_WIDTH/2)-PLANET_RADIUS, # x top-left corner
-  SCREEN_HEIGHT-PLANET_RADIUS, # y top-left corner
-  PLANET_RADIUS*2, # sprite width
+--- code ---
+---
+language: python
+filename: main.py
+line_numbers: true
+line_number_start: 50 
+line_highlights: 53-63
+---
   PLANET_RADIUS*2 # sprite height
   )
-
-  # Draw an orbit around the planet
-  no_fill()
-  stroke(0, 200, 0)
+  
+  no_fill() # Turn off any fill
+  stroke(0, 200, 0) # Set a green stroke
   ellipse(
       SCREEN_WIDTH/2, 
       SCREEN_HEIGHT, 
       ORBIT_RADIUS*2,
       ORBIT_RADIUS*2
     )
-  no_stroke()
+  no_stroke() # Turn off the stroke
 
-def setup():
-  global planet, rocket
+--- /code ---
+
+--- save ---
+
+**Test:** Run your code and check that it draws the circle.
+
+--- /task ---
+
+You should see something that looks like this:
+
+![A planet with a green circle around it](images/orbit.png)
+
+Next, make the rocket change colour when it successfully enters orbit. You can do this by using the `tint` function (<mark>Have they seen this?</mark>) to make it turn green once it has travelled far enough, as meansured by the `how_far` variable, to have covered a distance greater than or equal to the `ORBIT_RADIUS`. You can use greater than or equal to (`>=`) as part of the test for an `if` statement.
+
+--- task ---
+
+Update your `fly` function to make that test and add the tint if it passes:
+
+--- code ---
+---
+language: python
+filename: main.py
+line_numbers: true
+line_number_start: 18 
+line_highlights: 21-25, 34
+---
+def fly(frames):
   
-  frame_rate(10)
-
-  # Load the sprite from file
-  planet = load_image('planet.png')
-  rocket = load_image('rocket.png')
+  how_far = 10 * frames
   
-  # The endless void of space
-  size(SCREEN_WIDTH, SCREEN_HEIGHT)
-
-  countdown()
-
-def draw():
+  # Reached orbit?
+  if how_far >= ORBIT_RADIUS:
+    tint(0, 200, 0)
   
-  draw_bg()
+  image(
+    rocket, 
+    SCREEN_WIDTH/2, 
+    SCREEN_HEIGHT-(ROCKET_HEIGHT/2)-how_far, 
+    rocket.width/(rocket.height/ROCKET_HEIGHT), 
+    ROCKET_HEIGHT
+    )
+    
+  no_tint()
+--- /code ---
 
-  fly(frame_count)
-  
-run()
+--- save ---
 
+**Test:** Run your code and watch the rocket change colour as it enters orbit.
 
-```
+--- /task ---
