@@ -1,7 +1,7 @@
 ## Fuel weight
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">
-Time to make your rocket more realistic. Ine of the most important things to decide when building a rocket is how to blance the amount of fuel your rocket has to burn before it runs out, with how much that fuel weighs. Every extra kilogram of fuel is another kilogram of weight the rocket has to lift. Too little fuel, and you can't burn the engine long enough to reach orbit. Too much fuel, and the rocket is too heavy to fly.
+Time to make your rocket more realistic. One of the most important things to decide when building a rocket is how to balance the amount of fuel your rocket has to burn before it runs out, with how much that fuel weighs. Every extra kilogram of fuel is another kilogram of weight the rocket has to lift. Too little fuel, and you can't burn the engine long enough to reach orbit. Too much fuel, and the rocket is too heavy to fly.
 </div>
 </div>
 <iframe src="https://trinket.io/embed/python/ced6bff454?toggleCode=true&runOption=run&start=result" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
