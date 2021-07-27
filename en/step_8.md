@@ -4,7 +4,11 @@
 <div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">
 Add inputs
 
+Adjust for fractional fuel?
+
 Add a debug on ints, floats, casting
+
+
 </div>
 <div>
 ![](images/image.png){:width="300px"}

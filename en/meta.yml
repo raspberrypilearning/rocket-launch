@@ -11,7 +11,7 @@ steps:
   - title: Countdown
   - title: Liftoff!
   - title: Reaching orbit
-  - title: Step title
+  - title: Fuel weight
   - title: Reflection
     knowledge_quiz:
       path: quiz1
