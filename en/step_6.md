@@ -4,7 +4,8 @@
 Time to make your rocket more realistic. One of the most important things to decide when building a rocket is how much fuel to load into it.
 </div>
 </div>
-<iframe src="https://trinket.io/embed/python/ced6bff454?toggleCode=true&runOption=run&start=result" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+
+<iframe src="https://trinket.io/embed/python/fa55405c62?outputOnly=true&runOption=run" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
 
 --- task ---
 
@@ -21,8 +22,8 @@ line_highlights: 17-20
 planet = None
 rocket = None
 how_far = 0 # how far the rocket has travelled
-burn = 1000 # how much fuel the rocket burns every frame
-fuel = 25000 # how many kgs of fuel the rocket starts with
+burn = 1000 # burn how much fuel every frame?
+fuel = 25000 # start with how many kgs of fuel?
 
 --- /code ---
 
@@ -132,6 +133,8 @@ def setup():
   
   
 --- /code ---
+
+**Tip:** You have to surround `input()` with `int()` to turn what the user types into a number you can do maths with.
 
 --- /task ---
 

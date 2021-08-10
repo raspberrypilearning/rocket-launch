@@ -18,9 +18,9 @@ You will:
 ### Try it
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 175px; flex-grow: 1">  
-You have to supply the rocket with a certain amount of fuel. Try a very small amount (around 10kg) and a very large amount (around 10000 kg) to see what happens.
+You have to supply the rocket with a certain amount of fuel. Try a very small amount (around 10kg) and a very large amount (around 30000 kg) to see what happens.
 </div>
-<iframe src="https://trinket.io/embed/python/ced6bff454?outputOnly=true&runOption=run&start=result" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+<iframe src="https://trinket.io/embed/python/fa55405c62?outputOnly=true&runOption=run" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
 </div>
 --- /task ---
 --- /no-print ---
@@ -30,5 +30,5 @@ You have to supply the rocket with a certain amount of fuel. Try a very small am
 --- /print-only ---
 
 <p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;">
-![Katherine Johnson](images/katherine_johnson.png) [Katherine Johnson](https://en.wikipedia.org/wiki/Katherine_Johnson) and her colleagues [Mary Jackson](https://en.wikipedia.org/wiki/Mary_Jackson_(engineer)) and [Dorothy Vaughan](https://en.wikipedia.org/wiki/Dorothy_Vaughan), mathmaticians and computer programmers who worked at NASA in the early days of spaceflight, are the subjects of the film 'Hidden Figures'. That film not only gives you a chance to understand the early days of computing, but also showcases the injustices that Johnson and her colleagues had to contend with as black women working in an environment dominated by white men.
+![Katherine Johnson](images/katherine_johnson.jpeg) [Katherine Johnson](https://en.wikipedia.org/wiki/Katherine_Johnson) and her colleagues [Mary Jackson](https://en.wikipedia.org/wiki/Mary_Jackson_(engineer)) and [Dorothy Vaughan](https://en.wikipedia.org/wiki/Dorothy_Vaughan), mathmaticians and computer programmers who worked at NASA in the early days of spaceflight, are the subjects of the film 'Hidden Figures'. That film not only gives you a chance to understand the early days of computing, but also showcases the injustices that Johnson and her colleagues had to contend with as black women working in an environment dominated by white men.
 </p>

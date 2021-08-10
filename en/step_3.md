@@ -53,7 +53,7 @@ def countdown():
   count = range(10)
   
   for t_minus in count:
-    print('T minus', t_minus) # Print out the countdown at each step
+    print('T minus', t_minus) # Print at each step
 
 
 --- /code ---
@@ -77,7 +77,7 @@ def countdown():
   count = range(10)
 
   for t_minus in count:
-    print('T minus', t_minus) # Print out the countdown at each step
+    print('T minus', t_minus) # Print at each step
 
   print('We have liftoff!')
   print('🚀🚀🚀🚀🚀')
@@ -139,7 +139,7 @@ line_highlights: 18
   count = range(11)
 
   for t_minus in count:
-    print('T minus', t_minus) # Print out the countdown at each step
+    print('T minus', t_minus) # Print at each step
 --- /code ---
 
 **Test:** If you run this code, you'll see 10 in the program's output.
@@ -162,7 +162,7 @@ line_highlights: 18
   count = range(10,-1,-1)
 
   for t_minus in count:
-    print('T minus', t_minus) # Print out the countdown at each step
+    print('T minus', t_minus) # Print at each step
 --- /code ---
 
 --- save ---
@@ -203,7 +203,7 @@ line_number_start: 21
 line_highlights: 23
 ---
   for t_minus in range(10,-1,-1):
-    print('T minus', t_minus) # Print out the countdown at each step
+    print('T minus', t_minus) # Print at each step
     sleep(1)
 
   print('We have liftoff!')
