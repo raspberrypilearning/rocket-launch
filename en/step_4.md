@@ -9,19 +9,19 @@ Make your rocket fly, by creating a function that accepts a parameter.
 </div>
 </div>
 
-Functions that accept parameters as inputs are really useful tools: they let you create a piece of code that produces different outputs based on its inputs, which can be very useful in your programming. You've actually used lots of these kinds of functions already: the `print`, `sleep`, and `background` functions all accept parameters that change what gets printed, how long the program waits for, and what colour the background is, respectively. 
+Functions that accept parameters as inputs are really powerful tools: they let you create a piece of code that produces different outputs based on its inputs, which can be very useful in your programming. You've actually used lots of these kinds of functions already: the `print()`, `sleep()`, and `background()` functions all accept parameters that change what gets printed, how long the program waits for, and what colour the background is, respectively. The function you're going to create will use the amount of time the animation has been running to decide where to draw your rocket.
 
 --- task ---
 
-Create a function called `fly` that accepts a parameter called `frames`. You give a function parameters by placing them in the parentheses after the function's name when you define it with `def`. Have it set a variable called `how_far` to ten times `frames`. Then have it print that variable out.
+Create a function called `fly()` that accepts a parameter called `frames`. You give a function parameters by placing them in the parentheses after the function's name when you define it with `def`. Have it set a variable called `how_far` to ten times `frames`. Then have it print that variable out.
 
 --- code ---
 ---
 language: python
-filename: main.py
+filename: main.py — fly()
 line_numbers: true
 line_number_start: 14 
-line_highlights: 15-19
+line_highlights: 15-20
 ---
 # The fly function goes here
 def fly(frames):
@@ -35,14 +35,15 @@ def fly(frames):
 
 --- task ---
 
-Add a line to the `draw` function that calls your `fly` function and passes `frame_count` to it. `frame_count` is the number of frames of your animation that have been drawn.
+Add a line to the `draw()` function that calls your `fly()` function and passes `frame_count` to it. `frame_count` is a variable built-in to the p5 library, that counts number of frames of your animation that have been drawn.
 
+--- code ---
 ---
 language: python
-filename: main.py
+filename: main.py — draw()
 line_numbers: true
-line_number_start: 54 
-line_highlights: 57-59
+line_number_start: 58
+line_highlights: 61-62
 ---
 def draw():
   # Things to do in every frame
@@ -63,33 +64,33 @@ These numbers, that your code prints out, can be used as the y-coordinates for d
 
 --- task ---
 
-You'll need a rocket sprite, which you can create the same way you created the planet sprite. First, declare the global variable below the one for the planet, as well as one for the height of the rocket, below the `PLANET_RADIUS` variable.
-
+You'll need a rocket sprite, which you can create the same way you created the planet sprite. First, declare global variables to hold the height and width of the rocket, as well as one to hold the rocket image itself.
 --- code ---
 ---
 language: python
 filename: main.py
 line_numbers: true
 line_number_start: 10 
-line_highlights: 11, 14-15
+line_highlights: 11-12, 15-16
 ---
 PLANET_RADIUS = 150
-ROCKET_HEIGHT = 30
+ROCKET_HEIGHT = 32
+ROCKET_WIDTH = 20
 
-planet = None
+planet = None  # Make an empty variable
 rocket = None
 
 --- /code ---
 
-Then load the rocket as part of your `setup` function:
+Then load the rocket as part of your `setup()` function. Make sure you add it to the list of `global` variables at the start of the function too, as you'll need to be able to use it in the other functions of your program.
 
 --- code ---
 ---
 language: python
-filename: main.py
+filename: main.py — setup()
 line_numbers: true
-line_number_start: 46 
-line_highlights: 48, 50-51
+line_number_start: 51 
+line_highlights: 53, 55
 ---
 def setup():
   # Setup your animation here
@@ -103,37 +104,42 @@ def setup():
 
 --- task ---
 
-Now you need to draw your rocket sprite into your animation. To do this, you'll modify the fly function to delete the `print` statement and add `image` instead. By using `how_far` as part of the y-coordinate of the rocket, it will change every time the animation draws a new frame. If you subtract `how_far`, then the y-coordinate will get smaller, causing the rocket to move up the screen.
+Now you need to draw your rocket sprite into your animation. To do this, you'll modify the fly function to delete the `print()` statement and add `image()` instead. Because you need the rocket to move by `how_far` every frame, you will use `translate()` to shift the screen in each frame before drawing the image. 
+
+<p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;">
+`translate()` moves the screen into a different position based on coordinates. The shapes on the screen will move with it but their appearance will not change. A translation can move the screen horizontally, vertically, or diagonally.
+</p>
 
 --- code ---
 ---
 language: python
-filename: main.py
+filename: main.py — fly()
 line_numbers: true
-line_number_start: 17 
-line_highlights: 20-27
+line_number_start: 18
+line_highlights: 22-35
 ---
 def fly(frames):
   
   how_far = 10 * frames
   
+  # Put the rocket in the middle of the screen
+  rocket_x = SCREEN_WIDTH/2
+  # Keep the rocket above the bottom of the screen
+  rocket_y = SCREEN_HEIGHT-ROCKET_HEIGHT
+
+  # Move the screen to position the rocket
+  translate(rocket_x, rocket_y - how_far)
+  
   image(
-    rocket, 
-    SCREEN_WIDTH/2, 
-    SCREEN_HEIGHT-(ROCKET_HEIGHT/2)-how_far, 
-    rocket.width/(rocket.height/ROCKET_HEIGHT),
-    ROCKET_HEIGHT
+    rocket, # sprite
+    0, # x-coordinate — 0 because translate did the moving
+    0, # y-coordinate — 0 because translate did the moving
+    ROCKET_WIDTH, # sprite width
+    ROCKET_HEIGHT # sprite height
     )
+
+
 --- /code ---
-
---- collapse ---
----
-title: Controlling image size
----
-
-`rocket.width/(rocket.height/ROCKET_HEIGHT)` uses the `width` and `height` properties of the image file you loaded to calculate the correct width for the image in proportion to your `ROCKET_HEIGHT` value. This lets you adjust the size of the rocket by changing a single variable. If you didn't do this, you would have to recalculate the image's width and height whenever you wanted to change its size, or end up with a squashed looking rocket!
-
---- /collapse ---
 
 --- save ---
 
@@ -150,10 +156,10 @@ Add the `frame_rate` function to `setup` and use it to set your animation to ten
 --- code ---
 ---
 language: python
-filename: main.py
+filename: main.py — setup()
 line_numbers: true
-line_number_start: 53 
-line_highlights: 55
+line_number_start: 67
+line_highlights: 
 ---
 def setup():
   # Setup your animation here

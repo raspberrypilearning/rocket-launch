@@ -21,25 +21,26 @@ language: python
 filename: main.py
 line_numbers: true
 line_number_start: 10 
-line_highlights: 12-13
+line_highlights: 13-14
 ---
 PLANET_RADIUS = 150
-ROCKET_HEIGHT = 30
+ROCKET_HEIGHT = 32
+ROCKET_WIDTH = 20
 ORBIT_RADIUS = PLANET_RADIUS + 100
 
 --- /code ---
 
-Then, in the `draw_bg` function, add some code to draw a circle with that radius that is centred on the same point as the planet image. You can do this with the `ellipse` function.
+Then, in the `draw_bg()` function, add some code to draw a circle with that radius that is centred on the same point as the planet image. You can do this with the `ellipse()` function. Remember that, unlike `image()`, the coordinates you give `ellipse()` are for its centre.
 
 [[[processing-python-ellipse]]]
 
 --- code ---
 ---
 language: python
-filename: main.py
+filename: main.py — draw_bg()
 line_numbers: true
-line_number_start: 50 
-line_highlights: 53-63
+line_number_start: 62
+line_highlights: 64-73
 ---
   PLANET_RADIUS*2 # sprite height
   )
@@ -54,6 +55,7 @@ line_highlights: 53-63
     )
   no_stroke() # Turn off the stroke
 
+
 --- /code ---
 
 --- save ---
@@ -66,19 +68,25 @@ You should see something that looks like this:
 
 ![A planet with a green circle around it](images/orbit.png)
 
-Next, make the rocket change colour when it successfully enters orbit. You can do this by using the `tint` function (<mark>Have they seen this?</mark>) to make it turn green once it has travelled far enough, as meansured by the `how_far` variable, to have covered a distance greater than or equal to the `ORBIT_RADIUS`. You can use greater than or equal to (`>=`) as part of the test for an `if` statement.
+Next, make the rocket change colour when it successfully enters orbit. You can do this by using the `tint` function to make it turn green once it has travelled far enough.
+
+<p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;">
+<span style="color: #0faeb0">**The tint function:**</span> Passing a colour to `tint()` lets you change the colours of any sprite you draw after it. The sprites will look like they have a light of the colour you chose shining on them.  Just like with `stroke()` and `fill()`, there is a `no_tint()` function to turn `tint()` off when you're finished with it.
+</p>
+
+To check if the rocket has travelled far enough, check if `how_far` is greater than or equal to (≥) the `ORBIT_RADIUS` you set. You can do this using `>=` as part of the test for an `if` statement.
 
 --- task ---
 
-Update your `fly` function to make that test and add the tint if it passes:
+Update your `fly()` function to make that test and add the tint if it passes:
 
 --- code ---
 ---
 language: python
-filename: main.py
+filename: main.py — fly()
 line_numbers: true
-line_number_start: 18 
-line_highlights: 21-25, 34
+line_number_start: 19 
+line_highlights: 23-26, 42
 ---
 def fly(frames):
   
@@ -88,15 +96,24 @@ def fly(frames):
   if how_far >= ORBIT_RADIUS:
     tint(0, 200, 0)
   
+  # Put the rocket in the middle of the screen
+  rocket_x = SCREEN_WIDTH/2
+  # Keep the rocket above the bottom of the screen
+  rocket_y = SCREEN_HEIGHT-ROCKET_HEIGHT
+
+  translate(rocket_x, rocket_y - how_far)
+  
   image(
-    rocket, 
-    SCREEN_WIDTH/2, 
-    SCREEN_HEIGHT-(ROCKET_HEIGHT/2)-how_far, 
-    rocket.width/(rocket.height/ROCKET_HEIGHT), 
-    ROCKET_HEIGHT
+    rocket, # sprite
+    0, # x-coordinate — 0 because translate did the moving
+    0, # y-coordinate — 0 because translate did the moving
+    ROCKET_WIDTH, # sprite width
+    ROCKET_HEIGHT # sprite height
     )
-    
+  
   no_tint()
+  
+
 --- /code ---
 
 --- save ---

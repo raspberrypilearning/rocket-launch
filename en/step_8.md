@@ -1,19 +1,17 @@
 ## Upgrade your project
+Your project is complete, but you can still make it better if you want. Here are a few upgrades to consider:
 
-<div style="display: flex; flex-wrap: wrap">
-<div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">
-Add inputs
+ + Let the user set the rate at which the rocket burns fuel
+ + Let the user set how far the rocket flies in each frame
+ + Add a second, higher, orbit for the rocket to reach. Have it change colour again when it gets there. The first orbit can be low orbit, while the second is geosynchronous orbit. 
 
-Adjust for fractional fuel?
+<p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;">
+<span style="color: #0faeb0">**Low orbit:**</span> The first orbit a rocket can reach is called low orbit. In low orbit, the rocket will circle the planet without falling back towards it. Satalites like the International Space Station (ISS) are in low Earth orbit. The <abbr title="International Space Station ">ISS</abbr> orbits the Earth in around 90 minutes!
+</p>
 
-Add a debug on ints, floats, casting
-
-
-</div>
-<div>
-![](images/image.png){:width="300px"}
-</div>
-</div>
+<p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;">
+<span style="color: #0faeb0">**Geostationary orbit:**</span> Once a rocket flies high enough — around 36000 km — it can enter an orbit that lasts as long as the Earth's rotation, and so matches the turning of the planet. This means it can always stay over the same point on Earth. Communications satellites, like those used to send internet, telephone, or television signals, are often in geostationary orbit.
+</p>
 
 --- collapse ---
 
@@ -21,7 +19,7 @@ Add a debug on ints, floats, casting
 title: Completed project
 ---
 
-You can view the [completed project here](https://scratch.mit.edu/projects/485673032/){:target="_blank"}.
+You can view the [completed project here](https://trinket.io/python/fa55405c62){:target="_blank"}.
 
 --- /collapse ---
 
