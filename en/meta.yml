@@ -1,0 +1,22 @@
+title: Rocket launch
+hero_image: images/banner.png
+description: Use Python to make an animation of a rocket launching into orbit.
+version: 0.0.1
+listed: false
+copyedit: false
+last_tested: "2021-07-23"
+steps:
+  - title: Introduction
+  - title: Placing a planet
+  - title: Countdown
+  - title: Liftoff!
+  - title: Reaching orbit
+  - title: Fuel
+  - title: Reflection
+    knowledge_quiz:
+      path: quiz1
+      version: 1
+      questions: 3
+      passing_score: 3
+  - title: Upgrade your project
+  - title: What next?
