@@ -1,4 +1,4 @@
-## Fuel weight
+## Fuel
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">
 Time to make your rocket more realistic. One of the most important things to decide when building a rocket is how much fuel to load into it.
