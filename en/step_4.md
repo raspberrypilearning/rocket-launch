@@ -65,6 +65,7 @@ These numbers, that your code prints out, can be used as the y-coordinates for d
 --- task ---
 
 You'll need a rocket sprite, which you can create the same way you created the planet sprite. First, declare global variables to hold the height and width of the rocket, as well as one to hold the rocket image itself.
+
 --- code ---
 ---
 language: python
