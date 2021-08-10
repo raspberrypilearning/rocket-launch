@@ -105,8 +105,8 @@ def fly(frames):
   
   image(
     rocket, # sprite
-    0, # x-coordinate — 0 because translate did the moving
-    0, # y-coordinate — 0 because translate did the moving
+    0, # x is 0 because translate did the moving
+    0, # y is 0 because translate did the moving
     ROCKET_WIDTH, # sprite width
     ROCKET_HEIGHT # sprite height
     )
