@@ -11,9 +11,9 @@ The point of launching a rocket into space is, usually, to enter orbit of the Ea
 </div>
 </div>
 
---- task ---
-
 Add a variable to give the radius of the orbit circle you're drawing around the planet. Base it on the planet radius, to make sure it's always bigger.
+
+--- task ---
 
 --- code ---
 ---
@@ -30,9 +30,13 @@ ORBIT_RADIUS = PLANET_RADIUS + 100
 
 --- /code ---
 
+--- /task ---
+
 Then, in the `draw_bg()` function, add some code to draw a circle with that radius that is centred on the same point as the planet image. You can do this with the `ellipse()` function. Remember that, unlike `image()`, the coordinates you give `ellipse()` are for its centre.
 
 [[[processing-python-ellipse]]]
+
+--- task ---
 
 --- code ---
 ---
@@ -60,6 +64,10 @@ line_highlights: 64-73
 
 --- save ---
 
+--- /task ---
+
+--- task ---
+
 **Test:** Run your code and check that it draws the circle.
 
 --- /task ---
@@ -76,9 +84,9 @@ Next, make the rocket change colour when it successfully enters orbit. You can d
 
 To check if the rocket has travelled far enough, check if `how_far` is greater than or equal to (≥) the `ORBIT_RADIUS` you set. You can do this using `>=` as part of the test for an `if` statement.
 
---- task ---
-
 Update your `fly()` function to make that test and add the tint if it passes:
+
+--- task ---
 
 --- code ---
 ---
@@ -115,6 +123,10 @@ def fly(frames):
   
 
 --- /code ---
+
+--- /task ---
+
+--- task ---
 
 --- save ---
 

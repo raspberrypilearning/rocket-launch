@@ -12,7 +12,7 @@ I like pizza
 But I prefer ice cream
 ```
 
-How would you call `favourites()`?
+How would you call the `favourites()` function, defined in the code below?
 
 ```python
 def favourites(food, prefercence):

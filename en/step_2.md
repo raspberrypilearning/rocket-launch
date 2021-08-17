@@ -17,11 +17,9 @@ Open the [project template](https://trinket.io/python/b0f4874ac4){:target="_blan
 
 --- /task ---
 
-First, setup the black background of space.
+First, setup the black background of space. Add some variables for your animation's width and height where the comments tell you to create global variables:
 
 --- task ---
-
-Add some variables for your animation's width and height where the comments tell you to create global variables:
 
 --- code ---
 ---
@@ -41,9 +39,9 @@ SCREEN_HEIGHT = 400
 
 --- /task ---
 
---- task ---
-
 Use the variables you've created to set the animation's size in the `setup` function:
+
+--- task ---
 
 --- code ---
 ---
@@ -62,9 +60,9 @@ def setup():
 
 --- /task ---
 
---- task ---
-
 Create a `draw_bg()` function, to draw the background, below the comment that tells you where it should go. Use `background()` to set the background colour to black.
+
+--- task ---
 
 --- code ---
 ---
@@ -82,11 +80,12 @@ def draw_bg():
 --- /code ---
 
 **Tip:** Placing the instructions for drawing the background into their own function means that you can easily re-draw the background in every frame of your animation by calling `draw_bg()`.
+
 --- /task ---
 
---- task ---
-
 To make the background appear, call `draw_bg()` in `draw()`. This will cause the background to be re-drawn every time `draw()` is called, covering over any older drawing.
+
+--- task ---
 
 --- code ---
 ---
@@ -105,15 +104,17 @@ def draw():
 
 --- save ---
 
+--- /task ---
+
+--- task ---
+
 **Test:** Run your code and check that it draws a black background.
 
 --- /task ---
 
-Now you need to add the planet image to your animation.
+Now you need to add the planet image to your animation: First, you need to add a couple of global variables. `planet` will hold the sprite's image file. `PLANET_RADIUS` other will set its radius, which you'll use to control its size.
 
 --- task ---
-
-First, you need to add a couple of global variables. `planet` will hold the sprite's image file. `PLANET_RADIUS` other will set its radius, which you'll use to control its size.
 
 --- code ---
 ---
@@ -133,8 +134,6 @@ planet = None  # Make an empty variable
 --- /code ---
 
 --- /task ---
-
---- task ---
 
 Now update the `setup()` function to load `planet.png` into `planet`. Remember that, to update a global variable, you have to declare it with the `global` keyword inside of `setup()`.
 
@@ -156,6 +155,8 @@ Then choose 'Image Library' and follow the on-screen instructions to upload an i
 Note the filename of the image you've uploaded, and use it in the code in place of `planet.png`.
 
 --- /collapse ---
+
+--- task ---
 
 --- code ---
 ---
@@ -191,9 +192,9 @@ The function also needs to know where to put the sprite's top-left corner. To pl
 ![A planet, centred and half hidden below the bottom of the grid, at the centre of a 400 by 400 grid. The top-left corner of the planet image has its coordinates (50, 250) marked. ](images/planet_grid.png)
 --- /collapse ---
 
---- task ---
-
 Update the code in `draw_bg()` to draw the planet sprite:
+
+--- task ---
 
 --- code ---
 ---
@@ -220,6 +221,10 @@ def draw_bg():
 **Tip:** When calling a function with lots of parameters, like `image()`, you can split the parameters onto different lines to make the code easier to read.
 
 --- save ---
+
+--- /task ---
+
+--- task ---
 
 **Test:** Run your code and watch the planet appear!
 
