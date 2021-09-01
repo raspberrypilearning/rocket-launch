@@ -1,6 +1,6 @@
 ## What next?
 
-If you are following the [Intro to Python](https://projects.raspberrypi.org/en/raspberrypi/python-intro) pathway, you can move on to the [Make a face](https://projects.raspberrypi.org/en/projects/make-a-face) project. In this project, you will draw a target then make an archery game that shoots arrows to score points.
+If you are following the [Intro to Python](https://projects.raspberrypi.org/en/raspberrypi/python-intro) pathway, you can move on to the [Make a face](https://projects.raspberrypi.org/en/projects/make-a-face) project. In this project, you will draw a face or mask using geometric shapes.
 
 --- print-only ---
 
