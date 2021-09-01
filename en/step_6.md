@@ -7,9 +7,9 @@ Time to make your rocket more realistic. One of the most important things to dec
 
 <iframe src="https://trinket.io/embed/python/fa55405c62?outputOnly=true&runOption=run" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
 
---- task ---
-
 Add some variables at the start of your program to keep track of how much fuel your rocket has, how fast that fuel burns (in frames), and how far the rocket has travelled.
+
+--- task ---
 
 --- code ---
 ---
@@ -29,9 +29,9 @@ fuel = 25000 # start with how many kgs of fuel?
 
 --- /task ---
 
---- task ---
-
 Declare `how_far` as a `global` variable, to keep it from being erased every time the `draw()` function calls `fly()` as part of creating a frame.
+
+--- task ---
 
 --- code ---
 ---
@@ -51,9 +51,9 @@ def fly(frames):
 
 --- /task ---
 
---- task ---
-
 Check if burning for the number of frames that have passed would have used up all the rocket's fuel. You can test this by checking if `frames` times `burn` is less than or equal to (≤) the total amount of fuel the rocket started with. Chang your code for `how_far` so it uses `if` and `<=` to only update if the rocket still has fuel.
+
+--- task ---
 
 --- code ---
 ---
@@ -76,9 +76,9 @@ def fly(frames):
 
 --- /task ---
 
---- task ---
-
 To finish off the fuel burning code, add a test in `fly()` to check if the rocket will never reach orbit, due to running out of fuel, and tint it red if so. 
+
+--- task ---
 
 --- code ---
 ---
@@ -106,9 +106,9 @@ line_highlights: 33-34
 
 --- /task ---
 
---- task ---
-
 Finally, let users of your program set the fuel value when the program starts by updating `setup()` to include `fuel` as `global`, and to use the `input()` function to ask the user to set it.
+
+--- task ---
 
 --- code ---
 ---
@@ -135,6 +135,8 @@ def setup():
 --- /code ---
 
 **Tip:** You have to surround `input()` with `int()` to turn what the user types into a number you can do maths with.
+
+--- save ---
 
 --- /task ---
 

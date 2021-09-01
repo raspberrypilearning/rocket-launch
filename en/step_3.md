@@ -11,11 +11,9 @@ Before launching, rockets have a countdown. To create this in your program, you'
 </div>
 </div>
 
-You can use Python's built-in `range()` function — which makes a sequence of numbers in order — to give you the numbers you'll need for your countdown. When calling `range()` you can pass it a single number. If you do, `range()` will give you the sequence of all the numbers counting up to the number you gave it.
+You can use Python's built-in `range()` function — which makes a sequence of numbers in order — to give you the numbers you'll need for your countdown. When calling `range()` you can pass it a single number. If you do, `range()` will give you the sequence of all the numbers counting up to the number you gave it. First, create a `countdown()` function where the comments tell you to. Inside that function, create the sequence of numbers to count down.
 
 --- task ---
-
-First, create a `countdown()` function where the comments tell you to. Inside that function, create the sequence of numbers to count down.
 
 --- code ---
 ---
@@ -64,6 +62,8 @@ def countdown():
 
 Then add a lift-off message once the coundown is complete. Do this by adding `print`s that are outside the `for` loop, but still inside `countdown`.
 
+--- task ---
+
 --- code ---
 ---
 language: python
@@ -87,9 +87,9 @@ def countdown():
 
 --- /task ---
 
---- task ---
-
 Now add a call to `countdown` at the end of `setup`, so it runs before the animation starts.
+
+--- task ---
 
 --- code ---
 ---
@@ -113,6 +113,10 @@ def setup():
 
 --- save ---
 
+--- /task ---
+
+--- task ---
+
 **Test:** Run your code and see what happens
 
 --- /task ---
@@ -124,9 +128,9 @@ There are a few problems with what your code does right now:
  + The numbers only go as far as 9, even though you used `range(10)`
  + The coundown happens instantly, but in a real rocket launch each number is a second apart
 
---- task ---
-
 First, fix the numbers: `range(10)` creates a sequence of numbers between 0 and 10. It starts at zero becasuse computers usually start counting from zero. The sequence `range()` creates includes 0, but does not include 10. So, to get the 10 included, you will have to use `range(11)`. 
+
+--- task ---
 
 --- code ---
 ---
@@ -142,7 +146,13 @@ line_highlights: 18
     print('T minus', t_minus) # Print at each step
 --- /code ---
 
+--- /task ---
+
+--- task ---
+
 **Test:** If you run this code, you'll see 10 in the program's output.
+
+--- /task ---
 
 The range is still in the wrong order. But, `range` behaves differently if you give it three numbers instead of one:
  + The first number is the start of the range 
@@ -150,6 +160,8 @@ The range is still in the wrong order. But, `range` behaves differently if you g
  + The third number is the step between them
 
 So `range(5, 20, 5)` will produce 5, 10, 15. You can also count backwards, by using a negative step. Update your `countdown()` function to use a step of `-1`, and to count down from ten to zero. Just like you had to use `range(11)` to get 10 to appear in the results, you'll have to go to `-1` to get 0 to appear.
+
+--- task ---
 
 --- code ---
 ---
@@ -167,15 +179,17 @@ line_highlights: 18
 
 --- save ---
 
+--- /task ---
+
+--- task ---
+
 **Test:** Run the code, and check that you get the countdown from 10 to 0.
 
 --- /task ---
 
-The countdown is still happening too fast. You need to make Python wait for a second between each number. You can do this using the `sleep()` function, which you can `import` from the `time` library.
+The countdown is still happening too fast. You need to make Python wait for a second between each number. You can do this using the `sleep()` function, which you can `import` from the `time` library. First, add the `import` at the top of the file:
 
 --- task ---
-
-First, add the `import` at the top of the file:
 
 --- code ---
 ---
@@ -211,6 +225,10 @@ line_highlights: 23
 --- /code ---
 
 --- save ---
+
+--- /task ---
+
+--- task ---
 
 **Test:** Run your code and watch the countdown!
 
