@@ -11,7 +11,7 @@ You will now create your program, and add a sprite for the planet your rocket wi
 
 --- task ---
 
-Open the [project template](https://trinket.io/python/b0f4874ac4){:target="_blank"} and remix it.
+Open the [project template](https://trinket.io/python/f2199f5a8c){:target="_blank"} and remix it.
 
 --- save ---
 
@@ -137,7 +137,11 @@ planet = None  # Make an empty variable
 
 Now update the `setup()` function to load `planet.png` into `planet`. Remember that, to update a global variable, you have to declare it with the `global` keyword inside of `setup()`.
 
-<mark>Give them a choice on loading their own planet image — will add instructions when I get a variety of planet images.</mark>
+**Choose:** Several planet images have been provided for you, which you can see in the Trinket image library. You can view the library by choosing the 'View and add images' button.
+
+![A plus, an upload symbol, and an image symbol. The image symbol is highlighted.](images/trinket_image.png)
+
+If you want to use one of these images, not the filename of the image like, and use it in the code in place of `planet.png`.
 
 --- collapse ---
 ---
@@ -210,8 +214,8 @@ def draw_bg():
   # Draw the planet you're launching from
   image(
     planet, # sprite
-    (SCREEN_WIDTH/2)-PLANET_RADIUS, # x top-left corner
-    SCREEN_HEIGHT-PLANET_RADIUS, # y top-left corner
+    (SCREEN_WIDTH/2)-PLANET_RADIUS, # x top-left
+    SCREEN_HEIGHT-PLANET_RADIUS, # y top-left
     PLANET_RADIUS*2, # sprite width
     PLANET_RADIUS*2 # sprite height
     )

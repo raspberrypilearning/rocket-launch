@@ -81,7 +81,7 @@ line_highlights: 11-12, 15-16
 ---
 PLANET_RADIUS = 150
 ROCKET_HEIGHT = 32
-ROCKET_WIDTH = 20
+ROCKET_WIDTH = 32
 
 planet = None  # Make an empty variable
 rocket = None
@@ -142,8 +142,8 @@ def fly(frames):
   
   image(
     rocket, # sprite
-    0, # x-coordinate — 0 because translate did the moving
-    0, # y-coordinate — 0 because translate did the moving
+    0, # x-coordinate — 0 because of translate
+    0, # y-coordinate — 0 because of translate
     ROCKET_WIDTH, # sprite width
     ROCKET_HEIGHT # sprite height
     )
