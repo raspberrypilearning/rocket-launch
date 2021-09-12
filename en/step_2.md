@@ -35,8 +35,6 @@ SCREEN_HEIGHT = 400
 
 --- /code ---
 
-**Tip:** When Python programmers won't be changing the value of a variable as the program is running, they name it with UPPERCASE LETTERS. Variables like this are called **constants**.
-
 --- /task ---
 
 Use the variables you've created to set the animation's size in the `setup` function:
@@ -112,7 +110,7 @@ def draw():
 
 --- /task ---
 
-Now you need to add the planet image to your animation: First, you need to add a couple of global variables. `planet` will hold the sprite's image file. `PLANET_RADIUS` other will set its radius, which you'll use to control its size.
+Now you need to add the planet image to your animation: First, you need to add a couple of global variables. `planet` will hold the sprite's image file. For now, set it to `None` to make an empty variable. `PLANET_RADIUS` other will set its radius, which you'll use to control its size.
 
 --- task ---
 
@@ -213,7 +211,7 @@ def draw_bg():
   
   # Draw the planet you're launching from
   image(
-    planet, # sprite
+    planet, # sprite file
     (SCREEN_WIDTH/2)-PLANET_RADIUS, # x top-left
     SCREEN_HEIGHT-PLANET_RADIUS, # y top-left
     PLANET_RADIUS*2, # sprite width

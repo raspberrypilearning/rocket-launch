@@ -9,9 +9,10 @@ Make your rocket fly, by creating a function that accepts a parameter.
 </div>
 </div>
 
-Functions that accept parameters as inputs are really powerful tools: they let you create a piece of code that produces different outputs based on its inputs, which can be very useful in your programming. You've actually used lots of these kinds of functions already: the `print()`, `sleep()`, and `background()` functions all accept parameters that change what gets printed, how long the program waits for, and what colour the background is, respectively. The function you're going to create will use the amount of time the animation has been running to decide where to draw your rocket.
+You've actually used lots of functionst that take parameters already: `print('Hello')` takes 'Hello' as a parameter and then prints that message to the screen. The function you're going to create will use the amount of time the animation has been running to decide where to draw your rocket.
 
-Create a function called `fly()` that accepts a parameter called `frames`. You give a function parameters by placing them in the parentheses after the function's name when you define it with `def`. Have it set a variable called `how_far` to ten times `frames`. Then have it print that variable out.
+
+Define a function called `fly()` that accepts a parameter called `frames`. You give a function parameters by placing them in the parentheses after the function's name when you define it with `def`. Have it set a variable called `how_far` to ten times `frames`. Then have it print that variable out. This will become the distance the rocket has flown at that point in the program.
 
 --- task ---
 
@@ -67,7 +68,7 @@ def draw():
 
 These numbers, that your code prints out, can be used as the y-coordinates for drawing your rocket flying into orbit.
 
-You'll need a rocket sprite, which you can create the same way you created the planet sprite. First, declare global variables to hold the height and width of the rocket, as well as one to hold the rocket image itself.
+You'll need a rocket sprite, which you can create the same way you created the planet sprite. First, declare global variables to hold the height and width of the rocket image, as well as one to hold the rocket image itself.
 
 --- task ---
 
@@ -185,5 +186,13 @@ def setup():
 **Test:** Run the program again, and see the difference.
 
 **Choose:** You can adjust the frame rate if you think it's still too fast, or too slow. If you want it to go faster, you may reach the limits of your computer, or screen.
+
+<p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;">
+<span style="color: #0faeb0">**Frames per second (FPS):**</span> Otherwise called 'frame rate', this refers to how many frames of an animation, film, or computer game are displayed in a second. The higher this rate is, the smoother and more natural motion seems to our eyes. Most films use around 24 FPS, as this is enough for the illusion of smooth motion, though some films (e.g. Spider-Man: Into the Spider-Verse animated parts of the film at 12 fps) change their frame rate to create a deliberate effect. 
+<br>
+In computer games, because players need to *react* to the motion on the screen, higher frame rates are usually desirable. The player who sees something first can react to it first, after all! Most action, driving, or shooter games are ideally played at over 60 fps, with profressional players often using 80, or even 120, fps. Whether your computer can draw those frames fast enough will depend on the power of the computer itself, as well as the graphics settings you have selected for the game — trying to draw a larger and more complex image is going to take more effort.
+<br>
+Finally, even if your computer can draw incredibly quickly, your screen can only display a certain number of frames per second — called its refresh rate. Your visible frame rate will be the lower of the fps of the source, e.g. a game, and your montior's refresh rate.
+</p>
 
 --- /task ---

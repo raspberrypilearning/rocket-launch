@@ -11,7 +11,9 @@ Before launching, rockets have a countdown. To create this in your program, you'
 </div>
 </div>
 
-You can use Python's built-in `range()` function — which makes a sequence of numbers in order — to give you the numbers you'll need for your countdown. When calling `range()` you can pass it a single number. If you do, `range()` will give you the sequence of all the numbers counting up to the number you gave it. First, create a `countdown()` function where the comments tell you to. Inside that function, create the sequence of numbers to count down.
+You can use Python's built-in `range()` function — which makes a sequence of numbers in order — to give you the numbers you'll need for your countdown. When calling `range()` you can pass it a single number. Then, `range()` will give you the sequence of all the numbers counting up to the number you gave it.  
+
+First, create a `countdown()` function where the comments tell you to. Inside that function, create the sequence of numbers to count down.
 
 --- task ---
 
@@ -232,6 +234,6 @@ line_highlights: 23
 
 **Test:** Run your code and watch the countdown!
 
-**Tip:** Because you'll be running your code a lot to test it, you might want to pass a lower value to sleep for now (maybe `0.1`) and then change it back when you're ready to share your animation with others.
+**Tip:** Because you'll be running your code a lot to test it, you might want to pass a lower value to sleep for now (maybe `0.1`, or even `0.01`) and then change it back when you're ready to share your animation with others.
 
 --- /task ---

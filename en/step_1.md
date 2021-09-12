@@ -1,6 +1,6 @@
 ## Introduction
 
-In this project, you will make an animation of a rocket launching into orbit. Depending on how much fuel you give it, its mission will succeed or fail.
+Make an animation of a rocket launching into orbit. The amount of fuel you give it will decide whether or not it successfully reaches orbit.
 
 <p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;">
 <span style="color: #0faeb0">**Computer programming and space flight:**</span> Computers, and computer programmers, have been a part of spaceflight since it began. The maths needed to get spacecraft into space and move them around there are just too complex for humans to do as fast as astronauts need the answers. 
@@ -9,8 +9,8 @@ These days, computers go to space with the astronauts but, in the early days of 
 </p>
 
 You will:
-+ Use loops to repeat actions
-+ Use functions with parameters
++ Use for loops to repeat actions
++ Create and call functions with parameters
 + Use sprites in your animations
 
 --- no-print ---
@@ -18,7 +18,7 @@ You will:
 ### Try it
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 175px; flex-grow: 1">  
-You have to supply the rocket with a certain amount of fuel. Try a very small amount (around 10kg) and a very large amount (around 30000 kg) to see what happens.
+You will have to supply the rocket with a certain amount of fuel. Try a very small amount (around 10kg) and a very large amount (around 30000 kg) to see what happens.
 </div>
 <iframe src="https://trinket.io/embed/python/622b4dd113?outputOnly=true&runOption=run&start=result" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
 </div>
