@@ -6,15 +6,12 @@ The animation needs a space backdrop with a planet to launch the rocket from.</d
 <div>
 ![A planet against a black background](images/step_2.png){:width="300px"}
 </div>
-</div>
 
 --- task ---
 
 Open the [project template](https://trinket.io/python/f2199f5a8c){:target="_blank"}.
 
 If you have a Trinket account you can click on the **Remix** button to save a copy to your ‘My Trinkets’ library.
-
---- save ---
 
 --- /task ---
 
@@ -39,9 +36,9 @@ screen_size = 400
 
 --- /task ---
 
-Use the `screen_size` variable to create a square 400 by 400 screen size:
-
 --- task ---
+
+Use the `screen_size` variable to create a square 400 by 400 screen size:
 
 --- code ---
 ---
@@ -55,7 +52,6 @@ def setup():
   # Setup your animation here
   size(screen_size, screen_size)
   
-
 --- /code ---
 
 --- /task ---
@@ -91,7 +87,7 @@ def setup():
   size(screen_size, screen_size)
   image_mode(CENTER)
   global planet
-  planet = load_image('planet.png') # or the name of the image file you prefer
+  planet = load_image('planet.png') # your chosen planet
 
 --- /code ---
 
@@ -124,9 +120,9 @@ Putting all the code for drawing the background into one function makes your cod
 
 --- /task --- 
 
-To make the background appear, call `draw_background()` in `draw()`. This will cause the background to be re-drawn every time `draw()` is called, covering over any older drawing.
-
 --- task ---
+
+To make the background appear, call `draw_background()` in `draw()`. This will cause the background to be re-drawn every time `draw()` is called, covering over any older drawing:
 
 --- code ---
 ---

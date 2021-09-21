@@ -109,7 +109,7 @@ def draw():
 
 --- /task ---
 
---- task ---
+--- task ---  
 
 **Test:** Run your code to check that the rocket starts at the bottom of the screen and moves up each frame.
 

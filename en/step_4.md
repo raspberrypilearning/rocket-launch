@@ -13,221 +13,122 @@ You can create cool effects by using a `for` loop to draw lots of shapes in each
 </div>
 </div>
 
-You can use Python's built-in `range()` function — which makes a sequence of numbers in order — to give you the numbers you'll need for your countdown. When calling `range()` you can pass it a single number. Then, `range()` will give you the sequence of all the numbers counting up to the number you gave it.  
-
-A `for` loop repeats a piece of code once for every item it is given. By giving it the sequence stored in `count`, you can print out all those numbers with very little code.
-
-There are a few problems with what your code does right now:
- + The numbers count up instead of down
- + The numbers only go as far as 9, even though you used `range(10)`
- + The coundown happens instantly, but in a real rocket launch each number is a second apart
-
-First, fix the numbers: `range(10)` creates a sequence of numbers between 0 and 10. It starts at zero becasuse computers usually start counting from zero. The sequence `range()` creates includes 0, but does not include 10. So, to get the 10 included, you will have to use `range(11)`. 
-
-The range is still in the wrong order. But, `range` behaves differently if you give it three numbers instead of one:
- + The first number is the start of the range 
- + The second number is the end of the range
- + The third number is the step between them
-
-So `range(5, 20, 5)` will produce 5, 10, 15. You can also count backwards, by using a negative step. Update your `countdown()` function to use a step of `-1`, and to count down from ten to zero. Just like you had to use `range(11)` to get 10 to appear in the results, you'll have to go to `-1` to get 0 to appear.
-
-**Tip:** Programmers often describe telling a function to run as **calling** it. Likewise, they describe giving the function values to use as **passing** those values to the function.
-
-## Liftoff!
-
-<div style="display: flex; flex-wrap: wrap">
-<div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">
-Make your rocket fly, by creating a function that accepts a parameter.
-</div>
-<div>
-![A rocket flying at a steady speed from the bottom to the top of the screen.](images/fly.gif){:width="300px"}
-</div>
-</div>
-
-You've actually used lots of functionst that take parameters already: `print('Hello')` takes 'Hello' as a parameter and then prints that message to the screen. The function you're going to create will use the amount of time the animation has been running to decide where to draw your rocket.
-
-
-Define a function called `fly()` that accepts a parameter called `frames`. You give a function parameters by placing them in the parentheses after the function's name when you define it with `def`. Have it set a variable called `how_far` to ten times `frames`. Then have it print that variable out. This will become the distance the rocket has flown at that point in the program.
-
---- task ---
-
---- code ---
----
-language: python
-filename: main.py — fly()
-line_numbers: true
-line_number_start: 14 
-line_highlights: 15-20
----
-# The fly function goes here
-def fly(frames):
-  
-  how_far = 10 * frames
-  print(how_far)
-
---- /code ---
-
---- /task ---
-
-Add a line to the `draw()` function that calls your `fly()` function and passes `frame_count` to it. `frame_count` is a variable built-in to the p5 library, that counts number of frames of your animation that have been drawn.
-
---- task ---
-
---- code ---
----
-language: python
-filename: main.py — draw()
-line_numbers: true
-line_number_start: 58
-line_highlights: 61-62
----
-def draw():
-  # Things to do in every frame
-  draw_bg()
-  
-  fly(frame_count)
-
---- /code ---
-
-**Tip:** When you pass a variable into a function like this, you are passing its value at the moment you call the function. Changes you make to the value inside the function won't change the original variable.
-
---- save ---
-
---- /task ---
-
---- task ---
-
-**Test:** Run your program. After the countdown compleets, you should see numbers printing out, each 10 higher than the one before it. This will go on forever, so stop the program after you've seen this.
-
---- /task ---
-
-These numbers, that your code prints out, can be used as the y-coordinates for drawing your rocket flying into orbit.
-
-You'll need a rocket sprite, which you can create the same way you created the planet sprite. First, declare global variables to hold the height and width of the rocket image, as well as one to hold the rocket image itself.
-
---- task ---
-
---- code ---
----
-language: python
-filename: main.py
-line_numbers: true
-line_number_start: 10 
-line_highlights: 11-12, 15-16
----
-PLANET_RADIUS = 150
-ROCKET_HEIGHT = 32
-ROCKET_WIDTH = 32
-
-planet = None  # Make an empty variable
-rocket = None
-
---- /code ---
-
---- /task ---
-
-Then load the rocket as part of your `setup()` function. Make sure you add it to the list of `global` variables at the start of the function too, as you'll need to be able to use it in the other functions of your program.
-
---- task ---
-
---- code ---
----
-language: python
-filename: main.py — setup()
-line_numbers: true
-line_number_start: 51 
-line_highlights: 53, 55
----
-def setup():
-  # Setup your animation here
-  global planet, rocket
-  planet = load_image('planet.png')
-  rocket = load_image('rocket.png')
-
---- /code ---
-
---- /task ---
-
-Now you need to draw your rocket sprite into your animation. To do this, you'll modify the fly function to delete the `print()` statement and add `image()` instead. Because you need the rocket to move by `how_far` every frame, you will use `translate()` to shift the screen in each frame before drawing the image. 
-
 <p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;">
-`translate()` moves the screen into a different position based on coordinates. The shapes on the screen will move with it but their appearance will not change. A translation can move the screen horizontally, vertically, or diagonally.
-</p>
+Coding is used to make <span style="color: #0faeb0">**graphic effects**</span> for movies and games. It's much quicker to write code than to draw each frame of an animation individually. </p>
 
+Drawing lots of yellow ellipses at different y positions creates an exhaust trail with a round bottom.
+ 
 --- task ---
+
+A `for` loop repeats a piece of code once for every item it is given. To run the code in a `for` loop a certain number of times, you can use the `range()` function to create a sequence of numbers.
+
+Each time the `for` loop repeats it sets a variable to the current item so that you can use it in the loop. 
+
+Update your `draw_rocket()` function to have a `for` loop that repeats the drawing of `25` exhaust ellipses. The `i` variable gets added to `rocket_y` to draw each ellipse further below the rocket. 
 
 --- code ---
 ---
 language: python
-filename: main.py — fly()
+filename: main.py - draw_rocket()
 line_numbers: true
-line_number_start: 18
-line_highlights: 22-35
+line_number_start: 12
+line_highlights: 22 - 26
 ---
-def fly(frames):
+def draw_rocket():
   
-  how_far = 10 * frames
-  
-  # Put the rocket in the middle of the screen
-  rocket_x = SCREEN_WIDTH/2
-  # Keep the rocket above the bottom of the screen
-  rocket_y = SCREEN_HEIGHT-ROCKET_HEIGHT
+  global rocket_y
+  rocket_y -= 1 # move the rocket
 
-  # Move the screen to position the rocket
-  translate(rocket_x, rocket_y - how_far)
-  
-  image(
-    rocket, # sprite
-    0, # x-coordinate — 0 because of translate
-    0, # y-coordinate — 0 because of translate
-    ROCKET_WIDTH, # sprite width
-    ROCKET_HEIGHT # sprite height
-    )
+  no_stroke() # Turn off the stroke
 
+  for i in range(25): # draw 25 burning exhaust ellipses
+    fill(255, 255, 0) # yellow
+    ellipse(width/2, rocket_y + i, 8, 3) # i increases each time the loop repeats
+
+  fill(200, 200, 200, 100) # transparent grey
+  for i in range(20): # draw 20 random smoke ellipses
+    ellipse(width/2 + randint(-5, 5), rocket_y + randint(20, 50), randint(5, 10), randint(5, 10))
+
+  image(rocket, width/2, rocket_y, 64, 64)
 
 --- /code ---
 
---- save ---
-
 --- /task ---
 
 --- task ---
 
-**Test:** Run your code and watch the rocket fly!
+**Test:** Run your code to check the rocket has a new exhaust trail
+
+![A close up of the rocket with an exhaust trail](images/rocket_exhaust.gif)
 
 --- /task ---
 
-That looks great, but maybe a little too fast? You can adjust how quickly your animation happens by changing the **frame rate** — the number of frames your animation draws every second. Add the `frame_rate` function to `setup` and use it to set your animation to ten frames per second:
+The `i` variable can also be used to create a colour gradient with less green in each ellipse that gets drawn.
 
 --- task ---
+
+Change the call to `fill()` to set the amount of green to `255 - i*10` so that the first ellipse has equal amounts of red and green and the last ellipse has very little green.
 
 --- code ---
 ---
 language: python
-filename: main.py — setup()
+filename: main.py - draw_rocket()
 line_numbers: true
-line_number_start: 67
-line_highlights: 
+line_number_start: 24
+line_highlights: 25
 ---
-def setup():
-  # Setup your animation here
-  frame_rate(10)
-  global planet, rocket
-  planet = load_image('planet.png')
+  for i in range(25): # draw 25 burning exhaust ellipses
+    fill(255, 255 - i*10, 0) # reduce amount of green
+    ellipse(width/2, rocket_y + i, 8, 3) 
+
 --- /code ---
+    
+--- /task ---
 
---- save ---
+--- task ---
 
-**Test:** Run the program again, and see the difference.
-
-**Choose:** You can adjust the frame rate if you think it's still too fast, or too slow. If you want it to go faster, you may reach the limits of your computer, or screen.
-
-<p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;">
-<span style="color: #0faeb0">**Frames per second (FPS):**</span> Otherwise called 'frame rate', this refers to how many frames of an animation, film, or computer game are displayed in a second. The higher this rate is, the smoother and more natural motion seems to our eyes. Most films use around 24 FPS, as this is enough for the illusion of smooth motion, though some films (e.g. Spider-Man: Into the Spider-Verse animated parts of the film at 12 fps) change their frame rate to create a deliberate effect. 
-<br>
-In computer games, because players need to *react* to the motion on the screen, higher frame rates are usually desirable. The player who sees something first can react to it first, after all! Most action, driving, or shooter games are ideally played at over 60 fps, with profressional players often using 80, or even 120, fps. Whether your computer can draw those frames fast enough will depend on the power of the computer itself, as well as the graphics settings you have selected for the game — trying to draw a larger and more complex image is going to take more effort.
-<br>
-Finally, even if your computer can draw incredibly quickly, your screen can only display a certain number of frames per second — called its refresh rate. Your visible frame rate will be the lower of the fps of the source, e.g. a game, and your montior's refresh rate.
-</p>
+**Test:** Check that you get a trail of ellipses gradually changing from yellow to red. 
 
 --- /task ---
+
+The smoke exhaust trail is created by drawing lots of slightly transparent grey ellipses at different positions in each frame. 
+
+![A slow animation of the smoke effect](images/rocket_smoke.gif)
+
+--- task ---
+
+This time the `fill()` is outside the loop as the colour is the same for each smoke ellipse. The fourth input to `fill()` is the opacity, a high opacity makes the colour more transparent so you can see the shapes underneath.
+
+In each frame of the animation 20 ellipses of random sizes will be drawn at random positions. 
+
+--- code ---
+---
+language: python
+filename: main.py - draw_rocket()
+line_numbers: true
+line_number_start: 24
+line_highlights: 28 - 30
+---
+  for i in range(25): # draw 25 burning exhaust ellipses
+    fill(255, 255 - i*10, 0) # reduce amount of green
+    ellipse(width/2, rocket_y + i, 8, 3) 
+
+  fill(200, 200, 200, 100) # transparent grey
+  for i in range(20): # draw 20 random smoke ellipses
+    ellipse(width/2 + randint(-5, 5), rocket_y + randint(20, 50), randint(5, 10), randint(5, 10)) 
+  
+  image(rocket, width/2, rocket_y, 64, 64)
+
+--- /code ---
+
+--- /task ---
+
+--- task ---
+
+**Test:** Run your program and check the exhaust fumes are visible. 
+
+![A close up of the rocket and exhaust trail with added smoke](images/rocket_exhaust_circles.gif)
+
+--- /task ---
+
+--- save ---
