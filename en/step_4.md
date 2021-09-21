@@ -45,10 +45,6 @@ def draw_rocket():
     fill(255, 255, 0) # yellow
     ellipse(width/2, rocket_y + i, 8, 3) # i increases each time the loop repeats
 
-  fill(200, 200, 200, 100) # transparent grey
-  for i in range(20): # draw 20 random smoke ellipses
-    ellipse(width/2 + randint(-5, 5), rocket_y + randint(20, 50), randint(5, 10), randint(5, 10))
-
   image(rocket, width/2, rocket_y, 64, 64)
 
 --- /code ---
@@ -59,7 +55,7 @@ def draw_rocket():
 
 **Test:** Run your code to check the rocket has a new exhaust trail
 
-![A close up of the rocket with an exhaust trail](images/rocket_exhaust.gif)
+![A close up of the rocket with an exhaust trail](images/rocket_exhaust.png)
 
 --- /task ---
 

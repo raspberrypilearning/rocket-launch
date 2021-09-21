@@ -3,124 +3,124 @@
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">
 
-The point of launching a rocket into space is, usually, to enter orbit of the Earth. To enter orbit, you have to get high enough above the Earth so that you no-longer fall straight back down. In reality, this is usually at least 160 km above the Earth, but since this animation is a model, you're going to be using smller, rounder, numbers. 
+The point of launching the rocket is to propel a satellite into orbit. 
+
+An orbit is a curved path that one object takes around another due to gravity.
+
+The rocket will change colour to show how successful the launch was. 
 
 </div>
 <div>
-![The rocket launches from a planet encircled by a thin green line. As the rocket passes the line, it turns green.](images/tint_orbit.gif){:width="300px"}
+![Two side by side image showing a successful (green tint) and unsucessful (red tint) launch.](images/check_orbit.gif){:width="300px"}
 </div>
 </div>
-
-Add a variable to give the radius of the orbit circle you're drawing around the planet. Base it on the planet radius, to make sure it's always bigger.
 
 --- task ---
+
+Create two new global variables to set the radius of the orbit circle and the y coordinate of the orbit t the point the rocket centre needs to reach to launch the satellite. 
 
 --- code ---
 ---
 language: python
 filename: main.py
 line_numbers: true
-line_number_start: 10 
-line_highlights: 13-14
+line_number_start: 7 
+line_highlights: 11-12
 ---
-PLANET_RADIUS = 150
-ROCKET_HEIGHT = 32
-ROCKET_WIDTH = 32
-ORBIT_RADIUS = PLANET_RADIUS + 100
+
+# Setup global variables 
+screen_size = 400
+rocket_y = screen_size # start at the bottom
+burn = 100 
+orbit_radius = 250
+orbit_y = screen_size - orbit_radius
 
 --- /code ---
 
 --- /task ---
 
-Then, in the `draw_bg()` function, add some code to draw a circle with that radius that is centred on the same point as the planet image. You can do this with the `ellipse()` function. Remember that, unlike `image()`, the coordinates you give `ellipse()` are for its centre.
-
-[[[processing-python-ellipse]]]
-
 --- task ---
+Update the `draw_background()` function to draw an ellipse to represent the satellite orbit that the rocket needs to reach.  
 
 --- code ---
 ---
 language: python
-filename: main.py — draw_bg()
+filename: main.py - draw_background()
 line_numbers: true
-line_number_start: 62
-line_highlights: 64-73
+line_number_start: 16
+line_highlights: 20-24
 ---
-  PLANET_RADIUS*2 # sprite height
-  )
-  
+def draw_background():
+  background(0) # short for background(0, 0, 0) - black 
+  image(planet, width/2, height, 300, 300)
+
+  # Draw the orbit
   no_fill() # Turn off any fill
-  stroke(0, 200, 0) # Set a green stroke
-  ellipse(
-      SCREEN_WIDTH/2, 
-      SCREEN_HEIGHT, 
-      ORBIT_RADIUS*2,
-      ORBIT_RADIUS*2
-    )
-  no_stroke() # Turn off the stroke
-
-
+  stroke(255) # Set a white stroke
+  stroke_weight(2)
+  ellipse(width/2, height, orbit_radius*2, orbit_radius*2)
 --- /code ---
-
---- save ---
 
 --- /task ---
 
 --- task ---
 
-**Test:** Run your code and check that it draws the circle.
+**Test:** Run your program and check that a white orbit line is drawn. 
+
+![The screen with planet and new orbit line.](images/draw_orbit.gif)
 
 --- /task ---
 
-You should see something that looks like this:
+The rocket should stop when it reaches the satellite orbit - the end of the mission. 
 
-![A planet with a green circle around it](images/orbit.png)
+--- task ---
 
-Next, make the rocket change colour when it successfully enters orbit. You can do this by using the `tint` function to make it turn green once it has travelled far enough.
+Update your `if fuel >= burn` code to also check that the rocket hasn't reached the orbit. 
 
-<p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;">
-<span style="color: #0faeb0">**The tint function:**</span> Passing a colour to `tint()` lets you change the colours of any sprite you draw after it. The sprites will look like they have a light of the colour you chose shining on them.  Just like with `stroke()` and `fill()`, there is a `no_tint()` function to turn `tint()` off when you're finished with it.
-</p>
+You can use an `and` in `if` statements to check if two, or more, conditions are true. 
 
-To check if the rocket has travelled far enough, check if `how_far` is greater than or equal to (≥) the `ORBIT_RADIUS` you set. You can do this using `>=` as part of the test for an `if` statement.
+--- code ---
+---
+language: python
+filename: main.py - draw_rocket()
+line_numbers: true
+line_number_start: 19
+line_highlights: 24
+---
+# The draw_rocket function goes here
+def draw_rocket():
+  
+  global rocket_y, fuel, burn # say we want to use the global variables
+  
+    if fuel >= burn and rocket_y > orbit_y: # still flying
+--- /code ---
 
-Update your `fly()` function to make that test and add the tint if it passes:
+--- /task ---
+
+--- task ---
+
+**Test:** Run your project and enter 50000 as the amount of fuel. This should be plenty of fuel to reach orbit. The rocket should stop moving when it reaches orbit. 
+
+--- /task ---
+
+The rocket should be coloured red if it runs out of fuel before getting high enough to launch the satellite.
 
 --- task ---
 
 --- code ---
 ---
 language: python
-filename: main.py — fly()
+filename: main.py — draw_rocket()
 line_numbers: true
-line_number_start: 19 
-line_highlights: 23-26, 42
+line_number_start: 35
+line_highlights: 39-40
 ---
-def fly(frames):
-  
-  how_far = 10 * frames
-  
-  # Reached orbit?
-  if how_far >= ORBIT_RADIUS:
-    tint(0, 200, 0)
-  
-  # Put the rocket in the middle of the screen
-  rocket_x = SCREEN_WIDTH/2
-  # Keep the rocket above the bottom of the screen
-  rocket_y = SCREEN_HEIGHT-ROCKET_HEIGHT
+    fill(200, 200, 200, 100) # transparent grey
+    for i in range(20): # draw 20 random smoke ellipses
+      ellipse(width/2 + randint(-5, 5), rocket_y + randint(20, 50), randint(5, 10), randint(5, 10))
 
-  translate(rocket_x, rocket_y - how_far)
-  
-  image(
-    rocket, # sprite
-    0, # x is 0 because translate did the moving
-    0, # y is 0 because translate did the moving
-    ROCKET_WIDTH, # sprite width
-    ROCKET_HEIGHT # sprite height
-    )
-  
-  no_tint()
-  
+  if fuel < burn and rocket_y > orbit_y: # No more fuel and not in orbit
+    tint(255, 0, 0) # Failure
 
 --- /code ---
 
@@ -128,357 +128,102 @@ def fly(frames):
 
 --- task ---
 
---- save ---
+**Test:** Run your code and enter 20000 as the amount of fuel. Check that the rocket turns red when it stops below the orbit.
 
-**Test:** Run your code and watch the rocket change colour as it enters orbit.
+![A red rocket that has run out of fuel before the orbit circle. The planet has also turned red](images/orbit_failure.png)
+
+Oh no, the planet has turned red! 
 
 --- /task ---
 
-
-## Liftoff!
-
-<div style="display: flex; flex-wrap: wrap">
-<div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">
-Make your rocket fly, by creating a function that accepts a parameter.
-</div>
-<div>
-![A rocket flying at a steady speed from the bottom to the top of the screen.](images/fly.gif){:width="300px"}
-</div>
-</div>
-
-You've actually used lots of functionst that take parameters already: `print('Hello')` takes 'Hello' as a parameter and then prints that message to the screen. The function you're going to create will use the amount of time the animation has been running to decide where to draw your rocket.
-
-
-Define a function called `fly()` that accepts a parameter called `frames`. You give a function parameters by placing them in the parentheses after the function's name when you define it with `def`. Have it set a variable called `how_far` to ten times `frames`. Then have it print that variable out. This will become the distance the rocket has flown at that point in the program.
-
 --- task ---
+The `tint()` function sets the tint colour for all images that are drawn until you change the tint or use `no_tint()` to turn it off.
+
+**Choose:** Add a call to `no_tint()` after drawing the image so that the planet isn't tinted red in the next frame - or leave it if you like the planet turning red! 
 
 --- code ---
 ---
 language: python
-filename: main.py — fly()
+filename: main.py - draw_rocket()
 line_numbers: true
-line_number_start: 14 
-line_highlights: 15-20
+line_number_start: 45
+line_highlights: 49
 ---
-# The fly function goes here
-def fly(frames):
+if fuel < burn and rocket_y > orbit_y: 
+  tint(255, 0, 0) # Failure
+    
+image(rocket, width/2, rocket_y, 64, 64)
+no_tint() # so we don't tint the planet in the next frame!
   
-  how_far = 10 * frames
-  print(how_far)
-
 --- /code ---
 
 --- /task ---
 
-Add a line to the `draw()` function that calls your `fly()` function and passes `frame_count` to it. `frame_count` is a variable built-in to the p5 library, that counts number of frames of your animation that have been drawn.
-
 --- task ---
+
+Use the `tint()` function again, this time to colour the rocket green if the rocket has enough fuel to reach the satellite orbit:  
 
 --- code ---
 ---
 language: python
-filename: main.py — draw()
+filename: main.py - draw_rocket()
 line_numbers: true
-line_number_start: 58
-line_highlights: 61-62
+line_number_start: 45
+line_highlights: 47-48
 ---
-def draw():
-  # Things to do in every frame
-  draw_bg()
+if fuel < burn and rocket_y > orbit_y: 
+  tint(255, 0, 0) # Failure
+elif rocket_y <= orbit_y:
+  tint(0, 255, 0) # Success
+
+image(rocket, width/2, rocket_y, 64, 64)
+no_tint() # so we don't tint the planet in the next frame!
   
-  fly(frame_count)
-
 --- /code ---
-
-**Tip:** When you pass a variable into a function like this, you are passing its value at the moment you call the function. Changes you make to the value inside the function won't change the original variable.
-
---- save ---
-
 --- /task ---
 
 --- task ---
 
-**Test:** Run your program. After the countdown compleets, you should see numbers printing out, each 10 higher than the one before it. This will go on forever, so stop the program after you've seen this.
+**Test:** Run your project and enter 50000 as the amount of fuel. Check that your rocket turns green when it reaches the satellite orbit.
+
+![A green rocket that has reached the orbit circle and has fuel left](images/orbit_failure.png)
 
 --- /task ---
 
-These numbers, that your code prints out, can be used as the y-coordinates for drawing your rocket flying into orbit.
-
-You'll need a rocket sprite, which you can create the same way you created the planet sprite. First, declare global variables to hold the height and width of the rocket image, as well as one to hold the rocket image itself.
+You now have a simulation that can be used to show how much fuel is needed as a minimum to reach the satellite orbit. That's great but you can take a huge amount of fuel and still success - which is costly and wasteful! 
 
 --- task ---
+
+Amend the condition in your success code to only turn green if the rocket reaches the orbit `and` with less than 1000kg of fuel left. 
+
+Add code to colour the rocket yellow if the rocket has more than 1000kg of fuel left when it reaches orbit. 
 
 --- code ---
 ---
 language: python
 filename: main.py
 line_numbers: true
-line_number_start: 10 
-line_highlights: 11-12, 15-16
+line_number_start: 45
+line_highlights: 47, 49-50
 ---
-PLANET_RADIUS = 150
-ROCKET_HEIGHT = 32
-ROCKET_WIDTH = 32
-
-planet = None  # Make an empty variable
-rocket = None
-
---- /code ---
-
---- /task ---
-
-Then load the rocket as part of your `setup()` function. Make sure you add it to the list of `global` variables at the start of the function too, as you'll need to be able to use it in the other functions of your program.
-
---- task ---
-
---- code ---
----
-language: python
-filename: main.py — setup()
-line_numbers: true
-line_number_start: 51 
-line_highlights: 53, 55
----
-def setup():
-  # Setup your animation here
-  global planet, rocket
-  planet = load_image('planet.png')
-  rocket = load_image('rocket.png')
-
---- /code ---
-
---- /task ---
-
-Now you need to draw your rocket sprite into your animation. To do this, you'll modify the fly function to delete the `print()` statement and add `image()` instead. Because you need the rocket to move by `how_far` every frame, you will use `translate()` to shift the screen in each frame before drawing the image. 
-
-<p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;">
-`translate()` moves the screen into a different position based on coordinates. The shapes on the screen will move with it but their appearance will not change. A translation can move the screen horizontally, vertically, or diagonally.
-</p>
-
---- task ---
-
---- code ---
----
-language: python
-filename: main.py — fly()
-line_numbers: true
-line_number_start: 18
-line_highlights: 22-35
----
-def fly(frames):
-  
-  how_far = 10 * frames
-  
-  # Put the rocket in the middle of the screen
-  rocket_x = SCREEN_WIDTH/2
-  # Keep the rocket above the bottom of the screen
-  rocket_y = SCREEN_HEIGHT-ROCKET_HEIGHT
-
-  # Move the screen to position the rocket
-  translate(rocket_x, rocket_y - how_far)
-  
-  image(
-    rocket, # sprite
-    0, # x-coordinate — 0 because of translate
-    0, # y-coordinate — 0 because of translate
-    ROCKET_WIDTH, # sprite width
-    ROCKET_HEIGHT # sprite height
-    )
-
-
---- /code ---
-
---- save ---
-
---- /task ---
-
---- task ---
-
-**Test:** Run your code and watch the rocket fly!
-
---- /task ---
-
-That looks great, but maybe a little too fast? You can adjust how quickly your animation happens by changing the **frame rate** — the number of frames your animation draws every second. Add the `frame_rate` function to `setup` and use it to set your animation to ten frames per second:
-
---- task ---
-
---- code ---
----
-language: python
-filename: main.py — setup()
-line_numbers: true
-line_number_start: 67
-line_highlights: 
----
-def setup():
-  # Setup your animation here
-  frame_rate(10)
-  global planet, rocket
-  planet = load_image('planet.png')
---- /code ---
-
---- save ---
-
-**Test:** Run the program again, and see the difference.
-
-**Choose:** You can adjust the frame rate if you think it's still too fast, or too slow. If you want it to go faster, you may reach the limits of your computer, or screen.
-
-<p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;">
-<span style="color: #0faeb0">**Frames per second (FPS):**</span> Otherwise called 'frame rate', this refers to how many frames of an animation, film, or computer game are displayed in a second. The higher this rate is, the smoother and more natural motion seems to our eyes. Most films use around 24 FPS, as this is enough for the illusion of smooth motion, though some films (e.g. Spider-Man: Into the Spider-Verse animated parts of the film at 12 fps) change their frame rate to create a deliberate effect. 
-<br>
-In computer games, because players need to *react* to the motion on the screen, higher frame rates are usually desirable. The player who sees something first can react to it first, after all! Most action, driving, or shooter games are ideally played at over 60 fps, with profressional players often using 80, or even 120, fps. Whether your computer can draw those frames fast enough will depend on the power of the computer itself, as well as the graphics settings you have selected for the game — trying to draw a larger and more complex image is going to take more effort.
-<br>
-Finally, even if your computer can draw incredibly quickly, your screen can only display a certain number of frames per second — called its refresh rate. Your visible frame rate will be the lower of the fps of the source, e.g. a game, and your montior's refresh rate.
-</p>
-
---- /task ---
-
-
-
---- task ---
-
-**Test:** Try launching your rocket with enough fuel to reach orbit, and to fail to reach orbit. To reach orbit, use 25000 kg of fuel. To fail to reach orbit, use 24000 kg, or less.
-
---- /task ---
-
-Your results should look something like this:
-
-![A rocket launches from a planet and flys straight up, passing a green line and becoming green.](images/fuel_orbit_success.gif){:width="300px"}
-
-![A rocket launches from a planet and flys straight up, falling short of a green line and becoming red.](images/fuel_orbit_fail.gif){:width="300px"}
-
-<div style="display: flex; flex-wrap: wrap">
-<div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">
-
-The point of launching a rocket into space is, usually, to enter orbit of the Earth. To enter orbit, you have to get high enough above the Earth so that you no-longer fall straight back down. In reality, this is usually at least 160 km above the Earth, but since this animation is a model, you're going to be using smller, rounder, numbers. 
-
-</div>
-<div>
-![The rocket launches from a planet encircled by a thin green line. As the rocket passes the line, it turns green.](images/tint_orbit.gif){:width="300px"}
-</div>
-</div>
-
-Add a variable to give the radius of the orbit circle you're drawing around the planet. Base it on the planet radius, to make sure it's always bigger.
-
---- task ---
-
---- code ---
----
-language: python
-filename: main.py
-line_numbers: true
-line_number_start: 10 
-line_highlights: 13-14
----
-PLANET_RADIUS = 150
-ROCKET_HEIGHT = 32
-ROCKET_WIDTH = 32
-ORBIT_RADIUS = PLANET_RADIUS + 100
-
---- /code ---
-
---- /task ---
-
-Then, in the `draw_bg()` function, add some code to draw a circle with that radius that is centred on the same point as the planet image. You can do this with the `ellipse()` function. Remember that, unlike `image()`, the coordinates you give `ellipse()` are for its centre.
-
-[[[processing-python-ellipse]]]
-
---- task ---
-
---- code ---
----
-language: python
-filename: main.py — draw_bg()
-line_numbers: true
-line_number_start: 62
-line_highlights: 64-73
----
-  PLANET_RADIUS*2 # sprite height
-  )
-  
-  no_fill() # Turn off any fill
-  stroke(0, 200, 0) # Set a green stroke
-  ellipse(
-      SCREEN_WIDTH/2, 
-      SCREEN_HEIGHT, 
-      ORBIT_RADIUS*2,
-      ORBIT_RADIUS*2
-    )
-  no_stroke() # Turn off the stroke
-
-
---- /code ---
-
---- save ---
-
---- /task ---
-
---- task ---
-
-**Test:** Run your code and check that it draws the circle.
-
---- /task ---
-
-You should see something that looks like this:
-
-![A planet with a green circle around it](images/orbit.png)
-
-Next, make the rocket change colour when it successfully enters orbit. You can do this by using the `tint` function to make it turn green once it has travelled far enough.
-
-<p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;">
-<span style="color: #0faeb0">**The tint function:**</span> Passing a colour to `tint()` lets you change the colours of any sprite you draw after it. The sprites will look like they have a light of the colour you chose shining on them.  Just like with `stroke()` and `fill()`, there is a `no_tint()` function to turn `tint()` off when you're finished with it.
-</p>
-
-To check if the rocket has travelled far enough, check if `how_far` is greater than or equal to (≥) the `ORBIT_RADIUS` you set. You can do this using `>=` as part of the test for an `if` statement.
-
-Update your `fly()` function to make that test and add the tint if it passes:
-
---- task ---
-
---- code ---
----
-language: python
-filename: main.py — fly()
-line_numbers: true
-line_number_start: 19 
-line_highlights: 23-26, 42
----
-def fly(frames):
-  
-  how_far = 10 * frames
-  
-  # Reached orbit?
-  if how_far >= ORBIT_RADIUS:
-    tint(0, 200, 0)
-  
-  # Put the rocket in the middle of the screen
-  rocket_x = SCREEN_WIDTH/2
-  # Keep the rocket above the bottom of the screen
-  rocket_y = SCREEN_HEIGHT-ROCKET_HEIGHT
-
-  translate(rocket_x, rocket_y - how_far)
-  
-  image(
-    rocket, # sprite
-    0, # x is 0 because translate did the moving
-    0, # y is 0 because translate did the moving
-    ROCKET_WIDTH, # sprite width
-    ROCKET_HEIGHT # sprite height
-    )
-  
-  no_tint()
-  
-
+if fuel < burn and rocket_y > orbit_y: 
+  tint(255, 0, 0) # Failure
+elif fuel < 1000 and rocket_y <= orbit_y:
+  tint(0, 255, 0) # Success
+elif fuel >= 1000 and rocket_y <= orbit_y: 
+  tint(255, 200, 0) # Too much fuel
+    
+image(rocket, width/2, rocket_y, 64, 64)
+no_tint() # so we don't tint the planet in the next frame!
 --- /code ---
 
 --- /task ---
 
 --- task ---
 
---- save ---
+**Test:** Run your program several times with different numbers, 25000kg of fuel should be the amount needed to turn green but check that yellow works too by using a bigger number. 
 
-**Test:** Run your code and watch the rocket change colour as it enters orbit.
+![A yellow rocket that has reached the orbit circle and has fuel left](images/orbit_amber.png)
 
 --- /task ---
 

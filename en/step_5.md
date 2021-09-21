@@ -2,10 +2,11 @@
 
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">
+
 One of the most important things to decide when launching a rocket is how much fuel to load into it. 
 
-To do this you need to simulate how much fuel will be burned on the journey.</div>
-<div>
+To do this you need to simulate how much fuel will be burned on the journey.
+</div>
 ![The program with a question in the output area asking how much fuel is required](images/burn-question.png){:width="300px"}
 </div>
 
@@ -130,6 +131,8 @@ line_highlights: 20, 22-35
 ![Image of a rocket in the middle of the screen with the statement Fuel left: 0'](images/burn-empty.png)
 
 --- /task ---
+
+This computer simulation isn't very accurate, but it's good enough for our animation. 
 
 --- save ---
 
