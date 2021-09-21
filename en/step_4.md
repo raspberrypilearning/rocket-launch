@@ -1,3 +1,38 @@
+## Exhaust effects
+
+<div style="display: flex; flex-wrap: wrap">
+<div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">
+
+The rocket will look more realistic with special effects for the exhaust trail. 
+
+You can create cool effects by using a `for` loop to draw lots of shapes in each frame.
+
+</div>
+<div>
+![The rocket mid flight with an exhaust trail](images/flying_rocket.gif){:width="300px"}
+</div>
+</div>
+
+You can use Python's built-in `range()` function — which makes a sequence of numbers in order — to give you the numbers you'll need for your countdown. When calling `range()` you can pass it a single number. Then, `range()` will give you the sequence of all the numbers counting up to the number you gave it.  
+
+A `for` loop repeats a piece of code once for every item it is given. By giving it the sequence stored in `count`, you can print out all those numbers with very little code.
+
+There are a few problems with what your code does right now:
+ + The numbers count up instead of down
+ + The numbers only go as far as 9, even though you used `range(10)`
+ + The coundown happens instantly, but in a real rocket launch each number is a second apart
+
+First, fix the numbers: `range(10)` creates a sequence of numbers between 0 and 10. It starts at zero becasuse computers usually start counting from zero. The sequence `range()` creates includes 0, but does not include 10. So, to get the 10 included, you will have to use `range(11)`. 
+
+The range is still in the wrong order. But, `range` behaves differently if you give it three numbers instead of one:
+ + The first number is the start of the range 
+ + The second number is the end of the range
+ + The third number is the step between them
+
+So `range(5, 20, 5)` will produce 5, 10, 15. You can also count backwards, by using a negative step. Update your `countdown()` function to use a step of `-1`, and to count down from ten to zero. Just like you had to use `range(11)` to get 10 to appear in the results, you'll have to go to `-1` to get 0 to appear.
+
+**Tip:** Programmers often describe telling a function to run as **calling** it. Likewise, they describe giving the function values to use as **passing** those values to the function.
+
 ## Liftoff!
 
 <div style="display: flex; flex-wrap: wrap">

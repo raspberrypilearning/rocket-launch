@@ -26,3 +26,20 @@ title: Completed project
 You can view the [completed project here](https://trinket.io/python/fa55405c62){:target="_blank"}.
 
 --- /collapse ---
+
+--- collapse ---
+---
+title: Adding your own image to Trinket
+---
+
+If you want to use your own picture for the planet — or the rocket later — then you can do that by choosing the 'View and add images' button.
+
+![A plus, an upload symbol, and an image symbol. The image symbol is highlighted.](images/trinket_image.png)
+
+Then choose 'Image Library' and follow the on-screen instructions to upload an image to your Trinket image library.
+
+![A button with a plus and the words 'Image Library' on it.](images/trinket_image_library.png)
+
+Note the filename of the image you've uploaded, and use it in the code in place of `planet.png`.
+
+--- /collapse ---

@@ -1,6 +1,6 @@
 ## Introduction
 
-Make an animation of a rocket launching into orbit. The amount of fuel you give it will decide whether or not it successfully reaches orbit.
+Make an animation to propel a satellite into orbit - by hitching a ride on a rocket! Your animation will create cool graphic effects and simulate the best amount of fuel to give the rocket. 
 
 ![Side by side screens showing one green rocket in orbit and one red rocket that has failed to reach orbit](images/showcase.png)
 
@@ -9,16 +9,18 @@ Make an animation of a rocket launching into orbit. The amount of fuel you give 
 </p>
 
 You will:
-+ Use `for` loops to repeat actions
-+ **Define** and **call** functions with **input parameters**
 + Use **images** in your animations
++ Use `for` loops to repeat actions
++ Join conditions with `and`
 
 --- no-print ---
 --- task ---
 ### Try it
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 175px; flex-grow: 1">  
-You will have to supply the rocket with a certain amount of fuel. Try a very small amount (around 10kg) and a very large amount (around 30000 kg) to see what happens.
+You will have to supply the rocket with enough fuel to reach the satellite orbit. Try a small amount (around 10000 kg) and a very large amount (around 50000 kg) to see what happens. 
+
+How much fuel is just enough without too much left over?
 </div>
 <iframe src="https://trinket.io/embed/python/622b4dd113?outputOnly=true&runOption=run&start=result" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
 </div>
