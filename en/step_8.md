@@ -3,7 +3,7 @@ Your project is complete, but you can still make it better if you want. Here are
 
  + Let the user set the rate at which the rocket burns fuel
  + Let the user set how far the rocket flies in each frame
- + Add a second, higher, orbit for the rocket to reach. Have it change colour again when it gets there. The first orbit is low orbit, while the second is geosynchronous orbit. 
+ + Add a second, higher, orbit for the rocket to reach. Have it change colour again when it gets there. The first orbit is low orbit, while the second is geostationary orbit. 
 
 <p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;">
 <span style="color: #0faeb0">**Low orbit:**</span> The first orbit a rocket can reach is called low orbit. In low orbit, the rocket will circle the planet without falling back towards it. Satellite like the International Space Station (ISS) are in low Earth orbit. The <abbr title="International Space Station ">ISS</abbr> orbits the Earth in around 90 minutes!
@@ -15,7 +15,7 @@ Your project is complete, but you can still make it better if you want. Here are
 
 Here's a version of the project with all those upgrades, so you can see how they could work:
 
-<iframe src="https://trinket.io/embed/python/a23d43bdfc?outputOnly=true&runOption=run" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+<iframe src="https://trinket.io/embed/python/76c7d66070?outputOnly=true&runOption=run&start=result" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
 
 --- collapse ---
 
@@ -24,5 +24,22 @@ title: Completed project
 ---
 
 You can view the [completed project here](https://trinket.io/python/fa55405c62){:target="_blank"}.
+
+--- /collapse ---
+
+--- collapse ---
+---
+title: Adding your own image to Trinket
+---
+
+If you want to use your own picture for the planet — or the rocket later — then you can do that by choosing the 'View and add images' button.
+
+![A plus, an upload symbol, and an image symbol. The image symbol is highlighted.](images/trinket_image.png)
+
+Then choose 'Image Library' and follow the on-screen instructions to upload an image to your Trinket image library.
+
+![A button with a plus and the words 'Image Library' on it.](images/trinket_image_library.png)
+
+Note the filename of the image you've uploaded, and use it in the code in place of `planet.png`.
 
 --- /collapse ---

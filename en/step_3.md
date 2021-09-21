@@ -1,237 +1,120 @@
-## Countdown
+## Liftoff!
 
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">
-
-Before launching, rockets have a countdown. To create this in your program, you're going to use a `for` loop.
-
+Each time a new frame is drawn the rocket needs to move up the screen to create an animation effect.
 </div>
 <div>
-![A countdown from 10 to 0 printing out, followed by the message 'We have liftoff!' and several 🚀](images/countdown_fixed.gif){:width="300px"}
+![A rocket flying at a steady speed from the bottom to the top of the screen.](images/fly.gif){:width="300px"}
 </div>
 </div>
 
-You can use Python's built-in `range()` function — which makes a sequence of numbers in order — to give you the numbers you'll need for your countdown. When calling `range()` you can pass it a single number. If you do, `range()` will give you the sequence of all the numbers counting up to the number you gave it. First, create a `countdown()` function where the comments tell you to. Inside that function, create the sequence of numbers to count down.
-
 --- task ---
 
---- code ---
----
-language: python
-filename: main.py — countdown()
-line_numbers: true
-line_number_start: 15
-line_highlights: 16-20
----
-# The countdown function goes here
-def countdown():
+The starter project has a rocket image provided for you. 
 
-  count = range(10)
-
-
---- /code ---
-
---- /task ---
-
-A `for` loop repeats a piece of code once for every item it is given. By giving it the sequence stored in `count`, you can print out all those numbers with very little code.
-
---- task ---
-
---- code ---
----
-language: python
-filename: main.py — countdown()
-line_numbers: true
-line_number_start: 15
-line_highlights: 19-21
----
-# The countdown function goes here
-def countdown():
-
-  count = range(10)
-  
-  for t_minus in count:
-    print('T minus', t_minus) # Print at each step
-
-
---- /code ---
-
---- /task ---
-
-**Tip:** The value of the **loop variable** — which you have called `t_minus` here — changes every time the loop restarts, moving through all the items the `for` loop was given, in order.
-
-Then add a lift-off message once the coundown is complete. Do this by adding `print`s that are outside the `for` loop, but still inside `countdown`.
-
---- task ---
-
---- code ---
----
-language: python
-filename: main.py — countdown()
-line_numbers: true
-line_number_start: 16
-line_highlights: 23-24
----
-def countdown():
-
-  count = range(10)
-
-  for t_minus in count:
-    print('T minus', t_minus) # Print at each step
-
-  print('We have liftoff!')
-  print('🚀🚀🚀🚀🚀')
-
-
---- /code ---
-
---- /task ---
-
-Now add a call to `countdown` at the end of `setup`, so it runs before the animation starts.
-
---- task ---
-
---- code ---
----
-language: python
-filename: main.py — setup()
-line_numbers: true
-line_number_start: 41
-line_highlights: 48
----
-def setup():
-  # Setup your animation here
-  global planet
-  planet = load_image('planet.png')
-  
-  size(SCREEN_WIDTH, SCREEN_HEIGHT)
-  
-  countdown()
-  
-  
---- /code ---
-
---- save ---
+![Image of the rocket in the Trinket image library.](images/trinket_rocket_image.png)
 
 --- /task ---
 
 --- task ---
 
-**Test:** Run your code and see what happens
-
---- /task ---
-
-![The coundown printing out, but with the numbers going from 0 to 9, and all seeming to print at the same time](images/countdown_backwards.gif)
-
-There are a few problems with what your code does right now:
- + The numbers count up instead of down
- + The numbers only go as far as 9, even though you used `range(10)`
- + The coundown happens instantly, but in a real rocket launch each number is a second apart
-
-First, fix the numbers: `range(10)` creates a sequence of numbers between 0 and 10. It starts at zero becasuse computers usually start counting from zero. The sequence `range()` creates includes 0, but does not include 10. So, to get the 10 included, you will have to use `range(11)`. 
-
---- task ---
-
---- code ---
----
-language: python
-filename: main.py — countdown()
-line_numbers: true
-line_number_start: 18
-line_highlights: 18
----
-  count = range(11)
-
-  for t_minus in count:
-    print('T minus', t_minus) # Print at each step
---- /code ---
-
---- /task ---
-
---- task ---
-
-**Test:** If you run this code, you'll see 10 in the program's output.
-
---- /task ---
-
-The range is still in the wrong order. But, `range` behaves differently if you give it three numbers instead of one:
- + The first number is the start of the range 
- + The second number is the end of the range
- + The third number is the step between them
-
-So `range(5, 20, 5)` will produce 5, 10, 15. You can also count backwards, by using a negative step. Update your `countdown()` function to use a step of `-1`, and to count down from ten to zero. Just like you had to use `range(11)` to get 10 to appear in the results, you'll have to go to `-1` to get 0 to appear.
-
---- task ---
-
---- code ---
----
-language: python
-filename: main.py — countdown()
-line_numbers: true
-line_number_start: 18
-line_highlights: 18
----
-  count = range(10,-1,-1)
-
-  for t_minus in count:
-    print('T minus', t_minus) # Print at each step
---- /code ---
-
---- save ---
-
---- /task ---
-
---- task ---
-
-**Test:** Run the code, and check that you get the countdown from 10 to 0.
-
---- /task ---
-
-The countdown is still happening too fast. You need to make Python wait for a second between each number. You can do this using the `sleep()` function, which you can `import` from the `time` library. First, add the `import` at the top of the file:
-
---- task ---
+Add code to the `setup()` function to load the rocket image into a `rocket` global variable. 
 
 --- code ---
 ---
 language: python
 filename: main.py
 line_numbers: true
-line_number_start: 3 
-line_highlights: 5
+line_number_start: 17 
+line_highlights: 21, 23
 ---
-# Import library code
-from p5 import *
-from time import sleep
+def setup():
+  # Setup your animation here
+  size(screen_size, screen_size)
+  image_mode(CENTER)
+  global planet, rocket
+  planet = load_image('planet.png')
+  rocket = load_image('rocket.png')
+
 --- /code ---
 
-Then update the `for` loop in `countdown()` to call the `sleep()` function, passing it the number of seconds to wait.
+--- /task ---
 
-**Tip:** Programmers often describe telling a function to run as **calling** it. Likewise, they describe giving the function values to use as **passing** those values to the function.
+The y position of the rocket will start at 400 (the screen height) and then decrease by 1 each time a new frame is drawn.
+
+--- task ---
+
+Add a `rocket_y` global variable to keep track of the rocket's y position. 
 
 --- code ---
 ---
 language: python
-filename: main.py — countdown()
+filename: main.py
 line_numbers: true
-line_number_start: 21 
-line_highlights: 23
+line_number_start: 7 
+line_highlights: 9
 ---
-  for t_minus in range(10,-1,-1):
-    print('T minus', t_minus) # Print at each step
-    sleep(1)
+# Setup global variables 
+screen_size = 400
+rocket_y = screen_size # start at the bottom
 
-  print('We have liftoff!')
-  print('🚀🚀🚀🚀🚀')
 --- /code ---
-
---- save ---
 
 --- /task ---
 
 --- task ---
 
-**Test:** Run your code and watch the countdown!
+Define a `draw_rocket()` function to change the rocket's y position and draw it.
 
-**Tip:** Because you'll be running your code a lot to test it, you might want to pass a lower value to sleep for now (maybe `0.1`) and then change it back when you're ready to share your animation with others.
+`rocket_y -= 1` is a shorter way of saying `rocket_y = rocket_y - 1`.
+
+--- code ---
+---
+language: python
+filename: main.py
+line_numbers: true
+line_number_start: 16 
+line_highlights: 17-21 
+---
+# The draw_rocket function goes here
+def draw_rocket():
+
+  global rocket_y # say we want to use the global rocket_y variable
+  rocket_y -= 1 # move the rocket
+  image(rocket, width/2, rocket_y, 64, 64)
+
+--- /code ---
 
 --- /task ---
+
+--- task ---
+
+Call your new `draw_rocket()` in the `draw()` function so that the rocket gets redrawn every frame.
+
+--- code ---
+---
+language: python
+filename: main.py
+line_numbers: true
+line_number_start: 31 
+line_highlights: 34 
+---
+def draw():
+  # Things to do in every frame
+  draw_background()
+  draw_rocket()
+
+--- /code ---
+
+--- /task ---
+
+--- task ---
+
+**Test:** Run your code to check that the rocket starts at the bottom of the screen and moves up each frame.
+
+![Image of the rocket half way up the screen.](images/trinket_rocket_fly.png)
+
+--- /task ---
+
+--- save ---

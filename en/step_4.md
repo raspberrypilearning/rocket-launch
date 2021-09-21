@@ -1,3 +1,38 @@
+## Exhaust effects
+
+<div style="display: flex; flex-wrap: wrap">
+<div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">
+
+The rocket will look more realistic with special effects for the exhaust trail. 
+
+You can create cool effects by using a `for` loop to draw lots of shapes in each frame.
+
+</div>
+<div>
+![The rocket mid flight with an exhaust trail](images/flying_rocket.gif){:width="300px"}
+</div>
+</div>
+
+You can use Python's built-in `range()` function — which makes a sequence of numbers in order — to give you the numbers you'll need for your countdown. When calling `range()` you can pass it a single number. Then, `range()` will give you the sequence of all the numbers counting up to the number you gave it.  
+
+A `for` loop repeats a piece of code once for every item it is given. By giving it the sequence stored in `count`, you can print out all those numbers with very little code.
+
+There are a few problems with what your code does right now:
+ + The numbers count up instead of down
+ + The numbers only go as far as 9, even though you used `range(10)`
+ + The coundown happens instantly, but in a real rocket launch each number is a second apart
+
+First, fix the numbers: `range(10)` creates a sequence of numbers between 0 and 10. It starts at zero becasuse computers usually start counting from zero. The sequence `range()` creates includes 0, but does not include 10. So, to get the 10 included, you will have to use `range(11)`. 
+
+The range is still in the wrong order. But, `range` behaves differently if you give it three numbers instead of one:
+ + The first number is the start of the range 
+ + The second number is the end of the range
+ + The third number is the step between them
+
+So `range(5, 20, 5)` will produce 5, 10, 15. You can also count backwards, by using a negative step. Update your `countdown()` function to use a step of `-1`, and to count down from ten to zero. Just like you had to use `range(11)` to get 10 to appear in the results, you'll have to go to `-1` to get 0 to appear.
+
+**Tip:** Programmers often describe telling a function to run as **calling** it. Likewise, they describe giving the function values to use as **passing** those values to the function.
+
 ## Liftoff!
 
 <div style="display: flex; flex-wrap: wrap">
@@ -9,9 +44,10 @@ Make your rocket fly, by creating a function that accepts a parameter.
 </div>
 </div>
 
-Functions that accept parameters as inputs are really powerful tools: they let you create a piece of code that produces different outputs based on its inputs, which can be very useful in your programming. You've actually used lots of these kinds of functions already: the `print()`, `sleep()`, and `background()` functions all accept parameters that change what gets printed, how long the program waits for, and what colour the background is, respectively. The function you're going to create will use the amount of time the animation has been running to decide where to draw your rocket.
+You've actually used lots of functionst that take parameters already: `print('Hello')` takes 'Hello' as a parameter and then prints that message to the screen. The function you're going to create will use the amount of time the animation has been running to decide where to draw your rocket.
 
-Create a function called `fly()` that accepts a parameter called `frames`. You give a function parameters by placing them in the parentheses after the function's name when you define it with `def`. Have it set a variable called `how_far` to ten times `frames`. Then have it print that variable out.
+
+Define a function called `fly()` that accepts a parameter called `frames`. You give a function parameters by placing them in the parentheses after the function's name when you define it with `def`. Have it set a variable called `how_far` to ten times `frames`. Then have it print that variable out. This will become the distance the rocket has flown at that point in the program.
 
 --- task ---
 
@@ -67,7 +103,7 @@ def draw():
 
 These numbers, that your code prints out, can be used as the y-coordinates for drawing your rocket flying into orbit.
 
-You'll need a rocket sprite, which you can create the same way you created the planet sprite. First, declare global variables to hold the height and width of the rocket, as well as one to hold the rocket image itself.
+You'll need a rocket sprite, which you can create the same way you created the planet sprite. First, declare global variables to hold the height and width of the rocket image, as well as one to hold the rocket image itself.
 
 --- task ---
 
@@ -81,7 +117,7 @@ line_highlights: 11-12, 15-16
 ---
 PLANET_RADIUS = 150
 ROCKET_HEIGHT = 32
-ROCKET_WIDTH = 20
+ROCKET_WIDTH = 32
 
 planet = None  # Make an empty variable
 rocket = None
@@ -142,8 +178,8 @@ def fly(frames):
   
   image(
     rocket, # sprite
-    0, # x-coordinate — 0 because translate did the moving
-    0, # y-coordinate — 0 because translate did the moving
+    0, # x-coordinate — 0 because of translate
+    0, # y-coordinate — 0 because of translate
     ROCKET_WIDTH, # sprite width
     ROCKET_HEIGHT # sprite height
     )
@@ -185,5 +221,13 @@ def setup():
 **Test:** Run the program again, and see the difference.
 
 **Choose:** You can adjust the frame rate if you think it's still too fast, or too slow. If you want it to go faster, you may reach the limits of your computer, or screen.
+
+<p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;">
+<span style="color: #0faeb0">**Frames per second (FPS):**</span> Otherwise called 'frame rate', this refers to how many frames of an animation, film, or computer game are displayed in a second. The higher this rate is, the smoother and more natural motion seems to our eyes. Most films use around 24 FPS, as this is enough for the illusion of smooth motion, though some films (e.g. Spider-Man: Into the Spider-Verse animated parts of the film at 12 fps) change their frame rate to create a deliberate effect. 
+<br>
+In computer games, because players need to *react* to the motion on the screen, higher frame rates are usually desirable. The player who sees something first can react to it first, after all! Most action, driving, or shooter games are ideally played at over 60 fps, with profressional players often using 80, or even 120, fps. Whether your computer can draw those frames fast enough will depend on the power of the computer itself, as well as the graphics settings you have selected for the game — trying to draw a larger and more complex image is going to take more effort.
+<br>
+Finally, even if your computer can draw incredibly quickly, your screen can only display a certain number of frames per second — called its refresh rate. Your visible frame rate will be the lower of the fps of the source, e.g. a game, and your montior's refresh rate.
+</p>
 
 --- /task ---

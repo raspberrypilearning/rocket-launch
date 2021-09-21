@@ -1,26 +1,28 @@
 ## Introduction
 
-In this project, you will make an animation of a rocket launching into orbit. Depending on how much fuel you give it, its mission will succeed or fail.
+Make an animation to propel a satellite into orbit - by hitching a ride on a rocket! Your animation will create cool graphic effects and simulate the best amount of fuel to give the rocket. 
+
+![Side by side screens showing one green rocket in orbit and one red rocket that has failed to reach orbit](images/showcase.png)
 
 <p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;">
-<span style="color: #0faeb0">**Computer programming and space flight:**</span> Computers, and computer programmers, have been a part of spaceflight since it began. The maths needed to get spacecraft into space and move them around there are just too complex for humans to do as fast as astronauts need the answers. 
-<br>
-These days, computers go to space with the astronauts but, in the early days of spaceflight, computers were still huge machines that took up whole rooms and the results of their calculations had to be sent up to the spacecraft by radio. 
+<span style="color: #0faeb0">**Computer simulations**</span> are used to calculate what will happen when we send a rocket into space. Running simulations and making plans on a computer reduces the risk of expensive or dangerous problems in space.
 </p>
 
 You will:
-+ Use loops to repeat actions
-+ Use functions with parameters
-+ Use sprites in your animations
++ Use **images** in your animations
++ Use `for` loops to repeat actions
++ Join conditions with `and`
 
 --- no-print ---
 --- task ---
 ### Try it
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 175px; flex-grow: 1">  
-You have to supply the rocket with a certain amount of fuel. Try a very small amount (around 10kg) and a very large amount (around 30000 kg) to see what happens.
+You will have to supply the rocket with enough fuel to reach the satellite orbit. Try a small amount (around 10000 kg) and a very large amount (around 50000 kg) to see what happens. 
+
+How much fuel is just enough without too much left over?
 </div>
-<iframe src="https://trinket.io/embed/python/fa55405c62?outputOnly=true&runOption=run" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+<iframe src="https://trinket.io/embed/python/622b4dd113?outputOnly=true&runOption=run&start=result" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
 </div>
 --- /task ---
 --- /no-print ---
@@ -30,5 +32,6 @@ You have to supply the rocket with a certain amount of fuel. Try a very small am
 --- /print-only ---
 
 <p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;">
-![Katherine Johnson](images/katherine_johnson.jpeg){:width="300px"} [Katherine Johnson](https://en.wikipedia.org/wiki/Katherine_Johnson) and her colleagues [Mary Jackson](https://en.wikipedia.org/wiki/Mary_Jackson_(engineer)) and [Dorothy Vaughan](https://en.wikipedia.org/wiki/Dorothy_Vaughan), mathmaticians and computer programmers who worked at NASA in the early days of spaceflight, are the subjects of the film 'Hidden Figures'. That film not only gives you a chance to understand the early days of computing, but also showcases the injustices that Johnson and her colleagues had to contend with as black women working in an environment dominated by white men.
-</p>
+![Dorothy Vaughan](images/dorothy_vaughan.jpeg){:width="300px"} Dorothy Vaughan made important contributions to early spaceflight. Seeing that the future would be to use electronic computers she taught herself, and her team, how to code.
+
+The film 'Hidden Figures' tells the story of how Dorothy and other black women played a key role in the success of the US space program. 
