@@ -99,7 +99,7 @@ filename: main.py
 line_numbers: true
 line_number_start: 31 
 line_highlights: 34 
-
+---
 def draw():
   # Things to do in every frame
   draw_background()
