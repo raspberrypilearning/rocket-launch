@@ -51,8 +51,6 @@ run()
 
 --- /task ---
 
---- /task ---
-
 The rocket should only move if it hasn't burned all of its fuel.
 
 --- task ---
