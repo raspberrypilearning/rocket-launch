@@ -80,7 +80,7 @@ line_highlights: 17-21
 # The draw_rocket function goes here
 def draw_rocket():
 
-  global rocket_y # say we want to use the global rocket_y variable
+  global rocket_y # use the global rocket_y variable
   rocket_y -= 1 # move the rocket
   image(rocket, width/2, rocket_y, 64, 64)
 
@@ -109,11 +109,11 @@ def draw():
 
 --- /task ---
 
---- task ---
+--- task ---  
 
 **Test:** Run your code to check that the rocket starts at the bottom of the screen and moves up each frame.
 
-![Image of the rocket half way up the screen.](images/trinket_rocket_fly.png)
+![Image of the rocket half way up the screen.](images/trinket_rocket_fly.gif)
 
 --- /task ---
 

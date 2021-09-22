@@ -1,153 +1,230 @@
-## Fuel
+## Reaching orbit
+
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">
-Time to make your rocket more realistic. One of the most important things to decide when building a rocket is how much fuel to load into it.
+
+The point of launching the rocket is to propel a satellite into orbit. 
+
+An orbit is a curved path that one object takes around another due to gravity.
+
+The rocket will change colour to show how successful the launch was. 
+
+</div>
+<div>
+![Two side by side image showing a successful (green tint) and unsucessful (red tint) launch.](images/check_orbit.gif){:width="300px"}
 </div>
 </div>
-
-<iframe src="https://trinket.io/embed/python/fa55405c62?outputOnly=true&runOption=run" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
-
-Add some variables at the start of your program to keep track of how much fuel your rocket has, how fast that fuel burns (in frames), and how far the rocket has travelled.
 
 --- task ---
+
+Create two new global variables to set the radius of the orbit circle and the y coordinate of the orbit t the point the rocket centre needs to reach to launch the satellite. 
 
 --- code ---
 ---
 language: python
 filename: main.py
 line_numbers: true
-line_number_start: 15 
-line_highlights: 17-20
+line_number_start: 7 
+line_highlights: 11-12
 ---
-planet = None
-rocket = None
-how_far = 0 # how far the rocket has travelled
-burn = 1000 # burn how much fuel every frame?
-fuel = 25000 # start with how many kgs of fuel?
+
+# Setup global variables 
+screen_size = 400
+rocket_y = screen_size # start at the bottom
+burn = 100 
+orbit_radius = 250
+orbit_y = screen_size - orbit_radius
 
 --- /code ---
 
 --- /task ---
 
-Declare `how_far` as a `global` variable, to keep it from being erased every time the `draw()` function calls `fly()` as part of creating a frame.
-
 --- task ---
+Update the `draw_background()` function to draw an ellipse to represent the satellite orbit that the rocket needs to reach.  
 
 --- code ---
 ---
 language: python
-filename: main.py — fly()
+filename: main.py - draw_background()
 line_numbers: true
-line_number_start: 22
+line_number_start: 16
+line_highlights: 20-24
+---
+def draw_background():
+  background(0) # short for background(0, 0, 0) - black 
+  image(planet, width/2, height, 300, 300)
+
+  # Draw the orbit
+  no_fill() # Turn off any fill
+  stroke(255) # Set a white stroke
+  stroke_weight(2)
+  ellipse(width/2, height, orbit_radius*2, orbit_radius*2)
+--- /code ---
+
+--- /task ---
+
+--- task ---
+
+**Test:** Run your program and check that a white orbit line is drawn. 
+
+![The screen with planet and new orbit line.](images/draw_orbit.gif)
+
+--- /task ---
+
+The rocket should stop when it reaches the satellite orbit - the end of the mission. 
+
+--- task ---
+
+Update your `if fuel >= burn` code to also check that the rocket hasn't reached the orbit. 
+
+You can use an `and` in `if` statements to check if two, or more, conditions are true. 
+
+--- code ---
+---
+language: python
+filename: main.py - draw_rocket()
+line_numbers: true
+line_number_start: 19
 line_highlights: 24
 ---
-def fly(frames):
+# The draw_rocket function goes here
+def draw_rocket():
   
-  global how_far 
+  global rocket_y, fuel, burn # say we want to use the global variables
   
-  how_far = 10 * frames
-  
+    if fuel >= burn and rocket_y > orbit_y: # still flying
 --- /code ---
 
 --- /task ---
 
-Check if burning for the number of frames that have passed would have used up all the rocket's fuel. You can test this by checking if `frames` times `burn` is less than or equal to (≤) the total amount of fuel the rocket started with. Chang your code for `how_far` so it uses `if` and `<=` to only update if the rocket still has fuel.
+--- task ---
+
+**Test:** Run your project and enter 50000 as the amount of fuel. This should be plenty of fuel to reach orbit. The rocket should stop moving when it reaches orbit. 
+
+--- /task ---
+
+The rocket should be coloured red if it runs out of fuel before getting high enough to launch the satellite.
 
 --- task ---
 
 --- code ---
 ---
 language: python
-filename: main.py — fly()
+filename: main.py — draw_rocket()
 line_numbers: true
-line_number_start: 22
-line_highlights: 26-27
+line_number_start: 35
+line_highlights: 39-40
 ---
-def fly(frames):
-  
-  global how_far 
-  
-  if (frames * burn) <= fuel: 
-    how_far = 10 * frames
-  
+    fill(200, 200, 200, 100) # transparent grey
+    for i in range(20): # draw 20 random smoke ellipses
+      ellipse(width/2 + randint(-5, 5), rocket_y + randint(20, 50), randint(5, 10), randint(5, 10))
+
+  if fuel < burn and rocket_y > orbit_y: # No more fuel and not in orbit
+    tint(255, 0, 0) # Failure
+
 --- /code ---
 
 --- /task ---
 
+--- task ---
+
+**Test:** Run your code and enter 20000 as the amount of fuel. Check that the rocket turns red when it stops below the orbit.
+
+![A red rocket that has run out of fuel before the orbit circle. The planet has also turned red](images/orbit_failure.png)
+
+Oh no, the planet has turned red! 
+
 --- /task ---
 
-To finish off the fuel burning code, add a test in `fly()` to check if the rocket will never reach orbit, due to running out of fuel, and tint it red if so. 
-
 --- task ---
+The `tint()` function sets the tint colour for all images that are drawn until you change the tint or use `no_tint()` to turn it off.
+
+**Choose:** Add a call to `no_tint()` after drawing the image so that the planet isn't tinted red in the next frame - or leave it if you like the planet turning red! 
 
 --- code ---
 ---
 language: python
-filename: main.py — fly()
+filename: main.py - draw_rocket()
 line_numbers: true
-line_number_start: 29 
-line_highlights: 33-34
+line_number_start: 45
+line_highlights: 49
 ---
-  # Reached orbit?
-  if how_far >= ORBIT_RADIUS:
-    tint(0, 200, 0)
+if fuel < burn and rocket_y > orbit_y: 
+  tint(255, 0, 0) # Failure
+    
+image(rocket, width/2, rocket_y, 64, 64)
+no_tint() # so we don't tint the planet in the next frame!
   
-  elif (frames * burn) >= fuel:
-    tint(200, 0, 0)
 --- /code ---
+
+--- /task ---
+
+--- task ---
+
+Use the `tint()` function again, this time to colour the rocket green if the rocket has enough fuel to reach the satellite orbit:  
+
+--- code ---
+---
+language: python
+filename: main.py - draw_rocket()
+line_numbers: true
+line_number_start: 45
+line_highlights: 47-48
+---
+if fuel < burn and rocket_y > orbit_y: 
+  tint(255, 0, 0) # Failure
+elif rocket_y <= orbit_y:
+  tint(0, 255, 0) # Success
+
+image(rocket, width/2, rocket_y, 64, 64)
+no_tint() # so we don't tint the planet in the next frame!
+  
+--- /code ---
+--- /task ---
+
+--- task ---
+
+**Test:** Run your project and enter 50000 as the amount of fuel. Check that your rocket turns green when it reaches the satellite orbit.
+
+![A green rocket that has reached the orbit circle and has fuel left](images/orbit_failure.png)
+
+--- /task ---
+
+You now have a simulation that can be used to show how much fuel is needed as a minimum to reach the satellite orbit. That's great but you can take a huge amount of fuel and still success - which is costly and wasteful! 
+
+--- task ---
+
+Amend the condition in your success code to only turn green if the rocket reaches the orbit `and` with less than 1000kg of fuel left. 
+
+Add code to colour the rocket yellow if the rocket has more than 1000kg of fuel left when it reaches orbit. 
+
+--- code ---
+---
+language: python
+filename: main.py
+line_numbers: true
+line_number_start: 45
+line_highlights: 47, 49-50
+---
+if fuel < burn and rocket_y > orbit_y: 
+  tint(255, 0, 0) # Failure
+elif fuel < 1000 and rocket_y <= orbit_y:
+  tint(0, 255, 0) # Success
+elif fuel >= 1000 and rocket_y <= orbit_y: 
+  tint(255, 200, 0) # Too much fuel
+    
+image(rocket, width/2, rocket_y, 64, 64)
+no_tint() # so we don't tint the planet in the next frame!
+--- /code ---
+
+--- /task ---
+
+--- task ---
+
+**Test:** Run your program several times with different numbers, 25000kg of fuel should be the amount needed to turn green but check that yellow works too by using a bigger number. 
+
+![A yellow rocket that has reached the orbit circle and has fuel left](images/orbit_amber.png)
+
+--- /task ---
 
 --- save ---
-
---- /task ---
-
---- task ---
-
-**Test:** Run your program and watch the rocket launch!
-
---- /task ---
-
-Finally, let users of your program set the fuel value when the program starts by updating `setup()` to include `fuel` as `global`, and to use the `input()` function to ask the user to set it.
-
---- task ---
-
---- code ---
----
-language: python
-filename: main.py — fly()
-line_numbers: true
-line_number_start: 91 
-line_highlights: 94, 100
----
-def setup():
-  # Setup your animation here
-  frame_rate(10)
-  global planet, rocket, fuel
-  planet = load_image('planet.png')
-  rocket = load_image('rocket.png')
-  
-  size(SCREEN_WIDTH, SCREEN_HEIGHT)
-  
-  fuel = int(input('How many kilograms of fuel do you want to use?'))
-  
-  countdown()
-  
-  
---- /code ---
-
-**Tip:** You have to surround `input()` with `int()` to turn what the user types into a number you can do maths with.
-
---- save ---
-
---- /task ---
-
---- task ---
-
-**Test:** Try launching your rocket with enough fuel to reach orbit, and to fail to reach orbit. To reach orbit, use 25000 kg of fuel. To fail to reach orbit, use 24000 kg, or less.
-
---- /task ---
-
-Your results should look something like this:
-
-![A rocket launches from a planet and flys straight up, passing a green line and becoming green.](images/fuel_orbit_success.gif){:width="300px"}
-
-![A rocket launches from a planet and flys straight up, falling short of a green line and becoming red.](images/fuel_orbit_fail.gif){:width="300px"}
