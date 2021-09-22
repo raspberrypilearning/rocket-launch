@@ -5,75 +5,60 @@
 legend: Question 2 of 3
 ---
 
-![A planet inside a grey square is shown on a grid. At the top-left corner of the square, the coordinates (210, 50) are shown. At the top-right corner of the square, the coordinates (310, 50) are shown. At the bottom-right corner of the square, the coordinates (310, 150) are shown. At the bottom-left corner of the square, the coordinates (210, 150) are shown.](images/quiz_planet.png)
+A project has this setup code to load a planet image and say that images should be positioned at their centre:
 
-Which code would position the planet sprite where it is shown in this image?
+--- code ---
+---
+language: python
+filename: main.py
+---
+def setup():
+  size(400, 400)
+  image_mode(CENTER)
+  global planet
+  planet = load_image('planet.png')
+--- /code ---
+
+Coordinates start from (0, 0) in the top left corner. In the project you drew planet and rocket images using the `image(image_file, x-coord, y-coord, x-width, y-width)` function.
+
+Where will this code position the planet image?
+
+--- code ---
+---
+language: python
+filename: main.py
+---
+image(planet, 300, 100, 128, 128)
+--- /code ---
 
 --- choices ---
 
 - ( ) 
-```python
-image(
-  planet,
-  310,
-  50,
-  100,
-  100
-  )
-```
+![A planet image positioned horizontally off at the right of the screen and vertically in the middle](images/planet400200.png)
 
   --- feedback ---
-The `image()` function needs to be given the coordinates for the top-left corner of the image. `(310, 50)` are the coordinates for the top-right corner.
+The second and third inputs to the `image()` function are the x and y coordinates for the centre of the image. This planet has the coordinates `(400, 200)`.
   --- /feedback ---
 
 - ( ) 
-```python
-image(
-  planet,
-  0,
-  0,
-  100,
-  100
-  )
-```
+![A planet image positioned in the middle of the bottom-left quadrant](images/planet100300.png)
 
   --- feedback ---
-`(0, 0)` are the coordinates of the top-left corner of the grid you are drawing on, and the planet is positioned down and to the right.
+The second and third inputs to the `image()` function are the x and y coordinates for the centre of the image. This planet has the coordinates `(100, 300)`.
   --- /feedback ---
 
-- ( ) 
-```python
-translate(210, 50)
-
-image(
-  planet,
-  210,
-  50,
-  100,
-  100
-  )
-```
+- (x) 
+![A planet image positioned in the middle of the top-right quadrant](images/planet300100.png)
 
   --- feedback ---
-`translate()` moves the entire grid by the amount it is given for x and y. In this example, it would have moved the grid so the new `(0, 0)` is at the old `(210, 50)`. The new `(210, 50)` — where this code tries to draw the planet — is at the old `(420, 100)` and so totally off screen!
+Correct! The second and third inputs to the `image()` function are the x and y coordinates for the centre of the image. This image has the coordinates (300, 100) so it is 300 (out of 400) pixels from the left for the x coordinate and 100 (out of 400) pixels down from the top. 
   --- /feedback ---
 
-- (x)
-
-```python
-translate(210, 50)
-
-image(
-  planet,
-  0,
-  0,
-  100,
-  100
-  )
-```
+- ()
+![A planet image positioned in the top-left quadrant](images/planet128128.png)
 
   --- feedback ---
-Correct. By moving the grid `(0, 0)` by `(210, 50)` you can draw the image at `(0, 0)` and get the result you want.
+The fourth and fifth inputs give the size of the image. The second and third inputs to the `image()` function are the x and y coordinates for the centre of the image. This planet has the coordinates `(128, 128)`. 
   --- /feedback ---
 
 --- /choices ---

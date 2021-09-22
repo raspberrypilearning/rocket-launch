@@ -1,58 +1,72 @@
-
 --- question ---
 
 ---
 legend: Question 3 of 3
 ---
 
-If you wanted your program to output:
+This code uses `tint()` to colour a rocket in a game to show the player how they are doing.
 
-```
-I like pizza
-But I prefer ice cream
-```
+--- code ---
+---
+language: python
+filename: main.py
+---
+if points >= 100: 
+    tint(0, 255, 0) # Green
+elif points < 100 and lives == 1:
+  tint(255, 200, 0) # Amber
+elif points < 100 and lives == 0: 
+  tint(255, 0, 0) # Red
+else: 
+  no_tint() 
 
-How would you call the `favourites()` function, defined in the code below?
+image(rocket, width/2, height/2, 64, 64)
 
-```python
-def favourites(food, prefercence):
-  print("I like", food)
-  print("But I prefer", preference)
-```
+--- /code ---
+
+If the `points` variable has the value '99' and the `lives` variable has the value '1', what will the rocket look like?
 
 --- choices ---
 
-- ( ) `favourites`
+- (x) 
 
+![A rocket image with amber tint](images/rocket_amber.png)
 
-  --- feedback ---
-This is just the name of the function. Any function needs to be called with parentheses to run the code inside it: `my_function()` 
-  --- /feedback ---
+ --- feedback ---
 
-- ( ) `favourites()`
+ Correct! The player has less than 100 points and only 1 life left. The rocket is coloured amber to left them know that this is their last chance to win!
 
-  --- feedback ---
-This would work for a function that did not expect any inputs. However, `favourites()` expects to be passed values for `food` and `preference` when it is called.
-  --- /feedback ---
+ --- /feedback ---
 
-- (x) `favourites('pizza','ice cream')`
+- ( ) 
 
+![A rocket image with no tint](images/rocket_original.png)
 
-  --- feedback ---
-This is correct. `favourites()` needs to be passed `'pizza'` and `'ice cream'`, in that order, to get the result you want.
-  --- /feedback ---
+ --- feedback ---
 
-- ( ) `favourites('ice cream', 'pizza')`
+ Not quite, the rocket has a tint as one of the statements is true.
 
+ --- /feedback ---
 
-  --- feedback ---
-Close, but the parameters are in the wrong order. Passing them this way sets `food` to `'ice cream'` and `preference` to `'pizza'`, which will lead to:
+- ( ) 
 
-```
-I like ice cream
-But I prefer pizza
-```
-  --- /feedback ---
+![A rocket image with green tint](images/rocket_green.png)
+
+ --- feedback ---
+
+ Not quite, the player would need `>= 100` points to win and turn their rocket green. They have `99` which is not enough. Check the conditions carefully.
+
+ --- /feedback ---
+
+- ( ) 
+
+![A rocket image with red tint](images/rocket_red.png)
+
+ --- feedback ---
+
+ Not quite, the player has `< 100` points but lives does not equal `0`. Check the conditions carefully.
+
+ --- /feedback ---
 
 --- /choices ---
 

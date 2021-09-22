@@ -20,11 +20,11 @@ Drawing lots of yellow ellipses at different y positions creates an exhaust trai
  
 --- task ---
 
-A `for` loop repeats a piece of code once for every item it is given. To run the code in a `for` loop a certain number of times, you can use the `range()` function to create a sequence of numbers.
+A `for` loop repeats a piece of code once for every item it is given. To run the code in a `for` loop a certain number of times, you can use the `range()` function. `range(5)` creates a sequence of 5 numbers starting from 0, so [0, 1, 2, 3, 4].
 
 Each time the `for` loop repeats it sets a variable to the current item so that you can use it in the loop. 
 
-Update your `draw_rocket()` function to have a `for` loop that repeats the drawing of `25` exhaust ellipses. The `i` variable gets added to `rocket_y` to draw each ellipse further below the rocket. 
+Update your `draw_rocket()` function to have a `for` loop that repeats the drawing of `25` exhaust ellipses. The **loop variable** `i` gets added to `rocket_y` to draw each ellipse further below the rocket. 
 
 --- code ---
 ---
@@ -75,7 +75,7 @@ line_highlights: 25
 ---
   for i in range(25): # draw 25 burning exhaust ellipses
     fill(255, 255 - i*10, 0) # reduce amount of green
-    ellipse(width/2, rocket_y + i, 8, 3) 
+    ellipse(width/2, rocket_y + i, 8, 3)
 
 --- /code ---
     
