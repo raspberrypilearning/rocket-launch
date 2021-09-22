@@ -9,7 +9,6 @@ This code uses `tint()` to colour a rocket in a game to show the player how they
 --- code ---
 ---
 language: python
-filename: main.py
 ---
 if points >= 100: 
     tint(0, 255, 0) # Green

@@ -10,7 +10,6 @@ A project has this setup code to load a planet image and say that images should 
 --- code ---
 ---
 language: python
-filename: main.py
 ---
 def setup():
   size(400, 400)
@@ -26,7 +25,6 @@ Where will this code position the planet image?
 --- code ---
 ---
 language: python
-filename: main.py
 ---
 image(planet, 300, 100, 128, 128)
 --- /code ---
