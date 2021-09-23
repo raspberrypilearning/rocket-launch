@@ -80,7 +80,7 @@ line_highlights: 20, 23-24
 
 The rocket will keep going even if it has no fuel left. 
 
-![The program with a question in the output area asking how much fuel is required](images/burn-question.png)
+![The program with a question in the output area asking how much fuel is required](images/burn_question.png)
 --- /task ---
 
 --- task ---
@@ -126,7 +126,7 @@ line_highlights: 20, 22-35
 
 **Test:** Run your program to check that the rocket stops when there is no fuel left. 
 
-![Image of a rocket in the middle of the screen with the statement Fuel left: 0'](images/burn-empty.png)
+![Image of a rocket in the middle of the screen with the statement Fuel left: 0'](images/burn_empty.png)
 
 --- /task ---
 
