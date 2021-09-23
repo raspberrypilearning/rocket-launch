@@ -11,7 +11,7 @@ The rocket will change colour to show how successful the launch was.
 
 </div>
 <div>
-![Three side by side image showing a successful (green tint), over-fueled (amber tint), and unsucessful (red tint) launch.](images/check_orbit.png){:width="300px"}
+![Three side by side image showing a successful (green tint), over-fueled (amber tint), and unsucessful (red tint) launch.](images/check_orbit.png){:width="400px"}
 </div>
 </div>
 
@@ -67,7 +67,7 @@ def draw_background():
 
 **Test:** Run your program and check that a white orbit line is drawn. 
 
-![The screen with planet and new orbit line.](images/draw_orbit.png)
+![The screen with planet and new orbit line.](images/draw_orbit.png){:width="300px"}
 
 --- /task ---
 
@@ -130,7 +130,7 @@ line_highlights: 39-40
 
 **Test:** Run your code and enter 20000 as the amount of fuel. Check that the rocket turns red when it stops below the orbit.
 
-![A red rocket that has run out of fuel before the orbit circle. The planet has also turned red](images/orbit_failure.png)
+![A red rocket that has run out of fuel before the orbit circle. The planet has also turned red](images/orbit_failure.png){:width="300px"}
 
 Oh no, the planet has turned red! 
 
@@ -186,7 +186,7 @@ no_tint() # so we don't tint the planet in the next frame!
 
 **Test:** Run your project and enter 50000 as the amount of fuel. Check that your rocket turns green when it reaches the satellite orbit.
 
-![A green rocket that has reached the orbit circle and has fuel left](images/orbit_success.png)
+![A green rocket that has reached the orbit circle and has fuel left](images/orbit_success.png){:width="300px"}
 
 --- /task ---
 
@@ -223,7 +223,7 @@ no_tint() # so we don't tint the planet in the next frame!
 
 **Test:** Run your program several times with different numbers, 25000kg of fuel should be the amount needed to turn green but check that yellow works too by using a bigger number. 
 
-![A yellow rocket that has reached the orbit circle and has fuel left](images/orbit_meh.png)
+![A yellow rocket that has reached the orbit circle and has fuel left](images/orbit_meh.png){:width="300px"}
 
 --- /task ---
 
