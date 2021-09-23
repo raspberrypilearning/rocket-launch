@@ -30,7 +30,7 @@ If the `points` variable has the value '99' and the `lives` variable has the val
 - (x) 
 
 ![A rocket image with amber tint](images/rocket_amber.png)
-<span style="text-align: center;">Amber</span>
+<div style="text-align: center;">Amber
 
  --- feedback ---
 
@@ -41,7 +41,7 @@ If the `points` variable has the value '99' and the `lives` variable has the val
 - ( ) 
 
 ![A rocket image with no tint](images/rocket_original.png)
-<span style="text-align: center;">No tint</span>
+<div style="text-align: center;">No tint
 
  --- feedback ---
 
@@ -52,7 +52,7 @@ If the `points` variable has the value '99' and the `lives` variable has the val
 - ( ) 
 
 ![A rocket image with green tint](images/rocket_green.png)
-<span style="text-align: center;">Green</span>
+<div style="text-align: center;">Green
 
  --- feedback ---
 
@@ -63,7 +63,7 @@ If the `points` variable has the value '99' and the `lives` variable has the val
 - ( ) 
 
 ![A rocket image with red tint](images/rocket_red.png)
-<span style="text-align: center;">Red</span>
+<div style="text-align: center;">Red
 
  --- feedback ---
 

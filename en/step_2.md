@@ -45,13 +45,14 @@ Use the `screen_size` variable to create a square 400 by 400 screen size:
 language: python
 filename: main.py — setup()
 line_numbers: true
-line_number_start: 14
-line_highlights: 16
+line_number_start: 18
+line_highlights: 20
 ---
 def setup():
   # Setup your animation here
   size(screen_size, screen_size)
   
+
 --- /code ---
 
 --- /task ---
@@ -79,8 +80,8 @@ Add code to the `setup()` function to load your chosen image into a `planet` glo
 language: python
 filename: main.py
 line_numbers: true
-line_number_start: 14 
-line_highlights: 17-19
+line_number_start: 18 
+line_highlights: 21-23
 ---
 def setup():
   # Setup your animation here
@@ -88,6 +89,7 @@ def setup():
   image_mode(CENTER)
   global planet
   planet = load_image('planet.png') # your chosen planet
+
 
 --- /code ---
 
@@ -106,14 +108,15 @@ The `p5` library sets `width` and `height` variables based on the size of the sc
 language: python
 filename: main.py — draw_background()
 line_numbers: true
-line_number_start: 10 
-line_highlights: 11-13
+line_number_start: 14 
+line_highlights: 15-17
 ---
 # The draw_background function goes here
 def draw_background():
   background(0) # short for background(0, 0, 0) - black 
   image(planet, width/2, height, 300, 300) # draw the image
   
+
 --- /code ---
 
 Putting all the code for drawing the background into one function makes your code easier to understand.
@@ -129,8 +132,8 @@ To make the background appear, call `draw_background()` in `draw()`. This will c
 language: python
 filename: main.py — draw()
 line_numbers: true
-line_number_start: 24 
-line_highlights: 26
+line_number_start: 28 
+line_highlights: 30
 ---
 def draw():
   # Things to do in every frame

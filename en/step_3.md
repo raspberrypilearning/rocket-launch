@@ -26,8 +26,8 @@ Add code to the `setup()` function to load the rocket image into a `rocket` glob
 language: python
 filename: main.py
 line_numbers: true
-line_number_start: 17 
-line_highlights: 21, 23
+line_number_start: 20
+line_highlights: 24, 26
 ---
 def setup():
   # Setup your animation here
@@ -74,8 +74,8 @@ Define a `draw_rocket()` function to change the rocket's y position and draw it.
 language: python
 filename: main.py
 line_numbers: true
-line_number_start: 16 
-line_highlights: 17-21 
+line_number_start: 11 
+line_highlights: 12-16 
 ---
 # The draw_rocket function goes here
 def draw_rocket():
@@ -83,6 +83,7 @@ def draw_rocket():
   global rocket_y # use the global rocket_y variable
   rocket_y -= 1 # move the rocket
   image(rocket, width/2, rocket_y, 64, 64)
+
 
 --- /code ---
 
@@ -97,13 +98,14 @@ Call your new `draw_rocket()` in the `draw()` function so that the rocket gets r
 language: python
 filename: main.py
 line_numbers: true
-line_number_start: 31 
-line_highlights: 34 
+line_number_start: 34 
+line_highlights: 37 
 ---
 def draw():
   # Things to do in every frame
   draw_background()
   draw_rocket()
+
 
 --- /code ---
 
