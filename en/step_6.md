@@ -30,7 +30,7 @@ line_highlights: 11-12
 
 # Setup global variables 
 screen_size = 400
-rocket_y = screen_size # start at the bottom
+rocket_y = screen_size
 burn = 100 
 orbit_radius = 250
 orbit_y = screen_size - orbit_radius
@@ -47,14 +47,13 @@ Update the `draw_background()` function to draw an ellipse to represent the sate
 language: python
 filename: main.py - draw_background()
 line_numbers: true
-line_number_start: 16
-line_highlights: 20-24
+line_number_start: 37
+line_highlights: 42-45
 ---
 def draw_background():
   background(0) # short for background(0, 0, 0) - black 
   image(planet, width/2, height, 300, 300)
 
-  # Draw the orbit
   no_fill() # Turn off any fill
   stroke(255) # Set a white stroke
   stroke_weight(2)
@@ -84,13 +83,13 @@ You can use an `and` in `if` statements to check if two, or more, conditions are
 language: python
 filename: main.py - draw_rocket()
 line_numbers: true
-line_number_start: 19
-line_highlights: 24
+line_number_start: 14
+line_highlights: 19
 ---
 # The draw_rocket function goes here
 def draw_rocket():
   
-  global rocket_y, fuel, burn # say we want to use the global variables
+  global rocket_y, fuel, burn
   
     if fuel >= burn and rocket_y > orbit_y: # still flying
 --- /code ---
@@ -112,11 +111,11 @@ The rocket should be coloured red if it runs out of fuel before getting high eno
 language: python
 filename: main.py — draw_rocket()
 line_numbers: true
-line_number_start: 35
-line_highlights: 39-40
+line_number_start: 30
+line_highlights: 34-35
 ---
-    fill(200, 200, 200, 100) # transparent grey
-    for i in range(20): # draw 20 random smoke ellipses
+    fill(200, 200, 200, 100)
+    for i in range(20):
       ellipse(width/2 + randint(-5, 5), rocket_y + randint(20, 50), randint(5, 10), randint(5, 10))
 
   if fuel < burn and rocket_y > orbit_y: # No more fuel and not in orbit
@@ -146,15 +145,16 @@ The `tint()` function sets the tint colour for all images that are drawn until y
 language: python
 filename: main.py - draw_rocket()
 line_numbers: true
-line_number_start: 45
-line_highlights: 49
+line_number_start: 34
+line_highlights: 38
 ---
 if fuel < burn and rocket_y > orbit_y: 
   tint(255, 0, 0) # Failure
     
 image(rocket, width/2, rocket_y, 64, 64)
-no_tint() # so we don't tint the planet in the next frame!
+no_tint() # So we don't tint the planet in the next frame!
   
+
 --- /code ---
 
 --- /task ---
@@ -168,8 +168,8 @@ Use the `tint()` function again, this time to colour the rocket green if the roc
 language: python
 filename: main.py - draw_rocket()
 line_numbers: true
-line_number_start: 45
-line_highlights: 47-48
+line_number_start: 34
+line_highlights: 36-37
 ---
 if fuel < burn and rocket_y > orbit_y: 
   tint(255, 0, 0) # Failure
@@ -177,7 +177,7 @@ elif rocket_y <= orbit_y:
   tint(0, 255, 0) # Success
 
 image(rocket, width/2, rocket_y, 64, 64)
-no_tint() # so we don't tint the planet in the next frame!
+no_tint()
   
 --- /code ---
 --- /task ---
@@ -203,8 +203,8 @@ Add code to colour the rocket yellow if the rocket has more than 1000kg of fuel 
 language: python
 filename: main.py
 line_numbers: true
-line_number_start: 45
-line_highlights: 47, 49-50
+line_number_start: 34
+line_highlights: 36, 38-39
 ---
 if fuel < burn and rocket_y > orbit_y: 
   tint(255, 0, 0) # Failure

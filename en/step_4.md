@@ -32,12 +32,12 @@ language: python
 filename: main.py - draw_rocket()
 line_numbers: true
 line_number_start: 12
-line_highlights: 22 - 26
+line_highlights: 16-22
 ---
 def draw_rocket():
   
   global rocket_y
-  rocket_y -= 1 # move the rocket
+  rocket_y -= 1
 
   no_stroke() # Turn off the stroke
 
@@ -47,6 +47,7 @@ def draw_rocket():
 
   image(rocket, width/2, rocket_y, 64, 64)
 
+
 --- /code ---
 
 --- /task ---
@@ -55,7 +56,7 @@ def draw_rocket():
 
 **Test:** Run your code to check the rocket has a new exhaust trail
 
-![A close up of the rocket with an exhaust trail](images/rocket_exhaust.png)
+![A close up of the rocket with an exhaust trail](images/rocket_exhaust.png){:width="300px"}
 
 --- /task ---
 
@@ -70,11 +71,11 @@ Change the call to `fill()` to set the amount of green to `255 - i*10` so that t
 language: python
 filename: main.py - draw_rocket()
 line_numbers: true
-line_number_start: 24
-line_highlights: 25
+line_number_start: 19
+line_highlights: 20
 ---
-  for i in range(25): # draw 25 burning exhaust ellipses
-    fill(255, 255 - i*10, 0) # reduce amount of green
+  for i in range(25):
+    fill(255, 255 - i*10, 0) # reduce the amount of green
     ellipse(width/2, rocket_y + i, 8, 3)
 
 --- /code ---
@@ -102,11 +103,11 @@ In each frame of the animation 20 ellipses of random sizes will be drawn at rand
 language: python
 filename: main.py - draw_rocket()
 line_numbers: true
-line_number_start: 24
-line_highlights: 28 - 30
+line_number_start: 19
+line_highlights: 23-26
 ---
-  for i in range(25): # draw 25 burning exhaust ellipses
-    fill(255, 255 - i*10, 0) # reduce amount of green
+  for i in range(25):
+    fill(255, 255 - i*10, 0)
     ellipse(width/2, rocket_y + i, 8, 3) 
 
   fill(200, 200, 200, 100) # transparent grey
