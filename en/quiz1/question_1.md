@@ -1,6 +1,6 @@
 ## Reflection
 
-Well done, you have learned a lot! Now it's time to reflect - reflecting is an important part of learning because it helps make new connections in your brain.
+Well done, you have learned a lot! Now it's time to reflect — reflecting is an important part of learning because it helps make new connections in your brain.
 
 Answer the three questions below to reflect on what you've learned.
 
@@ -25,7 +25,7 @@ for i in range(5):
 - ( ) Looping 1 <br> Looping 2 <br> Looping 3 <br> Looping 4 <br> Looping 5
 
   --- feedback ---
-Not quite, a `for` loop in Python repeats its code once for each item in a sequence it's given starting from `0`.
+Not quite, a `for` loop in Python repeats its code once for each item in a sequence it's given, and here `range` creates a sequence starting from `0`.
   --- /feedback ---
 
 - ( ) Looping i

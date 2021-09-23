@@ -11,7 +11,7 @@ The rocket will change colour to show how successful the launch was.
 
 </div>
 <div>
-![Two side by side image showing a successful (green tint) and unsucessful (red tint) launch.](images/check_orbit.gif){:width="300px"}
+![Three side by side image showing a successful (green tint), over-fueled (amber tint), and unsucessful (red tint) launch.](images/check_orbit.png){:width="300px"}
 </div>
 </div>
 
@@ -67,7 +67,7 @@ def draw_background():
 
 **Test:** Run your program and check that a white orbit line is drawn. 
 
-![The screen with planet and new orbit line.](images/draw_orbit.gif)
+![The screen with planet and new orbit line.](images/draw_orbit.png)
 
 --- /task ---
 
@@ -186,7 +186,7 @@ no_tint() # so we don't tint the planet in the next frame!
 
 **Test:** Run your project and enter 50000 as the amount of fuel. Check that your rocket turns green when it reaches the satellite orbit.
 
-![A green rocket that has reached the orbit circle and has fuel left](images/orbit_failure.png)
+![A green rocket that has reached the orbit circle and has fuel left](images/orbit_success.png)
 
 --- /task ---
 
@@ -223,7 +223,7 @@ no_tint() # so we don't tint the planet in the next frame!
 
 **Test:** Run your program several times with different numbers, 25000kg of fuel should be the amount needed to turn green but check that yellow works too by using a bigger number. 
 
-![A yellow rocket that has reached the orbit circle and has fuel left](images/orbit_amber.png)
+![A yellow rocket that has reached the orbit circle and has fuel left](images/orbit_meh.png)
 
 --- /task ---
 
