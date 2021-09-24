@@ -33,7 +33,7 @@ Here's a version of the project with all those upgrades, so you can see how they
 title: Completed project
 ---
 
-You can view the [completed project here](https://trinket.io/python/fa55405c62){:target="_blank"}.
+You can view the [completed project here](https://trinket.io/python/622b4dd113){:target="_blank"}.
 
 --- /collapse ---
 
