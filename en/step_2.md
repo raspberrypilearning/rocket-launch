@@ -2,9 +2,11 @@
 
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">
-The animation needs a space backdrop with a planet to launch the rocket from.</div>
+The animation needs a space backdrop with a planet to launch the rocket from.
+</div>
 <div>
 ![A planet against a black background.](images/step_2.png){:width="300px"}
+</div>
 </div>
 
 --- task ---
