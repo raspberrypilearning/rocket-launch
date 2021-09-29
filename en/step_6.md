@@ -7,7 +7,7 @@ The point of launching the rocket is to propel a satellite into orbit.
 
 An orbit is a curved path that one object takes around another due to gravity.
 
-The rocket will change colour to show how successful the launch was. 
+The rocket can change colour to show how successful the launch was. 
 
 </div>
 <div>
@@ -57,7 +57,7 @@ def draw_background():
   no_fill() #Turn off any fill  
   stroke(255) #Set a white stroke   
   stroke_weight(2)   
-  ellipse(width/2, height, orbit_radius*2, orbit_radius*2)  
+  ellipse(width/2, height, orbit_radius * 2, orbit_radius * 2)  
 --- /code ---
 
 --- /task ---
