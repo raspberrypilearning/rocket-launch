@@ -17,7 +17,7 @@ If you have a Trinket account, you can click on the **Remix** button to save a c
 
 --- /task ---
 
-You will use a `screen_size` variable to set the size of the screen and in calculations. Variables defined outside functions are **global** so you will be able to use them anywhere in your program.
+You will use a `screen_size` variable to set the size of the screen and in calculations. Variables defined outside functions are **global** so you can use them anywhere in your program.
 
 --- task ---
 
@@ -115,7 +115,7 @@ line_highlights: 15-17
 ---
 #The draw_background function goes here   
 def draw_background():   
-  background(0) #Short for background(0, 0, 0) — black 
+  background(0) #Short for background(0, 0, 0) — black    
   image(planet, width/2, height, 300, 300) #Draw the image
   
 
@@ -138,7 +138,7 @@ line_number_start: 28
 line_highlights: 30
 ---
 def draw():   
-  #Things to do in every frame
+  #Things to do in every frame    
   draw_background()
   
 --- /code ---
