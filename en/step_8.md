@@ -11,11 +11,11 @@ Your project is complete, but you can still make it better if you want. Here are
 title: Adding your own image to Trinket
 ---
 
-If you want to use your own picture for the planet — or the rocket later — then you can do that by choosing the **View and Add Images** button.
+If you want to use your own picture for the planet — or the rocket — then you can do that by choosing the **View and Add Images** button.
 
 ![A plus symbol, an upload symbol, and an image symbol. The image symbol is highlighted.](images/trinket_image.png)
 
-Then choose `Image Library` and follow the on-screen instructions to upload an image to your Trinket image library.
+Then choose **Image Library** and follow the on-screen instructions to upload an image to your Trinket image library.
 
 ![A button with a plus and the words 'Image Library' on it.](images/trinket_image_library.png)
 
