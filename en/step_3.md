@@ -56,7 +56,7 @@ line_number_start: 7
 line_highlights: 9
 ---
 #Setup global variables    
-screen_size = 400
+screen_size = 400    
 rocket_y = screen_size #Start at the bottom
 
 --- /code ---
@@ -65,7 +65,7 @@ rocket_y = screen_size #Start at the bottom
 
 --- task ---
 
-Define a `draw_rocket()` function to change the rocket's `y` position and draw it.
+Define a `draw_rocket()` function to change the rocket's `y` position and redraw it.
 
 `rocket_y -= 1` is a shorter way of saying `rocket_y = rocket_y - 1`.
 
@@ -80,9 +80,9 @@ line_highlights: 12-16
 #The draw_rocket function goes here   
 def draw_rocket():   
 
-  global rocket_y #Use the global rocket_y variable
-  rocket_y -= 1 #Move the rocket
-  image(rocket, width/2, rocket_y, 64, 64)
+  global rocket_y #Use the global rocket_y variable    
+  rocket_y -= 1 #Move the rocket    
+  image(rocket, width/2, rocket_y, 64, 64)    
 
 
 --- /code ---
