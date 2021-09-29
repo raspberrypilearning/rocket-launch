@@ -41,9 +41,9 @@ def draw_rocket():
 
   no_stroke() #Turn off the stroke
 
-  for i in range(25): #Draw 25 burning exhaust ellipses
-    fill(255, 255, 0) #Yellow
-    ellipse(width/2, rocket_y + i, 8, 3) #i increases each time the loop repeats
+  for i in range(25): #Draw 25 burning exhaust ellipses   
+    fill(255, 255, 0) #Yellow   
+    ellipse(width/2, rocket_y + i, 8, 3) #i increases each time the loop repeats    
 
   image(rocket, width/2, rocket_y, 64, 64)
 
@@ -75,7 +75,7 @@ line_number_start: 19
 line_highlights: 20
 ---
   for i in range(25):   
-    fill(255, 255 - i * 10, 0) #Reduce the amount of green
+    fill(255, 255 - i * 10, 0) #Reduce the amount of green    
     ellipse(width/2, rocket_y + i, 8, 3)
 
 --- /code ---
@@ -94,7 +94,7 @@ The smoke exhaust trail is created by drawing lots of slightly transparent grey 
 
 --- task ---
 
-This time the `fill()` is outside the loop as the colour is the same for each smoke ellipse. The fourth input to `fill()` is the opacity, a high opacity makes the colour more transparent so you can see the shapes underneath.
+This time the `fill()` is outside the loop as the colour is the same for each smoke ellipse. The fourth input to `fill()` is the opacity, a high opacity value makes the colour more transparent so you can see the shapes underneath.
 
 In each frame of the animation, 20 ellipses of random sizes will be drawn at random positions. 
 
@@ -110,9 +110,9 @@ line_highlights: 23-26
     fill(255, 255 - i * 10, 0)   
     ellipse(width/2, rocket_y + i, 8, 3)    
 
-  fill(200, 200, 200, 100) #Transparent grey
-  for i in range(20): #Draw 20 random smoke ellipses
-    ellipse(width/2 + randint(-5, 5), rocket_y + randint(20, 50), randint(5, 10), randint(5, 10)) 
+  fill(200, 200, 200, 100) #Transparent grey   
+  for i in range(20): #Draw 20 random smoke ellipses    
+    ellipse(width/2 + randint(-5, 5), rocket_y + randint(20, 50), randint(5, 10), randint(5, 10))    
   
   image(rocket, width/2, rocket_y, 64, 64)
 
