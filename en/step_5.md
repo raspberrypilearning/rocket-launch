@@ -5,7 +5,7 @@
 
 One of the most important things to decide when launching a rocket is how much fuel to load into it. 
 
-To do this you need to simulate how much fuel will be burned on the journey.
+To do this, you need to simulate how much fuel will be burned on the journey.
 </div>
 ![The program with a question in the output area asking how much fuel is required.](images/burn_question_full.png){:width="300px"}
 </div>
