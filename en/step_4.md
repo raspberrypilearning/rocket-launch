@@ -94,7 +94,7 @@ The smoke exhaust trail is created by drawing lots of slightly transparent grey 
 
 --- task ---
 
-This time the `fill()` is outside the loop as the colour is the same for each smoke ellipse. The fourth input to `fill()` is the opacity, a high opacity value makes the colour more transparent so you can see the shapes underneath.
+This time the `fill()` is outside the loop as the colour is the same for each smoke ellipse. The fourth input to `fill()` is the opacity, a low opacity value makes the colour more transparent so you can see the shapes underneath.
 
 In each frame of the animation, 20 ellipses of random sizes will be drawn at random positions. 
 
