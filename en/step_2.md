@@ -101,9 +101,11 @@ def setup():
 
 Define a `draw_background()` function, to draw the background, below the comment that tells you where it should go. 
 
-Use `background(0)` to set the background colour to black and add an `image()` function to draw the planet.
+Use `background(0)` to set the background colour to black and add an `image()` function to draw the planet. The `image()` function is laid out:
 
-The `p5` library sets `width` and `height` variables based on the size of the screen. Use these in your code to position the planet with its centre half-way across (`width/2`) and at the bottom (`height`) of the screen.
+`image(image filename, x-coordinate, y-coordinate, image_width, image_height)`
+
+The `p5` library sets global `width` and `height` variables based on the size of the screen. Use these in your code to position the planet with its centre half-way across (`width/2`) and at the bottom (`height`) of the screen.
 
 --- code ---
 ---
