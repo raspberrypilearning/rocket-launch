@@ -10,26 +10,26 @@ This code uses `tint()` to colour a rocket in a game to show the player how they
 ---
 language: python
 ---
-if points >= 100: 
-    tint(0, 255, 0) # Green
-elif points < 100 and lives == 1:
-  tint(255, 200, 0) # Amber
-elif points < 100 and lives == 0: 
-  tint(255, 0, 0) # Red
-else: 
-  no_tint() 
+if points >= 100:    
+    tint(0, 255, 0) #Green   
+elif points < 100 and lives == 1:   
+  tint(255, 200, 0) #Amber    
+elif points < 100 and lives == 0:     
+  tint(255, 0, 0) #Red     
+else:      
+  no_tint()      
 
 image(rocket, width/2, height/2, 64, 64)
 
 --- /code ---
 
-If the `points` variable has the value '99' and the `lives` variable has the value '1', what will the rocket look like?
+If the `points` variable has the value `99` and the `lives` variable has the value `1`, what will the rocket look like?
 
 --- choices ---
 
 - (x) 
 
-![A rocket image with amber tint](images/rocket_amber.png)
+![A rocket image with amber tint.](images/rocket_amber.png)
 <div style="text-align: center;">Amber
 
  --- feedback ---
@@ -56,7 +56,7 @@ If the `points` variable has the value '99' and the `lives` variable has the val
 
  --- feedback ---
 
- Not quite, the player would need `>= 100` points to win and turn their rocket green. They have `99` which is not enough. Check the conditions carefully.
+ Not quite, the player would need `>= 100` points to win and turn their rocket green. They have `99`, which is not enough. Check the conditions carefully.
 
  --- /feedback ---
 

@@ -2,20 +2,22 @@
 
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">
-The animation needs a space backdrop with a planet to launch the rocket from.</div>
+The animation needs a space backdrop with a planet to launch the rocket from.
+</div>
 <div>
-![A planet against a black background](images/step_2.png){:width="300px"}
+![A planet against a black background.](images/step_2.png){:width="300px"}
+</div>
 </div>
 
 --- task ---
 
 Open the [project template](https://trinket.io/python/f2199f5a8c){:target="_blank"}.
 
-If you have a Trinket account you can click on the **Remix** button to save a copy to your ‘My Trinkets’ library.
+If you have a Trinket account, you can click on the **Remix** button to save a copy to your `My Trinkets` library.
 
 --- /task ---
 
-You will use a `screen_size` variable to set the size of the screen and in calculations. Variables defined outside functions are **global** so you will be able to use them anywhere in your program.
+You will use a `screen_size` variable to set the size of the screen and in calculations. Variables defined outside functions are **global** so you can use them anywhere in your program.
 
 --- task ---
 
@@ -29,8 +31,8 @@ line_numbers: true
 line_number_start: 7 
 line_highlights: 8
 ---
-# Setup global variables 
-screen_size = 400 
+#Setup global variables    
+screen_size = 400   
 
 --- /code ---
 
@@ -38,7 +40,7 @@ screen_size = 400
 
 --- task ---
 
-Use the `screen_size` variable to create a square 400 by 400 screen size:
+Use the `screen_size` variable to create a square 400 by 400 pixels:
 
 --- code ---
 ---
@@ -48,9 +50,9 @@ line_numbers: true
 line_number_start: 18
 line_highlights: 20
 ---
-def setup():
-  # Setup your animation here
-  size(screen_size, screen_size)
+def setup():   
+  #Setup your animation here   
+  size(screen_size, screen_size)   
   
 
 --- /code ---
@@ -59,9 +61,9 @@ def setup():
 
 --- task ---
 
-The starter project has three different planet images and the moon provided for you. You can view these in the Trinket image library by selecting the 'View and add images' button.
+The starter project has three different planet images and the moon provided for you. You can view these in the Trinket image library by selecting the **View and Add Images** button.
 
-![A plus, an upload symbol, and an image symbol. The image symbol is highlighted.](images/trinket_image.png)
+![A plus symbol, an upload symbol, and an image symbol. The image symbol is highlighted.](images/trinket_image.png)
 
 **Choose:** Decide which image you want to use and make a note of the filename. For example, `orange_planet.png`.
 
@@ -73,7 +75,7 @@ It's a good idea to load images in `setup()` so that they are ready when you nee
 
 The `image_mode(CENTER)` line says that you will be positioning images by giving the coordinates of the centre of the image (instead of the top left corner).
 
-Add code to the `setup()` function to load your chosen image into a `planet` global variable. The variable needs to be global so you can use it later when you draw the planet to the screen.
+Also add code to the `setup()` function to load your chosen image into a `planet` global variable. The variable needs to be global so you can use it later when you draw the planet to the screen.
 
 --- code ---
 ---
@@ -83,12 +85,12 @@ line_numbers: true
 line_number_start: 18 
 line_highlights: 21-23
 ---
-def setup():
-  # Setup your animation here
-  size(screen_size, screen_size)
-  image_mode(CENTER)
-  global planet
-  planet = load_image('planet.png') # your chosen planet
+def setup():   
+  #Setup your animation here   
+  size(screen_size, screen_size)   
+  image_mode(CENTER)   
+  global planet   
+  planet = load_image('planet.png') #Your chosen planet
 
 
 --- /code ---
@@ -99,9 +101,11 @@ def setup():
 
 Define a `draw_background()` function, to draw the background, below the comment that tells you where it should go. 
 
-Use `background(0)` to set the background colour to black and add an `image()` function to draw the planet.
+Use `background(0)` to set the background colour to black and add an `image()` function to draw the planet. The `image()` function is laid out:
 
-The `p5` library sets `width` and `height` variables based on the size of the screen. Use these in your code to position the planet with its centre half-way across (`width/2`) and at the bottom (`height`) of the screen.
+`image(image filename, x-coordinate, y-coordinate, image_width, image_height)`
+
+The `p5` library sets global `width` and `height` variables based on the size of the screen. Use these in your code to position the planet with its centre half-way across (`width/2`) and at the bottom (`height`) of the screen.
 
 --- code ---
 ---
@@ -111,10 +115,10 @@ line_numbers: true
 line_number_start: 14 
 line_highlights: 15-17
 ---
-# The draw_background function goes here
-def draw_background():
-  background(0) # short for background(0, 0, 0) - black 
-  image(planet, width/2, height, 300, 300) # draw the image
+#The draw_background function goes here   
+def draw_background():   
+  background(0) #Short for background(0, 0, 0) — black    
+  image(planet, width/2, height, 300, 300) #Draw the image
   
 
 --- /code ---
@@ -135,8 +139,8 @@ line_numbers: true
 line_number_start: 28 
 line_highlights: 30
 ---
-def draw():
-  # Things to do in every frame
+def draw():   
+  #Things to do in every frame    
   draw_background()
   
 --- /code ---
