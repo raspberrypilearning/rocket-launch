@@ -9,7 +9,9 @@ You can create cool effects by using a `for` loop to draw lots of shapes in each
 
 </div>
 <div>
+
 ![The rocket mid flight with an exhaust trail.](images/flying_rocket.gif){:width="300px"}
+
 </div>
 </div>
 
@@ -34,6 +36,7 @@ line_numbers: true
 line_number_start: 12
 line_highlights: 16-22
 ---
+
 def draw_rocket():
   
   global rocket_y   
@@ -74,6 +77,7 @@ line_numbers: true
 line_number_start: 19
 line_highlights: 20
 ---
+
   for i in range(25):   
     fill(255, 255 - i * 10, 0) #Reduce the amount of green    
     ellipse(width/2, rocket_y + i, 8, 3)
@@ -106,6 +110,7 @@ line_numbers: true
 line_number_start: 19
 line_highlights: 23-26
 ---
+
   for i in range(25):  
     fill(255, 255 - i * 10, 0)   
     ellipse(width/2, rocket_y + i, 8, 3)    

@@ -5,7 +5,9 @@
 Each time a new frame is drawn, the rocket needs to move up the screen to create an animation effect.
 </div>
 <div>
+
 ![A rocket flying at a steady speed from the bottom to the top of the screen.](images/fly.gif){:width="300px"}
+
 </div>
 </div>
 
@@ -29,6 +31,7 @@ line_numbers: true
 line_number_start: 20
 line_highlights: 24, 26
 ---
+
 def setup():   
   #Setup your animation here   
   size(screen_size, screen_size)   
@@ -55,6 +58,7 @@ line_numbers: true
 line_number_start: 7 
 line_highlights: 9
 ---
+
 #Setup global variables    
 screen_size = 400    
 rocket_y = screen_size #Start at the bottom
@@ -77,6 +81,7 @@ line_numbers: true
 line_number_start: 11 
 line_highlights: 12-16 
 ---
+
 #The draw_rocket function goes here   
 def draw_rocket():   
 
@@ -101,6 +106,7 @@ line_numbers: true
 line_number_start: 34 
 line_highlights: 37 
 ---
+
 def draw():   
   #Things to do in every frame   
   draw_background()   

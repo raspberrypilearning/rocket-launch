@@ -1,5 +1,4 @@
 --- question ---
-
 ---
 legend: Question 3 of 3
 ---
@@ -10,6 +9,7 @@ This code uses `tint()` to colour a rocket in a game to show the player how they
 ---
 language: python
 ---
+
 if points >= 100:    
     tint(0, 255, 0) #Green   
 elif points < 100 and lives == 1:   
