@@ -5,7 +5,9 @@
 The animation needs a space backdrop with a planet to launch the rocket from.
 </div>
 <div>
+
 ![A planet against a black background.](images/step_2.png){:width="300px"}
+
 </div>
 </div>
 
@@ -31,6 +33,7 @@ line_numbers: true
 line_number_start: 7 
 line_highlights: 8
 ---
+
 #Setup global variables    
 screen_size = 400   
 
@@ -50,6 +53,7 @@ line_numbers: true
 line_number_start: 18
 line_highlights: 20
 ---
+
 def setup():   
   #Setup your animation here   
   size(screen_size, screen_size)   
@@ -85,6 +89,7 @@ line_numbers: true
 line_number_start: 18 
 line_highlights: 21-23
 ---
+
 def setup():   
   #Setup your animation here   
   size(screen_size, screen_size)   
@@ -115,6 +120,7 @@ line_numbers: true
 line_number_start: 14 
 line_highlights: 15-17
 ---
+
 #The draw_background function goes here   
 def draw_background():   
   background(0) #Short for background(0, 0, 0) — black    
@@ -139,6 +145,7 @@ line_numbers: true
 line_number_start: 28 
 line_highlights: 30
 ---
+
 def draw():   
   #Things to do in every frame    
   draw_background()

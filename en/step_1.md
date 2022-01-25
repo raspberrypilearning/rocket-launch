@@ -14,7 +14,9 @@ You will:
 + Join conditions with `and`
 
 --- no-print ---
+
 --- task ---
+
 ### Try it
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 175px; flex-grow: 1">  
@@ -24,11 +26,15 @@ How much fuel is just enough without too much left over?
 </div>
 <iframe src="https://trinket.io/embed/python/622b4dd113?outputOnly=true&runOption=run&start=result" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
 </div>
+
 --- /task ---
+
 --- /no-print ---
 
 --- print-only ---
+
 ![Completed project.](images/showcase.png)
+
 --- /print-only ---
 
 <p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;">

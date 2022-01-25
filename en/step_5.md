@@ -7,7 +7,9 @@ One of the most important things to decide when launching a rocket is how much f
 
 To do this, you need to simulate how much fuel will be burned on the journey.
 </div>
+
 ![The program with a question in the output area asking how much fuel is required.](images/burn_question_full.png){:width="300px"}
+
 </div>
 
 --- task ---
@@ -22,6 +24,7 @@ line_numbers: true
 line_number_start: 7 
 line_highlights: 10
 ---
+
 #Setup global variables    
 screen_size = 400   
 rocket_y = screen_size  
@@ -44,6 +47,7 @@ line_numbers: true
 line_number_start: 52
 line_highlights: 52
 ---
+
 fuel = int(input('How many kilograms of fuel do you want to use?'))   
 run()
   
@@ -54,6 +58,7 @@ run()
 The rocket should only move if it hasn't burned all of its fuel.
 
 --- task ---
+
 Add code to the `draw_rocket()` function to reduce the remaining `fuel` by the `burn` of each frame. Use `print()` to show how much fuel is left in each frame.
 
 You need to say that you want to use the global `fuel` and `burn` variables.
@@ -66,6 +71,7 @@ line_numbers: true
 line_number_start: 15 
 line_highlights: 15, 17-18
 ---
+
   global rocket_y, fuel, burn   
   rocket_y -= 1   
   fuel -= burn #Burn fuel   
@@ -76,11 +82,13 @@ line_highlights: 15, 17-18
 --- /task ---
 
 --- task ---
+
 **Test:** Run your program to check that the animation doesn't start until `How many kilograms of fuel do you want to use?` has been answered. Try entering `30000` as the amount of fuel.
 
 The rocket will keep going even if it has no fuel left. 
 
 ![The program with a question in the output area asking how much fuel is required.](images/burn_question.png)
+
 --- /task ---
 
 --- task ---
@@ -99,6 +107,7 @@ line_numbers: true
 line_number_start: 15
 line_highlights: 16-31
 ---
+
   global rocket_y, fuel, burn  
 
   if fuel >= burn: #Still got fuel   

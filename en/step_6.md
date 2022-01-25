@@ -11,7 +11,9 @@ The rocket can change colour to show how successful the launch was.
 
 </div>
 <div>
+
 ![Three side-by-side images showing successful (green tint), over-fueled (amber tint), and unsucessful (red tint) launches.](images/check_orbit.png){:width="400px"}
+
 </div>
 </div>
 
@@ -50,6 +52,7 @@ line_numbers: true
 line_number_start: 37
 line_highlights: 42-45
 ---
+
 def draw_background():   
   background(0) #Short for background(0, 0, 0) — black   
   image(planet, width/2, height, 300, 300)   
@@ -58,6 +61,7 @@ def draw_background():
   stroke(255) #Set a white stroke   
   stroke_weight(2)   
   ellipse(width/2, height, orbit_radius * 2, orbit_radius * 2)  
+
 --- /code ---
 
 --- /task ---
@@ -86,12 +90,14 @@ line_numbers: true
 line_number_start: 14
 line_highlights: 19
 ---
+
 #The draw_rocket function goes here   
 def draw_rocket():   
   
   global rocket_y, fuel, burn
   
     if fuel >= burn and rocket_y > orbit_y: #Still flying
+
 --- /code ---
 
 --- /task ---
@@ -114,6 +120,7 @@ line_numbers: true
 line_number_start: 30
 line_highlights: 34-35
 ---
+
     fill(200, 200, 200, 100)   
     for i in range(20):   
       ellipse(width/2 + randint(-5, 5), rocket_y + randint(20, 50), randint(5, 10), randint(5, 10))
@@ -136,6 +143,7 @@ Oh no, the planet has turned red!
 --- /task ---
 
 --- task ---
+
 The `tint()` function sets the tint colour for all images that are drawn until you change the tint or use `no_tint()` to turn it off.
 
 **Choose:** Add a call to `no_tint()` after drawing the image so that the planet isn't tinted red in the next frame — or leave it if you like the planet turning red! 
@@ -148,6 +156,7 @@ line_numbers: true
 line_number_start: 34
 line_highlights: 38
 ---
+
 if fuel < burn and rocket_y > orbit_y:    
   tint(255, 0, 0) #Failure
     
@@ -171,6 +180,7 @@ line_numbers: true
 line_number_start: 34
 line_highlights: 36-37
 ---
+
 if fuel < burn and rocket_y > orbit_y:    
   tint(255, 0, 0) #Failure   
 elif rocket_y <= orbit_y:   
@@ -180,6 +190,7 @@ image(rocket, width/2, rocket_y, 64, 64)
 no_tint()
   
 --- /code ---
+
 --- /task ---
 
 --- task ---
@@ -206,6 +217,7 @@ line_numbers: true
 line_number_start: 34
 line_highlights: 36, 38-39
 ---
+
 if fuel < burn and rocket_y > orbit_y:   
   tint(255, 0, 0) #Failure   
 elif fuel < 1000 and rocket_y <= orbit_y:   
@@ -215,6 +227,7 @@ elif fuel >= 1000 and rocket_y <= orbit_y:
     
 image(rocket, width/2, rocket_y, 64, 64)    
 no_tint() #So the planet isn't tinted in the next frame!
+
 --- /code ---
 
 --- /task ---
