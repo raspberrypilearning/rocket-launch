@@ -42,6 +42,7 @@ orbit_y = screen_size - orbit_radius
 --- /task ---
 
 --- task ---
+
 Update the `draw_background()` function to draw an ellipse to represent the satellite orbit that the rocket needs to reach.  
 
 --- code ---
