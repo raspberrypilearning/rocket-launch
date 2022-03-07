@@ -1,36 +1,36 @@
-## Upgrade your project
-Your project is complete, but you can still make it better if you want. Here are a few upgrades to consider:
+## Améliorer ton projet
+Ton projet est terminé, mais tu peux encore l'améliorer si tu le souhaites. Voici quelques améliorations à prendre en compte :
 
- + Let the user set the rate at which the rocket burns fuel or how far the rocket flies in each frame.
- + Add a second, higher, orbit for the rocket to reach and drop off another satellite. Have it change colour again when it gets there.
- + Add you own rocket or planet image to use in your project.
+ + Laisser l'utilisateur définir la vitesse à laquelle la fusée brûle du carburant ou la distance parcourue par la fusée dans chaque image.
+ + Ajouter une seconde orbite plus haute pour que la fusée atteigne et dépose un autre satellite. Fais-la changer de couleur à nouveau quand elle y arrive.
+ + Ajouter ta propre image de fusée ou de planète à utiliser dans ton projet.
 
 
 --- collapse ---
 ---
-title: Adding your own image to Trinket
+title: Ajouter ta propre image à Trinket
 ---
 
-If you want to use your own picture for the planet — or the rocket — then you can do that by choosing the **View and Add Images** button.
+Si tu souhaites utiliser ta propre image pour la planète - ou la fusée - tu peux le faire en choisissant le bouton **View and Add Images**.
 
-![A plus symbol, an upload symbol, and an image symbol. The image symbol is highlighted.](images/trinket_image.png)
+![Un symbole plus, un symbole de téléchargement et un symbole d'image. Le symbole de l'image est mis en surbrillance.](images/trinket_image.png)
 
-Then choose **Image Library** and follow the on-screen instructions to upload an image to your Trinket image library.
+Choisis ensuite **Image Library** et suis les instructions à l'écran pour télécharger une image dans ta bibliothèque d'images Trinket.
 
-![A button with a plus and the words 'Image Library' on it.](images/trinket_image_library.png)
+![Un bouton avec un plus et les mots "Image Library" dessus.](images/trinket_image_library.png)
 
-Note the filename of the image you've uploaded, and use it in the code in place of `planet.png`.
+Note le nom de fichier de l'image que tu as téléchargée et utilise-la dans le code à la place de `planet.png`.
 
 --- /collapse ---
 
-Here's a version of the project with all those upgrades, so you can see how they could work: <iframe src="https://trinket.io/embed/python/76c7d66070?outputOnly=true&runOption=run&start=result" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen mark="crwd-mark"></iframe>
+Voici une version du projet avec toutes ces mises à jour, afin que tu puisses voir comment elles pourraient fonctionner : <iframe src="https://trinket.io/embed/python/76c7d66070?outputOnly=true&runOption=run&start=result" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen mark="crwd-mark"></iframe>
 
 --- collapse ---
 ---
-title: Completed project
+title: Le projet terminé
 ---
 
-You can view the [completed project here](https://trinket.io/python/622b4dd113){:target="_blank"}.
+Tu peux voir le [projet terminé ici](https://trinket.io/python/622b4dd113){:target="_blank"}.
 
 --- /collapse ---
 
