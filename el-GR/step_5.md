@@ -1,20 +1,20 @@
-## Burn fuel
+## Καύση καυσίμου
 
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">
 
-One of the most important things to decide when launching a rocket is how much fuel to load into it. 
+Ένα από τα πιο σημαντικά πράγματα που πρέπει να αποφασίσεις κατά την εκτόξευση ενός πυραύλου είναι πόσο καύσιμο θα φορτωθεί σε αυτόν. 
 
-To do this, you need to simulate how much fuel will be burned on the journey.
+Για να γίνει αυτό, πρέπει να προσομοιώσεις πόσα καύσιμα θα καούν στο ταξίδι.
 </div>
 
-![The program with a question in the output area asking how much fuel is required.](images/burn_question_full.png){:width="300px"}
+![Το πρόγραμμα με μια ερώτηση στην περιοχή εξόδου ρωτά πόσο καύσιμο απαιτείται.](images/burn_question_full.png){:width="300px"}
 
 </div>
 
 --- task ---
 
-Add a variable to keep track of how much fuel your rocket burns (in frames).
+Πρόσθεσε μια μεταβλητή για να παρακολουθείς πόσα καύσιμα καίει ο πύραυλός σου (ανά καρέ).
 
 --- code ---
 ---
@@ -22,10 +22,10 @@ language: python filename: main.py line_numbers: true line_number_start: 7
 line_highlights: 10
 ---
 
-# Setup global variables
+# Ρύθμιση καθολικών μεταβλητών
 screen_size = 400   
 rocket_y = screen_size  
-burn = 100 #How much fuel is burned in each frame
+burn = 100 #Πόσο καύσιμο καίγεται σε κάθε καρέ
 
 --- /code ---
 
@@ -34,7 +34,7 @@ burn = 100 #How much fuel is burned in each frame
 
 --- task ---
 
-At the bottom of your program, add code to ask the user how much fuel to add to the rocket and store their answer in a `fuel` global variable.
+Στο κάτω μέρος του προγράμματός σου, πρόσθεσε κώδικα για να ρωτήσεις τον χρήστη πόσο καύσιμο να προσθέσει στον πύραυλο και αποθήκευσε την απάντησή του σε μια καθολική μεταβλητή `fuel`.
 
 --- code ---
 ---
@@ -42,20 +42,20 @@ language: python filename: main.py line_numbers: true line_number_start: 52
 line_highlights: 52
 ---
 
-fuel = int(input('How many kilograms of fuel do you want to use?'))   
+fuel = int(input('Πόσα κιλά καυσίμου θέλεις να χρησιμοποιήσεις;'))   
 run()
 
 --- /code ---
 
 --- /task ---
 
-The rocket should only move if it hasn't burned all of its fuel.
+Ο πύραυλος πρέπει να κινείται μόνο εάν δεν έχει κάψει όλο το καύσιμό του.
 
 --- task ---
 
-Add code to the `draw_rocket()` function to reduce the remaining `fuel` by the `burn` of each frame. Use `print()` to show how much fuel is left in each frame.
+Πρόσθεσε κώδικα στη συνάρτηση `draw_rocket()` για να μειώσεις το υπόλοιπο `καύσιμο` κατά την `καύση` σε κάθε καρέ. Χρησιμοποίησε το `print()` για να δείξεις πόση ποσότητα καυσίμου απομένει σε κάθε καρέ.
 
-You need to say that you want to use the global `fuel` and `burn` variables.
+Πρέπει να πεις ότι θέλεις να χρησιμοποιήσεις τις καθολικές μεταβλητές `fuel` και `burn`.
 
 --- code ---
 ---
@@ -65,8 +65,8 @@ line_highlights: 15, 17-18
 
   global rocket_y, fuel, burn   
 rocket_y -= 1   
-fuel -= burn #Burn fuel   
-print('Fuel left: ', fuel)
+fuel -= burn #Καύση καυσίμου   
+print('Καύσιμο που απέμεινε: ', fuel)
 
 --- /code ---
 
@@ -74,21 +74,21 @@ print('Fuel left: ', fuel)
 
 --- task ---
 
-**Test:** Run your program to check that the animation doesn't start until `How many kilograms of fuel do you want to use?` has been answered. Try entering `30000` as the amount of fuel.
+**Δοκιμή:** Εκτέλεσε το πρόγραμμά σου για να ελέγξεις ότι η κινούμενη εικόνα δεν ξεκινά πριν να απαντηθεί το `Πόσα κιλά καυσίμου θέλεις να χρησιμοποιήσεις;`. Δοκίμασε να εισαγάγεις `30000` ως ποσότητα καυσίμου.
 
-The rocket will keep going even if it has no fuel left.
+Ο πύραυλος θα συνεχίσει να λειτουργεί ακόμα κι αν δεν έχει απομείνει καύσιμο.
 
-![The program with a question in the output area asking how much fuel is required.](images/burn_question.png)
+![Το πρόγραμμα με μια ερώτηση στην περιοχή εξόδου ρωτά πόσο καύσιμο απαιτείται.](images/burn_question.png)
 
 --- /task ---
 
 --- task ---
 
-The rocket should only move if it has enough fuel left. Add an `if` statement to check that `fuel >= burn`.
+Ο πύραυλος πρέπει να κινείται μόνο εάν έχει αρκετό καύσιμο. Πρόσθεσε μια εντολή `if` για να ελέγξεις ότι `fuel >= burn`.
 
-You will need to indent all of the lines of code before the `image()` function call. To do this, highlight all of the lines with the mouse and then tap the <kbd>Tab</kbd> on the keyboard to indent all the lines at once.
+Θα χρειαστεί να τοποθετήσεις με εσοχή όλες τις γραμμές κώδικα πριν από την κλήση της συνάρτησης `image()`. Για να το κάνεις αυτό, επισήμανε όλες τις γραμμές με το ποντίκι και, στη συνέχεια, πάτα το πλήκτρο <kbd>Tab</kbd> από το πληκτρολόγιο για να κάνεις εσοχή σε όλες τις γραμμές ταυτόχρονα.
 
-The `image()` line doesn't need to be indented because you always want to draw the rocket.
+Η γραμμή `image()` δεν χρειάζεται να έχει εσοχή επειδή θέλεις πάντα να σχεδιάζεις τον πύραυλο.
 
 --- code ---
 ---
@@ -98,12 +98,12 @@ line_highlights: 16-31
 
   global rocket_y, fuel, burn
 
-  if fuel >= burn: #Still got fuel   
+  if fuel >= burn: #Ακόμα υπάρχει καύσιμο   
 rocket_y -= 1   
 fuel -= burn   
-print('Fuel left: ', fuel)   
+print('Καύσιμο που απέμεινε: ', fuel)   
 
-    no_stroke() #Turn off the stroke   
+    no_stroke() #Απενεργοποίηση πινελιάς
     
     for i in range(25):   
       fill(255, 255 - i*10, 0)   
@@ -121,13 +121,13 @@ print('Fuel left: ', fuel)
 
 --- task ---
 
-**Test:** Run your program to check that the rocket stops when there is no fuel left.
+**Δοκιμή:** Εκτέλεσε το πρόγραμμά σου για να ελέγξεις ότι ο πύραυλος σταματά όταν δεν υπάρχει καύσιμο.
 
-![Image of a rocket in the middle of the screen with the statement 'Fuel left: 0'.](images/burn_empty.png){:width="300px"}
+![Εικόνα ενός πυραύλου στη μέση της οθόνης με την ένδειξη "Καύσιμο που απέμεινε: 0".](images/burn_empty.png){:width="300px"}
 
 --- /task ---
 
-This computer simulation isn't very accurate, but it's good enough for our animation.
+Αυτή η προσομοίωση υπολογιστή δεν είναι πολύ ακριβής, αλλά είναι αρκετά καλή για την κινούμενη εικόνα μας.
 
 --- save ---
 
