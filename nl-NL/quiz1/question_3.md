@@ -1,69 +1,69 @@
 --- question ---
 ---
-legend: Question 3 of 3
+legend: Vraag 3 van 3
 ---
 
-This code uses `tint()` to colour a rocket in a game to show the player how they are doing.
+Deze code gebruikt `tint()` om een raket in een spel te kleuren om de speler te laten zien hoe het gaat.
 
 --- code ---
 ---
 language: python
 ---
 
-if points >= 100:    
-tint(0, 255, 0) #Green   
-elif points < 100 and lives == 1:   
+if punten >= 100:    
+tint(0, 255, 0) #Groen   
+elif punten < 100 en levens == 1:   
 tint(255, 200, 0) #Amber    
-elif points < 100 and lives == 0:     
-tint(255, 0, 0) #Red     
+elif punten < 100 en levens == 0:     
+tint(255, 0, 0) #Rood     
 else:      
 no_tint()
 
-image(rocket, width/2, height/2, 64, 64)
+image(raket, width/2, height/2, 64, 64)
 
 --- /code ---
 
-If the `points` variable has the value `99` and the `lives` variable has the value `1`, what will the rocket look like?
+Als de variabele `punten` de waarde `99` heeft en de variabele `levens` de waarde `1`heeft, hoe ziet de raket er dan uit?
 
 --- choices ---
 
 - (x)
 
-![A rocket image with amber tint.](images/rocket_amber.png) <div style="text-align: center;">Amber
+![Een raketafbeelding met amberkleurige tint.](images/rocket_amber.png) <div style="text-align: center;">Amber
 
  --- feedback ---
 
- Correct! The player has less than 100 points and only 1 life left. The rocket is coloured amber to left them know that this is their last chance to win!
+ Correct! De speler heeft minder dan 100 punten en heeft nog maar 1 leven over. De raket is amber gekleurd om te laten weten dat dit de laatste kans is om te winnen!
 
  --- /feedback ---
 
 - ( )
 
-![A rocket image with no tint](images/rocket_original.png) <div style="text-align: center;">No tint
+![Een raketafbeelding zonder tint](images/rocket_original.png) <div style="text-align: center;">Geen tint
 
  --- feedback ---
 
- Not quite, the rocket has a tint as one of the statements is true.
+ Niet helemaal, de raket heeft een tint als een van de uitspraken waar is.
 
  --- /feedback ---
 
 - ( )
 
-![A rocket image with green tint](images/rocket_green.png) <div style="text-align: center;">Green
+![Een raketafbeelding met groene tint](images/rocket_green.png) <div style="text-align: center;">Groen
 
  --- feedback ---
 
- Not quite, the player would need `>= 100` points to win and turn their rocket green. They have `99`, which is not enough. Check the conditions carefully.
+ Niet helemaal, de speler zou `>= 100` punten nodig hebben om te winnen en zijn raket groen te maken. Hij heeft `99`, wat niet genoeg is. Controleer de voorwaarden zorgvuldig.
 
  --- /feedback ---
 
 - ( )
 
-![A rocket image with red tint](images/rocket_red.png) <div style="text-align: center;">Red
+![Een raketafbeelding met rode tint](images/rocket_red.png) <div style="text-align: center;">Rood
 
  --- feedback ---
 
- Not quite, the player has `< 100` points but lives does not equal `0`. Check the conditions carefully.
+ Niet helemaal, de speler heeft `< 100` punten maar levens zijn niet gelijk aan `0`. Controleer de voorwaarden zorgvuldig.
 
  --- /feedback ---
 
