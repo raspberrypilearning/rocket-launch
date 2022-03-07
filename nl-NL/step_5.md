@@ -1,20 +1,20 @@
-## Burn fuel
+## Brandstof verbruik
 
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">
 
-One of the most important things to decide when launching a rocket is how much fuel to load into it. 
+Een van de belangrijkste dingen om te beslissen bij het lanceren van een raket, is hoeveel brandstof erin moet worden geladen. 
 
-To do this, you need to simulate how much fuel will be burned on the journey.
+Om dit te doen, moet je simuleren hoeveel brandstof er tijdens de reis wordt verbruikt.
 </div>
 
-![The program with a question in the output area asking how much fuel is required.](images/burn_question_full.png){:width="300px"}
+![Het programma met een vraag in het uitvoergebied waarin wordt gevraagd hoeveel brandstof er nodig is.](images/burn_question_full.png){:width="300px"}
 
 </div>
 
 --- task ---
 
-Add a variable to keep track of how much fuel your rocket burns (in frames).
+Voeg een variabele toe om bij te houden hoeveel brandstof je raket verbruikt (in frames).
 
 --- code ---
 ---
@@ -22,10 +22,10 @@ language: python filename: main.py line_numbers: true line_number_start: 7
 line_highlights: 10
 ---
 
-# Setup global variables
-screen_size = 400   
-rocket_y = screen_size  
-burn = 100 #How much fuel is burned in each frame
+# Globale variabelen instellen
+scherm_grootte = 400   
+raket_y = scherm_grootte  
+verbruik = 100 #Hoeveel brandstof wordt er in elk frame verbruikt
 
 --- /code ---
 
@@ -34,7 +34,7 @@ burn = 100 #How much fuel is burned in each frame
 
 --- task ---
 
-At the bottom of your program, add code to ask the user how much fuel to add to the rocket and store their answer in a `fuel` global variable.
+Voeg onderaan je programma code toe om de gebruiker te vragen hoeveel brandstof hij aan de raket moet toevoegen en sla zijn antwoord op in een global variabele `brandstof`.
 
 --- code ---
 ---
@@ -42,20 +42,20 @@ language: python filename: main.py line_numbers: true line_number_start: 52
 line_highlights: 52
 ---
 
-fuel = int(input('How many kilograms of fuel do you want to use?'))   
+brandstof = int(input('Hoeveel kilogram brandstof wil je gebruiken?'))   
 run()
 
 --- /code ---
 
 --- /task ---
 
-The rocket should only move if it hasn't burned all of its fuel.
+De raket mag alleen bewegen als hij niet al zijn brandstof heeft opgebruikt.
 
 --- task ---
 
-Add code to the `draw_rocket()` function to reduce the remaining `fuel` by the `burn` of each frame. Use `print()` to show how much fuel is left in each frame.
+Voeg code toe aan de functie `teken_raket()` om de resterende `brandstof` te verminderen met het `verbruik` in elk frame. Gebruik `print()` om aan te geven hoeveel brandstof er nog over is in elk frame.
 
-You need to say that you want to use the global `fuel` and `burn` variables.
+Je moet aangeven dat je de global variabelen `brandstof` en `verbruik` wilt gebruiken.
 
 --- code ---
 ---
@@ -63,10 +63,10 @@ language: python filename: main.py — draw_rocket() line_numbers: true line_num
 line_highlights: 15, 17-18
 ---
 
-  global rocket_y, fuel, burn   
-rocket_y -= 1   
-fuel -= burn #Burn fuel   
-print('Fuel left: ', fuel)
+  global raket_y, brandstof, verbruik   
+raket_y -= 1   
+brandstof -= verbruik #Brandstof verbruik   
+print('Brandstof over:', brandstof)
 
 --- /code ---
 
@@ -74,21 +74,21 @@ print('Fuel left: ', fuel)
 
 --- task ---
 
-**Test:** Run your program to check that the animation doesn't start until `How many kilograms of fuel do you want to use?` has been answered. Try entering `30000` as the amount of fuel.
+**Test:** Voer je programma uit om te controleren of de animatie pas begint nadat de vraag `Hoeveel kilogram brandstof wil je gebruiken?` is beantwoord. Probeer eens om `30000` in te voeren als de hoeveelheid brandstof.
 
-The rocket will keep going even if it has no fuel left.
+De raket zal doorgaan, zelfs als hij geen brandstof meer heeft.
 
-![The program with a question in the output area asking how much fuel is required.](images/burn_question.png)
+![Het programma met een vraag in het uitvoergebied hoeveel brandstof er nodig is.](images/burn_question.png)
 
 --- /task ---
 
 --- task ---
 
-The rocket should only move if it has enough fuel left. Add an `if` statement to check that `fuel >= burn`.
+De raket mag alleen bewegen als er genoeg brandstof over is. Voeg een `if` statement toe om te controleren of `brandstof >= verbruik`.
 
-You will need to indent all of the lines of code before the `image()` function call. To do this, highlight all of the lines with the mouse and then tap the <kbd>Tab</kbd> on the keyboard to indent all the lines at once.
+Je moet alle coderegels laten inspringen vóór de functieaanroep `image()`. Markeer hiervoor alle regels met de muis en tik vervolgens op <kbd>Tab</kbd> op het toetsenbord om alle regels tegelijk te laten inspringen.
 
-The `image()` line doesn't need to be indented because you always want to draw the rocket.
+De regel `image()` hoeft niet te worden ingesprongen omdat je altijd de raket wilt tekenen.
 
 --- code ---
 ---
@@ -96,24 +96,24 @@ language: python filename: main.py — draw_rocket() line_numbers: true line_num
 line_highlights: 16-31
 ---
 
-  global rocket_y, fuel, burn
+  global raket_y, brandstof, verbruik
 
-  if fuel >= burn: #Still got fuel   
-rocket_y -= 1   
-fuel -= burn   
-print('Fuel left: ', fuel)   
+  if brandstof >= verbruik: #Nog genoeg brandstof   
+raket_y -= 1   
+brandstof -= verbruik   
+print('Brandstof over: ', brandstof)   
 
-    no_stroke() #Turn off the stroke   
+    no_stroke() #Schakel de lijn uit   
     
-    for i in range(25):   
+    voor i in range(25):   
       fill(255, 255 - i*10, 0)   
-      ellipse(width/2, rocket_y + i, 8, 3)    
+      ellipse(width/2, raket_y + i, 8, 3)    
     
     fill(200, 200, 200, 100)   
     for i in range(20):   
       ellipse(width/2 + randint(-5, 5), rocket_y + randint(20, 50), randint(5, 10), randint(5, 10))
 
-  image(rocket, width/2, rocket_y, 64, 64)
+  image(raket, width/2, raket_y, 64, 64)
 
 --- /code ---
 
@@ -121,13 +121,13 @@ print('Fuel left: ', fuel)
 
 --- task ---
 
-**Test:** Run your program to check that the rocket stops when there is no fuel left.
+**Test:** Voer je programma uit om te controleren of de raket stopt als er geen brandstof meer is.
 
-![Image of a rocket in the middle of the screen with the statement 'Fuel left: 0'.](images/burn_empty.png){:width="300px"}
+![Afbeelding van een raket in het midden van het scherm met de vermelding 'Brandstof over: 0'.](images/burn_empty.png){:width="300px"}
 
 --- /task ---
 
-This computer simulation isn't very accurate, but it's good enough for our animation.
+Deze computersimulatie is niet erg nauwkeurig, maar goed genoeg voor onze animatie.
 
 --- save ---
 
