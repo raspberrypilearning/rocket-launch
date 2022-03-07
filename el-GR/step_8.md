@@ -1,36 +1,36 @@
-## Upgrade your project
-Your project is complete, but you can still make it better if you want. Here are a few upgrades to consider:
+## Αναβάθμιση του έργου σου
+Το έργο σου έχει ολοκληρωθεί, αλλά μπορείς ακόμα να το βελτιώσεις αν θέλεις. Ακολουθούν μερικές αναβαθμίσεις που μπορείς να λάβεις υπόψη σου:
 
- + Let the user set the rate at which the rocket burns fuel or how far the rocket flies in each frame.
- + Add a second, higher, orbit for the rocket to reach and drop off another satellite. Have it change colour again when it gets there.
- + Add you own rocket or planet image to use in your project.
+ + Δώσε τη δυνατότητα στον χρήστη να ορίσει τον ρυθμό με τον οποίο ο πύραυλος καίει καύσιμο ή πόσο μακριά πετάει ο πύραυλος σε κάθε καρέ.
+ + Πρόσθεσε μια δεύτερη, υψηλότερη, τροχιά για να φτάσει ο πύραυλος και να ρίξει έναν άλλο δορυφόρο. Κάντον να αλλάξει ξανά χρώμα όταν φτάσει εκεί.
+ + Πρόσθεσε τη δική σου εικόνα πυραύλου ή πλανήτη για να την χρησιμοποιήσεις στο έργο σου.
 
 
 --- collapse ---
 ---
-title: Adding your own image to Trinket
+title:: Προσθήκη της δικής σου εικόνας στο Trinket
 ---
 
-If you want to use your own picture for the planet — or the rocket — then you can do that by choosing the **View and Add Images** button.
+Εάν θέλεις να χρησιμοποιήσεις τη δική σου εικόνα για τον πλανήτη — ή τον πύραυλο — τότε μπορείς να το κάνεις επιλέγοντας το κουμπί **View and Add Images**.
 
-![A plus symbol, an upload symbol, and an image symbol. The image symbol is highlighted.](images/trinket_image.png)
+![Ένα σύμβολο συν, ένα σύμβολο μεταφόρτωσης και ένα σύμβολο εικόνας. Το σύμβολο της εικόνας έχει επισημανθεί.](images/trinket_image.png)
 
-Then choose **Image Library** and follow the on-screen instructions to upload an image to your Trinket image library.
+Στη συνέχεια, επίλεξε **Image Library** και ακολούθησε τις οδηγίες που εμφανίζονται στην οθόνη για να ανεβάσεις μια εικόνα στη βιβλιοθήκη εικόνων Trinket.
 
-![A button with a plus and the words 'Image Library' on it.](images/trinket_image_library.png)
+![Ένα κουμπί με ένα συν και τις λέξεις "Image Library" πάνω του.](images/trinket_image_library.png)
 
-Note the filename of the image you've uploaded, and use it in the code in place of `planet.png`.
+Σημείωσε το όνομα του αρχείου της εικόνας που ανέβασες και χρησιμοποίησε το στον κώδικα στη θέση του `planet.png`.
 
 --- /collapse ---
 
-Here's a version of the project with all those upgrades, so you can see how they could work: <iframe src="https://trinket.io/embed/python/76c7d66070?outputOnly=true&runOption=run&start=result" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen mark="crwd-mark"></iframe>
+Ακολουθεί μια έκδοση του έργου με όλες αυτές τις αναβαθμίσεις, ώστε να μπορείς να δεις πώς θα μπορούσαν να λειτουργήσουν: <iframe src="https://trinket.io/embed/python/76c7d66070?outputOnly=true&runOption=run&start=result" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen mark="crwd-mark"></iframe>
 
 --- collapse ---
 ---
-title: Completed project
+title: Ολοκληρωμένο έργο
 ---
 
-You can view the [completed project here](https://trinket.io/python/622b4dd113){:target="_blank"}.
+Μπορείς να δεις [ολοκληρωμένο έργο εδώ](https://trinket.io/python/622b4dd113){:target="_blank"}.
 
 --- /collapse ---
 
