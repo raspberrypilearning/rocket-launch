@@ -1,56 +1,56 @@
-## Reflection
+## Reflectie
 
-Well done, you have learnt a lot! Now it's time to reflect — reflecting is an important part of learning because it helps make new connections in your brain.
+Goed gedaan, je hebt veel geleerd! Nu is het tijd om te reflecteren - reflecteren is een belangrijk onderdeel van leren, omdat het helpt om nieuwe verbindingen in je hersenen te maken.
 
-Answer the three questions below to reflect on what you've learnt.
+Beantwoord de drie onderstaande vragen om terug te kijken op wat je hebt geleerd.
 
-After each question, press **submit**. You will be guided towards the correct answer. You can do this activity as many times as you want to.
+Druk na elke vraag op **indienen**. Je wordt naar het juiste antwoord geleid. Je kunt deze activiteit zo vaak doen als je wilt.
 
-Have fun!
+Veel plezier!
 
 --- question ---
 ---
-legend: Question 1 of 3
+legend: Vraag 1 van 3
 ---
 
-Which output would you expect if you ran the program below?
+Welke uitvoer zou je verwachten als je het onderstaande programma zou draaien?
 
 ```python
 for i in range(5):
-  print("Looping", i)
+  print("Lus", i)
 ```
 
 --- choices ---
 
-- ( ) Looping 1 <br> Looping 2 <br> Looping 3 <br> Looping 4 <br> Looping 5
+- ( ) Lus 1 <br> Lus 2 <br> Lus 3 <br> Lus 4 <br> Lus 5
 
   --- feedback ---
 
-Not quite, a `for` loop in Python repeats its code once for each item in a sequence it's given, and here `range` creates a sequence starting from `0`.
+Niet helemaal, een `for` lus in Python herhaalt zijn code in een gegeven reeks, en hier creëert `range` een reeks die begint bij `0`.
 
   --- /feedback ---
 
-- ( ) Looping i
+- ( ) Lus i
 
   --- feedback ---
 
-Not quite, the **loop variable** from a `for` loop — in this case `i` — holds the current value from the sequence the loop is working through.
+Niet helemaal, de **lus variabele** van een `for` lus - in dit geval `i` - bevat de waarde van het aantal maal dat de lus wordt doorlopen.
 
   --- /feedback ---
 
-- (x) Looping 0 <br> Looping 1 <br> Looping 2 <br> Looping 3 <br> Looping 4
+- (x) Lus 0 <br> Lus 1 <br> Lus 2 <br> Lus 3 <br> Lus 4
 
   --- feedback ---
 
-Correct. The loop runs once, in order, for each item `i` in the range [0, 1, 2, 3, 4].
+Correct. De lus loopt één keer, in volgorde, voor elk item `i` in het bereik [0, 1, 2, 3, 4].
 
   --- /feedback ---
 
-- ( ) Looping 4 <br> Looping 3 <br> Looping 2 <br> Looping 1 <br> Looping 0
+- ( ) Lus 4 <br> Lus 3 <br> Lus 2 <br> Lus 1 <br> Lus 0
 
   --- feedback ---
 
-Nto quite, a `for` loop runs through the sequence of items it is given in order. Because `range()` gives an ordered sequence from 0 to the number it is passed, that is the order you would expect to see printed out by this `for` loop.
+Niet helemaal, een `for` lus doorloopt de reeks van items die in de gegeven volgorde. Omdat `range()` een geordende reeks geeft van 0 tot het nummer dat wordt doorgegeven, is dat de volgorde die je zou verwachten getoond te worden door deze `for` lus.
 
   --- /feedback ---
 
