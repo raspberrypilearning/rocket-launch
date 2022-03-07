@@ -1,56 +1,56 @@
-## Reflection
+## Αναστοχασμός
 
-Well done, you have learnt a lot! Now it's time to reflect — reflecting is an important part of learning because it helps make new connections in your brain.
+Μπράβο, έμαθες πολλά! Τώρα, ήρθε η ώρα να εξετάσεις τις νέες γνώσεις- ο αναστοχασμός είναι σημαντικό μέρος της μάθησης, επειδή βοηθά στη δημιουργία νέων συνδέσεων στον εγκέφαλό σου.
 
-Answer the three questions below to reflect on what you've learnt.
+Απάντησε στις τρεις ερωτήσεις παρακάτω για να διαπιστώσεις τι έμαθες.
 
-After each question, press **submit**. You will be guided towards the correct answer. You can do this activity as many times as you want to.
+Μετά από κάθε ερώτηση, πάτα **υποβολή**. Θα οδηγηθείς στη σωστή απάντηση. Μπορείς να επαναλάβεις αυτήν τη δραστηριότητα όσες φορές θέλεις.
 
-Have fun!
+Καλή διασκέδαση!
 
 --- question ---
 ---
-legend: Question 1 of 3
+legend: Ερώτηση 1 από 3
 ---
 
-Which output would you expect if you ran the program below?
+Ποια έξοδο περιμένεις αν εκτελέσεις το παρακάτω πρόγραμμα;
 
 ```python
 for i in range(5):
-  print("Looping", i)
+  print("Βρόχος", i)
 ```
 
 --- choices ---
 
-- ( ) Looping 1 <br> Looping 2 <br> Looping 3 <br> Looping 4 <br> Looping 5
+- ( ) Βρόχος 1 <br> Βρόχος 2 <br> Βρόχος 3 <br> Βρόχος 4 <br> Βρόχος 5
 
   --- feedback ---
 
-Not quite, a `for` loop in Python repeats its code once for each item in a sequence it's given, and here `range` creates a sequence starting from `0`.
+Όχι ακριβώς, ένας βρόχος `for` στην Python επαναλαμβάνει τον κώδικά του μία φορά για κάθε στοιχείο σε μια ακολουθία που του δίνεται, και εδώ το εύρος `range` δημιουργεί μια ακολουθία που ξεκινά από το `0`.
 
   --- /feedback ---
 
-- ( ) Looping i
+- ( ) Βρόχος i
 
   --- feedback ---
 
-Not quite, the **loop variable** from a `for` loop — in this case `i` — holds the current value from the sequence the loop is working through.
+Όχι ακριβώς, η **μεταβλητή βρόχου** σε έναν βρόχο `for` — σε αυτήν την περίπτωση το `i` — κρατά την τρέχουσα τιμή από την ακολουθία για την οποία λειτουργεί ο βρόχος.
 
   --- /feedback ---
 
-- (x) Looping 0 <br> Looping 1 <br> Looping 2 <br> Looping 3 <br> Looping 4
+- (x) Βρόχος 0 <br> Βρόχος 1 <br> Βρόχος 2 <br> Βρόχος 3 <br> Βρόχος 4
 
   --- feedback ---
 
-Correct. The loop runs once, in order, for each item `i` in the range [0, 1, 2, 3, 4].
+Σωστό. Ο βρόχος εκτελείται μία φορά, με τη σειρά, για κάθε στοιχείο `i` στην περιοχή [0, 1, 2, 3, 4].
 
   --- /feedback ---
 
-- ( ) Looping 4 <br> Looping 3 <br> Looping 2 <br> Looping 1 <br> Looping 0
+- ( ) Βρόχος 4 <br> Βρόχος 3 <br> Βρόχος 2 <br> Βρόχος 1 <br> Βρόχος 0
 
   --- feedback ---
 
-Nto quite, a `for` loop runs through the sequence of items it is given in order. Because `range()` gives an ordered sequence from 0 to the number it is passed, that is the order you would expect to see printed out by this `for` loop.
+Όχι ακριβώς, ένας βρόχος `for` διατρέχει την ακολουθία των στοιχείων που δίνεται με τη σειρά. Επειδή το `range()` δίνει μια διατεταγμένη ακολουθία από το 0 έως τον αριθμό που δεν ξεπερνά το άνω όριο, αυτή είναι η σειρά που αναμένεται να δεις να εμφανίζεται από αυτόν τον βρόχο `for`.
 
   --- /feedback ---
 
