@@ -1,32 +1,32 @@
-## Exhaust effects
+## Uitlaat effecten
 
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">
 
-The rocket will look more realistic with some special effects to simulate the exhaust trail. 
+De raket ziet er realistischer uit met enkele speciale effecten om het uitlaatspoor te simuleren. 
 
-You can create cool effects by using a `for` loop to draw lots of shapes in each frame.
+Je kunt coole effecten creëren door een `for`-lus te gebruiken om veel vormen in elk frame te tekenen.
 
 </div>
 <div>
 
-![The rocket mid flight with an exhaust trail.](images/flying_rocket.gif){:width="300px"}
+![De raket halverwege de vlucht met een uitlaatspoor.](images/flying_rocket.gif){:width="300px"}
 
 </div>
 </div>
 
 <p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;">
-Coding is used to make <span style="color: #0faeb0">**graphic effects**</span> for movies and games. It's much quicker to write code than to draw each frame of an animation individually. </p>
+Coderen wordt gebruikt om <span style="color: #0faeb0">**grafische effecten**</span> te maken voor films en games. Het is veel sneller om code te schrijven dan om elk frame van een animatie afzonderlijk te tekenen. </p>
 
-Drawing lots of yellow ellipses at different `y` positions creates an exhaust trail with a round bottom.
+Door veel gele ellipsen op verschillende `y`-posities te tekenen, ontstaat een uitlaatspoor met een ronde onderkant.
 
 --- task ---
 
-A `for` loop repeats a piece of code once for every item it is given. To run the code in a `for` loop a certain number of times, you can use the `range()` function. For example, `range(5)` creates a sequence of five numbers starting from 0, so [0, 1, 2, 3, 4].
+Een `for` lus herhaalt een stuk code eenmaal voor elk item dat het wordt gegeven. Om de code in een `for` lus een aantal malen uit te voeren, kun je de `range()` functie gebruiken. Bijvoorbeeld, `range(5)` creëert een reeks van vijf getallen beginnend bij 0, dus [0, 1, 2, 3, 4].
 
-Each time the `for` loop repeats, it sets a variable to the current item so that you can use it in the loop.
+Elke keer dat de `for`-lus wordt herhaald, stelt het een variabele in op het huidige item, zodat je het in de lus kunt gebruiken.
 
-Update your `draw_rocket()` function to include a `for` loop that repeats the drawing of `25` exhaust ellipses. The **loop variable** `i` gets added to `rocket_y` to draw each ellipse further below the rocket.
+Werk je `teken_raket()` functie bij om een `for`-lus op te nemen die het tekenen van `25` uitlaatellipsen herhaalt. De **lusvariabele** `i` wordt toegevoegd aan `raket_y` om elke ellips verder onder de raket te tekenen.
 
 --- code ---
 ---
@@ -34,18 +34,18 @@ language: python filename: main.py - draw_rocket() line_numbers: true line_numbe
 line_highlights: 16-22
 ---
 
-def draw_rocket():
+def teken_raket():
 
-  global rocket_y   
-rocket_y -= 1
+  global raket_y   
+raket_y -= 1
 
-  no_stroke() #Turn off the stroke
+  no_stroke() # Zet de lijn uit
 
-  for i in range(25): #Draw 25 burning exhaust ellipses   
-fill(255, 255, 0) #Yellow   
-ellipse(width/2, rocket_y + i, 8, 3) #i increases each time the loop repeats
+  for i in range(25): #Teken 25 brandende uitlaatellipsen   
+fill(255, 255, 0) #Geel   
+ellipse(width/2, raket_y + i, 8, 3) #i neemt toe elke keer dat de lus wordt herhaald
 
-  image(rocket, width/2, rocket_y, 64, 64)
+  image(raket, width/2, raket_y, 64, 64)
 
 
 --- /code ---
@@ -54,17 +54,17 @@ ellipse(width/2, rocket_y + i, 8, 3) #i increases each time the loop repeats
 
 --- task ---
 
-**Test:** Run your code to check the rocket has a new exhaust trail.
+**Test:** Voer je code uit om te controleren of de raket een nieuw uitlaatspoor heeft.
 
-![A close-up of the rocket with an exhaust trail.](images/rocket_exhaust.png){:width="300px"}
+![Een close-up van de raket met een uitlaatspoor.](images/rocket_exhaust.png){:width="300px"}
 
 --- /task ---
 
-The `i` variable can also be used to create a colour gradient with less green in each ellipse that gets drawn.
+De variabele `i` kan ook worden gebruikt om een kleurverloop te maken met minder groen in elke ellips die wordt getekend.
 
 --- task ---
 
-Change the call to `fill()` to set the amount of green to `255 - i*10` so that the first ellipse has equal amounts of red and green and the last ellipse has very little green.
+Verander de aanroep in `fill()` om de hoeveelheid groen in te stellen op `255 - i*10` zodat de eerste ellips evenveel rood en groen heeft en de laatste ellips heel weinig groen.
 
 --- code ---
 ---
@@ -73,8 +73,8 @@ line_highlights: 20
 ---
 
   for i in range(25):   
-fill(255, 255 - i * 10, 0) #Reduce the amount of green    
-ellipse(width/2, rocket_y + i, 8, 3)
+fill(255, 255 - i * 10, 0) #Verminder de hoeveelheid groen    
+ellipse(width/2, raket_y + i, 8, 3)
 
 --- /code ---
 
@@ -82,19 +82,19 @@ ellipse(width/2, rocket_y + i, 8, 3)
 
 --- task ---
 
-**Test:** Check that you get a trail of ellipses gradually changing from yellow to red.
+**Test:** Controleer of je een spoor van ellipsen krijgt die geleidelijk veranderen van geel naar rood.
 
 --- /task ---
 
-The smoke exhaust trail is created by drawing lots of slightly transparent grey ellipses at different positions in each frame.
+Het rookafvoerspoor wordt gecreëerd door veel licht transparante grijze ellipsen op verschillende posities in elk frame te tekenen.
 
-![A slow animation of the smoke effect.](images/rocket_smoke.gif)
+![Een langzame animatie van het rookeffect.](images/rocket_smoke.gif)
 
 --- task ---
 
-This time the `fill()` is outside the loop as the colour is the same for each smoke ellipse. The fourth input to `fill()` is the opacity, a low opacity value makes the colour more transparent so you can see the shapes underneath.
+Deze keer bevindt de `fill()` zich buiten de lus omdat de kleur voor elke rook ellips hetzelfde is. De vierde invoer voor `fill()` is de doorzichtigheid, een lage doorzichtigheidswaarde maakt de kleur transparanter, zodat je de vormen eronder kunt zien.
 
-In each frame of the animation, 20 ellipses of random sizes will be drawn at random positions.
+In elk frame van de animatie worden 20 ellipsen van willekeurige grootte op willekeurige posities getekend.
 
 --- code ---
 ---
@@ -104,13 +104,13 @@ line_highlights: 23-26
 
   for i in range(25):  
 fill(255, 255 - i * 10, 0)   
-ellipse(width/2, rocket_y + i, 8, 3)
+ellipse(width/2, raket_y + i, 8, 3)
 
-  fill(200, 200, 200, 100) #Transparent grey   
-for i in range(20): #Draw 20 random smoke ellipses    
-ellipse(width/2 + randint(-5, 5), rocket_y + randint(20, 50), randint(5, 10), randint(5, 10))
+  fill(200, 200, 200, 100) #Transparant grijs   
+for i in range(20): #Teken 20 willikeurige rook ellipsen    
+ellipse(width/2 + randint(-5, 5), raket_y + randint(20, 50), randint(5, 10), randint(5, 10))
 
-  image(rocket, width/2, rocket_y, 64, 64)
+  image(raket, width/2, raket_y, 64, 64)
 
 --- /code ---
 
@@ -118,9 +118,9 @@ ellipse(width/2 + randint(-5, 5), rocket_y + randint(20, 50), randint(5, 10), ra
 
 --- task ---
 
-**Test:** Run your program and check the exhaust fumes are visible.
+**Test:** Voer je programma uit en controleer of de uitlaatgassen zichtbaar zijn.
 
-![A close-up of the rocket and exhaust trail with added smoke.](images/rocket_exhaust_circles.gif)
+![Een close-up van de raket en het uitlaatspoor met toegevoegde rook.](images/rocket_exhaust_circles.gif)
 
 --- /task ---
 
