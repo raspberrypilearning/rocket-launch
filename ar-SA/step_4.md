@@ -1,11 +1,11 @@
-## Exhaust effects
+## آثار العادم
 
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">
 
-The rocket will look more realistic with some special effects to simulate the exhaust trail. 
+سيبدو الصاروخ أكثر واقعية مع بعض المؤثرات الخاصة لمحاكاة مسار العادم. 
 
-You can create cool effects by using a `for` loop to draw lots of shapes in each frame.
+يمكنك إنشاء تأثيرات رائعة باستخدام حلقة "for" لرسم الكثير من الأشكال في كل إطار.
 
 </div>
 <div>
@@ -16,17 +16,17 @@ You can create cool effects by using a `for` loop to draw lots of shapes in each
 </div>
 
 <p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;">
-Coding is used to make <span style="color: #0faeb0">**graphic effects**</span> for movies and games. It's much quicker to write code than to draw each frame of an animation individually. </p>
+تستخدم الشفرة البرمجية لعمل <span style="color: #0faeb0">** تأثيرات رسومية **</span> للأفلام والألعاب. إن كتابة الشفرة البرمجية أسرع بكثير من رسم كل إطار من الرسوم المتحركة على حدة. </p>
 
-Drawing lots of yellow ellipses at different `y` positions creates an exhaust trail with a round bottom.
+يؤدي رسم الكثير من الأشكال البيضاوية الصفراء في مواضع مختلفة من `y` إلى إنشاء مسار العادم.
 
 --- task ---
 
-A `for` loop repeats a piece of code once for every item it is given. To run the code in a `for` loop a certain number of times, you can use the `range()` function. For example, `range(5)` creates a sequence of five numbers starting from 0, so [0, 1, 2, 3, 4].
+تكرر الحلقة `for` جزءًا من الشفرة البرمجية مرة واحدة لكل عنصر يتم تقديمه. لتشغيل الشفرة البرمجية في حلقة `for` لعدد معين من المرات ، يمكنك استخدام الدالة `range ()`. على سبيل المثال ، يُنشئ النطاق `(5)` سلسلة من خمسة أرقام تبدأ من 0 ، [0 ، 1 ، 2 ، 3 ، 4].
 
-Each time the `for` loop repeats, it sets a variable to the current item so that you can use it in the loop.
+في كل مرة تتكرر فيها الحلقة `for` ، فإنها تحدد متغيرًا للعنصر الحالي بحيث يمكنك استخدامه في الحلقة.
 
-Update your `draw_rocket()` function to include a `for` loop that repeats the drawing of `25` exhaust ellipses. The **loop variable** `i` gets added to `rocket_y` to draw each ellipse further below the rocket.
+قم بتحديث الدالة `draw_rocket ()` لتشمل حلقة `for` التي تكرر رسم `25` علامات للعادم. تتم إضافة متغير الحلقة **loop variable** `i` إلى `rocket_y`لرسم التاثيرات الحركية للعادم اسفل الصاروخ.
 
 --- code ---
 ---
@@ -54,17 +54,17 @@ ellipse(width/2, rocket_y + i, 8, 3) #i increases each time the loop repeats
 
 --- task ---
 
-**Test:** Run your code to check the rocket has a new exhaust trail.
+**الاختبار:** لنقم بتشغيل الشفرة البرمجية للتحقق من أن الصاروخ يحتوي على مسار عادم جديد.
 
-![A close-up of the rocket with an exhaust trail.](images/rocket_exhaust.png){:width="300px"}
+![لقطة مقرّبة للصاروخ مع أثر عادم.](images/rocket_exhaust.png){:width="300px"}
 
 --- /task ---
 
-The `i` variable can also be used to create a colour gradient with less green in each ellipse that gets drawn.
+يمكن أيضًا استخدام المتغير `i` لإنشاء تدرج لوني أقل من اللون الأخضر في كل شكل بيضاوي يتم رسمه.
 
 --- task ---
 
-Change the call to `fill()` to set the amount of green to `255 - i*10` so that the first ellipse has equal amounts of red and green and the last ellipse has very little green.
+قم بتغيير الاستدعاء إلى `fill ()` لتعيين مقدار اللون الأخضر إلى `255 - i*10` بحيث يكون للشكل البيضوي الأول كميات متساوية من الأحمر والأخضر ويكون آخر شكل أخضر قليلًا جدًا.
 
 --- code ---
 ---
@@ -82,19 +82,19 @@ ellipse(width/2, rocket_y + i, 8, 3)
 
 --- task ---
 
-**Test:** Check that you get a trail of ellipses gradually changing from yellow to red.
+**اختبار:** تأكد من حصولك على أثر من الأشكال البيضاوية يتغير تدريجيًا من الأصفر إلى الأحمر.
 
 --- /task ---
 
-The smoke exhaust trail is created by drawing lots of slightly transparent grey ellipses at different positions in each frame.
+يتم إنشاء مسار عادم الدخان عن طريق رسم الكثير من الأشكال البيضاوية الرمادية الشفافة قليلاً في مواضع مختلفة في كل إطار.
 
-![A slow animation of the smoke effect.](images/rocket_smoke.gif)
+![رسم متحرك بطيء لتأثير الدخان.](images/rocket_smoke.gif)
 
 --- task ---
 
-This time the `fill()` is outside the loop as the colour is the same for each smoke ellipse. The fourth input to `fill()` is the opacity, a low opacity value makes the colour more transparent so you can see the shapes underneath.
+هذه المرة ، تكون التعبئة`fill()` خارج الحلقة حيث أن اللون هو نفسه لكل شكل بيضاوي من الدخان. الإدخال الرابع لـ `fill ()` هو العتامة ، قيمة عتامة منخفضة تجعل اللون أكثر شفافية حتى تتمكن من رؤية الأشكال الموجودة تحته.
 
-In each frame of the animation, 20 ellipses of random sizes will be drawn at random positions.
+في كل إطار من إطارات الرسوم المتحركة ، سيتم رسم 20 علامة بيضاوية بأحجام عشوائية في مواضع عشوائية.
 
 --- code ---
 ---
@@ -118,9 +118,9 @@ ellipse(width/2 + randint(-5, 5), rocket_y + randint(20, 50), randint(5, 10), ra
 
 --- task ---
 
-**Test:** Run your program and check the exhaust fumes are visible.
+**اختبار:** لنقم بتشغيل البرنامج ونتحقق من أن أبخرة العادم مرئية.
 
-![A close-up of the rocket and exhaust trail with added smoke.](images/rocket_exhaust_circles.gif)
+![لقطة مقرّبة للصاروخ ومسار العادم مع إضافة دخان.](images/rocket_exhaust_circles.gif)
 
 --- /task ---
 
