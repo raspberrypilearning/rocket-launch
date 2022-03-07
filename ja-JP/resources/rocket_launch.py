@@ -1,72 +1,72 @@
 #!/bin/python3
 
-# Import library code
+# ライブラリコードをインポートする
 from p5 import *
 from random import randint
 
-# Setup global variables
+# グローバル変数を設定する
 screen_size = 400
-rocket_y = screen_size # start at the bottom
-burn = 100 # how much fuel is burned in each frame
+rocket_y = screen_size # 一番下から開始
+burn = 100 # 各フレームで燃焼する燃料の量
 orbit_radius = 250
 orbit_y = screen_size - orbit_radius
 
-# The draw_rocket function goes here
+# draw_rocket関数はここにあります
 def draw_rocket():
 
   global rocket_y, fuel, burn
   
-  if fuel >= burn and rocket_y > orbit_y: # still flying
-    rocket_y -= 1 # move the rocket
-    fuel -= burn # burn fuel
-    print('Fuel left: ', fuel)
+  if fuel >= burn and rocket_y > orbit_y: # まだ飛行中
+    rocket_y -= 1 # ロケットを動かす
+    fuel -= burn # 燃料を燃焼させる
+    print('残りの燃料: ', fuel)
   
-    no_stroke() # Turn off the stroke
+    no_stroke() # 境界線をなしにする
   
-    for i in range(25): # draw 25 burning exhaust ellipses
-      fill(255, 255 - i*10, 0) # yellow
-      ellipse(width/2, rocket_y + i, 8, 3) # i increases each time the loop repeats
+    for i in range(25): # 排気ガスを25個描く
+      fill(255, 255 - i*10, 0) # 黄色
+      ellipse(width/2, rocket_y + i, 8, 3) # ループが繰り返されるたびに i が増加する
     
-    fill(200, 200, 200, 100) # transparent grey
-    for i in range(20): # draw 20 random smoke ellipses
+    fill(200, 200, 200, 100) # 透明な灰色
+    for i in range(20): # ランダムな排煙を20個描く
       ellipse(width/2 + randint(-5, 5), rocket_y + randint(20, 50), randint(5, 10), randint(5, 10))
   
-  if fuel < burn and rocket_y > orbit_y: # No more fuel and not in orbit
-    tint(255, 0, 0) # Failure
+  if fuel < burn and rocket_y > orbit_y: # 燃料がなくなり、軌道に乗っていない
+    tint(255, 0, 0) # 失敗
   elif fuel < 1000 and rocket_y <= orbit_y:
-    tint(0, 255, 0) # Success
+    tint(0, 255, 0) # 成功
   elif fuel >= 1000 and rocket_y <= orbit_y: 
-    tint(255, 200, 0) # Too much fuel
+    tint(255, 200, 0) # 燃料が多すぎる
   
   image(rocket, width/2, rocket_y, 64, 64)
   no_tint()
   
 
-# The draw_background function goes here
+# draw_background関数はここにあります
 def draw_background():
-  background(0) # short for background(0, 0, 0) - black 
-  image(planet, width/2, height, 300, 300) # draw the image
+  background(0) # background(0, 0, 0) の省略形 - 黒 
+  image(planet, width/2, height, 300, 300) # 描画する
   
-  no_fill() # Turn off any fill
-  stroke(255) # Set a white stroke
+  no_fill() # 塗りつぶしをなしにする
+  stroke(255) # 境界線を白にする
   stroke_weight(2)
   ellipse(width/2, height, orbit_radius*2, orbit_radius*2)
   
 
 def setup():
-  # Setup your animation here
+  # ここでアニメーションをセットアップします
   size(screen_size, screen_size)
   image_mode(CENTER)
   global planet, rocket
-  planet = load_image('planet.png') # your chosen planet
+  planet = load_image('planet.png') # 選択した惑星
   rocket = load_image('rocket.png')
 
 
 def draw():
-  # Things to do in every frame
+  # フレームごとに行うこと
   draw_background()  
   draw_rocket()
   
 
-fuel = int(input('How many kilograms of fuel do you want to use?'))
+fuel = int(input('燃料を何キログラム使いますか?'))
 run()
