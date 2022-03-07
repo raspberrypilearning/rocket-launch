@@ -1,20 +1,20 @@
-## Burn fuel
+## 燃料を燃やす
 
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">
 
-One of the most important things to decide when launching a rocket is how much fuel to load into it. 
+ロケットに搭載する燃料の量を決めることは、ロケットを打ち上げるときに決定する最も重要なことの1つです。 
 
-To do this, you need to simulate how much fuel will be burned on the journey.
+これを行うには、飛行中に燃焼する燃料の量をシミュレートする必要があります。
 </div>
 
-![The program with a question in the output area asking how much fuel is required.](images/burn_question_full.png){:width="300px"}
+![出力領域に必要な燃料の量を尋ねる質問があるプログラム](images/burn_question_full.png){:width="300px"}
 
 </div>
 
 --- task ---
 
-Add a variable to keep track of how much fuel your rocket burns (in frames).
+変数を追加して、ロケットが(フレームごとに) 燃焼する燃料の量を追跡します。
 
 --- code ---
 ---
@@ -22,10 +22,10 @@ language: python filename: main.py line_numbers: true line_number_start: 7
 line_highlights: 10
 ---
 
-# Setup global variables
+# グローバル変数を設定する
 screen_size = 400   
 rocket_y = screen_size  
-burn = 100 #How much fuel is burned in each frame
+burn = 100 #フレームごとに燃焼される燃料の量
 
 --- /code ---
 
@@ -34,7 +34,7 @@ burn = 100 #How much fuel is burned in each frame
 
 --- task ---
 
-At the bottom of your program, add code to ask the user how much fuel to add to the rocket and store their answer in a `fuel` global variable.
+プログラムの下部に、ロケットに搭載する燃料の量をユーザーに尋ねるコードを追加し、その答えを `fuel` グローバル変数に格納します。
 
 --- code ---
 ---
@@ -42,20 +42,20 @@ language: python filename: main.py line_numbers: true line_number_start: 52
 line_highlights: 52
 ---
 
-fuel = int(input('How many kilograms of fuel do you want to use?'))   
+fuel = int(input('燃料を何キログラム使いますか?'))   
 run()
 
 --- /code ---
 
 --- /task ---
 
-The rocket should only move if it hasn't burned all of its fuel.
+ロケットは、燃料をすべて燃焼するまで動くことができます。
 
 --- task ---
 
-Add code to the `draw_rocket()` function to reduce the remaining `fuel` by the `burn` of each frame. Use `print()` to show how much fuel is left in each frame.
+`draw_rocket()` 関数にコードを追加して、残りの `fuel(燃料)` をフレームごとに `burn(燃焼)` だけ減らします。 `print()` を使用して、フレームごとに残っている燃料の量を表示します。
 
-You need to say that you want to use the global `fuel` and `burn` variables.
+`fuel` および `burn` 変数をグローバル変数として使用することを宣言しなければなりません。
 
 --- code ---
 ---
@@ -65,8 +65,8 @@ line_highlights: 15, 17-18
 
   global rocket_y, fuel, burn   
 rocket_y -= 1   
-fuel -= burn #Burn fuel   
-print('Fuel left: ', fuel)
+fuel -= burn #燃料の燃焼   
+print('燃料の残り: ', fuel)
 
 --- /code ---
 
@@ -74,21 +74,21 @@ print('Fuel left: ', fuel)
 
 --- task ---
 
-**Test:** Run your program to check that the animation doesn't start until `How many kilograms of fuel do you want to use?` has been answered. Try entering `30000` as the amount of fuel.
+**テスト：** プログラムを実行して、`燃料を何キログラム使いますか？` に回答するまでアニメーションが開始されないことを確認します。 燃料の量として`30000` を入力してみてください。
 
-The rocket will keep going even if it has no fuel left.
+燃料が残っていなくてもロケットは動き続けます。
 
-![The program with a question in the output area asking how much fuel is required.](images/burn_question.png)
+![出力領域で必要な燃料の量を尋ねる質問を含むプログラム。](images/burn_question.png)
 
 --- /task ---
 
 --- task ---
 
-The rocket should only move if it has enough fuel left. Add an `if` statement to check that `fuel >= burn`.
+ロケットは、十分な燃料が残っている場合にのみ動くようにする必要があります。 `if` ステートメントを追加して、 `fuel >= burn`であることを確認します。
 
-You will need to indent all of the lines of code before the `image()` function call. To do this, highlight all of the lines with the mouse and then tap the <kbd>Tab</kbd> on the keyboard to indent all the lines at once.
+`image()` 関数を呼び出す前のコードのすべての行をインデントする必要があります。 これを行うには、マウスですべての行を強調表示してから、キーボードの <kbd>Tab</kbd> をタップします。すべての行を一度にインデントできます。
 
-The `image()` line doesn't need to be indented because you always want to draw the rocket.
+ロケットを描くのは常に行うので、 `image()` 行をインデントする必要はありません。
 
 --- code ---
 ---
@@ -98,12 +98,12 @@ line_highlights: 16-31
 
   global rocket_y, fuel, burn
 
-  if fuel >= burn: #Still got fuel   
+  if fuel >= burn: #まだ燃料が残っている   
 rocket_y -= 1   
 fuel -= burn   
-print('Fuel left: ', fuel)   
+print('燃料の残り: ', fuel)   
 
-    no_stroke() #Turn off the stroke   
+    no_stroke() #境界線なし   
     
     for i in range(25):   
       fill(255, 255 - i*10, 0)   
@@ -121,13 +121,13 @@ print('Fuel left: ', fuel)
 
 --- task ---
 
-**Test:** Run your program to check that the rocket stops when there is no fuel left.
+**テスト：** プログラムを実行して、燃料がなくなったときにロケットが停止することを確認します。
 
-![Image of a rocket in the middle of the screen with the statement 'Fuel left: 0'.](images/burn_empty.png){:width="300px"}
+![画面中央にロケットがあり、「燃料の残り：0」という文章が表示された画像。](images/burn_empty.png){:width="300px"}
 
 --- /task ---
 
-This computer simulation isn't very accurate, but it's good enough for our animation.
+このコンピュータシミュレーションはあまり正確ではありませんが、アニメーションには十分です。
 
 --- save ---
 
