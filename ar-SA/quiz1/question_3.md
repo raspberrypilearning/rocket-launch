@@ -1,9 +1,9 @@
 --- question ---
 ---
-legend: Question 3 of 3
+السؤال 3 من 3
 ---
 
-This code uses `tint()` to colour a rocket in a game to show the player how they are doing.
+تستخدم هذه الشفرة البرمجية `tint ()` لتلوين صاروخ في لعبة لإظهار اللاعب كيف يفعل.
 
 --- code ---
 ---
@@ -23,47 +23,47 @@ image(rocket, width/2, height/2, 64, 64)
 
 --- /code ---
 
-If the `points` variable has the value `99` and the `lives` variable has the value `1`, what will the rocket look like?
+إذا كان المتغير `نقطة` له القيمة `99` والمتغير `حياة` له القيمة `1`، فكيف سيبدو الصاروخ؟
 
 --- choices ---
 
 - (x)
 
-![A rocket image with amber tint.](images/rocket_amber.png) <div style="text-align: center;">Amber
+![صورة صاروخية بلون كهرماني خفيف.](images/rocket_amber.png) <div style="text-align: center;">العنبر
 
  --- feedback ---
 
- Correct! The player has less than 100 points and only 1 life left. The rocket is coloured amber to left them know that this is their last chance to win!
+ صحيح! اللاعب لديه أقل من 100 نقطة وحياة واحدة فقط متبقية. الصاروخ ملون باللون الكهرماني ليجعلهم يعرفون أن هذه فرصتهم الأخيرة للفوز!
 
  --- /feedback ---
 
 - ( )
 
-![A rocket image with no tint](images/rocket_original.png) <div style="text-align: center;">No tint
+![صورة صاروخية بدون لون خفيف](images/rocket_original.png) <div style="text-align: center;">بدون لون خفيف
 
  --- feedback ---
 
- Not quite, the rocket has a tint as one of the statements is true.
+ ليس تمامًا ، الصاروخ له لون خفيف لأن أحد العبارات صحيح.
 
  --- /feedback ---
 
 - ( )
 
-![A rocket image with green tint](images/rocket_green.png) <div style="text-align: center;">Green
+![صورة صاروخية بلون أخضر](images/rocket_green.png) <div style="text-align: center;">أخضر
 
  --- feedback ---
 
- Not quite, the player would need `>= 100` points to win and turn their rocket green. They have `99`, which is not enough. Check the conditions carefully.
+ ليس تمامًا ، سيحتاج اللاعب إلى `>= 100` نقطة للفوز وتحويل صاروخه إلى اللون الأخضر. لديهم `99`، وهذا لا يكفي. تحقق من الشروط بعناية.
 
  --- /feedback ---
 
 - ( )
 
-![A rocket image with red tint](images/rocket_red.png) <div style="text-align: center;">Red
+![صورة صاروخية بلون أحمر](images/rocket_red.png) <div style="text-align: center;">أحمر
 
  --- feedback ---
 
- Not quite, the player has `< 100` points but lives does not equal `0`. Check the conditions carefully.
+ ليس تمامًا ، يمتلك اللاعب `` &lt; لكن الأرواح لا تساوي `0`. تحقق من الشروط بعناية.
 
  --- /feedback ---
 
