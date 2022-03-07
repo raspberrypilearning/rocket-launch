@@ -1,36 +1,36 @@
-## Upgrade your project
-Your project is complete, but you can still make it better if you want. Here are a few upgrades to consider:
+## プロジェクトをアップグレードする
+プロジェクトは完了しましたが、必要に応じてさらに改善することもできます。 アップグレードとして考えられることいくつか挙げてみます。
 
- + Let the user set the rate at which the rocket burns fuel or how far the rocket flies in each frame.
- + Add a second, higher, orbit for the rocket to reach and drop off another satellite. Have it change colour again when it gets there.
- + Add you own rocket or planet image to use in your project.
+ + ロケットが燃料を燃焼する速度、または各フレームでロケットが飛ぶ距離をユーザーが設定できるようにする。
+ + ロケットが別の衛星を放出する2番目の、より高い軌道を追加する。 そこに着いたらまた色を変える。
+ + プロジェクトで使用する独自のロケットまたは惑星の画像を追加します。
 
 
 --- collapse ---
 ---
-title: Adding your own image to Trinket
+title: Trinketに独自の画像を追加する
 ---
 
-If you want to use your own picture for the planet — or the rocket — then you can do that by choosing the **View and Add Images** button.
+惑星（またはロケット）に独自の画像を使用する場合は、[ **View and Add Images**] ボタンを押すことでそれができます。
 
-![A plus symbol, an upload symbol, and an image symbol. The image symbol is highlighted.](images/trinket_image.png)
+![プラス記号、アップロード記号、および画像記号。 画像記号が強調表示されます。](images/trinket_image.png)
 
-Then choose **Image Library** and follow the on-screen instructions to upload an image to your Trinket image library.
+続けて **Image Library** を選択し、画面の指示に従って画像をTrinket Image Libraryにアップロードします。
 
-![A button with a plus and the words 'Image Library' on it.](images/trinket_image_library.png)
+![プラス記号と「Image Library」という言葉が書かれたボタン。](images/trinket_image_library.png)
 
-Note the filename of the image you've uploaded, and use it in the code in place of `planet.png`.
+アップロードした画像のファイル名をメモし、コードで `planet.png`の代わりに使用してください。
 
 --- /collapse ---
 
-Here's a version of the project with all those upgrades, so you can see how they could work: <iframe src="https://trinket.io/embed/python/76c7d66070?outputOnly=true&runOption=run&start=result" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen mark="crwd-mark"></iframe>
+これらすべてのアップグレードを含むプロジェクトのバージョンを次に示します。これにより、それらがどのように機能するかを確認できます。 <iframe src="https://trinket.io/embed/python/76c7d66070?outputOnly=true&runOption=run&start=result" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen mark="crwd-mark"></iframe>
 
 --- collapse ---
 ---
-title: Completed project
+title: 完成したプロジェクト
 ---
 
-You can view the [completed project here](https://trinket.io/python/622b4dd113){:target="_blank"}.
+[完成したプロジェクトはこちら](https://trinket.io/python/622b4dd113){:target="_blank"}で確認できます。
 
 --- /collapse ---
 
