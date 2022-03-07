@@ -1,10 +1,10 @@
 
 --- question ---
 ---
-legend: Question 2 of 3
+legend: Vraag 2 van 3
 ---
 
-A project has this `setup` code to load a planet image and say that images should be positioned at their centre:
+Een project heeft deze `setup` code om een planeetafbeelding te laden en te zeggen dat afbeeldingen in hun midden moeten worden geplaatst:
 
 --- code ---
 ---
@@ -14,55 +14,55 @@ language: python
 def setup():   
 size(400, 400)   
 image_mode(CENTER)   
-global planet   
-planet = load_image('planet.png')
+global planeet   
+planeet = load_image('planet.png')
 
 --- /code ---
 
-Coordinates start from (0, 0) in the top-left corner. In the project you drew planet and rocket images using the `image(image_file, x-coord, y-coord, x-width, y-width)` function.
+Coördinaten beginnen bij (0, 0) in de linkerbovenhoek. In het project heb je afbeeldingen van planeten en raketten getekend met de functie `image(image_file, x-coord, y-coord, x-width, y-width)`.
 
-Where will this code position the planet image?
+Waar zal deze code het planeetbeeld positioneren?
 
 --- code ---
 ---
 language: python
 ---
 
-image(planet, 300, 100, 128, 128)
+image(planeet, 300, 100, 128, 128)
 
 --- /code ---
 
 --- choices ---
 
-- ( ) ![A planet image positioned horizontally off at the right of the screen and vertically in the middle.](images/planet400200.png)
+- ( ) ![Een planeetafbeelding horizontaal rechts van het scherm en verticaal in het midden.](images/planet400200.png)
 
   --- feedback ---
 
-The second and third inputs to the `image()` function are the `x` and `y` coordinates for the centre of the image. This planet has the coordinates `(400, 200)`.
+De tweede en derde invoer voor de functie `image()` zijn de `x` en `y` coördinaten voor het midden van de afbeelding. Deze planeet heeft de coördinaten `(400, 200)`.
 
   --- /feedback ---
 
-- ( ) ![A planet image positioned in the middle of the bottom-left quadrant.](images/planet100300.png)
+- ( ) ![Een planeetafbeelding in het midden van het kwadrant linksonder.](images/planet100300.png)
 
   --- feedback ---
 
-The second and third inputs to the `image()` function are the `x` and `y` coordinates for the centre of the image. This planet has the coordinates `(100, 300)`.
+De tweede en derde invoer voor de functie `image()` zijn de `x` en `y` coördinaten voor het midden van de afbeelding. Deze planeet heeft de coördinaten `(100, 300)`.
 
   --- /feedback ---
 
-- (x) ![A planet image positioned in the middle of the top-right quadrant.](images/planet300100.png)
+- (x) ![Een planeetafbeelding in het midden van het kwadrant rechtsboven.](images/planet300100.png)
 
   --- feedback ---
 
-Correct! The second and third inputs to the `image()` function are the `x` and `y` coordinates for the centre of the image. This image has the coordinates (300, 100) so it is 300 (out of 400) pixels from the left for the `x` coordinate and 100 (out of 400) pixels down from the top.
+Correct! De tweede en derde invoer voor de functie `image()` zijn de `x` en `y` coördinaten voor het midden van de afbeelding. Deze afbeelding heeft de coördinaten (300, 100) dus het is 300 (van de 400) pixels van links voor de `x` coördinaat en 100 (van de 400) pixels naar beneden vanaf de bovenkant.
 
   --- /feedback ---
 
-- () ![A planet image positioned in the top-left quadrant.](images/planet128128.png)
+- () ![Een planeetafbeelding in het kwadrant linksboven.](images/planet128128.png)
 
   --- feedback ---
 
-The fourth and fifth inputs give the size of the image. The second and third inputs to the `image()` function are the `x` and `y` coordinates for the centre of the image. This planet has the coordinates `(128, 128)`.
+De vierde en vijfde invoer geven de grootte van de afbeelding aan. De tweede en derde invoer voor de functie `image()` zijn de `x` en `y` coördinaten voor het midden van de afbeelding. Deze planeet heeft de coördinaten `(128, 128)`.
 
   --- /feedback ---
 
