@@ -1,27 +1,27 @@
-## Liftoff!
+## Lancering!
 
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">
-Each time a new frame is drawn, the rocket needs to move up the screen to create an animation effect.
+Elke keer dat er een nieuw frame wordt getekend, moet de raket omhoog bewegen op het scherm om een animatie-effect te creëren.
 </div>
 <div>
 
-![A rocket flying at a steady speed from the bottom to the top of the screen.](images/fly.gif){:width="300px"}
+![Een raket die met een constante snelheid van de onderkant naar de bovenkant van het scherm vliegt.](images/fly.gif){:width="300px"}
 
 </div>
 </div>
 
 --- task ---
 
-The starter project has a rocket image provided for you.
+Het startproject heeft een raketafbeelding voor je.
 
-![Image of the rocket in the Trinket image library.](images/trinket_rocket_image.png)
+![Afbeelding van de raket in de Trinket-beeldbibliotheek.](images/trinket_rocket_image.png)
 
 --- /task ---
 
 --- task ---
 
-Add code to the `setup()` function to load the rocket image into a `rocket` global variable.
+Voeg code toe aan de `setup()` functie om de raketafbeelding in een `raket` global variabele te laden.
 
 --- code ---
 ---
@@ -30,22 +30,22 @@ line_highlights: 24, 26
 ---
 
 def setup():   
-#Setup your animation here   
-size(screen_size, screen_size)   
+#Stel je animatie hier in   
+size(scherm_grootte, scherm_grootte)   
 image_mode(CENTER)   
-global planet, rocket   
-planet = load_image('planet.png')    
-rocket = load_image('rocket.png')
+global planeet, raket   
+planeet = load_image('planet.png')    
+raket = load_image('rocket.png')
 
 --- /code ---
 
 --- /task ---
 
-The `y` position of the rocket will start at 400 (the screen height) and then decrease by 1 each time a new frame is drawn.
+De `y` positie van de raket begint bij 400 (de schermhoogte) en neemt vervolgens af met 1 telkens wanneer een nieuw frame wordt getekend.
 
 --- task ---
 
-Add a `rocket_y` global variable to keep track of the rocket's `y` position.
+Voeg een global variabele `raket_y` toe om de `y` positie van de raket bij te houden.
 
 --- code ---
 ---
@@ -53,9 +53,9 @@ language: python filename: main.py line_numbers: true line_number_start: 7
 line_highlights: 9
 ---
 
-# Setup global variables
-screen_size = 400    
-rocket_y = screen_size #Start at the bottom
+# Global variabelen instellen
+scherm_grootte = 400    
+raket_y = scherm_grootte #Begin onderaan
 
 --- /code ---
 
@@ -63,9 +63,9 @@ rocket_y = screen_size #Start at the bottom
 
 --- task ---
 
-Define a `draw_rocket()` function to change the rocket's `y` position and redraw it.
+Definieer een `teken_raket()` functie om de `y` positie van de raket te wijzigen en deze opnieuw te tekenen.
 
-`rocket_y -= 1` is a shorter way of saying `rocket_y = rocket_y - 1`.
+`raket_y -= 1` is een kortere manier om te zeggen `raket_y = raket_y - 1`.
 
 --- code ---
 ---
@@ -73,12 +73,12 @@ language: python filename: main.py line_numbers: true line_number_start: 11
 line_highlights: 12-16
 ---
 
-# The draw_rocket function goes here
-def draw_rocket():
+# De teken_raket functie komt hier
+def teken_raket():
 
-  global rocket_y #Use the global rocket_y variable    
-rocket_y -= 1 #Move the rocket    
-image(rocket, width/2, rocket_y, 64, 64)
+  global raket_y #Gebruik de global raket_y variabele    
+raket_y -= 1 #Verplaats de raket    
+image(raket, width/2, raket_y, 64, 64)
 
 
 --- /code ---
@@ -87,7 +87,7 @@ image(rocket, width/2, rocket_y, 64, 64)
 
 --- task ---
 
-Call your new `draw_rocket()` in the `draw()` function so that the rocket gets redrawn every frame.
+Neem je nieuwe `teken_raket()` op in de `draw()` functie zodat de raket elk frame opnieuw wordt getekend.
 
 --- code ---
 ---
@@ -96,9 +96,9 @@ line_highlights: 37
 ---
 
 def draw():   
-#Things to do in every frame   
-draw_background()   
-draw_rocket()
+#Dingen om te doen in elk frame   
+teken_achtergrond()   
+teken_raket()
 
 
 --- /code ---
@@ -107,9 +107,9 @@ draw_rocket()
 
 --- task ---
 
-**Test:** Run your code to check that the rocket starts at the bottom of the screen and moves up each frame.
+**Test:** Voer je code uit om te controleren of de raket onderaan het scherm begint en elk frame omhoog beweegt.
 
-![Image of the rocket half way up the screen.](images/trinket_rocket_fly.gif)
+![Afbeelding van de raket halverwege het scherm.](images/trinket_rocket_fly.gif)
 
 --- /task ---
 
