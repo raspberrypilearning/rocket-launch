@@ -1,28 +1,28 @@
-## Introduction
+## Εισαγωγή
 
-Make an animation to propel a satellite into orbit — by hitching a ride on a rocket! Your animation will create cool graphic effects and simulate the best amount of fuel to give the rocket.
+Δημιούργησε ένα κινούμενο σχέδιο για να προωθήσεις έναν δορυφόρο σε τροχιά — κάνοντας μια βόλτα με έναν πύραυλο! Η κινούμενη εικόνα σου θα δημιουργήσει όμορφα εφέ γραφικών και θα προσομοιώσει την βέλτιστη ποσότητα καυσίμου που θα δώσει στον πύραυλο.
 
-![Side-by-side screens showing one green rocket in orbit and one red rocket that has failed to reach orbit.](images/showcase.png)
+![Οθόνες δίπλα-δίπλα που δείχνουν έναν πράσινο πύραυλο σε τροχιά και έναν κόκκινο πύραυλο που απέτυχε να μπει σε τροχιά.](images/showcase.png)
 
 <p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;">
-<span style="color: #0faeb0">**Computer simulations**</span> are used to calculate what will happen when we send a rocket into space. Running simulations and making plans on a computer reduces the risk of expensive or dangerous problems in space.
+Οι <span style="color: #0faeb0">**Προσομοιώσεις υπολογιστή**</span> χρησιμοποιούνται για να υπολογίσουμε τι θα συμβεί όταν στείλουμε έναν πύραυλο στο διάστημα. Η εκτέλεση προσομοιώσεων και η δημιουργία σχεδίων σε υπολογιστή μειώνει τον κίνδυνο δαπανηρών ή επικίνδυνων προβλημάτων στο διάστημα.
 </p>
 
-You will:
-+ Use **images** in your animations
-+ Use `for` loops to repeat actions
-+ Join conditions with `and`
+Θα χρειαστεί να:
++ Χρησιμοποιήσεις **εικόνες** στα κινούμενα σχέδια
++ Χρησιμοποιήσεις βρόχους `for` για να επαναλάβεις ενέργειες
++ Συνδέσεις συνθήκες με το `and`
 
 --- no-print ---
 
 --- task ---
 
-### Try it
+### Δοκίμασέ το
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 175px; flex-grow: 1">  
-You need to supply the rocket with enough fuel to reach the satellite orbit. Try a small amount (around 10,000kg) and a very large amount (around 50,000kg) to see what happens. 
+Πρέπει να τροφοδοτήσεις τον πύραυλο με αρκετό καύσιμο για να φτάσει στην τροχιά του δορυφόρου. Δοκίμασε μια μικρή ποσότητα (περίπου 10.000 κιλά) και μια πολύ μεγάλη ποσότητα (περίπου 50.000 κιλά) για να δεις τι συμβαίνει. 
 
-How much fuel is just enough without too much left over?
+Πόσο καύσιμο είναι αρκετό χωρίς να περισσέψει πάρα πολύ;
 </div>
 <iframe src="https://trinket.io/embed/python/622b4dd113?outputOnly=true&runOption=run&start=result" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
 </div>
@@ -33,10 +33,10 @@ How much fuel is just enough without too much left over?
 
 --- print-only ---
 
-![Completed project.](images/showcase.png)
+![Ολοκληρωμένο έργο.](images/showcase.png)
 
 --- /print-only ---
 
-<p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;"> ![Dorothy Vaughan](images/dorothy_vaughan.jpeg){:width="300px"} Dorothy Vaughan made important contributions to early spaceflight. Seeing that the future would use electronic computers, she taught herself, and her team, how to code.
+<p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;"> ![Dorothy Vaughan](images/dorothy_vaughan.jpeg){:width="300px"} Η Dorothy Vaughan συνέβαλε σημαντικά στην πρώτη διαστημική πτήση. Βλέποντας ότι στο μέλλον θα χρησιμοποιούνται ηλεκτρονικοί υπολογιστές, δίδαξε τον εαυτό της και την ομάδα της πώς να προγραμματίζουν.
 
-The film *Hidden Figures* tells the story of how Dorothy and other Black women played a key role in the success of the US space program. 
+Η ταινία *Hidden Figures (Αφανείς ηρωίδες)* αφηγείται την ιστορία του πώς η Dorothy και άλλες Μαύρες γυναίκες έπαιξαν καθοριστικό ρόλο στην επιτυχία του διαστημικού προγράμματος των ΗΠΑ. 
