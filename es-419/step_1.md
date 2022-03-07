@@ -1,28 +1,28 @@
-## Introduction
+## Introducción
 
-Make an animation to propel a satellite into orbit — by hitching a ride on a rocket! Your animation will create cool graphic effects and simulate the best amount of fuel to give the rocket.
+Crea una animación para impulsar un satélite a la órbita, ¡montándote en un cohete! Tu animación creará efectos gráficos geniales y simulará la mejor cantidad de combustible para dar al cohete.
 
-![Side-by-side screens showing one green rocket in orbit and one red rocket that has failed to reach orbit.](images/showcase.png)
+![Pantallas una al lado de la otra que muestran un cohete verde en órbita y un cohete rojo que no logró alcanzar la órbita.](images/showcase.png)
 
 <p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;">
-<span style="color: #0faeb0">**Computer simulations**</span> are used to calculate what will happen when we send a rocket into space. Running simulations and making plans on a computer reduces the risk of expensive or dangerous problems in space.
+<span style="color: #0faeb0">**Las simulaciones por computadora**</span> se utilizan para calcular lo que sucederá cuando enviemos un cohete al espacio. Ejecutar simulaciones y hacer planes en una computadora reduce el riesgo de problemas costosos o peligrosos en el espacio.
 </p>
 
-You will:
-+ Use **images** in your animations
-+ Use `for` loops to repeat actions
-+ Join conditions with `and`
+Vas a:
++ Usar **imágenes** en tus animaciones
++ Usar bucles `for` para repetir acciones
++ Unir condiciones con `and`
 
 --- no-print ---
 
 --- task ---
 
-### Try it
+### Inténtalo
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 175px; flex-grow: 1">  
-You need to supply the rocket with enough fuel to reach the satellite orbit. Try a small amount (around 10,000kg) and a very large amount (around 50,000kg) to see what happens. 
+Debes suministrar al cohete suficiente combustible para alcanzar la órbita del satélite. Prueba con una cantidad pequeña (alrededor de 10 000 kg) y una cantidad muy grande (alrededor de 50 000 kg) para ver qué sucede. 
 
-How much fuel is just enough without too much left over?
+¿Cuánto combustible es suficiente sin que sobre demasiado?
 </div>
 <iframe src="https://trinket.io/embed/python/622b4dd113?outputOnly=true&runOption=run&start=result" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
 </div>
@@ -33,10 +33,10 @@ How much fuel is just enough without too much left over?
 
 --- print-only ---
 
-![Completed project.](images/showcase.png)
+![Proyecto terminado.](images/showcase.png)
 
 --- /print-only ---
 
-<p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;"> ![Dorothy Vaughan](images/dorothy_vaughan.jpeg){:width="300px"} Dorothy Vaughan made important contributions to early spaceflight. Seeing that the future would use electronic computers, she taught herself, and her team, how to code.
+<p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;"> ![Dorothy Vaughan](images/dorothy_vaughan.jpeg){:width="300px"} Dorothy Vaughan hizo contribuciones importantes a los primeros vuelos espaciales. Al ver que el futuro usaría computadoras electrónicas, se enseñó a sí misma y a su equipo a programar.
 
-The film *Hidden Figures* tells the story of how Dorothy and other Black women played a key role in the success of the US space program. 
+La película *Hidden Figures* cuenta la historia de cómo Dorothy y otras mujeres negras jugaron un papel clave en el éxito del programa espacial de EE. UU. 
