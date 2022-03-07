@@ -1,27 +1,27 @@
 ---
-title: Rocket launch
+title: Raket lancering
 hero_image: images/banner.png
-description: Make an animation of a rocket propelling a satellite into orbit
+description: Maak een animatie van een raket die een satelliet in een baan om de aarde brengt
 version: 0.0.1
 listed: true
 copyedit: true
 last_tested: "2021-10-06"
 steps:
   - 
-    title: Introduction
+    title: Inleiding
   - 
-    title: Set the scene
+    title: Het opzetten van de scene
   - 
-    title: Liftoff!
+    title: Lancering!
     completion: engaged
   - 
-    title: Exhaust effects
+    title: Uitlaat effecten
   - 
-    title: Burn fuel
+    title: Brandstof verbruik
   - 
-    title: Reaching orbit
+    title: Omloopbaan bereiken
   - 
-    title: Reflection
+    title: Reflectie
     knowledge_quiz:
       path: quiz1
       version: 1
@@ -29,7 +29,7 @@ steps:
       passing_score: 3
     completion: internal
   - 
-    title: Upgrade your project
+    title: Verbeter je project
     completion: external
   - 
-    title: What next?
+    title: Wat kun je verder nog doen?
