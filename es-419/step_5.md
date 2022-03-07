@@ -1,20 +1,20 @@
-## Burn fuel
+## Quemar combustible
 
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">
 
-One of the most important things to decide when launching a rocket is how much fuel to load into it. 
+Una de las cosas más importantes que hay que decidir al lanzar un cohete es cuánto combustible cargar en él. 
 
-To do this, you need to simulate how much fuel will be burned on the journey.
+Para hacer esto, debes simular cuánto combustible se quemará en el viaje.
 </div>
 
-![The program with a question in the output area asking how much fuel is required.](images/burn_question_full.png){:width="300px"}
+![El programa con una pregunta en el área de salida preguntando cuánto combustible se requiere.](images/burn_question_full.png){:width="300px"}
 
 </div>
 
 --- task ---
 
-Add a variable to keep track of how much fuel your rocket burns (in frames).
+Agrega una variable para realizar un seguimiento de la cantidad de combustible que quema tu cohete (en cuadros).
 
 --- code ---
 ---
@@ -22,10 +22,10 @@ language: python filename: main.py line_numbers: true line_number_start: 7
 line_highlights: 10
 ---
 
-# Setup global variables
-screen_size = 400   
-rocket_y = screen_size  
-burn = 100 #How much fuel is burned in each frame
+# Configurar variables globales
+tamano_pantalla = 400   
+cohete_y = screen_size  
+quemar = 100 #Cuánto combustible se quema en cada fotograma
 
 --- /code ---
 
@@ -34,7 +34,7 @@ burn = 100 #How much fuel is burned in each frame
 
 --- task ---
 
-At the bottom of your program, add code to ask the user how much fuel to add to the rocket and store their answer in a `fuel` global variable.
+En la parte inferior de tu programa, agrega código para preguntarle al usuario cuánto combustible agregar al cohete y almacena su respuesta en una variable global `combustible`.
 
 --- code ---
 ---
@@ -42,20 +42,20 @@ language: python filename: main.py line_numbers: true line_number_start: 52
 line_highlights: 52
 ---
 
-fuel = int(input('How many kilograms of fuel do you want to use?'))   
+combustible = int(input('¿Cuántos kilogramos de combustible quieres usar?'))   
 run()
 
 --- /code ---
 
 --- /task ---
 
-The rocket should only move if it hasn't burned all of its fuel.
+El cohete solo debería moverse si no ha quemado todo su combustible.
 
 --- task ---
 
-Add code to the `draw_rocket()` function to reduce the remaining `fuel` by the `burn` of each frame. Use `print()` to show how much fuel is left in each frame.
+Agrega código a la función `dibujar_cohete()` para reducir los `combustible` restantes por los `quemar` de cada cuadro. Use `print()` para mostrar cuánto combustible queda en cada cuadro.
 
-You need to say that you want to use the global `fuel` and `burn` variables.
+Debes decir que deseas utilizar las variables globales `combustible` y `quemar`.
 
 --- code ---
 ---
@@ -63,10 +63,10 @@ language: python filename: main.py — draw_rocket() line_numbers: true line_num
 line_highlights: 15, 17-18
 ---
 
-  global rocket_y, fuel, burn   
-rocket_y -= 1   
-fuel -= burn #Burn fuel   
-print('Fuel left: ', fuel)
+  global cohete_y, combustible, quemar   
+cohete_y -= 1   
+combustible -= quemar #Quemar combustible   
+print('Combustible restante: ', combustible)
 
 --- /code ---
 
@@ -74,21 +74,21 @@ print('Fuel left: ', fuel)
 
 --- task ---
 
-**Test:** Run your program to check that the animation doesn't start until `How many kilograms of fuel do you want to use?` has been answered. Try entering `30000` as the amount of fuel.
+**Prueba:** Ejecuta tu programa para verificar que la animación no comience hasta que se conteste la pregunta `¿Cuántos kilogramos de combustible deseas usar?`. Intenta ingresar `30000` como la cantidad de combustible.
 
-The rocket will keep going even if it has no fuel left.
+El cohete seguirá funcionando aunque no le quede combustible.
 
-![The program with a question in the output area asking how much fuel is required.](images/burn_question.png)
+![El programa con una pregunta en el área de salida preguntando cuánto combustible se requiere.](images/burn_question.png)
 
 --- /task ---
 
 --- task ---
 
-The rocket should only move if it has enough fuel left. Add an `if` statement to check that `fuel >= burn`.
+El cohete solo debe moverse si le queda suficiente combustible. Agrega una declaración `if` para verificar que `combustible >= quema`.
 
-You will need to indent all of the lines of code before the `image()` function call. To do this, highlight all of the lines with the mouse and then tap the <kbd>Tab</kbd> on the keyboard to indent all the lines at once.
+Deberás sangrar todas las líneas de código antes de la llamada a la función `imagen()`. Para hacer esto, resalta todas las líneas con el mouse y luego toca el <kbd>Tab</kbd> en el teclado para sangrar todas las líneas a la vez.
 
-The `image()` line doesn't need to be indented because you always want to draw the rocket.
+No es necesario sangrar la línea `imagen()` porque deseas dibujar el cohete siempre.
 
 --- code ---
 ---
@@ -96,24 +96,24 @@ language: python filename: main.py — draw_rocket() line_numbers: true line_num
 line_highlights: 16-31
 ---
 
-  global rocket_y, fuel, burn
+  global cohete_y, combustible, quemar
 
-  if fuel >= burn: #Still got fuel   
-rocket_y -= 1   
-fuel -= burn   
-print('Fuel left: ', fuel)   
+  if combustible >= quemar: #Todavía tengo combustible   
+cohete_y -= 1   
+combustible -= quemar   
+print('Combustible restante: ', combustible)   
 
-    no_stroke() #Turn off the stroke   
+    no_stroke() #Desactiva el trazo   
     
     for i in range(25):   
       fill(255, 255 - i*10, 0)   
-      ellipse(width/2, rocket_y + i, 8, 3)    
+      ellipse(width/2, cohete_y + i, 8, 3)    
     
     fill(200, 200, 200, 100)   
     for i in range(20):   
-      ellipse(width/2 + randint(-5, 5), rocket_y + randint(20, 50), randint(5, 10), randint(5, 10))
+      ellipse(width/2 + randint (-5, 5), cohete_y + randint (20, 50), randint (5, 10), randint (5, 10))
 
-  image(rocket, width/2, rocket_y, 64, 64)
+  imagen(cohete, width/2, cohete_y, 64, 64)
 
 --- /code ---
 
@@ -121,13 +121,13 @@ print('Fuel left: ', fuel)
 
 --- task ---
 
-**Test:** Run your program to check that the rocket stops when there is no fuel left.
+**Prueba:** Ejecuta tu programa para comprobar que el cohete se detiene cuando no queda combustible.
 
-![Image of a rocket in the middle of the screen with the statement 'Fuel left: 0'.](images/burn_empty.png){:width="300px"}
+![Imagen de un cohete en el centro de la pantalla con la declaración "Combustible restante: 0".](images/burn_empty.png){:width="300px"}
 
 --- /task ---
 
-This computer simulation isn't very accurate, but it's good enough for our animation.
+Esta simulación por computadora no es muy precisa, pero es lo suficientemente buena para nuestra animación.
 
 --- save ---
 
