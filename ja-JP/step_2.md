@@ -1,29 +1,29 @@
-## Set the scene
+## シーンを設定する
 
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">
-The animation needs a space backdrop with a planet to launch the rocket from.
+アニメーションには、ロケットが発射される惑星がある宇宙の背景が必要です。
 </div>
 <div>
 
-![A planet against a black background.](images/step_2.png){:width="300px"}
+![黒い背景の惑星。](images/step_2.png){:width="300px"}
 
 </div>
 </div>
 
 --- task ---
 
-Open the [project template](https://trinket.io/python/f2199f5a8c){:target="_blank"}.
+[プロジェクトテンプレート](https://trinket.io/python/f2199f5a8c){:target="_blank"}を開きます。
 
-If you have a Trinket account, you can click on the **Remix** button to save a copy to your `My Trinkets` library.
+Trinketアカウントをお持ちの場合は、**Remix**ボタンをクリックして、 `My Trinkets`ライブラリにコピーを保存できます。
 
 --- /task ---
 
-You will use a `screen_size` variable to set the size of the screen and in calculations. Variables defined outside functions are **global** so you can use them anywhere in your program.
+`screen_size` 変数を、画面のサイズを設定と、計算に使用します。 関数の外部で定義された変数は **グローバル** であるため、プログラム内のどこでも使用できます。
 
 --- task ---
 
-Find the comment `Setup global variables` and add a line of code to create your `screen_size` variable:
+`グローバル変数を設定する` コメントを見つけ、`screen_size`変数を作成するコードを追加してください。
 
 --- code ---
 ---
@@ -31,7 +31,7 @@ language: python filename: main.py line_numbers: true line_number_start: 7
 line_highlights: 8
 ---
 
-# Setup global variables
+# グローバル変数を設定する
 screen_size = 400
 
 --- /code ---
@@ -40,7 +40,7 @@ screen_size = 400
 
 --- task ---
 
-Use the `screen_size` variable to create a square 400 by 400 pixels:
+`screen_size` 変数を使用して、400 x 400ピクセルの正方形を作成します。
 
 --- code ---
 ---
@@ -49,7 +49,7 @@ line_highlights: 20
 ---
 
 def setup():   
-#Setup your animation here   
+#ここでアニメーションをセットアップします   
 size(screen_size, screen_size)
 
 
@@ -59,21 +59,21 @@ size(screen_size, screen_size)
 
 --- task ---
 
-The starter project has three different planet images and the moon provided for you. You can view these in the Trinket image library by selecting the **View and Add Images** button.
+スタータープロジェクトには、3つの異なる惑星と月の画像が用意されています。 これらは、[ **View and Add Images**] ボタンを選択することにより、Trinket画像ライブラリで表示できます。
 
-![A plus symbol, an upload symbol, and an image symbol. The image symbol is highlighted.](images/trinket_image.png)
+![プラス記号、アップロード記号、および画像記号。 画像記号が強調表示されます。](images/trinket_image.png)
 
-**Choose:** Decide which image you want to use and make a note of the filename. For example, `orange_planet.png`.
+**選択：** 使いたい画像を決め、ファイル名をメモします。 例えば、`orange_planet.png`などです。
 
 --- /task ---
 
-It's a good idea to load images in `setup()` so that they are ready when you need to use them and your animation will run quickly.
+`setup()` で画像をロードすることをお勧めします。画像を使用する必要があるときには準備ができており、アニメーションがすばやく実行されるからです。
 
 --- task ---
 
-The `image_mode(CENTER)` line says that you will be positioning images by giving the coordinates of the centre of the image (instead of the top left corner).
+`image_mode(CENTER)` の行は、（左上隅ではなく）画像の中心の座標を指定して画像を配置することを示しています。
 
-Also add code to the `setup()` function to load your chosen image into a `planet` global variable. The variable needs to be global so you can use it later when you draw the planet to the screen.
+また、 `setup()` 関数にコードを追加して、選択した画像を `planet` グローバル変数にロードします。 後で惑星を画面に描画するときに使用するので、変数はグローバルである必要があります。
 
 --- code ---
 ---
@@ -82,11 +82,11 @@ line_highlights: 21-23
 ---
 
 def setup():   
-#Setup your animation here   
+#ここでアニメーションをセットアップします   
 size(screen_size, screen_size)   
 image_mode(CENTER)   
 global planet   
-planet = load_image('planet.png') #Your chosen planet
+planet = load_image('planet.png') #あなたが選んだ惑星
 
 
 --- /code ---
@@ -95,13 +95,13 @@ planet = load_image('planet.png') #Your chosen planet
 
 --- task ---
 
-Define a `draw_background()` function, to draw the background, below the comment that tells you where it should go.
+背景を描画する`draw_background()` 関数をコメントの下のあるべき位置で定義します。
 
-Use `background(0)` to set the background colour to black and add an `image()` function to draw the planet. The `image()` function is laid out:
+`background(0)` を使用して背景色を黒に設定し、 `image()` 関数を追加して惑星を描画します。 `image()` 関数の構成は以下のとおりです：
 
-`image(image filename, x-coordinate, y-coordinate, image_width, image_height)`
+`image(画像ファイル名, x座標, y座標, 画像の幅, 画像の高さ)`
 
-The `p5` library sets global `width` and `height` variables based on the size of the screen. Use these in your code to position the planet with its centre half-way across (`width/2`) and at the bottom (`height`) of the screen.
+`p5` ライブラリは、画面のサイズに基づいて`幅` および `高さ` のグローバの変数を設定します。 これらをコードで使用して、惑星を画面の真ん中(`幅の半分`) の下部(`高さ`) の位置に配置します。
 
 --- code ---
 ---
@@ -109,21 +109,21 @@ language: python filename: main.py — draw_background() line_numbers: true line
 line_highlights: 15-17
 ---
 
-# The draw_background function goes here
+# draw_background関数はここにあります
 def draw_background():   
-background(0) #Short for background(0, 0, 0) — black    
-image(planet, width/2, height, 300, 300) #Draw the image
+background(0) #background(0, 0, 0) の省略形 - 黒    
+image(planet, width/2, height, 300, 300) #画像を描く
 
 
 --- /code ---
 
-Putting all the code for drawing the background into one function makes your code easier to understand.
+背景を描画するためのすべてのコードを1つの関数にまとめると、コードが理解しやすくなります。
 
 --- /task ---
 
 --- task ---
 
-To make the background appear, call `draw_background()` in `draw()`. This will cause the background to be re-drawn every time `draw()` is called, covering over any older drawing:
+背景を表示するには、 `draw()`から`draw_background()` を呼び出します。 これにより、 `draw()` が呼び出されるたびに背景が再描画され、古い描画が上書きされます。
 
 --- code ---
 ---
@@ -132,7 +132,7 @@ line_highlights: 30
 ---
 
 def draw():   
-#Things to do in every frame    
+#フレームごとにやること    
 draw_background()
 
 --- /code ---
@@ -141,7 +141,7 @@ draw_background()
 
 --- task ---
 
-**Test:** Run your code and check that it draws a black background with half a planet at the bottom.
+**テスト：** コードを実行し、下部に惑星が半分描かれた黒い背景が描画されることを確認します。
 
 --- /task ---
 
