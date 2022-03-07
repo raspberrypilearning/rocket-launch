@@ -1,8 +1,8 @@
-## Set the scene
+## جهز المشهد
 
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">
-The animation needs a space backdrop with a planet to launch the rocket from.
+تحتاج الرسوم المتحركة إلى خلفية فضائية مع كوكب لإطلاق الصاروخ منه.
 </div>
 <div>
 
@@ -15,15 +15,15 @@ The animation needs a space backdrop with a planet to launch the rocket from.
 
 Open the [project template](https://trinket.io/python/f2199f5a8c){:target="_blank"}.
 
-If you have a Trinket account, you can click on the **Remix** button to save a copy to your `My Trinkets` library.
+إذا كان لديك حساب Trinket ، فيمكنك النقر فوق الزر **Remix** لحفظ نسخة في مكتبة `My Trinkets`.
 
 --- /task ---
 
-You will use a `screen_size` variable to set the size of the screen and in calculations. Variables defined outside functions are **global** so you can use them anywhere in your program.
+سوف تستخدم متغير `screen_size` لتعيين حجم الشاشة وفي العمليات الحسابية. المتغيرات المعرفة دوالة خارجية هي **global** لذا يمكنك استخدامها في أي مكان في برنامجك.
 
 --- task ---
 
-Find the comment `Setup global variables` and add a line of code to create your `screen_size` variable:
+ابحث عن التعليق `Setup global variables` وأضف سطرًا من الشفرة البرمجية لإنشاء متغير `screen_size`:
 
 --- code ---
 ---
@@ -31,7 +31,7 @@ language: python filename: main.py line_numbers: true line_number_start: 7
 line_highlights: 8
 ---
 
-# Setup global variables
+# تهيئة المتغيرات العامة
 screen_size = 400
 
 --- /code ---
@@ -40,7 +40,7 @@ screen_size = 400
 
 --- task ---
 
-Use the `screen_size` variable to create a square 400 by 400 pixels:
+استخدم المتغير `screen_size` لإنشاء مربع 400 × 400 بكسل:
 
 --- code ---
 ---
@@ -59,21 +59,21 @@ size(screen_size, screen_size)
 
 --- task ---
 
-The starter project has three different planet images and the moon provided for you. You can view these in the Trinket image library by selecting the **View and Add Images** button.
+يحتوي مشروع البداية على ثلاث صور مختلفة للكوكب وقد تم توفير القمر لك. يمكنك عرض هذه في مكتبة صور Trinket عن طريق تحديد الزر **View and Add Images**.
 
-![A plus symbol, an upload symbol, and an image symbol. The image symbol is highlighted.](images/trinket_image.png)
+![رمز زائد ورمز تحميل ورمز صورة. يتم تمييز رمز الصورة.](images/trinket_image.png)
 
-**Choose:** Decide which image you want to use and make a note of the filename. For example, `orange_planet.png`.
+**Choose:** حدد الصورة التي تريد استخدامها وقم بتدوين اسم الملف. على سبيل المثال ، `orange_planet.png`.
 
 --- /task ---
 
-It's a good idea to load images in `setup()` so that they are ready when you need to use them and your animation will run quickly.
+إنها لفكرة جيدة أن تقوم بتحميل الصور في `setup ()` بحيث تكون جاهزة عندما تحتاج إلى استخدامها وسيتم تشغيل الرسوم المتحركة الخاصة بك بسرعة.
 
 --- task ---
 
-The `image_mode(CENTER)` line says that you will be positioning images by giving the coordinates of the centre of the image (instead of the top left corner).
+يشير السطر `image_mode (CENTER)` إلى أنك ستضع الصور عن طريق إعطاء إحداثيات مركز الصورة (بدلاً من الزاوية اليسرى العلوية).
 
-Also add code to the `setup()` function to load your chosen image into a `planet` global variable. The variable needs to be global so you can use it later when you draw the planet to the screen.
+أضف أيضًا الشفرة البرمجية إلى الدالة `setup ()` لتحميل الصورة التي اخترتها في متغير عام `planet`. يجب أن يكون المتغير عامًا حتى تتمكن من استخدامه لاحقًا عند رسم الكوكب على الشاشة.
 
 --- code ---
 ---
@@ -95,13 +95,13 @@ planet = load_image('planet.png') #Your chosen planet
 
 --- task ---
 
-Define a `draw_background()` function, to draw the background, below the comment that tells you where it should go.
+حدد دالة `draw_background()` ، لرسم الخلفية ، أسفل التعليق الذي يخبرك إلى أين يجب أن تذهب.
 
-Use `background(0)` to set the background colour to black and add an `image()` function to draw the planet. The `image()` function is laid out:
+استخدم `background(0)` لتعيين لون الخلفية إلى الأسود وإضافة دالة `image()`لرسم الكوكب. تم وضع الدالة `image ()`:
 
 `image(image filename, x-coordinate, y-coordinate, image_width, image_height)`
 
-The `p5` library sets global `width` and `height` variables based on the size of the screen. Use these in your code to position the planet with its centre half-way across (`width/2`) and at the bottom (`height`) of the screen.
+The `p5` library sets global `width` and `height` variables based on the size of the screen. تحدد مكتبة <0>p5</0> المتغيرات العامة،<0>width</0> و <0>height</0> متغيرات عامة بناءً على حجم الشاشة. استخدموا الدوال التاليتان في الشفرة البرمجية الخاصة بك لوضع الكوكب في منتصف الشاشة(`width/2`) وفي الجزء السفلي من الشاشة (`height`).
 
 --- code ---
 ---
@@ -109,7 +109,7 @@ language: python filename: main.py — draw_background() line_numbers: true line
 line_highlights: 15-17
 ---
 
-# The draw_background function goes here
+# يتم وضع دالة draw_background هنا
 def draw_background():   
 background(0) #Short for background(0, 0, 0) — black    
 image(planet, width/2, height, 300, 300) #Draw the image
@@ -117,13 +117,13 @@ image(planet, width/2, height, 300, 300) #Draw the image
 
 --- /code ---
 
-Putting all the code for drawing the background into one function makes your code easier to understand.
+يؤدي وضع كل الشفرة البرمجية لرسم الخلفية في دالة واحدة إلى تسهيل فهم الشفرة البرمجية الخاص بك.
 
 --- /task ---
 
 --- task ---
 
-To make the background appear, call `draw_background()` in `draw()`. This will cause the background to be re-drawn every time `draw()` is called, covering over any older drawing:
+لإظهار الخلفية ،call `draw_background()` in `draw()`. سيؤدي هذا إلى إعادة رسم الخلفية في كل مرة يتم استدعاء `draw ()` ، بحيث تغطي أي رسم قديم:
 
 --- code ---
 ---
@@ -141,7 +141,7 @@ draw_background()
 
 --- task ---
 
-**Test:** Run your code and check that it draws a black background with half a planet at the bottom.
+**اختبار:** قوموا بتشغيل الشفرة البرمجية الخاصة بكم وتحققوا من أنه يرسم خلفية سوداء مع نصف كوكب في الأسفل.
 
 --- /task ---
 
