@@ -1,28 +1,28 @@
-## Introduction
+## Inleiding
 
-Make an animation to propel a satellite into orbit — by hitching a ride on a rocket! Your animation will create cool graphic effects and simulate the best amount of fuel to give the rocket.
+Maak een animatie om een satelliet in een baan om de aarde te brengen — door mee te liften op een raket! Je animatie zal coole grafische effecten maken en de beste hoeveelheid brandstof simuleren om aan de raket mee te geven.
 
-![Side-by-side screens showing one green rocket in orbit and one red rocket that has failed to reach orbit.](images/showcase.png)
+![Schermen naast elkaar met een groene raket in een baan om de aarde en een rode raket die de baan niet heeft bereikt.](images/showcase.png)
 
 <p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;">
-<span style="color: #0faeb0">**Computer simulations**</span> are used to calculate what will happen when we send a rocket into space. Running simulations and making plans on a computer reduces the risk of expensive or dangerous problems in space.
+<span style="color: #0faeb0">**Computersimulaties**</span> worden gebruikt om te berekenen wat er zal gebeuren als we een raket de ruimte in sturen. Simulaties uitvoeren en plannen maken op een computer verkleint de kans op dure of gevaarlijke problemen in de ruimte.
 </p>
 
-You will:
-+ Use **images** in your animations
-+ Use `for` loops to repeat actions
-+ Join conditions with `and`
+Je gaat:
++ **Afbeeldingen** gebruiken in je animaties
++ `For` lussen gebruiken om acties te herhalen
++ Voorwaarden samenvoegen met `and`
 
 --- no-print ---
 
 --- task ---
 
-### Try it
+### Probeer het uit
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 175px; flex-grow: 1">  
-You need to supply the rocket with enough fuel to reach the satellite orbit. Try a small amount (around 10,000kg) and a very large amount (around 50,000kg) to see what happens. 
+Je moet de raket van voldoende brandstof voorzien om de omloopbaan te bereiken. Probeer een kleine hoeveelheid (ongeveer 10.000 kg) en een zeer grote hoeveelheid (ongeveer 50.000 kg) om te zien wat er gebeurt. 
 
-How much fuel is just enough without too much left over?
+Hoeveel brandstof is precies genoeg zonder al te veel over te houden?
 </div>
 <iframe src="https://trinket.io/embed/python/622b4dd113?outputOnly=true&runOption=run&start=result" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
 </div>
@@ -33,10 +33,10 @@ How much fuel is just enough without too much left over?
 
 --- print-only ---
 
-![Completed project.](images/showcase.png)
+![Voltooid project.](images/showcase.png)
 
 --- /print-only ---
 
-<p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;"> ![Dorothy Vaughan](images/dorothy_vaughan.jpeg){:width="300px"} Dorothy Vaughan made important contributions to early spaceflight. Seeing that the future would use electronic computers, she taught herself, and her team, how to code.
+<p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;"> ![Dorothy Vaughan](images/dorothy_vaughan.jpeg){:width="300px"} Dorothy Vaughan heeft belangrijke bijdragen geleverd aan vroege ruimtevluchten. Toen ze zag dat de toekomst elektronische computers zou gebruiken, leerde ze zichzelf en haar team coderen.
 
-The film *Hidden Figures* tells the story of how Dorothy and other Black women played a key role in the success of the US space program. 
+De film *Hidden Figures* vertelt het verhaal van hoe Dorothy en andere zwarte vrouwen een sleutelrol speelden in het succes van het Amerikaanse ruimteprogramma. 
