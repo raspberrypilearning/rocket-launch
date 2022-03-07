@@ -1,10 +1,10 @@
 
 --- question ---
 ---
-legend: Question 2 of 3
+السؤال 2 من 3
 ---
 
-A project has this `setup` code to load a planet image and say that images should be positioned at their centre:
+يحتوي المشروع على هذه الشفرة البرمجية `setup` لتحميل صورة كوكب ولقول إنه يجب وضع الصور في مركزها:
 
 --- code ---
 ---
@@ -19,9 +19,9 @@ planet = load_image('planet.png')
 
 --- /code ---
 
-Coordinates start from (0, 0) in the top-left corner. In the project you drew planet and rocket images using the `image(image_file, x-coord, y-coord, x-width, y-width)` function.
+تبدأ الإحداثيات من (0 ، 0) في الزاوية اليسرى العلوية. في المشروع ، قمت برسم صور للكوكب والصاروخ باستخدام الدالة`image(image_file, x-coord, y-coord, x-width, y-width)`.
 
-Where will this code position the planet image?
+أين ستضع هذه الشفرة البرمجية صورة الكوكب؟
 
 --- code ---
 ---
@@ -34,35 +34,35 @@ image(planet, 300, 100, 128, 128)
 
 --- choices ---
 
-- ( ) ![A planet image positioned horizontally off at the right of the screen and vertically in the middle.](images/planet400200.png)
+- ( ) ![صورة كوكب موضوعة أفقيًا على يمين الشاشة وعموديًا في المنتصف.](images/planet400200.png)
 
   --- feedback ---
 
-The second and third inputs to the `image()` function are the `x` and `y` coordinates for the centre of the image. This planet has the coordinates `(400, 200)`.
+المدخلان الثاني والثالث لدالة `image ()` هما إحداثيات `x` و `y` لمركز الصورة. إحداثيات هذا الكوكب هي `(400, 200)`.
 
   --- /feedback ---
 
-- ( ) ![A planet image positioned in the middle of the bottom-left quadrant.](images/planet100300.png)
+- ( ) ![صورة كوكب موضوعة في منتصف الربع السفلي الأيسر.](images/planet100300.png)
 
   --- feedback ---
 
-The second and third inputs to the `image()` function are the `x` and `y` coordinates for the centre of the image. This planet has the coordinates `(100, 300)`.
+المدخلان الثاني والثالث لدالة `image ()` هما إحداثيات `x` و `y` لمركز الصورة. إحداثيات هذا الكوكب هي `(100, 300)`.
 
   --- /feedback ---
 
-- (x) ![A planet image positioned in the middle of the top-right quadrant.](images/planet300100.png)
+- (x) ![صورة كوكب موضوعة في منتصف الربع العلوي الأيمن.](images/planet300100.png)
 
   --- feedback ---
 
-Correct! The second and third inputs to the `image()` function are the `x` and `y` coordinates for the centre of the image. This image has the coordinates (300, 100) so it is 300 (out of 400) pixels from the left for the `x` coordinate and 100 (out of 400) pixels down from the top.
+صحيح! المدخلان الثاني والثالث لدالة `image ()` هما إحداثيات `x` و `y` لمركز الصورة. هذه الصورة لها إحداثيات(300, 100) لذا فهي 300 (من 400) بكسل من اليسار للإحداثيات `×` و 100 (من 400) بكسل.
 
   --- /feedback ---
 
-- () ![A planet image positioned in the top-left quadrant.](images/planet128128.png)
+- () ![صورة كوكب موضوعة في الربع العلوي الأيسر.](images/planet128128.png)
 
   --- feedback ---
 
-The fourth and fifth inputs give the size of the image. The second and third inputs to the `image()` function are the `x` and `y` coordinates for the centre of the image. This planet has the coordinates `(128, 128)`.
+المدخلات الرابعة والخامسة تعطي حجم الصورة. المدخلان الثاني والثالث لدالة `image ()` هما إحداثيات `x` و `y` لمركز الصورة. إحداثيات هذا الكوكب هي `(128, 128)`.
 
   --- /feedback ---
 
