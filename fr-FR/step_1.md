@@ -1,28 +1,28 @@
 ## Introduction
 
-Make an animation to propel a satellite into orbit — by hitching a ride on a rocket! Your animation will create cool graphic effects and simulate the best amount of fuel to give the rocket.
+Crée une animation pour propulser un satellite en orbite - en utilisant une fusée ! Ton animation créera des effets graphiques sympas et simulera la meilleure quantité de carburant à donner à la fusée.
 
-![Side-by-side screens showing one green rocket in orbit and one red rocket that has failed to reach orbit.](images/showcase.png)
+![Écrans côte à côte montrant une fusée verte en orbite et une fusée rouge qui n'a pas réussi à atteindre l'orbite.](images/showcase.png)
 
 <p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;">
-<span style="color: #0faeb0">**Computer simulations**</span> are used to calculate what will happen when we send a rocket into space. Running simulations and making plans on a computer reduces the risk of expensive or dangerous problems in space.
+<span style="color: #0faeb0">**Des simulations informatiques**</span> sont utilisées pour calculer ce qui se passera lorsque nous enverrons une fusée dans l'espace. L'exécution de simulations et l'élaboration de plans sur ordinateur réduisent le risque de problèmes coûteux ou dangereux dans l'espace.
 </p>
 
-You will:
-+ Use **images** in your animations
-+ Use `for` loops to repeat actions
-+ Join conditions with `and`
+Tu vas devoir :
++ Utiliser **images** dans tes animations
++ Utiliser des boucles `for` pour répéter les actions
++ Joindre les conditions avec `and`
 
 --- no-print ---
 
 --- task ---
 
-### Try it
+### Essaie-le
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 175px; flex-grow: 1">  
-You need to supply the rocket with enough fuel to reach the satellite orbit. Try a small amount (around 10,000kg) and a very large amount (around 50,000kg) to see what happens. 
+Tu dois fournir suffisamment de carburant à la fusée pour atteindre l'orbite du satellite. Essaye une petite quantité (environ 10 000 kg) et une très grande quantité (environ 50 000 kg) pour voir ce qui se passe. 
 
-How much fuel is just enough without too much left over?
+Quelle quantité de carburant est juste suffisante sans qu'il en reste trop ?
 </div>
 <iframe src="https://trinket.io/embed/python/622b4dd113?outputOnly=true&runOption=run&start=result" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
 </div>
@@ -33,10 +33,10 @@ How much fuel is just enough without too much left over?
 
 --- print-only ---
 
-![Completed project.](images/showcase.png)
+![Projet terminé.](images/showcase.png)
 
 --- /print-only ---
 
-<p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;"> ![Dorothy Vaughan](images/dorothy_vaughan.jpeg){:width="300px"} Dorothy Vaughan made important contributions to early spaceflight. Seeing that the future would use electronic computers, she taught herself, and her team, how to code.
+<p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;"> ![Dorothée Vaughan](images/dorothy_vaughan.jpeg){:width="300px"} Dorothy Vaughan a apporté d'importantes contributions aux premiers vols spatiaux. Voyant que l'avenir utiliserait des ordinateurs électroniques, elle a appris, ainsi qu'à son équipe, à coder.
 
-The film *Hidden Figures* tells the story of how Dorothy and other Black women played a key role in the success of the US space program. 
+Le film *Les Figures de l'ombre* raconte comment Dorothy et d'autres femmes noires ont joué un rôle clé dans le succès du programme spatial américain. 
