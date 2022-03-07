@@ -1,10 +1,10 @@
 
 --- question ---
 ---
-legend: Question 2 of 3
+legend: Ερώτηση 2 από 3
 ---
 
-A project has this `setup` code to load a planet image and say that images should be positioned at their centre:
+Ένα έργο έχει αυτόν τον κώδικα`αρχικοποίησης` για να φορτωθεί η εικόνα ενός πλανήτη και για να υποδείξει ότι οι εικόνες πρέπει να τοποθετηθούν στο κέντρο τους:
 
 --- code ---
 ---
@@ -19,9 +19,9 @@ planet = load_image('planet.png')
 
 --- /code ---
 
-Coordinates start from (0, 0) in the top-left corner. In the project you drew planet and rocket images using the `image(image_file, x-coord, y-coord, x-width, y-width)` function.
+Οι συντεταγμένες ξεκινούν από (0, 0) που είναι στην επάνω αριστερή γωνία. Στο έργο σχεδίασες εικόνες πλανήτη και πυραύλου χρησιμοποιώντας τη συνάρτηση `image(image_file, x-coord, y-coord, x-width, y-width)`.
 
-Where will this code position the planet image?
+Πού θα τοποθετήσει αυτός ο κώδικας την εικόνα του πλανήτη;
 
 --- code ---
 ---
@@ -34,35 +34,35 @@ image(planet, 300, 100, 128, 128)
 
 --- choices ---
 
-- ( ) ![A planet image positioned horizontally off at the right of the screen and vertically in the middle.](images/planet400200.png)
+- ( ) ![Μια εικόνα πλανήτη τοποθετημένη οριζόντια στα δεξιά της οθόνης και κάθετα στη μέση.](images/planet400200.png)
 
   --- feedback ---
 
-The second and third inputs to the `image()` function are the `x` and `y` coordinates for the centre of the image. This planet has the coordinates `(400, 200)`.
+Το δεύτερο και τρίτο όρισμα στη συνάρτηση `image()` είναι οι συντεταγμένες `x` και `y` για το κέντρο της εικόνας. Αυτός ο πλανήτης έχει τις συντεταγμένες `(400, 200)`.
 
   --- /feedback ---
 
-- ( ) ![A planet image positioned in the middle of the bottom-left quadrant.](images/planet100300.png)
+- ( ) ![Μια εικόνα πλανήτη τοποθετημένη στη μέση του κάτω αριστερού τεταρτημορίου.](images/planet100300.png)
 
   --- feedback ---
 
-The second and third inputs to the `image()` function are the `x` and `y` coordinates for the centre of the image. This planet has the coordinates `(100, 300)`.
+Το δεύτερο και τρίτο όρισμα στη συνάρτηση `image()` είναι οι συντεταγμένες `x` και `y` για το κέντρο της εικόνας. Αυτός ο πλανήτης έχει συντεταγμένες `(100, 300)`.
 
   --- /feedback ---
 
-- (x) ![A planet image positioned in the middle of the top-right quadrant.](images/planet300100.png)
+- (x) ![Μια εικόνα πλανήτη τοποθετημένη στη μέση του πάνω δεξιά τεταρτημορίου.](images/planet300100.png)
 
   --- feedback ---
 
-Correct! The second and third inputs to the `image()` function are the `x` and `y` coordinates for the centre of the image. This image has the coordinates (300, 100) so it is 300 (out of 400) pixels from the left for the `x` coordinate and 100 (out of 400) pixels down from the top.
+Σωστό! Το δεύτερο και τρίτο όρισμα στη συνάρτηση `image()` είναι οι συντεταγμένες `x` και `y` για το κέντρο της εικόνας. Αυτή η εικόνα έχει συντεταγμένες (300, 100), επομένως είναι 300 (από 400) εικονοστοιχεία από τα αριστερά για τις συντεταγμένες `x` και 100 (από 400) εικονοστοιχεία από την κορυφή.
 
   --- /feedback ---
 
-- () ![A planet image positioned in the top-left quadrant.](images/planet128128.png)
+- () ![Μια εικόνα πλανήτη τοποθετημένη στο επάνω αριστερό τεταρτημόριο.](images/planet128128.png)
 
   --- feedback ---
 
-The fourth and fifth inputs give the size of the image. The second and third inputs to the `image()` function are the `x` and `y` coordinates for the centre of the image. This planet has the coordinates `(128, 128)`.
+Το τέταρτο και η πέμπτο όρισμα δίνουν το μέγεθος της εικόνας. Το δεύτερο και τρίτο όρισμα στη συνάρτηση `image()` είναι οι συντεταγμένες `x` και `y` για το κέντρο της εικόνας. Αυτός ο πλανήτης έχει συντεταγμένες `(128, 128)`.
 
   --- /feedback ---
 
