@@ -1,9 +1,9 @@
 --- question ---
 ---
-legend: Question 3 of 3
+legend : Question 3 sur 3
 ---
 
-This code uses `tint()` to colour a rocket in a game to show the player how they are doing.
+Ce code utilise `tint()` pour colorer une fusée dans un jeu afin de montrer au joueur comment il va.
 
 --- code ---
 ---
@@ -11,59 +11,59 @@ language: python
 ---
 
 if points >= 100:    
-tint(0, 255, 0) #Green   
-elif points < 100 and lives == 1:   
-tint(255, 200, 0) #Amber    
-elif points < 100 and lives == 0:     
-tint(255, 0, 0) #Red     
+tint(0, 255, 0) #Vert   
+elif points < 100 and vies == 1:   
+tint(255, 200, 0) #Orange    
+elif points < 100 and vies == 0:     
+tint(255, 0, 0) #Rouge     
 else:      
 no_tint()
 
-image(rocket, width/2, height/2, 64, 64)
+image(fusee, width/2, height/2, 64, 64)
 
 --- /code ---
 
-If the `points` variable has the value `99` and the `lives` variable has the value `1`, what will the rocket look like?
+Si la variable `points` a la valeur `99` et la variable `vies` a la valeur `1`, à quoi ressemblera la fusée ?
 
 --- choices ---
 
 - (x)
 
-![A rocket image with amber tint.](images/rocket_amber.png) <div style="text-align: center;">Amber
+![Une image de fusée avec une teinte orange.](images/rocket_amber.png) <div style="text-align: center;">Orange
 
  --- feedback ---
 
- Correct! The player has less than 100 points and only 1 life left. The rocket is coloured amber to left them know that this is their last chance to win!
+ Correct ! Le joueur a moins de 100 points et seulement 1 vie restante. La fusée est de couleur orange pour leur faire savoir que c'est leur dernière chance de gagner !
 
  --- /feedback ---
 
 - ( )
 
-![A rocket image with no tint](images/rocket_original.png) <div style="text-align: center;">No tint
+![Une image de fusée sans teinte](images/rocket_original.png) <div style="text-align: center;">Pas de teinte
 
  --- feedback ---
 
- Not quite, the rocket has a tint as one of the statements is true.
+ Pas tout à fait, la fusée a une teinte car l'une des affirmations est vraie.
 
  --- /feedback ---
 
 - ( )
 
-![A rocket image with green tint](images/rocket_green.png) <div style="text-align: center;">Green
+![Une image de fusée avec une teinte verte](images/rocket_green.png) <div style="text-align: center;">Vert
 
  --- feedback ---
 
- Not quite, the player would need `>= 100` points to win and turn their rocket green. They have `99`, which is not enough. Check the conditions carefully.
+ Pas tout à fait, le joueur aurait besoin de `>= 100` points pour gagner et passer la fusée au vert. Ils ont `99`, ce qui n'est pas suffisant. Vérifie bien les conditions.
 
  --- /feedback ---
 
 - ( )
 
-![A rocket image with red tint](images/rocket_red.png) <div style="text-align: center;">Red
+![Une image de fusée avec une teinte rouge](images/rocket_red.png) <div style="text-align: center;">Rouge
 
  --- feedback ---
 
- Not quite, the player has `< 100` points but lives does not equal `0`. Check the conditions carefully.
+ Pas tout à fait, le joueur a `< 100` points mais la vie n'est pas égale à `0`. Vérifie bien les conditions.
 
  --- /feedback ---
 
