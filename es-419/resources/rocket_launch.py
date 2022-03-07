@@ -1,72 +1,72 @@
 #!/bin/python3
 
-# Import library code
+# Importar código de biblioteca
 from p5 import *
 from random import randint
 
-# Setup global variables
-screen_size = 400
-rocket_y = screen_size # start at the bottom
-burn = 100 # how much fuel is burned in each frame
-orbit_radius = 250
-orbit_y = screen_size - orbit_radius
+# Configurar variables globales
+tamano_pantalla = 400
+cohete_y = tamano_pantalla # comienza en la parte inferior
+quemar = 100 # cuánto combustible se quema en cada cuadro
+orbita_radio = 250
+orbita_y = tamano_pantalla - orbita_radio
 
-# The draw_rocket function goes here
-def draw_rocket():
+# La función dibujar_cohete va aquí
+def dibujar_cohete():
 
-  global rocket_y, fuel, burn
+  global cohete_y, combustible, quemar
   
-  if fuel >= burn and rocket_y > orbit_y: # still flying
-    rocket_y -= 1 # move the rocket
-    fuel -= burn # burn fuel
-    print('Fuel left: ', fuel)
+  if combustible >= quemar and cohete_y > orbita_y: # sigue volando
+    cohete_y -= 1 # mueve el cohete
+    combustible -= quemar # quemar combustible
+    print('Combustible restante: ', combustible)
   
-    no_stroke() # Turn off the stroke
+    no_stroke() # Desactiva el trazo
   
-    for i in range(25): # draw 25 burning exhaust ellipses
-      fill(255, 255 - i*10, 0) # yellow
-      ellipse(width/2, rocket_y + i, 8, 3) # i increases each time the loop repeats
+    for i in range(25): # dibujar 25 elipses de escape en llamas
+      fill(255, 255 - i*10, 0) # amarillo
+      ellipse(width/2, cohete_y + i, 8, 3) # i aumenta cada vez que se repite el bucle
     
-    fill(200, 200, 200, 100) # transparent grey
-    for i in range(20): # draw 20 random smoke ellipses
-      ellipse(width/2 + randint(-5, 5), rocket_y + randint(20, 50), randint(5, 10), randint(5, 10))
+    fill(200, 200, 200, 100) # gris transparente
+    for i in range(20): # dibujar 20 elipses de humo al azar
+      ellipse(width/2 + randint(-5, 5), cohete_y + randint(20, 50), randint(5, 10), randint(5, 10))
   
-  if fuel < burn and rocket_y > orbit_y: # No more fuel and not in orbit
-    tint(255, 0, 0) # Failure
-  elif fuel < 1000 and rocket_y <= orbit_y:
-    tint(0, 255, 0) # Success
-  elif fuel >= 1000 and rocket_y <= orbit_y: 
-    tint(255, 200, 0) # Too much fuel
+  if combustible < quemar and cohete_y > orbita_y: # No más combustible y no en órbita
+    tint(255, 0, 0) # Fallo
+  elif combustible < 1000 and cohete_y <= orbita_y:
+    tint(0, 255, 0) # Éxito
+  elif combustible >= 1000 and cohete_y <= orbita_y: 
+    tint(255, 200, 0) # Demasiado combustible
   
-  image(rocket, width/2, rocket_y, 64, 64)
+  imagen(cohete, width/2, cohete_y, 64, 64)
   no_tint()
   
 
-# The draw_background function goes here
-def draw_background():
-  background(0) # short for background(0, 0, 0) - black 
-  image(planet, width/2, height, 300, 300) # draw the image
+# La función dibujar_fondo va aquí
+def dibujar_fondo():
+  fondo(0) # abreviatura de fondo (0, 0, 0) - negro 
+  imagen(planeta, width/2, height, 300, 300) # dibujar la imagen
   
-  no_fill() # Turn off any fill
-  stroke(255) # Set a white stroke
+  no_fill() # Desactiva cualquier relleno
+  stroke(255) # Establecer un trazo blanco
   stroke_weight(2)
-  ellipse(width/2, height, orbit_radius*2, orbit_radius*2)
+  ellipse(width/2, height, orbita_radio*2, orbita_radio*2)
   
 
 def setup():
-  # Setup your animation here
-  size(screen_size, screen_size)
+  # Configura tu animación aquí
+  tamano(tamano_pantalla, tamano_pantalla)
   image_mode(CENTER)
-  global planet, rocket
-  planet = load_image('planet.png') # your chosen planet
-  rocket = load_image('rocket.png')
+  global planeta, cohete
+  planeta = load_image('planet.png') # tu planeta elegido
+  cohete = load_image('cohete.png')
 
 
-def draw():
-  # Things to do in every frame
-  draw_background()  
-  draw_rocket()
+def dibujar():
+  # Cosas que hacer en cada cuadro
+  dibujar_fondo()  
+  dibujar_cohete()
   
 
-fuel = int(input('How many kilograms of fuel do you want to use?'))
+combustible = int(input('¿Cuántos kilogramos de combustible quieres usar?'))
 run()
