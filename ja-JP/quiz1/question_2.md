@@ -1,10 +1,10 @@
 
 --- question ---
 ---
-legend: Question 2 of 3
+legend: 質問2/3
 ---
 
-A project has this `setup` code to load a planet image and say that images should be positioned at their centre:
+あるプロジェクトの`セットアップ` コードです。惑星の画像をロードし、画像を中央に配置する必要があります。
 
 --- code ---
 ---
@@ -19,9 +19,9 @@ planet = load_image('planet.png')
 
 --- /code ---
 
-Coordinates start from (0, 0) in the top-left corner. In the project you drew planet and rocket images using the `image(image_file, x-coord, y-coord, x-width, y-width)` function.
+座標は左上隅の(0, 0) から始まります。 このプロジェクトでは、 `image(image_file, x-coord, y-coord, x-width, y-width) ` 関数を使用して惑星とロケットの画像を描画しました。
 
-Where will this code position the planet image?
+このコードは惑星の画像をどこに配置しますか？
 
 --- code ---
 ---
@@ -34,35 +34,35 @@ image(planet, 300, 100, 128, 128)
 
 --- choices ---
 
-- ( ) ![A planet image positioned horizontally off at the right of the screen and vertically in the middle.](images/planet400200.png)
+- ( ) ![水平方向に画面の右側に外れ、垂直方向には中央に配置された惑星の画像。](images/planet400200.png)
 
   --- feedback ---
 
-The second and third inputs to the `image()` function are the `x` and `y` coordinates for the centre of the image. This planet has the coordinates `(400, 200)`.
+`image()` 関数への2番目と3番目の入力は、画像の中心の `x`および`y`の座標です。 この惑星の座標は `(400, 200)`です。
 
   --- /feedback ---
 
-- ( ) ![A planet image positioned in the middle of the bottom-left quadrant.](images/planet100300.png)
+- ( ) ![左下の象限の中央に配置された惑星の画像。](images/planet100300.png)
 
   --- feedback ---
 
-The second and third inputs to the `image()` function are the `x` and `y` coordinates for the centre of the image. This planet has the coordinates `(100, 300)`.
+`image()` 関数への2番目と3番目の入力は、画像の中心の `x`および`y`の座標です。 この惑星の座標は `(100, 300)`です。
 
   --- /feedback ---
 
-- (x) ![A planet image positioned in the middle of the top-right quadrant.](images/planet300100.png)
+- (x) ![右上の象限の中央に配置された惑星の画像。](images/planet300100.png)
 
   --- feedback ---
 
-Correct! The second and third inputs to the `image()` function are the `x` and `y` coordinates for the centre of the image. This image has the coordinates (300, 100) so it is 300 (out of 400) pixels from the left for the `x` coordinate and 100 (out of 400) pixels down from the top.
+正解！ `image()` 関数への2番目と3番目の入力は、画像の中心の `x`および`y`の座標です。 この画像の座標は(300, 100) であるため、 `x` 座標で左から(400の内の) 300ピクセル、上から(400の内の) 100ピクセル下になります。
 
   --- /feedback ---
 
-- () ![A planet image positioned in the top-left quadrant.](images/planet128128.png)
+- () ![左上の象限に配置された惑星の画像。](images/planet128128.png)
 
   --- feedback ---
 
-The fourth and fifth inputs give the size of the image. The second and third inputs to the `image()` function are the `x` and `y` coordinates for the centre of the image. This planet has the coordinates `(128, 128)`.
+4番目と5番目の入力は、画像のサイズを示します。 `image()` 関数への2番目と3番目の入力は、画像の中心の `x`および`y`の座標です。 この惑星の座標は `(128, 128)`です。
 
   --- /feedback ---
 
