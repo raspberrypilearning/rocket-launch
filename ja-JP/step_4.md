@@ -1,32 +1,32 @@
-## Exhaust effects
+## 排気効果
 
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">
 
-The rocket will look more realistic with some special effects to simulate the exhaust trail. 
+ロケットは、排気ガスの軌跡をシミュレートする特殊効果を使うと、よりリアルに見えます。 
 
-You can create cool effects by using a `for` loop to draw lots of shapes in each frame.
+`for`ループを使用してフレームごとにたくさんの図形を描くことで、クールな効果を生み出すことができます。
 
 </div>
 <div>
 
-![The rocket mid flight with an exhaust trail.](images/flying_rocket.gif){:width="300px"}
+![排気ガスの軌跡を出しながら飛ぶロケット](images/flying_rocket.gif){:width="300px"}
 
 </div>
 </div>
 
 <p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;">
-Coding is used to make <span style="color: #0faeb0">**graphic effects**</span> for movies and games. It's much quicker to write code than to draw each frame of an animation individually. </p>
+コーディングは、映画やゲームの <span style="color: #0faeb0">**グラフィック効果**</span> を作成するために使用されます。 アニメーションの各フレームを個別に描画するよりも、コードを作成する方がはるかに速いです。 </p>
 
-Drawing lots of yellow ellipses at different `y` positions creates an exhaust trail with a round bottom.
+さまざまな `y` 座標の位置に黄色の楕円をたくさん描くと、底が丸い排気ガスの軌跡ができます。
 
 --- task ---
 
-A `for` loop repeats a piece of code once for every item it is given. To run the code in a `for` loop a certain number of times, you can use the `range()` function. For example, `range(5)` creates a sequence of five numbers starting from 0, so [0, 1, 2, 3, 4].
+`for` ループは、指定されたアイテムごとに1つのコードを1回ずつ繰り返します。 `for` ループでコードを特定の回数実行するには、 `range()` 関数が使えます。 たとえば、 `range(5)` は、0から始まる5つの数値を順に並べたものを作るので、[0, 1, 2, 3, 4] となります。
 
-Each time the `for` loop repeats, it sets a variable to the current item so that you can use it in the loop.
+`for` ループが繰り返されるたびに、変数にその時々の数値がセットされ、ループ内で使用できます。
 
-Update your `draw_rocket()` function to include a `for` loop that repeats the drawing of `25` exhaust ellipses. The **loop variable** `i` gets added to `rocket_y` to draw each ellipse further below the rocket.
+`draw_rocket()` 関数を更新して、 排気ガスに見立てた楕円の描画を`25` 回繰り返す `for`ループを追加しましょう。 **ループ変数**`i` が `rocket_y`に追加され、各楕円がロケットのさらに下に描画されます。
 
 --- code ---
 ---
@@ -39,11 +39,11 @@ def draw_rocket():
   global rocket_y   
 rocket_y -= 1
 
-  no_stroke() #Turn off the stroke
+  no_stroke() # 境界線をなしにする
 
-  for i in range(25): #Draw 25 burning exhaust ellipses   
-fill(255, 255, 0) #Yellow   
-ellipse(width/2, rocket_y + i, 8, 3) #i increases each time the loop repeats
+  for i in range(25): #燃焼廃棄に見立てた楕円を 25 個描画   
+fill(255, 255, 0) #黄色   
+ellipse(width/2, rocket_y + i, 8, 3) #i はループが繰り返されるたびに増加
 
   image(rocket, width/2, rocket_y, 64, 64)
 
@@ -54,17 +54,17 @@ ellipse(width/2, rocket_y + i, 8, 3) #i increases each time the loop repeats
 
 --- task ---
 
-**Test:** Run your code to check the rocket has a new exhaust trail.
+**テスト：** コードを実行して、ロケットに新しい排気ガスの軌跡があることを確認します。
 
-![A close-up of the rocket with an exhaust trail.](images/rocket_exhaust.png){:width="300px"}
+![排気ガスの軌跡があるロケットのクローズアップ。](images/rocket_exhaust.png){:width="300px"}
 
 --- /task ---
 
-The `i` variable can also be used to create a colour gradient with less green in each ellipse that gets drawn.
+`i` 変数を使用して、緑の割合が描画のたびに少なくなって色が変化する楕円を描くこともできます。
 
 --- task ---
 
-Change the call to `fill()` to set the amount of green to `255 - i*10` so that the first ellipse has equal amounts of red and green and the last ellipse has very little green.
+`fill()`の呼び出しをに変更して、緑の量を `255 - i*10` に設定すると、最初は赤と緑の量が等しく、最後に緑が非常に少なくなるようにできます。
 
 --- code ---
 ---
@@ -73,7 +73,7 @@ line_highlights: 20
 ---
 
   for i in range(25):   
-fill(255, 255 - i * 10, 0) #Reduce the amount of green    
+fill(255, 255 - i * 10, 0) #緑の量を減らす    
 ellipse(width/2, rocket_y + i, 8, 3)
 
 --- /code ---
@@ -82,19 +82,19 @@ ellipse(width/2, rocket_y + i, 8, 3)
 
 --- task ---
 
-**Test:** Check that you get a trail of ellipses gradually changing from yellow to red.
+**テスト：** 楕円でできた軌跡が黄色から赤に徐々に変化することを確認します。
 
 --- /task ---
 
-The smoke exhaust trail is created by drawing lots of slightly transparent grey ellipses at different positions in each frame.
+各フレームのさまざまな位置にわずかに透明な灰色の楕円をたくさん描くことによって排気の煙が作成されます。
 
-![A slow animation of the smoke effect.](images/rocket_smoke.gif)
+![煙の効果の遅いアニメーション。](images/rocket_smoke.gif)
 
 --- task ---
 
-This time the `fill()` is outside the loop as the colour is the same for each smoke ellipse. The fourth input to `fill()` is the opacity, a low opacity value makes the colour more transparent so you can see the shapes underneath.
+今回は、排煙に見立てた楕円の色は変えないので、 `fill()` はループの外側にあります。 `fill()` への4番目の入力は不透明度です。不透明度の値を低くすると、色がより透明になり、図形の下にあるものを見ることができます。
 
-In each frame of the animation, 20 ellipses of random sizes will be drawn at random positions.
+アニメーションのフレームごとに、ランダムなサイズの20個の楕円がランダムな位置に描画されます。
 
 --- code ---
 ---
@@ -106,8 +106,8 @@ line_highlights: 23-26
 fill(255, 255 - i * 10, 0)   
 ellipse(width/2, rocket_y + i, 8, 3)
 
-  fill(200, 200, 200, 100) #Transparent grey   
-for i in range(20): #Draw 20 random smoke ellipses    
+  fill(200, 200, 200, 100) #透明な灰色   
+for i in range(20): #排煙をランダムに20回描画    
 ellipse(width/2 + randint(-5, 5), rocket_y + randint(20, 50), randint(5, 10), randint(5, 10))
 
   image(rocket, width/2, rocket_y, 64, 64)
@@ -118,9 +118,9 @@ ellipse(width/2 + randint(-5, 5), rocket_y + randint(20, 50), randint(5, 10), ra
 
 --- task ---
 
-**Test:** Run your program and check the exhaust fumes are visible.
+**テスト：** プログラムを実行し、排気ガスが見えることを確認します。
 
-![A close-up of the rocket and exhaust trail with added smoke.](images/rocket_exhaust_circles.gif)
+![排気ガスの軌跡に排煙が追加されたロケットのクローズアップ。](images/rocket_exhaust_circles.gif)
 
 --- /task ---
 
