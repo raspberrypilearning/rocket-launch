@@ -1,25 +1,25 @@
-## Reaching orbit
+## الوصول إلى المدار
 
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">
 
-The point of launching the rocket is to propel a satellite into orbit. 
+الهدف من إطلاق الصاروخ هو دفع قمر صناعي إلى المدار. 
 
-An orbit is a curved path that one object takes around another due to gravity.
+المدار هو مسار منحني يسلكه جسم حول جسم آخر بسبب الجاذبية.
 
-The rocket can change colour to show how successful the launch was. 
+يمكن للصاروخ تغيير لونه لإظهار مدى نجاح الإطلاق. 
 
 </div>
 <div>
 
-![Three side-by-side images showing successful (green tint), over-fueled (amber tint), and unsucessful (red tint) launches.](images/check_orbit.png){:width="400px"}
+! [ثلاث صور متجاورة تُظهر نجاح الإطلاق (لون أخضر)، وإفراط في استخدام الوقود (لون اصفر خفيف)، وغير ناجح (لون أحمر).](images/check_orbit.png){:width="400px"}
 
 </div>
 </div>
 
 --- task ---
 
-Create two new global variables to set the radius of the orbit circle and the `y` coordinate of the orbit to the point the rocket centre needs to reach to launch the satellite.
+قم بإنشاء متغيرين عالميين جديدين لتعيين نصف قطر دائرة المدار والإحداثيات `y` للمدار إلى النقطة التي يحتاج مركز الصاروخ للوصول إليها لإطلاق القمر الصناعي.
 
 --- code ---
 ---
@@ -27,9 +27,9 @@ language: python filename: main.py line_numbers: true line_number_start: 7
 line_highlights: 11-12
 ---
 
-# Setup global variables
+# تهيئة المتغيرات العامة
 screen_size = 400   
-rocket_y = screen_size   
+rock_y = screen_size   
 burn = 100   
 orbit_radius = 250   
 orbit_y = screen_size - orbit_radius
@@ -40,7 +40,7 @@ orbit_y = screen_size - orbit_radius
 
 --- task ---
 
-Update the `draw_background()` function to draw an ellipse to represent the satellite orbit that the rocket needs to reach.
+قم بتحديث الدالة `() draw_background` لرسم شكل بيضوي لتمثيل مدار القمر الصناعي الذي يحتاج الصاروخ للوصول إليه.
 
 --- code ---
 ---
@@ -49,11 +49,11 @@ line_highlights: 42-45
 ---
 
 def draw_background():   
-background(0) #Short for background(0, 0, 0) — black   
+background(0) #مختصر الخلفية (0, 0, 0) — اسود   
 image(planet, width/2, height, 300, 300)
 
-  no_fill() #Turn off any fill  
-stroke(255) #Set a white stroke   
+  no_fill() #اطفاء اي تعبة اقل من صفر fill  
+stroke(255) #تعيين stroke بيضاء stroke   
 stroke_weight(2)   
 ellipse(width/2, height, orbit_radius * 2, orbit_radius * 2)
 
@@ -63,19 +63,19 @@ ellipse(width/2, height, orbit_radius * 2, orbit_radius * 2)
 
 --- task ---
 
-**Test:** Run your program and check that a white orbit line is drawn.
+**اختبار:** قم بتشغيل برنامجك وتحقق من رسم خط مدار أبيض.
 
-![The screen with planet and new orbit line.](images/draw_orbit.png){:width="300px"}
+![الشاشة مع الكوكب وخط المدار الجديد.](images/draw_orbit.png){:width="300px"}
 
 --- /task ---
 
-The rocket should stop when it reaches the satellite orbit — the end of the mission.
+يجب أن يتوقف الصاروخ عندما يصل إلى مدار القمر الصناعي - نهاية المهمة.
 
 --- task ---
 
-Update your `if fuel >= burn` code to also check that the rocket hasn't reached the orbit.
+قم بتحديث الرمز البرمجي `if fuel >= burn` للتحقق أيضًا من أن الصاروخ لم يصل إلى المدار.
 
-You can use an `and` in `if` statements to check if two, or more, conditions are true.
+يمكنك استخدام العبارات `and` في `if` للتحقق مما إذا كان شرطان أو أكثر صحيحين.
 
 --- code ---
 ---
@@ -83,12 +83,12 @@ language: python filename: main.py - draw_rocket() line_numbers: true line_numbe
 line_highlights: 19
 ---
 
-# The draw_rocket function goes here
-def draw_rocket():
+# يتم وضع دالة draw_rocket هنا
+def draw_rocket ():
 
   global rocket_y, fuel, burn
 
-    if fuel >= burn and rocket_y > orbit_y: #Still flying
+    if fuel >= burn and rocket_y > orbit_y: #لا يزال يطير
 
 --- /code ---
 
@@ -96,11 +96,11 @@ def draw_rocket():
 
 --- task ---
 
-**Test:** Run your project and enter `50000` as the amount of fuel. This should be plenty of fuel to reach orbit. The rocket should stop moving when it reaches orbit.
+**اختبار:** قم بتشغيل مشروعك وأدخل `50000` كمقدار للوقود. يجب أن يكون هذا وقودًا وفيرًا للوصول إلى المدار. يجب أن يتوقف الصاروخ عن الحركة عندما يصل إلى المدار.
 
 --- /task ---
 
-The rocket should be coloured red if it runs out of fuel before getting high enough to launch the satellite.
+يجب أن يكون لون الصاروخ أحمر إذا نفد الوقود قبل أن يرتفع بما يكفي لإطلاق القمر الصناعي.
 
 --- task ---
 
@@ -114,7 +114,7 @@ line_highlights: 34-35
     for i in range(20):   
       ellipse(width/2 + randint(-5, 5), rocket_y + randint(20, 50), randint(5, 10), randint(5, 10))
 
-  if fuel < burn and rocket_y > orbit_y: #No more fuel and not in orbit tint(255, 0, 0) #Failure
+  if fuel < burn and rocket_y > orbit_y: #لا مزيد من الوقود وليس في المدار tint(255, 0, 0) #فشل
 
 --- /code ---
 
@@ -122,19 +122,19 @@ line_highlights: 34-35
 
 --- task ---
 
-**Test:** Run your code and enter `20000` as the amount of fuel. Check that the rocket turns red when it stops below the orbit.
+**اختبار:** قم بتشغيل الشفرة البرمجية الخاصة بك وأدخل `20000` كمقدار الوقود. تأكد من أن الصاروخ يتحول إلى اللون الأحمر عندما يتوقف أسفل المدار.
 
-![A red rocket that has run out of fuel before the orbit circle. The planet has also turned red.](images/orbit_failure.png){:width="300px"}
+![صاروخ أحمر نفد الوقود قبل دورة المدار. تحول الكوكب أيضًا إلى اللون الأحمر.](images/orbit_failure.png){:width="300px"}
 
-Oh no, the planet has turned red!
+أوه لا ، لقد تحول الكوكب إلى اللون الأحمر!
 
 --- /task ---
 
 --- task ---
 
-The `tint()` function sets the tint colour for all images that are drawn until you change the tint or use `no_tint()` to turn it off.
+تعمل الدالة `() tint` على ضبط لون الصبغة لجميع الصور المرسومة حتى تقوم بتغيير الصبغة أو استخدام `() no_tint` لإيقاف تشغيله.
 
-**Choose:** Add a call to `no_tint()` after drawing the image so that the planet isn't tinted red in the next frame — or leave it if you like the planet turning red!
+**اختر:** أضف استدعاء إلى `() no_tint` بعد رسم الصورة بحيث لا يتحول لون الكوكب إلى اللون الأحمر في الإطار التالي - أو اتركه إذا كنت تحب أن يتحول لون الكوكب إلى اللون الأحمر!
 
 --- code ---
 ---
@@ -142,10 +142,10 @@ language: python filename: main.py - draw_rocket() line_numbers: true line_numbe
 line_highlights: 38
 ---
 
-if fuel < burn and rocket_y > orbit_y: tint(255, 0, 0) #Failure
+if fuel < burn and rocket_y > orbit_y: tint(255, 0, 0) #فشل
 
 image(rocket, width/2, rocket_y, 64, 64)   
-no_tint() #So the planet isn't tinted red in the next frame!
+no_tint () # حتى لا يتلون الكوكوب باللون الاحمر في الإطار التالي!
 
 
 --- /code ---
@@ -154,7 +154,7 @@ no_tint() #So the planet isn't tinted red in the next frame!
 
 --- task ---
 
-Use the `tint()` function again, this time to colour the rocket green if the rocket has enough fuel to reach the satellite orbit:
+استخدم دالة `() tint` مرة أخرى، هذه المرة لتلوين الصاروخ باللون الأخضر إذا كان الصاروخ يحتوي على وقود كافٍ للوصول إلى مدار القمر الصناعي:
 
 --- code ---
 ---
@@ -162,9 +162,9 @@ language: python filename: main.py - draw_rocket() line_numbers: true line_numbe
 line_highlights: 36-37
 ---
 
-if fuel < burn and rocket_y > orbit_y: tint(255, 0, 0) #Failure   
+if fuel < burn and rocket_y > orbit_y: tint(255, 0, 0) #فشل   
 elif rocket_y <= orbit_y:   
-tint(0, 255, 0) #Success
+tint(0, 255, 0) #نجاح
 
 image(rocket, width/2, rocket_y, 64, 64)   
 no_tint()
@@ -175,19 +175,19 @@ no_tint()
 
 --- task ---
 
-**Test:** Run your project and enter `50000` as the amount of fuel. Check that your rocket turns green when it reaches the satellite orbit.
+**اختبار:** قم بتشغيل مشروعك وأدخل `50000` كمقدار للوقود. تأكد من أن صاروخك يتحول إلى اللون الأخضر عندما يصل إلى مدار القمر الصناعي.
 
-![A green rocket that has reached the orbit circle and has fuel left.](images/orbit_success.png){:width="300px"}
+![صاروخ أخضر وصل إلى دائرة المدار وبقي وقود له.](images/orbit_success.png){:width="300px"}
 
 --- /task ---
 
-You now have a simulation that can be used to show how much fuel is needed as a minimum to reach the satellite orbit. That's great; however, you could take a huge amount of fuel and still be successful, but this is costly and wasteful!
+لديك الآن محاكاة يمكن استخدامها لإظهار مقدار الوقود المطلوب كحد أدنى للوصول إلى مدار القمر الصناعي. هذا عظيم؛ ومع ذلك ، يمكنك أن تأخذ كمية كبيرة من الوقود وتظل ناجحًا ، لكن هذا مكلف ومهدر!
 
 --- task ---
 
-Amend the conditions in your success code so that the rocket only turns green if it reaches the orbit `and` has less than 1,000kg of fuel left.
+قم بتعديل الشروط في شفرة النجاح البرمجية الخاصة بك بحيث يتحول الصاروخ إلى اللون الأخضر فقط إذا وصل إلى المدار `و` ولديه أقل من 1000 كغم من الوقود المتبقي.
 
-Add code to colour the rocket yellow if the rocket has more than 1,000kg of fuel left when it reaches orbit.
+أضف شفرة برمجية لتلوين الصاروخ باللون الأصفر إذا كان لدى الصاروخ أكثر من 1000 كغم من الوقود المتبقي عند وصوله إلى المدار.
 
 --- code ---
 ---
@@ -195,14 +195,14 @@ language: python filename: main.py line_numbers: true line_number_start: 34
 line_highlights: 36, 38-39
 ---
 
-if fuel < burn and rocket_y > orbit_y: tint(255, 0, 0) #Failure   
+if fuel < burn and rocket_y > orbit_y: tint(255, 0, 0) #فشل   
 elif fuel < 1000 and rocket_y <= orbit_y:   
-tint(0, 255, 0) #Success   
+tint(0, 255, 0) #نجاح   
 elif fuel >= 1000 and rocket_y <= orbit_y:    
-tint(255, 200, 0) #Too much fuel
+tint(255, 200, 0) #وقود كثير جداً
 
 image(rocket, width/2, rocket_y, 64, 64)    
-no_tint() #So the planet isn't tinted in the next frame!
+no_tint () # حتى لا يتم تلوين الكوكب في الإطار التالي!
 
 --- /code ---
 
@@ -210,9 +210,9 @@ no_tint() #So the planet isn't tinted in the next frame!
 
 --- task ---
 
-**Test:** Run your program several times with different numbers; for example, 25,000kg of fuel should be the amount needed to turn the rocket green, but also check that the yellow tint works too by using a bigger number.
+**اختبار:** قم بتشغيل البرنامج عدة مرات بأرقام مختلفة ؛ على سبيل المثال ، يجب أن تكون 25000 كغم من الوقود هي الكمية اللازمة لتحويل الصاروخ إلى اللون الأخضر ، ولكن تحقق أيضًا من أن الصبغة الصفراء تعمل أيضًا باستخدام رقم أكبر.
 
-![A yellow rocket that has reached the orbit circle and has fuel left.](images/orbit_meh.png){:width="300px"}
+![صاروخ أصفر وصل إلى دائرة المدار وبقي وقود له.](images/orbit_meh.png){:width="300px"}
 
 --- /task ---
 
