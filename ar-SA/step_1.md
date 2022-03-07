@@ -1,28 +1,28 @@
-## Introduction
+## المقدمة
 
-Make an animation to propel a satellite into orbit — by hitching a ride on a rocket! Your animation will create cool graphic effects and simulate the best amount of fuel to give the rocket.
+اصنع رسمًا متحركًا لدفع قمر صناعي إلى مداره - عن طريق ركوب صاروخ! ستعمل الرسوم المتحركة الخاصة بك على إنشاء تأثيرات رسومية رائعة ومحاكاة أفضل كمية من الوقود لإعطاء الصاروخ.
 
-![Side-by-side screens showing one green rocket in orbit and one red rocket that has failed to reach orbit.](images/showcase.png)
+![تظهر الشاشات المتجاورة صاروخًا أخضر في المدار وصاروخًا أحمر فشل في الوصول إلى المدار.](images/showcase.png)
 
 <p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;">
-<span style="color: #0faeb0">**Computer simulations**</span> are used to calculate what will happen when we send a rocket into space. Running simulations and making plans on a computer reduces the risk of expensive or dangerous problems in space.
+<span style="color: #0faeb0">** Computer simulations **</span> تُستخدم لحساب ما سيحدث عندما نرسل صاروخًا إلى الفضاء. يؤدي تشغيل عمليات المحاكاة ووضع الخطط على جهاز كمبيوتر إلى تقليل مخاطر حدوث مشكلات باهظة الثمن أو خطيرة في الفضاء.
 </p>
 
-You will:
-+ Use **images** in your animations
-+ Use `for` loops to repeat actions
-+ Join conditions with `and`
+سوف تقوم بمايلي:
++ استخدم **صورة** في الرسوم المتحركة الخاصة بك
++ استخدم حلقات`for`لتكرار الإجراءات
++ أربط الشروط مع `and`
 
 --- no-print ---
 
 --- task ---
 
-### Try it
+### جربها
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 175px; flex-grow: 1">  
-You need to supply the rocket with enough fuel to reach the satellite orbit. Try a small amount (around 10,000kg) and a very large amount (around 50,000kg) to see what happens. 
+تحتاج إلى تزويد الصاروخ بالوقود الكافي للوصول إلى مدار القمر الصناعي. جرب كمية صغيرة (حوالي 10000 كجم) وكمية كبيرة جدًا (حوالي 50000 كجم) لترى ما سيحدث. 
 
-How much fuel is just enough without too much left over?
+ما مقدار الوقود الذي يكفي دون أن يتبقى الكثير؟
 </div>
 <iframe src="https://trinket.io/embed/python/622b4dd113?outputOnly=true&runOption=run&start=result" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
 </div>
@@ -33,10 +33,10 @@ How much fuel is just enough without too much left over?
 
 --- print-only ---
 
-![Completed project.](images/showcase.png)
+![مشروع كامل.](images/showcase.png)
 
 --- /print-only ---
 
-<p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;"> ![Dorothy Vaughan](images/dorothy_vaughan.jpeg){:width="300px"} Dorothy Vaughan made important contributions to early spaceflight. Seeing that the future would use electronic computers, she taught herself, and her team, how to code.
+<p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;"> ![دوروثي فوغان](images/dorothy_vaughan.jpeg){: width = "300px"} قدمت دوروثي فوجان مساهمات مهمة في رحلات الفضاء المبكرة. نظرًا لأن المستقبل سيستخدم أجهزة الكمبيوتر الإلكترونية ، علّمت نفسها وفريقها كيفية البرمجة.
 
-The film *Hidden Figures* tells the story of how Dorothy and other Black women played a key role in the success of the US space program. 
+يروي فيلم *Hidden Figures* قصة دور دوروثي ونساء سوداوات أخريات في نجاح برنامج الفضاء الأمريكي. 
