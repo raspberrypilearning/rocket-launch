@@ -1,56 +1,56 @@
-## Reflection
+## ふりかえり
 
-Well done, you have learnt a lot! Now it's time to reflect — reflecting is an important part of learning because it helps make new connections in your brain.
+お疲れさまでした。たくさんのことを学びましたね！ 次はふりかえりの時間です。ふりかえりを行うことで、脳内に新しいつながりを作ることができます。このため、ふりかえりは学習の大事な部分です。
 
-Answer the three questions below to reflect on what you've learnt.
+以下の3つの質問に答えて、学んだことをふりかえってみましょう。
 
-After each question, press **submit**. You will be guided towards the correct answer. You can do this activity as many times as you want to.
+各質問の後、**答えを確認する**を押してください。 正しい答えが表示されます。 このアクティビティは何度でも実行できます。
 
-Have fun!
+お楽しみください!
 
 --- question ---
 ---
-legend: Question 1 of 3
+legend: 質問1/3
 ---
 
-Which output would you expect if you ran the program below?
+以下のプログラムを実行した場合、どのように出力されると思いますか？
 
 ```python
 for i in range(5):
-  print("Looping", i)
+  print("ループ中", i)
 ```
 
 --- choices ---
 
-- ( ) Looping 1 <br> Looping 2 <br> Looping 3 <br> Looping 4 <br> Looping 5
+- ( ) ループ中 1 <br> ループ中 2 <br> ループ中 3 <br> ループ中 4 <br> ループ中 5
 
   --- feedback ---
 
-Not quite, a `for` loop in Python repeats its code once for each item in a sequence it's given, and here `range` creates a sequence starting from `0`.
+残念です。 Pythonの`for` ループは、書かれたコードを順番どおりに各アイテムを1回ずつ繰り返します。ここで、 `range` は、 `0`から始まる数字の並びを作成します。
 
   --- /feedback ---
 
-- ( ) Looping i
+- ( ) ループ中 i
 
   --- feedback ---
 
-Not quite, the **loop variable** from a `for` loop — in this case `i` — holds the current value from the sequence the loop is working through.
+残念です。`for` ループの **ループ変数** （この場合は `i` ）は、ループが処理している数字の並びからの現在の値が入っています。
 
   --- /feedback ---
 
-- (x) Looping 0 <br> Looping 1 <br> Looping 2 <br> Looping 3 <br> Looping 4
+- (x) ループ中 0 <br> ループ中 1 <br> ループ中 2 <br> ループ中 3 <br> ループ中 4
 
   --- feedback ---
 
-Correct. The loop runs once, in order, for each item `i` in the range [0, 1, 2, 3, 4].
+正解です。 [0, 1, 2, 3, 4]の範囲の各アイテム `i`に対して順番に1回ずつループが実行されます。
 
   --- /feedback ---
 
-- ( ) Looping 4 <br> Looping 3 <br> Looping 2 <br> Looping 1 <br> Looping 0
+- ( ) ループ中 4 <br> ループ中 3 <br> ループ中 2 <br> ループ中 1 <br> ループ中 0
 
   --- feedback ---
 
-Nto quite, a `for` loop runs through the sequence of items it is given in order. Because `range()` gives an ordered sequence from 0 to the number it is passed, that is the order you would expect to see printed out by this `for` loop.
+残念です。 `for` ループは、指定された順にアイテムを実行します。 `range()` は、0から指定された数値までの順番に並んだ数値を返すからです。これは、この `for` ループによって出力されると予想される順序です。
 
   --- /feedback ---
 
