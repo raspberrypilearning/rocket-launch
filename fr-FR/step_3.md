@@ -1,27 +1,27 @@
-## Liftoff!
+## Décollage !
 
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">
-Each time a new frame is drawn, the rocket needs to move up the screen to create an animation effect.
+Chaque fois qu'une nouvelle image est dessinée, la fusée doit remonter l'écran pour créer un effet d'animation.
 </div>
 <div>
 
-![A rocket flying at a steady speed from the bottom to the top of the screen.](images/fly.gif){:width="300px"}
+![Une fusée volant à vitesse constante du bas vers le haut de l'écran.](images/fly.gif){:width="300px"}
 
 </div>
 </div>
 
 --- task ---
 
-The starter project has a rocket image provided for you.
+Le projet de démarrage a une image de fusée qui t'est fournie.
 
-![Image of the rocket in the Trinket image library.](images/trinket_rocket_image.png)
+![Image de la fusée dans la bibliothèque d'images Trinket.](images/trinket_rocket_image.png)
 
 --- /task ---
 
 --- task ---
 
-Add code to the `setup()` function to load the rocket image into a `rocket` global variable.
+Ajoute du code à la fonction `configuration()` pour charger l'image de la fusée dans une variable globale `fusee`.
 
 --- code ---
 ---
@@ -29,23 +29,23 @@ language: python filename: main.py line_numbers: true line_number_start: 20
 line_highlights: 24, 26
 ---
 
-def setup():   
-#Setup your animation here   
-size(screen_size, screen_size)   
+def configuration():   
+#Configure ton animation ici   
+size(taille_ecran, taille_ecran)   
 image_mode(CENTER)   
-global planet, rocket   
-planet = load_image('planet.png')    
-rocket = load_image('rocket.png')
+global planete, fusee   
+planete = load_image('planet.png')    
+fusee = load_image( 'rocket.png')
 
 --- /code ---
 
 --- /task ---
 
-The `y` position of the rocket will start at 400 (the screen height) and then decrease by 1 each time a new frame is drawn.
+La position `y` de la fusée commencera à 400 (la hauteur de l'écran) puis diminuera de 1 à chaque fois qu'une nouvelle image est dessinée.
 
 --- task ---
 
-Add a `rocket_y` global variable to keep track of the rocket's `y` position.
+Ajoute une variable globale `fusee_y` pour suivre la position `y` de la fusée.
 
 --- code ---
 ---
@@ -53,9 +53,9 @@ language: python filename: main.py line_numbers: true line_number_start: 7
 line_highlights: 9
 ---
 
-# Setup global variables
-screen_size = 400    
-rocket_y = screen_size #Start at the bottom
+# Configurer les variables globales
+taille_ecran = 400    
+fusee_y = taille_ecran #Commence en bas
 
 --- /code ---
 
@@ -63,9 +63,9 @@ rocket_y = screen_size #Start at the bottom
 
 --- task ---
 
-Define a `draw_rocket()` function to change the rocket's `y` position and redraw it.
+Définis une fonction `dessine_fusee()` pour changer la position `y` de la fusée et la redessiner.
 
-`rocket_y -= 1` is a shorter way of saying `rocket_y = rocket_y - 1`.
+`fusee_y -= 1` est une manière plus courte de dire `fusee_y = fusee_y - 1`.
 
 --- code ---
 ---
@@ -73,12 +73,12 @@ language: python filename: main.py line_numbers: true line_number_start: 11
 line_highlights: 12-16
 ---
 
-# The draw_rocket function goes here
-def draw_rocket():
+# La fonction dessine_fusee vient ici
+def dessine_fusee():
 
-  global rocket_y #Use the global rocket_y variable    
-rocket_y -= 1 #Move the rocket    
-image(rocket, width/2, rocket_y, 64, 64)
+  global fusee_y #Utiliser la variable globale fusee_y    
+fusee_y -= 1 #Déplacer la fusée    
+image(fusee, width/2, fusee_y, 64, 64)
 
 
 --- /code ---
@@ -87,7 +87,7 @@ image(rocket, width/2, rocket_y, 64, 64)
 
 --- task ---
 
-Call your new `draw_rocket()` in the `draw()` function so that the rocket gets redrawn every frame.
+Appelle ton nouveau `dessine_fusee()` dans la fonction `dessin()` afin que la fusée soit redessinée à chaque image.
 
 --- code ---
 ---
@@ -95,10 +95,10 @@ language: python filename: main.py line_numbers: true line_number_start: 34
 line_highlights: 37
 ---
 
-def draw():   
-#Things to do in every frame   
-draw_background()   
-draw_rocket()
+def dessin():   
+#Choses à faire dans chaque image   
+dessine-arriere_plan()   
+dessine_fusee()
 
 
 --- /code ---
@@ -107,9 +107,9 @@ draw_rocket()
 
 --- task ---
 
-**Test:** Run your code to check that the rocket starts at the bottom of the screen and moves up each frame.
+**Test :** Exécute ton code pour vérifier que la fusée démarre en bas de l'écran et remonte à chaque image.
 
-![Image of the rocket half way up the screen.](images/trinket_rocket_fly.gif)
+![Image de la fusée à mi-hauteur de l'écran.](images/trinket_rocket_fly.gif)
 
 --- /task ---
 
