@@ -1,27 +1,27 @@
 ---
-title: Rocket launch
+title: ロケット打ち上げ
 hero_image: images/banner.png
-description: Make an animation of a rocket propelling a satellite into orbit
+description: 衛星を軌道に乗せるロケットのアニメーションを作成します
 version: 0.0.1
 listed: true
 copyedit: true
 last_tested: "2021-10-06"
 steps:
   - 
-    title: Introduction
+    title: はじめに
   - 
-    title: Set the scene
+    title: シーンを設定する
   - 
-    title: Liftoff!
+    title: 発射！
     completion: engaged
   - 
-    title: Exhaust effects
+    title: 排気効果
   - 
-    title: Burn fuel
+    title: 燃料を燃やす
   - 
-    title: Reaching orbit
+    title: 軌道に到達
   - 
-    title: Reflection
+    title: ふりかえり
     knowledge_quiz:
       path: quiz1
       version: 1
@@ -29,7 +29,7 @@ steps:
       passing_score: 3
     completion: internal
   - 
-    title: Upgrade your project
+    title: プロジェクトをアップグレードする
     completion: external
   - 
-    title: What next?
+    title: 次は何をしますか？
