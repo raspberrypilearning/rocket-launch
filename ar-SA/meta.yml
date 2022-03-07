@@ -1,27 +1,27 @@
 ---
-title: Rocket launch
+title: إطلاق الصاروخ
 hero_image: images/banner.png
-description: Make an animation of a rocket propelling a satellite into orbit
+description: اصنع رسمًا متحركًا لصاروخ يدفع قمرًا صناعيًا إلى مداره
 version: 0.0.1
 listed: true
 copyedit: true
 last_tested: "2021-10-06"
 steps:
   - 
-    title: Introduction
+    title: المقدمة
   - 
-    title: Set the scene
+    title: جهز المشهد
   - 
-    title: Liftoff!
+    title: يغادر!
     completion: engaged
   - 
-    title: Exhaust effects
+    title: آثار العادم
   - 
-    title: Burn fuel
+    title: حرق الوقود
   - 
-    title: Reaching orbit
+    title: الوصول إلى المدار
   - 
-    title: Reflection
+    title: انعكاس
     knowledge_quiz:
       path: quiz1
       version: 1
@@ -29,7 +29,7 @@ steps:
       passing_score: 3
     completion: internal
   - 
-    title: Upgrade your project
+    title: قم بترقية او تطوير مشروعك
     completion: external
   - 
-    title: What next?
+    title: ماذا بعد؟
