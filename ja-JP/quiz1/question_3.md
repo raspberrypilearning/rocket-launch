@@ -1,9 +1,9 @@
 --- question ---
 ---
-legend: Question 3 of 3
+legend: 質問3/3
 ---
 
-This code uses `tint()` to colour a rocket in a game to show the player how they are doing.
+このコードは、 `tint()` を使用してゲーム内のロケットに色を付け、どのようになっているかをプレーヤーに示します。
 
 --- code ---
 ---
@@ -11,11 +11,11 @@ language: python
 ---
 
 if points >= 100:    
-tint(0, 255, 0) #Green   
+tint(0, 255, 0) #緑   
 elif points < 100 and lives == 1:   
-tint(255, 200, 0) #Amber    
+tint(255, 200, 0) #アンバー    
 elif points < 100 and lives == 0:     
-tint(255, 0, 0) #Red     
+tint(255, 0, 0) #赤     
 else:      
 no_tint()
 
@@ -23,47 +23,47 @@ image(rocket, width/2, height/2, 64, 64)
 
 --- /code ---
 
-If the `points` variable has the value `99` and the `lives` variable has the value `1`, what will the rocket look like?
+`point` 変数の値が `99` で、 `lives` 変数の値が `1`の場合、ロケットはどのようになりますか？
 
 --- choices ---
 
 - (x)
 
-![A rocket image with amber tint.](images/rocket_amber.png) <div style="text-align: center;">Amber
+![アンバーの色あいのロケット画像。](images/rocket_amber.png) <div style="text-align: center;">アンバー
 
  --- feedback ---
 
- Correct! The player has less than 100 points and only 1 life left. The rocket is coloured amber to left them know that this is their last chance to win!
+ 正解！ プレイヤーのポイントは100未満で、残りのライフは1つだけ残っています。 ロケットはアンバーに色付けされ、これが最後の勝利のチャンスであることを知らせています！
 
  --- /feedback ---
 
 - ( )
 
-![A rocket image with no tint](images/rocket_original.png) <div style="text-align: center;">No tint
+![色合いのないロケット画像](images/rocket_original.png) <div style="text-align: center;">元の色
 
  --- feedback ---
 
- Not quite, the rocket has a tint as one of the statements is true.
+ 残念です。ステートメントの内の1つが真なので、ロケットには色合いが付けられます。
 
  --- /feedback ---
 
 - ( )
 
-![A rocket image with green tint](images/rocket_green.png) <div style="text-align: center;">Green
+![緑の色合いのロケット画像](images/rocket_green.png) <div style="text-align: center;">緑
 
  --- feedback ---
 
- Not quite, the player would need `>= 100` points to win and turn their rocket green. They have `99`, which is not enough. Check the conditions carefully.
+ 残念です。プレーヤーが勝ってロケットをグリーンに変えるには、 `>= 100` のポイントが必要です。 ポイントは`99`なので、これでは不足です。 条件をよく確認してください。
 
  --- /feedback ---
 
 - ( )
 
-![A rocket image with red tint](images/rocket_red.png) <div style="text-align: center;">Red
+![赤の色合いのロケット画像](images/rocket_red.png) <div style="text-align: center;">赤
 
  --- feedback ---
 
- Not quite, the player has `< 100` points but lives does not equal `0`. Check the conditions carefully.
+ 残念です。プレイヤーのポイントは `< 100` ですが、ライフは `0`ではありません。 条件をよく確認してください。
 
  --- /feedback ---
 
