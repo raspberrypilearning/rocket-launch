@@ -1,25 +1,25 @@
-## Reaching orbit
+## Omloopbaan bereiken
 
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">
 
-The point of launching the rocket is to propel a satellite into orbit. 
+Het doel van het lanceren van de raket is om een satelliet in een baan om de aarde te brengen. 
 
-An orbit is a curved path that one object takes around another due to gravity.
+Een baan is een gekromd pad dat door een object om een ander object wordt afgelegd als gevolg van de zwaartekracht.
 
-The rocket can change colour to show how successful the launch was. 
+De raket kan van kleur veranderen om te laten zien hoe succesvol de lancering was. 
 
 </div>
 <div>
 
-![Three side-by-side images showing successful (green tint), over-fueled (amber tint), and unsucessful (red tint) launches.](images/check_orbit.png){:width="400px"}
+![Drie afbeeldingen naast elkaar met succesvolle (groene tint), overvolle (oranje tint) en mislukte (rode tint) lanceringen.](images/check_orbit.png){:width="400px"}
 
 </div>
 </div>
 
 --- task ---
 
-Create two new global variables to set the radius of the orbit circle and the `y` coordinate of the orbit to the point the rocket centre needs to reach to launch the satellite.
+Maak twee nieuwe global variabelen om de straal van de baancirkel en de `y`-coördinaat van de baan in te stellen op het punt dat de raket moet bereiken om de satelliet te lanceren.
 
 --- code ---
 ---
@@ -27,12 +27,12 @@ language: python filename: main.py line_numbers: true line_number_start: 7
 line_highlights: 11-12
 ---
 
-# Setup global variables
-screen_size = 400   
-rocket_y = screen_size   
-burn = 100   
-orbit_radius = 250   
-orbit_y = screen_size - orbit_radius
+# Globale variabelen instellen
+scherm_grootte = 400   
+raket_y = scherm_grootte   
+verbruik = 100   
+omloopbaan_straal = 250   
+omloopbaan_y = scherm_grootte - omloopbaan_straal
 
 --- /code ---
 
@@ -40,7 +40,7 @@ orbit_y = screen_size - orbit_radius
 
 --- task ---
 
-Update the `draw_background()` function to draw an ellipse to represent the satellite orbit that the rocket needs to reach.
+Werk de functie `teken_achtergrond()` bij om een ellips te tekenen die de satellietbaan voorstelt die de raket moet bereiken.
 
 --- code ---
 ---
@@ -48,14 +48,14 @@ language: python filename: main.py - draw_background() line_numbers: true line_n
 line_highlights: 42-45
 ---
 
-def draw_background():   
-background(0) #Short for background(0, 0, 0) — black   
+def teken_achtergrond():   
+background(0) # Staat voor background(0, 0, 0) — zwart   
 image(planet, width/2, height, 300, 300)
 
-  no_fill() #Turn off any fill  
-stroke(255) #Set a white stroke   
+  no_fill() #Schakel elke vulling uit  
+stroke(255) #Stel een witte lijn in   
 stroke_weight(2)   
-ellipse(width/2, height, orbit_radius * 2, orbit_radius * 2)
+ellipse(width/2, height, omloopbaan_straal * 2, omloopbaan_straal * 2)
 
 --- /code ---
 
@@ -63,19 +63,19 @@ ellipse(width/2, height, orbit_radius * 2, orbit_radius * 2)
 
 --- task ---
 
-**Test:** Run your program and check that a white orbit line is drawn.
+**Test:** Voer je programma uit en controleer of er een witte omloopbaanlijn is getekend.
 
-![The screen with planet and new orbit line.](images/draw_orbit.png){:width="300px"}
+![Het scherm met planeet en nieuwe omloopbaanlijn.](images/draw_orbit.png){:width="300px"}
 
 --- /task ---
 
-The rocket should stop when it reaches the satellite orbit — the end of the mission.
+De raket moet stoppen wanneer hij de omloopbaan van de satelliet bereikt - het einde van de missie.
 
 --- task ---
 
-Update your `if fuel >= burn` code to also check that the rocket hasn't reached the orbit.
+Werk je `if brandstof >= verbruik` code bij om ook te controleren of de raket de baan niet heeft bereikt.
 
-You can use an `and` in `if` statements to check if two, or more, conditions are true.
+Je kunt een `and` in `if`-statements gebruiken om te controleren of twee of meer voorwaarden waar zijn.
 
 --- code ---
 ---
@@ -83,12 +83,12 @@ language: python filename: main.py - draw_rocket() line_numbers: true line_numbe
 line_highlights: 19
 ---
 
-# The draw_rocket function goes here
-def draw_rocket():
+# De teken_raket functie komt hier
+def teken_raket():
 
-  global rocket_y, fuel, burn
+  global raket_y, brandstof, verbruik
 
-    if fuel >= burn and rocket_y > orbit_y: #Still flying
+    if brandstof >= verbruik and raket_y > omloopbaan_y: #Vliegt nog steeds
 
 --- /code ---
 
@@ -96,11 +96,11 @@ def draw_rocket():
 
 --- task ---
 
-**Test:** Run your project and enter `50000` as the amount of fuel. This should be plenty of fuel to reach orbit. The rocket should stop moving when it reaches orbit.
+**Test:** Voer je project uit en geef `50000` in als de hoeveelheid brandstof. Dit zou voldoende brandstof moeten zijn om een baan om de aarde te bereiken. De raket moet stoppen wanneer hij zijn baan bereikt.
 
 --- /task ---
 
-The rocket should be coloured red if it runs out of fuel before getting high enough to launch the satellite.
+De raket moet rood gekleurd zijn als de brandstof opraakt voordat hij hoog genoeg is om de satelliet te lanceren.
 
 --- task ---
 
@@ -112,9 +112,9 @@ line_highlights: 34-35
 
     fill(200, 200, 200, 100)   
     for i in range(20):   
-      ellipse(width/2 + randint(-5, 5), rocket_y + randint(20, 50), randint(5, 10), randint(5, 10))
+      ellipse(width/2 + randint(-5, 5), raket_y + randint(20, 50), randint(5, 10), randint(5, 10))
 
-  if fuel < burn and rocket_y > orbit_y: #No more fuel and not in orbit tint(255, 0, 0) #Failure
+  if branstof < verbruik and raket_y > omloopbaan_y: #Geen brandstof meer en niet in de baan tint(255, 0, 0) #Mislukt
 
 --- /code ---
 
@@ -122,19 +122,19 @@ line_highlights: 34-35
 
 --- task ---
 
-**Test:** Run your code and enter `20000` as the amount of fuel. Check that the rocket turns red when it stops below the orbit.
+**Test:** Voer je project uit en geef `20000` in als de hoeveelheid brandstof. Controleer of de raket rood wordt als hij onder de omloopbaan stopt.
 
-![A red rocket that has run out of fuel before the orbit circle. The planet has also turned red.](images/orbit_failure.png){:width="300px"}
+![Een rode raket die vóór de omloopcirkel geen brandstof meer heeft. De planeet is ook rood gekleurd.](images/orbit_failure.png){:width="300px"}
 
-Oh no, the planet has turned red!
+Oh nee, de planeet is rood gekleurd!
 
 --- /task ---
 
 --- task ---
 
-The `tint()` function sets the tint colour for all images that are drawn until you change the tint or use `no_tint()` to turn it off.
+De functie `tint()` stelt de tintkleur in voor alle afbeeldingen die worden getekend totdat je de tint wijzigt of `no_tint()` gebruikt om deze uit te schakelen.
 
-**Choose:** Add a call to `no_tint()` after drawing the image so that the planet isn't tinted red in the next frame — or leave it if you like the planet turning red!
+**Kies:** Roep `no_tint()` aan na het tekenen van de afbeelding, zodat de planeet niet rood gekleurd wordt in het volgende frame — of laat het staan als je wilt dat de planeet rood wordt!
 
 --- code ---
 ---
@@ -142,10 +142,10 @@ language: python filename: main.py - draw_rocket() line_numbers: true line_numbe
 line_highlights: 38
 ---
 
-if fuel < burn and rocket_y > orbit_y: tint(255, 0, 0) #Failure
+if brandstof < verbruik and raket_y > omloopbaan_y: tint(255, 0, 0) #Mislukt
 
-image(rocket, width/2, rocket_y, 64, 64)   
-no_tint() #So the planet isn't tinted red in the next frame!
+image(raket, width/2, raket_y, 64, 64)   
+no_tint() #Dus de planeet is niet rood gekleurd in het volgende frame!
 
 
 --- /code ---
@@ -154,7 +154,7 @@ no_tint() #So the planet isn't tinted red in the next frame!
 
 --- task ---
 
-Use the `tint()` function again, this time to colour the rocket green if the rocket has enough fuel to reach the satellite orbit:
+Gebruik de functie `tint()` opnieuw, deze keer om de raket groen te kleuren als de raket voldoende brandstof heeft om de satellietbaan te bereiken:
 
 --- code ---
 ---
@@ -162,11 +162,11 @@ language: python filename: main.py - draw_rocket() line_numbers: true line_numbe
 line_highlights: 36-37
 ---
 
-if fuel < burn and rocket_y > orbit_y: tint(255, 0, 0) #Failure   
-elif rocket_y <= orbit_y:   
-tint(0, 255, 0) #Success
+if brandstof < verbruik and raket_y > omloopbaan_y: tint(255, 0, 0) #Mislukt   
+elif raket_y <= omloopbaan_y:   
+tint(0, 255, 0) #Gelukt
 
-image(rocket, width/2, rocket_y, 64, 64)   
+image(raket, width/2, raket_y, 64, 64)   
 no_tint()
 
 --- /code ---
@@ -175,19 +175,19 @@ no_tint()
 
 --- task ---
 
-**Test:** Run your project and enter `50000` as the amount of fuel. Check that your rocket turns green when it reaches the satellite orbit.
+**Test:** Voer je project uit en geef `50000` in als de hoeveelheid brandstof. Controleer of je raket groen wordt wanneer hij de baan van de satelliet bereikt.
 
-![A green rocket that has reached the orbit circle and has fuel left.](images/orbit_success.png){:width="300px"}
+![Een groene raket die de baancirkel heeft bereikt en nog brandstof heeft.](images/orbit_success.png){:width="300px"}
 
 --- /task ---
 
-You now have a simulation that can be used to show how much fuel is needed as a minimum to reach the satellite orbit. That's great; however, you could take a huge amount of fuel and still be successful, but this is costly and wasteful!
+Je hebt nu een simulatie waarmee je kunt laten zien hoeveel brandstof er minimaal nodig is om de satellietbaan te bereiken. Dat is geweldig; je kunt echter een enorme hoeveelheid brandstof verbruiken en toch succesvol zijn, maar dit is kostbaar en verspillend!
 
 --- task ---
 
-Amend the conditions in your success code so that the rocket only turns green if it reaches the orbit `and` has less than 1,000kg of fuel left.
+Pas de voorwaarden in je succescode aan zodat de raket pas groen wordt als hij de baan bereikt `en` minder dan 1.000 kg brandstof over heeft.
 
-Add code to colour the rocket yellow if the rocket has more than 1,000kg of fuel left when it reaches orbit.
+Voeg code toe om de raket geel te kleuren als de raket meer dan 1.000 kg brandstof over heeft wanneer hij zijn baan bereikt.
 
 --- code ---
 ---
@@ -195,14 +195,14 @@ language: python filename: main.py line_numbers: true line_number_start: 34
 line_highlights: 36, 38-39
 ---
 
-if fuel < burn and rocket_y > orbit_y: tint(255, 0, 0) #Failure   
-elif fuel < 1000 and rocket_y <= orbit_y:   
-tint(0, 255, 0) #Success   
-elif fuel >= 1000 and rocket_y <= orbit_y:    
-tint(255, 200, 0) #Too much fuel
+if brandstof < verbruik and raket_y > omloopbaan_y: tint(255, 0, 0) #Mislukt   
+elif brandstof < 1000 and raket_y <= omloopbaan_y:   
+tint(0, 255, 0) #Gelukt   
+elif brandstof >= 1000 and raket_y <= omloopbaant_y:    
+tint(255, 200, 0) #Te veel brandstof
 
-image(rocket, width/2, rocket_y, 64, 64)    
-no_tint() #So the planet isn't tinted in the next frame!
+image(raket, width/2, raket_y, 64, 64)    
+no_tint() #Dus de planeet is niet rood gekleurd in het volgende frame!
 
 --- /code ---
 
@@ -210,9 +210,9 @@ no_tint() #So the planet isn't tinted in the next frame!
 
 --- task ---
 
-**Test:** Run your program several times with different numbers; for example, 25,000kg of fuel should be the amount needed to turn the rocket green, but also check that the yellow tint works too by using a bigger number.
+**Test:** Voer je programma meerdere keren uit met verschillende getallen; 25.000 kg brandstof zou bijvoorbeeld de hoeveelheid moeten zijn die nodig is om de raket groen te maken, maar controleer ook of de gele tint ook werkt door een grotere hoeveelheid te gebruiken.
 
-![A yellow rocket that has reached the orbit circle and has fuel left.](images/orbit_meh.png){:width="300px"}
+![Een gele raket die de baancirkel heeft bereikt en nog brandstof heeft.](images/orbit_meh.png){:width="300px"}
 
 --- /task ---
 
