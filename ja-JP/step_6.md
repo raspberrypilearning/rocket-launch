@@ -1,25 +1,25 @@
-## Reaching orbit
+## 軌道に到達
 
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">
 
-The point of launching the rocket is to propel a satellite into orbit. 
+ロケットを打ち上げるポイントは、衛星を軌道に乗せることです。 
 
-An orbit is a curved path that one object takes around another due to gravity.
+軌道とは、重力によって1つの物体が別の物体の周りをまわる曲線状の通り道です。
 
-The rocket can change colour to show how successful the launch was. 
+ロケットの色を変えて、打ち上げがどれほど成功したかを示します。 
 
 </div>
 <div>
 
-![Three side-by-side images showing successful (green tint), over-fueled (amber tint), and unsucessful (red tint) launches.](images/check_orbit.png){:width="400px"}
+![発射に成功(緑の色合い), 燃料過剰(アンバーの色合い)、失敗(赤の色合い)を示す3つの画像が並べられたもの](images/check_orbit.png){:width="400px"}
 
 </div>
 </div>
 
 --- task ---
 
-Create two new global variables to set the radius of the orbit circle and the `y` coordinate of the orbit to the point the rocket centre needs to reach to launch the satellite.
+2つの新しいグローバル変数を作成して、軌道円の半径と、衛星を発射するためにロケットの中心が到達する必要のあるポイントまでの軌道の `y` 座標を設定します。
 
 --- code ---
 ---
@@ -27,7 +27,7 @@ language: python filename: main.py line_numbers: true line_number_start: 7
 line_highlights: 11-12
 ---
 
-# Setup global variables
+# グローバル変数を設定する
 screen_size = 400   
 rocket_y = screen_size   
 burn = 100   
@@ -40,7 +40,7 @@ orbit_y = screen_size - orbit_radius
 
 --- task ---
 
-Update the `draw_background()` function to draw an ellipse to represent the satellite orbit that the rocket needs to reach.
+`draw_background()` 関数を更新して、ロケットが到達する必要のある衛星軌道を表す楕円を描画するようにします。
 
 --- code ---
 ---
@@ -49,11 +49,11 @@ line_highlights: 42-45
 ---
 
 def draw_background():   
-background(0) #Short for background(0, 0, 0) — black   
+background(0) #background(0, 0, 0) の省略形 - 黒   
 image(planet, width/2, height, 300, 300)
 
-  no_fill() #Turn off any fill  
-stroke(255) #Set a white stroke   
+  no_fill() #塗りつぶしなし  
+stroke(255) #白の境界線を設定   
 stroke_weight(2)   
 ellipse(width/2, height, orbit_radius * 2, orbit_radius * 2)
 
@@ -63,19 +63,19 @@ ellipse(width/2, height, orbit_radius * 2, orbit_radius * 2)
 
 --- task ---
 
-**Test:** Run your program and check that a white orbit line is drawn.
+**テスト：** プログラムを実行し、白い軌道線が引かれていることを確認します。
 
-![The screen with planet and new orbit line.](images/draw_orbit.png){:width="300px"}
+![惑星と新しい軌道線のある画面。](images/draw_orbit.png){:width="300px"}
 
 --- /task ---
 
-The rocket should stop when it reaches the satellite orbit — the end of the mission.
+ロケットは衛星軌道に到達したとき - ミッションの終わり - に停止する必要があります。
 
 --- task ---
 
-Update your `if fuel >= burn` code to also check that the rocket hasn't reached the orbit.
+`if fuel >= burn` のコードを更新して、ロケットが軌道に到達していないかも確認します。
 
-You can use an `and` in `if` statements to check if two, or more, conditions are true.
+`if` ステートメントで`and`を使用して、2つ以上の条件が真であるかどうかを確認できます。
 
 --- code ---
 ---
@@ -83,12 +83,12 @@ language: python filename: main.py - draw_rocket() line_numbers: true line_numbe
 line_highlights: 19
 ---
 
-# The draw_rocket function goes here
+# draw_rocket関数はここにあります
 def draw_rocket():
 
   global rocket_y, fuel, burn
 
-    if fuel >= burn and rocket_y > orbit_y: #Still flying
+    if fuel >= burn and rocket_y > orbit_y: #まだ飛行中
 
 --- /code ---
 
@@ -96,11 +96,11 @@ def draw_rocket():
 
 --- task ---
 
-**Test:** Run your project and enter `50000` as the amount of fuel. This should be plenty of fuel to reach orbit. The rocket should stop moving when it reaches orbit.
+**テスト：** プロジェクトを実行し、燃料の量として `50000` を入力します。 これは軌道に到達するのに十分な燃料です。 ロケットは軌道に到達すると動きを停止するはずです。
 
 --- /task ---
 
-The rocket should be coloured red if it runs out of fuel before getting high enough to launch the satellite.
+ロケットが衛星を打ち上げるのに十分な高さになる前に燃料がなくなった場合、ロケットは赤色になります。
 
 --- task ---
 
@@ -114,7 +114,7 @@ line_highlights: 34-35
     for i in range(20):   
       ellipse(width/2 + randint(-5, 5), rocket_y + randint(20, 50), randint(5, 10), randint(5, 10))
 
-  if fuel < burn and rocket_y > orbit_y: #No more fuel and not in orbit tint(255, 0, 0) #Failure
+  if fuel < burn and rocket_y > orbit_y: #燃料がなくなり、軌道上にもない tint(255, 0, 0) #失敗
 
 --- /code ---
 
@@ -122,19 +122,19 @@ line_highlights: 34-35
 
 --- task ---
 
-**Test:** Run your code and enter `20000` as the amount of fuel. Check that the rocket turns red when it stops below the orbit.
+**テスト：** コードを実行し、燃料の量として `20000` を入力します。 ロケットが軌道の下で止って赤くなることを確認してください。
 
-![A red rocket that has run out of fuel before the orbit circle. The planet has also turned red.](images/orbit_failure.png){:width="300px"}
+![軌道円の前で燃料がなくなった赤いロケット。 惑星も赤くなっています。](images/orbit_failure.png){:width="300px"}
 
-Oh no, the planet has turned red!
+おや、惑星も赤くなりました！
 
 --- /task ---
 
 --- task ---
 
-The `tint()` function sets the tint colour for all images that are drawn until you change the tint or use `no_tint()` to turn it off.
+`tint()` 関数は、色合いを変更するか、 `no_tint()` を使用して色合いをオフにするまで、描画されるすべての画像の色合いの色を変えます。
 
-**Choose:** Add a call to `no_tint()` after drawing the image so that the planet isn't tinted red in the next frame — or leave it if you like the planet turning red!
+**選択：** 次のフレームで惑星が赤く染まらないように、画像を描画した後に `no_tint()` の呼び出しを追加します。または、惑星が赤くなるのが好きな場合はそのままにしておきます。
 
 --- code ---
 ---
@@ -142,10 +142,10 @@ language: python filename: main.py - draw_rocket() line_numbers: true line_numbe
 line_highlights: 38
 ---
 
-if fuel < burn and rocket_y > orbit_y: tint(255, 0, 0) #Failure
+if fuel < burn and rocket_y > orbit_y: tint(255, 0, 0) #失敗
 
 image(rocket, width/2, rocket_y, 64, 64)   
-no_tint() #So the planet isn't tinted red in the next frame!
+no_tint() #次のフレームで惑星が赤い色合いにならないように!
 
 
 --- /code ---
@@ -154,7 +154,7 @@ no_tint() #So the planet isn't tinted red in the next frame!
 
 --- task ---
 
-Use the `tint()` function again, this time to colour the rocket green if the rocket has enough fuel to reach the satellite orbit:
+`tint()` 関数をもう一度使用します。今回は、ロケットに衛星軌道に到達するのに十分な燃料がある場合に、ロケットを緑色に着色します。
 
 --- code ---
 ---
@@ -162,9 +162,9 @@ language: python filename: main.py - draw_rocket() line_numbers: true line_numbe
 line_highlights: 36-37
 ---
 
-if fuel < burn and rocket_y > orbit_y: tint(255, 0, 0) #Failure   
+if fuel < burn and rocket_y > orbit_y: tint(255, 0, 0) #失敗   
 elif rocket_y <= orbit_y:   
-tint(0, 255, 0) #Success
+tint(0, 255, 0) #成功
 
 image(rocket, width/2, rocket_y, 64, 64)   
 no_tint()
@@ -175,19 +175,19 @@ no_tint()
 
 --- task ---
 
-**Test:** Run your project and enter `50000` as the amount of fuel. Check that your rocket turns green when it reaches the satellite orbit.
+**テスト：** プロジェクトを実行し、燃料の量として `50000` を入力します。 ロケットが衛星軌道に到達したときに緑色に変わることを確認します。
 
-![A green rocket that has reached the orbit circle and has fuel left.](images/orbit_success.png){:width="300px"}
+![軌道円に到達し、燃料が残っている緑色のロケット。](images/orbit_success.png){:width="300px"}
 
 --- /task ---
 
-You now have a simulation that can be used to show how much fuel is needed as a minimum to reach the satellite orbit. That's great; however, you could take a huge amount of fuel and still be successful, but this is costly and wasteful!
+これで、衛星軌道に到達するために最低限必要な燃料の量を示すために使用できるシミュレーションができました。 それは素晴らしいことです; ただし、大量の燃料を使用しても成功する可能性がありますが、これにはコストと無駄が伴います。
 
 --- task ---
 
-Amend the conditions in your success code so that the rocket only turns green if it reaches the orbit `and` has less than 1,000kg of fuel left.
+成功の条件を修正して、ロケットが軌道に到達し、 `and(なおかつ)` 燃料の残りが1,000kg未満の場合にのみ緑色に変わるようにします。
 
-Add code to colour the rocket yellow if the rocket has more than 1,000kg of fuel left when it reaches orbit.
+ロケットが軌道に到達したときに1,000kgを超える燃料が残っている場合は、ロケットを黄色に着色するコードを追加します。
 
 --- code ---
 ---
@@ -195,14 +195,14 @@ language: python filename: main.py line_numbers: true line_number_start: 34
 line_highlights: 36, 38-39
 ---
 
-if fuel < burn and rocket_y > orbit_y: tint(255, 0, 0) #Failure   
+if fuel < burn and rocket_y > orbit_y: tint(255, 0, 0) #失敗   
 elif fuel < 1000 and rocket_y <= orbit_y:   
-tint(0, 255, 0) #Success   
+tint(0, 255, 0) #成功   
 elif fuel >= 1000 and rocket_y <= orbit_y:    
-tint(255, 200, 0) #Too much fuel
+tint(255, 200, 0) #燃料が多すぎる
 
 image(rocket, width/2, rocket_y, 64, 64)    
-no_tint() #So the planet isn't tinted in the next frame!
+no_tint() #次のフレームで惑星が色付けされないように!
 
 --- /code ---
 
@@ -210,9 +210,9 @@ no_tint() #So the planet isn't tinted in the next frame!
 
 --- task ---
 
-**Test:** Run your program several times with different numbers; for example, 25,000kg of fuel should be the amount needed to turn the rocket green, but also check that the yellow tint works too by using a bigger number.
+**テスト：** 異なる数値でプログラムを数回実行します。たとえば、25,000kgの燃料は、ロケットを緑色に変えるのに必要な量である必要がありますが、より大きな数値を使用して、黄色の色合いも機能することを確認してください。
 
-![A yellow rocket that has reached the orbit circle and has fuel left.](images/orbit_meh.png){:width="300px"}
+![軌道円に到達し、燃料が残っている黄色いロケット。](images/orbit_meh.png){:width="300px"}
 
 --- /task ---
 
