@@ -1,27 +1,27 @@
-## Liftoff!
+## ¡Despegue!
 
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">
-Each time a new frame is drawn, the rocket needs to move up the screen to create an animation effect.
+Cada vez que se dibuja un nuevo cuadro, el cohete debe moverse hacia arriba en la pantalla para crear un efecto de animación.
 </div>
 <div>
 
-![A rocket flying at a steady speed from the bottom to the top of the screen.](images/fly.gif){:width="300px"}
+![Un cohete que vuela a una velocidad constante desde la parte inferior hasta la parte superior de la pantalla.](images/fly.gif){:width="300px"}
 
 </div>
 </div>
 
 --- task ---
 
-The starter project has a rocket image provided for you.
+El proyecto de inicio tiene una imagen de cohete provista para tí.
 
-![Image of the rocket in the Trinket image library.](images/trinket_rocket_image.png)
+![Imagen del cohete en la biblioteca de imágenes Trinket.](images/trinket_rocket_image.png)
 
 --- /task ---
 
 --- task ---
 
-Add code to the `setup()` function to load the rocket image into a `rocket` global variable.
+Agrega código a la función `setup()` para cargar la imagen del cohete en una variable global `cohete`.
 
 --- code ---
 ---
@@ -30,22 +30,22 @@ line_highlights: 24, 26
 ---
 
 def setup():   
-#Setup your animation here   
-size(screen_size, screen_size)   
+#Configura tu animación aquí   
+tamano(tamano_pantalla, tamano_pantalla)   
 image_mode(CENTER)   
-global planet, rocket   
-planet = load_image('planet.png')    
-rocket = load_image('rocket.png')
+global planeta, cohete   
+planeta = load_image('planet.png')    
+cohete = load_image( 'rocket.png')
 
 --- /code ---
 
 --- /task ---
 
-The `y` position of the rocket will start at 400 (the screen height) and then decrease by 1 each time a new frame is drawn.
+La posición `y` del cohete comenzará en 400 (la altura de la pantalla) y luego disminuirá en 1 cada vez que se dibuje un nuevo cuadro.
 
 --- task ---
 
-Add a `rocket_y` global variable to keep track of the rocket's `y` position.
+Agrega una variable global `cohete_y` para realizar un seguimiento de la posición `y` del cohete.
 
 --- code ---
 ---
@@ -53,9 +53,9 @@ language: python filename: main.py line_numbers: true line_number_start: 7
 line_highlights: 9
 ---
 
-# Setup global variables
-screen_size = 400    
-rocket_y = screen_size #Start at the bottom
+# Configurar variables globales
+tamano_pantalla = 400    
+cohete_y = tamano_pantalla #Empieza por abajo
 
 --- /code ---
 
@@ -63,9 +63,9 @@ rocket_y = screen_size #Start at the bottom
 
 --- task ---
 
-Define a `draw_rocket()` function to change the rocket's `y` position and redraw it.
+Define una función `dibujar_cohete()` para cambiar la posición `y` del cohete y volver a dibujarlo.
 
-`rocket_y -= 1` is a shorter way of saying `rocket_y = rocket_y - 1`.
+`cohete_y -= 1` es una forma más corta de decir `cohete_y = cohete_y - 1`.
 
 --- code ---
 ---
@@ -73,12 +73,12 @@ language: python filename: main.py line_numbers: true line_number_start: 11
 line_highlights: 12-16
 ---
 
-# The draw_rocket function goes here
-def draw_rocket():
+# La función dibujar_cohete va aquí
+def dibujar_cohete():
 
-  global rocket_y #Use the global rocket_y variable    
-rocket_y -= 1 #Move the rocket    
-image(rocket, width/2, rocket_y, 64, 64)
+  global cohete_y #Utiliza la variable global cohete_y    
+cohete_y -= 1 #Mueve la imagen del cohete    
+imagen(cohete, width/2, cohete_y, 64, 64)
 
 
 --- /code ---
@@ -87,7 +87,7 @@ image(rocket, width/2, rocket_y, 64, 64)
 
 --- task ---
 
-Call your new `draw_rocket()` in the `draw()` function so that the rocket gets redrawn every frame.
+Llama a tu nuevo `dibujar_cohete()` en la función `dibujar()` para que el cohete se vuelva a dibujar en cada cuadro.
 
 --- code ---
 ---
@@ -95,10 +95,10 @@ language: python filename: main.py line_numbers: true line_number_start: 34
 line_highlights: 37
 ---
 
-def draw():   
-#Things to do in every frame   
-draw_background()   
-draw_rocket()
+def dibujar():   
+#Cosas que hacer en cada fotograma   
+dibujar_fondo()   
+dibujar_cohete()
 
 
 --- /code ---
@@ -107,9 +107,9 @@ draw_rocket()
 
 --- task ---
 
-**Test:** Run your code to check that the rocket starts at the bottom of the screen and moves up each frame.
+**Prueba:** Ejecute su código para verificar que el cohete comience en la parte inferior de la pantalla y suba cada cuadro.
 
-![Image of the rocket half way up the screen.](images/trinket_rocket_fly.gif)
+![Imagen del cohete en la mitad de la pantalla.](images/trinket_rocket_fly.gif)
 
 --- /task ---
 
