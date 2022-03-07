@@ -1,29 +1,29 @@
-## Set the scene
+## Créer la scène
 
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">
-The animation needs a space backdrop with a planet to launch the rocket from.
+L'animation nécessite un arrière-plan spatiale avec une planète à partir de laquelle lancer la fusée.
 </div>
 <div>
 
-![A planet against a black background.](images/step_2.png){:width="300px"}
+![Une planète sur fond noir.](images/step_2.png){:width="300px"}
 
 </div>
 </div>
 
 --- task ---
 
-Open the [project template](https://trinket.io/python/f2199f5a8c){:target="_blank"}.
+Ouvre le [modèle de projet](https://trinket.io/python/f2199f5a8c){:target="_blank"}.
 
-If you have a Trinket account, you can click on the **Remix** button to save a copy to your `My Trinkets` library.
+Si tu as un compte Trinket, tu peux cliquer sur le bouton **Remix** pour enregistrer une copie dans ta bibliothèque `My Trinkets`.
 
 --- /task ---
 
-You will use a `screen_size` variable to set the size of the screen and in calculations. Variables defined outside functions are **global** so you can use them anywhere in your program.
+Tu utiliseras une variable `taille_ecran` pour définir la taille de l'écran et dans les calculs. Les variables définies en dehors des fonctions sont **globales**, tu peux donc les utiliser n'importe où dans ton programme.
 
 --- task ---
 
-Find the comment `Setup global variables` and add a line of code to create your `screen_size` variable:
+Trouve le commentaire `Configurer les variables globales` et ajoute une ligne de code pour créer ta variable `taille_ecran` :
 
 --- code ---
 ---
@@ -31,8 +31,8 @@ language: python filename: main.py line_numbers: true line_number_start: 7
 line_highlights: 8
 ---
 
-# Setup global variables
-screen_size = 400
+# Configurer les variables globales
+taille_ecran = 400
 
 --- /code ---
 
@@ -40,7 +40,7 @@ screen_size = 400
 
 --- task ---
 
-Use the `screen_size` variable to create a square 400 by 400 pixels:
+Utilise la variable `taille_ecran` pour créer un carré de 400 par 400 pixels :
 
 --- code ---
 ---
@@ -48,9 +48,9 @@ language: python filename: main.py — setup() line_numbers: true line_number_st
 line_highlights: 20
 ---
 
-def setup():   
-#Setup your animation here   
-size(screen_size, screen_size)
+def configuration():   
+#Configure ton animation ici   
+size(taille_ecran, taille_ecran)
 
 
 --- /code ---
@@ -59,21 +59,21 @@ size(screen_size, screen_size)
 
 --- task ---
 
-The starter project has three different planet images and the moon provided for you. You can view these in the Trinket image library by selecting the **View and Add Images** button.
+Le projet de démarrage a trois images de planètes différentes et la lune t'est fournie. Tu peux les afficher dans la bibliothèque d'images Trinket en sélectionnant le bouton **View and Add Images**.
 
-![A plus symbol, an upload symbol, and an image symbol. The image symbol is highlighted.](images/trinket_image.png)
+![Un symbole plus, un symbole de téléchargement et un symbole d'image. Le symbole de l'image est mis en surbrillance.](images/trinket_image.png)
 
-**Choose:** Decide which image you want to use and make a note of the filename. For example, `orange_planet.png`.
+**Choisir :** Décide quelle image tu veux utiliser et note le nom du fichier. Par exemple, `orange_planet.png`.
 
 --- /task ---
 
-It's a good idea to load images in `setup()` so that they are ready when you need to use them and your animation will run quickly.
+C'est une bonne idée de charger les images dans `configuration()` afin qu'elles soient prêtes lorsque tu en auras besoin et que ton animation s'exécute rapidement.
 
 --- task ---
 
-The `image_mode(CENTER)` line says that you will be positioning images by giving the coordinates of the centre of the image (instead of the top left corner).
+La ligne `image_mode(CENTER)` indique que tu vas positionner les images en donnant les coordonnées du centre de l'image (au lieu du coin supérieur gauche).
 
-Also add code to the `setup()` function to load your chosen image into a `planet` global variable. The variable needs to be global so you can use it later when you draw the planet to the screen.
+Ajoute également du code à la fonction `configuration()` pour charger l'image choisie dans une variable globale `planete`. La variable doit être globale afin que tu puisses l'utiliser plus tard lorsque tu dessines la planète à l'écran.
 
 --- code ---
 ---
@@ -81,12 +81,12 @@ language: python filename: main.py line_numbers: true line_number_start: 18
 line_highlights: 21-23
 ---
 
-def setup():   
-#Setup your animation here   
-size(screen_size, screen_size)   
+def configuration():   
+#Configure ton animation ici   
+size(taille_ecran, taille_ecran)   
 image_mode(CENTER)   
-global planet   
-planet = load_image('planet.png') #Your chosen planet
+global planete   
+planete = load_image('planet.png') #Ta planète choisie
 
 
 --- /code ---
@@ -95,13 +95,13 @@ planet = load_image('planet.png') #Your chosen planet
 
 --- task ---
 
-Define a `draw_background()` function, to draw the background, below the comment that tells you where it should go.
+Définis une fonction `dessine_arriere_plan()`, pour dessiner l'arrière-plan, sous le commentaire qui t'indique où il doit aller.
 
-Use `background(0)` to set the background colour to black and add an `image()` function to draw the planet. The `image()` function is laid out:
+Utilise `background(0)` pour définir la couleur d'arrière-plan sur noir et ajoute une fonction `image()` pour dessiner la planète. La fonction `image()` se présente comme suit :
 
-`image(image filename, x-coordinate, y-coordinate, image_width, image_height)`
+`image(nom du fichier image, coordonnée x, coordonnée y, largeur_image, hauteur_image)`
 
-The `p5` library sets global `width` and `height` variables based on the size of the screen. Use these in your code to position the planet with its centre half-way across (`width/2`) and at the bottom (`height`) of the screen.
+La bibliothèque `p5` définit des variables globales `width` et `height` en fonction de la taille de l'écran. Utilise-les dans ton code pour positionner la planète avec son centre à mi-chemin (`width/2`) et en bas (`height`) de l'écran.
 
 --- code ---
 ---
@@ -109,21 +109,21 @@ language: python filename: main.py — draw_background() line_numbers: true line
 line_highlights: 15-17
 ---
 
-# The draw_background function goes here
-def draw_background():   
-background(0) #Short for background(0, 0, 0) — black    
-image(planet, width/2, height, 300, 300) #Draw the image
+# La fonction dessine_arriere_plan vient ici
+def dessine_arriere_plan():   
+background(0) #Raccourci pour background(0, 0, 0) — noir    
+image(planete, width/2, height, 300, 300) #Dessiner l'image
 
 
 --- /code ---
 
-Putting all the code for drawing the background into one function makes your code easier to understand.
+Mettre tout le code pour dessiner l'arrière-plan dans une seule fonction rend ton code plus facile à comprendre.
 
 --- /task ---
 
 --- task ---
 
-To make the background appear, call `draw_background()` in `draw()`. This will cause the background to be re-drawn every time `draw()` is called, covering over any older drawing:
+Pour faire apparaître l'arrière-plan, appelle `dessine_arriere_plan()` dans `dessin()`. Cela fera en sorte que l'arrière-plan soit redessiné chaque fois que `draw()` est appelé, couvrant ainsi tout dessin plus ancien :
 
 --- code ---
 ---
@@ -131,9 +131,9 @@ language: python filename: main.py — draw() line_numbers: true line_number_sta
 line_highlights: 30
 ---
 
-def draw():   
-#Things to do in every frame    
-draw_background()
+def dessin():   
+#choses à faire dans chaque image    
+dessine_arriere_plan()
 
 --- /code ---
 
@@ -141,7 +141,7 @@ draw_background()
 
 --- task ---
 
-**Test:** Run your code and check that it draws a black background with half a planet at the bottom.
+**Test :** Exécute ton code et vérifie qu'il dessine un arrière-plan noir avec une demi-planète en bas.
 
 --- /task ---
 
