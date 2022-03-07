@@ -1,27 +1,27 @@
-## Liftoff!
+## 発射！
 
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">
-Each time a new frame is drawn, the rocket needs to move up the screen to create an animation effect.
+新しいフレームが描画されるたびに、ロケットはアニメーション効果を生み出すために画面を上に移動する必要があります。
 </div>
 <div>
 
-![A rocket flying at a steady speed from the bottom to the top of the screen.](images/fly.gif){:width="300px"}
+![画面の下から上に一定の速度で飛んでいるロケット。](images/fly.gif){:width="300px"}
 
 </div>
 </div>
 
 --- task ---
 
-The starter project has a rocket image provided for you.
+スタータープロジェクトには、ロケットの画像が用意されています。
 
-![Image of the rocket in the Trinket image library.](images/trinket_rocket_image.png)
+![Trinket画像ライブラリのロケットの画像。](images/trinket_rocket_image.png)
 
 --- /task ---
 
 --- task ---
 
-Add code to the `setup()` function to load the rocket image into a `rocket` global variable.
+`setup()` 関数にコードを追加して、ロケットの画像を `rocket` グローバル変数にロードします。
 
 --- code ---
 ---
@@ -30,7 +30,7 @@ line_highlights: 24, 26
 ---
 
 def setup():   
-#Setup your animation here   
+#ここでアニメーションをセットアップします   
 size(screen_size, screen_size)   
 image_mode(CENTER)   
 global planet, rocket   
@@ -41,11 +41,11 @@ rocket = load_image('rocket.png')
 
 --- /task ---
 
-The `y` position of the rocket will start at 400 (the screen height) and then decrease by 1 each time a new frame is drawn.
+ロケットの`y`位置は、400(画面の高さ) から始まり、新しいフレームが描画されるたびに1ずつ減少します。
 
 --- task ---
 
-Add a `rocket_y` global variable to keep track of the rocket's `y` position.
+`rocket_y` グローバル変数を追加して、ロケットの `y`座標を追跡します。
 
 --- code ---
 ---
@@ -53,9 +53,9 @@ language: python filename: main.py line_numbers: true line_number_start: 7
 line_highlights: 9
 ---
 
-# Setup global variables
+# グローバル変数を設定する
 screen_size = 400    
-rocket_y = screen_size #Start at the bottom
+rocket_y = screen_size #一番下から開始
 
 --- /code ---
 
@@ -63,9 +63,9 @@ rocket_y = screen_size #Start at the bottom
 
 --- task ---
 
-Define a `draw_rocket()` function to change the rocket's `y` position and redraw it.
+`draw_rocket()` 関数を定義して、ロケットの `y`座標置を変更して再描画させます。
 
-`rocket_y -= 1` is a shorter way of saying `rocket_y = rocket_y - 1`.
+`rocket_y -= 1` は、 `rocket_y = rocket_y - 1`の短縮形です。
 
 --- code ---
 ---
@@ -73,11 +73,11 @@ language: python filename: main.py line_numbers: true line_number_start: 11
 line_highlights: 12-16
 ---
 
-# The draw_rocket function goes here
+# draw_rocket関数はここにあります
 def draw_rocket():
 
-  global rocket_y #Use the global rocket_y variable    
-rocket_y -= 1 #Move the rocket    
+  global rocket_y #rocket_yグローバル変数を使う    
+rocket_y -= 1 #ロケットを動かす    
 image(rocket, width/2, rocket_y, 64, 64)
 
 
@@ -87,7 +87,7 @@ image(rocket, width/2, rocket_y, 64, 64)
 
 --- task ---
 
-Call your new `draw_rocket()` in the `draw()` function so that the rocket gets redrawn every frame.
+`draw()` 関数で新しい `draw_rocket()` を呼び出して、ロケットがフレームごとに再描画されるようにします。
 
 --- code ---
 ---
@@ -96,7 +96,7 @@ line_highlights: 37
 ---
 
 def draw():   
-#Things to do in every frame   
+#フレームごとにやること   
 draw_background()   
 draw_rocket()
 
@@ -107,9 +107,9 @@ draw_rocket()
 
 --- task ---
 
-**Test:** Run your code to check that the rocket starts at the bottom of the screen and moves up each frame.
+**テスト：** コードを実行して、ロケットが画面の下部から始まり、フレームごとに上に移動することを確認します。
 
-![Image of the rocket half way up the screen.](images/trinket_rocket_fly.gif)
+![画面の途中にあるロケットの画像。](images/trinket_rocket_fly.gif)
 
 --- /task ---
 
