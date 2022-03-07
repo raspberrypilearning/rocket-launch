@@ -1,10 +1,10 @@
-## What next?
+## Και τώρα;
 
-If you are following the [Introduction to Python](https://projects.raspberrypi.org/en/raspberrypi/python-intro) pathway, you can move on to the [Make a face](https://projects.raspberrypi.org/en/projects/make-a-face) project. In this project, you will draw a face or mask using geometric shapes.
+Εάν ακολουθείς το μονοπάτι [Εισαγωγή στην Python](https://projects.raspberrypi.org/en/raspberrypi/python-intro), μπορείς να προχωρήσεις στο έργο [Κάνε ένα πρόσωπο](https://projects.raspberrypi.org/en/projects/make-a-face). Σε αυτό το έργο, θα σχεδιάσεις ένα πρόσωπο ή μια μάσκα χρησιμοποιώντας γεωμετρικά σχήματα.
 
 --- print-only ---
 
-![Make a face project](images/make-a-face-project.png)
+![Το έργο Κάνε ένα πρόσωπο](images/make-a-face-project.png)
 
 --- /print-only ---
 
@@ -15,4 +15,4 @@ If you are following the [Introduction to Python](https://projects.raspberrypi.o
 
 --- /no-print ---
 
-If you want to have more fun exploring Python, then you could try out any of [these projects](https://projects.raspberrypi.org/en/projects?software%5B%5D=python).
+Αν θέλεις να διασκεδάσεις περισσότερο εξερευνώντας την Python, τότε μπορείς να δοκιμάσεις οποιοδήποτε από [αυτά τα έργα](https://projects.raspberrypi.org/en/projects?software%5B%5D=python).
