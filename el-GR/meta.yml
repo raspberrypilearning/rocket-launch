@@ -1,27 +1,27 @@
 ---
-title: Rocket launch
+title: Εκτόξευση πυραύλου
 hero_image: images/banner.png
-description: Make an animation of a rocket propelling a satellite into orbit
+description: Δημιούργησε μια κινούμενη εικόνα ενός πυραύλου που προωθεί έναν δορυφόρο σε τροχιά
 version: 0.0.1
 listed: true
 copyedit: true
 last_tested: "2021-10-06"
 steps:
   - 
-    title: Introduction
+    title: Εισαγωγή
   - 
-    title: Set the scene
+    title: Στήνοντας τη σκηνή
   - 
-    title: Liftoff!
+    title: Απογείωση!
     completion: engaged
   - 
-    title: Exhaust effects
+    title: Εφέ καυσαερίων
   - 
-    title: Burn fuel
+    title: Καύση καυσίμου
   - 
-    title: Reaching orbit
+    title: Φτάνοντας σε τροχιά
   - 
-    title: Reflection
+    title: Αναστοχασμός
     knowledge_quiz:
       path: quiz1
       version: 1
@@ -29,7 +29,7 @@ steps:
       passing_score: 3
     completion: internal
   - 
-    title: Upgrade your project
+    title: Αναβάθμιση του έργου σου
     completion: external
   - 
-    title: What next?
+    title: Και τώρα;
