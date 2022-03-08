@@ -12,10 +12,10 @@ language: python
 ---
 
 def setup():   
-size(400, 400)   
-image_mode(CENTER)   
-global planet   
-planet = load_image('planet.png')
+  size(400, 400)   
+  image_mode(CENTER)   
+  global planet   
+  planet = load_image('planet.png')
 
 --- /code ---
 

@@ -29,7 +29,8 @@ image(rocket, width/2, height/2, 64, 64)
 
 - (x)
 
-![Μια εικόνα πυραύλoυ με πορτοκαλί απόχρωση.](images/rocket_amber.png) <div style="text-align: center;">Πορτοκαλί
+![Μια εικόνα πυραύλoυ με πορτοκαλί απόχρωση.](images/rocket_amber.png) 
+<div style="text-align: center;">Πορτοκαλί
 
  --- feedback ---
 
@@ -39,7 +40,8 @@ image(rocket, width/2, height/2, 64, 64)
 
 - ( )
 
-![Μια εικόνα πυραύλου χωρίς απόχρωση](images/rocket_original.png) <div style="text-align: center;">Χωρίς απόχρωση
+![Μια εικόνα πυραύλου χωρίς απόχρωση](images/rocket_original.png) 
+<div style="text-align: center;">Χωρίς απόχρωση
 
  --- feedback ---
 
@@ -49,7 +51,8 @@ image(rocket, width/2, height/2, 64, 64)
 
 - ( )
 
-![Μια εικόνα πυραύλου με πράσινη απόχρωση](images/rocket_green.png) <div style="text-align: center;">Πράσινο
+![Μια εικόνα πυραύλου με πράσινη απόχρωση](images/rocket_green.png) 
+<div style="text-align: center;">Πράσινο
 
  --- feedback ---
 
@@ -59,7 +62,8 @@ image(rocket, width/2, height/2, 64, 64)
 
 - ( )
 
-![Μια εικόνα πυραύλου με κόκκινη απόχρωση](images/rocket_red.png) <div style="text-align: center;">Κόκκινο
+![Μια εικόνα πυραύλου με κόκκινη απόχρωση](images/rocket_red.png) 
+<div style="text-align: center;">Κόκκινο
 
  --- feedback ---
 
