@@ -11,11 +11,11 @@ language: python
 ---
 
 if puntos >= 100:    
-    tint(0, 255, 0) #Green   
+    tint(0, 255, 0) #Verde   
 elif puntos < 100 and vidas == 1:   
-    tint(255, 200, 0) #Amber    
+    tint(255, 200, 0) #Ámbar    
 elif puntos < 100 and vidas == 0:     
-    tint(255, 0, 0) #Red     
+    tint(255, 0, 0) #Rojo     
 else:      
     no_tint()
 

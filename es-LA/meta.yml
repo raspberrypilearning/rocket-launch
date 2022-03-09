@@ -9,7 +9,7 @@ last_tested: "2021-10-06"
 steps:
   - title: Introducción
   - title: Establece la escena
-  - title: '¡El despegue!'
+  - title: '¡Despegue!'
     completion: engaged
   - title: Efectos de escape
   - title: Quemar combustible
