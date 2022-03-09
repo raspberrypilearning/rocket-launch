@@ -1,0 +1,26 @@
+---
+title: Lanzamiento de cohete
+hero_image: images/banner.png
+description: Haz una animación de un cohete que impulsa un satélite a la órbita
+version: 0.0.1
+listed: true
+copyedit: true
+last_tested: "2021-10-06"
+steps:
+  - title: Introducción
+  - title: Establece la escena
+  - title: '¡Despegue!'
+    completion: engaged
+  - title: Efectos de escape
+  - title: Quemar combustible
+  - title: Alcanzando la órbita
+  - title: Reflexión
+    knowledge_quiz:
+      path: quiz1
+      version: 1
+      questions: 3
+      passing_score: 3
+    completion: internal
+  - title: Mejora tu proyecto
+    completion: external
+  - title: '¿Qué sigue?'
