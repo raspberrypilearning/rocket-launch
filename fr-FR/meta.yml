@@ -1,0 +1,26 @@
+---
+title: Lancement de fusée
+hero_image: images/banner.png
+description: Faire une animation d'une fusée propulsant un satellite en orbite
+version: 0.0.1
+listed: true
+copyedit: true
+last_tested: "2021-10-06"
+steps:
+  - title: Introduction
+  - title: Créer la scène
+  - title: Décollage !
+    completion: engaged
+  - title: Effets d'échappement
+  - title: Brûler du carburant
+  - title: Atteindre l'orbite
+  - title: Réflexion
+    knowledge_quiz:
+      path: quiz1
+      version: 1
+      questions: 3
+      passing_score: 3
+    completion: internal
+  - title: Améliorer ton projet
+    completion: external
+  - title: Et ensuite ?
