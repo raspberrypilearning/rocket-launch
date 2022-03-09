@@ -1,0 +1,26 @@
+---
+title: Raket lancering
+hero_image: images/banner.png
+description: Maak een animatie van een raket die een satelliet in een baan om de aarde brengt
+version: 0.0.1
+listed: true
+copyedit: true
+last_tested: "2021-10-06"
+steps:
+  - title: Inleiding
+  - title: Het opzetten van de scene
+  - title: Lancering!
+    completion: engaged
+  - title: Uitlaat effecten
+  - title: Brandstof verbruik
+  - title: Omloopbaan bereiken
+  - title: Reflectie
+    knowledge_quiz:
+      path: quiz1
+      version: 1
+      questions: 3
+      passing_score: 3
+    completion: internal
+  - title: Verbeter je project
+    completion: external
+  - title: Wat kun je verder nog doen?
