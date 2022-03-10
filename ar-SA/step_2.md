@@ -82,11 +82,11 @@ line_highlights: 21-23
 ---
 
 def setup():   
-#Setup your animation here   
+# إعداد الرسوم المتحركة هنا   
 size(screen_size, screen_size)   
-image_mode(CENTER)   
-global planet   
-planet = load_image('planet.png') #Your chosen planet
+image_mode (CENTER)   
+global   
+planet = load_image ('planet.png') # الكوكب الذي اخترته
 
 
 --- /code ---
@@ -131,9 +131,9 @@ language: python filename: main.py — draw() line_numbers: true line_number_sta
 line_highlights: 30
 ---
 
-def draw():   
-#Things to do in every frame    
-draw_background()
+def draw ():   
+# أشياء يجب القيام بها في كل إطار    
+draw_background ()
 
 --- /code ---
 
