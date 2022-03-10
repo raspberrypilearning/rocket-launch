@@ -5,12 +5,12 @@
 
 سيبدو الصاروخ أكثر واقعية مع بعض المؤثرات الخاصة لمحاكاة مسار العادم. 
 
-يمكنك إنشاء تأثيرات رائعة باستخدام حلقة "for" لرسم الكثير من الأشكال في كل إطار.
+يمكنك إنشاء تأثيرات رائعة باستخدام حلقة `for` لرسم الكثير من الأشكال في كل إطار.
 
 </div>
 <div>
 
-![The rocket mid flight with an exhaust trail.](images/flying_rocket.gif){:width="300px"}
+![سقوط الصاروخ مع مسار عادم.](images/flying_rocket.gif){:width="300px"}
 
 </div>
 </div>
@@ -39,11 +39,11 @@ def draw_rocket():
   global rocket_y   
 rocket_y -= 1
 
-  no_stroke() #Turn off the stroke
+  no_stroke () # أوقف السكتة الدماغية
 
-  for i in range(25): #Draw 25 burning exhaust ellipses   
-fill(255, 255, 0) #Yellow   
-ellipse(width/2, rocket_y + i, 8, 3) #i increases each time the loop repeats
+  for i in range(25): #ارسم 25 شكلًا بيضاويًا محترقًا في العادم   
+fill(255, 255, 0) #أصفر    
+ellipse(width/2, rocket_y + i, 8, 3) #i يزيد في كل مرة تتكرر فيها الحلقة
 
   image(rocket, width/2, rocket_y, 64, 64)
 
@@ -73,7 +73,7 @@ line_highlights: 20
 ---
 
   for i in range(25):   
-fill(255, 255 - i * 10, 0) #Reduce the amount of green    
+fill(255, 255 - i * 10, 0) # تقليل مقدار القطع الناقص الأخضر    
 ellipse(width/2, rocket_y + i, 8, 3)
 
 --- /code ---
