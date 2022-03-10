@@ -30,7 +30,7 @@ line_highlights: 24, 26
 ---
 
 def setup():   
-#Setup your animation here   
+# إعداد الرسوم المتحركة هنا   
 size(screen_size, screen_size)   
 image_mode(CENTER)   
 global planet, rocket   
@@ -95,10 +95,10 @@ language: python filename: main.py line_numbers: true line_number_start: 34
 line_highlights: 37
 ---
 
-def draw():   
-#Things to do in every frame   
-draw_background()   
-draw_rocket()
+def draw ():   
+# الأشياء التي يجب القيام بها في كل إطار   
+draw_background ()   
+draw_rocket ()
 
 
 --- /code ---
