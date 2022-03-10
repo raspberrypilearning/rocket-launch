@@ -112,7 +112,7 @@ line_highlights: 15-17
 # يتم وضع دالة draw_background هنا
 def draw_background():   
 background(0) #Short for background(0, 0, 0) — black    
-image(planet, width/2, height, 300, 300) #Draw the image
+image(planet, width/2, height, 300, 300)#ارسم الصورة
 
 
 --- /code ---
