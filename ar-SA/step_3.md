@@ -76,9 +76,9 @@ line_highlights: 12-16
 # يتم وضع دالة draw_rocket هنا
 def draw_rocket():
 
-  global rocket_y #Use the global rocket_y variable    
-rocket_y -= 1 #Move the rocket    
-image(rocket, width/2, rocket_y, 64, 64)
+  global rocket_y #استخدم متغير الصاروخ rocket_y variable    
+rocket_y -= 1 #حرك صورة الصاروخ     
+(rocket, width/2, rocket_y, 64, 64)
 
 
 --- /code ---
