@@ -13,7 +13,7 @@
 
 --- task ---
 
-Open the [project template](https://trinket.io/python/f2199f5a8c){:target="_blank"}.
+افتح [نموذج المشروع](https://trinket.io/python/f2199f5a8c){: target = "_ blank"}.
 
 إذا كان لديك حساب Trinket ، فيمكنك النقر فوق الزر **Remix** لحفظ نسخة في مكتبة `My Trinkets`.
 
@@ -99,7 +99,7 @@ planet = load_image ('planet.png') # الكوكب الذي اخترته
 
 استخدم `background(0)` لتعيين لون الخلفية إلى الأسود وإضافة دالة `image()`لرسم الكوكب. تم وضع الدالة `image ()`:
 
-`image(image filename, x-coordinate, y-coordinate, image_width, image_height)`
+`image(ملف الصورة, تنسيق x, تنسيق y, عرض x, عرض y)`
 
 The `p5` library sets global `width` and `height` variables based on the size of the screen. تحدد مكتبة <0>p5</0> المتغيرات العامة،<0>width</0> و <0>height</0> متغيرات عامة بناءً على حجم الشاشة. استخدموا الدوال التاليتان في الشفرة البرمجية الخاصة بك لوضع الكوكب في منتصف الشاشة(`width/2`) وفي الجزء السفلي من الشاشة (`height`).
 
