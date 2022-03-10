@@ -6,7 +6,7 @@
 </div>
 <div>
 
-![A planet against a black background.](images/step_2.png){:width="300px"}
+![كوكب على خلفية سوداء.](images/step_2.png){:width="300px"}
 
 </div>
 </div>
@@ -63,7 +63,7 @@ size(screen_size, screen_size)
 
 ![رمز زائد ورمز تحميل ورمز صورة. يتم تمييز رمز الصورة.](images/trinket_image.png)
 
-**Choose:** حدد الصورة التي تريد استخدامها وقم بتدوين اسم الملف. على سبيل المثال ، `orange_planet.png`.
+**اختر:** حدد الصورة التي تريد استخدامها وقم بتدوين اسم الملف. على سبيل المثال ، `orange_planet.png`.
 
 --- /task ---
 
