@@ -1,0 +1,26 @@
+---
+title: إطلاق الصاروخ
+hero_image: images/banner.png
+description: اصنع رسمًا متحركًا لصاروخ يدفع قمرًا صناعيًا إلى مداره
+version: 0.0.1
+listed: true
+copyedit: true
+last_tested: "2021-10-06"
+steps:
+  - title: المقدمة
+  - title: جهز المشهد
+  - title: يغادر!
+    completion: engaged
+  - title: آثار العادم
+  - title: حرق الوقود
+  - title: الوصول إلى المدار
+  - title: انعكاس
+    knowledge_quiz:
+      path: quiz1
+      version: 1
+      questions: 3
+      passing_score: 3
+    completion: internal
+  - title: قم بترقية او تطوير مشروعك
+    completion: external
+  - title: ماذا بعد؟
