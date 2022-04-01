@@ -23,7 +23,9 @@ Anota el nombre de archivo de la imagen que subiste y úsalo en el código en lu
 
 --- /collapse ---
 
-Aquí hay una versión del proyecto con todas esas actualizaciones, para que puedas ver cómo podrían funcionar: <iframe src="https://trinket.io/embed/python/76c7d66070?outputOnly=true&runOption=run&start=result" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen mark="crwd-mark"></iframe>
+Aquí hay una versión del proyecto con todas esas actualizaciones, para que puedas ver cómo podrían funcionar:
+
+<iframe src="https://trinket.io/embed/python/76c7d66070?outputOnly=true&runOption=run&start=result" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
 
 --- collapse ---
 ---
