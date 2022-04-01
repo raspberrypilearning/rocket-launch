@@ -20,6 +20,7 @@ steps:
     title: 燃料を燃やす
   - 
     title: 軌道に到達
+    completion: internal
   - 
     title: ふりかえり
     knowledge_quiz:
@@ -27,7 +28,6 @@ steps:
       version: 1
       questions: 3
       passing_score: 3
-    completion: internal
   - 
     title: プロジェクトをアップグレードする
     completion: external
