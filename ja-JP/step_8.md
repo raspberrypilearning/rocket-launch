@@ -23,7 +23,9 @@ title: Trinketに独自の画像を追加する
 
 --- /collapse ---
 
-これらすべてのアップグレードを含むプロジェクトのバージョンを次に示します。これにより、それらがどのように機能するかを確認できます。 <iframe src="https://trinket.io/embed/python/76c7d66070?outputOnly=true&runOption=run&start=result" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen mark="crwd-mark"></iframe>
+これらすべてのアップグレードを含むプロジェクトのバージョンを次に示します。これにより、それらがどのように機能するかを確認できます。
+
+<iframe src="https://trinket.io/embed/python/76c7d66070?outputOnly=true&runOption=run&start=result" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
 
 --- collapse ---
 ---
