@@ -1,85 +1,85 @@
-Import library code
+ライブラリコードをインポートする
 
-Setup global variables
+グローバル変数を設定する
 
-The draw_rocket function goes here
+draw_rocket関数はここにあります
 
-The draw_background function goes here
+draw_background関数はここにあります
 
-Setup your animation here
+ここでアニメーションをセットアップします
 
-Things to do in every frame
+フレームごとに行うこと
 
-Definitions for compatibility with the p5py processing library
+p5py処理ライブラリとの互換性のための定義
 
-Shape
+形
 
-Fonts
+フォント
 
-Text
+テキスト
 
-Colour
+色
 
-Images
+画像
 
-Environment
+環境
 
-Transform
+トランスフォーム
 
-Keyboard
+キーボード
 
-Your chosen planet
+選択した惑星
 
-Short for background(0, 0, 0) — black
+background(0, 0, 0) の省略形 - 黒
 
-Draw the image
+描画する
 
-Start at the bottom
+一番下から開始
 
-Use the global rocket_y variable
+rocket_yグローバル変数を使う
 
-Move the rocket
+ロケットを動かす
 
-Turn off the stroke
+境界線をなしにする
 
-Draw 25 burning exhaust ellipses
+排気ガスを25個描く
 
-Yellow
+黄色
 
-i increases each time the loop repeats
+ループが繰り返されるたびに i が増加する
 
-Reduce the amount of green
+緑の量を減らす
 
-Transparent grey
+透明な灰色
 
-Draw 20 random smoke ellipses
+ランダムな排煙を20個描く
 
-How much fuel is burned in each frame
+各フレームで燃焼する燃料の量
 
-Burn fuel
+燃料を燃焼させる
 
-Still got fuel
+まだ燃料が残っている
 
-Turn off any fill
+塗りつぶしをなしにする
 
-Set a white stroke
+境界線を白にする
 
-Still flying
+まだ飛行中
 
-No more fuel and not in orbit
+燃料がなくなり、軌道に乗っていない
 
-Failure
+失敗
 
-So the planet isn't tinted red in the next frame!
+次のフレームで惑星が赤い色合いにならないように!
 
-Success
+成功
 
-Too much fuel
+燃料が多すぎる
 
-So the planet isn't tinted in the next frame!
+次のフレームで惑星が色付けされないように!
 
-Green
+緑
 
-Amber
+アンバー
 
-Red
+赤
