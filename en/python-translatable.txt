@@ -1,0 +1,31 @@
+screen_size
+
+rocket_y
+
+burn
+
+orbit_radius
+
+orbit_y
+
+draw_rocket
+
+fuel
+
+burn
+
+Fuel left:
+
+rocket
+
+draw_background
+
+planet
+
+How many kilograms of fuel do you want to use?
+
+Looping
+
+points
+
+lives
