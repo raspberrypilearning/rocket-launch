@@ -23,7 +23,9 @@ Note le nom de fichier de l'image que tu as téléchargée et utilise-la dans le
 
 --- /collapse ---
 
-Voici une version du projet avec toutes ces mises à jour, afin que tu puisses voir comment elles pourraient fonctionner : <iframe src="https://trinket.io/embed/python/76c7d66070?outputOnly=true&runOption=run&start=result" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen mark="crwd-mark"></iframe>
+Voici une version du projet avec toutes ces mises à jour, afin que tu puisses voir comment elles pourraient fonctionner :
+
+<iframe src="https://trinket.io/embed/python/76c7d66070?outputOnly=true&runOption=run&start=result" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
 
 --- collapse ---
 ---
