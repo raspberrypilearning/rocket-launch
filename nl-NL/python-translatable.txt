@@ -1,29 +1,29 @@
-screen_size
+scherm_grootte
 
-rocket_y
+raket_y
 
-burn
+verbruik
 
-orbit_radius
+omloopbaan_straal
 
-orbit_y
+omloopbaan_y
 
-draw_rocket
+teken_raket
 
-fuel
+brandstof
 
-Fuel left:
+Brandstof over:
 
-rocket
+raket
 
-draw_background
+teken_achtergrond
 
-planet
+planeet
 
-How many kilograms of fuel do you want to use?
+Hoeveel kilogram brandstof wil je gebruiken?
 
-Looping
+Lus
 
-points
+punten
 
-lives
+levens
