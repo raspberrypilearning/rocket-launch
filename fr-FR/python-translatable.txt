@@ -1,29 +1,29 @@
-screen_size
+taille_ecran
 
-rocket_y
+fusee_y
 
-burn
+brule
 
-orbit_radius
+rayon_orbite
 
-orbit_y
+orbite_y
 
-draw_rocket
+dessine_fusee
 
-fuel
+carburant
 
-Fuel left:
+Carburant restant :
 
-rocket
+fusee
 
-draw_background
+dessine_arriere_plan
 
-planet
+planete
 
-How many kilograms of fuel do you want to use?
+Combien de kilos de carburant veux-tu utiliser ?
 
 Looping
 
 points
 
-lives
+vies
