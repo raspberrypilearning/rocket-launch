@@ -1,85 +1,85 @@
-Import library code
+Bibliotheekcode importeren
 
-Setup global variables
+Global variabelen instellen
 
-The draw_rocket function goes here
+De teken_raket functie komt hier
 
-The draw_background function goes here
+De functie teken_achtergrond komt hier
 
-Setup your animation here
+Stel hier je animatie in
 
-Things to do in every frame
+Dingen om te doen in elk frame
 
-Definitions for compatibility with the p5py processing library
+Definities voor de p5py-bibliotheek
 
-Shape
+Vormgeving
 
-Fonts
+Lettertypen
 
-Text
+Tekst
 
-Colour
+Kleur
 
-Images
+Afbeeldingen
 
-Environment
+Omgeving
 
-Transform
+Omzetten
 
-Keyboard
+Toetsenbord
 
-Your chosen planet
+Jouw gekozen planeet
 
-Short for background(0, 0, 0) — black
+Afkorting voor background(0, 0, 0) - zwart
 
-Draw the image
+Teken de afbeelding
 
-Start at the bottom
+Begin onderaan
 
-Use the global rocket_y variable
+Gebruik de global raket_y variabele
 
-Move the rocket
+Verplaats de raket
 
-Turn off the stroke
+Zet de lijn uit
 
-Draw 25 burning exhaust ellipses
+Teken 25 brandende uitstoot ellipsen
 
-Yellow
+Geel
 
-i increases each time the loop repeats
+i neemt toe elke keer dat de lus wordt herhaald
 
-Reduce the amount of green
+Verminder de hoeveelheid groen
 
-Transparent grey
+Transparant grijs
 
-Draw 20 random smoke ellipses
+Teken 20 willekeurige rook ellipsen
 
-How much fuel is burned in each frame
+Hoeveel brandstof wordt er in elk frame verbruikt
 
-Burn fuel
+Brandstof verbruik
 
-Still got fuel
+Nog genoeg brandstof
 
-Turn off any fill
+Zet elke vulling uit
 
-Set a white stroke
+Stel een witte lijn in
 
-Still flying
+Vliegt nog steeds
 
-No more fuel and not in orbit
+Geen brandstof meer en niet in een omloopbaan
 
-Failure
+Mislukt
 
-So the planet isn't tinted red in the next frame!
+Dus de planeet is niet rood gekleurd in het volgende frame!
 
-Success
+Gelukt
 
-Too much fuel
+Te veel brandstof
 
-So the planet isn't tinted in the next frame!
+Dus de planeet is niet rood gekleurd in het volgende frame!
 
-Green
+Groen
 
 Amber
 
-Red
+Rood
