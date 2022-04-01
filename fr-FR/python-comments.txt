@@ -1,85 +1,85 @@
-Import library code
+Importer le code de la bibliothèque
 
-Setup global variables
+Configurer les variables globales
 
-The draw_rocket function goes here
+La fonction dessine_fusee vient ici
 
-The draw_background function goes here
+La fonction dessine_arriere_plan vient ici
 
-Setup your animation here
+Configure ton animation ici
 
-Things to do in every frame
+Choses à faire dans chaque image
 
-Definitions for compatibility with the p5py processing library
+Définitions pour la compatibilité avec la bibliothèque de traitement p5py
 
-Shape
+Forme
 
-Fonts
+Polices
 
-Text
+Texte
 
-Colour
+Couleur
 
 Images
 
-Environment
+Environnement
 
-Transform
+Transformer
 
-Keyboard
+Clavier
 
-Your chosen planet
+Ta planète choisie
 
-Short for background(0, 0, 0) — black
+Raccourci pour background(0, 0, 0) - noir
 
-Draw the image
+Dessine l'image
 
-Start at the bottom
+Commencer en bas
 
-Use the global rocket_y variable
+Utiliser la variable globale fusee_y
 
-Move the rocket
+Déplace la fusée
 
-Turn off the stroke
+Désactive le trait
 
-Draw 25 burning exhaust ellipses
+Dessiner 25 ellipses d'échappement brûlant
 
-Yellow
+Jaune
 
-i increases each time the loop repeats
+i augmente à chaque fois que la boucle se répète
 
-Reduce the amount of green
+Réduire la quantité de vert
 
-Transparent grey
+Gris transparent
 
-Draw 20 random smoke ellipses
+Dessiner 20 ellipses de fumée aléatoire
 
-How much fuel is burned in each frame
+Combien de carburant est brûlé dans chaque image
 
-Burn fuel
+Brûler du carburant
 
-Still got fuel
+Encore assez de carburant
 
-Turn off any fill
+Désactive tout remplissage
 
-Set a white stroke
+Définir un trait blanc
 
-Still flying
+Toujours en vol
 
-No more fuel and not in orbit
+Plus de carburant et pas en orbite
 
-Failure
+Échec
 
-So the planet isn't tinted red in the next frame!
+Donc la planète n'est pas teintée de rouge dans l'image suivante !
 
-Success
+Succès
 
-Too much fuel
+Trop de carburant
 
-So the planet isn't tinted in the next frame!
+Donc la planète n'est pas teintée dans l'image suivante !
 
-Green
+Vert
 
-Amber
+Orange
 
-Red
+Rouge
