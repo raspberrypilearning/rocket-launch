@@ -12,7 +12,7 @@ draw_rocket
 
 fuel
 
-Fuel left:
+Υπολειπόμενο καύσιμο:
 
 rocket
 
@@ -20,9 +20,9 @@ draw_background
 
 planet
 
-How many kilograms of fuel do you want to use?
+Πόσα κιλά καυσίμου θέλεις να χρησιμοποιήσεις;
 
-Looping
+Βρόχος
 
 points
 
