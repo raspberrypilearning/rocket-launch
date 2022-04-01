@@ -1,85 +1,85 @@
-Import library code
+Importar código de biblioteca
 
-Setup global variables
+Configurar variables globales
 
-The draw_rocket function goes here
+La función dibujar_cohete va aquí
 
-The draw_background function goes here
+La función dibujar_fondo va aquí
 
-Setup your animation here
+Configura tu animación aquí
 
-Things to do in every frame
+Cosas que hacer en cada cuadro
 
-Definitions for compatibility with the p5py processing library
+Definiciones de compatibilidad con la biblioteca de procesamiento p5py
 
-Shape
+Forma
 
-Fonts
+Fuentes
 
-Text
+Texto
 
-Colour
+Color
 
-Images
+Imágenes
 
-Environment
+Ambiente
 
-Transform
+Transformar
 
-Keyboard
+Teclado
 
-Your chosen planet
+Tu planeta elegido
 
-Short for background(0, 0, 0) — black
+Abreviatura de fondo (0, 0, 0) - negro
 
-Draw the image
+Dibujar la imagen
 
-Start at the bottom
+Comienza en la parte inferior
 
-Use the global rocket_y variable
+Utiliza la variable global cohete_y
 
-Move the rocket
+Mueve el cohete
 
-Turn off the stroke
+Desactiva el trazo
 
-Draw 25 burning exhaust ellipses
+Dibujar 25 elipses de escape en llamas
 
-Yellow
+Amarillo
 
-i increases each time the loop repeats
+i aumenta cada vez que se repite el bucle
 
-Reduce the amount of green
+Reduce la cantidad de verde
 
-Transparent grey
+Gris transparente
 
-Draw 20 random smoke ellipses
+Dibujar 20 elipses de humo al azar
 
-How much fuel is burned in each frame
+Cuánto combustible se quema en cada fotograma
 
-Burn fuel
+Quemar combustible
 
-Still got fuel
+Todavía tengo combustible
 
-Turn off any fill
+Desactiva cualquier relleno
 
-Set a white stroke
+Establecer un trazo blanco
 
-Still flying
+Sigue volando
 
-No more fuel and not in orbit
+No más combustible y no en órbita
 
-Failure
+Fallo
 
-So the planet isn't tinted red in the next frame!
+¡Así que el planeta no está teñido de rojo en el siguiente cuadro!
 
-Success
+Éxito
 
-Too much fuel
+Demasiado combustible
 
-So the planet isn't tinted in the next frame!
+¡De esta manera el planeta no está teñido en el siguiente cuadro!
 
-Green
+Verde
 
-Amber
+Ámbar
 
-Red
+Rojo
