@@ -23,7 +23,9 @@ Noteer de bestandsnaam van de afbeelding die je hebt geüpload en gebruik deze i
 
 --- /collapse ---
 
-Hier is een versie van het project met al die upgrades, zodat je kunt zien hoe ze zouden kunnen werken: <iframe src="https://trinket.io/embed/python/76c7d66070?outputOnly=true&runOption=run&start=result" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen mark="crwd-mark"></iframe>
+Hier is een versie van het project met al die upgrades, zodat je kunt zien hoe ze zouden kunnen werken:
+
+<iframe src="https://trinket.io/embed/python/76c7d66070?outputOnly=true&runOption=run&start=result" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
 
 --- collapse ---
 ---
