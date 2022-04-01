@@ -20,6 +20,7 @@ steps:
     title: حرق الوقود
   - 
     title: الوصول إلى المدار
+    completion: internal
   - 
     title: انعكاس
     knowledge_quiz:
@@ -27,7 +28,6 @@ steps:
       version: 1
       questions: 3
       passing_score: 3
-    completion: internal
   - 
     title: قم بترقية او تطوير مشروعك
     completion: external
