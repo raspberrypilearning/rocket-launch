@@ -1,85 +1,85 @@
-Import library code
+استيراد مكتبة الشفرات البرمجية
 
-Setup global variables
+تهيئة المتغيرات العامة
 
-The draw_rocket function goes here
+يتم وضع دالة draw_rocket هنا
 
-The draw_background function goes here
+يتم وضع دالة draw_background هنا
 
-Setup your animation here
+قم بإعداد الرسوم المتحركة الخاصة بك هنا
 
-Things to do in every frame
+أشياء للقيام بها في كل إطار
 
-Definitions for compatibility with the p5py processing library
+تعاريف للتوافق مع مكتبة معالجة p5py
 
-Shape
+شكل
 
-Fonts
+الخطوط
 
-Text
+نص
 
-Colour
+اللون
 
-Images
+صور
 
-Environment
+بيئة
 
-Transform
+تحول
 
-Keyboard
+لوحة المفاتيح
 
-Your chosen planet
+الكوكب الذي تختاره
 
-Short for background(0, 0, 0) — black
+اختصار للخلفية (0, 0, 0) - اسود
 
-Draw the image
+ارسم الصورة
 
-Start at the bottom
+ابدأ من الأسفل
 
-Use the global rocket_y variable
+استخدم متغير الصاروخ rocket_y variable
 
-Move the rocket
+حرك الصاروخ
 
-Turn off the stroke
+إيقاف السكتة الدماغية
 
-Draw 25 burning exhaust ellipses
+ارسم 25 علامة ناقصة لعادم مشتعلة
 
-Yellow
+أصفر
 
-i increases each time the loop repeats
+i يزيد في كل مرة تتكرر فيها الحلقة
 
-Reduce the amount of green
+تقليل مقدار القطع الناقص الأخضر
 
-Transparent grey
+رمادي شفاف
 
-Draw 20 random smoke ellipses
+ارسم 20 علامة حذف عشوائية للدخان
 
-How much fuel is burned in each frame
+كمية الوقود المحروقة في كل إطار
 
-Burn fuel
+حرق الوقود
 
-Still got fuel
+وقود لا يزال موجود
 
-Turn off any fill
+اطفاء أي fill
 
-Set a white stroke
+تعيين خط ابيض
 
-Still flying
+لا يزال يطير
 
-No more fuel and not in orbit
+لا مزيد من الوقود ولست على المدار
 
-Failure
+فشل
 
-So the planet isn't tinted red in the next frame!
+حتى لا يتلون الكوكوب باللون الاحمر في الإطار التالي!
 
-Success
+نجاح
 
-Too much fuel
+وقود كثير
 
-So the planet isn't tinted in the next frame!
+حتى لا يتم تلوين الكوكب في الإطار التالي!
 
-Green
+أخضر
 
-Amber
+العنبر
 
-Red
+أحمر
