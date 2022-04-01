@@ -20,6 +20,7 @@ steps:
     title: Καύση καυσίμου
   - 
     title: Φτάνοντας σε τροχιά
+    completion: internal
   - 
     title: Αναστοχασμός
     knowledge_quiz:
@@ -27,7 +28,6 @@ steps:
       version: 1
       questions: 3
       passing_score: 3
-    completion: internal
   - 
     title: Αναβάθμιση του έργου σου
     completion: external
