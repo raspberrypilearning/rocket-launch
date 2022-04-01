@@ -20,6 +20,7 @@ steps:
     title: Burn fuel
   - 
     title: Reaching orbit
+    completion: internal
   - 
     title: Reflection
     knowledge_quiz:
@@ -27,7 +28,6 @@ steps:
       version: 1
       questions: 3
       passing_score: 3
-    completion: internal
   - 
     title: Upgrade your project
     completion: external
