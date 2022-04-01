@@ -12,8 +12,6 @@ draw_rocket
 
 fuel
 
-burn
-
 Fuel left:
 
 rocket
