@@ -23,7 +23,9 @@ title:: Προσθήκη της δικής σου εικόνας στο Trinket
 
 --- /collapse ---
 
-Ακολουθεί μια έκδοση του έργου με όλες αυτές τις αναβαθμίσεις, ώστε να μπορείς να δεις πώς θα μπορούσαν να λειτουργήσουν: <iframe src="https://trinket.io/embed/python/76c7d66070?outputOnly=true&runOption=run&start=result" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen mark="crwd-mark"></iframe>
+Ακολουθεί μια έκδοση του έργου με όλες αυτές τις αναβαθμίσεις, ώστε να μπορείς να δεις πώς θα μπορούσαν να λειτουργήσουν:
+
+<iframe src="https://trinket.io/embed/python/76c7d66070?outputOnly=true&runOption=run&start=result" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
 
 --- collapse ---
 ---
