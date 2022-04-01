@@ -23,7 +23,9 @@ title: اضافة صورتك الخاصة الى Trinket
 
 --- /collapse ---
 
-إليك نسخة من المشروع مع كل تلك الترقيات، حتى تتمكن من معرفة كيفية عملها: <iframe src="https://trinket.io/embed/python/76c7d66070?outputOnly=true&runOption=run&start=result" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen mark="crwd-mark"></iframe>
+إليك نسخة من المشروع مع كل تلك الترقيات، حتى تتمكن من معرفة كيفية عملها:
+
+<iframe src="https://trinket.io/embed/python/76c7d66070?outputOnly=true&runOption=run&start=result" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
 
 --- collapse ---
 ---
