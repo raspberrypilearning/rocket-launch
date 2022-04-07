@@ -115,7 +115,7 @@ La biblioteca `p5` establece variables globales `width` y `height` según el tam
 --- code ---
 ---
 language: python 
-filename: main.py — draw_background() 
+filename: main.py — dibujar_fondo() 
 line_numbers: true 
 ine_number_start: 14
 line_highlights: 15-17

@@ -115,7 +115,7 @@ De `p5` bibliotheek stelt global variabelen `width` (breedte) en `height` (hoogt
 --- code ---
 ---
 language: python 
-filename: main.py — draw_background() 
+filename: main.py — teken_achtergrond() 
 line_numbers: true 
 line_number_start: 14
 line_highlights: 15-17

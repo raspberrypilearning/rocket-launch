@@ -66,7 +66,7 @@ Debes decir que deseas utilizar las variables globales `combustible` y `quemar`.
 --- code ---
 ---
 language: python 
-filename: main.py — draw_rocket() 
+filename: main.py — dibujar_cohete() 
 line_numbers: true 
 line_number_start: 15
 line_highlights: 15, 17-18
@@ -102,7 +102,7 @@ No es necesario sangrar la línea `image()` porque deseas dibujar el cohete siem
 --- code ---
 ---
 language: python 
-filename: main.py — draw_rocket() 
+filename: main.py — dibujar_cohete() 
 line_numbers: true 
 line_number_start: 15
 line_highlights: 16-31

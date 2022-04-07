@@ -48,7 +48,7 @@ Actualiza la función `dibujar_fondo()` para dibujar una elipse que represente l
 --- code ---
 ---
 language: python 
-filename: main.py - draw_background() 
+filename: main.py - dibujar_fondo() 
 line_numbers: true 
 line_number_start: 37
 line_highlights: 42-45
@@ -86,7 +86,7 @@ Puedes usar un `and` en declaraciones `if` para verificar si dos o más condicio
 --- code ---
 ---
 language: python 
-filename: main.py - draw_rocket() 
+filename: main.py - dibujar_cohete() 
 line_numbers: true 
 line_number_start: 14
 line_highlights: 19
@@ -116,7 +116,7 @@ El cohete debería tornarse color rojo si se queda sin combustible antes de alca
 --- code ---
 ---
 language: python 
-filename: main.py — draw_rocket() 
+filename: main.py — dibujar_cohete() 
 line_numbers: true 
 line_number_start: 30
 line_highlights: 34-35
@@ -152,7 +152,7 @@ La función `tint()` establece el color de tinte para todas las imágenes que se
 --- code ---
 ---
 language: python 
-filename: main.py - draw_rocket() 
+filename: main.py - dibujar_cohete() 
 line_numbers: true 
 line_number_start: 34
 line_highlights: 38
@@ -176,7 +176,7 @@ Usa la función `tint()` nuevamente, esta vez para colorear el cohete de verde s
 --- code ---
 ---
 language: python 
-filename: main.py - draw_rocket() 
+filename: main.py - dibujar_cohete() 
 line_numbers: true 
 line_number_start: 34
 line_highlights: 36-37

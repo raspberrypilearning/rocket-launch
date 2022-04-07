@@ -48,7 +48,7 @@ Werk de functie `teken_achtergrond()` bij om een ellips te tekenen die de satell
 --- code ---
 ---
 language: python 
-filename: main.py - draw_background() 
+filename: main.py - teken_achtergrond() 
 line_numbers: true 
 line_number_start: 37
 line_highlights: 42-45
@@ -86,7 +86,7 @@ Je kunt een `and` in `if`-statements gebruiken om te controleren of twee of meer
 --- code ---
 ---
 language: python 
-filename: main.py - draw_rocket() 
+filename: main.py - teken_raket() 
 line_numbers: true 
 line_number_start: 14
 line_highlights: 19
@@ -116,7 +116,7 @@ De raket moet rood gekleurd zijn als de brandstof opraakt voordat hij hoog genoe
 --- code ---
 ---
 language: python 
-filename: main.py — draw_rocket() 
+filename: main.py — teken_raket() 
 line_numbers: true 
 line_number_start: 30
 line_highlights: 34-35
@@ -152,7 +152,7 @@ De functie `tint()` stelt de tintkleur in voor alle afbeeldingen die worden gete
 --- code ---
 ---
 language: python 
-filename: main.py - draw_rocket() 
+filename: main.py - teken_raket() 
 line_numbers: true 
 line_number_start: 34
 line_highlights: 38
@@ -176,7 +176,7 @@ Gebruik de functie `tint()` opnieuw, deze keer om de raket groen te kleuren als 
 --- code ---
 ---
 language: python 
-filename: main.py - draw_rocket() 
+filename: main.py - teken_raket() 
 line_numbers: true 
 line_number_start: 34
 line_highlights: 36-37

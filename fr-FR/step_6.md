@@ -48,7 +48,7 @@ Mets à jour la fonction `dessine_arriere_plan()` pour dessiner une ellipse repr
 --- code ---
 ---
 language: python 
-filename: main.py - draw_background() 
+filename: main.py - desinne_arriere_plan() 
 line_numbers: true 
 line_number_start: 37
 line_highlights: 42-45
@@ -86,7 +86,7 @@ Tu peux utiliser les instructions `and` sur `if` pour vérifier si deux conditio
 --- code ---
 ---
 language: python 
-filename: main.py - draw_rocket() 
+filename: main.py - dessine_fusee() 
 line_numbers: true 
 line_number_start: 14
 line_highlights: 19
@@ -116,7 +116,7 @@ La fusée doit être colorée en rouge si elle manque de carburant avant d'être
 --- code ---
 ---
 language: python 
-filename: main.py — draw_rocket() 
+filename: main.py — dessine_fusee() 
 line_numbers: true 
 line_number_start: 30
 line_highlights: 34-35
@@ -152,7 +152,7 @@ La fonction `tint()` définit la couleur de teinte pour toutes les images dessin
 --- code ---
 ---
 language: python 
-filename: main.py - draw_rocket() 
+filename: main.py - dessine_fusee() 
 line_numbers: true 
 line_number_start: 34
 line_highlights: 38
@@ -176,7 +176,7 @@ Utilise à nouveau la fonction `tint()`, cette fois pour colorer la fusée en ve
 --- code ---
 ---
 language: python 
-filename: main.py - draw_rocket() 
+filename: main.py - dessine_fusee() 
 line_numbers: true 
 line_number_start: 34
 line_highlights: 36-37
