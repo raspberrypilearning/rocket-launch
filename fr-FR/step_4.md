@@ -31,7 +31,7 @@ Mets à jour ta fonction `dessine_fusee()` pour inclure une boucle `for` qui ré
 --- code ---
 ---
 language: python 
-filename: main.py - draw_rocket() 
+filename: main.py - dessine_fusee() 
 line_numbers: true 
 line_number_start: 12
 line_highlights: 16-22
@@ -72,7 +72,7 @@ Remplace l'appel par `fill()` pour définir la quantité de vert sur `255 - i*10
 --- code ---
 ---
 language: python 
-filename: main.py - draw_rocket() 
+filename: main.py - dessine_fusee() 
 line_numbers: true 
 line_number_start: 19
 line_highlights: 20
@@ -105,7 +105,7 @@ Dans chaque image de l'animation, 20 ellipses de tailles aléatoires seront dess
 --- code ---
 ---
 language: python 
-filename: main.py - draw_rocket() 
+filename: main.py - dessine_fusee() 
 line_numbers: true 
 line_number_start: 19
 line_highlights: 23-26

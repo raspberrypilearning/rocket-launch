@@ -66,7 +66,7 @@ Je moet aangeven dat je de global variabelen `brandstof` en `verbruik` wilt gebr
 --- code ---
 ---
 language: python 
-filename: main.py — draw_rocket() 
+filename: main.py — teken_raket() 
 line_numbers: true 
 line_number_start: 15
 line_highlights: 15, 17-18
@@ -102,7 +102,7 @@ De regel `image()` hoeft niet te worden ingesprongen omdat je altijd de raket wi
 --- code ---
 ---
 language: python 
-filename: main.py — draw_rocket() 
+filename: main.py — teken_raket() 
 line_numbers: true 
 line_number_start: 15
 line_highlights: 16-31

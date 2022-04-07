@@ -31,7 +31,7 @@ Actualiza la función `dibujar_cohete()` para incluir un bucle `for` que repita 
 --- code ---
 ---
 language: python 
-filename: main.py - draw_rocket() 
+filename: main.py - dibujar_cohete() 
 line_numbers: true 
 line_number_start: 12
 line_highlights: 16-22
@@ -72,7 +72,7 @@ Cambia la llamada a `fill()` para establecer la cantidad de verde en `255 - i*10
 --- code ---
 ---
 language: python 
-filename: main.py - draw_rocket() 
+filename: main.py - dibujar_cohete() 
 line_numbers: true 
 line_number_start: 19
 line_highlights: 20
@@ -105,7 +105,7 @@ En cada fotograma de la animación, se dibujarán 20 elipses de tamaños aleator
 --- code ---
 ---
 language: python 
-filename: main.py - draw_rocket() 
+filename: main.py - dibujar_cohete() 
 line_numbers: true 
 line_number_start: 19
 line_highlights: 23-26

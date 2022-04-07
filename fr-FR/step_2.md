@@ -115,7 +115,7 @@ La bibliothèque `p5` définit des variables globales `width` et `height` en fon
 --- code ---
 ---
 language: python 
-filename: main.py — draw_background() 
+filename: main.py — dessine_arriere_plan() 
 line_numbers: true 
 line_number_start: 14
 line_highlights: 15-17

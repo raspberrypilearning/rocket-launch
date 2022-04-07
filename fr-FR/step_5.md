@@ -66,7 +66,7 @@ Tu dois dire que tu veux utiliser les variables globales `carburant` et `brule`.
 --- code ---
 ---
 language: python 
-filename: main.py — draw_rocket() 
+filename: main.py — dessine_fusee() 
 line_numbers: true 
 line_number_start: 15
 line_highlights: 15, 17-18
@@ -102,7 +102,7 @@ La ligne `image()` n'a pas besoin d'être indentée car tu veux toujours dessine
 --- code ---
 ---
 language: python 
-filename: main.py — draw_rocket() 
+filename: main.py — dessine_fusee() 
 line_numbers: true 
 line_number_start: 15
 line_highlights: 16-31
