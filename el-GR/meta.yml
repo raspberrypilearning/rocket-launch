@@ -14,13 +14,13 @@ steps:
   - title: Εφέ καυσαερίων
   - title: Καύση καυσίμου
   - title: Φτάνοντας σε τροχιά
+    completion: internal
   - title: Αναστοχασμός
+    completion: external
     knowledge_quiz:
       path: quiz1
       version: 1
       questions: 3
       passing_score: 3
-    completion: internal
   - title: Αναβάθμιση του έργου σου
-    completion: external
   - title: Και τώρα;

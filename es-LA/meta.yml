@@ -14,13 +14,13 @@ steps:
   - title: Efectos de escape
   - title: Quemar combustible
   - title: Alcanzando la órbita
+    completion: internal
   - title: Reflexión
+    completion: external
     knowledge_quiz:
       path: quiz1
       version: 1
       questions: 3
       passing_score: 3
-    completion: internal
   - title: Mejora tu proyecto
-    completion: external
   - title: '¿Qué sigue?'

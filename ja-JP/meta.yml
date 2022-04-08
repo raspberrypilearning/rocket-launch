@@ -14,13 +14,13 @@ steps:
   - title: 排気効果
   - title: 燃料を燃やす
   - title: 軌道に到達
+    completion: internal
   - title: ふりかえり
+    completion: external
     knowledge_quiz:
       path: quiz1
       version: 1
       questions: 3
       passing_score: 3
-    completion: internal
   - title: プロジェクトをアップグレードする
-    completion: external
   - title: 次は何をしますか？
