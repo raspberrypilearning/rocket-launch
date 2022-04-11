@@ -1,24 +1,24 @@
 #!/bin/python3
 
-# استيراد مكتبة الشفرات البرمجية
+# Import library code
 from p5 import *
 from random import randint
 
-# تهيئة المتغيرات العامة
+# Setup global variables
 screen_size = 400
-rocket_y = screen_size # تبدأ من الأسفل
-burn = 100 # كمية الوقود المحروقة في كل إطار
+rocket_y = screen_size # start at the bottom
+burn = 100 # how much fuel is burned in each frame
 orbit_radius = 250
 orbit_y = screen_size - orbit_radius
 
-# يتم وضع دالة draw_rocket هنا
+# The draw_rocket function goes here
 def draw_rocket():
 
   global rocket_y, fuel, burn
   
-  if fuel >= burn and rocket_y > orbit_y: # لا يزال يطير
-    rocket_y - = 1 # حرك الصاروخ
-    fuel -= burn # حرق الوقود
+  if fuel >= burn and rocket_y > orbit_y: # still flying
+    rocket_y -= 1 # move the rocket
+    fuel -= burn # burn fuel
     print('Fuel left: ', fuel)
   
     no_stroke() # Turn off the stroke
@@ -31,39 +31,39 @@ def draw_rocket():
     for i in range(20): # draw 20 random smoke ellipses
       ellipse(width/2 + randint(-5, 5), rocket_y + randint(20, 50), randint(5, 10), randint(5, 10))
   
-  if fuel < burn and rocket_y > orbit_y: # لا مزيد من الوقود ولست على المدار
-    tint(255, 0, 0) # فشل
+  if fuel < burn and rocket_y > orbit_y: # No more fuel and not in orbit
+    tint(255, 0, 0) # Failure
   elif fuel < 1000 and rocket_y <= orbit_y:
-    tint(0, 255, 0) # نجاح
+    tint(0, 255, 0) # Success
   elif fuel >= 1000 and rocket_y <= orbit_y: 
-    tint(255, 200, 0) # وقود كثير
+    tint(255, 200, 0) # Too much fuel
   
   image(rocket, width/2, rocket_y, 64, 64)
   no_tint()
   
 
-# يتم وضع دالة draw_background هنا
+# The draw_background function goes here
 def draw_background():
-  background(0) # اختصار للخلفية (0, 0, 0) - اسود 
-  image(planet, width/2, height, 300, 300) # ارسم الصورة
+  background(0) # short for background(0, 0, 0) - black 
+  image(planet, width/2, height, 300, 300) # draw the image
   
-  no_fill() # اطفاء أي fill
-  stroke(255) # تعيين خط ابيض
+  no_fill() # Turn off any fill
+  stroke(255) # Set a white stroke
   stroke_weight(2)
   ellipse(width/2, height, orbit_radius*2, orbit_radius*2)
   
 
 def setup():
-  # قم بإعداد الرسوم المتحركة الخاصة بك هنا
+  # Setup your animation here
   size(screen_size, screen_size)
   image_mode(CENTER)
   global planet, rocket
-  planet = load_image('planet.png') # الكوكب الذي تختاره
+  planet = load_image('planet.png') # your chosen planet
   rocket = load_image('rocket.png')
 
 
 def draw():
-  # أشياء للقيام بها في كل إطار
+  # Things to do in every frame
   draw_background()  
   draw_rocket()
   
