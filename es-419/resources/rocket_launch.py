@@ -1,72 +1,72 @@
 #!/bin/python3
 
-# Importar código de biblioteca
+# Import library code
 from p5 import *
 from random import randint
 
-# Configurar variables globales
-tamano_pantalla = 400
-cohete_y = tamano_pantalla # comienza en la parte inferior
-quemar = 100 # cuánto combustible se quema en cada cuadro
-orbita_radio = 250
-orbita_y = tamano_pantalla - orbita_radio
+# Setup global variables
+screen_size = 400
+rocket_y = screen_size # start at the bottom
+burn = 100 # how much fuel is burned in each frame
+orbit_radius = 250
+orbit_y = screen_size - orbit_radius
 
-# La función dibujar_cohete va aquí
-def dibujar_cohete():
+# The draw_rocket function goes here
+def draw_rocket():
 
-  global cohete_y, combustible, quemar
+  global rocket_y, fuel, burn
   
-  if combustible >= quemar and cohete_y > orbita_y: # sigue volando
-    cohete_y -= 1 # mueve el cohete
-    combustible -= quemar # quemar combustible
-    print('Combustible restante: ', combustible)
+  if fuel >= burn and rocket_y > orbit_y: # still flying
+    rocket_y -= 1 # move the rocket
+    fuel -= burn # burn fuel
+    print('Fuel left: ', fuel)
   
-    no_stroke() # Desactiva el trazo
+    no_stroke() # Turn off the stroke
   
-    for i in range(25): # dibujar 25 elipses de escape en llamas
-      fill(255, 255 - i*10, 0) # amarillo
-      ellipse(width/2, cohete_y + i, 8, 3) # i aumenta cada vez que se repite el bucle
+    for i in range(25): # draw 25 burning exhaust ellipses
+      fill(255, 255 - i*10, 0) # yellow
+      ellipse(width/2, rocket_y + i, 8, 3) # i increases each time the loop repeats
     
-    fill(200, 200, 200, 100) # gris transparente
-    for i in range(20): # dibujar 20 elipses de humo al azar
-      ellipse(width/2 + randint(-5, 5), cohete_y + randint(20, 50), randint(5, 10), randint(5, 10))
+    fill(200, 200, 200, 100) # transparent grey
+    for i in range(20): # draw 20 random smoke ellipses
+      ellipse(width/2 + randint(-5, 5), rocket_y + randint(20, 50), randint(5, 10), randint(5, 10))
   
-  if combustible < quemar and cohete_y > orbita_y: # No más combustible y no en órbita
-    tint(255, 0, 0) # Fallo
-  elif combustible < 1000 and cohete_y <= orbita_y:
-    tint(0, 255, 0) # Éxito
-  elif combustible >= 1000 and cohete_y <= orbita_y: 
-    tint(255, 200, 0) # Demasiado combustible
+  if fuel < burn and rocket_y > orbit_y: # No more fuel and not in orbit
+    tint(255, 0, 0) # Failure
+  elif fuel < 1000 and rocket_y <= orbit_y:
+    tint(0, 255, 0) # Success
+  elif fuel >= 1000 and rocket_y <= orbit_y: 
+    tint(255, 200, 0) # Too much fuel
   
-  imagen(cohete, width/2, cohete_y, 64, 64)
+  image(rocket, width/2, rocket_y, 64, 64)
   no_tint()
   
 
-# La función dibujar_fondo va aquí
-def dibujar_fondo():
-  fondo(0) # abreviatura de fondo (0, 0, 0) - negro 
-  imagen(planeta, width/2, height, 300, 300) # dibujar la imagen
+# The draw_background function goes here
+def draw_background():
+  background(0) # short for background(0, 0, 0) - black 
+  image(planet, width/2, height, 300, 300) # draw the image
   
-  no_fill() # Desactiva cualquier relleno
-  stroke(255) # Establecer un trazo blanco
+  no_fill() # Turn off any fill
+  stroke(255) # Set a white stroke
   stroke_weight(2)
-  ellipse(width/2, height, orbita_radio*2, orbita_radio*2)
+  ellipse(width/2, height, orbit_radius*2, orbit_radius*2)
   
 
 def setup():
-  # Configura tu animación aquí
-  tamano(tamano_pantalla, tamano_pantalla)
+  # Setup your animation here
+  size(screen_size, screen_size)
   image_mode(CENTER)
-  global planeta, cohete
-  planeta = load_image('planet.png') # tu planeta elegido
-  cohete = load_image('cohete.png')
+  global planet, rocket
+  planet = load_image('planet.png') # your chosen planet
+  rocket = load_image('rocket.png')
 
 
-def dibujar():
-  # Cosas que hacer en cada cuadro
-  dibujar_fondo()  
-  dibujar_cohete()
+def draw():
+  # Things to do in every frame
+  draw_background()  
+  draw_rocket()
   
 
-combustible = int(input('¿Cuántos kilogramos de combustible quieres usar?'))
+fuel = int(input('How many kilograms of fuel do you want to use?'))
 run()
