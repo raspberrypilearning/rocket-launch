@@ -1,72 +1,72 @@
 #!/bin/python3
 
-#Εισαγωγή του κώδικα της βιβλιοθήκης
+# Import library code
 from p5 import *
 from random import randint
 
-# Ορισμός καθολικών μεταβλητών
+# Setup global variables
 screen_size = 400
-rocket_y = screen_size # ξεκινάει από το κάτω μέρος
-καύση = 100 # πόσο καύσιμο καίγεται σε κάθε καρέ
+rocket_y = screen_size # start at the bottom
+burn = 100 # how much fuel is burned in each frame
 orbit_radius = 250
 orbit_y = screen_size - orbit_radius
 
-# Η συνάρτηση draw_rocket πηγαίνει εδώ
+# The draw_rocket function goes here
 def draw_rocket():
 
   global rocket_y, fuel, burn
   
-  if fuel > burn and rocket_y > orbit_y: #Ακόμα πετάει
-    rocket_y -= 1 # μετακίνησε τον πύραυλο
-    καύσιμο -= καίω # καύση καυσίμου
-    print('Υπολειπόμενο καύσιμο: ', fuel)
+  if fuel >= burn and rocket_y > orbit_y: # still flying
+    rocket_y -= 1 # move the rocket
+    fuel -= burn # burn fuel
+    print('Fuel left: ', fuel)
   
-    no_stroke() #Απενεργοποίηση πινελιάς
+    no_stroke() # Turn off the stroke
   
-    for i in range(25): # σχεδίαση 25 ελλείψεων για την καύση καυσαερίων
-      fill(255, 255 - i*10, 0) # κίτρινο
-      ellipse(width/2, rocket_y + i, 8, 3) # i αυξάνεται κάθε φορά που ο βρόχος επαναλαμβάνεται
+    for i in range(25): # draw 25 burning exhaust ellipses
+      fill(255, 255 - i*10, 0) # yellow
+      ellipse(width/2, rocket_y + i, 8, 3) # i increases each time the loop repeats
     
-    fill(200, 200, 200, 100) # διαφανές γκρι
-    for i in range(20): # σχεδίαση 20 τυχαίων ελλείψεων καπνού
+    fill(200, 200, 200, 100) # transparent grey
+    for i in range(20): # draw 20 random smoke ellipses
       ellipse(width/2 + randint(-5, 5), rocket_y + randint(20, 50), randint(5, 10), randint(5, 10))
   
-  if fuel < burn and rocket_y > orbit_y: #Δεν υπάρχει καύσιμο και δεν είναι σε τροχιά
-    tint(255, 0, 0) # Αποτυχία
+  if fuel < burn and rocket_y > orbit_y: # No more fuel and not in orbit
+    tint(255, 0, 0) # Failure
   elif fuel < 1000 and rocket_y <= orbit_y:
-    tint(0, 255, 0) # Επιτυχία
+    tint(0, 255, 0) # Success
   elif fuel >= 1000 and rocket_y <= orbit_y: 
-    tint(255, 200, 0) # Πάρα πολύ καύσιμο
+    tint(255, 200, 0) # Too much fuel
   
   image(rocket, width/2, rocket_y, 64, 64)
   no_tint()
   
 
-# Η συνάρτηση draw_background πηγαίνει εδώ
+# The draw_background function goes here
 def draw_background():
   background(0) # short for background(0, 0, 0) - black 
-  image(planet, width/2, height, 300, 300) # σχεδίαση της εικόνας
+  image(planet, width/2, height, 300, 300) # draw the image
   
-  no_fill() # Απενεργοποήση οποιουδήποτε γεμίσματος
-  stroke(255) # Ορισμός μιας λευκής πινελιάς
+  no_fill() # Turn off any fill
+  stroke(255) # Set a white stroke
   stroke_weight(2)
   ellipse(width/2, height, orbit_radius*2, orbit_radius*2)
   
 
 def setup():
-  # Ορισμός της κινούμενης εικόνας σου εδώ
+  # Setup your animation here
   size(screen_size, screen_size)
   image_mode(CENTER)
   global planet, rocket
-  planet = load_image('planet.png') # ο πλανήτης που επέλεξες
+  planet = load_image('planet.png') # your chosen planet
   rocket = load_image('rocket.png')
 
 
 def draw():
-  # Πράγματα που πρέπει να γίνονται σε κάθε καρέ
+  # Things to do in every frame
   draw_background()  
   draw_rocket()
   
 
-fuel = int(input('Πόσα κιλά καυσίμου θέλεις να χρησιμοποιήσεις;'))
+fuel = int(input('How many kilograms of fuel do you want to use?'))
 run()
