@@ -1,28 +1,28 @@
 ---
-title: Rocket launch
+title: Lansio roced
 hero_image: images/banner.png
-description: Make an animation of a rocket propelling a satellite into orbit
+description: Gwnewch animeiddiad o roced yn gyrru lloeren i orbit
 version: 0.0.1
 listed: true
 copyedit: true
 last_tested: "2021-10-06"
 steps:
   - 
-    title: Introduction
+    title: Cyflwyniad
   - 
-    title: Set the scene
+    title: Gosod yr olygfa
   - 
-    title: Liftoff!
+    title: Ffwrdd â ni!
     completion: engaged
   - 
-    title: Exhaust effects
+    title: Effeithiau'r ecsôst
   - 
-    title: Burn fuel
+    title: Llosgi tanwydd
   - 
-    title: Reaching orbit
+    title: Cyrraedd orbit
     completion: internal
   - 
-    title: Reflection
+    title: Beth nesaf?
     completion: external
     knowledge_quiz:
       path: quiz1
@@ -30,6 +30,6 @@ steps:
       questions: 3
       passing_score: 3
   - 
-    title: Upgrade your project
+    title: Uwchraddio dy brosiect
   - 
-    title: What next?
+    title: Beth nesaf?
