@@ -37,6 +37,6 @@ Hoeveel brandstof is precies genoeg zonder al te veel over te houden?
 
 --- /print-only ---
 
-<p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;"> ![Dorothy Vaughan](images/dorothy_vaughan.jpeg){:width="300px"} Dorothy Vaughan heeft belangrijke bijdragen geleverd aan vroege ruimtevluchten. Toen ze zag dat de toekomst elektronische computers zou gebruiken, leerde ze zichzelf en haar team coderen.
+<p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;"> ![Dorothy Vaughan](images/dorothy_vaughan.jpeg){:width="300px"} Dorothy Vaughan heeft belangrijke bijdragen geleverd aan vroege ruimtevluchten. Toen ze zag dat er in de toekomst elektronische computers zouden worden gebruikt, leerde ze zichzelf en haar team coderen.
 
-De film *Hidden Figures* vertelt het verhaal van hoe Dorothy en andere zwarte vrouwen een sleutelrol speelden in het succes van het Amerikaanse ruimteprogramma. 
+De film *Hidden Figures* vertelt het verhaal van hoe Dorothy en andere zwarte vrouwen een sleutelrol speelden in het succes van het Amerikaanse ruimtevaart programma. 
