@@ -1,29 +1,29 @@
-## Set the scene
+## Gosod yr olygfa
 
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">
-The animation needs a space backdrop with a planet to launch the rocket from.
+Mae'r animeiddiad angen cefndir gofod gyda phlaned i lansio'r roced ohoni.
 </div>
 <div>
 
-![A planet against a black background.](images/step_2.png){:width="300px"}
+![Planed yn erbyn cefndir du.](images/step_2.png){:width="300px"}
 
 </div>
 </div>
 
 --- task ---
 
-Open the [project template](https://trinket.io/python/f2199f5a8c){:target="_blank"}.
+Agorwch [dempled y prosiect](https://trinket.io/python/f2199f5a8c){:target="_blank"}.
 
-If you have a Trinket account, you can click on the **Remix** button to save a copy to your `My Trinkets` library.
+Os oes gennych chi gyfrif Trinket, fe allwch chi glicio'r botwm **Remix** i gadw copi yn eich llyfrgell `My Trinkets`.
 
 --- /task ---
 
-You will use a `screen_size` variable to set the size of the screen and in calculations. Variables defined outside functions are **global** so you can use them anywhere in your program.
+Byddwch chi'n defnyddio newidyn `maint_sgrin` i osod maint y sgrin ac mewn cyfrifiadau. Mae newidynnau sy'n cael eu diffinio tu allan i swyddogaethau yn rhai **cyffredinol (global)** felly gallwch chi eu defnyddio unrhyw le yn eich rhaglen.
 
 --- task ---
 
-Find the comment `Setup global variables` and add a line of code to create your `screen_size` variable:
+Dewch o hyd i'r sylw `Gosod newidynnau cyffredinol` ac ychwanegu llinell o god i greu eich newidyn `maint_sgrin`:
 
 --- code ---
 ---
@@ -31,7 +31,7 @@ language: python filename: main.py line_numbers: true line_number_start: 7
 line_highlights: 8
 ---
 
-# Setup global variables
+# Gosod newidynnau cyffredinol
 screen_size = 400
 
 --- /code ---
@@ -40,7 +40,7 @@ screen_size = 400
 
 --- task ---
 
-Use the `screen_size` variable to create a square 400 by 400 pixels:
+Defnyddiwch y newidyn `maint_sgrin` i greu sgwâr 400 wrth 400 picsel:
 
 --- code ---
 ---
@@ -59,21 +59,21 @@ size(screen_size, screen_size)
 
 --- task ---
 
-The starter project has three different planet images and the moon provided for you. You can view these in the Trinket image library by selecting the **View and Add Images** button.
+Mae gan y prosiect dechreuol dair delwedd wahanol o blaned a'r lleuad wedi'u llunio'n barod i chi. Fe allwch chi weld y rhain yn llyfrgell ddelweddau Trinket drwy ddewis y botwm **View and Add Images**.
 
-![A plus symbol, an upload symbol, and an image symbol. The image symbol is highlighted.](images/trinket_image.png)
+![Symbol plws, symbol llwytho i fyny, a symbol delwedd. Mae'r symbol ddelwedd wedi'i amlygu.](images/trinket_image.png)
 
-**Choose:** Decide which image you want to use and make a note of the filename. For example, `orange_planet.png`.
+**Dewiswch:** Penderfynwch pa ddelwedd rydych chi am ei defnyddio a gwneud nodyn o enw'r ffeil. Er enghraifft, `orange_planet.png`.
 
 --- /task ---
 
-It's a good idea to load images in `setup()` so that they are ready when you need to use them and your animation will run quickly.
+Mae'n syniad da llwytho delweddau yn `setup()` fel eu bod yn barod pan fyddwch chi angen eu defnyddio a bydd eich animeiddiad yn rhedeg yn gyflym.
 
 --- task ---
 
-The `image_mode(CENTER)` line says that you will be positioning images by giving the coordinates of the centre of the image (instead of the top left corner).
+Mae'r llinell `image_mode(CENTER)` yn dweud byddwch chi'n lleoli delweddau drwy roi cyfesurynnau canol y ddelwedd (yn hytrach na'r gornel chwith uchaf).
 
-Also add code to the `setup()` function to load your chosen image into a `planet` global variable. The variable needs to be global so you can use it later when you draw the planet to the screen.
+Hefyd, ychwanegwch god at y swyddogaeth `setup()` i lwytho'r ddelwedd o'ch dewis i newidyn cyffredinol `planed`. Rhaid i'r newidyn fod yn un cyffredinol er mwyn i chi allu ei ddefnyddio nes ymlaen wrth lunio'r blaned ar y sgrin.
 
 --- code ---
 ---
@@ -95,13 +95,13 @@ planet = load_image('planet.png') #Your chosen planet
 
 --- task ---
 
-Define a `draw_background()` function, to draw the background, below the comment that tells you where it should go.
+Diffiniwch swyddogaeth `llunio_cefndir()` i lunio'r cefndir o dan y sylw sy'n dweud wrthych chi ble dylai fynd.
 
-Use `background(0)` to set the background colour to black and add an `image()` function to draw the planet. The `image()` function is laid out:
+Defnyddiwch `background(0)` i osod lliw'r cefndir i ddu ac ychwanegu swyddogaeth `image()` i lunio'r blaned. Mae'r swyddogaeth `image()` wedi'i gosod fel:
 
 `image(image filename, x-coordinate, y-coordinate, image_width, image_height)`
 
-The `p5` library sets global `width` and `height` variables based on the size of the screen. Use these in your code to position the planet with its centre half-way across (`width/2`) and at the bottom (`height`) of the screen.
+Mae'r llyfrgell `p5` yn gosod newidynnau `width` a `height` cyffredinol ar sail maint y sgrin. Defnyddiwch y rhain yn eich cod i leoli'r blaned â'i chanol hanner ffordd ar draws (`width/2`) ac ar waelod (`height`) y sgrin.
 
 --- code ---
 ---
@@ -109,7 +109,7 @@ language: python filename: main.py — draw_background() line_numbers: true line
 line_highlights: 15-17
 ---
 
-# The draw_background function goes here
+# Mae'r swyddogaeth llunio_cefndir yn mynd fan hyn
 def draw_background():   
 background(0) #Short for background(0, 0, 0) — black    
 image(planet, width/2, height, 300, 300) #Draw the image
@@ -117,13 +117,13 @@ image(planet, width/2, height, 300, 300) #Draw the image
 
 --- /code ---
 
-Putting all the code for drawing the background into one function makes your code easier to understand.
+Mae rhoi'r holl god ar gyfer llunio'r cefndir mewn un swyddogaeth yn ei gwneud hi'n haws deall eich cod.
 
 --- /task ---
 
 --- task ---
 
-To make the background appear, call `draw_background()` in `draw()`. This will cause the background to be re-drawn every time `draw()` is called, covering over any older drawing:
+I wneud i'r cefndir ymddangos, galwch `llunio_cefndir()` yn `draw()`. Bydd hyn yn ail-lunio'r cefndir bob tro mae `draw()` yn cael ei galw, gan orchuddio unrhyw luniad hŷn:
 
 --- code ---
 ---
@@ -141,7 +141,7 @@ draw_background()
 
 --- task ---
 
-**Test:** Run your code and check that it draws a black background with half a planet at the bottom.
+**Profi:** Rhedwch eich cod i wneud yn siŵr ei fod yn llunio cefndir du â hanner planed ar y gwaelod.
 
 --- /task ---
 
