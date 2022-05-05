@@ -1,28 +1,28 @@
-## Introduction
+## Cyflwyniad
 
-Make an animation to propel a satellite into orbit — by hitching a ride on a rocket! Your animation will create cool graphic effects and simulate the best amount of fuel to give the rocket.
+Gwnewch animeiddiad i yrru lloeren i orbit — drwy gael pàs ar roced! Bydd eich animeiddiad yn creu effeithiau graffeg cŵl ac yn efelychu'r cyfaint gorau o danwydd i'w roi i'r roced.
 
-![Side-by-side screens showing one green rocket in orbit and one red rocket that has failed to reach orbit.](images/showcase.png)
+![Sgriniau ochr yn ochr yn dangos un roced werdd mewn orbit ac un roced goch sydd wedi methu cyrraedd orbit.](images/showcase.png)
 
 <p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;">
-<span style="color: #0faeb0">**Computer simulations**</span> are used to calculate what will happen when we send a rocket into space. Running simulations and making plans on a computer reduces the risk of expensive or dangerous problems in space.
+Mae <span style="color: #0faeb0">**efelychiadau cyfrifiadurol**</span> yn cael eu defnyddio i gyfrifo beth fydd yn digwydd pan fyddwn ni'n anfon roced i'r gofod. Mae rhedeg efelychiadau a gwneud cynlluniau ar gyfrifiadur yn lleihau'r risg o broblemau drud neu beryglus yn y gofod.
 </p>
 
-You will:
-+ Use **images** in your animations
-+ Use `for` loops to repeat actions
-+ Join conditions with `and`
+Byddwch chi'n:
++ Defnyddio **delweddau** yn eich animeiddiadau
++ Defnyddio dolenni `for` i ailadrodd gweithrediadau
++ Ymuno amodau gydag `and`
 
 --- no-print ---
 
 --- task ---
 
-### Try it
+### Rhowch gynnig arni
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 175px; flex-grow: 1">  
-You need to supply the rocket with enough fuel to reach the satellite orbit. Try a small amount (around 10,000kg) and a very large amount (around 50,000kg) to see what happens. 
+Mae angen i chi roi digon o danwydd i'r roced iddi gyrraedd orbit y lloeren. Rhowch gynnig ar ychydig bach (tua 10,000kg) a llawer iawn (tua 50,000kg) i weld beth sy'n digwydd. 
 
-How much fuel is just enough without too much left over?
+Faint o danwydd sy'n ddigon heb adael gormod yn weddill?
 </div>
 <iframe src="https://trinket.io/embed/python/622b4dd113?outputOnly=true&runOption=run&start=result" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
 </div>
@@ -33,10 +33,10 @@ How much fuel is just enough without too much left over?
 
 --- print-only ---
 
-![Completed project.](images/showcase.png)
+![Prosiect gorffenedig.](images/showcase.png)
 
 --- /print-only ---
 
-<p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;"> ![Dorothy Vaughan](images/dorothy_vaughan.jpeg){:width="300px"} Dorothy Vaughan made important contributions to early spaceflight. Seeing that the future would use electronic computers, she taught herself, and her team, how to code.
+<p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;"> ![Dorothy Vaughan](images/dorothy_vaughan.jpeg){:width="300px"} Roedd Dorothy Vaughan wedi gwneud cyfraniadau pwysig i deithiau cynnar i'r gofod. Gan weld y byddai'r dyfodol yn defnyddio cyfrifiaduron electronig, dysgodd ei hun a'i thîm sut i godio.
 
-The film *Hidden Figures* tells the story of how Dorothy and other Black women played a key role in the success of the US space program. 
+Mae'r ffilm *Hidden Figures* yn adrodd stori'r rôl allweddol yr oedd Dorothy a merched Du eraill wedi'i chwarae yn llwyddiant rhaglen ofod yr Unol Daleithiau. 
