@@ -1,19 +1,19 @@
-## Reflection
+## Beth nesaf?
 
-Well done, you have learnt a lot! Now it's time to reflect — reflecting is an important part of learning because it helps make new connections in your brain.
+Da iawn! Rydych chi wedi dysgu cryn dipyn! Amser myfyrio nawr — mae myfyrio'n rhan bwysig o ddysgu oherwydd mae'n helpu i wneud cysylltiadau newydd yn eich ymennydd.
 
-Answer the three questions below to reflect on what you've learnt.
+Atebwch y tri chwestiwn isod i fyfyrio ar yr hyn rydych chi wedi'i ddysgu.
 
-After each question, press **submit**. You will be guided towards the correct answer. You can do this activity as many times as you want to.
+Ar ôl bob cwestiwn, pwyswch **cyflwyno**. Byddi di'n cael dy dywys i'r ateb cywir. Galli di wneud hyn gymaint ag y mynni.
 
-Have fun!
+Mwynha!
 
 --- question ---
 ---
-legend: Question 1 of 3
+legend: Cwestiwn 1 o 3
 ---
 
-Which output would you expect if you ran the program below?
+Pa allbwn fyddech chi'n ei ddisgwyl pe baech chi'n rhedeg y rhaglen isod?
 
 ```python
 for i in range(5):
@@ -22,35 +22,35 @@ for i in range(5):
 
 --- choices ---
 
-- ( ) Looping 1 <br> Looping 2 <br> Looping 3 <br> Looping 4 <br> Looping 5
+- ( ) Gwneud dolen 1 <br> Gwneud dolen 2 <br> Gwneud dolen 3 <br> Gwneud dolen 4 <br> Gwneud dolen 5
 
   --- feedback ---
 
-Not quite, a `for` loop in Python repeats its code once for each item in a sequence it's given, and here `range` creates a sequence starting from `0`.
+Ddim yn hollol, mae dolen `for` yn Python yn ailadrodd ei chod unwaith i bob eitem mewn dilyniant sy'n cael ei rhoi iddi, ac yma mae `range` yn creu dilyniant yn dechrau o `0`.
 
   --- /feedback ---
 
-- ( ) Looping i
+- ( ) Gwneud dolen i
 
   --- feedback ---
 
-Not quite, the **loop variable** from a `for` loop — in this case `i` — holds the current value from the sequence the loop is working through.
+Ddim yn hollol, mae'r **newidyn dolen** o ddolen `for` — yn yr achos hwn `i` — yn dal y gwerth presennol o'r dilyniant mae'r ddolen yn gweithio drwyddo.
 
   --- /feedback ---
 
-- (x) Looping 0 <br> Looping 1 <br> Looping 2 <br> Looping 3 <br> Looping 4
+- (x) Gwneud dolen 0 <br> Gwneud dolen 1 <br> Gwneud dolen 2 <br> Gwneud dolen 3 <br> Gwneud dolen 4
 
   --- feedback ---
 
-Correct. The loop runs once, in order, for each item `i` in the range [0, 1, 2, 3, 4].
+Cywir. Mae'r ddolen yn rhedeg unwaith, mewn trefn, ar gyfer pob eitem `i` yn yr amrediad [0, 1, 2, 3, 4].
 
   --- /feedback ---
 
-- ( ) Looping 4 <br> Looping 3 <br> Looping 2 <br> Looping 1 <br> Looping 0
+- ( ) Gwneud dolen 4 <br> Gwneud dolen 3 <br> Gwneud dolen 2 <br> Gwneud dolen 1 <br> Gwneud dolen 0
 
   --- feedback ---
 
-Nto quite, a `for` loop runs through the sequence of items it is given in order. Because `range()` gives an ordered sequence from 0 to the number it is passed, that is the order you would expect to see printed out by this `for` loop.
+Ddim yn hollol, mae dolen `for` yn rhedeg drwy dilyniant o eitemau sy'n cael ei rhoi iddi mewn trefn. Oherwydd bod `range()` yn rhoi dilyniant mewn trefn o 0 i'r rhif sy'n cael ei basio iddo, dyna'r drefn byddech chi'n disgwyl gweld yn cael ei phrintio gan y ddolen `for` hon.
 
   --- /feedback ---
 
