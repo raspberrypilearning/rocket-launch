@@ -1,20 +1,20 @@
-## Burn fuel
+## Llosgi tanwydd
 
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">
 
-One of the most important things to decide when launching a rocket is how much fuel to load into it. 
+Un o'r pethau pwysicaf i benderfynu arnyn nhw wrth lansio roced yw faint o danwydd i'w lwytho arni. 
 
-To do this, you need to simulate how much fuel will be burned on the journey.
+I wneud hyn, rhaid i chi efelychu faint o danwydd fydd yn cael ei losgi yn ystod y daith.
 </div>
 
-![The program with a question in the output area asking how much fuel is required.](images/burn_question_full.png){:width="300px"}
+![Y rhaglen gyda chwestiwn yn yr ardal allbwn yn gofyn faint o danwydd sydd ei angen.](images/burn_question_full.png){:width="300px"}
 
 </div>
 
 --- task ---
 
-Add a variable to keep track of how much fuel your rocket burns (in frames).
+Ychwanegwch newidyn i gadw golwg ar faint o danwydd mae eich roced yn ei losgi (mewn fframiau).
 
 --- code ---
 ---
@@ -22,7 +22,7 @@ language: python filename: main.py line_numbers: true line_number_start: 7
 line_highlights: 10
 ---
 
-# Setup global variables
+# Gosod newidynnau cyffredinol
 screen_size = 400   
 rocket_y = screen_size  
 burn = 100 #How much fuel is burned in each frame
@@ -34,7 +34,7 @@ burn = 100 #How much fuel is burned in each frame
 
 --- task ---
 
-At the bottom of your program, add code to ask the user how much fuel to add to the rocket and store their answer in a `fuel` global variable.
+Ar waelod eich rhaglen, ychwanegwch god i ofyn i'r defnyddiwr faint o danwydd i'w ychwanegu at y roced, a storio ei ateb mewn newidyn `tanwydd` cyffredinol.
 
 --- code ---
 ---
@@ -49,13 +49,13 @@ run()
 
 --- /task ---
 
-The rocket should only move if it hasn't burned all of its fuel.
+Dylai'r roced ddim ond symud os nad yw wedi llosgi ei holl danwydd.
 
 --- task ---
 
-Add code to the `draw_rocket()` function to reduce the remaining `fuel` by the `burn` of each frame. Use `print()` to show how much fuel is left in each frame.
+Ychwanegwch god at y swyddogaeth `llunio_roced()` i leihau'r `tanwydd` sy'n weddill o werth `llosgi` bob ffrâm. Defnyddiwch `print()` i ddangos faint o danwydd sy'n weddill ym mhob ffrâm.
 
-You need to say that you want to use the global `fuel` and `burn` variables.
+Rhaid i chi ddweud eich bod am ddefnyddio'r newidynnau `tanwydd` a `llosgi` cyffredinol.
 
 --- code ---
 ---
@@ -74,21 +74,21 @@ print('Fuel left: ', fuel)
 
 --- task ---
 
-**Test:** Run your program to check that the animation doesn't start until `How many kilograms of fuel do you want to use?` has been answered. Try entering `30000` as the amount of fuel.
+**Profi:** Rhedwch eich rhaglen i wneud yn siŵr nad yw'r animeiddiad yn dechrau nes bod `Sawl cilogram o danwydd ydych chi am ei ddefnyddio?` wedi'i ateb. Rhowch gynnig ar roi `30000` fel y cyfaint tanwydd.
 
-The rocket will keep going even if it has no fuel left.
+Bydd y roced yn dal i fynd hyd yn oed os nad oes ganddi danwydd yn weddill.
 
-![The program with a question in the output area asking how much fuel is required.](images/burn_question.png)
+![Y rhaglen gyda chwestiwn yn yr ardal allbwn yn gofyn faint o danwydd sydd ei angen.](images/burn_question.png)
 
 --- /task ---
 
 --- task ---
 
-The rocket should only move if it has enough fuel left. Add an `if` statement to check that `fuel >= burn`.
+Dylai'r roced ddim ond symud os oes ganddi ddigon o danwydd yn weddill. Ychwanegwch ddatganiad `if` i wirio bod `tanwydd>= llosgi`.
 
-You will need to indent all of the lines of code before the `image()` function call. To do this, highlight all of the lines with the mouse and then tap the <kbd>Tab</kbd> on the keyboard to indent all the lines at once.
+Bydd angen i chi fewnoli'r holl linellau cod cyn galw'r swyddogaeth `image()`. I wneud hyn, amlygwch yr holl linellau gyda'r llygoden a tharo <kbd>Tab</kbd> ar y fysellfwrdd i fewnoli'r holl linellau ar unwaith.
 
-The `image()` line doesn't need to be indented because you always want to draw the rocket.
+Does dim angen mewnoli'r llinell `image()` oherwydd rydych chi eisiau llunio'r roced bob tro.
 
 --- code ---
 ---
@@ -121,13 +121,13 @@ print('Fuel left: ', fuel)
 
 --- task ---
 
-**Test:** Run your program to check that the rocket stops when there is no fuel left.
+**Profi:** Rhedwch eich rhaglen i wneud yn siŵr bod y roced yn stopio pan nad oes tanwydd yn weddill.
 
-![Image of a rocket in the middle of the screen with the statement 'Fuel left: 0'.](images/burn_empty.png){:width="300px"}
+![Delwedd o roced yng nghanol y sgrin gyda'r datganiad 'Tanwydd yn weddill: 0'.](images/burn_empty.png){:width="300px"}
 
 --- /task ---
 
-This computer simulation isn't very accurate, but it's good enough for our animation.
+Dydy'r efelychiad cyfrifiadurol hwn ddim yn gywir iawn, ond mae'n ddigon da i'n hanimeiddiad.
 
 --- save ---
 
