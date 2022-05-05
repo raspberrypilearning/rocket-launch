@@ -1,32 +1,32 @@
-## Exhaust effects
+## Effeithiau'r ecsôst
 
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">
 
-The rocket will look more realistic with some special effects to simulate the exhaust trail. 
+Bydd y roced yn edrych yn fwy realistig gyda rhywfaint o effeithiau arbennig i efelychu ôl yr ecsôst. 
 
-You can create cool effects by using a `for` loop to draw lots of shapes in each frame.
+Fe allwch chi greu effeithiau cŵl drwy ddefnyddio dolen `for` i lunio nifer o siapiau ym mhob ffrâm.
 
 </div>
 <div>
 
-![The rocket mid flight with an exhaust trail.](images/flying_rocket.gif){:width="300px"}
+![Y roced wrth hedfan gydag ôl ecsôst.](images/flying_rocket.gif){:width="300px"}
 
 </div>
 </div>
 
 <p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;">
-Coding is used to make <span style="color: #0faeb0">**graphic effects**</span> for movies and games. It's much quicker to write code than to draw each frame of an animation individually. </p>
+Mae codio'n cael ei ddefnyddio i wneud <span style="color: #0faeb0">**effeithiau graffeg**</span> ar gyfer ffilmiau a gemau. Mae'n gyflymach o lawer ysgrifennu cod na llunio pob ffrâm mewn animeiddiad yn unigol. </p>
 
-Drawing lots of yellow ellipses at different `y` positions creates an exhaust trail with a round bottom.
+Mae llunio nifer o elipsau melyn mewn gwahanol safleoedd `y` yn creu ôl ecsôst gyda gwaelod crwn.
 
 --- task ---
 
-A `for` loop repeats a piece of code once for every item it is given. To run the code in a `for` loop a certain number of times, you can use the `range()` function. For example, `range(5)` creates a sequence of five numbers starting from 0, so [0, 1, 2, 3, 4].
+Mae dolen `for` yn ailadrodd darn o god unwaith ar gyfer bob eitem sy'n cael ei rhoi iddi. Fe allwch chi ddefnyddio'r swyddogaeth `range()` i redeg y cod mewn dolen `for` hyn a hyn o weithiau. Er enghraifft, mae `range(5)` yn creu dilyniant o bum rhif yn dechrau ar 0, felly [0, 1, 2, 3, 4].
 
-Each time the `for` loop repeats, it sets a variable to the current item so that you can use it in the loop.
+Bob tro mae'r ddolen `for` yn ailadrodd, mae'n gosod newidyn ar gyfer yr eitem bresennol er mwyn i chi allu ei defnyddio yn y ddolen.
 
-Update your `draw_rocket()` function to include a `for` loop that repeats the drawing of `25` exhaust ellipses. The **loop variable** `i` gets added to `rocket_y` to draw each ellipse further below the rocket.
+Diweddarwch eich swyddogaeth `llunio_roced()` i gynnwys dolen `for` sy'n ailadrodd y lluniad o `25` elips ecsôst. Mae'r **newidyn dolen** `i` yn cael ei ychwanegu at `roced_y` i lunio pob elips yn bellach o dan y roced.
 
 --- code ---
 ---
@@ -54,17 +54,17 @@ ellipse(width/2, rocket_y + i, 8, 3) #i increases each time the loop repeats
 
 --- task ---
 
-**Test:** Run your code to check the rocket has a new exhaust trail.
+**Profi:** Rhedwch eich cod i wneud yn siŵr bod gan y roced ôl ecsôst newydd.
 
-![A close-up of the rocket with an exhaust trail.](images/rocket_exhaust.png){:width="300px"}
+![Golwg agos ar y roced gydag ôl ecsôst.](images/rocket_exhaust.png){:width="300px"}
 
 --- /task ---
 
-The `i` variable can also be used to create a colour gradient with less green in each ellipse that gets drawn.
+Mae modd defnyddio'r newidyn `i` hefyd i greu graddiant lliw gyda llai o wyrdd ym mhob elips sy'n cael ei lunio.
 
 --- task ---
 
-Change the call to `fill()` to set the amount of green to `255 - i*10` so that the first ellipse has equal amounts of red and green and the last ellipse has very little green.
+Newidiwch yr alwad i `fill()` i osod lefel y gwyrdd ar `255 - i*10` fel bod gan yr elips cyntaf yr un faint o goch a gwyrdd, a'r elips olaf ychydig iawn o wyrdd.
 
 --- code ---
 ---
@@ -82,19 +82,19 @@ ellipse(width/2, rocket_y + i, 8, 3)
 
 --- task ---
 
-**Test:** Check that you get a trail of ellipses gradually changing from yellow to red.
+**Profi:** Gwnewch yn siŵr eich bod yn cael ôl elips sy'n newid o felyn i goch yn raddol.
 
 --- /task ---
 
-The smoke exhaust trail is created by drawing lots of slightly transparent grey ellipses at different positions in each frame.
+Mae'r ôl mwg ecsôst yn cael ei greu drwy lunio nifer o elips llwyd sydd ychydig yn dryloyw mewn safle gwahanol ym mhob ffrâm.
 
-![A slow animation of the smoke effect.](images/rocket_smoke.gif)
+![Animeiddiad araf o'r effaith mwg.](images/rocket_smoke.gif)
 
 --- task ---
 
-This time the `fill()` is outside the loop as the colour is the same for each smoke ellipse. The fourth input to `fill()` is the opacity, a low opacity value makes the colour more transparent so you can see the shapes underneath.
+Tro hwn, mae'r `fill()` tu allan i'r ddolen gan fod y lliw yr un fath i bob elips mwg. Anhryloywedd yw pedwerydd mewnbwn `fill()`. Mae gwerth anhryloywedd isel yn gwneud y lliw yn fwy tryloyw er mwyn i chi allu gweld y siapiau oddi tano.
 
-In each frame of the animation, 20 ellipses of random sizes will be drawn at random positions.
+Ym mhob ffrâm yn yr animeiddiad, bydd 20 elips o feintiau ar hap yn cael eu llunio mewn safleoedd ar hap.
 
 --- code ---
 ---
@@ -118,9 +118,9 @@ ellipse(width/2 + randint(-5, 5), rocket_y + randint(20, 50), randint(5, 10), ra
 
 --- task ---
 
-**Test:** Run your program and check the exhaust fumes are visible.
+**Profi:** Rhedwch eich rhaglen a gwneud yn siŵr bod mwg yr ecsôst yn weladwy.
 
-![A close-up of the rocket and exhaust trail with added smoke.](images/rocket_exhaust_circles.gif)
+![Golwg agos ar y roced a'r ôl ecsôst gyda mwy o fwg.](images/rocket_exhaust_circles.gif)
 
 --- /task ---
 
