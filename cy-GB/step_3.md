@@ -1,27 +1,27 @@
-## Liftoff!
+## Ffwrdd â ni!
 
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">
-Each time a new frame is drawn, the rocket needs to move up the screen to create an animation effect.
+Bob tro mae ffrâm newydd yn cael ei llunio, mae angen i'r roced symud i fyny'r sgrin i greu effaith animeiddio.
 </div>
 <div>
 
-![A rocket flying at a steady speed from the bottom to the top of the screen.](images/fly.gif){:width="300px"}
+![Roced yn hedfan ar gyflymder cyson o waelod y sgrin i'r brig.](images/fly.gif){:width="300px"}
 
 </div>
 </div>
 
 --- task ---
 
-The starter project has a rocket image provided for you.
+Mae'r prosiect dechreuol wedi darparu delwedd o roced i chi.
 
-![Image of the rocket in the Trinket image library.](images/trinket_rocket_image.png)
+![Delwedd o'r roced yn llyfrgell ddelweddau Trinket.](images/trinket_rocket_image.png)
 
 --- /task ---
 
 --- task ---
 
-Add code to the `setup()` function to load the rocket image into a `rocket` global variable.
+Ychwanegwch god at y swyddogaeth `setup()` i lwytho'r ddelwedd o roced i newidyn `roced` cyffredinol.
 
 --- code ---
 ---
@@ -41,11 +41,11 @@ rocket = load_image('rocket.png')
 
 --- /task ---
 
-The `y` position of the rocket will start at 400 (the screen height) and then decrease by 1 each time a new frame is drawn.
+Bydd safle `y` y roced yn dechrau ar 400 (uchder y sgrin) ac yn lleihau 1 bob tro mae ffrâm newydd yn cael ei llunio.
 
 --- task ---
 
-Add a `rocket_y` global variable to keep track of the rocket's `y` position.
+Ychwanegwch newidyn `roced_y` cyffredinol i gadw golwg ar safle `y` y roced.
 
 --- code ---
 ---
@@ -53,7 +53,7 @@ language: python filename: main.py line_numbers: true line_number_start: 7
 line_highlights: 9
 ---
 
-# Setup global variables
+# Gosod newidynnau cyffredinol
 screen_size = 400    
 rocket_y = screen_size #Start at the bottom
 
@@ -63,9 +63,9 @@ rocket_y = screen_size #Start at the bottom
 
 --- task ---
 
-Define a `draw_rocket()` function to change the rocket's `y` position and redraw it.
+Diffiniwch swyddogaeth `llunio_roced()` i newid safle `y` y roced a'i hail-lunio.
 
-`rocket_y -= 1` is a shorter way of saying `rocket_y = rocket_y - 1`.
+Mae `rocket_y -= 1` yn ffordd fyrrach o ddweud `rocket_y = rocket_y - 1`.
 
 --- code ---
 ---
@@ -73,7 +73,7 @@ language: python filename: main.py line_numbers: true line_number_start: 11
 line_highlights: 12-16
 ---
 
-# The draw_rocket function goes here
+# Mae'r swyddogaeth llunio_roced yn mynd fan hyn
 def draw_rocket():
 
   global rocket_y #Use the global rocket_y variable    
@@ -87,7 +87,7 @@ image(rocket, width/2, rocket_y, 64, 64)
 
 --- task ---
 
-Call your new `draw_rocket()` in the `draw()` function so that the rocket gets redrawn every frame.
+Galwch eich swyddogaeth `llunio_roced()` newydd yn y swyddogaeth `draw()` i ail-lunio'r roced bob ffrâm.
 
 --- code ---
 ---
@@ -107,9 +107,9 @@ draw_rocket()
 
 --- task ---
 
-**Test:** Run your code to check that the rocket starts at the bottom of the screen and moves up each frame.
+**Profi:** Rhedwch eich cod i wneud yn siŵr bod y roced yn dechrau ar waelod y sgrin ac yn symud i fyny bob ffrâm.
 
-![Image of the rocket half way up the screen.](images/trinket_rocket_fly.gif)
+![Delwedd o'r roced hanner ffordd i fyny'r sgrin.](images/trinket_rocket_fly.gif)
 
 --- /task ---
 
