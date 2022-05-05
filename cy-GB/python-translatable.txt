@@ -1,29 +1,29 @@
-screen_size
+maint_sgrin
 
-rocket_y
+roced_y
 
-burn
+llosgi
 
-orbit_radius
+radiws_orbit
 
 orbit_y
 
-draw_rocket
+llunio_roced
 
-fuel
+tanwydd
 
-Fuel left:
+Tanwydd yn weddill:
 
-rocket
+roced
 
-draw_background
+llunio_cefndir
 
-planet
+planed
 
-How many kilograms of fuel do you want to use?
+Sawl cilogram o danwydd ydych chi am ei ddefnyddio?
 
-Looping
+Gwneud dolen
 
-points
+pwyntiau
 
-lives
+bywydau
