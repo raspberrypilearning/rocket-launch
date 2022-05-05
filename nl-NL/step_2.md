@@ -117,7 +117,7 @@ image(planeet, width/2, height, 300, 300) #Teken de afbeelding
 
 --- /code ---
 
-Door alle code voor het tekenen van de achtergrond in één functie te plaatsen, wordt je code gemakkelijker te begrijpen.
+Door alle code voor het tekenen van de achtergrond in één functie te plaatsen, word je code gemakkelijker te begrijpen.
 
 -- /task ---
 
