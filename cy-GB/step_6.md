@@ -1,25 +1,25 @@
-## Reaching orbit
+## Cyrraedd orbit
 
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">
 
-The point of launching the rocket is to propel a satellite into orbit. 
+Pwrpas lansio'r roced yw gyrru lloeren i orbit. 
 
-An orbit is a curved path that one object takes around another due to gravity.
+Mae orbit yn llwybr crwn mae un gwrthrych yn ei ddilyn o amgylch gwrthrych arall o ganlyniad i ddisgyrchiant.
 
-The rocket can change colour to show how successful the launch was. 
+Mae'r roced yn gallu newid lliw i ddangos pa mor llwyddiannus oedd y lansiad. 
 
 </div>
 <div>
 
-![Three side-by-side images showing successful (green tint), over-fueled (amber tint), and unsucessful (red tint) launches.](images/check_orbit.png){:width="400px"}
+![Tair delwedd ochr yn ochr yn dangos lansiadau llwyddiannus (arlliw gwyrdd), gormod o danwydd (arlliw melyngoch) ac aflwyddiannus (arlliw coch).](images/check_orbit.png){:width="400px"}
 
 </div>
 </div>
 
 --- task ---
 
-Create two new global variables to set the radius of the orbit circle and the `y` coordinate of the orbit to the point the rocket centre needs to reach to launch the satellite.
+Ewch ati i greu dau newidyn cyffredinol newydd i osod radiws y cylch orbit a chyfesuryn `y` yr orbit i'r pwynt mae canol y roced angen ei gyrraedd i lansio'r lloeren.
 
 --- code ---
 ---
@@ -27,7 +27,7 @@ language: python filename: main.py line_numbers: true line_number_start: 7
 line_highlights: 11-12
 ---
 
-# Setup global variables
+# Gosod newidynnau cyffredinol
 screen_size = 400   
 rocket_y = screen_size   
 burn = 100   
@@ -40,7 +40,7 @@ orbit_y = screen_size - orbit_radius
 
 --- task ---
 
-Update the `draw_background()` function to draw an ellipse to represent the satellite orbit that the rocket needs to reach.
+Diweddarwch y swyddogaeth `llunio_cefndir()` i lunio elips i gynrychioli orbit y lloeren mae angen i'r roced ei gyrraedd.
 
 --- code ---
 ---
@@ -63,19 +63,19 @@ ellipse(width/2, height, orbit_radius * 2, orbit_radius * 2)
 
 --- task ---
 
-**Test:** Run your program and check that a white orbit line is drawn.
+**Profi:** Rhedwch eich rhaglen a gwneud yn siŵr bod llinell orbit wen yn cael ei llunio.
 
-![The screen with planet and new orbit line.](images/draw_orbit.png){:width="300px"}
+![Y sgrin gyda phlaned a llinell orbit newydd.](images/draw_orbit.png){:width="300px"}
 
 --- /task ---
 
-The rocket should stop when it reaches the satellite orbit — the end of the mission.
+Dylai'r roced stopio pan fydd yn cyrraedd orbit y lloeren — diwedd y daith.
 
 --- task ---
 
-Update your `if fuel >= burn` code to also check that the rocket hasn't reached the orbit.
+Diweddarwch eich cod `if tanwydd >= llosgi` hefyd i wneud yn siŵr nad yw'r roced wedi cyrraedd yr orbit.
 
-You can use an `and` in `if` statements to check if two, or more, conditions are true.
+Fe allwch chi ddefnyddio datganiadau `and` yn `if` i wirio bod dau amod neu fwy yn wir.
 
 --- code ---
 ---
@@ -83,7 +83,7 @@ language: python filename: main.py - draw_rocket() line_numbers: true line_numbe
 line_highlights: 19
 ---
 
-# The draw_rocket function goes here
+# Mae'r swyddogaeth llunio_roced yn mynd fan hyn
 def draw_rocket():
 
   global rocket_y, fuel, burn
@@ -96,11 +96,11 @@ def draw_rocket():
 
 --- task ---
 
-**Test:** Run your project and enter `50000` as the amount of fuel. This should be plenty of fuel to reach orbit. The rocket should stop moving when it reaches orbit.
+**Profi:** Rhedwch eich prosiect a rhoi `50000` fel y cyfaint tanwydd. Dylai hyn fod yn ddigon o danwydd i gyrraedd orbit. Dylai'r roced stopio symud pan fydd yn cyrraedd orbit.
 
 --- /task ---
 
-The rocket should be coloured red if it runs out of fuel before getting high enough to launch the satellite.
+Dylai'r roced fod yn goch os yw ei thanwydd yn dod i ben cyn iddi gyrraedd yn ddigon uchel i lansio'r lloeren.
 
 --- task ---
 
@@ -122,19 +122,19 @@ line_highlights: 34-35
 
 --- task ---
 
-**Test:** Run your code and enter `20000` as the amount of fuel. Check that the rocket turns red when it stops below the orbit.
+**Profi:** Rhedwch eich cod a rhoi `20000` fel y cyfaint tanwydd. Gwnewch yn siŵr bod y roced yn troi'n goch pan fydd yn stopio o dan yr orbit.
 
-![A red rocket that has run out of fuel before the orbit circle. The planet has also turned red.](images/orbit_failure.png){:width="300px"}
+![Roced goch sydd wedi rhedeg allan o danwydd cyn cylch yr orbit. Mae'r blaned wedi troi'n goch hefyd.](images/orbit_failure.png){:width="300px"}
 
-Oh no, the planet has turned red!
+O na, mae'r blaned wedi troi'n goch!
 
 --- /task ---
 
 --- task ---
 
-The `tint()` function sets the tint colour for all images that are drawn until you change the tint or use `no_tint()` to turn it off.
+Mae'r swyddogaeth `tint()` yn gosod yr arlliw ar gyfer bob delwedd sy'n cael ei llunio nes eich bod yn newid yr arlliw neu'n defnyddio `no_tint()` i'w diffodd.
 
-**Choose:** Add a call to `no_tint()` after drawing the image so that the planet isn't tinted red in the next frame — or leave it if you like the planet turning red!
+**Dewiswch:** Ychwanegwch alwad at `no_tint()` ar ôl llunio'r ddelwedd er mwyn atal y blaned rhag cael arlliw coch yn y ffrâm nesaf — neu ei adael os ydych chi'n dymuno i'r blaned droi'n goch!
 
 --- code ---
 ---
@@ -154,7 +154,7 @@ no_tint() #So the planet isn't tinted red in the next frame!
 
 --- task ---
 
-Use the `tint()` function again, this time to colour the rocket green if the rocket has enough fuel to reach the satellite orbit:
+Defnyddiwch y swyddogaeth `tint()` eto, y tro hwn i liwio'r roced yn wyrdd os oes gan y roced ddigon o danwydd i gyrraedd orbit y lloeren:
 
 --- code ---
 ---
@@ -175,19 +175,19 @@ no_tint()
 
 --- task ---
 
-**Test:** Run your project and enter `50000` as the amount of fuel. Check that your rocket turns green when it reaches the satellite orbit.
+**Profi:** Rhedwch eich prosiect a rhoi `50000` fel y cyfaint tanwydd. Gwnewch yn siŵr bod eich roced yn troi'n wyrdd pan fydd yn cyrraedd orbit y lloeren.
 
-![A green rocket that has reached the orbit circle and has fuel left.](images/orbit_success.png){:width="300px"}
+![Roced werdd sydd wedi cyrraedd y cylch orbit ac sydd â thanwydd yn weddill.](images/orbit_success.png){:width="300px"}
 
 --- /task ---
 
-You now have a simulation that can be used to show how much fuel is needed as a minimum to reach the satellite orbit. That's great; however, you could take a huge amount of fuel and still be successful, but this is costly and wasteful!
+Nawr mae gennych chi efelychiad gellir ei ddefnyddio i ddangos faint o danwydd sydd ei angen fan leiaf i gyrraedd orbit y lloeren. Gwych; fodd bynnag, fe allech chi fynd â llwyth o danwydd a llwyddo, ond mae hynny'n gostus ac yn wastraffus!
 
 --- task ---
 
-Amend the conditions in your success code so that the rocket only turns green if it reaches the orbit `and` has less than 1,000kg of fuel left.
+Newidiwch yr amodau yn eich cod llwyddiant er mwyn i'r roced ddim ond troi'n wyrdd os yw'n cyrraedd yr orbit a bod ganddi lai na 1,000kg o danwydd yn weddill.
 
-Add code to colour the rocket yellow if the rocket has more than 1,000kg of fuel left when it reaches orbit.
+Ychwanegwch god i liwio'r roced yn felyn os oes gan y roced fwy na 1,000kg o danwydd yn weddill pan fydd yn cyrraedd orbit.
 
 --- code ---
 ---
@@ -210,9 +210,9 @@ no_tint() #So the planet isn't tinted in the next frame!
 
 --- task ---
 
-**Test:** Run your program several times with different numbers; for example, 25,000kg of fuel should be the amount needed to turn the rocket green, but also check that the yellow tint works too by using a bigger number.
+**Profi:** Rhedwch eich cod nifer o weithiau gyda gwahanol rifau; er enghraifft, dylai 25,000kg fod y cyfaint sydd ei angen i droi'r roced yn wyrdd, ond gwnewch yn siŵr bod yr arlliw melyn yn gweithio hefyd drwy ddefnyddio rhif mwy.
 
-![A yellow rocket that has reached the orbit circle and has fuel left.](images/orbit_meh.png){:width="300px"}
+![Roced felen sydd wedi cyrraedd y cylch orbit gyda thanwydd yn weddill.](images/orbit_meh.png){:width="300px"}
 
 --- /task ---
 
