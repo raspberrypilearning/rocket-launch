@@ -2,7 +2,7 @@
 Je project is voltooid, maar je kunt het nog beter maken als je dat wilt. Hier zijn een paar upgrades om te overwegen:
 
  + Laat de gebruiker de snelheid instellen waarmee de raket brandstof verbruikt of hoe ver de raket in elk frame vliegt.
- + Voeg een tweede, hogere baan toe zodat de raket een andere satelliet kan bereiken en afzetten. Laat het nog eens van kleur veranderen als het daar aankomt.
+ + Voeg een tweede, hogere baan toe zodat de raket een andere satelliet kan bereiken en afzetten. Laat je raket nog eens van kleur veranderen als hij daar aankomt.
  + Voeg je eigen raket- of planeetafbeelding toe om in je project te gebruiken.
 
 
