@@ -1,85 +1,85 @@
-Import library code
+Mewngludo cod llyfrgell
 
-Setup global variables
+Gosod newidynnau cyffredinol
 
-The draw_rocket function goes here
+Mae'r swyddogaeth llunio_roced yn mynd fan hyn
 
-The draw_background function goes here
+Mae'r swyddogaeth llunio_cefndir yn mynd fan hyn
 
-Setup your animation here
+Gosodwch eich animeiddiad yma
 
-Things to do in every frame
+Pethau i'w gwneud ym mhob ffrâm
 
-Definitions for compatibility with the p5py processing library
+Diffiniadau ar gyfer cydnawsedd â'r llyfrgell brosesu p5py
 
-Shape
+Siâp
 
-Fonts
+Ffontiau
 
-Text
+Testun
 
-Colour
+Lliw
 
-Images
+Delweddau
 
-Environment
+Amgylchedd
 
-Transform
+Trawsnewid
 
-Keyboard
+Bysellfwrdd
 
-Your chosen planet
+Y blaned o'ch dewis
 
-Short for background(0, 0, 0) — black
+Byr ar gyfer cefndir(0, 0, 0) — black
 
-Draw the image
+Llunio'r ddelwedd
 
-Start at the bottom
+Dechrau ar y gwaelod
 
-Use the global rocket_y variable
+Defnyddio'r newidyn roced_y cyffredinol
 
-Move the rocket
+Symud y roced
 
-Turn off the stroke
+Diffodd y strôc
 
-Draw 25 burning exhaust ellipses
+Llunio 25 o elipsau ecsôst sy'n llosgi
 
-Yellow
+Melyn
 
-i increases each time the loop repeats
+i yn cynyddu bob tro mae'r ddolen yn ailadrodd
 
-Reduce the amount of green
+Lleihau lefel y gwyrdd
 
-Transparent grey
+Llwyd tryloyw
 
-Draw 20 random smoke ellipses
+Llunio 20 o elipsau mwg ar hap
 
-How much fuel is burned in each frame
+Faint o danwydd sy'n cael ei losgi ym mhob ffrâm
 
-Burn fuel
+Llosgi tanwydd
 
-Still got fuel
+Tanwydd yn weddill
 
-Turn off any fill
+Diffodd unrhyw lenwad
 
-Set a white stroke
+Gosod strôc wen
 
-Still flying
+Dal yn hedfan
 
-No more fuel and not in orbit
+Dim mwy o danwydd a ddim mewn orbit
 
-Failure
+Methiant
 
-So the planet isn't tinted red in the next frame!
+I atal y blaned rhag cael arlliw coch yn y ffrâm nesaf!
 
-Success
+Llwyddiant
 
-Too much fuel
+Gormod o danwydd
 
-So the planet isn't tinted in the next frame!
+I atal y blaned rhag cael arlliw yn y ffrâm nesaf!
 
-Green
+Gwyrdd
 
-Amber
+Melyngoch
 
-Red
+Coch
