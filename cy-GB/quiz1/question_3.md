@@ -1,9 +1,9 @@
 --- question ---
 ---
-legend: Question 3 of 3
+legend: Cwestiwn 3 o 3
 ---
 
-This code uses `tint()` to colour a rocket in a game to show the player how they are doing.
+Mae'r cod hwn yn defnyddio `tint()` i liwio roced mewn gêm i ddangos i'r chwaraewr sut hwyl mae'n ei gael.
 
 --- code ---
 ---
@@ -23,47 +23,47 @@ image(rocket, width/2, height/2, 64, 64)
 
 --- /code ---
 
-If the `points` variable has the value `99` and the `lives` variable has the value `1`, what will the rocket look like?
+Os oes gan y newidyn `pwyntiau` werth o `99` a bod gan y newidyn `bywydau` werth o `1`, sut fydd y roced yn edrych?
 
 --- choices ---
 
 - (x)
 
-![A rocket image with amber tint.](images/rocket_amber.png) <div style="text-align: center;">Amber
+![Delwedd o roced gydag arlliw melyngoch.](images/rocket_amber.png) <div style="text-align: center;">Melyngoch
 
  --- feedback ---
 
- Correct! The player has less than 100 points and only 1 life left. The rocket is coloured amber to left them know that this is their last chance to win!
+ Cywir! Mae gan y chwaraewr lai na 100 o bwyntiau a dim ond 1 bywyd yn weddill. Mae'r roced wedi'i lliwio'n felyngoch i ddangos mai dyma eu cyfle olaf i ennill!
 
  --- /feedback ---
 
 - ( )
 
-![A rocket image with no tint](images/rocket_original.png) <div style="text-align: center;">No tint
+![Delwedd o roced heb arlliw](images/rocket_original.png) <div style="text-align: center;">Dim arlliw
 
  --- feedback ---
 
- Not quite, the rocket has a tint as one of the statements is true.
+ Ddim yn hollol, mae gan y roced arlliw oherwydd bod un o'r datganiadau'n wir.
 
  --- /feedback ---
 
 - ( )
 
-![A rocket image with green tint](images/rocket_green.png) <div style="text-align: center;">Green
+![Delwedd o roced gydag arlliw gwyrdd](images/rocket_green.png) <div style="text-align: center;">Gwyrdd
 
  --- feedback ---
 
- Not quite, the player would need `>= 100` points to win and turn their rocket green. They have `99`, which is not enough. Check the conditions carefully.
+ Ddim yn hollol, bydd angen `>= 100` o bwyntiau ar y chwaraewr i ennill a throi eu roced yn wyrdd. Mae ganddyn nhw `99`, sydd ddim yn ddigon. Gwiriwch yr amodau'n ofalus.
 
  --- /feedback ---
 
 - ( )
 
-![A rocket image with red tint](images/rocket_red.png) <div style="text-align: center;">Red
+![Delwedd o roced gydag arlliw coch](images/rocket_red.png) <div style="text-align: center;">Coch
 
  --- feedback ---
 
- Not quite, the player has `< 100` points but lives does not equal `0`. Check the conditions carefully.
+ Ddim yn hollol, mae gan y chwaraewr `< 100` o bwyntiau ond nid yw'r bywydau'n hafal i `0`. Gwiriwch yr amodau'n ofalus.
 
  --- /feedback ---
 
