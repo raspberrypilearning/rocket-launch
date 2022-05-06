@@ -1,0 +1,85 @@
+Mewngludo cod llyfrgell
+
+Gosod newidynnau cyffredinol
+
+Mae'r swyddogaeth llunio_roced yn mynd fan hyn
+
+Mae'r swyddogaeth llunio_cefndir yn mynd fan hyn
+
+Gosodwch eich animeiddiad yma
+
+Pethau i'w gwneud ym mhob ffrâm
+
+Diffiniadau ar gyfer cydnawsedd â'r llyfrgell brosesu p5py
+
+Siâp
+
+Ffontiau
+
+Testun
+
+Lliw
+
+Delweddau
+
+Amgylchedd
+
+Trawsnewid
+
+Bysellfwrdd
+
+Y blaned o'ch dewis
+
+Byr ar gyfer cefndir(0, 0, 0) — black
+
+Llunio'r ddelwedd
+
+Dechrau ar y gwaelod
+
+Defnyddio'r newidyn roced_y cyffredinol
+
+Symud y roced
+
+Diffodd y strôc
+
+Llunio 25 o elipsau ecsôst sy'n llosgi
+
+Melyn
+
+i yn cynyddu bob tro mae'r ddolen yn ailadrodd
+
+Lleihau lefel y gwyrdd
+
+Llwyd tryloyw
+
+Llunio 20 o elipsau mwg ar hap
+
+Faint o danwydd sy'n cael ei losgi ym mhob ffrâm
+
+Llosgi tanwydd
+
+Tanwydd yn weddill
+
+Diffodd unrhyw lenwad
+
+Gosod strôc wen
+
+Dal yn hedfan
+
+Dim mwy o danwydd a ddim mewn orbit
+
+Methiant
+
+I atal y blaned rhag cael arlliw coch yn y ffrâm nesaf!
+
+Llwyddiant
+
+Gormod o danwydd
+
+I atal y blaned rhag cael arlliw yn y ffrâm nesaf!
+
+Gwyrdd
+
+Melyngoch
+
+Coch

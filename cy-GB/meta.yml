@@ -1,0 +1,26 @@
+---
+title: Lansio roced
+hero_image: images/banner.png
+description: Gwnewch animeiddiad o roced yn gyrru lloeren i orbit
+version: 0.0.1
+listed: true
+copyedit: true
+last_tested: "2021-10-06"
+steps:
+  - title: Cyflwyniad
+  - title: Gosod yr olygfa
+  - title: Ffwrdd â ni!
+    completion: engaged
+  - title: Effeithiau'r ecsôst
+  - title: Llosgi tanwydd
+  - title: Cyrraedd orbit
+    completion: internal
+  - title: Myfyrio
+    completion: external
+    knowledge_quiz:
+      path: quiz1
+      version: 1
+      questions: 3
+      passing_score: 3
+  - title: Uwchraddio eich brosiect
+  - title: Beth nesaf?
