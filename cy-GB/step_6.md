@@ -137,7 +137,7 @@ line_highlights: 34-35
 
 **Profi:** Rhedwch eich cod a rhoi `20000` fel y cyfaint tanwydd. Gwnewch yn siŵr bod y roced yn troi'n goch pan fydd yn stopio o dan yr orbit.
 
-![Roced goch sydd wedi rhedeg allan o danwydd cyn cylch yr orbit. Mae'r blaned wedi troi'n goch hefyd.](images/orbit_Methiant.png){:width="300px"}
+![Roced goch sydd wedi rhedeg allan o danwydd cyn cylch yr orbit. Mae'r blaned wedi troi'n goch hefyd.](images/orbit_failure.png){:width="300px"}
 
 O na, mae'r blaned wedi troi'n goch!
 

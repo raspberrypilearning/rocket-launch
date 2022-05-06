@@ -8,7 +8,7 @@ Un o'r pethau pwysicaf i benderfynu arnyn nhw wrth lansio roced yw faint o danwy
 I wneud hyn, rhaid i chi efelychu faint o danwydd fydd yn cael ei losgi yn ystod y daith.
 </div>
 
-![Y rhaglen gyda chwestiwn yn yr ardal allbwn yn gofyn faint o danwydd sydd ei angen.](images/llosgi_question_full.png){:width="300px"}
+![Y rhaglen gyda chwestiwn yn yr ardal allbwn yn gofyn faint o danwydd sydd ei angen.](images/burn_question_full.png){:width="300px"}
 
 </div>
 
@@ -87,7 +87,7 @@ line_highlights: 15, 17-18
 
 Bydd y roced yn dal i fynd hyd yn oed os nad oes ganddi danwydd yn weddill.
 
-![Y rhaglen gyda chwestiwn yn yr ardal allbwn yn gofyn faint o danwydd sydd ei angen.](images/llosgi_question.png)
+![Y rhaglen gyda chwestiwn yn yr ardal allbwn yn gofyn faint o danwydd sydd ei angen.](images/burn_question.png)
 
 --- /task ---
 
@@ -135,7 +135,7 @@ line_highlights: 16-31
 
 **Profi:** Rhedwch eich rhaglen i wneud yn siŵr bod y roced yn stopio pan nad oes tanwydd yn weddill.
 
-![Delwedd o roced yng nghanol y sgrin gyda'r datganiad 'Tanwydd yn weddill: 0'.](images/llosgi_empty.png){:width="300px"}
+![Delwedd o roced yng nghanol y sgrin gyda'r datganiad 'Tanwydd yn weddill: 0'.](images/burn_empty.png){:width="300px"}
 
 --- /task ---
 

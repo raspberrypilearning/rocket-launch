@@ -10,7 +10,7 @@ Fe allwch chi greu effeithiau cŵl drwy ddefnyddio dolen `for` i lunio nifer o s
 </div>
 <div>
 
-![Y roced wrth hedfan gydag ôl ecsôst.](images/flying_roced.gif){:width="300px"}
+![Y roced wrth hedfan gydag ôl ecsôst.](images/flying_rocket.gif){:width="300px"}
 
 </div>
 </div>

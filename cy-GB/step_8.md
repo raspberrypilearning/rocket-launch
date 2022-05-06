@@ -29,7 +29,7 @@ Dyma fersiwn o'r prosiect gyda'r holl uwchraddiadau hynny er mwyn i chi weld sut
 
 --- collapse ---
 ---
-teitl: Prosiect gorffenedig
+title: Prosiect gorffenedig
 ---
 
 Fe allwch chi weld y [prosiect gorffenedig yma](https://trinket.io/python/ca8ed0fbad){:target="_blank"}.
