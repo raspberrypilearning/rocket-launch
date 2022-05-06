@@ -22,7 +22,7 @@ steps:
     title: Cyrraedd orbit
     completion: internal
   - 
-    title: Beth nesaf?
+    title: Myfyrio
     completion: external
     knowledge_quiz:
       path: quiz1
@@ -30,6 +30,6 @@ steps:
       questions: 3
       passing_score: 3
   - 
-    title: Uwchraddio dy brosiect
+    title: Uwchraddio eich brosiect
   - 
     title: Beth nesaf?
