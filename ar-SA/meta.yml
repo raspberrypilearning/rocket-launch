@@ -5,22 +5,25 @@ description: اصنع رسمًا متحركًا لصاروخ يدفع قمرًا
 version: 0.0.1
 listed: true
 copyedit: true
-last_tested: "2021-10-06"
+last_tested: '2021-10-06'
 steps:
-  - title: المقدمة
-  - title: جهز المشهد
-  - title: يغادر!
-    completion: engaged
-  - title: آثار العادم
-  - title: حرق الوقود
-  - title: الوصول إلى المدار
-    completion: internal
-  - title: انعكاس
-    completion: external
-    knowledge_quiz:
-      path: quiz1
-      version: 1
-      questions: 3
-      passing_score: 3
-  - title: قم بترقية او تطوير مشروعك
-  - title: ماذا بعد؟
+- title: المقدمة
+- title: جهز المشهد
+- title: يغادر!
+  completion:
+  - engaged
+- title: آثار العادم
+- title: حرق الوقود
+- title: الوصول إلى المدار
+  completion:
+  - internal
+- title: انعكاس
+  knowledge_quiz:
+    path: quiz1
+    version: 1
+    questions: 3
+    passing_score: 3
+  completion:
+  - external
+- title: قم بترقية او تطوير مشروعك
+- title: ماذا بعد؟
