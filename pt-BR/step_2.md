@@ -1,29 +1,29 @@
-## Set the scene
+## Preparando o cenário
 
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">
-The animation needs a space backdrop with a planet to launch the rocket from.
+A animação precisa de um cenário espacial com um planeta para lançar o foguete.
 </div>
 <div>
 
-![A planet against a black background.](images/step_2.png){:width="300px"}
+![Um planeta contra um fundo preto.](images/step_2.png){:width="300px"}
 
 </div>
 </div>
 
 --- task ---
 
-Open the [project template](https://trinket.io/python/f2199f5a8c){:target="_blank"}.
+Abra o [modelo de projeto](https://trinket.io/python/f2199f5a8c){:target="_blank"}.
 
-If you have a Trinket account, you can click on the **Remix** button to save a copy to your `My Trinkets` library.
+Se você tiver uma conta Trinket, você pode clicar no botão **Remix** para salvar uma cópia em sua biblioteca `My Trinkets`.
 
 --- /task ---
 
-You will use a `screen_size` variable to set the size of the screen and in calculations. Variables defined outside functions are **global** so you can use them anywhere in your program.
+Você usará uma variável `tamanho_tela` para definir o tamanho da tela e nos cálculos. As variáveis definidas fora das funções são **global** para que você possa usá-las em qualquer lugar do seu programa.
 
 --- task ---
 
-Find the comment `Setup global variables` and add a line of code to create your `screen_size` variable:
+Encontre o comentário `Configurar variáveis globais` e adicione uma linha de código para criar sua variável `tamanho_tela`:
 
 --- code ---
 ---
@@ -31,7 +31,7 @@ language: python filename: main.py line_numbers: true line_number_start: 7
 line_highlights: 8
 ---
 
-# Setup global variables
+# Configurar variáveis globais
 screen_size = 400
 
 --- /code ---
@@ -40,7 +40,7 @@ screen_size = 400
 
 --- task ---
 
-Use the `screen_size` variable to create a square 400 by 400 pixels:
+Use a variável `tamanho_tela` para criar um quadrado de 400 por 400 pixels:
 
 --- code ---
 ---
@@ -59,21 +59,21 @@ size(screen_size, screen_size)
 
 --- task ---
 
-The starter project has three different planet images and the moon provided for you. You can view these in the Trinket image library by selecting the **View and Add Images** button.
+O projeto inicial tem três imagens diferentes de planetas e a lua fornecidas para você. Você pode visualizá-las na biblioteca de imagens Trinket selecionando o botão **Ver e adidionar imagens**.
 
-![A plus symbol, an upload symbol, and an image symbol. The image symbol is highlighted.](images/trinket_image.png)
+![Um símbolo de adição, um símbolo de upload e um símbolo de imagem. O símbolo da imagem é realçado.](images/trinket_image.png)
 
-**Choose:** Decide which image you want to use and make a note of the filename. For example, `orange_planet.png`.
+**Escolha:** Decida qual imagem deseja usar e anote o nome do arquivo. Por exemplo, `planeta_laranja.png`.
 
 --- /task ---
 
-It's a good idea to load images in `setup()` so that they are ready when you need to use them and your animation will run quickly.
+É uma boa idéia carregar imagens em `configuracao()` para que estejam prontas quando você precisar usá-las e sua animação será executada rapidamente.
 
 --- task ---
 
-The `image_mode(CENTER)` line says that you will be positioning images by giving the coordinates of the centre of the image (instead of the top left corner).
+A linha `modo_imagem(CENTER)` diz que você posicionará as imagens fornecendo as coordenadas do centro da imagem (em vez do canto superior esquerdo).
 
-Also add code to the `setup()` function to load your chosen image into a `planet` global variable. The variable needs to be global so you can use it later when you draw the planet to the screen.
+Adicione também código à função `configuração()` para carregar sua imagem escolhida em uma variável global `planeta`. A variável precisa ser global para que você possa usá-la mais tarde quando desenhar o planeta na tela.
 
 --- code ---
 ---
@@ -95,13 +95,13 @@ planet = load_image('planet.png') #Your chosen planet
 
 --- task ---
 
-Define a `draw_background()` function, to draw the background, below the comment that tells you where it should go.
+Defina uma função `desenhar_fundo()`, para desenhar o plano de fundo, abaixo do comentário que informa para onde deve ir.
 
-Use `background(0)` to set the background colour to black and add an `image()` function to draw the planet. The `image()` function is laid out:
+Use `fundo(0)` para definir a cor de fundo para preto e adicione uma função `imagem()` para desenhar o planeta. A função `imagem()` é apresentada:
 
 `image(image filename, x-coordinate, y-coordinate, image_width, image_height)`
 
-The `p5` library sets global `width` and `height` variables based on the size of the screen. Use these in your code to position the planet with its centre half-way across (`width/2`) and at the bottom (`height`) of the screen.
+A biblioteca `p5` define variáveis globais `largura` e `altura` com base no tamanho da tela. Use-os em seu código para posicionar o planeta com o centro a meio da largura (`largura/2`) e na parte inferior (`altura`) da tela.
 
 --- code ---
 ---
@@ -109,7 +109,7 @@ language: python filename: main.py — draw_background() line_numbers: true line
 line_highlights: 15-17
 ---
 
-# The draw_background function goes here
+# A função desenhar_plano_de_fundo vai aqui
 def draw_background():   
 background(0) #Short for background(0, 0, 0) — black    
 image(planet, width/2, height, 300, 300) #Draw the image
@@ -117,13 +117,13 @@ image(planet, width/2, height, 300, 300) #Draw the image
 
 --- /code ---
 
-Putting all the code for drawing the background into one function makes your code easier to understand.
+Colocar todo o código para desenhar o plano de fundo em uma função torna seu código mais fácil de entender.
 
 --- /task ---
 
 --- task ---
 
-To make the background appear, call `draw_background()` in `draw()`. This will cause the background to be re-drawn every time `draw()` is called, covering over any older drawing:
+Para fazer o plano de fundo aparecer, chame `desenhar_plano_de_fundo()` in `desenhar()`. Isso fará com que o plano de fundo seja redesenhado toda vez que `desenhar()` for chamado, cobrindo qualquer desenho mais antigo:
 
 --- code ---
 ---
@@ -141,7 +141,7 @@ draw_background()
 
 --- task ---
 
-**Test:** Run your code and check that it draws a black background with half a planet at the bottom.
+**Teste:** Execute seu código e verifique que ele desenha um fundo preto com meio planeta na parte inferior.
 
 --- /task ---
 
