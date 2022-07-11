@@ -5,7 +5,7 @@ description: Δημιούργησε μια κινούμενη εικόνα εν�
 version: 0.0.1
 listed: true
 copyedit: true
-last_tested: "2021-10-06"
+last_tested: '2021-10-06'
 steps:
   - 
     title: Εισαγωγή
@@ -13,22 +13,25 @@ steps:
     title: Στήνοντας τη σκηνή
   - 
     title: Απογείωση!
-    completion: engaged
+    completion:
+      - engaged
   - 
     title: Εφέ καυσαερίων
   - 
     title: Καύση καυσίμου
   - 
     title: Φτάνοντας σε τροχιά
-    completion: internal
+    completion:
+      - internal
   - 
     title: Αναστοχασμός
-    completion: external
     knowledge_quiz:
       path: quiz1
       version: 1
       questions: 3
       passing_score: 3
+    completion:
+      - external
   - 
     title: Αναβάθμιση του έργου σου
   - 
