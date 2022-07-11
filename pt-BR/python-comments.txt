@@ -1,85 +1,85 @@
-Import library code
+Importar código da biblioteca
 
-Setup global variables
+Configurar variáveis globais
 
-The draw_rocket function goes here
+A função desenhar_foguete vai aqui
 
-The draw_background function goes here
+A função desenhar_plano_de_fundo vai aqui
 
-Setup your animation here
+Configure sua animação aqui
 
-Things to do in every frame
+O que fazer em cada quadro
 
-Definitions for compatibility with the p5py processing library
+Definições para compatibilidade com a biblioteca de processamento p5py
 
-Shape
+Forma
 
-Fonts
+Fontes
 
-Text
+Texto
 
-Colour
+Cor
 
-Images
+Imagens
 
-Environment
+Ambiente
 
-Transform
+Transformar
 
-Keyboard
+Teclado
 
-Your chosen planet
+Seu planeta escolhido
 
-Short for background(0, 0, 0) — black
+Abreviação de plano de fundo (0, 0, 0) — preto
 
-Draw the image
+Desenhe a imagem
 
-Start at the bottom
+Comece na parte inferior
 
-Use the global rocket_y variable
+Use a variável global foguete_y
 
-Move the rocket
+Mova o foguete
 
-Turn off the stroke
+Desligue o lançamento
 
-Draw 25 burning exhaust ellipses
+Desenhe 25 elipses de combustão em chamas
 
-Yellow
+Amarelo
 
-i increases each time the loop repeats
+i aumenta cada vez que o ciclo se repete
 
-Reduce the amount of green
+Reduza a quantidade de verde
 
-Transparent grey
+Cinza transparente
 
-Draw 20 random smoke ellipses
+Desenhe 20 elipses de fumaça aleatórias
 
-How much fuel is burned in each frame
+Quanto combustível é queimado em cada quadro
 
-Burn fuel
+Queimar combustível
 
-Still got fuel
+Ainda tem combustível
 
-Turn off any fill
+Desligue qualquer preenchimento
 
-Set a white stroke
+Defina um traço branco
 
-Still flying
+Ainda voando
 
-No more fuel and not in orbit
+Não há mais combustível e não em órbita
 
-Failure
+Fracasso
 
-So the planet isn't tinted red in the next frame!
+Assim, o planeta não está tingido de vermelho no próximo quadro!
 
-Success
+Sucesso
 
-Too much fuel
+Excesso de combustível
 
-So the planet isn't tinted in the next frame!
+Assim, o planeta não está tingido no próximo quadro!
 
-Green
+Verde
 
-Amber
+Âmbar
 
-Red
+Vermelho
