@@ -1,19 +1,19 @@
-## Reflection
+## Reflexão
 
-Well done, you have learnt a lot! Now it's time to reflect — reflecting is an important part of learning because it helps make new connections in your brain.
+Muito bem, você aprendeu muito! Agora, é hora de refletir - refletir é uma parte importante do aprendizado, porque isso ajuda a fazer novas conexões no seu cérebro.
 
-Answer the three questions below to reflect on what you've learnt.
+Responda às três perguntas abaixo para refletir sobre o que você aprendeu.
 
-After each question, press **submit**. You will be guided towards the correct answer. You can do this activity as many times as you want to.
+Após cada pergunta, pressione **enviar**. Você será guiado para a resposta correta. Você pode repetir esta atividade quantas vezes quiser.
 
-Have fun!
+Divirta-se!
 
 --- question ---
 ---
-legend: Question 1 of 3
+legend: Pergunta 1 de 3
 ---
 
-Which output would you expect if you ran the program below?
+Qual resultado você esperaria se executasse o programa abaixo?
 
 ```python
 for i in range(5):
@@ -22,35 +22,35 @@ for i in range(5):
 
 --- choices ---
 
-- ( ) Looping 1 <br> Looping 2 <br> Looping 3 <br> Looping 4 <br> Looping 5
+- ( ) Ciclo 1 <br> Ciclo 2 <br> Ciclo 3 <br> Ciclo 4 <br> Ciclo 5
 
   --- feedback ---
 
-Not quite, a `for` loop in Python repeats its code once for each item in a sequence it's given, and here `range` creates a sequence starting from `0`.
+Não exatamente, um ciclo`for` em Python repete seu código uma vez para cada item em uma sequência que é fornecida, e aqui `range` cria uma sequência começando em `0`.
 
   --- /feedback ---
 
-- ( ) Looping i
+- ( ) Ciclo i
 
   --- feedback ---
 
-Not quite, the **loop variable** from a `for` loop — in this case `i` — holds the current value from the sequence the loop is working through.
+Não exatamente, a **variável de ciclo** de um ciclo `for` — neste caso `i` — mantém o valor atual da sequência pela qual o ciclo está trabalhando.
 
   --- /feedback ---
 
-- (x) Looping 0 <br> Looping 1 <br> Looping 2 <br> Looping 3 <br> Looping 4
+- (x) Ciclo 0 <br> Ciclo 1 <br> Ciclo 2 <br> Ciclo 3 <br> Ciclo 4
 
   --- feedback ---
 
-Correct. The loop runs once, in order, for each item `i` in the range [0, 1, 2, 3, 4].
+Correto. O ciclo é executado uma vez, em ordem, para cada item `i` no intervalo [0, 1, 2, 3, 4].
 
   --- /feedback ---
 
-- ( ) Looping 4 <br> Looping 3 <br> Looping 2 <br> Looping 1 <br> Looping 0
+- ( ) Ciclo 1 <br> Ciclo 2 <br> Ciclo 3 <br> Ciclo 4 <br> Ciclo 0
 
   --- feedback ---
 
-Nto quite, a `for` loop runs through the sequence of items it is given in order. Because `range()` gives an ordered sequence from 0 to the number it is passed, that is the order you would expect to see printed out by this `for` loop.
+Até certo ponto, um ciclo `for` percorre a sequência de itens que é fornecida em ordem. Como a função `range()` fornece uma sequência ordenada de 0 até ao número que é passado, essa é a ordem que você esperaria ver impressa por esse ciclo `for`.
 
   --- /feedback ---
 
