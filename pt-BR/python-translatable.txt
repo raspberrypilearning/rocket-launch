@@ -1,29 +1,29 @@
-screen_size
+tamanho_tela
 
-rocket_y
+foguete_y
 
-burn
+queimar
 
-orbit_radius
+raio_orbital
 
-orbit_y
+orbita_y
 
-draw_rocket
+desenhar_foguete
 
-fuel
+combustivel
 
-Fuel left:
+Combustível restante:
 
-rocket
+foguete
 
-draw_background
+desenhar_plano_de_fundo
 
-planet
+planeta
 
-How many kilograms of fuel do you want to use?
+Quantos quilogramas de combustível você quer usar?
 
-Looping
+Ciclo
 
-points
+pontos
 
-lives
+vidas
