@@ -5,7 +5,7 @@ description: Haz una animación de un cohete que impulsa un satélite a la órbi
 version: 0.0.1
 listed: true
 copyedit: true
-last_tested: "2021-10-06"
+last_tested: '2021-10-06'
 steps:
   - 
     title: Introducción
@@ -13,22 +13,25 @@ steps:
     title: Establece la escena
   - 
     title: '¡El despegue!'
-    completion: engaged
+    completion:
+      - engaged
   - 
     title: Efectos de escape
   - 
     title: Quemar combustible
   - 
     title: Alcanzando la órbita
-    completion: internal
+    completion:
+      - internal
   - 
     title: Reflexión
-    completion: external
     knowledge_quiz:
       path: quiz1
       version: 1
       questions: 3
       passing_score: 3
+    completion:
+      - external
   - 
     title: Mejora tu proyecto
   - 
