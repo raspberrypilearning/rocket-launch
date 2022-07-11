@@ -5,7 +5,7 @@ description: 衛星を軌道に乗せるロケットのアニメーションを�
 version: 0.0.1
 listed: true
 copyedit: true
-last_tested: "2021-10-06"
+last_tested: '2021-10-06'
 steps:
   - 
     title: はじめに
@@ -13,22 +13,25 @@ steps:
     title: シーンを設定する
   - 
     title: 発射！
-    completion: engaged
+    completion:
+      - engaged
   - 
     title: 排気効果
   - 
     title: 燃料を燃やす
   - 
     title: 軌道に到達
-    completion: internal
+    completion:
+      - internal
   - 
     title: ふりかえり
-    completion: external
     knowledge_quiz:
       path: quiz1
       version: 1
       questions: 3
       passing_score: 3
+    completion:
+      - external
   - 
     title: プロジェクトをアップグレードする
   - 
