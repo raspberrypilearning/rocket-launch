@@ -1,32 +1,32 @@
-## Exhaust effects
+## Efeitos da combustão
 
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">
 
-The rocket will look more realistic with some special effects to simulate the exhaust trail. 
+O foguete ficará mais realista com alguns efeitos especiais para simular a trilha dos gases resultantes da combustão. 
 
-You can create cool effects by using a `for` loop to draw lots of shapes in each frame.
+Você pode criar efeitos legais usando um ciclo `for` para desenhar muitas formas em cada quadro.
 
 </div>
 <div>
 
-![The rocket mid flight with an exhaust trail.](images/flying_rocket.gif){:width="300px"}
+![O foguete no meio do voo com uma trilha de combustão.](images/flying_rocket.gif){:width="300px"}
 
 </div>
 </div>
 
 <p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;">
-Coding is used to make <span style="color: #0faeb0">**graphic effects**</span> for movies and games. It's much quicker to write code than to draw each frame of an animation individually. </p>
+A programação é usada para fazer <span style="color: #0faeb0">**efeitos gráficos**</span> para filmes e jogos. É muito mais rápido escrever código do que desenhar cada quadro de uma animação individualmente. </p>
 
-Drawing lots of yellow ellipses at different `y` positions creates an exhaust trail with a round bottom.
+Desenhar muitas elipses amarelas em diferentes posições `y` cria uma trilha de combustão com fundo redondo.
 
 --- task ---
 
-A `for` loop repeats a piece of code once for every item it is given. To run the code in a `for` loop a certain number of times, you can use the `range()` function. For example, `range(5)` creates a sequence of five numbers starting from 0, so [0, 1, 2, 3, 4].
+Um ciclo `for` repete um pedaço de código uma vez para cada item que é fornecido. Para executar o código em um ciclo `for` um certo número de vezes, você pode usar a função `range()`. Por exemplo, `range(5)` cria uma sequência de cinco números começando em 0, então [0, 1, 2, 3, 4].
 
-Each time the `for` loop repeats, it sets a variable to the current item so that you can use it in the loop.
+Cada vez que o ciclo `for` se repete, ele define uma variável para o item atual para que você possa usá-lo no ciclo.
 
-Update your `draw_rocket()` function to include a `for` loop that repeats the drawing of `25` exhaust ellipses. The **loop variable** `i` gets added to `rocket_y` to draw each ellipse further below the rocket.
+Atualize sua função `desenhar_foguete()` para incluir um ciclo `for` que repete o desenho de `25` elipses da combustão. A variável de ciclo **** `i` é adicionada a `foguete_y` para desenhar cada elipse mais abaixo do foguete.
 
 --- code ---
 ---
@@ -54,17 +54,17 @@ ellipse(width/2, rocket_y + i, 8, 3) #i increases each time the loop repeats
 
 --- task ---
 
-**Test:** Run your code to check the rocket has a new exhaust trail.
+**Teste:** Execute seu código para verificar que o foguete tem um novo rastro de combustão.
 
-![A close-up of the rocket with an exhaust trail.](images/rocket_exhaust.png){:width="300px"}
+![Uma vista de perto do foguete com uma trilha de combustão.](images/rocket_exhaust.png){:width="300px"}
 
 --- /task ---
 
-The `i` variable can also be used to create a colour gradient with less green in each ellipse that gets drawn.
+A variável `i` também pode ser usada para criar um gradiente de cor com menos verde em cada elipse desenhada.
 
 --- task ---
 
-Change the call to `fill()` to set the amount of green to `255 - i*10` so that the first ellipse has equal amounts of red and green and the last ellipse has very little green.
+Altere a chamada para `preencher()` para definir a quantidade de verde para `255 - i*10` para que a primeira elipse tenha quantidades iguais de vermelho e verde e a última elipse tenha muito pouco verde.
 
 --- code ---
 ---
@@ -82,19 +82,19 @@ ellipse(width/2, rocket_y + i, 8, 3)
 
 --- task ---
 
-**Test:** Check that you get a trail of ellipses gradually changing from yellow to red.
+**Teste:** Verifique que você obtém um rastro de elipses mudando gradualmente de amarelo para vermelho.
 
 --- /task ---
 
-The smoke exhaust trail is created by drawing lots of slightly transparent grey ellipses at different positions in each frame.
+A trilha de gases de escape é criada desenhando muitas elipses cinzas levemente transparentes em diferentes posições em cada quadro.
 
-![A slow animation of the smoke effect.](images/rocket_smoke.gif)
+![Uma animação lenta do efeito de fumaça.](images/rocket_smoke.gif)
 
 --- task ---
 
-This time the `fill()` is outside the loop as the colour is the same for each smoke ellipse. The fourth input to `fill()` is the opacity, a low opacity value makes the colour more transparent so you can see the shapes underneath.
+Desta vez, o `preencher()` está fora do laço, pois a cor é a mesma para cada elipse de fumaça. A quarta entrada para `preencher()` é a opacidade, um valor de opacidade baixo torna a cor mais transparente para que você possa ver as formas abaixo.
 
-In each frame of the animation, 20 ellipses of random sizes will be drawn at random positions.
+Em cada quadro da animação, 20 elipses de tamanhos aleatórios serão desenhadas em posições aleatórias.
 
 --- code ---
 ---
@@ -118,9 +118,9 @@ ellipse(width/2 + randint(-5, 5), rocket_y + randint(20, 50), randint(5, 10), ra
 
 --- task ---
 
-**Test:** Run your program and check the exhaust fumes are visible.
+**Teste:** Execute o seu programa e verifique que os gases de escape estão visíveis.
 
-![A close-up of the rocket and exhaust trail with added smoke.](images/rocket_exhaust_circles.gif)
+![Uma vista de perto do foguete e da trilha de exaustão com fumaça adicional.](images/rocket_exhaust_circles.gif)
 
 --- /task ---
 
