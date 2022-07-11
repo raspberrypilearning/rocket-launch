@@ -1,27 +1,27 @@
-## Liftoff!
+## Decolar!
 
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">
-Each time a new frame is drawn, the rocket needs to move up the screen to create an animation effect.
+Cada vez que um novo quadro é desenhado, o foguete precisa se mover para cima na tela para criar um efeito de animação.
 </div>
 <div>
 
-![A rocket flying at a steady speed from the bottom to the top of the screen.](images/fly.gif){:width="300px"}
+![Um foguete voando a uma velocidade constante de baixo para cima da tela.](images/fly.gif){:width="300px"}
 
 </div>
 </div>
 
 --- task ---
 
-The starter project has a rocket image provided for you.
+O projeto inicial tem uma imagem de foguete fornecida para você.
 
-![Image of the rocket in the Trinket image library.](images/trinket_rocket_image.png)
+![Imagem do foguete na biblioteca de imagens Trinket.](images/trinket_rocket_image.png)
 
 --- /task ---
 
 --- task ---
 
-Add code to the `setup()` function to load the rocket image into a `rocket` global variable.
+Adicione código à função `configuração()` para carregar a imagem do foguete em uma variável global `foguete`.
 
 --- code ---
 ---
@@ -41,11 +41,11 @@ rocket = load_image('rocket.png')
 
 --- /task ---
 
-The `y` position of the rocket will start at 400 (the screen height) and then decrease by 1 each time a new frame is drawn.
+A posição `y` do foguete começará em 400 (a altura da tela) e diminuirá em 1 cada vez que um novo quadro for desenhado.
 
 --- task ---
 
-Add a `rocket_y` global variable to keep track of the rocket's `y` position.
+Adicione uma variável global `foguete_y` para acompanhar a posição `y` do foguete.
 
 --- code ---
 ---
@@ -53,7 +53,7 @@ language: python filename: main.py line_numbers: true line_number_start: 7
 line_highlights: 9
 ---
 
-# Setup global variables
+# Configurar variáveis globais
 screen_size = 400    
 rocket_y = screen_size #Start at the bottom
 
@@ -63,9 +63,9 @@ rocket_y = screen_size #Start at the bottom
 
 --- task ---
 
-Define a `draw_rocket()` function to change the rocket's `y` position and redraw it.
+Defina uma função `desenhar_foguete()` para alterar a posição `y` do foguete e redesenhá-lo.
 
-`rocket_y -= 1` is a shorter way of saying `rocket_y = rocket_y - 1`.
+`foguete_y -= 1` é uma forma mais curta de dizer `foguete_y = foguete_y - 1`.
 
 --- code ---
 ---
@@ -73,7 +73,7 @@ language: python filename: main.py line_numbers: true line_number_start: 11
 line_highlights: 12-16
 ---
 
-# The draw_rocket function goes here
+# A função desenhar_foguete vai aqui
 def draw_rocket():
 
   global rocket_y #Use the global rocket_y variable    
@@ -87,7 +87,7 @@ image(rocket, width/2, rocket_y, 64, 64)
 
 --- task ---
 
-Call your new `draw_rocket()` in the `draw()` function so that the rocket gets redrawn every frame.
+Chame seu novo `desenhar_foguete()` na função `desenhar()` para que o foguete seja redesenhado a cada quadro.
 
 --- code ---
 ---
@@ -107,9 +107,9 @@ draw_rocket()
 
 --- task ---
 
-**Test:** Run your code to check that the rocket starts at the bottom of the screen and moves up each frame.
+**Teste:** Execute seu código para verificar que o foguete começa na parte inferior da tela e se move para cima a cada quadro.
 
-![Image of the rocket half way up the screen.](images/trinket_rocket_fly.gif)
+![Imagem do foguete a meio caminho da tela.](images/trinket_rocket_fly.gif)
 
 --- /task ---
 
