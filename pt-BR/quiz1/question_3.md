@@ -1,9 +1,9 @@
 --- question ---
 ---
-legend: Question 3 of 3
+legend: Pergunta 3 de 3
 ---
 
-This code uses `tint()` to colour a rocket in a game to show the player how they are doing.
+Este código usa `tint()` para colorir um foguete em um jogo para mostrar ao jogador como ele está se saindo.
 
 --- code ---
 ---
@@ -23,47 +23,47 @@ image(rocket, width/2, height/2, 64, 64)
 
 --- /code ---
 
-If the `points` variable has the value `99` and the `lives` variable has the value `1`, what will the rocket look like?
+Se a variável `pontos` tiver o valor `99` e a variável `vidas` tiver o valor `1`, como será o foguete?
 
 --- choices ---
 
 - (x)
 
-![A rocket image with amber tint.](images/rocket_amber.png) <div style="text-align: center;">Amber
+![Uma imagem de foguete com tonalidade âmbar.](images/rocket_amber.png) <div style="text-align: center;">Âmbar
 
  --- feedback ---
 
- Correct! The player has less than 100 points and only 1 life left. The rocket is coloured amber to left them know that this is their last chance to win!
+ Correto! O jogador tem menos de 100 pontos e apenas 1 vida restante. O foguete é de cor âmbar para deixá-los saber que esta é sua última chance de ganhar!
 
  --- /feedback ---
 
 - ( )
 
-![A rocket image with no tint](images/rocket_original.png) <div style="text-align: center;">No tint
+![Uma imagem de foguete sem tonalidade](images/rocket_original.png) <div style="text-align: center;">Sem tonalidade
 
  --- feedback ---
 
- Not quite, the rocket has a tint as one of the statements is true.
+ Não é bem assim, o foguete tem uma tonalidade pois uma das afirmações é verdadeira.
 
  --- /feedback ---
 
 - ( )
 
-![A rocket image with green tint](images/rocket_green.png) <div style="text-align: center;">Green
+![Uma imagem de foguete com tonalidade verde](images/rocket_green.png) <div style="text-align: center;">Verde
 
  --- feedback ---
 
- Not quite, the player would need `>= 100` points to win and turn their rocket green. They have `99`, which is not enough. Check the conditions carefully.
+ Não exatamente, o jogador precisaria de `>= 100` pontos para vencer e deixar seu foguete verde. Eles têm `99`, o que não é suficiente. Verifique cuidadosamente as condições.
 
  --- /feedback ---
 
 - ( )
 
-![A rocket image with red tint](images/rocket_red.png) <div style="text-align: center;">Red
+![Uma imagem de foguete com tonalidade vermelha](images/rocket_red.png) <div style="text-align: center;">Vermelho
 
  --- feedback ---
 
- Not quite, the player has `< 100` points but lives does not equal `0`. Check the conditions carefully.
+ Não é bem assim, o jogador tem `< 100` pontos mas a vida não é igual a `0`. Verifique cuidadosamente as condições.
 
  --- /feedback ---
 
