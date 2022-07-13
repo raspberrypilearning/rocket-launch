@@ -1,0 +1,29 @@
+---
+title: Lançamento do foguete
+hero_image: images/banner.png
+description: Faça uma animação de um foguete colocando um satélite em órbita
+version: 0.0.1
+listed: true
+copyedit: true
+last_tested: '2021-10-06'
+steps:
+  - title: Introdução
+  - title: Preparando o cenário
+  - title: Decolar!
+    completion:
+      - engaged
+  - title: Efeitos da combustão
+  - title: Queimar combustível
+  - title: Alcançando a órbita
+    completion:
+      - internal
+  - title: Reflexão
+    knowledge_quiz:
+      path: quiz1
+      version: 1
+      questions: 3
+      passing_score: 3
+    completion:
+      - external
+  - title: Melhore o seu projeto
+  - title: E agora?
