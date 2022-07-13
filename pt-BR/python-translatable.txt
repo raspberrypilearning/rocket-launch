@@ -1,0 +1,29 @@
+tamanho_tela
+
+foguete_y
+
+queimar
+
+raio_orbital
+
+orbita_y
+
+desenhar_foguete
+
+combustivel
+
+Combustível restante:
+
+foguete
+
+desenhar_plano_de_fundo
+
+planeta
+
+Quantos quilogramas de combustível você quer usar?
+
+Ciclo
+
+pontos
+
+vidas

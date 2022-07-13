@@ -1,0 +1,85 @@
+Importar código da biblioteca
+
+Configurar variáveis globais
+
+A função desenhar_foguete vai aqui
+
+A função desenhar_plano_de_fundo vai aqui
+
+Configure sua animação aqui
+
+O que fazer em cada quadro
+
+Definições para compatibilidade com a biblioteca de processamento p5py
+
+Forma
+
+Fontes
+
+Texto
+
+Cor
+
+Imagens
+
+Ambiente
+
+Transformar
+
+Teclado
+
+Seu planeta escolhido
+
+Abreviação de plano de fundo (0, 0, 0) — preto
+
+Desenhe a imagem
+
+Comece na parte inferior
+
+Use a variável global foguete_y
+
+Mova o foguete
+
+Desligue o lançamento
+
+Desenhe 25 elipses de combustão em chamas
+
+Amarelo
+
+i aumenta cada vez que o ciclo se repete
+
+Reduza a quantidade de verde
+
+Cinza transparente
+
+Desenhe 20 elipses de fumaça aleatórias
+
+Quanto combustível é queimado em cada quadro
+
+Queimar combustível
+
+Ainda tem combustível
+
+Desligue qualquer preenchimento
+
+Defina um traço branco
+
+Ainda voando
+
+Não há mais combustível e não em órbita
+
+Fracasso
+
+Assim, o planeta não está tingido de vermelho no próximo quadro!
+
+Sucesso
+
+Excesso de combustível
+
+Assim, o planeta não está tingido no próximo quadro!
+
+Verde
+
+Âmbar
+
+Vermelho
