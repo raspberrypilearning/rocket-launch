@@ -15,7 +15,7 @@ Se você está seguindo o caminho [Introdução ao Python](https://projects.rasp
 
 --- /no-print ---
 
-Se você quiser se divertir mais explorando Python, então você pode experimentar qualquer um[destes projetos](https://projects.raspberrypi.org/pt-BR/projects?software%5B%5D=python).
+Se você quiser se divertir mais explorando Python, então você pode experimentar qualquer um [destes projetos](https://projects.raspberrypi.org/pt-BR/projects?software%5B%5D=python).
 
 ***
 Este projeto foi traduzido por voluntários:
