@@ -87,7 +87,7 @@ line_highlights: 15, 17-18
 
 O foguete continuará funcionando mesmo que não tenha mais combustível.
 
-![O programa com uma pergunta na área de saída perguntando quanto combustível é necessário.](images/queimar_question.png)
+![O programa com uma pergunta na área de saída perguntando quanto combustível é necessário.](images/burn_question.png)
 
 --- /task ---
 
@@ -136,7 +136,7 @@ line_highlights: 16-31
 
 **Teste:** Execute seu programa para verificar que o foguete pára quando não há mais combustível.
 
-![Imagem de um foguete no meio da tela com a declaração 'Combustível restante: 0'.](images/queimar_empty.png){:width="300px"}
+![Imagem de um foguete no meio da tela com a declaração 'Combustível restante: 0'.](images/burn_empty.png){:width="300px"}
 
 --- /task ---
 
