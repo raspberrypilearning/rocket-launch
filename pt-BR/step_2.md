@@ -99,7 +99,7 @@ Defina uma função `desenhar_fundo()`, para desenhar o plano de fundo, abaixo d
 
 Use `fundo(0)` para definir a cor de fundo para preto e adicione uma função `imagem()` para desenhar o planeta. A função `imagem()` é apresentada:
 
-`image(image filename, x-coordinate, y-coordinate, image_width, image_height)`
+`image(nome do arquivo de imagem, coordenada x, coordenada y, largura_imagem, altura_imagem)`
 
 A biblioteca `p5` define variáveis globais `largura` e `altura` com base no tamanho da tela. Use-os em seu código para posicionar o planeta com o centro a meio da largura (`largura/2`) e na parte inferior (`altura`) da tela.
 
