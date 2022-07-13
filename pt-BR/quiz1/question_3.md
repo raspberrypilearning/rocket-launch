@@ -29,7 +29,7 @@ Se a variável `pontos` tiver o valor `99` e a variável `vidas` tiver o valor `
 
 - (x)
 
-![Uma imagem de foguete com tonalidade âmbar.](images/rocket_Âmbar.png) <div style="text-align: center;">Âmbar
+![Uma imagem de foguete com tonalidade âmbar.](images/rocket_amber.png) <div style="text-align: center;">Âmbar
 
  --- feedback ---
 
@@ -49,7 +49,7 @@ Se a variável `pontos` tiver o valor `99` e a variável `vidas` tiver o valor `
 
 - ( )
 
-![Uma imagem de foguete com tonalidade verde](images/rocket_Verde.png) <div style="text-align: center;">Verde
+![Uma imagem de foguete com tonalidade verde](images/rocket_green.png) <div style="text-align: center;">Verde
 
  --- feedback ---
 
@@ -59,7 +59,7 @@ Se a variável `pontos` tiver o valor `99` e a variável `vidas` tiver o valor `
 
 - ( )
 
-![Uma imagem de foguete com tonalidade vermelha](images/rocket_Vermelho.png) <div style="text-align: center;">Vermelho
+![Uma imagem de foguete com tonalidade vermelha](images/rocket_red.png) <div style="text-align: center;">Vermelho
 
  --- feedback ---
 
