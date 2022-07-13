@@ -138,7 +138,7 @@ line_highlights: 34-35
 
 **Teste:** Execute seu código e digite `20000` para a quantidade de combustível. Verifique que o foguete fica vermelho quando para abaixo da órbita.
 
-![Um foguete vermelho que ficou sem combustível antes do círculo orbital. O planeta também ficou vermelho.](images/orbit_Fracasso.png){:width="300px"}
+![Um foguete vermelho que ficou sem combustível antes do círculo orbital. O planeta também ficou vermelho.](images/orbit_failure.png){:width="300px"}
 
 Oh não, o planeta ficou vermelho!
 
@@ -199,7 +199,7 @@ no_tint()
 
 **Teste:** Execute seu projeto e digite `50000` para a quantidade de combustível. Verifique que o seu foguete fica verde quando atinge a órbita do satélite.
 
-![Um foguete verde que atingiu o círculo orbital e ainda tem combustível.](images/orbit_Sucesso.png){:width="300px"}
+![Um foguete verde que atingiu o círculo orbital e ainda tem combustível.](images/orbit_success.png){:width="300px"}
 
 --- /task ---
 
