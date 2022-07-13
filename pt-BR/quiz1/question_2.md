@@ -19,7 +19,7 @@ planeta = load_image('planet.png')
 
 --- /code ---
 
-As coordenadas começam em (0, 0) no canto superior esquerdo. No projeto, você desenhou imagens de planetas e foguetes usando a função `image((nome do arquivo de imagem, x-coord, y-coord, x-largura, y-altura)`.
+As coordenadas começam em (0, 0) no canto superior esquerdo. No projeto, você desenhou imagens de planetas e foguetes usando a função `image(nome do arquivo de imagem, x-coord, y-coord, x-largura, y-altura)`.
 
 Onde irá esse código posicionar a imagem do planeta?
 
