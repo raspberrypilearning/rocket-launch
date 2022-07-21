@@ -1,0 +1,38 @@
+---
+title: Rocket launch
+hero_image: images/banner.png
+description: Make an animation of a rocket propelling a satellite into orbit
+version: 0.0.1
+listed: true
+copyedit: true
+last_tested: '2021-10-06'
+steps:
+  - 
+    title: Introduction
+  - 
+    title: Set the scene
+  - 
+    title: Liftoff!
+    completion:
+      - engaged
+  - 
+    title: Exhaust effects
+  - 
+    title: Burn fuel
+  - 
+    title: Reaching orbit
+    completion:
+      - internal
+  - 
+    title: Reflection
+    knowledge_quiz:
+      path: quiz1
+      version: 1
+      questions: 3
+      passing_score: 3
+    completion:
+      - external
+  - 
+    title: Upgrade your project
+  - 
+    title: What next?
