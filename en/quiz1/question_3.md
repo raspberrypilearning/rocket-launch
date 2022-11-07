@@ -34,7 +34,7 @@ If the `points` variable has the value `99` and the `lives` variable has the val
 
  --- feedback ---
 
- Correct! The player has less than 100 points and only 1 life left. The rocket is coloured amber to left them know that this is their last chance to win!
+ Correct! The player has less than 100 points and only 1 life left. The rocket is coloured amber to let them know that this is their last chance to win!
 
  --- /feedback ---
 
