@@ -22,6 +22,10 @@ planet
 
 燃料を何キログラム使いますか?
 
+How much fuel should the rocket burn each frame?
+
+How far should the rocket travel each frame?
+
 ループ中
 
 points
