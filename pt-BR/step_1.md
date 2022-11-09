@@ -1,4 +1,4 @@
-## Introdução
+## You will make
 
 Faça uma animação para colocar um satélite em órbita — pegando carona em um foguete! Sua animação criará efeitos gráficos bacanas e simulará a melhor quantidade de combustível para dar ao foguete.
 
@@ -15,9 +15,10 @@ Você irá:
 
 --- no-print ---
 
+### Play ▶️
+
 --- task ---
 
-### Experimente
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 175px; flex-grow: 1">  
 Você precisa abastecer o foguete com combustível suficiente para alcançar a órbita do satélite. Experimente uma pequena quantidade (cerca de 10.000kg) e uma quantidade muito grande (cerca de 50.000kg) para ver o que acontece. 
