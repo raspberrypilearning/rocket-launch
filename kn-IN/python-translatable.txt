@@ -22,6 +22,10 @@ planet
 
 How many kilograms of fuel do you want to use?
 
+How much fuel should the rocket burn each frame?
+
+How far should the rocket travel each frame?
+
 Looping
 
 points
