@@ -1,19 +1,17 @@
-## Reflexão
+## Quick quiz
 
-Muito bem, você aprendeu muito! Agora, é hora de refletir - refletir é uma parte importante do aprendizado, porque isso ajuda a fazer novas conexões no seu cérebro.
+Answer the three questions. There are hints to guide you to the correct answer.
 
-Responda às três perguntas abaixo para refletir sobre o que você aprendeu.
+When you have answered each question, click on **Check my answer**.
 
-Após cada pergunta, pressione **enviar**. Você será guiado para a resposta correta. Você pode repetir esta atividade quantas vezes quiser.
-
-Divirta-se!
+Have fun!
 
 --- question ---
 ---
 legend: Pergunta 1 de 3
 ---
 
-Qual resultado você esperaria se executasse o programa abaixo?
+Which output would you expect if you ran the program below?
 
 ```python
 for i in range(5):
@@ -26,7 +24,7 @@ for i in range(5):
 
   --- feedback ---
 
-Não exatamente, um ciclo`for` em Python repete seu código uma vez para cada item em uma sequência que é fornecida, e aqui `range` cria uma sequência começando em `0`.
+Not quite, a `for` loop in Python repeats its code once for each item in a sequence it's given, and here `range` creates a sequence starting from `0`.
 
   --- /feedback ---
 
@@ -34,7 +32,7 @@ Não exatamente, um ciclo`for` em Python repete seu código uma vez para cada it
 
   --- feedback ---
 
-Não exatamente, a **variável de ciclo** de um ciclo `for` — neste caso `i` — mantém o valor atual da sequência pela qual o ciclo está trabalhando.
+Not quite, the **loop variable** from a `for` loop — in this case `i` — holds the current value from the sequence the loop is working through.
 
   --- /feedback ---
 
@@ -42,7 +40,7 @@ Não exatamente, a **variável de ciclo** de um ciclo `for` — neste caso `i` �
 
   --- feedback ---
 
-Correto. O ciclo é executado uma vez, em ordem, para cada item `i` no intervalo [0, 1, 2, 3, 4].
+Correct. The loop runs once, in order, for each item `i` in the range [0, 1, 2, 3, 4].
 
   --- /feedback ---
 
@@ -50,7 +48,7 @@ Correto. O ciclo é executado uma vez, em ordem, para cada item `i` no intervalo
 
   --- feedback ---
 
-Até certo ponto, um ciclo `for` percorre a sequência de itens que é fornecida em ordem. Como a função `range()` fornece uma sequência ordenada de 0 até ao número que é passado, essa é a ordem que você esperaria ver impressa por esse ciclo `for`.
+Nto quite, a `for` loop runs through the sequence of items it is given in order. Because `range()` gives an ordered sequence from 0 to the number it is passed, that is the order you would expect to see printed out by this `for` loop.
 
   --- /feedback ---
 
