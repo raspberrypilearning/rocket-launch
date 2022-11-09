@@ -22,6 +22,10 @@ planete
 
 Combien de kilos de carburant veux-tu utiliser ?
 
+How much fuel should the rocket burn each frame?
+
+How far should the rocket travel each frame?
+
 Looping
 
 points
