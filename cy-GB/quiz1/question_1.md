@@ -1,19 +1,17 @@
-## Beth nesaf?
+## Quick quiz
 
-Da iawn! Rydych chi wedi dysgu cryn dipyn! Amser myfyrio nawr — mae myfyrio'n rhan bwysig o ddysgu oherwydd mae'n helpu i wneud cysylltiadau newydd yn eich ymennydd.
+Answer the three questions. There are hints to guide you to the correct answer.
 
-Atebwch y tri chwestiwn isod i fyfyrio ar yr hyn rydych chi wedi'i ddysgu.
+When you have answered each question, click on **Check my answer**.
 
-Ar ôl bob cwestiwn, pwyswch **cyflwyno**. Byddi di'n cael dy dywys i'r ateb cywir. Galli di wneud hyn gymaint ag y mynni.
-
-Mwynha!
+Have fun!
 
 --- question ---
 ---
 legend: Cwestiwn 1 o 3
 ---
 
-Pa allbwn fyddech chi'n ei ddisgwyl pe baech chi'n rhedeg y rhaglen isod?
+Which output would you expect if you ran the program below?
 
 ```python
 for i in range(5):
@@ -26,7 +24,7 @@ for i in range(5):
 
   --- feedback ---
 
-Ddim yn hollol, mae dolen `for` yn Python yn ailadrodd ei chod unwaith i bob eitem mewn dilyniant sy'n cael ei rhoi iddi, ac yma mae `range` yn creu dilyniant yn dechrau o `0`.
+Not quite, a `for` loop in Python repeats its code once for each item in a sequence it's given, and here `range` creates a sequence starting from `0`.
 
   --- /feedback ---
 
@@ -34,7 +32,7 @@ Ddim yn hollol, mae dolen `for` yn Python yn ailadrodd ei chod unwaith i bob eit
 
   --- feedback ---
 
-Ddim yn hollol, mae'r **newidyn dolen** o ddolen `for` — yn yr achos hwn `i` — yn dal y gwerth presennol o'r dilyniant mae'r ddolen yn gweithio drwyddo.
+Not quite, the **loop variable** from a `for` loop — in this case `i` — holds the current value from the sequence the loop is working through.
 
   --- /feedback ---
 
@@ -42,7 +40,7 @@ Ddim yn hollol, mae'r **newidyn dolen** o ddolen `for` — yn yr achos hwn `i` �
 
   --- feedback ---
 
-Cywir. Mae'r ddolen yn rhedeg unwaith, mewn trefn, ar gyfer pob eitem `i` yn yr amrediad [0, 1, 2, 3, 4].
+Correct. The loop runs once, in order, for each item `i` in the range [0, 1, 2, 3, 4].
 
   --- /feedback ---
 
@@ -50,7 +48,7 @@ Cywir. Mae'r ddolen yn rhedeg unwaith, mewn trefn, ar gyfer pob eitem `i` yn yr 
 
   --- feedback ---
 
-Ddim yn hollol, mae dolen `for` yn rhedeg drwy dilyniant o eitemau sy'n cael ei rhoi iddi mewn trefn. Oherwydd bod `range()` yn rhoi dilyniant mewn trefn o 0 i'r rhif sy'n cael ei basio iddo, dyna'r drefn byddech chi'n disgwyl gweld yn cael ei phrintio gan y ddolen `for` hon.
+Nto quite, a `for` loop runs through the sequence of items it is given in order. Because `range()` gives an ordered sequence from 0 to the number it is passed, that is the order you would expect to see printed out by this `for` loop.
 
   --- /feedback ---
 
