@@ -22,6 +22,10 @@ planeet
 
 Hoeveel kilogram brandstof wil je gebruiken?
 
+How much fuel should the rocket burn each frame?
+
+How far should the rocket travel each frame?
+
 Lus
 
 punten
