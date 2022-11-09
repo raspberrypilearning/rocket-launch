@@ -33,7 +33,7 @@ Als de variabele `punten` de waarde `99` heeft en de variabele `levens` de waard
 
  --- feedback ---
 
- Correct! De speler heeft minder dan 100 punten en heeft nog maar 1 leven over. De raket is amber gekleurd om te laten weten dat dit de laatste kans is om te winnen!
+ Correct! De speler heeft minder dan 100 punten en heeft nog maar 1 leven over. The rocket is coloured amber to let them know that this is their last chance to win!
 
  --- /feedback ---
 
