@@ -1,4 +1,4 @@
-## Cyflwyniad
+## You will make
 
 Gwnewch animeiddiad i yrru lloeren i orbit — drwy gael pàs ar roced! Bydd eich animeiddiad yn creu effeithiau graffeg cŵl ac yn efelychu'r cyfaint gorau o danwydd i'w roi i'r roced.
 
@@ -15,9 +15,10 @@ Byddwch chi'n:
 
 --- no-print ---
 
+### Play ▶️
+
 --- task ---
 
-### Rhowch gynnig arni
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 175px; flex-grow: 1">  
 Mae angen i chi roi digon o danwydd i'r roced iddi gyrraedd orbit y lloeren. Rhowch gynnig ar ychydig bach (tua 10,000kg) a llawer iawn (tua 50,000kg) i weld beth sy'n digwydd. 
