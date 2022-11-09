@@ -33,7 +33,7 @@ Si la variable `points` a la valeur `99` et la variable `vies` a la valeur `1`, 
 
  --- feedback ---
 
- Correct ! Le joueur a moins de 100 points et seulement 1 vie restante. La fusée est de couleur orange pour leur faire savoir que c'est leur dernière chance de gagner !
+ Correct ! Le joueur a moins de 100 points et seulement 1 vie restante. The rocket is coloured amber to let them know that this is their last chance to win!
 
  --- /feedback ---
 
