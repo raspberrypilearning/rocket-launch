@@ -5,10 +5,10 @@ description: Faça uma animação de um foguete colocando um satélite em órbit
 version: 0.0.1
 listed: true
 copyedit: true
-last_tested: '2021-10-06'
+last_tested: "2021-10-06"
 steps:
   - 
-    title: Introdução
+    title: You will make
   - 
     title: Preparando o cenário
   - 
@@ -24,7 +24,7 @@ steps:
     completion:
       - internal
   - 
-    title: Reflexão
+    title: Quick quiz
     knowledge_quiz:
       path: quiz1
       version: 1
