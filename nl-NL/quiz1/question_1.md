@@ -1,19 +1,17 @@
-## Reflectie
+## Quick quiz
 
-Goed gedaan, je hebt veel geleerd! Nu is het tijd om te reflecteren - reflecteren is een belangrijk onderdeel van leren, omdat het helpt om nieuwe verbindingen in je hersenen te maken.
+Answer the three questions. There are hints to guide you to the correct answer.
 
-Beantwoord de drie onderstaande vragen om terug te kijken op wat je hebt geleerd.
+When you have answered each question, click on **Check my answer**.
 
-Druk na elke vraag op **indienen**. Je wordt naar het juiste antwoord geleid. Je kunt deze activiteit zo vaak doen als je wilt.
-
-Veel plezier!
+Have fun!
 
 --- question ---
 ---
 legend: Vraag 1 van 3
 ---
 
-Welke uitvoer zou je verwachten als je het onderstaande programma zou draaien?
+Which output would you expect if you ran the program below?
 
 ```python
 for i in range(5):
@@ -26,7 +24,7 @@ for i in range(5):
 
   --- feedback ---
 
-Niet helemaal, een `for` lus in Python herhaalt zijn code in een gegeven reeks, en hier creëert `range` een reeks die begint bij `0`.
+Not quite, a `for` loop in Python repeats its code once for each item in a sequence it's given, and here `range` creates a sequence starting from `0`.
 
   --- /feedback ---
 
@@ -34,7 +32,7 @@ Niet helemaal, een `for` lus in Python herhaalt zijn code in een gegeven reeks, 
 
   --- feedback ---
 
-Niet helemaal, de **lus variabele** van een `for` lus - in dit geval `i` - bevat de waarde van het aantal maal dat de lus wordt doorlopen.
+Not quite, the **loop variable** from a `for` loop — in this case `i` — holds the current value from the sequence the loop is working through.
 
   --- /feedback ---
 
@@ -42,7 +40,7 @@ Niet helemaal, de **lus variabele** van een `for` lus - in dit geval `i` - bevat
 
   --- feedback ---
 
-Correct. De lus loopt één keer, in volgorde, voor elk item `i` in het bereik [0, 1, 2, 3, 4].
+Correct. The loop runs once, in order, for each item `i` in the range [0, 1, 2, 3, 4].
 
   --- /feedback ---
 
@@ -50,7 +48,7 @@ Correct. De lus loopt één keer, in volgorde, voor elk item `i` in het bereik [
 
   --- feedback ---
 
-Niet helemaal, een `for` lus doorloopt de reeks van items die in de gegeven volgorde. Omdat `range()` een geordende reeks geeft van 0 tot het nummer dat wordt doorgegeven, is dat de volgorde die je zou verwachten getoond te worden door deze `for` lus.
+Nto quite, a `for` loop runs through the sequence of items it is given in order. Because `range()` gives an ordered sequence from 0 to the number it is passed, that is the order you would expect to see printed out by this `for` loop.
 
   --- /feedback ---
 
