@@ -33,7 +33,7 @@ Os oes gan y newidyn `pwyntiau` werth o `99` a bod gan y newidyn `bywydau` werth
 
  --- feedback ---
 
- Cywir! Mae gan y chwaraewr lai na 100 o bwyntiau a dim ond 1 bywyd yn weddill. Mae'r roced wedi'i lliwio'n felyngoch i ddangos mai dyma eu cyfle olaf i ennill!
+ Cywir! Mae gan y chwaraewr lai na 100 o bwyntiau a dim ond 1 bywyd yn weddill. The rocket is coloured amber to let them know that this is their last chance to win!
 
  --- /feedback ---
 
