@@ -5,10 +5,10 @@ description: Gwnewch animeiddiad o roced yn gyrru lloeren i orbit
 version: 0.0.1
 listed: true
 copyedit: true
-last_tested: '2021-10-06'
+last_tested: "2021-10-06"
 steps:
   - 
-    title: Cyflwyniad
+    title: You will make
   - 
     title: Gosod yr olygfa
   - 
@@ -24,7 +24,7 @@ steps:
     completion:
       - internal
   - 
-    title: Myfyrio
+    title: Quick quiz
     knowledge_quiz:
       path: quiz1
       version: 1
