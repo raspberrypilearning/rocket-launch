@@ -33,7 +33,7 @@ image(rocket, width/2, height/2, 64, 64)
 
  --- feedback ---
 
- صحيح! اللاعب لديه أقل من 100 نقطة وحياة واحدة فقط متبقية. الصاروخ ملون باللون الكهرماني ليجعلهم يعرفون أن هذه فرصتهم الأخيرة للفوز!
+ صحيح! اللاعب لديه أقل من 100 نقطة وحياة واحدة فقط متبقية. The rocket is coloured amber to let them know that this is their last chance to win!
 
  --- /feedback ---
 
