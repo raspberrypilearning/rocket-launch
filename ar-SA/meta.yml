@@ -5,10 +5,10 @@ description: اصنع رسمًا متحركًا لصاروخ يدفع قمرًا
 version: 0.0.1
 listed: true
 copyedit: true
-last_tested: '2021-10-06'
+last_tested: "2021-10-06"
 steps:
   - 
-    title: المقدمة
+    title: You will make
   - 
     title: جهز المشهد
   - 
@@ -24,7 +24,7 @@ steps:
     completion:
       - internal
   - 
-    title: انعكاس
+    title: Quick quiz
     knowledge_quiz:
       path: quiz1
       version: 1
