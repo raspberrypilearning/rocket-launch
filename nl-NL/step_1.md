@@ -1,4 +1,4 @@
-## Inleiding
+## You will make
 
 Maak een animatie om een satelliet in een baan om de aarde te brengen — door mee te liften op een raket! Je animatie zal coole grafische effecten maken en de beste hoeveelheid brandstof simuleren om aan de raket mee te geven.
 
@@ -15,9 +15,10 @@ Je gaat:
 
 --- no-print ---
 
+### Play ▶️
+
 --- task ---
 
-### Probeer het uit
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 175px; flex-grow: 1">  
 Je moet de raket van voldoende brandstof voorzien om de omloopbaan te bereiken. Probeer een kleine hoeveelheid (ongeveer 10.000 kg) en een zeer grote hoeveelheid (ongeveer 50.000 kg) om te zien wat er gebeurt. 
