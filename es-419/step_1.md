@@ -1,4 +1,4 @@
-## Introducción
+## You will make
 
 Crea una animación para impulsar un satélite a la órbita, ¡montándote en un cohete! Tu animación creará efectos gráficos geniales y simulará la mejor cantidad de combustible para dar al cohete.
 
@@ -15,9 +15,10 @@ Vas a:
 
 --- no-print ---
 
+### Play ▶️
+
 --- task ---
 
-### Inténtalo
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 175px; flex-grow: 1">  
 Debes suministrar al cohete suficiente combustible para alcanzar la órbita del satélite. Prueba con una cantidad pequeña (alrededor de 10 000 kg) y una cantidad muy grande (alrededor de 50 000 kg) para ver qué sucede. 
