@@ -33,7 +33,7 @@ image(rocket, width/2, height/2, 64, 64)
 
  --- feedback ---
 
- 正解！ プレイヤーのポイントは100未満で、残りのライフは1つだけ残っています。 ロケットはアンバーに色付けされ、これが最後の勝利のチャンスであることを知らせています！
+ 正解！ プレイヤーのポイントは100未満で、残りのライフは1つだけ残っています。 The rocket is coloured amber to let them know that this is their last chance to win!
 
  --- /feedback ---
 
