@@ -1,4 +1,4 @@
-## Introduction
+## You will make
 
 Crée une animation pour propulser un satellite en orbite - en utilisant une fusée ! Ton animation créera des effets graphiques sympas et simulera la meilleure quantité de carburant à donner à la fusée.
 
@@ -15,9 +15,10 @@ Tu vas devoir :
 
 --- no-print ---
 
+### Play ▶️
+
 --- task ---
 
-### Essaie-le
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 175px; flex-grow: 1">  
 Tu dois fournir suffisamment de carburant à la fusée pour atteindre l'orbite du satellite. Essaye une petite quantité (environ 10 000 kg) et une très grande quantité (environ 50 000 kg) pour voir ce qui se passe. 
