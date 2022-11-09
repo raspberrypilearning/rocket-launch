@@ -1,19 +1,17 @@
-## ふりかえり
+## Quick quiz
 
-お疲れさまでした。たくさんのことを学びましたね！ 次はふりかえりの時間です。ふりかえりを行うことで、脳内に新しいつながりを作ることができます。このため、ふりかえりは学習の大事な部分です。
+Answer the three questions. There are hints to guide you to the correct answer.
 
-以下の3つの質問に答えて、学んだことをふりかえってみましょう。
+When you have answered each question, click on **Check my answer**.
 
-各質問の後、**答えを確認する**を押してください。 正しい答えが表示されます。 このアクティビティは何度でも実行できます。
-
-お楽しみください!
+Have fun!
 
 --- question ---
 ---
 legend: 質問1/3
 ---
 
-以下のプログラムを実行した場合、どのように出力されると思いますか？
+Which output would you expect if you ran the program below?
 
 ```python
 for i in range(5):
@@ -26,7 +24,7 @@ for i in range(5):
 
   --- feedback ---
 
-残念です。 Pythonの`for` ループは、書かれたコードを順番どおりに各アイテムを1回ずつ繰り返します。ここで、 `range` は、 `0`から始まる数字の並びを作成します。
+Not quite, a `for` loop in Python repeats its code once for each item in a sequence it's given, and here `range` creates a sequence starting from `0`.
 
   --- /feedback ---
 
@@ -34,7 +32,7 @@ for i in range(5):
 
   --- feedback ---
 
-残念です。`for` ループの **ループ変数** （この場合は `i` ）は、ループが処理している数字の並びからの現在の値が入っています。
+Not quite, the **loop variable** from a `for` loop — in this case `i` — holds the current value from the sequence the loop is working through.
 
   --- /feedback ---
 
@@ -42,7 +40,7 @@ for i in range(5):
 
   --- feedback ---
 
-正解です。 [0, 1, 2, 3, 4]の範囲の各アイテム `i`に対して順番に1回ずつループが実行されます。
+Correct. The loop runs once, in order, for each item `i` in the range [0, 1, 2, 3, 4].
 
   --- /feedback ---
 
@@ -50,7 +48,7 @@ for i in range(5):
 
   --- feedback ---
 
-残念です。 `for` ループは、指定された順にアイテムを実行します。 `range()` は、0から指定された数値までの順番に並んだ数値を返すからです。これは、この `for` ループによって出力されると予想される順序です。
+Nto quite, a `for` loop runs through the sequence of items it is given in order. Because `range()` gives an ordered sequence from 0 to the number it is passed, that is the order you would expect to see printed out by this `for` loop.
 
   --- /feedback ---
 
