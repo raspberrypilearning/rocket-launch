@@ -10,7 +10,7 @@ steps:
   - 
     title: You will make
   - 
-    title: Set the scene
+    title: दृश्य सेट करा
   - 
     title: Liftoff!
     completion:
@@ -27,12 +27,12 @@ steps:
     title: Quick quiz
     knowledge_quiz:
       path: quiz1
-      version: 1
+      version: 0
       questions: 3
       passing_score: 3
     completion:
       - external
   - 
-    title: Upgrade your project
+    title: तुमचा प्रोजेक्ट अपग्रेड करा
   - 
-    title: What next?
+    title: पुढे काय?
