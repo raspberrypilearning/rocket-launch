@@ -8,7 +8,7 @@ Make an animation to propel a satellite into orbit — by hitching a ride on a r
 <span style="color: #0faeb0">**Computer simulations**</span> are used to calculate what will happen when we send a rocket into space. Running simulations and making plans on a computer reduces the risk of expensive or dangerous problems in space.
 </p>
 
-You will:
+ನೀವು:
 + Use **images** in your animations
 + Use `for` loops to repeat actions
 + Join conditions with `and`
@@ -30,7 +30,7 @@ How much fuel is just enough without too much left over?
 
 --- /task ---
 
---- /no-print ---
+--- /ಮುದ್ರಣ ಇಲ್ಲ ---
 
 --- print-only ---
 
