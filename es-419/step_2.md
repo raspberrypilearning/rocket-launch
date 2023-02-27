@@ -2,7 +2,7 @@
 
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">
-La animación necesita un telón de fondo espacial con un planeta desde el cual lanzar el cohete.
+La animación necesita un fondo espacial con un planeta desde el cual lanzar el cohete.
 </div>
 <div>
 
@@ -19,11 +19,11 @@ Si tienes una cuenta Trinket, puede hacer clic en el botón **Remix** para guard
 
 --- /task ---
 
-Utilizarás una variable `tamano_pantalla` para establecer el tamaño de la pantalla y en los cálculos. Las variables definidas fuera de las funciones son **globales**, por lo que puedes usarlas en cualquier parte de tu programa.
+Utilizarás una variable `screen_size` para establecer el tamaño de la pantalla y en los cálculos. Las variables definidas fuera de las funciones son **globales**, por lo que puedes usarlas en cualquier parte de tu programa.
 
 --- task ---
 
-Busca el comentario `Configurar variables globales` y agrega una línea de código para crear tu variable `tamano_pantalla`:
+Busca el comentario `Configurar variables globales` y agrega una línea de código para crear tu variable `screen_size`:
 
 --- code ---
 ---
@@ -61,9 +61,9 @@ tamano(tamano_pantalla, tamano_pantalla)
 
 El proyecto de inicio tiene tres imágenes de planetas diferentes y la luna proporcionadas para tí. Puedes verlos en la biblioteca de imágenes de Trinket seleccionando el botón **View and Add Images**.
 
-![Un símbolo más, un símbolo de carga y un símbolo de imagen. El símbolo de la imagen está resaltado.](images/trinket_image.png)
+![Un símbolo de más, un símbolo de carga y un símbolo de imagen. El símbolo de la imagen está resaltado.](images/trinket_image.png)
 
-**Elige:** Decide qué imagen deseas utilizar y toma nota del nombre del archivo. Por ejemplo, `orange_planet.png`.
+**Elige:** Decide qué imagen deseas utilizar y toma nota del nombre del archivo. Por ejemplo, `planet.png`.
 
 --- /task ---
 
@@ -95,11 +95,11 @@ planeta = load_image('planet.png') #Tu planeta elegido
 
 --- task ---
 
-Define una función `dibujar_fondo()` para dibujar el fondo, debajo del comentario que te indica dónde debe ir.
+Define una función `draw_background()` para dibujar el fondo, debajo del comentario que te indica dónde debe ir.
 
-Usa `fondo(0)` para establecer el color de fondo en negro y agrega una función `imagen()` para dibujar el planeta. La función `imagen()` se presenta:
+Usa `background(0)` para establecer el color de fondo en negro y agrega una función `image()` para dibujar el planeta. La función `image()` se presenta:
 
-`imagen (nombre de archivo de imagen, coordenada x, coordenada y, ancho_imagen, altura_imagen)`
+`image(image filename, x-coordinate, y-coordinate, image_width, image_height)`
 
 La biblioteca `p5` establece variables globales `width` y `height` según el tamaño de la pantalla. Úsalos en tu código para colocar el planeta con su centro en la mitad (`width/2`) y en la parte inferior (`height`) de la pantalla.
 
@@ -123,7 +123,7 @@ Poner todo el código para dibujar el fondo en una sola función hace que tu có
 
 --- task ---
 
-Para que aparezca el fondo, llama a `dibujar_fondo()` en `dibujar()`. Esto hará que el fondo se vuelva a dibujar cada vez que se llame a `dibujar()`, cubriendo cualquier dibujo anterior:
+Para que aparezca el fondo, llama a `draw_background()` en `draw()`. Esto hará que el fondo se vuelva a dibujar cada vez que se llame a `draw()`, cubriendo cualquier dibujo anterior:
 
 --- code ---
 ---
