@@ -1,85 +1,85 @@
-Import library code
+लाइब्रेरी कोड आयात करें
 
-Setup global variables
+वैश्विक वेरिएबल सेटअप करें
 
-The draw_rocket function goes here
+draway_crock फ़ंक्शन यहाँ जाता है
 
-The draw_background function goes here
+draway_background फ़ंक्शन यहाँ जाता है
 
-Setup your animation here
+अपना एनिमेशन यहां सेट करें
 
-Things to do in every frame
+हर फ्रेम में करने के लिए चीजें
 
-Definitions for compatibility with the p5py processing library
+p5psi संसाधन लाइब्रेरी के साथ संगतता के लिए परिभाषाएँ
 
-Shape
+आकृति
 
-Fonts
+फ़ॉन्ट
 
-Text
+टेक्स्ट
 
-Colour
+कलर
 
-Images
+images
 
-Environment
+environment
 
-Transform
+रूपांतरित करें
 
-Keyboard
+कीबोर्ड
 
-Your chosen planet
+आपका चुना हुआ ग्रह
 
-Short for background(0, 0, 0) — black
+पृष्ठभूमि के लिए छोटा(0, 0, 0) — काला
 
-Draw the image
+चित्र बनाएं
 
-Start at the bottom
+नीचे से शुरू करें
 
-Use the global rocket_y variable
+वैश्विक रॉकेट_y वेरिएबल का उपयोग करें
 
-Move the rocket
+रॉकेट को हिलाएं
 
-Turn off the stroke
+स्ट्रोक बंद करें
 
-Draw 25 burning exhaust ellipses
+25 जलते हुए निकास दीर्घवृत्त आरेखित करें
 
-Yellow
+पीला
 
-i increases each time the loop repeats
+जब भी लूप दोहराया जाए तो मैं बढ़ता है
 
-Reduce the amount of green
+हरे रंग की मात्रा को कम करें
 
-Transparent grey
+पारदर्शी धूसर
 
-Draw 20 random smoke ellipses
+20 अनियमित धुएं के दीर्घवृत्त बनाएं
 
-How much fuel is burned in each frame
+प्रत्येक फ्रेम में कितना ईंधन जलाया जाता है
 
-Burn fuel
+ईंधन बर्न करें
 
-Still got fuel
+अभी भी ईंधन मिला है
 
-Turn off any fill
+कोई भी भरण बंद करें
 
-Set a white stroke
+सफेद स्ट्रोक सेट करें
 
-Still flying
+अभी भी उड़ रहे हैं
 
-No more fuel and not in orbit
+और अधिक ईंधन नहीं है और कक्षा में नहीं है
 
-Failure
+विफलता
 
-So the planet isn't tinted red in the next frame!
+तो ग्रह को अगले फ्रेम में लाल रंग से टिंट नहीं किया जाता है!
 
-Success
+सफलता
 
-Too much fuel
+बहुत अधिक ईंधन
 
-So the planet isn't tinted in the next frame!
+तो ग्रह को अगले फ्रेम में टिंट नहीं किया जाता है!
 
-Green
+हरा
 
-Amber
+एम्बर
 
-Red
+लाल
