@@ -10,7 +10,7 @@ steps:
   - 
     title: You will make
   - 
-    title: Set the scene
+    title: ದೃಶ್ಯವನ್ನು ಹೊಂದಿಸಿ
   - 
     title: Liftoff!
     completion:
@@ -33,6 +33,6 @@ steps:
     completion:
       - external
   - 
-    title: Upgrade your project
+    title: ನಿಮ್ಮ ಪ್ರಾಜೆಕ್ಟ್‌ ಅಪ್‌ಗ್ರೇಡ್‌ ಮಾಡಿ
   - 
-    title: What next?
+    title: ಮುಂದೆ ಏನು?
