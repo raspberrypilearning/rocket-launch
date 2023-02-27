@@ -1,20 +1,20 @@
-## Burn fuel
+## ईंधन बर्न करें
 
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">
 
-One of the most important things to decide when launching a rocket is how much fuel to load into it. 
+रॉकेट को कब लॉन्च करना है, यह तय करने के लिए सबसे महत्वपूर्ण चीजों में से एक यह है कि इसमें कितना ईंधन लोड करना है। 
 
-To do this, you need to simulate how much fuel will be burned on the journey.
+ऐसा करने के लिए, आपको यह अनुरूपण करने की आवश्यकता है कि यात्रा में कितना ईंधन जलाया जाएगा।
 </div>
 
-![The program with a question in the output area asking how much fuel is required.](images/burn_question_full.png){:width="300px"}
+![आउटपुट क्षेत्र में एक प्रश्न के साथ प्रोग्राम यह पूछ रहा है कि कितना ईंधन चाहिए।](images/code_question_full.png){:width="300px"}
 
 </div>
 
 --- task ---
 
-Add a variable to keep track of how much fuel your rocket burns (in frames).
+आपके रॉकेट में कितना ईंधन बर्न होता है इसका ट्रैक रखने के लिए एक वेरिएबल जोड़ें (फ्रेम में)।
 
 --- code ---
 ---
@@ -22,7 +22,7 @@ language: python filename: main.py line_numbers: true line_number_start: 7
 line_highlights: 10
 ---
 
-# Setup global variables
+# वैश्विक वेरिएबल सेटअप करें
 screen_size = 400   
 rocket_y = screen_size  
 burn = 100 #How much fuel is burned in each frame
@@ -34,7 +34,7 @@ burn = 100 #How much fuel is burned in each frame
 
 --- task ---
 
-At the bottom of your program, add code to ask the user how much fuel to add to the rocket and store their answer in a `fuel` global variable.
+अपने प्रोग्राम के निचले भाग में, उपयोगकर्ता से यह पूछने के लिए कोड जोड़ें कि रॉकेट में कितना ईंधन जोड़ना है और अपने उत्तर को `fuel` वैश्विक वेरिएबल में संग्रहीत करें।
 
 --- code ---
 ---
@@ -49,13 +49,13 @@ run()
 
 --- /task ---
 
-The rocket should only move if it hasn't burned all of its fuel.
+रॉकेट को तभी चलना चाहिए जब उसने अपने सभी ईंधन को नहीं जलाया हो।
 
 --- task ---
 
-Add code to the `draw_rocket()` function to reduce the remaining `fuel` by the `burn` of each frame. Use `print()` to show how much fuel is left in each frame.
+प्रत्येक फ्रेम के `burn` द्वारा शेष `fuel` को कम करने के लिए `drawing_rotरॉकेट()` फंक्शन में कोड जोड़ें। प्रत्येक फ्रेम में कितना ईंधन बचा है यह दिखाने के लिए `print()` का उपयोग करें।
 
-You need to say that you want to use the global `fuel` and `burn` variables.
+आपको यह कहना होगा कि आप वैश्विक `fuel` और `breast` वेरिएबल्स का उपयोग करना चाहते हैं।
 
 --- code ---
 ---
@@ -74,21 +74,21 @@ print('Fuel left: ', fuel)
 
 --- task ---
 
-**Test:** Run your program to check that the animation doesn't start until `How many kilograms of fuel do you want to use?` has been answered. Try entering `30000` as the amount of fuel.
+**परीक्षण:** यह जांचने के लिए अपना प्रोग्राम चलाएँ कि एनीमेशन तब तक शुरू नहीं होता जब तक `आप कितने किलोग्राम ईंधन का उपयोग करना चाहते हैं?` का उत्तर नहीं दिया गया है। ईंधन की मात्रा के रूप में `30000` दर्ज करने का प्रयास करें।
 
-The rocket will keep going even if it has no fuel left.
+रॉकेट तब भी चलता रहेगा जब उसके पास कोई ईंधन नहीं बचा हो।
 
-![The program with a question in the output area asking how much fuel is required.](images/burn_question.png)
+![आउटपुट क्षेत्र में एक प्रश्न के साथ प्रोग्राम यह पूछता है कि कितना ईंधन चाहिए।](images/burn_question.png)
 
 --- /task ---
 
 --- task ---
 
-The rocket should only move if it has enough fuel left. Add an `if` statement to check that `fuel >= burn`.
+रॉकेट को तभी चलना चाहिए जब उसके पास पर्याप्त ईंधन बचा हो। `fuel>= बर्न` जांचने के लिए एक `if` स्टेटमेंट जोड़ें।
 
-You will need to indent all of the lines of code before the `image()` function call. To do this, highlight all of the lines with the mouse and then tap the <kbd>Tab</kbd> on the keyboard to indent all the lines at once.
+आपको `image()` फ़ंक्शन कॉल से पहले कोड की सभी पंक्तियों को इंडेंट करने की आवश्यकता होगी। ऐसा करने के लिए, माउस के साथ सभी पंक्तियों को हाइलाइट करें और फिर सभी पंक्तियों को एक बार में इंडेंट करने के लिए कीबोर्ड पर <kbd>tab</kbd> पर टैप करें।
 
-The `image()` line doesn't need to be indented because you always want to draw the rocket.
+`image()` पंक्ति को इंडेंट करने की आवश्यकता नहीं है क्योंकि आप हमेशा रॉकेट बनाना चाहते हैं।
 
 --- code ---
 ---
@@ -121,13 +121,13 @@ print('Fuel left: ', fuel)
 
 --- task ---
 
-**Test:** Run your program to check that the rocket stops when there is no fuel left.
+**परीक्षण:** यह जांचने के लिए अपना प्रोग्राम चलाएं कि जब कोई ईंधन नहीं बचा तो रॉकेट रुक जाए।
 
-![Image of a rocket in the middle of the screen with the statement 'Fuel left: 0'.](images/burn_empty.png){:width="300px"}
+!['Fuel left: 0' कथन के साथ स्क्रीन के बीच में एक रॉकेट की छवि।](images/burn_empty.png){:width="300px"}
 
 --- /task ---
 
-This computer simulation isn't very accurate, but it's good enough for our animation.
+यह कंप्यूटर सिमुलेशन बहुत सटीक नहीं है, लेकिन यह हमारे एनीमेशन के लिए पर्याप्त है।
 
 --- save ---
 
