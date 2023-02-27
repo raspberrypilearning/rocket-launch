@@ -22,9 +22,9 @@ planete
 
 Combien de kilos de carburant veux-tu utiliser ?
 
-How much fuel should the rocket burn each frame?
+Combien de carburant la fusée doit-elle brûler à chaque image ?
 
-How far should the rocket travel each frame?
+Quelle distance la fusée doit-elle parcourir à chaque image ?
 
 Looping
 
