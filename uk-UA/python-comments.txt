@@ -1,85 +1,85 @@
-Import library code
+Імпорт коду бібліотеки
 
-Setup global variables
+Налаштування глобальних змінних
 
-The draw_rocket function goes here
+Функція draw_rocket викликається тут
 
-The draw_background function goes here
+Функція draw_background викликається тут
 
-Setup your animation here
+Налаштувати анімацію можна тут
 
-Things to do in every frame
+Що відбувається на кожному кадрі
 
-Definitions for compatibility with the p5py processing library
+Визначення для сумісності з бібліотекою p5py
 
-Shape
+Фігура
 
-Fonts
+Шрифти
 
-Text
+Текст
 
-Colour
+Колір
 
-Images
+Зображення
 
-Environment
+Довкілля
 
-Transform
+Перетворення
 
-Keyboard
+Клавіатура
 
-Your chosen planet
+Твоя обрана планета
 
-Short for background(0, 0, 0) — black
+Скорочено від background(0, 0, 0) - чорний
 
-Draw the image
+Малювання зображення
 
-Start at the bottom
+Старт знизу
 
-Use the global rocket_y variable
+Використання глобальної змінної rocket_y
 
-Move the rocket
+Переміщення ракети
 
-Turn off the stroke
+Видалення обведення
 
-Draw 25 burning exhaust ellipses
+Малювання 25 овалів вихлопу
 
-Yellow
+Жовтий
 
-i increases each time the loop repeats
+i збільшується з кожним повторенням циклу
 
-Reduce the amount of green
+Зменшити кількість зеленого кольору
 
-Transparent grey
+Прозоро-сірий
 
-Draw 20 random smoke ellipses
+Малювання 20 випадкових овалів диму
 
-How much fuel is burned in each frame
+Скільки палива спалюється на кожному кадрі
 
-Burn fuel
+Спалювання палива
 
-Still got fuel
+Паливо ще є
 
-Turn off any fill
+Вимкнення будь-якої заливки
 
-Set a white stroke
+Встановлення білого обведення
 
-Still flying
+Продовжує летіти
 
-No more fuel and not in orbit
+Палива більше немає та орбіти не досягнуто
 
-Failure
+Провал
 
-So the planet isn't tinted red in the next frame!
+Тобто на наступному кадрі планета не буде червоною!
 
-Success
+Успіх
 
-Too much fuel
+Занадто багато пального
 
-So the planet isn't tinted in the next frame!
+Щоб на наступному кадрі планета не була підфарбована!
 
-Green
+Зелений
 
-Amber
+Янтар
 
-Red
+Червоний
