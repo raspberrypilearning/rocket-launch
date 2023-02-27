@@ -38,7 +38,7 @@ screen_size = 400
 
 --- /task ---
 
---- task ---
+---  task ---
 
 Use a variável `tamanho_tela` para criar um quadrado de 400 por 400 pixels:
 
