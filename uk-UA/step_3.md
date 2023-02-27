@@ -1,27 +1,27 @@
-## Liftoff!
+## Зліт!
 
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">
-Each time a new frame is drawn, the rocket needs to move up the screen to create an animation effect.
+Кожного разу, коли малюється новий кадр, ракета повинна рухатися вгору, щоб створити ефект анімації.
 </div>
 <div>
 
-![A rocket flying at a steady speed from the bottom to the top of the screen.](images/fly.gif){:width="300px"}
+![Ракета, що летить з постійною швидкістю від низу до верху екрану.](images/fly.gif){:width="300px"}
 
 </div>
 </div>
 
 --- task ---
 
-The starter project has a rocket image provided for you.
+У стартовому проєкті тобі надається зображення ракети.
 
-![Image of the rocket in the Trinket image library.](images/trinket_rocket_image.png)
+![Зображення ракети в бібліотеці зображень Trinket.](images/trinket_rocket_image.png)
 
 --- /task ---
 
 --- task ---
 
-Add code to the `setup()` function to load the rocket image into a `rocket` global variable.
+Додай код до функції `setup()`, щоб завантажити зображення ракети в глобальну змінну `rocket`.
 
 --- code ---
 ---
@@ -41,11 +41,11 @@ rocket = load_image('rocket.png')
 
 --- /task ---
 
-The `y` position of the rocket will start at 400 (the screen height) and then decrease by 1 each time a new frame is drawn.
+Позиція ракети `y` буде починатися з 400 (висота екрану), а потім буде зменшуватися на 1 щоразу, коли буде малюватися новий кадр.
 
 --- task ---
 
-Add a `rocket_y` global variable to keep track of the rocket's `y` position.
+Додай глобальну змінну `rocket_y`, щоб відстежувати позицію ракети `y`.
 
 --- code ---
 ---
@@ -53,7 +53,7 @@ language: python filename: main.py line_numbers: true line_number_start: 7
 line_highlights: 9
 ---
 
-# Setup global variables
+# Налаштування глобальних змінних
 screen_size = 400    
 rocket_y = screen_size #Start at the bottom
 
@@ -63,9 +63,9 @@ rocket_y = screen_size #Start at the bottom
 
 --- task ---
 
-Define a `draw_rocket()` function to change the rocket's `y` position and redraw it.
+Визнач функцію `draw_rocket()`, щоб змінювати позицію ракети `y` та перемалювати її.
 
-`rocket_y -= 1` is a shorter way of saying `rocket_y = rocket_y - 1`.
+`rocket_y -= 1` - це коротший спосіб коду `rocket_y = rocket_y - 1`.
 
 --- code ---
 ---
@@ -73,7 +73,7 @@ language: python filename: main.py line_numbers: true line_number_start: 11
 line_highlights: 12-16
 ---
 
-# The draw_rocket function goes here
+# Функція draw_rocket викликається тут
 def draw_rocket():
 
   global rocket_y #Use the global rocket_y variable    
@@ -87,7 +87,7 @@ image(rocket, width/2, rocket_y, 64, 64)
 
 --- task ---
 
-Call your new `draw_rocket()` in the `draw()` function so that the rocket gets redrawn every frame.
+Виклич свою новостворену `draw_rocket()` у функції `draw()`, щоб ракета на кожному кадрі була перемальована.
 
 --- code ---
 ---
@@ -107,9 +107,9 @@ draw_rocket()
 
 --- task ---
 
-**Test:** Run your code to check that the rocket starts at the bottom of the screen and moves up each frame.
+**Тест:** Запусти свій код, щоб перевірити, чи стартує ракета внизу екрана та, чи рухається вверх з кожним наступним кадром.
 
-![Image of the rocket half way up the screen.](images/trinket_rocket_fly.gif)
+![Зображення ракети на половину екрана.](images/trinket_rocket_fly.gif)
 
 --- /task ---
 
