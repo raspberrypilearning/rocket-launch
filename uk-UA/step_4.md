@@ -1,32 +1,32 @@
-## Exhaust effects
+## Ефекти вихлопних газів
 
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">
 
-The rocket will look more realistic with some special effects to simulate the exhaust trail. 
+Ракета виглядатиме більш реалістично завдяки спецефектам, які будуть відтворювати слід від вихлопу. 
 
-You can create cool effects by using a `for` loop to draw lots of shapes in each frame.
+Ти можеш створювати круті ефекти, використовуючи цикл `for`, щоб намалювати багато різних фігур у кожному кадрі.
 
 </div>
 <div>
 
-![The rocket mid flight with an exhaust trail.](images/flying_rocket.gif){:width="300px"}
+![Ракета посередині шляху зі слідом вихлопних газів.](images/flying_rocket.gif){:width="300px"}
 
 </div>
 </div>
 
 <p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;">
-Coding is used to make <span style="color: #0faeb0">**graphic effects**</span> for movies and games. It's much quicker to write code than to draw each frame of an animation individually. </p>
+За допомогою коду можна створювати <span style="color: #0faeb0">**графічні ефекти**</span> для фільмів та відеоігор. Набагато простіше та швидше написати код, ніж малювати кожен кадр анімації окремо. </p>
 
-Drawing lots of yellow ellipses at different `y` positions creates an exhaust trail with a round bottom.
+Намалювавши багато жовтих овалів у різних позиціях `y`, можна створити вихлопний слід із заокругленим кінцем.
 
 --- task ---
 
-A `for` loop repeats a piece of code once for every item it is given. To run the code in a `for` loop a certain number of times, you can use the `range()` function. For example, `range(5)` creates a sequence of five numbers starting from 0, so [0, 1, 2, 3, 4].
+Цикл `for` повторює частину коду один раз для кожного заданого йому елемента. Щоб виконати код в циклі `for` певну кількість разів, можна використати функцію `range()`. Наприклад, `range(5)` створює послідовність з п'яти чисел, починаючи з 0, тобто [0, 1, 2, 3, 4].
 
-Each time the `for` loop repeats, it sets a variable to the current item so that you can use it in the loop.
+Кожного разу, коли цикл `for` повторюється, він присвоює змінну поточному елементу, щоб її можна було використати в циклі.
 
-Update your `draw_rocket()` function to include a `for` loop that repeats the drawing of `25` exhaust ellipses. The **loop variable** `i` gets added to `rocket_y` to draw each ellipse further below the rocket.
+Онови свою функцію `draw_rocket()` додавши до неї цикл `for` який повторює малювання `25` овалів вихлопу. **Змінна циклу** `i` додається до `rocket_y`, щоб намалювати кожного разу овал нижче під ракетою.
 
 --- code ---
 ---
@@ -54,17 +54,17 @@ ellipse(width/2, rocket_y + i, 8, 3) #i increases each time the loop repeats
 
 --- task ---
 
-**Test:** Run your code to check the rocket has a new exhaust trail.
+**Тест:** Запустити свій код, щоб перевірити, чи має ракета новий вихлопний слід.
 
-![A close-up of the rocket with an exhaust trail.](images/rocket_exhaust.png){:width="300px"}
+![Крупний план ракети зі слідом від вихлопу.](images/rocket_exhaust.png){:width="300px"}
 
 --- /task ---
 
-The `i` variable can also be used to create a colour gradient with less green in each ellipse that gets drawn.
+Змінна `i` може також використовуватися для створення кольорового градієнта з меншою кількістю зеленого кольору в кожному наступному овалі, який буде малюватися.
 
 --- task ---
 
-Change the call to `fill()` to set the amount of green to `255 - i*10` so that the first ellipse has equal amounts of red and green and the last ellipse has very little green.
+Зміни виклик функції `fill()`, встановивши кількість зеленого кольору на `255 - i*10` так, щоб у першому колі було однакова кількість червоного та зеленого кольорів, а в останньому - дуже мало зеленого.
 
 --- code ---
 ---
@@ -82,19 +82,19 @@ ellipse(width/2, rocket_y + i, 8, 3)
 
 --- task ---
 
-**Test:** Check that you get a trail of ellipses gradually changing from yellow to red.
+**Тест:** Переконайся, що у тебе вийшло створити послідовність овалів, які поступово змінюються від жовтого до червоного кольору.
 
 --- /task ---
 
-The smoke exhaust trail is created by drawing lots of slightly transparent grey ellipses at different positions in each frame.
+Слід димового вихлопу створюється шляхом випадкового малювання ледь прозорих сірих овалів у різних положеннях на кожному кадрі.
 
-![A slow animation of the smoke effect.](images/rocket_smoke.gif)
+![Повільна анімація ефекту диму.](images/rocket_smoke.gif)
 
 --- task ---
 
-This time the `fill()` is outside the loop as the colour is the same for each smoke ellipse. The fourth input to `fill()` is the opacity, a low opacity value makes the colour more transparent so you can see the shapes underneath.
+Цього разу, функція`fill()` знаходиться поза циклом, оскільки колір однаковий для кожного димового овалу. Четверте число у функції `fill()` - прозорість. Низьке значення прозорості дозволяє зробити колір більш прозорим, щоб можна було роздивитися форми, які знаходяться під ним.
 
-In each frame of the animation, 20 ellipses of random sizes will be drawn at random positions.
+На кожному кадрі анімації буде намальовано 20 овалів випадкових розмірів на випадкових позиціях.
 
 --- code ---
 ---
@@ -118,9 +118,9 @@ ellipse(width/2 + randint(-5, 5), rocket_y + randint(20, 50), randint(5, 10), ra
 
 --- task ---
 
-**Test:** Run your program and check the exhaust fumes are visible.
+**Тест:** Запусти програму та перевір, чи видно вихлопні гази.
 
-![A close-up of the rocket and exhaust trail with added smoke.](images/rocket_exhaust_circles.gif)
+![Крупний план ракети та вихлопного сліду з додаванням диму.](images/rocket_exhaust_circles.gif)
 
 --- /task ---
 
