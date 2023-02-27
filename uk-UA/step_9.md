@@ -1,10 +1,10 @@
-## What next?
+## Challenge: створіть власну групу
 
-If you are following the [Introduction to Python](https://projects.raspberrypi.org/en/raspberrypi/python-intro) pathway, you can move on to the [Make a face](https://projects.raspberrypi.org/en/projects/make-a-face) project. In this project, you will draw a face or mask using geometric shapes.
+Якщо ти йдеш по мануалу [Знайомство з Python](https://projects.raspberrypi.org/en/raspberrypi/python-intro), можеш перейти до проєкту [Обличчя](https://projects.raspberrypi.org/en/projects/make-a-face). У цьому проєкті тобі доведеться намалювати обличчя або маску, використовуючи геометричні фігури.
 
 --- print-only ---
 
-![Make a face project](images/make-a-face-project.png)
+![Проєкт Обличчя](images/make-a-face-project.png)
 
 --- /print-only ---
 
@@ -15,4 +15,4 @@ If you are following the [Introduction to Python](https://projects.raspberrypi.o
 
 --- /no-print ---
 
-If you want to have more fun exploring Python, then you could try out any of [these projects](https://projects.raspberrypi.org/en/projects?software%5B%5D=python).
+Якщо ти хочеш отримати більше задоволення від вивчення Python, спробуй один з [цих проєктів](https://projects.raspberrypi.org/en/projects?software%5B%5D=python).
