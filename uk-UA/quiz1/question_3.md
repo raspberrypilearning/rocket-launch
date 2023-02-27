@@ -1,9 +1,9 @@
 --- question ---
 ---
-legend: Question 3 of 3
+legend: Питання 3 з 3
 ---
 
-This code uses `tint()` to colour a rocket in a game to show the player how they are doing.
+Даний код використовує `tint()`, щоб пофарбувати ракету та показати гравцеві, як йде гра.
 
 --- code ---
 ---
@@ -23,47 +23,47 @@ image(rocket, width/2, height/2, 64, 64)
 
 --- /code ---
 
-If the `points` variable has the value `99` and the `lives` variable has the value `1`, what will the rocket look like?
+Якщо змінна `points` матиме значення `99`, а змінна `lives` матиме значення `1`, як буде виглядати ракета?
 
 --- choices ---
 
 - (x)
 
-![A rocket image with amber tint.](images/rocket_amber.png) <div style="text-align: center;">Amber
+![Зображення ракети янтарного кольору.](images/rocket_amber.png) <div style="text-align: center;">Янтар
 
  --- feedback ---
 
- Correct! The player has less than 100 points and only 1 life left. The rocket is coloured amber to let them know that this is their last chance to win!
+ Правильно! У користувача залишилося менше ніж 100 очок та лише 1 життя. Ракета має колір янтарю, що повідомляє про те, що це останній шанс на перемогу!
 
  --- /feedback ---
 
 - ( )
 
-![A rocket image with no tint](images/rocket_original.png) <div style="text-align: center;">No tint
+![Зображення ракети без кольору](images/rocket_original.png) <div style="text-align: center;">Без фарбування
 
  --- feedback ---
 
- Not quite, the rocket has a tint as one of the statements is true.
+ Не зовсім так. Ракета підфарбована, оскільки один з операторів відповідає істині.
 
  --- /feedback ---
 
 - ( )
 
-![A rocket image with green tint](images/rocket_green.png) <div style="text-align: center;">Green
+![Зображення ракети із зеленим відтінком](images/rocket_green.png) <div style="text-align: center;">Зелений
 
  --- feedback ---
 
- Not quite, the player would need `>= 100` points to win and turn their rocket green. They have `99`, which is not enough. Check the conditions carefully.
+ Не зовсім так. Гравцеві знадобиться `>= 100` балів, щоб перемогти та пофарбувати свою ракету в зелений колір. Зараз гравець має `99`, що недостатньо. Уважно перевіряй умови.
 
  --- /feedback ---
 
 - ( )
 
-![A rocket image with red tint](images/rocket_red.png) <div style="text-align: center;">Red
+![Зображення ракети з червоним відтінком](images/rocket_red.png) <div style="text-align: center;">Червоний
 
  --- feedback ---
 
- Not quite, the player has `< 100` points but lives does not equal `0`. Check the conditions carefully.
+ Не зовсім так. Гравець має `< 100` балів, але lives не дорівнює `0`. Уважно перевіряй умови.
 
  --- /feedback ---
 
