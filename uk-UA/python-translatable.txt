@@ -12,7 +12,7 @@ draw_rocket
 
 fuel
 
-Fuel left:
+Пального залишилось:
 
 rocket
 
@@ -20,14 +20,14 @@ draw_background
 
 planet
 
-How many kilograms of fuel do you want to use?
+Скільки кілограмів пального ти хочеш використати?
 
-How much fuel should the rocket burn each frame?
+Скільки палива повинна спалювати ракета на кожному кадрі?
 
-How far should the rocket travel each frame?
+Яку відстань повинна пролетіти ракета на кожному кадрі?
 
-Looping
+Зациклення
 
 points
 
-lives
+життя
