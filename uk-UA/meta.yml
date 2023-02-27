@@ -1,30 +1,30 @@
 ---
-title: Rocket launch
+title: Запуск ракети
 hero_image: images/banner.png
-description: Make an animation of a rocket propelling a satellite into orbit
+description: Створи анімацію польоту ракети, яка виводить супутник на орбіту
 version: 0.0.1
 listed: true
 copyedit: true
 last_tested: "2021-10-06"
 steps:
   - 
-    title: You will make
+    title: Ти зробиш
   - 
-    title: Set the scene
+    title: Створення фону
   - 
-    title: Liftoff!
+    title: Зліт!
     completion:
       - engaged
   - 
-    title: Exhaust effects
+    title: Ефекти вихлопних газів
   - 
-    title: Burn fuel
+    title: Спалювання палива
   - 
-    title: Reaching orbit
+    title: Вихід на орбіту
     completion:
       - internal
   - 
-    title: Quick quiz
+    title: Швидкий тест
     knowledge_quiz:
       path: quiz1
       version: 1
@@ -33,6 +33,6 @@ steps:
     completion:
       - external
   - 
-    title: Upgrade your project
+    title: Вдосконалення твого проєкту
   - 
-    title: What next?
+    title: Що далі?
