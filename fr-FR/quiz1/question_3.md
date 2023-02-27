@@ -3,7 +3,7 @@
 legend : Question 3 sur 3
 ---
 
-Ce code utilise `tint()` pour colorer une fusée dans un jeu afin de montrer au joueur comment il va.
+Ce code utilise `tint()` pour colorer une fusée dans un jeu afin de montrer au joueur comment il se débrouille.
 
 --- code ---
 ---
@@ -33,7 +33,7 @@ Si la variable `points` a la valeur `99` et la variable `vies` a la valeur `1`, 
 
  --- feedback ---
 
- Correct ! Le joueur a moins de 100 points et seulement 1 vie restante. The rocket is coloured amber to let them know that this is their last chance to win!
+ Correct ! Le joueur a moins de 100 points et seulement 1 vie restante. La fusée est de couleur orange pour leur faire savoir que c'est leur dernière chance de gagner !
 
  --- /feedback ---
 
