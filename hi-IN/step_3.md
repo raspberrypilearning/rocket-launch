@@ -1,27 +1,27 @@
-## Liftoff!
+## liftcof!
 
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">
-Each time a new frame is drawn, the rocket needs to move up the screen to create an animation effect.
+हर बार जब एक नया फ्रेम बनाया जाता है, तो एनीमेशन प्रभाव बनाने के लिए रॉकेट को स्क्रीन पर ऊपर जाने की आवश्यकता होती है।
 </div>
 <div>
 
-![A rocket flying at a steady speed from the bottom to the top of the screen.](images/fly.gif){:width="300px"}
+![स्क्रीन के नीचे से ऊपर तक एक स्थिर गति से उड़ते हुए एक रॉकेट।](images/flight.gif){:width="300px"}
 
 </div>
 </div>
 
 --- task ---
 
-The starter project has a rocket image provided for you.
+स्टार्टर प्रोजेक्ट में आपके लिए प्रदान की गई एक रॉकेट चित्र है।
 
-![Image of the rocket in the Trinket image library.](images/trinket_rocket_image.png)
+![Trinket इमेज लाइब्रेरी में रॉकेट की छवि।](images/trinket_rocket_image.png)
 
 --- /task ---
 
 --- task ---
 
-Add code to the `setup()` function to load the rocket image into a `rocket` global variable.
+रॉकेट की छवि को `रॉकेट` वैश्विक वेरिएबल में लोड करने के लिए `setup()` फंक्शन में कोड जोड़ें।
 
 --- code ---
 ---
@@ -41,11 +41,11 @@ rocket = load_image('rocket.png')
 
 --- /task ---
 
-The `y` position of the rocket will start at 400 (the screen height) and then decrease by 1 each time a new frame is drawn.
+रॉकेट की `y` स्थिति 400 (स्क्रीन की ऊंचाई) से शुरू होगी और फिर हर बार एक नया फ्रेम बनाए जाने पर 1 तक कम हो जाएगी।
 
 --- task ---
 
-Add a `rocket_y` global variable to keep track of the rocket's `y` position.
+रॉकेट के `y` स्थिति का ट्रैक रखने के लिए एक `roct_y` वैश्विक वेरिएबल जोड़ें।
 
 --- code ---
 ---
@@ -53,7 +53,7 @@ language: python filename: main.py line_numbers: true line_number_start: 7
 line_highlights: 9
 ---
 
-# Setup global variables
+# वैश्विक वेरिएबल सेटअप करें
 screen_size = 400    
 rocket_y = screen_size #Start at the bottom
 
@@ -63,9 +63,9 @@ rocket_y = screen_size #Start at the bottom
 
 --- task ---
 
-Define a `draw_rocket()` function to change the rocket's `y` position and redraw it.
+रॉकेट की `y` स्थिति को बदलने और इसे फिर से बनाने के लिए `drag_rock()` फंक्शन परिभाषित करें।
 
-`rocket_y -= 1` is a shorter way of saying `rocket_y = rocket_y - 1`.
+`rock_y -= 1` यह कहने का छोटा तरीका है `rocast_y = roct_y - 1`।
 
 --- code ---
 ---
@@ -73,7 +73,7 @@ language: python filename: main.py line_numbers: true line_number_start: 11
 line_highlights: 12-16
 ---
 
-# The draw_rocket function goes here
+# draway_crock फ़ंक्शन यहाँ जाता है
 def draw_rocket():
 
   global rocket_y #Use the global rocket_y variable    
@@ -87,7 +87,7 @@ image(rocket, width/2, rocket_y, 64, 64)
 
 --- task ---
 
-Call your new `draw_rocket()` in the `draw()` function so that the rocket gets redrawn every frame.
+`draway()` फ़ंक्शन में अपने नए `drawing_rotरॉकेट()` को कॉल करें ताकि रॉकेट हर फ्रेम में फिर से बनाया जा सके।
 
 --- code ---
 ---
@@ -107,9 +107,9 @@ draw_rocket()
 
 --- task ---
 
-**Test:** Run your code to check that the rocket starts at the bottom of the screen and moves up each frame.
+**परीक्षण:** यह जांचने के लिए अपना कोड चलाएं कि रॉकेट स्क्रीन के नीचे से शुरू होता है और प्रत्येक फ्रेम को ऊपर ले जाता है।
 
-![Image of the rocket half way up the screen.](images/trinket_rocket_fly.gif)
+![रॉकेट की छवि स्क्रीन के आधे रास्ते में।](images/trinket_rocket_fly.gif)
 
 --- /task ---
 
