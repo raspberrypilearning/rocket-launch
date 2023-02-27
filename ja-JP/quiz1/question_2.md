@@ -8,7 +8,7 @@ legend: 質問2/3
 
 --- code ---
 ---
-language: python
+言語：python
 ---
 
 def setup():   
@@ -25,7 +25,7 @@ planet = load_image('planet.png')
 
 --- code ---
 ---
-language: python
+言語：python
 ---
 
 image(planet, 300, 100, 128, 128)
