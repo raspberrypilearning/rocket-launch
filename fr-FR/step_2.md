@@ -67,13 +67,13 @@ Le projet de démarrage a trois images de planètes différentes et la lune t'es
 
 --- /task ---
 
-C'est une bonne idée de charger les images dans `configuration()` afin qu'elles soient prêtes lorsque tu en auras besoin et que ton animation s'exécute rapidement.
+C'est une bonne idée de charger les images dans `setup()` afin qu'elles soient prêtes lorsque tu en auras besoin et que ton animation s'exécute rapidement.
 
 --- task ---
 
 La ligne `image_mode(CENTER)` indique que tu vas positionner les images en donnant les coordonnées du centre de l'image (au lieu du coin supérieur gauche).
 
-Ajoute également du code à la fonction `configuration()` pour charger l'image choisie dans une variable globale `planete`. La variable doit être globale afin que tu puisses l'utiliser plus tard lorsque tu dessines la planète à l'écran.
+Ajoute également du code à la fonction `setup()` pour charger l'image choisie dans une variable globale `planete`. La variable doit être globale afin que tu puisses l'utiliser plus tard lorsque tu dessines la planète à l'écran.
 
 --- code ---
 ---
