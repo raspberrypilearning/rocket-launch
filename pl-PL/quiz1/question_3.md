@@ -1,6 +1,6 @@
 --- question ---
 ---
-legend: Question 3 of 3
+legend: Pytanie 3 z 3
 ---
 
 This code uses `tint()` to colour a rocket in a game to show the player how they are doing.
@@ -33,7 +33,7 @@ If the `points` variable has the value `99` and the `lives` variable has the val
 
  --- feedback ---
 
- Correct! The player has less than 100 points and only 1 life left. The rocket is coloured amber to let them know that this is their last chance to win!
+ Poprawna odpowiedź! The player has less than 100 points and only 1 life left. The rocket is coloured amber to let them know that this is their last chance to win!
 
  --- /feedback ---
 
@@ -49,7 +49,7 @@ If the `points` variable has the value `99` and the `lives` variable has the val
 
 - ( )
 
-![A rocket image with green tint](images/rocket_green.png) <div style="text-align: center;">Green
+![A rocket image with green tint](images/rocket_green.png) <div style="text-align: center;">Zielony
 
  --- feedback ---
 
@@ -59,7 +59,7 @@ If the `points` variable has the value `99` and the `lives` variable has the val
 
 - ( )
 
-![A rocket image with red tint](images/rocket_red.png) <div style="text-align: center;">Red
+![A rocket image with red tint](images/rocket_red.png) <div style="text-align: center;">Czerwony
 
  --- feedback ---
 
