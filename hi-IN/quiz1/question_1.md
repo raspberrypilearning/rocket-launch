@@ -8,7 +8,7 @@ Have fun!
 
 --- question ---
 ---
-legend: Question 1 of 3
+प्रश्न १ का ३
 ---
 
 Which output would you expect if you ran the program below?
@@ -20,7 +20,7 @@ for i in range(5):
 
 --- choices ---
 
-- ( ) Looping 1 <br> Looping 2 <br> Looping 3 <br> Looping 4 <br> Looping 5
+- ( ) 1 <br> looping 2 <br> looping 3 <br> looping 4 <br> looping 5
 
   --- feedback ---
 
@@ -28,7 +28,7 @@ Not quite, a `for` loop in Python repeats its code once for each item in a seque
 
   --- /feedback ---
 
-- ( ) Looping i
+- ( ) लूपिंग I
 
   --- feedback ---
 
@@ -36,7 +36,7 @@ Not quite, the **loop variable** from a `for` loop — in this case `i` — hold
 
   --- /feedback ---
 
-- (x) Looping 0 <br> Looping 1 <br> Looping 2 <br> Looping 3 <br> Looping 4
+- (x) लूपिंग 0 <br> लूपिंग 1 <br> लूपिंग 2 <br> looping 3 <br> looping 4
 
   --- feedback ---
 
@@ -44,7 +44,7 @@ Correct. The loop runs once, in order, for each item `i` in the range [0, 1, 2, 
 
   --- /feedback ---
 
-- ( ) Looping 4 <br> Looping 3 <br> Looping 2 <br> Looping 1 <br> Looping 0
+- ( ) 4 <br> looping 3 <br> looping 2 <br> looping 1 <br> looping 0
 
   --- feedback ---
 
