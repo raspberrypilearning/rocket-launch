@@ -33,7 +33,7 @@ Se a variável `pontos` tiver o valor `99` e a variável `vidas` tiver o valor `
 
  --- feedback ---
 
- Correto! O jogador tem menos de 100 pontos e apenas 1 vida restante. The rocket is coloured amber to let them know that this is their last chance to win!
+ Correto! O jogador tem menos de 100 pontos e apenas 1 vida restante. O foguete é de cor âmbar para deixá-los saber que esta é sua última chance de ganhar!
 
  --- /feedback ---
 
