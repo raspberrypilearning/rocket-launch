@@ -1,4 +1,4 @@
-## Upgrade your project
+## ನಿಮ್ಮ ಪ್ರಾಜೆಕ್ಟ್‌ ಅಪ್‌ಗ್ರೇಡ್‌ ಮಾಡಿ
 Your project is complete, but you can still make it better if you want. Here are a few upgrades to consider:
 
  + Let the user set the rate at which the rocket burns fuel or how far the rocket flies in each frame.
@@ -29,10 +29,10 @@ Here's a version of the project with all those upgrades, so you can see how they
 
 --- collapse ---
 ---
-title: Completed project
+ಶೀರ್ಷಿಕೆ: ಪೂರ್ಣಗೊಂಡ ಪ್ರಾಜೆಕ್ಟ್
 ---
 
-You can view the [completed project here](https://trinket.io/python/622b4dd113){:target="_blank"}.
+ನೀವು [ಇಲ್ಲಿ ಪೂರ್ಣಗೊಂಡ ಪ್ರಾಜೆಕ್ಟ್ ನೋಡಬಹುದು](https://trinket.io/python/622b4dd113){:target="_blank"}.
 
 --- /collapse ---
 
