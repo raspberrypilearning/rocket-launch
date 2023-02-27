@@ -8,7 +8,7 @@ Have fun!
 
 --- question ---
 ---
-legend: Question 1 of 3
+ವಿಷಯಸೂಚಿ: ಪ್ರಶ್ನೆ 1
 ---
 
 Which output would you expect if you ran the program below?
