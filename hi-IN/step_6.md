@@ -1,25 +1,25 @@
-## Reaching orbit
+## ऑर्बिट पर पहुँच रहा है
 
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">
 
-The point of launching the rocket is to propel a satellite into orbit. 
+रॉकेट को लॉन्च करने का बिंदु एक उपग्रह को ऑर्बिट में प्रजेक्ट करना है। 
 
-An orbit is a curved path that one object takes around another due to gravity.
+ऑर्बिट एक वक्र पथ है जिसे गुरुत्वाकर्षण के कारण एक वस्तु दूसरे के आसपास ले जाती है।
 
-The rocket can change colour to show how successful the launch was. 
+रॉकेट यह दिखाने के लिए रंग बदल सकता है कि प्रक्षेपण कितना सफल रहा था। 
 
 </div>
 <div>
 
-![Three side-by-side images showing successful (green tint), over-fueled (amber tint), and unsucessful (red tint) launches.](images/check_orbit.png){:width="400px"}
+![तीन ओर से चित्र जो सफल (हरा टिंट), ओवर-फ्यूल्ड (ऐंबर टिंट), और अनचूसेसफुल (लाल टिंट) लॉन्च करते हुए दिखाई दे रहे हैं।](images/चेक_orbit.png){:width="400px"}
 
 </div>
 </div>
 
 --- task ---
 
-Create two new global variables to set the radius of the orbit circle and the `y` coordinate of the orbit to the point the rocket centre needs to reach to launch the satellite.
+ऑर्बिट सर्कल के त्रिज्या को सेट करने के लिए दो नए वैश्विक वेरिएबल बनाएं और उपग्रह को लॉन्च करने के लिए रॉकेट केंद्र को जिस बिंदु तक पहुंचना है उस बिंदु तक ऑर्बिट के `y` निर्देशांक।
 
 --- code ---
 ---
@@ -27,7 +27,7 @@ language: python filename: main.py line_numbers: true line_number_start: 7
 line_highlights: 11-12
 ---
 
-# Setup global variables
+# वैश्विक वेरिएबल सेटअप करें
 screen_size = 400   
 rocket_y = screen_size   
 burn = 100   
@@ -40,7 +40,7 @@ orbit_y = screen_size - orbit_radius
 
 --- task ---
 
-Update the `draw_background()` function to draw an ellipse to represent the satellite orbit that the rocket needs to reach.
+रॉकेट को जिस सैटेलाइट ऑर्बिट तक पहुँचने की आवश्यकता है, उसका प्रतिनिधित्व करने के लिए एक दीर्घवृत्त बनाने के लिए `drawing_background()` फ़ंक्शन को अपडेट करें।
 
 --- code ---
 ---
@@ -63,19 +63,19 @@ ellipse(width/2, height, orbit_radius * 2, orbit_radius * 2)
 
 --- task ---
 
-**Test:** Run your program and check that a white orbit line is drawn.
+**परीक्षण:** अपना प्रोग्राम चलाएं और जांचें कि एक सफेद ऑर्बिट रेखा बनाई गई है।
 
-![The screen with planet and new orbit line.](images/draw_orbit.png){:width="300px"}
+![ग्रह और नई ऑर्बिट लाइन के साथ स्क्रीन।](images/draw_orbit.png){:width="300px"}
 
 --- /task ---
 
-The rocket should stop when it reaches the satellite orbit — the end of the mission.
+रॉकेट को तब रुकना चाहिए जब वह उपग्रह की कक्षा में पहुँच जाए - मिशन के अंत में।
 
 --- task ---
 
-Update your `if fuel >= burn` code to also check that the rocket hasn't reached the orbit.
+यह भी देखने के लिए कि रॉकेट कक्षा में नहीं पहुंचा है, अपने `if fuel>= breen` कोड को अपडेट करें।
 
-You can use an `and` in `if` statements to check if two, or more, conditions are true.
+आप `if` कथनों में `and` का उपयोग कर सकते हैं यह जांचने के लिए कि क्या दो या अधिक, स्थितियां सच हैं।
 
 --- code ---
 ---
@@ -83,7 +83,7 @@ language: python filename: main.py - draw_rocket() line_numbers: true line_numbe
 line_highlights: 19
 ---
 
-# The draw_rocket function goes here
+# draway_crock फ़ंक्शन यहाँ जाता है
 def draw_rocket():
 
   global rocket_y, fuel, burn
@@ -96,11 +96,11 @@ def draw_rocket():
 
 --- task ---
 
-**Test:** Run your project and enter `50000` as the amount of fuel. This should be plenty of fuel to reach orbit. The rocket should stop moving when it reaches orbit.
+**परीक्षण:** अपने प्रोजेक्ट को चलाएं और `50000` को फ्यूल की मात्रा के रूप में दर्ज करें। यह ऑर्बिट तक पहुंचने के लिए बहुत अधिक ईंधन होना चाहिए। रॉकेट को तब चलना बंद करना चाहिए जब वह कक्षा में पहुंच जाए।
 
 --- /task ---
 
-The rocket should be coloured red if it runs out of fuel before getting high enough to launch the satellite.
+रॉकेट को लाल रंग में होना चाहिए यदि यह उपग्रह को लॉन्च करने के लिए पर्याप्त मात्रा में प्राप्त करने से पहले ईंधन से बाहर निकलता है।
 
 --- task ---
 
@@ -122,19 +122,19 @@ line_highlights: 34-35
 
 --- task ---
 
-**Test:** Run your code and enter `20000` as the amount of fuel. Check that the rocket turns red when it stops below the orbit.
+**परीक्षण:** अपना कोड चलाएं और ईंधन की मात्रा के रूप में `20000` दर्ज करें। जांचें कि रॉकेट तब लाल हो जाता है जब वह कक्षा से नीचे रुक जाता है।
 
-![A red rocket that has run out of fuel before the orbit circle. The planet has also turned red.](images/orbit_failure.png){:width="300px"}
+![एक लाल रॉकेट जो ऑर्बिट सर्कल से पहले ईंधन से बाहर चला गया है। ग्रह भी लाल हो गया है।](images/orbit_failure.png){:width="300px"}
 
-Oh no, the planet has turned red!
+ओह नहीं, ग्रह लाल हो गया है!
 
 --- /task ---
 
 --- task ---
 
-The `tint()` function sets the tint colour for all images that are drawn until you change the tint or use `no_tint()` to turn it off.
+`tint()` फंक्शन उन सभी चित्रों के लिए टिंट रंग सेट करता है जो तब तक बनाई जाती हैं जब तक आप tint को नहीं बदलते या इसे बंद करने के लिए `no_tint()` का उपयोग नहीं करते।
 
-**Choose:** Add a call to `no_tint()` after drawing the image so that the planet isn't tinted red in the next frame — or leave it if you like the planet turning red!
+**choose:** चित्र खींचने के बाद `no_tint()` में कॉल जोड़ें ताकि ग्रह अगली फ्रेम में लाल रंग से रंग न जोड़े — या यदि आपको ग्रह लाल हो रहा है तो इसे छोड़ दें!
 
 --- code ---
 ---
@@ -154,7 +154,7 @@ no_tint() #So the planet isn't tinted red in the next frame!
 
 --- task ---
 
-Use the `tint()` function again, this time to colour the rocket green if the rocket has enough fuel to reach the satellite orbit:
+इस बार फिर से `tint()` फंक्शन का उपयोग करें, यदि रॉकेट में उपग्रह की कक्षा तक पहुंचने के लिए पर्याप्त ईंधन है तो रॉकेट को हरा रंग करने के लिए:
 
 --- code ---
 ---
@@ -175,19 +175,19 @@ no_tint()
 
 --- task ---
 
-**Test:** Run your project and enter `50000` as the amount of fuel. Check that your rocket turns green when it reaches the satellite orbit.
+**परीक्षण:** अपने प्रोजेक्ट को चलाएं और `50000` को फ्यूल की मात्रा के रूप में दर्ज करें। जांचें कि आपका रॉकेट तब हरा हो जाता है जब यह उपग्रह की कक्षा में पहुँच जाता है।
 
-![A green rocket that has reached the orbit circle and has fuel left.](images/orbit_success.png){:width="300px"}
+![एक हरा रॉकेट जो ऑर्बिट के घेरे में पहुँच गया है और इसमें ईंधन बचा हुआ है।](images/orbit_success.png){:width="300px"}
 
 --- /task ---
 
-You now have a simulation that can be used to show how much fuel is needed as a minimum to reach the satellite orbit. That's great; however, you could take a huge amount of fuel and still be successful, but this is costly and wasteful!
+अब आपके पास एक सिमुलेशन है जिसका उपयोग यह दिखाने के लिए किया जा सकता है कि उपग्रह की कक्षा तक पहुँचने के लिए कम से कम ईंधन की आवश्यकता है। यह बहुत अच्छा है; हालांकि, आप बहुत अधिक मात्रा में ईंधन ले सकते हैं और फिर भी सफल हो सकते हैं, लेकिन यह महंगा और बर्बाद होता है!
 
 --- task ---
 
-Amend the conditions in your success code so that the rocket only turns green if it reaches the orbit `and` has less than 1,000kg of fuel left.
+अपने सफलता कोड में शर्तों में संशोधन करें ताकि रॉकेट केवल हरे रंग में बदल जाए अगर यह `और` की कक्षा में पहुंच जाता है जिसमें 1,000 किलोग्राम से कम ईंधन बचा है।
 
-Add code to colour the rocket yellow if the rocket has more than 1,000kg of fuel left when it reaches orbit.
+रॉकेट को पीले रंग में रंग देने के लिए कोड जोड़ें यदि रॉकेट की कक्षा में पहुंचने पर उसमें 1,000 किलो से अधिक ईंधन बचा है।
 
 --- code ---
 ---
@@ -210,9 +210,9 @@ no_tint() #So the planet isn't tinted in the next frame!
 
 --- task ---
 
-**Test:** Run your program several times with different numbers; for example, 25,000kg of fuel should be the amount needed to turn the rocket green, but also check that the yellow tint works too by using a bigger number.
+**परीक्षण:** अपने प्रोग्राम को कई बार अलग-अलग संख्याओं के साथ चलाएं; उदाहरण के लिए, 25,000kg का ईंधन रॉकेट को हरा करने के लिए आवश्यक मात्रा होनी चाहिए, लेकिन यह भी जांचें कि पीला tint भी बड़ी संख्या का उपयोग करके काम करता है।
 
-![A yellow rocket that has reached the orbit circle and has fuel left.](images/orbit_meh.png){:width="300px"}
+![एक पीला रॉकेट जो ऑर्बिट के घेरे में पहुँच गया है और इसमें ईंधन बचा हुआ है।](images/orbit_meh.png){:width="300px"}
 
 --- /task ---
 
