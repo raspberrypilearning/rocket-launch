@@ -41,11 +41,11 @@ cohete = load_image( 'rocket.png')
 
 --- /task ---
 
-La posición `y` del cohete comenzará en 400 (la altura de la pantalla) y luego disminuirá en 1 cada vez que se dibuje un nuevo cuadro.
+La posición `y` del cohete comenzará en 400 (la altura de la pantalla) y luego disminuirá en 1 cada vez que se dibuje un nuevo fotograma.
 
 --- task ---
 
-Agrega una variable global `cohete_y` para realizar un seguimiento de la posición `y` del cohete.
+Agrega una variable global `rocket_y` para realizar un seguimiento de la posición `y` del cohete.
 
 --- code ---
 ---
@@ -63,9 +63,9 @@ cohete_y = tamano_pantalla #Empieza por abajo
 
 --- task ---
 
-Define una función `dibujar_cohete()` para cambiar la posición `y` del cohete y volver a dibujarlo.
+Define una función `draw_rocket()` para cambiar la posición `y` del cohete y volver a dibujarlo.
 
-`cohete_y -= 1` es una forma más corta de decir `cohete_y = cohete_y - 1`.
+`rocket_y -= 1` es una forma más corta de decir `rocket_y = rocket_y - 1`.
 
 --- code ---
 ---
@@ -73,7 +73,7 @@ language: python filename: main.py line_numbers: true line_number_start: 11
 line_highlights: 12-16
 ---
 
-# La función dibujar_cohete va aquí
+# La función draw_rocket va aquí
 def dibujar_cohete():
 
   global cohete_y #Utiliza la variable global cohete_y    
@@ -87,7 +87,7 @@ imagen(cohete, width/2, cohete_y, 64, 64)
 
 --- task ---
 
-Llama a tu nuevo `dibujar_cohete()` en la función `dibujar()` para que el cohete se vuelva a dibujar en cada cuadro.
+Llama a tu nuevo `draw_rocket()` en la función `draw()` para que el cohete se vuelva a dibujar en cada cuadro.
 
 --- code ---
 ---
