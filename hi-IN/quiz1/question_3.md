@@ -1,9 +1,9 @@
 --- question ---
 ---
-legend: Question 3 of 3
+किंवदंती: ३ का प्रश्न ३
 ---
 
-This code uses `tint()` to colour a rocket in a game to show the player how they are doing.
+यह कोड खिलाड़ी को यह दिखाने के लिए कि वे कैसे कर रहे हैं, एक गेम में रॉकेट को रंग देने के लिए `tint()` का उपयोग करता है।
 
 --- code ---
 ---
@@ -23,47 +23,47 @@ image(rocket, width/2, height/2, 64, 64)
 
 --- /code ---
 
-If the `points` variable has the value `99` and the `lives` variable has the value `1`, what will the rocket look like?
+यदि `points` वेरिएबल का मान `99` है और `lives` वेरिएबल का मान `1` है, तो रॉकेट कैसा दिखेगा?
 
 --- choices ---
 
-- (x)
+- (एक्स)
 
-![A rocket image with amber tint.](images/rocket_amber.png) <div style="text-align: center;">Amber
+![एम्बर टिंट के साथ रॉकेट चित्र।](images/rocket_amber.png) <div style="text-align: center;">पीला
 
  --- feedback ---
 
- Correct! The player has less than 100 points and only 1 life left. The rocket is coloured amber to let them know that this is their last chance to win!
+ सही! खिलाड़ी के पास 100 से कम अंक हैं और केवल 1 जीवन शेष है। The rocket is coloured amber to let them know that this is their last chance to win!
 
  --- /feedback ---
 
 - ( )
 
-![A rocket image with no tint](images/rocket_original.png) <div style="text-align: center;">No tint
+![बिना टिंट के एक रॉकेट चित्र](images/rocket_original.png) <div style="text-align: center;">tint नहीं
 
  --- feedback ---
 
- Not quite, the rocket has a tint as one of the statements is true.
+ बिल्कुल नहीं, रॉकेट का टिंट है क्योंकि एक कथन सत्य है।
 
  --- /feedback ---
 
 - ( )
 
-![A rocket image with green tint](images/rocket_green.png) <div style="text-align: center;">Green
+![हरा टिंट के साथ एक रॉकेट चित्र](images/rocket_green.png) <div style="text-align: center;">हरा
 
  --- feedback ---
 
- Not quite, the player would need `>= 100` points to win and turn their rocket green. They have `99`, which is not enough. Check the conditions carefully.
+ बिल्कुल नहीं, खिलाड़ी को अपने रॉकेट को हरा कर जीतने के लिए `>= 100` बिंदुओं की आवश्यकता होगी। उनके पास `99` है, जो पर्याप्त नहीं है। शर्तों को ध्यान से जांचें।
 
  --- /feedback ---
 
 - ( )
 
-![A rocket image with red tint](images/rocket_red.png) <div style="text-align: center;">Red
+![लाल टिंट के साथ एक रॉकेट चित्र](images/rocket_red.png) <div style="text-align: center;">लाल
 
  --- feedback ---
 
- Not quite, the player has `< 100` points but lives does not equal `0`. Check the conditions carefully.
+ बिल्कुल नहीं, खिलाड़ी के पास `< 100` बिंदु हैं लेकिन जीवन `0` के बराबर नहीं है। शर्तों को ध्यान से जांचें।
 
  --- /feedback ---
 
