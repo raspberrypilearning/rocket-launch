@@ -1,4 +1,4 @@
-## You will make
+## Lo que harás
 
 Crea una animación para impulsar un satélite a la órbita, ¡montándote en un cohete! Tu animación creará efectos gráficos geniales y simulará la mejor cantidad de combustible para dar al cohete.
 
@@ -15,7 +15,7 @@ Vas a:
 
 --- no-print ---
 
-### Play ▶️
+### Reproducir ▶️
 
 --- task ---
 
