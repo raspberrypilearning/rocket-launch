@@ -1,29 +1,29 @@
-## You will make
+## Ти зробиш
 
-Make an animation to propel a satellite into orbit — by hitching a ride on a rocket! Your animation will create cool graphic effects and simulate the best amount of fuel to give the rocket.
+Створиш анімацію, яка виведе супутник на орбіту - скориставшись космічною ракетою! Твоя анімація буде створювати круті графічні ефекти та максимально ефективно використовувати паливо, необхідне для ракети.
 
-![Side-by-side screens showing one green rocket in orbit and one red rocket that has failed to reach orbit.](images/showcase.png)
+![На двох екранах показані одна зелена ракета на орбіті та одна червона, яка не досягла орбіти.](images/showcase.png)
 
 <p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;">
-<span style="color: #0faeb0">**Computer simulations**</span> are used to calculate what will happen when we send a rocket into space. Running simulations and making plans on a computer reduces the risk of expensive or dangerous problems in space.
+<span style="color: #0faeb0">**Комп'ютерне моделювання**</span> використовуються для розрахунку того, що станеться, якщо відправити ракету в космос. Запуск моделювання та створення планів за допомогою комп'ютера знижує ризик виникнення дорого вартісних або небезпечних проблем у космосі.
 </p>
 
-You will:
-+ Use **images** in your animations
-+ Use `for` loops to repeat actions
-+ Join conditions with `and`
+Зможеш:
++ Використовувати **картинки** у своїх анімаціях
++ Використовувати цикли `for`, щоб повторювати дії
++ Дотримуватись до умов за допомогою `and`
 
 --- no-print ---
 
-### Play ▶️
+### Грати ▶️
 
 --- task ---
 
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 175px; flex-grow: 1">  
-You need to supply the rocket with enough fuel to reach the satellite orbit. Try a small amount (around 10,000kg) and a very large amount (around 50,000kg) to see what happens. 
+Тобі потрібно забезпечити ракету достатньою кількістю палива, щоб вона вийшла на орбіту супутника. Спробуй невелику кількість (близько 10,000кг) та дуже велику кількість (близько 50,000кг), щоб дізнатися, що з цього вийде. 
 
-How much fuel is just enough without too much left over?
+Скільки пального достатньо, щоб уникнути його надлишку?
 </div>
 <iframe src="https://trinket.io/embed/python/622b4dd113?outputOnly=true&runOption=run&start=result" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
 </div>
@@ -34,10 +34,10 @@ How much fuel is just enough without too much left over?
 
 --- print-only ---
 
-![Completed project.](images/showcase.png)
+![Завершений проєкт.](images/showcase.png)
 
 --- /print-only ---
 
-<p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;"> ![Dorothy Vaughan](images/dorothy_vaughan.jpeg){:width="300px"} Dorothy Vaughan made important contributions to early spaceflight. Seeing that the future would use electronic computers, she taught herself, and her team, how to code.
+<p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;"> ![Дороті Вон](images/dorothy_vaughan.jpeg){:width="300px"} Дороті Вон зробила важливий внесок у розвиток перших космічних польотів. Розуміючи, що майбутнє за цифровими комп'ютерами, вона самостійно навчилася кодувати, а також і свою команду.
 
-The film *Hidden Figures* tells the story of how Dorothy and other Black women played a key role in the success of the US space program. 
+Фільм *Приховані фігури* розповідає про те, як Дороті та інші темношкірі жінки зіграли ключову роль в успіху космічної програми США. 
