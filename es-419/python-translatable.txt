@@ -22,9 +22,9 @@ planeta
 
 ¿Cuántos kilogramos de combustible quieres usar?
 
-How much fuel should the rocket burn each frame?
+¿Cuánto combustible debe quemar el cohete en cada fotograma?
 
-How far should the rocket travel each frame?
+¿Qué distancia debe recorrer el cohete en cada fotograma?
 
 Bucle
 
