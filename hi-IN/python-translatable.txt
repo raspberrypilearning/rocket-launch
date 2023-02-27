@@ -1,33 +1,33 @@
 screen_size
 
-rocket_y
+crocket_y
 
-burn
+बर्न करें
 
 orbit_radius
 
 orbit_y
 
-draw_rocket
+draway_crock
 
-fuel
+फ्यूल
 
-Fuel left:
+शेष ईंधन:
 
-rocket
+रॉकेट
 
-draw_background
+drawage_background बनाएं
 
-planet
+ग्रह
 
-How many kilograms of fuel do you want to use?
+आप कितने किलोग्राम ईंधन का उपयोग करना चाहते हैं?
 
 How much fuel should the rocket burn each frame?
 
 How far should the rocket travel each frame?
 
-Looping
+लूपिंग
 
-points
+पॉइंट्स
 
-lives
+रहता है
