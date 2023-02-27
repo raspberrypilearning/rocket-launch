@@ -1,10 +1,10 @@
-## What next?
+## सहायता कहाँ प्राप्त करें
 
-If you are following the [Introduction to Python](https://projects.raspberrypi.org/en/raspberrypi/python-intro) pathway, you can move on to the [Make a face](https://projects.raspberrypi.org/en/projects/make-a-face) project. In this project, you will draw a face or mask using geometric shapes.
+यदि आप [Introduction to python](https://projects.raspberrypi.org/en/raspberrypi/python-intro) मार्ग का अनुसरण कर रहे हैं, तो आप [Make a face](https://projects.raspberrypi.org/en/projects/make-a-face) प्रोजेक्ट पर जा सकते हैं। इस प्रोजेक्ट में, आप ज्यामितीय आकृतियों का उपयोग करके एक चेहरा या मुखौटा बनाएँगे।
 
 --- print-only ---
 
-![Make a face project](images/make-a-face-project.png)
+![एक फेस प्रोजेक्ट बनाएँ](images/make-a-face-project.png)
 
 --- /print-only ---
 
@@ -15,4 +15,4 @@ If you are following the [Introduction to Python](https://projects.raspberrypi.o
 
 --- /no-print ---
 
-If you want to have more fun exploring Python, then you could try out any of [these projects](https://projects.raspberrypi.org/en/projects?software%5B%5D=python).
+यदि आप Python का अन्वेषण करने में अधिक आनंद लेना चाहते हैं, तो आप [these projects](https://projects.raspberrypi.org/en/projects?software%5B%5D=python) में से किसी को भी आज़मा सकते हैं।
