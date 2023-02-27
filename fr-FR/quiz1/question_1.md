@@ -1,17 +1,17 @@
-## Quick quiz
+## Questionnaire rapide
 
-Answer the three questions. There are hints to guide you to the correct answer.
+Réponds aux trois questions. Il y a des indices pour te guider vers la bonne réponse.
 
-When you have answered each question, click on **Check my answer**.
+Lorsque tu as répondu à chaque question, clique sur **Vérifier ma réponse**.
 
-Have fun!
+Amuse-toi bien !
 
 --- question ---
 ---
 legend : Question 1 sur 3
 ---
 
-Which output would you expect if you ran the program below?
+Quel résultat t'attendrais-tu si tu exécutais le programme ci-dessous ?
 
 ```python
 for i in range(5):
@@ -24,7 +24,7 @@ for i in range(5):
 
   --- feedback ---
 
-Not quite, a `for` loop in Python repeats its code once for each item in a sequence it's given, and here `range` creates a sequence starting from `0`.
+Pas tout à fait, une boucle `for` en Python répète son code une fois pour chaque élément dans une séquence qui lui est donnée, et ici `range` crée une séquence à partir de `0`.
 
   --- /feedback ---
 
@@ -32,7 +32,7 @@ Not quite, a `for` loop in Python repeats its code once for each item in a seque
 
   --- feedback ---
 
-Not quite, the **loop variable** from a `for` loop — in this case `i` — holds the current value from the sequence the loop is working through.
+Pas tout à fait, la **variable de boucle** d'une boucle `for` - dans ce cas `i` - contient la valeur actuelle de la séquence sur laquelle la boucle travaille.
 
   --- /feedback ---
 
@@ -40,7 +40,7 @@ Not quite, the **loop variable** from a `for` loop — in this case `i` — hold
 
   --- feedback ---
 
-Correct. The loop runs once, in order, for each item `i` in the range [0, 1, 2, 3, 4].
+Correct. La boucle s'exécute une fois, dans l'ordre, pour chaque élément `i` dans la plage [0, 1, 2, 3, 4].
 
   --- /feedback ---
 
@@ -48,7 +48,7 @@ Correct. The loop runs once, in order, for each item `i` in the range [0, 1, 2, 
 
   --- feedback ---
 
-Nto quite, a `for` loop runs through the sequence of items it is given in order. Because `range()` gives an ordered sequence from 0 to the number it is passed, that is the order you would expect to see printed out by this `for` loop.
+Pas tout à fait, une boucle `for` parcourt la séquence d'éléments qui lui est donnée dans l'ordre. Parce que `range()` donne une séquence ordonnée de 0 au nombre qui lui est passé, c'est l'ordre que tu t'attends à voir imprimé par cette boucle `for`.
 
   --- /feedback ---
 
