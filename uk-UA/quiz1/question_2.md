@@ -1,10 +1,10 @@
 
 --- question ---
 ---
-legend: Question 2 of 3
+legend: Питання 2 з 3
 ---
 
-A project has this `setup` code to load a planet image and say that images should be positioned at their centre:
+Проєкт має код `setup`, щоб завантажити малюнок планети та вказати, що малюнок повинен бути розташований по центру:
 
 --- code ---
 ---
@@ -19,9 +19,9 @@ planet = load_image('planet.png')
 
 --- /code ---
 
-Coordinates start from (0, 0) in the top-left corner. In the project you drew planet and rocket images using the `image(image_file, x-coord, y-coord, x-width, y-width)` function.
+Координати починаються від (0, 0) у верхньому лівому куті. У проєкті зображення планети та ракети було намальовано за допомогою функції `image(image_file, x-coord, y-coord, x-width, y-width)`.
 
-Where will this code position the planet image?
+Яким чином цей код буде розміщувати малюнок планети на екрані?
 
 --- code ---
 ---
@@ -34,35 +34,35 @@ image(planet, 300, 100, 128, 128)
 
 --- choices ---
 
-- ( ) ![A planet image positioned horizontally off at the right of the screen and vertically in the middle.](images/planet400200.png)
+- ( ) ![Зображення планети, розташоване горизонтально в правій частині екрана та вертикально посередині.](images/planet400200.png)
 
   --- feedback ---
 
-The second and third inputs to the `image()` function are the `x` and `y` coordinates for the centre of the image. This planet has the coordinates `(400, 200)`.
+Другий та третій параметри коду функції `image()` - це координати `x` та `y`, для розміщення зображення по центру. Ця планета має координати `(400, 200)`.
 
   --- /feedback ---
 
-- ( ) ![A planet image positioned in the middle of the bottom-left quadrant.](images/planet100300.png)
+- ( ) ![Зображення планети розташоване в середині лівого нижнього сегмента.](images/planet100300.png)
 
   --- feedback ---
 
-The second and third inputs to the `image()` function are the `x` and `y` coordinates for the centre of the image. This planet has the coordinates `(100, 300)`.
+Другий та третій параметри коду функції `image()` - це координати `x` та `y`, для розміщення зображення по центру. Ця планета має координати `(100, 300)`.
 
   --- /feedback ---
 
-- (x) ![A planet image positioned in the middle of the top-right quadrant.](images/planet300100.png)
+- (x) ![Зображення планети розташоване в середині правого верхнього сегмента.](images/planet300100.png)
 
   --- feedback ---
 
-Correct! The second and third inputs to the `image()` function are the `x` and `y` coordinates for the centre of the image. This image has the coordinates (300, 100) so it is 300 (out of 400) pixels from the left for the `x` coordinate and 100 (out of 400) pixels down from the top.
+Правильно! Другий та третій параметри коду функції `image()` - це координати `x` та `y`, для розміщення зображення по центру. Цей малюнок має координати (300, 100) тобто, це 300 (із 400) пікселів зліва, за координатою `x` та 100 (із 400) пікселів вниз, від верху.
 
   --- /feedback ---
 
-- () ![A planet image positioned in the top-left quadrant.](images/planet128128.png)
+- () ![Зображення планети розташоване у верхньому лівому сегменті.](images/planet128128.png)
 
   --- feedback ---
 
-The fourth and fifth inputs give the size of the image. The second and third inputs to the `image()` function are the `x` and `y` coordinates for the centre of the image. This planet has the coordinates `(128, 128)`.
+Четвертий та п'ятий параметри коду задають розмір малюнка. Другий та третій параметри коду функції `image()` - це координати `x` та `y`, для розміщення зображення по центру. Ця планета має координати `(128, 128)`.
 
   --- /feedback ---
 
