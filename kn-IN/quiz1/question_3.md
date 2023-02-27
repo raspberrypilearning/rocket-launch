@@ -1,6 +1,6 @@
 --- question ---
 ---
-legend: Question 3 of 3
+ವಿಷಯಸೂಚಿ: ಪ್ರಶ್ನೆ 3
 ---
 
 This code uses `tint()` to colour a rocket in a game to show the player how they are doing.
@@ -33,7 +33,7 @@ If the `points` variable has the value `99` and the `lives` variable has the val
 
  --- feedback ---
 
- Correct! The player has less than 100 points and only 1 life left. The rocket is coloured amber to let them know that this is their last chance to win!
+ ಸರಿ! The player has less than 100 points and only 1 life left. The rocket is coloured amber to let them know that this is their last chance to win!
 
  --- /feedback ---
 
