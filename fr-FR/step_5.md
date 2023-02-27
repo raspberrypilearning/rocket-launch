@@ -74,7 +74,7 @@ print('Carburant restant : ', carburant)
 
 --- task ---
 
-**Test :** Exécute ton programme pour vérifier que l'animation ne démarre pas avant `Combien de kilos de carburant veux-tu utiliser ?` a été répondu. Essaye d'entrer `30000` comme quantité de carburant.
+**Test :** Exécute ton programme pour vérifier que l'animation ne démarre pas avant `Combien de kilos de carburant veux-tu utiliser ?` a été répondu. Essaie d'entrer `30000` comme quantité de carburant.
 
 La fusée continuera même s'il n'y a plus de carburant.
 
