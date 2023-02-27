@@ -8,7 +8,7 @@ Have fun!
 
 --- question ---
 ---
-legend: Question 1 of 3
+legend: Вопрос 1 из 3
 ---
 
 Which output would you expect if you ran the program below?
