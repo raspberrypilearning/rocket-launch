@@ -1,38 +1,38 @@
-## Upgrade your project
-Your project is complete, but you can still make it better if you want. Here are a few upgrades to consider:
+## Вдосконалення твого проєкту
+Твій проєкт завершений, але його можна покращити, якщо ти хочеш. Ось як можна покращити проєкт:
 
- + Let the user set the rate at which the rocket burns fuel or how far the rocket flies in each frame.
- + Add a second, higher, orbit for the rocket to reach and drop off another satellite. Have it change colour again when it gets there.
- + Add you own rocket or planet image to use in your project.
+ + Нехай користувач сам встановлює швидкість, з якою ракета спалює паливо, або як далеко летить ракета на кожному кадрі.
+ + Додати другу, дальню орбіту, на яку ракета повинна досягти та доставити інший супутник. Нехай ракета знову змінить колір, коли долетить.
+ + Додати свої власні картинки ракети або планети, використовуючи їх у своєму проєкті.
 
 
 --- collapse ---
 ---
-title: Adding your own image to Trinket
+title: Додавання власних картинок у Trinket
 ---
 
-If you want to use your own picture for the planet — or the rocket — then you can do that by choosing the **View and Add Images** button.
+Якщо ти хочеш використовувати власні картинки для планети або ракети, скористайся кнопкою **View and Add Images**, щоб зробити це.
 
-![A plus symbol, an upload symbol, and an image symbol. The image symbol is highlighted.](images/trinket_image.png)
+![Символ "плюс", символ "завантажити" та символ "зображення". Символ "зображення" підсвічується.](images/trinket_image.png)
 
-Then choose **Image Library** and follow the on-screen instructions to upload an image to your Trinket image library.
+Потім вибери **Image Library** та дотримуйся інструкцій на екрані, щоб завантажити зображення до бібліотеки зображень Trinket.
 
-![A button with a plus and the words 'Image Library' on it.](images/trinket_image_library.png)
+![Кнопка з плюсом та написом 'Image Library'.](images/trinket_image_library.png)
 
-Note the filename of the image you've uploaded, and use it in the code in place of `planet.png`.
+Запам'ятай ім'я файлу зображення, яке було завантажено, та використай його в коді замість `planet.png`.
 
 --- /collapse ---
 
-Here's a version of the project with all those upgrades, so you can see how they could work:
+Ось варіант проєкту з цими оновленнями, щоб зрозуміти, як вони можуть працювати:
 
 <iframe src="https://trinket.io/embed/python/76c7d66070?outputOnly=true&runOption=run&start=result" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
 
 --- collapse ---
 ---
-title: Completed project
+title: Завершений проєкт
 ---
 
-You can view the [completed project here](https://trinket.io/python/622b4dd113){:target="_blank"}.
+Ти можеш переглянути [завершений проєкт тут](https://trinket.io/python/622b4dd113){:target="_blank"}.
 
 --- /collapse ---
 
