@@ -5,7 +5,7 @@ description: Make an animation of a rocket propelling a satellite into orbit
 version: 0.0.1
 listed: true
 copyedit: true
-last_tested: "2021-10-06"
+last_tested: "06.10.2021"
 steps:
   - 
     title: You will make
@@ -33,6 +33,6 @@ steps:
     completion:
       - external
   - 
-    title: Upgrade your project
+    title: Улучшение своего проекта
   - 
-    title: What next?
+    title: Что дальше?
