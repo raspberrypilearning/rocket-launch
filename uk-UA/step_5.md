@@ -1,20 +1,20 @@
-## Burn fuel
+## Спалювання палива
 
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">
 
-One of the most important things to decide when launching a rocket is how much fuel to load into it. 
+Одне з найважливіших речей, яке необхідно вирішити при запуску ракети, - кількість палива. 
 
-To do this, you need to simulate how much fuel will be burned on the journey.
+Для цього потрібно визначити, скільки пального буде витрачено протягом подорожі.
 </div>
 
-![The program with a question in the output area asking how much fuel is required.](images/burn_question_full.png){:width="300px"}
+![Питання в області виводу про те, скільки потрібно палива.](images/burn_question_full.png){:width="300px"}
 
 </div>
 
 --- task ---
 
-Add a variable to keep track of how much fuel your rocket burns (in frames).
+Додай змінну, яка буде відстежувати, скільки палива використовує твоя ракета (у кадрах).
 
 --- code ---
 ---
@@ -22,7 +22,7 @@ language: python filename: main.py line_numbers: true line_number_start: 7
 line_highlights: 10
 ---
 
-# Setup global variables
+# Налаштування глобальних змінних
 screen_size = 400   
 rocket_y = screen_size  
 burn = 100 #How much fuel is burned in each frame
@@ -34,7 +34,7 @@ burn = 100 #How much fuel is burned in each frame
 
 --- task ---
 
-At the bottom of your program, add code to ask the user how much fuel to add to the rocket and store their answer in a `fuel` global variable.
+У нижній частині програми, додай код, який буде запитувати користувача, скільки палива додати в ракету, та збереже його відповідь у глобальну змінну `fuel`.
 
 --- code ---
 ---
@@ -49,13 +49,13 @@ run()
 
 --- /task ---
 
-The rocket should only move if it hasn't burned all of its fuel.
+Ракета повинна здійснювати рух тільки в тому випадку, якщо повністю не спалено її паливо.
 
 --- task ---
 
-Add code to the `draw_rocket()` function to reduce the remaining `fuel` by the `burn` of each frame. Use `print()` to show how much fuel is left in each frame.
+Додай код до функції `draw_rocket()` для зменшення залишку `fuel` при `burn` на кожному кадрі. Використовуй `print()`, щоб відобразити, скільки пального залишилося, на кожному кадрі.
 
-You need to say that you want to use the global `fuel` and `burn` variables.
+Потрібно вказати, що ти хочеш використовувати глобальні змінні `fuel` та `burn`.
 
 --- code ---
 ---
@@ -74,21 +74,21 @@ print('Fuel left: ', fuel)
 
 --- task ---
 
-**Test:** Run your program to check that the animation doesn't start until `How many kilograms of fuel do you want to use?` has been answered. Try entering `30000` as the amount of fuel.
+**Тест:** Запусти свою програму та перевір, чи не запускається анімація до того, як буде отримана відповідь на запитання `Скільки кілограмів пального ти хочеш використати?`. Спробуй ввести кількість палива - `30000`.
 
-The rocket will keep going even if it has no fuel left.
+Ракета продовжить рух, навіть якщо у неї закінчиться паливо.
 
-![The program with a question in the output area asking how much fuel is required.](images/burn_question.png)
+![Програма з питанням у вихідній області про те, скільки потрібно палива.](images/burn_question.png)
 
 --- /task ---
 
 --- task ---
 
-The rocket should only move if it has enough fuel left. Add an `if` statement to check that `fuel >= burn`.
+Ракета повинна рухатися тільки якщо у неї залишилося достатньо палива. Додай оператор `if`, щоб перевірити виконання коду `fuel >= burn`.
 
-You will need to indent all of the lines of code before the `image()` function call. To do this, highlight all of the lines with the mouse and then tap the <kbd>Tab</kbd> on the keyboard to indent all the lines at once.
+Тобі потрібно буде зробити відступи для всіх рядків коду перед тим, як буде викликана функція `image()`. Щоб зробити це, виділи за допомогою миші всі рядки та натисни на клавіатурі <kbd>Tab</kbd>, щоб зробити відступ для всіх рядків відразу.
 
-The `image()` line doesn't need to be indented because you always want to draw the rocket.
+Для рядка `image()` не потрібно робити відступ, тому що тобі потрібно, щоб ракета малювалась завжди.
 
 --- code ---
 ---
@@ -121,13 +121,13 @@ print('Fuel left: ', fuel)
 
 --- task ---
 
-**Test:** Run your program to check that the rocket stops when there is no fuel left.
+**Тест:** Запусти свою програму та перевір, чи зупиняється ракета, коли закінчується паливо.
 
-![Image of a rocket in the middle of the screen with the statement 'Fuel left: 0'.](images/burn_empty.png){:width="300px"}
+![Зображення ракети посередині екрана з оператором 'Пального залишилось: 0'.](images/burn_empty.png){:width="300px"}
 
 --- /task ---
 
-This computer simulation isn't very accurate, but it's good enough for our animation.
+Це комп'ютерне моделювання досить неточне, але цього достатньо для нашої анімації.
 
 --- save ---
 
