@@ -181,7 +181,7 @@ no_tint()
 
 --- /task ---
 
-Tu as maintenant une simulation qui peut être utilisée pour montrer combien de carburant est nécessaire au minimum pour atteindre l'orbite du satellite. C'est génial ; cependant, tu pourrais prendre une énorme quantité de carburant et réussir quand même, mais c'est coûteux et inutile !
+Tu as maintenant une simulation qui peut être utilisée pour montrer la quantité de carburant nécessaire au minimum pour atteindre l'orbite du satellite. C'est génial ; cependant, tu pourrais prendre une énorme quantité de carburant et réussir quand même, mais c'est coûteux et inutile !
 
 --- task ---
 
