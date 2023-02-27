@@ -21,7 +21,7 @@ Vas a:
 
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 175px; flex-grow: 1">  
-Debes suministrar al cohete suficiente combustible para alcanzar la órbita del satélite. Prueba con una cantidad pequeña (alrededor de 10 000 kg) y una cantidad muy grande (alrededor de 50 000 kg) para ver qué sucede. 
+Debes suministrar al cohete suficiente combustible para alcanzar la órbita del satélite. Prueba con una cantidad pequeña (alrededor de 10,000 kg) y una cantidad muy grande (alrededor de 50,000 kg) para ver qué sucede. 
 
 ¿Cuánto combustible es suficiente sin que sobre demasiado?
 </div>
