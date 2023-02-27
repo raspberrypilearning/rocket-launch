@@ -1,4 +1,4 @@
-## Upgrade your project
+## Ulepsz swój projekt
 Your project is complete, but you can still make it better if you want. Here are a few upgrades to consider:
 
  + Let the user set the rate at which the rocket burns fuel or how far the rocket flies in each frame.
@@ -29,10 +29,10 @@ Here's a version of the project with all those upgrades, so you can see how they
 
 --- collapse ---
 ---
-title: Completed project
+title: Ukończony projekt
 ---
 
-You can view the [completed project here](https://trinket.io/python/622b4dd113){:target="_blank"}.
+Tutaj możesz zobaczyć [ukończony projekt](https://trinket.io/python/622b4dd113){:target="_blank"}.
 
 --- /collapse ---
 
