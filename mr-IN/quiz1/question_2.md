@@ -1,14 +1,14 @@
 
 --- question ---
 ---
-legend: Question 2 of 3
+legend: प्रश्न 3 पैकी 2
 ---
 
 A project has this `setup` code to load a planet image and say that images should be positioned at their centre:
 
 --- code ---
 ---
-language: python
+भाषा: python
 ---
 
 def setup():   
@@ -25,7 +25,7 @@ Where will this code position the planet image?
 
 --- code ---
 ---
-language: python
+भाषा: python
 ---
 
 image(planet, 300, 100, 128, 128)
