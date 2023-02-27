@@ -1,4 +1,4 @@
-## Set the scene
+## दृश्य सेट करा
 
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">
@@ -21,7 +21,7 @@ If you have a Trinket account, you can click on the **Remix** button to save a c
 
 You will use a `screen_size` variable to set the size of the screen and in calculations. Variables defined outside functions are **global** so you can use them anywhere in your program.
 
---- task ---
+---/task---
 
 Find the comment `Setup global variables` and add a line of code to create your `screen_size` variable:
 
