@@ -8,16 +8,16 @@ Make an animation to propel a satellite into orbit — by hitching a ride on a r
 <span style="color: #0faeb0">**Computer simulations**</span> are used to calculate what will happen when we send a rocket into space. Running simulations and making plans on a computer reduces the risk of expensive or dangerous problems in space.
 </p>
 
-You will:
+तुम्ही हे कारल:
 + Use **images** in your animations
 + Use `for` loops to repeat actions
 + Join conditions with `and`
 
---- no-print ---
+--- / no-print ---
 
 ### Play ▶️
 
---- task ---
+---/task---
 
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 175px; flex-grow: 1">  
@@ -30,13 +30,13 @@ How much fuel is just enough without too much left over?
 
 --- /task ---
 
---- /no-print ---
+--- / no-print ---
 
 --- print-only ---
 
 ![Completed project.](images/showcase.png)
 
---- /print-only ---
+--- / print-only ---
 
 <p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;"> ![Dorothy Vaughan](images/dorothy_vaughan.jpeg){:width="300px"} Dorothy Vaughan made important contributions to early spaceflight. Seeing that the future would use electronic computers, she taught herself, and her team, how to code.
 
