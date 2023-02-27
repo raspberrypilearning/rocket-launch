@@ -1,25 +1,25 @@
-## Reaching orbit
+## Вихід на орбіту
 
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">
 
-The point of launching the rocket is to propel a satellite into orbit. 
+Мета запуску ракети - вивести супутник на орбіту. 
 
-An orbit is a curved path that one object takes around another due to gravity.
+Орбіта - це зігнута лінія, по якій рухається один об'єкт навколо іншого під дією сили тяжіння.
 
-The rocket can change colour to show how successful the launch was. 
+Ракета може змінювати колір, щоб показати успішність свого запуску. 
 
 </div>
 <div>
 
-![Three side-by-side images showing successful (green tint), over-fueled (amber tint), and unsucessful (red tint) launches.](images/check_orbit.png){:width="400px"}
+![Три зображення, які демонструють: успіх (зелений колір), перевантаження паливом (янтарний колір) та невдалий запуск (червоний колір).](images/check_orbit.png){:width="400px"}
 
 </div>
 </div>
 
 --- task ---
 
-Create two new global variables to set the radius of the orbit circle and the `y` coordinate of the orbit to the point the rocket centre needs to reach to launch the satellite.
+Створи дві нові глобальні змінні, щоб встановити радіус кола орбіти та координату орбіти `y` до точки, якої повинен досягти центр ракети, щоб запустити супутник.
 
 --- code ---
 ---
@@ -27,7 +27,7 @@ language: python filename: main.py line_numbers: true line_number_start: 7
 line_highlights: 11-12
 ---
 
-# Setup global variables
+# Налаштування глобальних змінних
 screen_size = 400   
 rocket_y = screen_size   
 burn = 100   
@@ -40,7 +40,7 @@ orbit_y = screen_size - orbit_radius
 
 --- task ---
 
-Update the `draw_background()` function to draw an ellipse to represent the satellite orbit that the rocket needs to reach.
+Онови функцію `draw_background()`, щоб намалювати овал, який буде відображати орбіту супутника, яку ракета повинна досягти.
 
 --- code ---
 ---
@@ -63,19 +63,19 @@ ellipse(width/2, height, orbit_radius * 2, orbit_radius * 2)
 
 --- task ---
 
-**Test:** Run your program and check that a white orbit line is drawn.
+**Тест:** Запусти свою програму та перевір, чи намалювалась біла лінія орбіти.
 
-![The screen with planet and new orbit line.](images/draw_orbit.png){:width="300px"}
+![Скриншот з планетою та новою лінією орбіти.](images/draw_orbit.png){:width="300px"}
 
 --- /task ---
 
-The rocket should stop when it reaches the satellite orbit — the end of the mission.
+Ракета повинна зупинитися при досяганні орбіти супутника — це кінець місії.
 
 --- task ---
 
-Update your `if fuel >= burn` code to also check that the rocket hasn't reached the orbit.
+Онови свій код `if fuel >= burn`, щоб також перевіряти, якщо ракета не буде досягати орбіти.
 
-You can use an `and` in `if` statements to check if two, or more, conditions are true.
+Ти також можеш скористатися `and` в операторах `if`, щоб перевіряти істинність двох або більше умов.
 
 --- code ---
 ---
@@ -83,7 +83,7 @@ language: python filename: main.py - draw_rocket() line_numbers: true line_numbe
 line_highlights: 19
 ---
 
-# The draw_rocket function goes here
+# Функція draw_rocket викликається тут
 def draw_rocket():
 
   global rocket_y, fuel, burn
@@ -96,11 +96,11 @@ def draw_rocket():
 
 --- task ---
 
-**Test:** Run your project and enter `50000` as the amount of fuel. This should be plenty of fuel to reach orbit. The rocket should stop moving when it reaches orbit.
+**Тест:** Запусти свій проєкт та введи кількість палива - `50000`. Цього повинно вистачити для досягання орбіти. Ракета повинна зупинитися при досяганні орбіти.
 
 --- /task ---
 
-The rocket should be coloured red if it runs out of fuel before getting high enough to launch the satellite.
+Ракета повинна пофарбуватися в червоний колір, якщо у неї закінчиться паливо до того, як вона підніметься на достатню висоту для запуску супутника.
 
 --- task ---
 
@@ -122,19 +122,19 @@ line_highlights: 34-35
 
 --- task ---
 
-**Test:** Run your code and enter `20000` as the amount of fuel. Check that the rocket turns red when it stops below the orbit.
+**Тест:** Запусти свій проєкт та введи кількість палива - `20000`. Перевір, чи змінила ракета колір на червоний, коли вона зупинилась до орбіти.
 
-![A red rocket that has run out of fuel before the orbit circle. The planet has also turned red.](images/orbit_failure.png){:width="300px"}
+![Червона ракета, у якої закінчилось паливо перед орбітою. Планета теж змінила свій колір на червоний.](images/orbit_failure.png){:width="300px"}
 
-Oh no, the planet has turned red!
+О ні, планета теж стала червоною!
 
 --- /task ---
 
 --- task ---
 
-The `tint()` function sets the tint colour for all images that are drawn until you change the tint or use `no_tint()` to turn it off.
+Функція `tint()` встановлює колір для всіх зображень, які створюються, до тих пір, поки ти не зміниш колір або не використаєш код `no_tint()`, щоб вимкнути її.
 
-**Choose:** Add a call to `no_tint()` after drawing the image so that the planet isn't tinted red in the next frame — or leave it if you like the planet turning red!
+**Обирай:** Додай виклик коду `no_tint()` після малювання картинки, щоб у наступному кадрі планета не стала червоною. Ти можеш залишити все так, якщо тобі подобається, коли планета стає червоною!
 
 --- code ---
 ---
@@ -154,7 +154,7 @@ no_tint() #So the planet isn't tinted red in the next frame!
 
 --- task ---
 
-Use the `tint()` function again, this time to colour the rocket green if the rocket has enough fuel to reach the satellite orbit:
+Цього разу, скористайся знову функцією `tint()`, щоб змінити колір ракети на зелений, якщо вона має достатньо палива для досягання орбіти супутника:
 
 --- code ---
 ---
@@ -175,19 +175,19 @@ no_tint()
 
 --- task ---
 
-**Test:** Run your project and enter `50000` as the amount of fuel. Check that your rocket turns green when it reaches the satellite orbit.
+**Тест:** Запусти свій проєкт та введи кількість палива - `50000`. Перевір, чи змінила ракета колір на зелений при досяганні орбіти супутника.
 
-![A green rocket that has reached the orbit circle and has fuel left.](images/orbit_success.png){:width="300px"}
+![Зелена ракета досягла лінії орбіти. У ракети закінчилось паливо.](images/orbit_success.png){:width="300px"}
 
 --- /task ---
 
-You now have a simulation that can be used to show how much fuel is needed as a minimum to reach the satellite orbit. That's great; however, you could take a huge amount of fuel and still be successful, but this is costly and wasteful!
+Тепер у тебе є моделювання ситуації, яку можна використати, щоб показати мінімальну кількість палива, якого необхідно для досягання орбіти супутника. Це чудово; проте, ти можеш вибрати більшу кількість палива та успішно досягти орбіти, але це буде дорого та неекономно!
 
 --- task ---
 
-Amend the conditions in your success code so that the rocket only turns green if it reaches the orbit `and` has less than 1,000kg of fuel left.
+Зміни умови у твоєму коді таким чином, щоб ракета стала зеленою, тільки якщо вона досягла орбіти й у неї залишилося менше 1,000 кг палива. Для цього, використовуй `and`.
 
-Add code to colour the rocket yellow if the rocket has more than 1,000kg of fuel left when it reaches orbit.
+Додай код, щоб ракета змінювала колір на жовтий, якщо при досяганні орбіти, в неї буде більше 1,000кг палива.
 
 --- code ---
 ---
@@ -210,9 +210,9 @@ no_tint() #So the planet isn't tinted in the next frame!
 
 --- task ---
 
-**Test:** Run your program several times with different numbers; for example, 25,000kg of fuel should be the amount needed to turn the rocket green, but also check that the yellow tint works too by using a bigger number.
+**Тест:** Запусти свою програму декілька разів, використовуючи різні суми; наприклад, 25,000кг пального повинно вистачити, щоб ракета змінила колір на зелений, але також перевір, чи спрацьовує жовтий колір при використанні більших значень.
 
-![A yellow rocket that has reached the orbit circle and has fuel left.](images/orbit_meh.png){:width="300px"}
+![Жовта ракета досягла лінії орбіти. У ракети закінчилось паливо.](images/orbit_meh.png){:width="300px"}
 
 --- /task ---
 
