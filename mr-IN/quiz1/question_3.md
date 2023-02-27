@@ -1,13 +1,13 @@
 --- question ---
 ---
-legend: Question 3 of 3
+legend: प्रश्न 3 पैकी 3
 ---
 
 This code uses `tint()` to colour a rocket in a game to show the player how they are doing.
 
 --- code ---
 ---
-language: python
+भाषा: python
 ---
 
 if points >= 100:    
@@ -49,7 +49,7 @@ If the `points` variable has the value `99` and the `lives` variable has the val
 
 - ( )
 
-![A rocket image with green tint](images/rocket_green.png) <div style="text-align: center;">Green
+![A rocket image with green tint](images/rocket_green.png) <div style="text-align: center;">हिरवा
 
  --- feedback ---
 
@@ -59,7 +59,7 @@ If the `points` variable has the value `99` and the `lives` variable has the val
 
 - ( )
 
-![A rocket image with red tint](images/rocket_red.png) <div style="text-align: center;">Red
+![A rocket image with red tint](images/rocket_red.png) <div style="text-align: center;">लाल
 
  --- feedback ---
 
