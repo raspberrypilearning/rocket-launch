@@ -1,7 +1,7 @@
 
 --- question ---
 ---
-legend: Question 2 of 3
+legend: Вопрос 2 из 3
 ---
 
 A project has this `setup` code to load a planet image and say that images should be positioned at their centre:
@@ -54,7 +54,7 @@ The second and third inputs to the `image()` function are the `x` and `y` coordi
 
   --- feedback ---
 
-Correct! The second and third inputs to the `image()` function are the `x` and `y` coordinates for the centre of the image. This image has the coordinates (300, 100) so it is 300 (out of 400) pixels from the left for the `x` coordinate and 100 (out of 400) pixels down from the top.
+Правильно! The second and third inputs to the `image()` function are the `x` and `y` coordinates for the centre of the image. This image has the coordinates (300, 100) so it is 300 (out of 400) pixels from the left for the `x` coordinate and 100 (out of 400) pixels down from the top.
 
   --- /feedback ---
 
