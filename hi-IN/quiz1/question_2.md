@@ -1,10 +1,10 @@
 
 --- question ---
 ---
-legend: Question 2 of 3
+किंवदंती: ३ का प्रश्न २
 ---
 
-A project has this `setup` code to load a planet image and say that images should be positioned at their centre:
+एक प्रोजेक्ट में ग्रह की छवि लोड करने के लिए यह `setup` कोड है और कहें कि चित्र उनके केंद्र में स्थित होने चाहिए:
 
 --- code ---
 ---
@@ -19,9 +19,9 @@ planet = load_image('planet.png')
 
 --- /code ---
 
-Coordinates start from (0, 0) in the top-left corner. In the project you drew planet and rocket images using the `image(image_file, x-coord, y-coord, x-width, y-width)` function.
+निर्देशांक शीर्ष-बाएँ कोने में (0, 0) से शुरू होता है। प्रोजेक्ट में आपने `image(image_file, x-coord, y-coord, x-width, y-width)` फंक्शन का उपयोग करके ग्रह और रॉकेट चित्र बनाए।
 
-Where will this code position the planet image?
+यह कोड ग्रह की छवि को कहाँ स्थित करेगा?
 
 --- code ---
 ---
@@ -34,35 +34,35 @@ image(planet, 300, 100, 128, 128)
 
 --- choices ---
 
-- ( ) ![A planet image positioned horizontally off at the right of the screen and vertically in the middle.](images/planet400200.png)
+- ( ) ![एक ग्रह छवि स्क्रीन के दाईं ओर क्षैतिज रूप से बंद और मध्य में लंबवत रूप से स्थित होती है।](images/planet400200.png)
 
   --- feedback ---
 
-The second and third inputs to the `image()` function are the `x` and `y` coordinates for the centre of the image. This planet has the coordinates `(400, 200)`.
+`image()` फ़ंक्शन के लिए दूसरा और तीसरा इनपुट `x` और `y` चित्र के केंद्र के लिए निर्देशांक हैं। इस ग्रह का निर्देशांक `(400, 200)` है।
 
   --- /feedback ---
 
-- ( ) ![A planet image positioned in the middle of the bottom-left quadrant.](images/planet100300.png)
+- ( ) ![नीचे-बाएँ चतुर्थांश के बीच में स्थित एक ग्रह चित्र।](images/planet100300.png)
 
   --- feedback ---
 
-The second and third inputs to the `image()` function are the `x` and `y` coordinates for the centre of the image. This planet has the coordinates `(100, 300)`.
+`image()` फ़ंक्शन के लिए दूसरा और तीसरा इनपुट `x` और `y` चित्र के केंद्र के लिए निर्देशांक हैं। इस ग्रह का निर्देशांक `(100, 300)` है।
 
   --- /feedback ---
 
-- (x) ![A planet image positioned in the middle of the top-right quadrant.](images/planet300100.png)
+- (x) ![एक ग्रह छवि ऊपर-दाएँ चतुर्थांश के बीच में स्थित है।](images/planet300100.png)
 
   --- feedback ---
 
-Correct! The second and third inputs to the `image()` function are the `x` and `y` coordinates for the centre of the image. This image has the coordinates (300, 100) so it is 300 (out of 400) pixels from the left for the `x` coordinate and 100 (out of 400) pixels down from the top.
+सही! `image()` फ़ंक्शन के लिए दूसरा और तीसरा इनपुट `x` और `y` चित्र के केंद्र के लिए निर्देशांक हैं। इस चित्र में निर्देशांक (300, 100) हैं इसलिए यह बाईं ओर से 300 (400 में से) पिक्सेल है `x` निर्देशांक और 100 (400 में से) पिक्सेल ऊपर से नीचे है।
 
   --- /feedback ---
 
-- () ![A planet image positioned in the top-left quadrant.](images/planet128128.png)
+- () ![एक ग्रह छवि ऊपर-बाएँ चतुर्थांश में स्थित है।](images/planet128128.png)
 
   --- feedback ---
 
-The fourth and fifth inputs give the size of the image. The second and third inputs to the `image()` function are the `x` and `y` coordinates for the centre of the image. This planet has the coordinates `(128, 128)`.
+चौथा और पांचवां इनपुट चित्र का आकार देता है। `image()` फ़ंक्शन के लिए दूसरा और तीसरा इनपुट `x` और `y` चित्र के केंद्र के लिए निर्देशांक हैं। इस ग्रह का निर्देशांक `(128, 128)` है।
 
   --- /feedback ---
 
