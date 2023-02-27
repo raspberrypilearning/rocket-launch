@@ -22,7 +22,7 @@ planeta
 
 Quantos quilogramas de combustível você quer usar?
 
-How much fuel should the rocket burn each frame?
+pontos
 
 How far should the rocket travel each frame?
 
