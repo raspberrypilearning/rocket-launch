@@ -29,7 +29,8 @@ image(rocket, width/2, height/2, 64, 64)
 
 - (x)
 
-![Зображення ракети янтарного кольору.](images/rocket_amber.png) <div style="text-align: center;">Янтар
+![Зображення ракети янтарного кольору.](images/rocket_amber.png) 
+<div style="text-align: center;">Янтар
 
  --- feedback ---
 
@@ -39,7 +40,8 @@ image(rocket, width/2, height/2, 64, 64)
 
 - ( )
 
-![Зображення ракети без кольору](images/rocket_original.png) <div style="text-align: center;">Без фарбування
+![Зображення ракети без кольору](images/rocket_original.png) 
+<div style="text-align: center;">Без фарбування
 
  --- feedback ---
 
@@ -49,7 +51,8 @@ image(rocket, width/2, height/2, 64, 64)
 
 - ( )
 
-![Зображення ракети із зеленим відтінком](images/rocket_green.png) <div style="text-align: center;">Зелений
+![Зображення ракети із зеленим відтінком](images/rocket_green.png) 
+<div style="text-align: center;">Зелений
 
  --- feedback ---
 
@@ -59,7 +62,8 @@ image(rocket, width/2, height/2, 64, 64)
 
 - ( )
 
-![Зображення ракети з червоним відтінком](images/rocket_red.png) <div style="text-align: center;">Червоний
+![Зображення ракети з червоним відтінком](images/rocket_red.png) 
+<div style="text-align: center;">Червоний
 
  --- feedback ---
 
