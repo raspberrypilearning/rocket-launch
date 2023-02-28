@@ -1,4 +1,4 @@
-## Challenge: створіть власну групу
+## Що далі?
 
 Якщо ти йдеш по мануалу [Знайомство з Python](https://projects.raspberrypi.org/en/raspberrypi/python-intro), можеш перейти до проєкту [Обличчя](https://projects.raspberrypi.org/en/projects/make-a-face). У цьому проєкті тобі доведеться намалювати обличчя або маску, використовуючи геометричні фігури.
 
