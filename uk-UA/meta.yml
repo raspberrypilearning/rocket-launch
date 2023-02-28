@@ -1,0 +1,29 @@
+---
+title: Запуск ракети
+hero_image: images/banner.png
+description: Створи анімацію польоту ракети, яка виводить супутник на орбіту
+version: 0.0.1
+listed: true
+copyedit: true
+last_tested: "2021-10-06"
+steps:
+  - title: Ти зробиш
+  - title: Створення фону
+  - title: Зліт!
+    completion:
+      - engaged
+  - title: Ефекти вихлопних газів
+  - title: Спалювання палива
+  - title: Вихід на орбіту
+    completion:
+      - internal
+  - title: Швидкий тест
+    knowledge_quiz:
+      path: quiz1
+      version: 1
+      questions: 3
+      passing_score: 3
+    completion:
+      - external
+  - title: Вдосконалення твого проєкту
+  - title: Що далі?
