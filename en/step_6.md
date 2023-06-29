@@ -17,6 +17,8 @@ The rocket can change colour to show how successful the launch was.
 </div>
 </div>
 
+### Draw an orbit line
+
 --- task ---
 
 Create two new global variables to set the radius of the orbit circle and the `y` coordinate of the orbit to the point the rocket centre needs to reach to launch the satellite. 
@@ -50,7 +52,7 @@ Update the `draw_background()` function to draw an ellipse to represent the sate
 language: python
 filename: main.py - draw_background()
 line_numbers: true
-line_number_start: 37
+line_number_start: 38
 line_highlights: 42-45
 ---
 
@@ -75,6 +77,8 @@ def draw_background():
 
 --- /task ---
 
+### Launch the rocket to the orbit
+
 The rocket should stop when it reaches the satellite orbit — the end of the mission. 
 
 --- task ---
@@ -88,7 +92,7 @@ You can use an `and` in `if` statements to check if two, or more, conditions are
 language: python
 filename: main.py - draw_rocket()
 line_numbers: true
-line_number_start: 14
+line_number_start: 15
 line_highlights: 19
 ---
 
@@ -108,6 +112,8 @@ def draw_rocket():
 **Test:** Run your project and enter `50000` as the amount of fuel. This should be plenty of fuel to reach orbit. The rocket should stop moving when it reaches orbit. 
 
 --- /task ---
+
+### Check if the launch is successful
 
 The rocket should be coloured red if it runs out of fuel before getting high enough to launch the satellite.
 

@@ -13,9 +13,9 @@ The animation needs a space backdrop with a planet to launch the rocket from.
 
 --- task ---
 
-Open the [project template](https://trinket.io/python/f2199f5a8c){:target="_blank"}.
+Open the [project template](https://editor.raspberrypi.org/en/projects/rocket-launch-starter){:target="_blank"}.
 
-If you have a Trinket account, you can click on the **Remix** button to save a copy to your `My Trinkets` library.
+### Create the screen
 
 --- /task ---
 
@@ -63,23 +63,25 @@ def setup():
 
 --- /task ---
 
+### Choose an image
+
 --- task ---
 
-The starter project has three different planet images and the moon provided for you. You can view these in the Trinket image library by selecting the **View and Add Images** button.
+The starter project has three different planet images and the moon provided for you. You can view these in the **Image gallery** on the left hand side of the code editor.
 
-![A plus symbol, an upload symbol, and an image symbol. The image symbol is highlighted.](images/trinket_image.png)
+![A screenshot of the code editor, with the image gallery highlighted containing images of planets and the moon.](images/image_gallery.png)
 
 **Choose:** Decide which image you want to use and make a note of the filename. For example, `orange_planet.png`.
 
 --- /task ---
 
-It's a good idea to load images in `setup()` so that they are ready when you need to use them and your animation will run quickly.
-
 --- task ---
+
+Add code to the `setup()` function to load and position your image. 
 
 The `image_mode(CENTER)` line says that you will be positioning images by giving the coordinates of the centre of the image (instead of the top left corner).
 
-Also add code to the `setup()` function to load your chosen image into a `planet` global variable. The variable needs to be global so you can use it later when you draw the planet to the screen.
+Next load your image into a global `planet` variable. The variable needs to be global so you can use it later when you draw the planet to the screen.
 
 --- code ---
 ---
@@ -93,14 +95,16 @@ line_highlights: 21-23
 def setup():   
   #Setup your animation here   
   size(screen_size, screen_size)   
-  image_mode(CENTER)   
+  image_mode(CENTER)   # Positions the image in the center
   global planet   
-  planet = load_image('planet.png') #Your chosen planet
+  planet = load_image('planet.png') # Your chosen planet
 
 
 --- /code ---
 
 --- /task ---
+
+### Draw background
 
 --- task ---
 
@@ -110,7 +114,7 @@ Use `background(0)` to set the background colour to black and add an `image()` f
 
 `image(image filename, x-coordinate, y-coordinate, image_width, image_height)`
 
-The `p5` library sets global `width` and `height` variables based on the size of the screen. Use these in your code to position the planet with its centre half-way across (`width/2`) and at the bottom (`height`) of the screen.
+The line of code `from p5 import *` gives you global `width` and `height` variables based on the size of the screen. Use these in your code to position the planet with its centre half-way across (`width/2`) and at the bottom (`height`) of the screen.
 
 --- code ---
 ---
@@ -159,5 +163,7 @@ def draw():
 **Test:** Run your code and check that it draws a black background with half a planet at the bottom.
 
 --- /task ---
+
+If you have a Raspberry Pi account, on your code editor you can click on the **Save** button to save a copy of your project to your Projects.
 
 --- save ---

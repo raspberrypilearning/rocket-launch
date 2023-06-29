@@ -12,6 +12,8 @@ To do this, you need to simulate how much fuel will be burned on the journey.
 
 </div>
 
+### Create a fuel variable
+
 --- task ---
 
 Add a variable to keep track of how much fuel your rocket burns (in frames).
@@ -44,8 +46,8 @@ At the bottom of your program, add code to ask the user how much fuel to add to 
 language: python
 filename: main.py 
 line_numbers: true
-line_number_start: 52
-line_highlights: 52
+line_number_start: 51
+line_highlights: 51
 ---
 
 fuel = int(input('How many kilograms of fuel do you want to use?'))   
@@ -54,6 +56,8 @@ run()
 --- /code ---
 
 --- /task ---
+
+### Check fuel against burn
 
 The rocket should only move if it hasn't burned all of its fuel.
 
@@ -105,7 +109,7 @@ language: python
 filename: main.py — draw_rocket()
 line_numbers: true
 line_number_start: 15
-line_highlights: 16-31
+line_highlights: 17-30
 ---
 
   global rocket_y, fuel, burn  
@@ -139,7 +143,7 @@ line_highlights: 16-31
 
 --- /task ---
 
-This computer simulation isn't very accurate, but it's good enough for our animation. 
+Did your rocket stop when it ran out of fuel? Well done, you sent a rocket to outer space!
 
 --- save ---
 

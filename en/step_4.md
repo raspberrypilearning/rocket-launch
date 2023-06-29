@@ -18,13 +18,11 @@ You can create cool effects by using a `for` loop to draw lots of shapes in each
 <p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;">
 Coding is used to make <span style="color: #0faeb0">**graphic effects**</span> for movies and games. It's much quicker to write code than to draw each frame of an animation individually. </p>
 
+### Draw your exhaust
+
 Drawing lots of yellow ellipses at different `y` positions creates an exhaust trail with a round bottom.
  
 --- task ---
-
-A `for` loop repeats a piece of code once for every item it is given. To run the code in a `for` loop a certain number of times, you can use the `range()` function. For example, `range(5)` creates a sequence of five numbers starting from 0, so [0, 1, 2, 3, 4].
-
-Each time the `for` loop repeats, it sets a variable to the current item so that you can use it in the loop. 
 
 Update your `draw_rocket()` function to include a `for` loop that repeats the drawing of `25` exhaust ellipses. The **loop variable** `i` gets added to `rocket_y` to draw each ellipse further below the rocket. 
 
@@ -34,11 +32,10 @@ language: python
 filename: main.py - draw_rocket()
 line_numbers: true
 line_number_start: 12
-line_highlights: 16-22
+line_highlights: 16-20
 ---
 
 def draw_rocket():
-  
   global rocket_y   
   rocket_y -= 1   
 
@@ -55,6 +52,12 @@ def draw_rocket():
 
 --- /task ---
 
+A `for` loop repeats a piece of code once for every item it is given. 
+
+To run the code in a `for` loop a certain number of times, you can use the `range()` function. For example, `range(5)` creates a sequence of five numbers starting from 0, so [0, 1, 2, 3, 4].
+
+Each time the `for` loop repeats, it sets a variable to the current item so that you can use it in the loop. 
+
 --- task ---
 
 **Test:** Run your code to check the rocket has a new exhaust trail.
@@ -63,19 +66,21 @@ def draw_rocket():
 
 --- /task ---
 
+### Add a gradient
+
 The `i` variable can also be used to create a colour gradient with less green in each ellipse that gets drawn.
 
 --- task ---
 
-Change the call to `fill()` to set the amount of green to `255 - i*10` so that the first ellipse has equal amounts of red and green and the last ellipse has very little green.
+Change the call to `fill()` to set the amount of green to `255 - i * 10` so that the first ellipse has equal amounts of red and green and the last ellipse has very little green.
 
 --- code ---
 ---
 language: python
 filename: main.py - draw_rocket()
 line_numbers: true
-line_number_start: 19
-line_highlights: 20
+line_number_start: 18
+line_highlights: 19
 ---
 
   for i in range(25):   
@@ -92,6 +97,8 @@ line_highlights: 20
 
 --- /task ---
 
+### Create a smoke effect
+
 The smoke exhaust trail is created by drawing lots of slightly transparent grey ellipses at different positions in each frame. 
 
 ![A slow animation of the smoke effect.](images/rocket_smoke.gif)
@@ -107,8 +114,8 @@ In each frame of the animation, 20 ellipses of random sizes will be drawn at ran
 language: python
 filename: main.py - draw_rocket()
 line_numbers: true
-line_number_start: 19
-line_highlights: 23-26
+line_number_start: 18
+line_highlights: 22-24
 ---
 
   for i in range(25):  
@@ -129,7 +136,7 @@ line_highlights: 23-26
 
 **Test:** Run your program and check the exhaust fumes are visible. 
 
-![A close-up of the rocket and exhaust trail with added smoke.](images/rocket_exhaust_circles.gif)
+![An animation of the rocket and exhaust trail with added smoke.](images/rocket_exhaust_circles.gif)
 
 --- /task ---
 
