@@ -34,7 +34,7 @@ line_number_start: 7
 line_highlights: 8
 ---
 
-#Setup global variables    
+# Setup global variables    
 screen_size = 400   
 
 --- /code ---
@@ -55,7 +55,7 @@ line_highlights: 20
 ---
 
 def setup():   
-  #Setup your animation here   
+  # Setup your animation here   
   size(screen_size, screen_size)   
   
 
@@ -93,11 +93,11 @@ line_highlights: 21-23
 ---
 
 def setup():   
-  #Setup your animation here   
+  # Setup your animation here   
   size(screen_size, screen_size)   
-  image_mode(CENTER)   # Positions the image in the center
+  image_mode(CENTER)  # Positions the image in the center
   global planet   
-  planet = load_image('planet.png') # Your chosen planet
+  planet = load_image('planet.png')  # Your chosen planet
 
 
 --- /code ---
@@ -125,10 +125,10 @@ line_number_start: 14
 line_highlights: 15-17
 ---
 
-#The draw_background function goes here   
+# The draw_background function goes here   
 def draw_background():   
-  background(0) #Short for background(0, 0, 0) — black    
-  image(planet, width/2, height, 300, 300) #Draw the image
+  background(0)  # Short for background(0, 0, 0) — black    
+  image(planet, width/2, height, 300, 300)  # Draw the image
   
 
 --- /code ---
@@ -151,7 +151,7 @@ line_highlights: 30
 ---
 
 def draw():   
-  #Things to do in every frame    
+  # Things to do in every frame    
   draw_background()
   
 --- /code ---

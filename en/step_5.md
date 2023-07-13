@@ -27,10 +27,10 @@ line_number_start: 7
 line_highlights: 10
 ---
 
-#Setup global variables    
+# Setup global variables    
 screen_size = 400   
 rocket_y = screen_size  
-burn = 100 #How much fuel is burned in each frame
+burn = 100  # How much fuel is burned in each frame
 
 --- /code ---
 
@@ -78,7 +78,7 @@ line_highlights: 15, 17-18
 
   global rocket_y, fuel, burn   
   rocket_y -= 1   
-  fuel -= burn #Burn fuel   
+  fuel -= burn  # Burn fuel   
   print('Fuel left: ', fuel)   
 
 --- /code ---
@@ -114,12 +114,12 @@ line_highlights: 17-30
 
   global rocket_y, fuel, burn  
 
-  if fuel >= burn: #Still got fuel   
+  if fuel >= burn:  # Still got fuel   
     rocket_y -= 1   
     fuel -= burn   
     print('Fuel left: ', fuel)   
     
-    no_stroke() #Turn off the stroke   
+    no_stroke()  # Turn off the stroke   
     
     for i in range(25):   
       fill(255, 255 - i*10, 0)   
