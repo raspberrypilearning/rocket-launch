@@ -33,12 +33,12 @@ line_highlights: 24, 26
 ---
 
 def setup():   
-  # Setup your animation here   
-  size(screen_size, screen_size)   
-  image_mode(CENTER)   
-  global planet, rocket   
-  planet = load_image('planet.png')    
-  rocket = load_image('rocket.png')    
+    # Setup your animation here   
+    size(screen_size, screen_size)   
+    image_mode(CENTER)   
+    global planet, rocket   
+    planet = load_image('planet.png')    
+    rocket = load_image('rocket.png')    
 
 --- /code ---
 
@@ -86,9 +86,9 @@ line_highlights: 12-16
 
 # The draw_rocket function goes here   
 def draw_rocket():   
-  global rocket_y  # Use the global rocket_y variable    
-  rocket_y -= 1  # Move the rocket    
-  image(rocket, width/2, rocket_y, 64, 64)    
+    global rocket_y  # Use the global rocket_y variable    
+    rocket_y -= 1  # Move the rocket    
+    image(rocket, width/2, rocket_y, 64, 64)    
 
 
 --- /code ---
@@ -109,9 +109,9 @@ line_highlights: 36
 ---
 
 def draw():   
-  # Things to do in every frame   
-  draw_background()   
-  draw_rocket()   
+    # Things to do in every frame   
+    draw_background()   
+    draw_rocket()   
 
 
 --- /code ---

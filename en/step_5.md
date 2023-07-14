@@ -76,10 +76,10 @@ line_number_start: 15
 line_highlights: 15, 17-18
 ---
 
-  global rocket_y, fuel, burn   
-  rocket_y -= 1   
-  fuel -= burn  # Burn fuel   
-  print('Fuel left: ', fuel)   
+    global rocket_y, fuel, burn   
+    rocket_y -= 1   
+    fuel -= burn  # Burn fuel   
+    print('Fuel left: ', fuel)   
 
 --- /code ---
 
@@ -112,24 +112,24 @@ line_number_start: 15
 line_highlights: 17-30
 ---
 
-  global rocket_y, fuel, burn  
+    global rocket_y, fuel, burn  
 
-  if fuel >= burn:  # Still got fuel   
-    rocket_y -= 1   
-    fuel -= burn   
-    print('Fuel left: ', fuel)   
-    
-    no_stroke()  # Turn off the stroke   
-    
-    for i in range(25):   
-      fill(255, 255 - i*10, 0)   
-      ellipse(width/2, rocket_y + i, 8, 3)    
-    
-    fill(200, 200, 200, 100)   
-    for i in range(20):   
-      ellipse(width/2 + randint(-5, 5), rocket_y + randint(20, 50), randint(5, 10), randint(5, 10))   
+    if fuel >= burn:  # Still got fuel   
+        rocket_y -= 1   
+        fuel -= burn   
+        print('Fuel left: ', fuel)   
+        
+        no_stroke()  # Turn off the stroke   
+        
+        for i in range(25):   
+        fill(255, 255 - i*10, 0)   
+        ellipse(width/2, rocket_y + i, 8, 3)    
+        
+        fill(200, 200, 200, 100)   
+        for i in range(20):   
+        ellipse(width/2 + randint(-5, 5), rocket_y + randint(20, 50), randint(5, 10), randint(5, 10))   
 
-  image(rocket, width/2, rocket_y, 64, 64)
+    image(rocket, width/2, rocket_y, 64, 64)
 
 --- /code ---
 
