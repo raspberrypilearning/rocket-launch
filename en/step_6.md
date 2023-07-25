@@ -12,10 +12,12 @@ The rocket can change colour to show how successful the launch was.
 </div>
 <div>
 
-![Three side-by-side images showing successful (green tint), over-fueled (amber tint), and unsucessful (red tint) launches.](images/check_orbit.png){:width="400px"}
+![Three side-by-side images showing successful (green tint), over-fueled (amber tint), and unsuccessful (red tint) launches.](images/check_orbit.png){:width="400px"}
 
 </div>
 </div>
+
+### Draw an orbit line
 
 --- task ---
 
@@ -30,7 +32,7 @@ line_number_start: 7
 line_highlights: 11-12
 ---
 
-#Setup global variables    
+# Setup global variables    
 screen_size = 400   
 rocket_y = screen_size   
 burn = 100   
@@ -50,18 +52,18 @@ Update the `draw_background()` function to draw an ellipse to represent the sate
 language: python
 filename: main.py - draw_background()
 line_numbers: true
-line_number_start: 37
+line_number_start: 38
 line_highlights: 42-45
 ---
 
 def draw_background():   
-  background(0) #Short for background(0, 0, 0) — black   
-  image(planet, width/2, height, 300, 300)   
+    background(0)  # Short for background(0, 0, 0) — black   
+    image(planet, width/2, height, 300, 300)   
 
-  no_fill() #Turn off any fill  
-  stroke(255) #Set a white stroke   
-  stroke_weight(2)   
-  ellipse(width/2, height, orbit_radius * 2, orbit_radius * 2)  
+    no_fill()  # Turn off any fill  
+    stroke(255)  # Set a white stroke   
+    stroke_weight(2)   
+    ellipse(width/2, height, orbit_radius * 2, orbit_radius * 2)  
 
 --- /code ---
 
@@ -74,6 +76,8 @@ def draw_background():
 ![The screen with planet and new orbit line.](images/draw_orbit.png){:width="300px"}
 
 --- /task ---
+
+### Launch the rocket to the orbit
 
 The rocket should stop when it reaches the satellite orbit — the end of the mission. 
 
@@ -88,16 +92,15 @@ You can use an `and` in `if` statements to check if two, or more, conditions are
 language: python
 filename: main.py - draw_rocket()
 line_numbers: true
-line_number_start: 14
+line_number_start: 15
 line_highlights: 19
 ---
 
-#The draw_rocket function goes here   
+# The draw_rocket function goes here   
 def draw_rocket():   
-  
-  global rocket_y, fuel, burn
-  
-    if fuel >= burn and rocket_y > orbit_y: #Still flying
+    global rocket_y, fuel, burn
+    
+        if fuel >= burn and rocket_y > orbit_y:  # Still flying
 
 --- /code ---
 
@@ -108,6 +111,8 @@ def draw_rocket():
 **Test:** Run your project and enter `50000` as the amount of fuel. This should be plenty of fuel to reach orbit. The rocket should stop moving when it reaches orbit. 
 
 --- /task ---
+
+### Check if the launch is successful
 
 The rocket should be coloured red if it runs out of fuel before getting high enough to launch the satellite.
 
@@ -124,10 +129,10 @@ line_highlights: 34-35
 
     fill(200, 200, 200, 100)   
     for i in range(20):   
-      ellipse(width/2 + randint(-5, 5), rocket_y + randint(20, 50), randint(5, 10), randint(5, 10))
+        ellipse(width/2 + randint(-5, 5), rocket_y + randint(20, 50), randint(5, 10), randint(5, 10))
 
-  if fuel < burn and rocket_y > orbit_y: #No more fuel and not in orbit   
-    tint(255, 0, 0) #Failure
+    if fuel < burn and rocket_y > orbit_y:  # No more fuel and not in orbit   
+        tint(255, 0, 0)  # Failure
 
 --- /code ---
 
@@ -158,11 +163,11 @@ line_number_start: 34
 line_highlights: 38
 ---
 
-if fuel < burn and rocket_y > orbit_y:    
-  tint(255, 0, 0) #Failure
-    
-image(rocket, width/2, rocket_y, 64, 64)   
-no_tint() #So the planet isn't tinted red in the next frame!
+    if fuel < burn and rocket_y > orbit_y:    
+        tint(255, 0, 0)  # Failure
+
+    image(rocket, width/2, rocket_y, 64, 64)   
+    no_tint()  # So the planet isn't tinted red in the next frame!
   
 
 --- /code ---
@@ -182,13 +187,13 @@ line_number_start: 34
 line_highlights: 36-37
 ---
 
-if fuel < burn and rocket_y > orbit_y:    
-  tint(255, 0, 0) #Failure   
-elif rocket_y <= orbit_y:   
-  tint(0, 255, 0) #Success   
+    if fuel < burn and rocket_y > orbit_y:    
+        tint(255, 0, 0)  # Failure   
+    elif rocket_y <= orbit_y:   
+        tint(0, 255, 0)  # Success   
 
-image(rocket, width/2, rocket_y, 64, 64)   
-no_tint()
+    image(rocket, width/2, rocket_y, 64, 64)   
+    no_tint()
   
 --- /code ---
 
@@ -219,15 +224,15 @@ line_number_start: 34
 line_highlights: 36, 38-39
 ---
 
-if fuel < burn and rocket_y > orbit_y:   
-  tint(255, 0, 0) #Failure   
-elif fuel < 1000 and rocket_y <= orbit_y:   
-  tint(0, 255, 0) #Success   
-elif fuel >= 1000 and rocket_y <= orbit_y:    
-  tint(255, 200, 0) #Too much fuel   
+    if fuel < burn and rocket_y > orbit_y:   
+        tint(255, 0, 0)  # Failure   
+    elif fuel < 1000 and rocket_y <= orbit_y:   
+        tint(0, 255, 0)  # Success   
+    elif fuel >= 1000 and rocket_y <= orbit_y:    
+        tint(255, 200, 0)  # Too much fuel   
     
-image(rocket, width/2, rocket_y, 64, 64)    
-no_tint() #So the planet isn't tinted in the next frame!
+    image(rocket, width/2, rocket_y, 64, 64)    
+    no_tint()  # So the planet isn't tinted in the next frame!
 
 --- /code ---
 

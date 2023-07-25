@@ -15,7 +15,7 @@ Each time a new frame is drawn, the rocket needs to move up the screen to create
 
 The starter project has a rocket image provided for you. 
 
-![Image of the rocket in the Trinket image library.](images/trinket_rocket_image.png)
+![Image of the rocket in the code editor image gallery.](images/rocket_image.png)
 
 --- /task ---
 
@@ -33,16 +33,18 @@ line_highlights: 24, 26
 ---
 
 def setup():   
-  #Setup your animation here   
-  size(screen_size, screen_size)   
-  image_mode(CENTER)   
-  global planet, rocket   
-  planet = load_image('planet.png')    
-  rocket = load_image('rocket.png')    
+    # Setup your animation here   
+    size(screen_size, screen_size)   
+    image_mode(CENTER)   
+    global planet, rocket   
+    planet = load_image('planet.png')    
+    rocket = load_image('rocket.png')    
 
 --- /code ---
 
 --- /task ---
+
+### Make the rocket fly
 
 The `y` position of the rocket will start at 400 (the screen height) and then decrease by 1 each time a new frame is drawn.
 
@@ -59,9 +61,9 @@ line_number_start: 7
 line_highlights: 9
 ---
 
-#Setup global variables    
+# Setup global variables    
 screen_size = 400    
-rocket_y = screen_size #Start at the bottom
+rocket_y = screen_size  # Start at the bottom
 
 --- /code ---
 
@@ -82,12 +84,11 @@ line_number_start: 11
 line_highlights: 12-16 
 ---
 
-#The draw_rocket function goes here   
+# The draw_rocket function goes here   
 def draw_rocket():   
-
-  global rocket_y #Use the global rocket_y variable    
-  rocket_y -= 1 #Move the rocket    
-  image(rocket, width/2, rocket_y, 64, 64)    
+    global rocket_y  # Use the global rocket_y variable    
+    rocket_y -= 1  # Move the rocket    
+    image(rocket, width/2, rocket_y, 64, 64)    
 
 
 --- /code ---
@@ -103,14 +104,14 @@ Call your new `draw_rocket()` in the `draw()` function so that the rocket gets r
 language: python
 filename: main.py
 line_numbers: true
-line_number_start: 34 
-line_highlights: 37 
+line_number_start: 33 
+line_highlights: 36 
 ---
 
 def draw():   
-  #Things to do in every frame   
-  draw_background()   
-  draw_rocket()   
+    # Things to do in every frame   
+    draw_background()   
+    draw_rocket()   
 
 
 --- /code ---
@@ -121,7 +122,7 @@ def draw():
 
 **Test:** Run your code to check that the rocket starts at the bottom of the screen and moves up each frame.
 
-![Image of the rocket half way up the screen.](images/trinket_rocket_fly.gif)
+![Animation of the rocket flying half way up the screen.](images/rocket_fly.gif)
 
 --- /task ---
 
