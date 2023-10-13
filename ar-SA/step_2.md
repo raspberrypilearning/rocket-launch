@@ -13,9 +13,9 @@
 
 --- task ---
 
-افتح [نموذج المشروع](https://trinket.io/python/f2199f5a8c){: target = "_ blank"}.
+افتح[ نموذج المشروع](https://trinket.io/python/bd7592097e){:target="_blank"}.
 
-إذا كان لديك حساب Trinket ، فيمكنك النقر فوق الزر **Remix** لحفظ نسخة في مكتبة `My Trinkets`.
+### Create the screen
 
 --- /task ---
 
@@ -57,23 +57,25 @@ size(screen_size, screen_size)
 
 --- /task ---
 
+### Choose an image
+
 --- task ---
 
 يحتوي مشروع البداية على ثلاث صور مختلفة للكوكب وقد تم توفير القمر لك. يمكنك عرض هذه في مكتبة صور Trinket عن طريق تحديد الزر **View and Add Images**.
 
-![رمز زائد ورمز تحميل ورمز صورة. يتم تمييز رمز الصورة.](images/trinket_image.png)
+![A screenshot of the code editor, with the image gallery highlighted containing images of planets and the moon.](images/image_gallery.png)
 
 **اختر:** حدد الصورة التي تريد استخدامها وقم بتدوين اسم الملف. على سبيل المثال ، `orange_planet.png`.
 
 --- /task ---
 
-إنها لفكرة جيدة أن تقوم بتحميل الصور في `setup ()` بحيث تكون جاهزة عندما تحتاج إلى استخدامها وسيتم تشغيل الرسوم المتحركة الخاصة بك بسرعة.
-
 --- task ---
 
-يشير السطر `image_mode (CENTER)` إلى أنك ستضع الصور عن طريق إعطاء إحداثيات مركز الصورة (بدلاً من الزاوية اليسرى العلوية).
+Add code to the `setup()` function to load and position your image.
 
-أضف أيضًا الشفرة البرمجية إلى الدالة `setup ()` لتحميل الصورة التي اخترتها في متغير عام `planet`. يجب أن يكون المتغير عامًا حتى تتمكن من استخدامه لاحقًا عند رسم الكوكب على الشاشة.
+يشير السطر `image_mode(CENTER)` إلى أنك ستضع الصور عن طريق إعطاء إحداثيات مركز الصورة (بدلاً من الزاوية اليسرى العلوية).
+
+أضف أيضًا الشفرة البرمجية إلى الدالة `setup()` لتحميل الصورة التي اخترتها في متغير عام `planet`. يجب أن يكون المتغير عامًا حتى تتمكن من استخدامه لاحقًا عند رسم الكوكب على الشاشة.
 
 --- code ---
 ---
@@ -82,26 +84,27 @@ line_highlights: 21-23
 ---
 
 def setup():   
-# إعداد الرسوم المتحركة هنا   
-size(screen_size, screen_size)   
-image_mode (CENTER)   
-global   
-planet = load_image ('planet.png') # الكوكب الذي اخترته
+#إعداد الرسوم المتحركة هنا size(screen_size, screen_size)   
+image_mode(CENTER)   
+global planet   
+planet = load_image('planet.png') #الكوكب الذي اخترته
 
 
 --- /code ---
 
----/task---
+--- /task ---
+
+### Draw background
 
 --- task ---
 
 حدد دالة `draw_background()` ، لرسم الخلفية ، أسفل التعليق الذي يخبرك إلى أين يجب أن تذهب.
 
-استخدم `background(0)` لتعيين لون الخلفية إلى الأسود وإضافة دالة `image()`لرسم الكوكب. تم وضع الدالة `image ()`:
+استخدم `background(0)` لتعيين لون الخلفية إلى الأسود وإضافة دالة `image()`لرسم الكوكب. تم وضع الدالة `image()`:
 
-`image(ملف الصورة, تنسيق x, تنسيق y, عرض x, عرض y)`
+`image(ملف الصورة ,تنسيق x, تنسيق y, العرض ,الارتفاع)`
 
-The `p5` library sets global `width` and `height` variables based on the size of the screen. تحدد مكتبة <0>p5</0> المتغيرات العامة،<0>width</0> و <0>height</0> متغيرات عامة بناءً على حجم الشاشة. استخدموا الدوال التاليتان في الشفرة البرمجية الخاصة بك لوضع الكوكب في منتصف الشاشة(`width/2`) وفي الجزء السفلي من الشاشة (`height`).
+تحدد مكتبة `p5` المتغيرات العامة،`width` و`height` متغيرات عامة بناءً على حجم الشاشة. استخدموا الدوال التاليتان في الشفرة البرمجية الخاصة بك لوضع الكوكب في منتصف الشاشة(`width/2`) وفي الجزء السفلي من الشاشة (`height`).
 
 --- code ---
 ---
@@ -111,19 +114,19 @@ line_highlights: 15-17
 
 # يتم وضع دالة draw_background هنا
 def draw_background():   
-background(0) #Short for background(0, 0, 0) — black    
-image(planet, width/2, height, 300, 300)#ارسم الصورة
+background(0) #مختصر الخلفية (0, 0, 0) — اسود    
+image(planet, width/2, height, 300, 300) #ارسم الصورة
 
 
 --- /code ---
 
 يؤدي وضع كل الشفرة البرمجية لرسم الخلفية في دالة واحدة إلى تسهيل فهم الشفرة البرمجية الخاص بك.
 
----/task---
+--- /task ---
 
 --- task ---
 
-لإظهار الخلفية ،call `draw_background()` in `draw()`. سيؤدي هذا إلى إعادة رسم الخلفية في كل مرة يتم استدعاء `draw ()` ، بحيث تغطي أي رسم قديم:
+لإظهار الخلفية ،call `draw_background()` in `draw()`. سيؤدي هذا إلى إعادة رسم الخلفية في كل مرة يتم استدعاء `draw()` ، بحيث تغطي أي رسم قديم:
 
 --- code ---
 ---
@@ -131,18 +134,20 @@ language: python filename: main.py — draw() line_numbers: true line_number_sta
 line_highlights: 30
 ---
 
-def draw ():   
-# أشياء يجب القيام بها في كل إطار    
-draw_background ()
+def draw():   
+#أشياء يجب القيام بها في كل إطار    
+draw_background()
 
 --- /code ---
 
----/task---
+--- /task ---
 
 --- task ---
 
 **اختبار:** قوموا بتشغيل الشفرة البرمجية الخاصة بكم وتحققوا من أنه يرسم خلفية سوداء مع نصف كوكب في الأسفل.
 
----/task---
+--- /task ---
+
+إذا كان لديك حساب Trinket ، فيمكنك النقر فوق الزر **Remix** لحفظ نسخة في مكتبة `My Trinkets`.
 
 --- save ---
