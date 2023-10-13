@@ -49,19 +49,19 @@ line_highlights: 20
 ---
 
 def setup():   
-# Setup your animation here   
-size(screen_size, screen_size)
+# Configure sua animação aqui   
+size(tamanho_tela, tamanho_tela)
 
 
 --- /code ---
 
 --- /task ---
 
-### Choose an image
+### Escolha uma imagem
 
 --- task ---
 
-The starter project has three different planet images and the moon provided for you. You can view these in the **Image gallery** on the left hand side of the code editor.
+O projeto inicial tem três imagens diferentes de planetas e a lua fornecidas para você. You can view these in the **Image gallery** on the left hand side of the code editor.
 
 ![A screenshot of the code editor, with the image gallery highlighted containing images of planets and the moon.](images/image_gallery.png)
 
