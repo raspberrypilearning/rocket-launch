@@ -1,3 +1,7 @@
+<div class="c-survey-banner" style="width:100%">
+  <a class="c-survey-banner__link" href="https://form.raspberrypi.org/f/code-editor-feedback" target="_blank">Take our survey</a> to help make our Code Editor better!
+</div>
+
 ## You will make
 
 किसी उपग्रह को कक्षा में प्रदर्शित करने के लिए एक एनीमेशन बनाएं - एक रॉकेट पर एक सवारी को हिलाकर! आपका एनिमेशन शानदार ग्राफिक प्रभाव बनाएगा और रॉकेट देने के लिए ईंधन की सबसे अच्छी मात्रा का अनुकरण करेगा।
@@ -21,11 +25,12 @@
 
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 175px; flex-grow: 1">  
-उपग्रह की कक्षा तक पहुंचने के लिए आपको पर्याप्त ईंधन के साथ रॉकेट की आपूर्ति करने की आवश्यकता है। क्या होता है यह देखने के लिए एक छोटी मात्रा (लगभग 10,000 किलो) और बहुत बड़ी मात्रा (लगभग 50,000 किलो) का प्रयास करें। 
+You need to supply the rocket with enough fuel to reach the satellite orbit. Try a small amount (around 10,000kg) and a very large amount (around 50,000kg) to see what happens. 
 
-बहुत अधिक छोड़े बिना कितना ईंधन पर्याप्त है?
+How much fuel is just enough without too much left over?
 </div>
-<iframe src="https://trinket.io/embed/python/622b4dd113?outputOnly=true&runOption=run&start=result" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+<iframe src="https://editor.raspberrypi.org/en/embed/viewer/rocket-launch-example" width="600" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen>
+</iframe>
 </div>
 
 --- /task ---
@@ -34,7 +39,7 @@
 
 --- print-only ---
 
-![पूर्ण प्रोजेक्ट.](images/showcase.png)
+![Completed project example of rocket ships flying into outer space.](images/showcase.png)
 
 --- /print-only ---
 
