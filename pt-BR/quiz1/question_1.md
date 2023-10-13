@@ -1,10 +1,10 @@
-## Quick quiz
+## Teste rápido
 
-Responda às três perguntas abaixo para refletir sobre o que você aprendeu. There are hints to guide you to the correct answer.
+Responda às três perguntas. Existem dicas para guiá-lo para a resposta correta.
 
-Após cada pergunta, pressione **enviar**. Você será guiado para a resposta correta.
+Após cada pergunta, pressione **Ver minha resposta**.
 
-Have fun!
+Divirta-se!
 
 --- question ---
 ---
