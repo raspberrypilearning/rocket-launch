@@ -24,7 +24,7 @@ Desenhar muitas elipses amarelas em diferentes posições `y` cria uma trilha de
 
 --- task ---
 
-Atualize sua função `desenhar_foguete()` para incluir um ciclo `for` que repete o desenho de `25` elipses da combustão. A **variável de repetição** `i` é adicionada a `foguete_y` para desenhar cada elipse mais abaixo do foguete.
+Atualize sua função `desenhar_foguete()` para incluir um ciclo `for` que repete o desenho de `25` elipses da combustão. A **variável de ciclo** `i` é adicionada a `foguete_y` para desenhar cada elipse mais abaixo do foguete.
 
 --- code ---
 ---
