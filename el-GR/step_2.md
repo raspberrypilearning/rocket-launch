@@ -13,17 +13,17 @@
 
 --- task --
 
-Ανοίξτε το [πρότυπο έργου](https://trinket.io/python/f2199f5a8c){:target="_blank"}.
+Ανοίξτε το [πρότυπο έργου](https://trinket.io/python/c7454ed7a8){:target="_blank"}.
 
-Εάν έχεις λογαριασμό Trinket, μπορείς να κάνεις κλικ στο κουμπί **Remix** για να αποθηκεύσεις ένα αντίγραφο στη βιβλιοθήκη `My Trinkets`.
+### Create the screen
 
 --- /task ---
 
-Θα χρησιμοποιήσεις μια μεταβλητή `screen_size` για να ορίσεις το μέγεθος της οθόνης και στους υπολογισμούς. Οι μεταβλητές που ορίζονται εκτός συναρτήσεων είναι **καθολικές (global)**, ώστε να μπορείς να τις χρησιμοποιήσεις οπουδήποτε στο πρόγραμμά σου.
+You will use a `screen_size` variable to set the size of the screen and in calculations. Variables defined outside functions are **global** so you can use them anywhere in your program.
 
 --- task ---
 
-Βρες το σχόλιο `Ρύθμιση καθολικών μεταβλητών` και πρόσθεσε μια γραμμή κώδικα για να δημιουργήσεις τη μεταβλητή `screen_size`:
+Find the comment `Setup global variables` and add a line of code to create your `screen_size` variable:
 
 --- code ---
 ---
@@ -38,9 +38,9 @@ screen_size = 400
 
 --- /task ---
 
---- task --
+--- task ---
 
-Χρησιμοποίησε τη μεταβλητή `screen_size` για να δημιουργήσεις ένα τετράγωνο με 400 επί 400 εικονοστοιχεία:
+Use the `screen_size` variable to create a square 400 by 400 pixels:
 
 --- code ---
 ---
@@ -48,32 +48,32 @@ language: python filename: main.py — setup() line_numbers: true line_number_st
 line_highlights: 20
 ---
 
-def setup():   
-#Ορισμός της κινούμενης εικόνας εδώ   
-size(screen_size, screen_size)
+language: python filename: main.py — setup() line_numbers: true line_number_start: 18
 
 
 --- /code ---
 
 --- /task ---
 
---- task --
-
-Το αρχικό έργο σου παρέχει τρεις διαφορετικές εικόνες πλανητών και της σελήνης. Μπορείς να τις προβάλεις στη βιβλιοθήκη εικόνων Trinket επιλέγοντας το κουμπί **View and Add Images**.
-
-![Ένα σύμβολο συν, ένα σύμβολο μεταφόρτωσης και ένα σύμβολο εικόνας. Το σύμβολο της εικόνας έχει επισημανθεί.](images/trinket_image.png)
-
-**Επίλεξε:** Αποφάσισε ποια εικόνα θέλεις να χρησιμοποιήσεις και σημειώσε το όνομα του αρχείου. Για παράδειγμα, `orange_planet.png`.
-
---- /task ---
-
-Είναι καλή ιδέα να φορτώνεις εικόνες στο `setup()`, ώστε να είναι έτοιμες όταν χρειαστεί να τις χρησιμοποιήσεις και η κινούμενη εικόνα σου να εκτελείται γρήγορα.
+### Choose an image
 
 --- task ---
 
-Η γραμμή `image_mode(CENTER)` λέει ότι θα τοποθετήσεις τις εικόνες δίνοντας τις συντεταγμένες του κέντρου της εικόνας (αντί της επάνω αριστερής γωνίας).
+The starter project has three different planet images and the moon provided for you. You can view these in the **Image gallery** on the left hand side of the code editor.
 
-Πρόσθεσε επίσης κώδικα στη συνάρτηση `setup()` για να φορτώσεις την επιλεγμένη εικόνα σε μια καθολική μεταβλητή `planet`. Η μεταβλητή πρέπει να είναι καθολική, ώστε να μπορείς να τη χρησιμοποιήσεις αργότερα όταν σχεδιάζεις τον πλανήτη στην οθόνη.
+![A screenshot of the code editor, with the image gallery highlighted containing images of planets and the moon.](images/image_gallery.png)
+
+**Choose:** Decide which image you want to use and make a note of the filename. For example, `orange_planet.png`.
+
+--- /task ---
+
+--- task ---
+
+Είναι καλή ιδέα να φορτώνεις εικόνες στο `setup()`, ώστε να είναι έτοιμες όταν χρειαστεί να τις χρησιμοποιήσεις και η κινούμενη εικόνα σου να εκτελείται γρήγορα.
+
+The `image_mode(CENTER)` line says that you will be positioning images by giving the coordinates of the centre of the image (instead of the top left corner).
+
+Next load your image into a global `planet` variable. The variable needs to be global so you can use it later when you draw the planet to the screen.
 
 --- code ---
 ---
@@ -81,27 +81,24 @@ language: python filename: main.py line_numbers: true line_number_start: 18
 line_highlights: 21-23
 ---
 
-def setup():   
-#Ορισμός της κινούμενης εικόνας εδώ   
-size(screen_size, screen_size)   
-image_mode(CENTER)   
-global planet   
-planet = load_image('planet.png') #Ο πλανήτης που επέλεξες
+language: python filename: main.py line_numbers: true line_number_start: 18
 
 
 --- /code ---
 
 --- /task ---
 
+### Draw background
+
 --- task ---
 
-Όρισε μια συνάρτηση `draw_background()`, για να σχεδιάσεις το φόντο, κάτω από το σχόλιο που σου υποδεικνύει πού πρέπει να πάει.
+Define a `draw_background()` function, to draw the background, below the comment that tells you where it should go.
 
-Χρησιμοποίησε το `background(0)` για να ορίσεις ως χρώμα φόντου το μαύρο και πρόσθεσε μια συνάρτηση `image()` για να σχεδιάσεις τον πλανήτη. Παρατίθεται η συνάρτηση `image()`:
+Use `background(0)` to set the background colour to black and add an `image()` function to draw the planet. The `image()` function is laid out:
 
 `image(image filename, x-coordinate, y-coordinate, image_width, image_height)`
 
-Η βιβλιοθήκη `p5` ορίζει τις καθολικές μεταβλητές `width` και `height` με βάση το μέγεθος της οθόνης. Χρησιμοποίησε τις στον κώδικά σου για να τοποθετήσεις τον πλανήτη με το κέντρο του στη μέση (`width/2`) και στο κάτω μέρος (`height`) της οθόνης.
+The line of code `from p5 import *` gives you global `width` and `height` variables based on the size of the screen. Use these in your code to position the planet with its centre half-way across (`width/2`) and at the bottom (`height`) of the screen.
 
 --- code ---
 ---
@@ -110,20 +107,18 @@ line_highlights: 15-17
 ---
 
 # Η συνάρτηση draw_background πηγαίνει εδώ
-def draw_background():   
-background(0) #Συντόμευση για το background(0, 0, 0) — μαύρο    
-image(planet, width/2, height, 300, 300) #Σχεδίαση εικόνας
+language: python filename: main.py — draw_background() line_numbers: true line_number_start: 14
 
 
 --- /code ---
 
-Η τοποθέτηση όλου του κώδικα για τη σχεδίαση του φόντου σε μία συνάρτηση κάνει τον κώδικά σου πιο κατανοητό.
+Putting all the code for drawing the background into one function makes your code easier to understand.
 
 --- /task ---
 
 --- task ---
 
-Για να εμφανιστεί το φόντο, κάλεσε τη συνάρτηση `draw_background()` από τη `draw()`. Αυτό θα κάνει το φόντο να σχεδιάζεται ξανά κάθε φορά που καλείται η `draw()`, καλύπτοντας οποιοδήποτε παλαιότερο σχέδιο:
+To make the background appear, call `draw_background()` in `draw()`. This will cause the background to be re-drawn every time `draw()` is called, covering over any older drawing:
 
 --- code ---
 ---
@@ -131,9 +126,7 @@ language: python filename: main.py — draw() line_numbers: true line_number_sta
 line_highlights: 30
 ---
 
-def draw():   
-#Ενέργειες που γίνονται σε κάθε καρέ    
-draw_background()
+language: python filename: main.py — draw() line_numbers: true line_number_start: 28
 
 --- /code ---
 
@@ -141,8 +134,10 @@ draw_background()
 
 --- task ---
 
-**Δοκιμή:** Εκτέλεσε τον κώδικά σου και έλεγξε ότι σχεδιάζει μαύρο φόντο με μισό πλανήτη στο κάτω μέρος.
+**Test:** Run your code and check that it draws a black background with half a planet at the bottom.
 
 --- /task ---
+
+If you have a Raspberry Pi account, on your code editor you can click on the **Save** button to save a copy of your project to your Projects.
 
 --- save ---
