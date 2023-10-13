@@ -1,3 +1,7 @@
+<div class="c-survey-banner" style="width:100%">
+  <a class="c-survey-banner__link" href="https://form.raspberrypi.org/f/code-editor-feedback" target="_blank">Take our survey</a> to help make our Code Editor better!
+</div>
+
 ## Cyflwyniad
 
 Gwnewch animeiddiad i yrru lloeren i orbit — drwy gael pàs ar roced! Bydd eich animeiddiad yn creu effeithiau graffeg cŵl ac yn efelychu'r cyfaint gorau o danwydd i'w roi i'r roced.
@@ -21,11 +25,12 @@ Byddwch chi'n:
 
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 175px; flex-grow: 1">  
-Mae angen i chi roi digon o danwydd i'r roced iddi gyrraedd orbit y lloeren. Rhowch gynnig ar ychydig bach (tua 10,000kg) a llawer iawn (tua 50,000kg) i weld beth sy'n digwydd. 
+You need to supply the rocket with enough fuel to reach the satellite orbit. Try a small amount (around 10,000kg) and a very large amount (around 50,000kg) to see what happens. 
 
-Faint o danwydd sy'n ddigon heb adael gormod yn weddill?
+How much fuel is just enough without too much left over?
 </div>
-<iframe src="https://trinket.io/embed/python/622b4dd113?outputOnly=true&runOption=run&start=result" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+<iframe src="https://editor.raspberrypi.org/en/embed/viewer/rocket-launch-example" width="600" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen>
+</iframe>
 </div>
 
 --- /task ---
@@ -34,7 +39,7 @@ Faint o danwydd sy'n ddigon heb adael gormod yn weddill?
 
 --- print-only ---
 
-![Prosiect gorffenedig.](images/showcase.png)
+![Completed project example of rocket ships flying into outer space.](images/showcase.png)
 
 --- /print-only ---
 
