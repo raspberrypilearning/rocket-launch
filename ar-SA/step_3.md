@@ -15,7 +15,7 @@
 
 عند بداية المشروع سنحصل على صورة الصاروخ جاهزة.
 
-![صورة الصاروخ في مكتبة صور Trinket.](images/trinket_rocket_image.png)
+![Image of the rocket in the code editor image gallery.](images/rocket_image.png)
 
 --- /task ---
 
@@ -30,7 +30,7 @@ line_highlights: 24, 26
 ---
 
 def setup():   
-# إعداد الرسوم المتحركة هنا   
+#إعداد الرسوم المتحركة هنا   
 size(screen_size, screen_size)   
 image_mode(CENTER)   
 global planet, rocket   
@@ -40,6 +40,8 @@ rocket = load_image('rocket.png')
 --- /code ---
 
 --- /task ---
+
+### Make the rocket fly
 
 سيبدأ احداثي `y` للصاروخ عند 400 (ارتفاع الشاشة) ثم ينخفض بمقدار 1 في كل مرة يتم فيها رسم إطار جديد.
 
@@ -55,7 +57,7 @@ line_highlights: 9
 
 # تهيئة المتغيرات العامة
 screen_size = 400    
-Rocket_y = screen_size # ابدأ من الأسفل
+rocket_y = screen_size # ابدأ من الأسفل
 
 --- /code ---
 
@@ -76,10 +78,6 @@ line_highlights: 12-16
 # يتم وضع دالة draw_rocket هنا
 def draw_rocket():
 
-  global rocket_y #استخدم متغير الصاروخ rocket_y variable    
-rocket_y -= 1 #حرك صورة الصاروخ     
-(rocket, width/2, rocket_y, 64, 64)
-
 
 --- /code ---
 
@@ -87,7 +85,7 @@ rocket_y -= 1 #حرك صورة الصاروخ
 
 --- task ---
 
-استدع `draw_rocket ()` الجديد في دالة `draw ()` بحيث يُعاد رسم الصاروخ كل إطار.
+استدع `draw_rocket()` الجديد في دالة `draw()` بحيث يُعاد رسم الصاروخ كل إطار.
 
 --- code ---
 ---
@@ -95,10 +93,10 @@ language: python filename: main.py line_numbers: true line_number_start: 34
 line_highlights: 37
 ---
 
-def draw ():   
-# الأشياء التي يجب القيام بها في كل إطار   
-draw_background ()   
-draw_rocket ()
+def draw():   
+#الأشياء التي يجب القيام بها في كل إطار   
+draw_background()   
+draw_rocket()
 
 
 --- /code ---
@@ -109,7 +107,7 @@ draw_rocket ()
 
 **اختبار:** لنقم بتشغيل الشفرة البرمجية للتحقق من أن الصاروخ يبدأ من أسفل الشاشة ويتحرك للأعلى في كل إطار.
 
-![صورة الصاروخ في منتصف الشاشة.](images/trinket_rocket_fly.gif)
+![صورة الصاروخ في منتصف الشاشة.](images/rocket_fly.gif)
 
 --- /task ---
 
