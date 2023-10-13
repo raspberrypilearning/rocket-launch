@@ -15,7 +15,7 @@
 
 スタータープロジェクトには、ロケットの画像が用意されています。
 
-![Trinket画像ライブラリのロケットの画像。](images/trinket_rocket_image.png)
+![Image of the rocket in the code editor image gallery.](images/rocket_image.png)
 
 --- /task ---
 
@@ -40,6 +40,8 @@ rocket = load_image('rocket.png')
 --- /code ---
 
 --- /task ---
+
+### Make the rocket fly
 
 ロケットの`y`位置は、400(画面の高さ) から始まり、新しいフレームが描画されるたびに1ずつ減少します。
 
@@ -76,10 +78,6 @@ line_highlights: 12-16
 # draw_rocket関数はここにあります
 def draw_rocket():
 
-  global rocket_y #rocket_yグローバル変数を使う    
-rocket_y -= 1 #ロケットを動かす    
-image(rocket, width/2, rocket_y, 64, 64)
-
 
 --- /code ---
 
@@ -109,7 +107,7 @@ draw_rocket()
 
 **テスト：** コードを実行して、ロケットが画面の下部から始まり、フレームごとに上に移動することを確認します。
 
-![画面の途中にあるロケットの画像。](images/trinket_rocket_fly.gif)
+![画面の途中にあるロケットの画像。](images/rocket_fly.gif)
 
 --- /task ---
 
