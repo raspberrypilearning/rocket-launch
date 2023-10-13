@@ -15,7 +15,7 @@ Chaque fois qu'une nouvelle image est dessinée, la fusée doit remonter l'écra
 
 Le projet de démarrage a une image de fusée qui t'est fournie.
 
-![Image de la fusée dans la bibliothèque d'images Trinket.](images/trinket_rocket_image.png)
+![Image of the rocket in the code editor image gallery.](images/rocket_image.png)
 
 --- /task ---
 
@@ -29,7 +29,7 @@ language: python filename: main.py line_numbers: true line_number_start: 20
 line_highlights: 24, 26
 ---
 
-def configuration():   
+def setup():   
 #Configure ton animation ici   
 size(taille_ecran, taille_ecran)   
 image_mode(CENTER)   
@@ -40,6 +40,8 @@ fusee = load_image( 'rocket.png')
 --- /code ---
 
 --- /task ---
+
+### Make the rocket fly
 
 La position `y` de la fusée commencera à 400 (la hauteur de l'écran) puis diminuera de 1 à chaque fois qu'une nouvelle image est dessinée.
 
@@ -74,9 +76,7 @@ line_highlights: 12-16
 ---
 
 # La fonction dessine_fusee vient ici
-def dessine_fusee():
-
-  global fusee_y #Utiliser la variable globale fusee_y    
+global fusee_y #Utiliser la variable globale fusee_y    
 fusee_y -= 1 #Déplacer la fusée    
 image(fusee, width/2, fusee_y, 64, 64)
 
@@ -87,7 +87,7 @@ image(fusee, width/2, fusee_y, 64, 64)
 
 --- task ---
 
-Appelle ton nouveau `dessine_fusee()` dans la fonction `dessin()` afin que la fusée soit redessinée à chaque image.
+Appelle ton nouveau `dessine_fusee()` dans la fonction `draw()` afin que la fusée soit redessinée à chaque image.
 
 --- code ---
 ---
@@ -109,7 +109,7 @@ dessine_fusee()
 
 **Test :** Exécute ton code pour vérifier que la fusée démarre en bas de l'écran et remonte à chaque image.
 
-![Image de la fusée à mi-hauteur de l'écran.](images/trinket_rocket_fly.gif)
+![Animation of the rocket flying half way up the screen.](images/rocket_fly.gif)
 
 --- /task ---
 
