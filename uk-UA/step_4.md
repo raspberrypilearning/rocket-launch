@@ -18,63 +18,67 @@
 <p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;">
 За допомогою коду можна створювати <span style="color: #0faeb0">**графічні ефекти**</span> для фільмів та відеоігор. Набагато простіше та швидше написати код, ніж малювати кожен кадр анімації окремо. </p>
 
+### Draw your exhaust
+
 Намалювавши багато жовтих овалів у різних позиціях `y`, можна створити вихлопний слід із заокругленим кінцем.
 
 --- task ---
 
-Цикл `for` повторює частину коду один раз для кожного заданого йому елемента. Щоб виконати код в циклі `for` певну кількість разів, можна використати функцію `range()`. Наприклад, `range(5)` створює послідовність з п'яти чисел, починаючи з 0, тобто [0, 1, 2, 3, 4].
-
-Кожного разу, коли цикл `for` повторюється, він присвоює змінну поточному елементу, щоб її можна було використати в циклі.
-
-Онови свою функцію `draw_rocket()` додавши до неї цикл `for` який повторює малювання `25` овалів вихлопу. **Змінна циклу** `i` додається до `rocket_y`, щоб намалювати кожного разу овал нижче під ракетою.
+Update your `draw_rocket()` function to include a `for` loop that repeats the drawing of `25` exhaust ellipses. The **loop variable** `i` gets added to `rocket_y` to draw each ellipse further below the rocket.
 
 --- code ---
 ---
 language: python filename: main.py - draw_rocket() line_numbers: true line_number_start: 12
-line_highlights: 16-22
+line_highlights: 16-20
 ---
 
-def draw_rocket():
+def draw_rocket(): global rocket_y   
+rocket_y -= 1   
 
-  global rocket_y   
-rocket_y -= 1
-
-  no_stroke() #Turn off the stroke
-
-  for i in range(25): #Draw 25 burning exhaust ellipses   
-fill(255, 255, 0) #Yellow   
-ellipse(width/2, rocket_y + i, 8, 3) #i increases each time the loop repeats
-
-  image(rocket, width/2, rocket_y, 64, 64)
+    no_stroke()  # Turn off the stroke
+    
+    for i in range(25):  # Draw 25 burning exhaust ellipses   
+        fill(255, 255, 0)  # Yellow   
+        ellipse(width/2, rocket_y + i, 8, 3)  # i increases each time the loop repeats    
+    
+    image(rocket, width/2, rocket_y, 64, 64)
 
 
 --- /code ---
 
 --- /task ---
 
+A `for` loop repeats a piece of code once for every item it is given.
+
+To run the code in a `for` loop a certain number of times, you can use the `range()` function. For example, `range(5)` creates a sequence of five numbers starting from 0, so [0, 1, 2, 3, 4].
+
+Each time the `for` loop repeats, it sets a variable to the current item so that you can use it in the loop.
+
 --- task ---
 
-**Тест:** Запустити свій код, щоб перевірити, чи має ракета новий вихлопний слід.
+**Test:** Run your code to check the rocket has a new exhaust trail.
 
-![Крупний план ракети зі слідом від вихлопу.](images/rocket_exhaust.png){:width="300px"}
+![A close-up of the rocket with an exhaust trail.](images/rocket_exhaust.png){:width="300px"}
 
 --- /task ---
 
-Змінна `i` може також використовуватися для створення кольорового градієнта з меншою кількістю зеленого кольору в кожному наступному овалі, який буде малюватися.
+### Add a gradient
+
+The `i` variable can also be used to create a colour gradient with less green in each ellipse that gets drawn.
 
 --- task ---
 
-Зміни виклик функції `fill()`, встановивши кількість зеленого кольору на `255 - i*10` так, щоб у першому колі було однакова кількість червоного та зеленого кольорів, а в останньому - дуже мало зеленого.
+Change the call to `fill()` to set the amount of green to `255 - i * 10` so that the first ellipse has equal amounts of red and green and the last ellipse has very little green.
 
 --- code ---
 ---
-language: python filename: main.py - draw_rocket() line_numbers: true line_number_start: 19
-line_highlights: 20
+language: python filename: main.py - draw_rocket() line_numbers: true line_number_start: 18
+line_highlights: 19
 ---
 
-  for i in range(25):   
-fill(255, 255 - i * 10, 0) #Reduce the amount of green    
-ellipse(width/2, rocket_y + i, 8, 3)
+    for i in range(25):   
+        fill(255, 255 - i * 10, 0)  # Reduce the amount of green    
+        ellipse(width/2, rocket_y + i, 8, 3)
 
 --- /code ---
 
@@ -82,35 +86,37 @@ ellipse(width/2, rocket_y + i, 8, 3)
 
 --- task ---
 
-**Тест:** Переконайся, що у тебе вийшло створити послідовність овалів, які поступово змінюються від жовтого до червоного кольору.
+**Test:** Check that you get a trail of ellipses gradually changing from yellow to red.
 
 --- /task ---
 
-Слід димового вихлопу створюється шляхом випадкового малювання ледь прозорих сірих овалів у різних положеннях на кожному кадрі.
+### Create a smoke effect
 
-![Повільна анімація ефекту диму.](images/rocket_smoke.gif)
+The smoke exhaust trail is created by drawing lots of slightly transparent grey ellipses at different positions in each frame.
+
+![A slow animation of the smoke effect.](images/rocket_smoke.gif)
 
 --- task ---
 
-Цього разу, функція`fill()` знаходиться поза циклом, оскільки колір однаковий для кожного димового овалу. Четверте число у функції `fill()` - прозорість. Низьке значення прозорості дозволяє зробити колір більш прозорим, щоб можна було роздивитися форми, які знаходяться під ним.
+This time the `fill()` is outside the loop as the colour is the same for each smoke ellipse. The fourth input to `fill()` is the opacity, a low opacity value makes the colour more transparent so you can see the shapes underneath.
 
-На кожному кадрі анімації буде намальовано 20 овалів випадкових розмірів на випадкових позиціях.
+In each frame of the animation, 20 ellipses of random sizes will be drawn at random positions.
 
 --- code ---
 ---
-language: python filename: main.py - draw_rocket() line_numbers: true line_number_start: 19
-line_highlights: 23-26
+language: python filename: main.py - draw_rocket() line_numbers: true line_number_start: 18
+line_highlights: 22-24
 ---
 
-  for i in range(25):  
-fill(255, 255 - i * 10, 0)   
-ellipse(width/2, rocket_y + i, 8, 3)
-
-  fill(200, 200, 200, 100) #Transparent grey   
-for i in range(20): #Draw 20 random smoke ellipses    
-ellipse(width/2 + randint(-5, 5), rocket_y + randint(20, 50), randint(5, 10), randint(5, 10))
-
-  image(rocket, width/2, rocket_y, 64, 64)
+    for i in range(25):  
+        fill(255, 255 - i * 10, 0)   
+        ellipse(width/2, rocket_y + i, 8, 3)    
+    
+    fill(200, 200, 200, 100)  # Transparent grey   
+    for i in range(20):  # Draw 20 random smoke ellipses    
+        ellipse(width/2 + randint(-5, 5), rocket_y + randint(20, 50), randint(5, 10), randint(5, 10))    
+    
+    image(rocket, width/2, rocket_y, 64, 64)
 
 --- /code ---
 
@@ -118,9 +124,9 @@ ellipse(width/2 + randint(-5, 5), rocket_y + randint(20, 50), randint(5, 10), ra
 
 --- task ---
 
-**Тест:** Запусти програму та перевір, чи видно вихлопні гази.
+**Test:** Run your program and check the exhaust fumes are visible.
 
-![Крупний план ракети та вихлопного сліду з додаванням диму.](images/rocket_exhaust_circles.gif)
+![An animation of the rocket and exhaust trail with added smoke.](images/rocket_exhaust_circles.gif)
 
 --- /task ---
 
