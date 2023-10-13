@@ -15,7 +15,7 @@ Bob tro mae ffrâm newydd yn cael ei llunio, mae angen i'r roced symud i fyny'r 
 
 Mae'r prosiect dechreuol wedi darparu delwedd o roced i chi.
 
-![Delwedd o'r roced yn llyfrgell ddelweddau Trinket.](images/trinket_rocket_image.png)
+![Image of the rocket in the code editor image gallery.](images/rocket_image.png)
 
 --- /task ---
 
@@ -30,7 +30,7 @@ line_highlights: 24, 26
 ---
 
 def setup():   
-#Setup your animation here   
+# Setup your animation here   
 size(screen_size, screen_size)   
 image_mode(CENTER)   
 global planet, rocket   
@@ -40,6 +40,8 @@ rocket = load_image('rocket.png')
 --- /code ---
 
 --- /task ---
+
+### Make the rocket fly
 
 Bydd safle `y` y roced yn dechrau ar 400 (uchder y sgrin) ac yn lleihau 1 bob tro mae ffrâm newydd yn cael ei llunio.
 
@@ -55,7 +57,7 @@ line_highlights: 9
 
 # Gosod newidynnau cyffredinol
 screen_size = 400    
-rocket_y = screen_size #Start at the bottom
+rocket_y = screen_size  # Start at the bottom
 
 --- /code ---
 
@@ -74,10 +76,9 @@ line_highlights: 12-16
 ---
 
 # Mae'r swyddogaeth llunio_roced yn mynd fan hyn
-def draw_rocket():
-
-  global rocket_y #Use the global rocket_y variable    
-rocket_y -= 1 #Move the rocket    
+def draw_rocket():   
+global rocket_y  # Use the global rocket_y variable    
+rocket_y -= 1  # Move the rocket    
 image(rocket, width/2, rocket_y, 64, 64)
 
 
@@ -87,16 +88,16 @@ image(rocket, width/2, rocket_y, 64, 64)
 
 --- task ---
 
-Galwch eich swyddogaeth `llunio_roced()` newydd yn y swyddogaeth `draw()` i ail-lunio'r roced bob ffrâm.
+Call your new `draw_rocket()` in the `draw()` function so that the rocket gets redrawn every frame.
 
 --- code ---
 ---
-language: python filename: main.py line_numbers: true line_number_start: 34
-line_highlights: 37
+language: python filename: main.py line_numbers: true line_number_start: 33
+line_highlights: 36
 ---
 
 def draw():   
-#Things to do in every frame   
+# Things to do in every frame   
 draw_background()   
 draw_rocket()
 
@@ -107,9 +108,9 @@ draw_rocket()
 
 --- task ---
 
-**Profi:** Rhedwch eich cod i wneud yn siŵr bod y roced yn dechrau ar waelod y sgrin ac yn symud i fyny bob ffrâm.
+**Test:** Run your code to check that the rocket starts at the bottom of the screen and moves up each frame.
 
-![Delwedd o'r roced hanner ffordd i fyny'r sgrin.](images/trinket_rocket_fly.gif)
+![Animation of the rocket flying half way up the screen.](images/rocket_fly.gif)
 
 --- /task ---
 
