@@ -31,11 +31,11 @@ line_highlights: 24, 26
 
 def setup():   
 # Configure sua animação aqui   
-size(screen_size, screen_size)   
+size(tamanho_tela, tamanho_tela)   
 image_mode(CENTER)   
-global planet, rocket   
-planet = load_image('planet.png')    
-rocket = load_image('rocket.png')
+global planeta, foguete   
+planeta = load_image('planet.png')    
+foguete = load_image('rocket.png')
 
 --- /code ---
 
@@ -78,7 +78,7 @@ line_highlights: 12-16
 # A função desenhar_foguete vai aqui
 def desenhar_foguete():   
 global foguete_y  # Use a variável global foguete_y    
-rocket_y -= 1  # Mova o foguete    
+foguete_y -= 1  # Mova o foguete    
 image(foguete, width/2, foguete_y, 64, 64)
 
 
