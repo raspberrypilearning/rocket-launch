@@ -48,7 +48,7 @@ Correto. O ciclo é executado uma vez, em ordem, para cada item `i` no intervalo
 
   --- feedback ---
 
-Até certo ponto, um ciclo `for` percorre a sequência de itens que é fornecida em ordem. Como a função `range()` fornece uma sequência ordenada de 0 até ao número que é passado, essa é a ordem que você esperaria ver impressa por esse ciclo `for`.
+Não exatamente, um ciclo `for` percorre a sequência de itens que é fornecida em ordem. Como a função `range()` fornece uma sequência ordenada de 0 até ao número que é passado, essa é a ordem que você esperaria ver impressa por esse ciclo `for`.
 
   --- /feedback ---
 
