@@ -15,7 +15,7 @@
 
 Το αρχικό έργο σου προσφέρει μια εικόνα πυραύλου.
 
-![Εικόνα του πυραύλου στη βιβλιοθήκη εικόνων Trinket.](images/trinket_rocket_image.png)
+![Εικόνα του πυραύλου στη βιβλιοθήκη εικόνων Trinket.](images/rocket_image.png)
 
 --- /task ---
 
@@ -40,6 +40,8 @@ rocket = load_image('rocket.png')
 --- /code ---
 
 --- /task ---
+
+### Make the rocket fly
 
 Η θέση `y` του πυραύλου θα ξεκινά από το 400 (το ύψος της οθόνης) και στη συνέχεια θα μειώνεται κατά 1 κάθε φορά που σχεδιάζεται ένα νέο καρέ.
 
@@ -76,10 +78,6 @@ line_highlights: 12-16
 # Η συνάρτηση draw_rocket πηγαίνει εδώ
 def draw_rocket():
 
-  global rocket_y #Χρήση της καθολικής μεταβλητήςrocket_y    
-rocket_y -= 1 #Κίνηση του πυραύλου    
-image(rocket, width/2, rocket_y, 64, 64)
-
 
 --- /code ---
 
@@ -87,17 +85,15 @@ image(rocket, width/2, rocket_y, 64, 64)
 
 --- task ---
 
-Κάλεσε τη νέα σου συνάρτηση `draw_rocket()` από τη συνάρτηση `draw()` έτσι ώστε ο πύραυλος να επανασχεδιάζεται σε κάθε καρέ.
+Call your new `draw_rocket()` in the `draw()` function so that the rocket gets redrawn every frame.
 
 --- code ---
 ---
-language: python filename: main.py line_numbers: true line_number_start: 34
+language: python filename: main.py line_numbers: true line_number_start: 33
 line_highlights: 37
 ---
 
-def draw():   
-#Ενέργειες που γίνονται σε κάθε καρέ   
-draw_background() draw_rocket()
+language: python filename: main.py line_numbers: true line_number_start: 34
 
 
 --- /code ---
@@ -106,9 +102,9 @@ draw_background() draw_rocket()
 
 --- task ---
 
-**Δοκιμή:** Εκτέλεσε τον κώδικά σου για να ελέγξεις ότι ο πύραυλος ξεκινά από το κάτω μέρος της οθόνης και κινείται προς τα πάνω σε κάθε καρέ.
+**Test:** Run your code to check that the rocket starts at the bottom of the screen and moves up each frame.
 
-![Εικόνα του πυραύλου στη μέση της οθόνης.](images/trinket_rocket_fly.gif)
+![Animation of the rocket flying half way up the screen.](images/rocket_fly.gif)
 
 --- /task ---
 
