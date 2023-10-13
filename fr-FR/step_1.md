@@ -1,3 +1,7 @@
+<div class="c-survey-banner" style="width:100%">
+  <a class="c-survey-banner__link" href="https://form.raspberrypi.org/f/code-editor-feedback" target="_blank">Take our survey</a> to help make our Code Editor better!
+</div>
+
 ## Ce que tu vas faire
 
 Réalise une animation pour propulser un satellite en orbite - en utilisant une fusée ! Ton animation créera des effets graphiques sympas et simulera la meilleure quantité de carburant à donner à la fusée.
@@ -21,11 +25,12 @@ Tu vas devoir :
 
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 175px; flex-grow: 1">  
-Tu dois fournir suffisamment de carburant à la fusée pour atteindre l'orbite du satellite. Essaie une petite quantité (environ 10 000 kg) et une très grande quantité (environ 50 000 kg) pour voir ce qui se passe. 
+Tu dois fournir suffisamment de carburant à la fusée pour atteindre l'orbite du satellite. Essaye une petite quantité (environ 10 000 kg) et une très grande quantité (environ 50 000 kg) pour voir ce qui se passe. 
 
 Quelle quantité de carburant est juste suffisante sans qu'il en reste trop ?
 </div>
-<iframe src="https://trinket.io/embed/python/622b4dd113?outputOnly=true&runOption=run&start=result" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+<iframe src="https://editor.raspberrypi.org/en/embed/viewer/rocket-launch-example" width="600" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen>
+</iframe>
 </div>
 
 --- /task ---
@@ -34,7 +39,7 @@ Quelle quantité de carburant est juste suffisante sans qu'il en reste trop ?
 
 --- print-only ---
 
-![Projet terminé.](images/showcase.png)
+![Completed project example of rocket ships flying into outer space.](images/showcase.png)
 
 --- /print-only ---
 
