@@ -13,17 +13,17 @@
 
 --- task ---
 
-Відкрий [шаблон проєкту](https://trinket.io/python/f2199f5a8c){:target="_blank"}.
+Open the [project template](https://editor.raspberrypi.org/en/projects/rocket-launch-starter){:target="_blank"}.
 
-Якщо у тебе є обліковий запис в Trinket, ти можеш натиснути на кнопку **Remix**, щоб зберегти копію у свою бібліотеку `My Trinkets`.
+### Create the screen
 
 --- /task ---
 
-Ти будеш використовувати змінну `screen_size`, щоб встановити розмір екрана та провести розрахунки. Змінні, які визначаються за межами функцій, є **глобальними**, завдяки чому ти можеш використовувати їх будь-де у своїй програмі.
+You will use a `screen_size` variable to set the size of the screen and in calculations. Variables defined outside functions are **global** so you can use them anywhere in your program.
 
 --- task ---
 
-Знайди коментар `Налаштування глобальних змінних` та додай рядок коду для створення змінної `screen_size`:
+Find the comment `Setup global variables` and add a line of code to create your `screen_size` variable:
 
 --- code ---
 ---
@@ -40,7 +40,7 @@ screen_size = 400
 
 --- task ---
 
-Використовуй змінну `screen_size`, щоб створити квадрат розміром 400 на 400 пікселів:
+Use the `screen_size` variable to create a square 400 by 400 pixels:
 
 --- code ---
 ---
@@ -49,7 +49,7 @@ line_highlights: 20
 ---
 
 def setup():   
-#Setup your animation here   
+# Setup your animation here   
 size(screen_size, screen_size)
 
 
@@ -57,23 +57,25 @@ size(screen_size, screen_size)
 
 --- /task ---
 
+### Choose an image
+
 --- task ---
 
-Стартовий проєкт пропонує три різні зображення планет та Місяця. Ти можеш переглянути їх у бібліотеці зображень Trinket, натиснувши кнопку **View and Add Images**.
+The starter project has three different planet images and the moon provided for you. You can view these in the **Image gallery** on the left hand side of the code editor.
 
-![Символ "плюс", символ "завантажити" та символ "зображення". Символ "зображення" підсвічується.](images/trinket_image.png)
+![A screenshot of the code editor, with the image gallery highlighted containing images of planets and the moon.](images/image_gallery.png)
 
-**Обирай:** Виріши, яке зображення хочеш використати, та запиши ім'я файлу. Наприклад, `orange_planet.png`.
+**Choose:** Decide which image you want to use and make a note of the filename. For example, `orange_planet.png`.
 
 --- /task ---
 
-Зображення зручно завантажувати в `setup()`, щоб вони завжди були напоготові, коли тобі потрібно буде їх використати, а твоя анімація буде швидко запускатись.
-
 --- task ---
 
-Рядок `image_mode(CENTER)` вказує на те, що ти будеш розміщувати зображення, вказавши координати центру зображення (замість лівого верхнього кута).
+Add code to the `setup()` function to load and position your image.
 
-Також, додай код до функції `setup()`, щоб завантажити вибране зображення в глобальну змінну `planet`. Змінна повинна бути глобальною, щоб її можна було використати пізніше, коли ти будеш малювати планету на екрані.
+The `image_mode(CENTER)` line says that you will be positioning images by giving the coordinates of the centre of the image (instead of the top left corner).
+
+Next load your image into a global `planet` variable. The variable needs to be global so you can use it later when you draw the planet to the screen.
 
 --- code ---
 ---
@@ -82,26 +84,27 @@ line_highlights: 21-23
 ---
 
 def setup():   
-#Setup your animation here   
+# Setup your animation here   
 size(screen_size, screen_size)   
-image_mode(CENTER)   
-global planet   
-planet = load_image('planet.png') #Your chosen planet
+image_mode(CENTER)  # Positions the image in the center global planet   
+planet = load_image('planet.png')  # Your chosen planet
 
 
 --- /code ---
 
 --- /task ---
 
+### Draw background
+
 --- task ---
 
-Визнач функцію `draw_background()`, щоб намалювати фон, внизу коментаря, який підказує, куди його треба поставити.
+Define a `draw_background()` function, to draw the background, below the comment that tells you where it should go.
 
-Використовуй `background(0)`, щоб встановити колір фону на чорний, та додати функцію `image()`, яка намалює планету. Функція `image()` викладена:
+Use `background(0)` to set the background colour to black and add an `image()` function to draw the planet. The `image()` function is laid out:
 
 `image(image filename, x-coordinate, y-coordinate, image_width, image_height)`
 
-Бібліотека `p5` встановлює глобальні змінні `width` та `height`, залежно від розміру екрана. Використовуй їх у своєму коді, щоб розташувати планету посередині (`width/2`) та внизу екрану (`height`).
+The line of code `from p5 import *` gives you global `width` and `height` variables based on the size of the screen. Use these in your code to position the planet with its centre half-way across (`width/2`) and at the bottom (`height`) of the screen.
 
 --- code ---
 ---
@@ -111,19 +114,19 @@ line_highlights: 15-17
 
 # Функція draw_background викликається тут
 def draw_background():   
-background(0) #Short for background(0, 0, 0) — black    
-image(planet, width/2, height, 300, 300) #Draw the image
+background(0)  # Short for background(0, 0, 0) — black    
+image(planet, width/2, height, 300, 300)  # Draw the image
 
 
 --- /code ---
 
-Якщо весь код для малювання фону помістити в одну функцію, тоді твій код буде легше зрозуміти.
+Putting all the code for drawing the background into one function makes your code easier to understand.
 
 --- /task ---
 
 --- task ---
 
-Для того, щоб фон з'явився, потрібно викликати `draw_background()` у `draw()`. Таким чином, щоразу, коли буде викликано `draw()`, фон буде перемальовуватися, перекриваючи будь-які попередні малюнки:
+To make the background appear, call `draw_background()` in `draw()`. This will cause the background to be re-drawn every time `draw()` is called, covering over any older drawing:
 
 --- code ---
 ---
@@ -132,7 +135,7 @@ line_highlights: 30
 ---
 
 def draw():   
-#Things to do in every frame    
+# Things to do in every frame    
 draw_background()
 
 --- /code ---
@@ -141,8 +144,10 @@ draw_background()
 
 --- task ---
 
-**Тест:** Запусти свій код та переконайся, що він малює чорний фон та пів планети внизу.
+**Test:** Run your code and check that it draws a black background with half a planet at the bottom.
 
 --- /task ---
+
+If you have a Raspberry Pi account, on your code editor you can click on the **Save** button to save a copy of your project to your Projects.
 
 --- save ---
