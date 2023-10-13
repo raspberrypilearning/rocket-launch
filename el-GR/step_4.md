@@ -18,15 +18,13 @@
 <p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;">
 Ο προγραμματισμός χρησιμοποιείται για τη δημιουργία <span style="color: #0faeb0">**εφέ γραφικών**</span> στις ταινίες και τα παιχνίδια. Είναι πολύ πιο γρήγορο να γράψεις κώδικα από το να σχεδιάσεις κάθε καρέ μιας κινούμενης εικόνας ξεχωριστά. </p>
 
+### Draw your exhaust
+
 Σχεδιάζοντας πολλές κίτρινες ελλείψεις σε διαφορετικές θέσεις `y` δημιουργείται ένα ίχνος εξάτμισης με στρογγυλό το κάτω μέρος.
 
 --- task ---
 
-Ένας βρόχος `for` επαναλαμβάνει ένα κομμάτι κώδικα μία φορά για κάθε στοιχείο που του δίνεται. Για να εκτελέσεις τον κώδικα σε βρόχο `for` ορισμένες φορές, μπορείς να χρησιμοποιήσεις τη συνάρτηση `range()`. Για παράδειγμα, το `range(5)` δημιουργεί μια ακολουθία πέντε αριθμών που ξεκινούν από το 0, άρα [0, 1, 2, 3, 4].
-
-Κάθε φορά που επαναλαμβάνεται ο βρόχος `for`, η μεταβλητή παίρνει την τιμή του τρέχοντος στοιχείου, ώστε να μπορείς να τη χρησιμοποιήσεις στον βρόχο.
-
-Ενημέρωσε τη συνάρτηση `draw_rocket()` για να συμπεριλάβεις έναν βρόχο `for` που επαναλαμβάνει τη σχεδίαση `25` ελλείψεων εξάτμισης. Η **μεταβλητή βρόχου** `i` προστίθεται στη μεταβλητή `rocket_y` για να σχεδιάσει κάθε έλλειψη πιο χαμηλά κάτω από τον πύραυλο.
+Update your `draw_rocket()` function to include a `for` loop that repeats the drawing of `25` exhaust ellipses. The **loop variable** `i` gets added to `rocket_y` to draw each ellipse further below the rocket.
 
 --- code ---
 ---
@@ -34,83 +32,96 @@ language: python filename: main.py - draw_rocket() line_numbers: true line_numbe
 line_highlights: 16-22
 ---
 
-def draw_rocket():
+def draw_rocket(): global rocket_y   
+rocket_y -= 1   
 
-  global rocket_y   
+    no_stroke()  # Turn off the stroke
+    
+    for i in range(25):  # Draw 25 burning exhaust ellipses   
+        fill(255, 255, 0)  # Yellow   
+        ellipse(width/2, rocket_y + i, 8, 3)  # i increases each time the loop repeats    
+    
+    image(rocket, width/2, rocket_y, 64, 64)
+
+
+--- /code ---
+
+--- /task ---
+
+global rocket_y   
 rocket_y -= 1
 
-  no_stroke() #Απενεργοποίηση πινελιάς
+To run the code in a `for` loop a certain number of times, you can use the `range()` function. For example, `range(5)` creates a sequence of five numbers starting from 0, so [0, 1, 2, 3, 4].
 
-  for i in range(25): #Σχεδίαση 25 ελλείψεων για τη φλεγόμενη  εξάτμιση   
+for i in range(25): #Σχεδίαση 25 ελλείψεων για τη φλεγόμενη  εξάτμιση   
 fill(255, 255, 0) #Κίτρινο   
 ellipse(width/2, rocket_y + i, 8, 3) #το i αυξάνεται κάθε φορά που επαναλαμβάνεται ο βρόχος
 
-  image(rocket, width/2, rocket_y, 64, 64)
+--- task ---
 
+**Test:** Run your code to check the rocket has a new exhaust trail.
 
---- /code ---
+![A close-up of the rocket with an exhaust trail.](images/rocket_exhaust.png){:width="300px"}
 
 --- /task ---
 
---- task ---
+### Add a gradient
 
 **Δοκιμή:** Εκτέλεσε τον κώδικά σου για να ελέγξεις ότι ο πύραυλος αφήνει νέο ίχνος εξάτμισης.
 
-![Ένα κοντινό πλάνο του πυραύλου με ίχνος εξάτμισης.](images/rocket_exhaust.png){:width="300px"}
-
---- /task ---
-
-Η μεταβλητή `i` μπορεί επίσης να χρησιμοποιηθεί για τη δημιουργία μιας χρωματικής διαβάθμισης με λιγότερο πράσινο σε κάθε έλλειψη που σχεδιάζεται.
-
 --- task ---
 
-Άλλαξε την κλήση σε `fill()` για να ορίσεις την ποσότητα του πράσινου σε `255 - i*10` έτσι ώστε η πρώτη έλλειψη να έχει ίσες ποσότητες κόκκινου και πράσινου και η τελευταία έλλειψη να έχει πολύ λίγο πράσινο.
+Change the call to `fill()` to set the amount of green to `255 - i * 10` so that the first ellipse has equal amounts of red and green and the last ellipse has very little green.
 
 --- code ---
 ---
-language: python filename: main.py - draw_rocket() line_numbers: true line_number_start: 19
+language: python filename: main.py - draw_rocket() line_numbers: true line_number_start: 18
 line_highlights: 20
 ---
 
-  for i in range(25):   
+    for i in range(25):   
+        fill(255, 255 - i * 10, 0)  # Reduce the amount of green    
+        ellipse(width/2, rocket_y + i, 8, 3)
+
+--- /code ---
+
+--- /task ---
+
+--- task ---
+
+for i in range(25):   
 fill(255, 255 - i * 10, 0) #Μείωση της ποσότητας του πράσινου    
 ellipse(width/2, rocket_y + i, 8, 3)
 
---- /code ---
-
 --- /task ---
+
+### Create a smoke effect
+
+The smoke exhaust trail is created by drawing lots of slightly transparent grey ellipses at different positions in each frame.
+
+![A slow animation of the smoke effect.](images/rocket_smoke.gif)
 
 --- task ---
 
-**Δοκιμή:** Βεβαιώσου ότι έχεις ένα ίχνος από ελλείψεις που αλλάζουν σταδιακά από κίτρινο σε κόκκινο.
-
---- /task ---
+This time the `fill()` is outside the loop as the colour is the same for each smoke ellipse. The fourth input to `fill()` is the opacity, a low opacity value makes the colour more transparent so you can see the shapes underneath.
 
 Το ίχνος καπνού από την εξάτμιση δημιουργείται σχεδιάζοντας πολλές ελαφρώς διαφανείς γκρι ελλείψεις σε διαφορετικές θέσεις σε κάθε καρέ.
 
-![Μια αργή κινούμενη εικόνα του εφέ καπνού.](images/rocket_smoke.gif)
-
---- task ---
-
-Αυτή τη φορά το `fill()` βρίσκεται εκτός του βρόχου καθώς το χρώμα είναι το ίδιο για κάθε έλλειψη καπνού. Το τέταρτο όρισμα στο `fill()` είναι η αδιαφάνεια, μια χαμηλή τιμή αδιαφάνειας κάνει το χρώμα πιο διαφανές, ώστε να μπορείς να βλέπεις τα σχήματα που βρίσκονται από κάτω.
-
-Σε κάθε καρέ του κινούμενου σχεδίου, θα σχεδιαστούν 20 ελλείψεις τυχαίων μεγεθών σε τυχαίες θέσεις.
-
 --- code ---
 ---
-language: python filename: main.py - draw_rocket() line_numbers: true line_number_start: 19
+language: python filename: main.py - draw_rocket() line_numbers: true line_number_start: 18
 line_highlights: 23-26
 ---
 
-  for i in range(25):  
-fill(255, 255 - i * 10, 0)   
-ellipse(width/2, rocket_y + i, 8, 3)
-
-  fill(200, 200, 200, 100) #Διαφανές γκρι   
-for i in range(20): #Σχεδίαση 20 τυχαίων ελλείψεων για τον καπνό    
-ellipse(width/2 + randint(-5, 5), rocket_y + randint(20, 50), randint(5, 10), randint(5, 10))
-
-  image(rocket, width/2, rocket_y, 64, 64)
+    for i in range(25):  
+        fill(255, 255 - i * 10, 0)   
+        ellipse(width/2, rocket_y + i, 8, 3)    
+    
+    fill(200, 200, 200, 100)  # Transparent grey   
+    for i in range(20):  # Draw 20 random smoke ellipses    
+        ellipse(width/2 + randint(-5, 5), rocket_y + randint(20, 50), randint(5, 10), randint(5, 10))    
+    
+    image(rocket, width/2, rocket_y, 64, 64)
 
 --- /code ---
 
@@ -118,9 +129,9 @@ ellipse(width/2 + randint(-5, 5), rocket_y + randint(20, 50), randint(5, 10), ra
 
 --- task ---
 
-**Δοκιμή:** Εκτέλεσε το πρόγραμμά σου και έλεγξε ότι τα καυσαέρια είναι ορατά.
+language: python filename: main.py - draw_rocket() line_numbers: true line_number_start: 19
 
-![Ένα κοντινό πλάνο του πυραύλου και του ίχνους εξάτμισης με προσθήκη καπνού.](images/rocket_exhaust_circles.gif)
+![An animation of the rocket and exhaust trail with added smoke.](images/rocket_exhaust_circles.gif)
 
 --- /task ---
 
