@@ -3,36 +3,18 @@
 
  + उपयोगकर्ता को वह दर सेट करने दें जिस पर रॉकेट ईंधन बर्न करता है या प्रत्येक फ्रेम में रॉकेट कितना उड़ता है।
  + एक दूसरा, उच्च, रॉकेट के लिए एक कक्षा जोड़ें और दूसरे उपग्रह तक पहुंचने और गिराने के लिए। जब यह वहाँ जाता है, तो क्या यह फिर से रंग बदल सकता है।
- + अपने प्रोजेक्ट में उपयोग करने के लिए अपने स्वयं के रॉकेट या ग्रह की छवि जोड़ें।
 
+Here's a version of the project with all those upgrades, so you can see how they could work. Click Run to launch the rocket:
 
---- collapse ---
----
-title: अपनी स्वयं की छवि Trinket में जोड़ना
----
-
-यदि आप ग्रह के लिए अपने स्वयं के चित्र का उपयोग करना चाहते हैं - या रॉकेट - तो आप **दृश्य और चित्र जोड़ें** बटन चुनकर ऐसा कर सकते हैं।
-
-![एक धन प्रतीक, एक अपलोड प्रतीक, और एक छवि प्रतीक। छवि प्रतीक हाइलाइट किया गया है।](images/trinket_image.png)
-
-फिर **image Library** चुनें और अपनी Trinket इमेज लाइब्रेरी में एक चित्र अपलोड करने के लिए ऑन-स्क्रीन निर्देशों का पालन करें।
-
-![एक बटन जिसके ऊपर एक प्लस और 'इमेज लाइब्रेरी' शब्द हैं।](images/trinket_image_library.png)
-
-अपने द्वारा अपलोड की गई छवि के फ़ाइल नाम को नोट करें, और `planet.png` के स्थान पर कोड में इसका उपयोग करें।
-
---- /collapse ---
-
-यहाँ उन सभी नवीनीकरण के साथ प्रोजेक्ट का एक संस्करण है, ताकि आप देख सकें कि वे कैसे काम कर सकते हैं:
-
-<iframe src="https://trinket.io/embed/python/76c7d66070?outputOnly=true&runOption=run&start=result" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+<iframe src="https://editor.raspberrypi.org/en/embed/viewer/rocket-launch-upgrade" width="600" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen>
+</iframe> You can view the [completed upgrade project here](https://editor.raspberrypi.org/en/projects/rocket-launch-upgrade){:target="_blank"}.
 
 --- collapse ---
 ---
-title: पूरा किया हुआ प्रोजेक्ट।
+title: Completed project
 ---
 
-आप [ पूर्ण प्रोजेक्ट यहां से प्राप्त कर सकते हैं ](https://trinket.io/python/622b4dd113) {: target = "_ blank"}.
+You can view the [completed project here](https://editor.raspberrypi.org/en/projects/rocket-launch-example){:target="_blank"}.
 
 --- /collapse ---
 
