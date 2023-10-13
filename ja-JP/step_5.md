@@ -12,6 +12,8 @@
 
 </div>
 
+### Create a fuel variable
+
 --- task ---
 
 変数を追加して、ロケットが(フレームごとに) 燃焼する燃料の量を追跡します。
@@ -49,6 +51,8 @@ run()
 
 --- /task ---
 
+### Check fuel against burn
+
 ロケットは、燃料をすべて燃焼するまで動くことができます。
 
 --- task ---
@@ -63,10 +67,10 @@ language: python filename: main.py — draw_rocket() line_numbers: true line_num
 line_highlights: 15, 17-18
 ---
 
-  global rocket_y, fuel, burn   
-rocket_y -= 1   
-fuel -= burn #燃料の燃焼   
-print('燃料の残り: ', fuel)
+    global rocket_y, fuel, burn<br x-id="3" />
+      rocket_y -= 1<br x-id="3" />
+      fuel -= burn #燃料の燃焼<br x-id="3" />
+      print('燃料の残り: ', fuel)
 
 --- /code ---
 
@@ -74,7 +78,7 @@ print('燃料の残り: ', fuel)
 
 --- task ---
 
-**テスト：** プログラムを実行して、`燃料を何キログラム使いますか？` に回答するまでアニメーションが開始されないことを確認します。 燃料の量として`30000` を入力してみてください。
+**テスト：** プログラムを実行して、`燃料を何キログラム使いますか？ ` に回答するまでアニメーションが開始されないことを確認します。 燃料の量として`30000` を入力してみてください。
 
 燃料が残っていなくてもロケットは動き続けます。
 
@@ -86,7 +90,7 @@ print('燃料の残り: ', fuel)
 
 ロケットは、十分な燃料が残っている場合にのみ動くようにする必要があります。 `if` ステートメントを追加して、 `fuel >= burn`であることを確認します。
 
-`image()` 関数を呼び出す前のコードのすべての行をインデントする必要があります。 これを行うには、マウスですべての行を強調表示してから、キーボードの <kbd>Tab</kbd> をタップします。すべての行を一度にインデントできます。
+`image()` 関数を呼び出す前のコードのすべての行をインデントする必要があります。 これを行うには、マウスですべての行を強調表示してから、キーボードの <kbd>Tab</kbd> をタップします。
 
 ロケットを描くのは常に行うので、 `image()` 行をインデントする必要はありません。
 
@@ -96,24 +100,10 @@ language: python filename: main.py — draw_rocket() line_numbers: true line_num
 line_highlights: 16-31
 ---
 
-  global rocket_y, fuel, burn
-
-  if fuel >= burn: #まだ燃料が残っている   
-rocket_y -= 1   
-fuel -= burn   
-print('燃料の残り: ', fuel)   
-
-    no_stroke() #境界線なし   
-    
-    for i in range(25):   
-      fill(255, 255 - i*10, 0)   
-      ellipse(width/2, rocket_y + i, 8, 3)    
-    
-    fill(200, 200, 200, 100)   
-    for i in range(20):   
-      ellipse(width/2 + randint(-5, 5), rocket_y + randint(20, 50), randint(5, 10), randint(5, 10))
-
-  image(rocket, width/2, rocket_y, 64, 64)
+    if fuel &#062;= burn: #まだ燃料が残っている<br x-id="3" />
+        rocket_y -= 1<br x-id="3" />
+        fuel -= burn<br x-id="3" />
+        print('燃料の残り: ', fuel)
 
 --- /code ---
 
@@ -127,7 +117,7 @@ print('燃料の残り: ', fuel)
 
 --- /task ---
 
-このコンピュータシミュレーションはあまり正確ではありませんが、アニメーションには十分です。
+Did your rocket stop when it ran out of fuel? Well done, you sent a rocket to outer space!
 
 --- save ---
 
