@@ -1,3 +1,7 @@
+<div class="c-survey-banner" style="width:100%">
+  <a class="c-survey-banner__link" href="https://form.raspberrypi.org/f/code-editor-feedback" target="_blank">Take our survey</a> to help make our Code Editor better!
+</div>
+
 ## You will make
 
 Maak een animatie om een satelliet in een baan om de aarde te brengen — door mee te liften op een raket! Je animatie zal coole grafische effecten maken en de beste hoeveelheid brandstof simuleren om aan de raket mee te geven.
@@ -25,7 +29,8 @@ Je moet de raket van voldoende brandstof voorzien om de omloopbaan te bereiken. 
 
 Hoeveel brandstof is precies genoeg zonder al te veel over te houden?
 </div>
-<iframe src="https://trinket.io/embed/python/622b4dd113?outputOnly=true&runOption=run&start=result" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+<iframe src="https://editor.raspberrypi.org/en/embed/viewer/rocket-launch-example" width="600" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen>
+</iframe>
 </div>
 
 --- /task ---
@@ -34,7 +39,7 @@ Hoeveel brandstof is precies genoeg zonder al te veel over te houden?
 
 --- print-only ---
 
-![Voltooid project.](images/showcase.png)
+![Completed project example of rocket ships flying into outer space.](images/showcase.png)
 
 --- /print-only ---
 
