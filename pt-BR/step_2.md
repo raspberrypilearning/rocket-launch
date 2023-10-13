@@ -61,21 +61,21 @@ size(tamanho_tela, tamanho_tela)
 
 --- task ---
 
-O projeto inicial tem três imagens diferentes de planetas e a lua fornecidas para você. You can view these in the **Image gallery** on the left hand side of the code editor.
+O projeto inicial tem três imagens diferentes de planetas e a lua fornecidas para você. Você pode visualizá-los na **Galeria de imagens** no lado esquerdo do editor de código.
 
-![A screenshot of the code editor, with the image gallery highlighted containing images of planets and the moon.](images/image_gallery.png)
+![Uma captura de tela do editor de código, com a galeria de imagens destacada contendo imagens de planetas e da lua.](images/image_gallery.png)
 
-**Choose:** Decide which image you want to use and make a note of the filename. For example, `orange_planet.png`.
+**Escolha:** Decida qual imagem deseja usar e anote o nome do arquivo. Por exemplo, `orange_planet.png`.
 
 --- /task ---
 
 --- task ---
 
-Add code to the `setup()` function to load and position your image.
+Adicione código à função `setup()` para carregar e posicionar sua imagem.
 
-The `image_mode(CENTER)` line says that you will be positioning images by giving the coordinates of the centre of the image (instead of the top left corner).
+A linha `image_mode(CENTER)` indica que você posicionará as imagens fornecendo as coordenadas do centro da imagem (em vez do canto superior esquerdo).
 
-Next load your image into a global `planet` variable. The variable needs to be global so you can use it later when you draw the planet to the screen.
+Em seguida, carregue sua imagem em uma variável global `planeta`. A variável precisa ser global para que você possa usá-la mais tarde ao desenhar o planeta na tela.
 
 --- code ---
 ---
@@ -84,49 +84,49 @@ line_highlights: 21-23
 ---
 
 def setup():   
-# Setup your animation here   
-size(screen_size, screen_size)   
-image_mode(CENTER)  # Positions the image in the center global planet   
-planet = load_image('planet.png')  # Your chosen planet
+# Configure sua animação aqui   
+size(tamanho_tela, tamanho_tela)   
+image_mode(CENTER)  # Posiciona a imagem no centro global planet   
+planet = load_image('planet.png')  # O planeta que você escolheu
 
 
 --- /code ---
 
 --- /task ---
 
-### Draw background
+### Desenhar o plano de fundo
 
 --- task ---
 
-Define a `draw_background()` function, to draw the background, below the comment that tells you where it should go.
+Defina a função `desenhar_plano_de_fundo()`, para desenhar o fundo, abaixo do comentário que informa onde ela deve ir.
 
-Use `background(0)` to set the background colour to black and add an `image()` function to draw the planet. The `image()` function is laid out:
+Use `background(0)` para definir a cor de fundo como preto e adicione uma função `image()` para desenhar o planeta. A função `image()` exemplificada:
 
-`image(image filename, x-coordinate, y-coordinate, image_width, image_height)`
+`image(nome do arquivo de imagem, coordenada x, coordenada y, largura da imagem, altura da imagem)`
 
-The line of code `from p5 import *` gives you global `width` and `height` variables based on the size of the screen. Use these in your code to position the planet with its centre half-way across (`width/2`) and at the bottom (`height`) of the screen.
+A linha de código `from p5 import *` fornece variáveis globais de `largura` e de `altura` com base no tamanho da tela. Use-os em seu código para posicionar o planeta com seu centro na metade da largura (`width/2`) e na parte inferior (`height`) da tela.
 
 --- code ---
 ---
-language: python filename: main.py — draw_background() line_numbers: true line_number_start: 14
+language: python filename: main.py — desenhar_plano_de_fundo() line_numbers: true line_number_start: 14
 line_highlights: 15-17
 ---
 
 # A função desenhar_plano_de_fundo vai aqui
-def draw_background():   
-background(0)  # Short for background(0, 0, 0) — black    
-image(planet, width/2, height, 300, 300)  # Draw the image
+def desenhar_plano_de_fundo():   
+background(0)  # Abreviação de background(0, 0, 0) — preto    
+image(planet, width/2, height, 300, 300)  # Desenha a imagem
 
 
 --- /code ---
 
-Putting all the code for drawing the background into one function makes your code easier to understand.
+Colocar todo o código para desenhar o plano de fundo em uma função torna seu código mais fácil de entender.
 
 --- /task ---
 
 --- task ---
 
-To make the background appear, call `draw_background()` in `draw()`. This will cause the background to be re-drawn every time `draw()` is called, covering over any older drawing:
+Para fazer o plano de fundo aparecer, chame `desenhar_plano_de_fundo()` em `draw()`. Isso fará com que o plano de fundo seja redesenhado toda vez que `draw()` for chamado, cobrindo qualquer desenho mais antigo:
 
 --- code ---
 ---
@@ -135,8 +135,8 @@ line_highlights: 30
 ---
 
 def draw():   
-# Things to do in every frame    
-draw_background()
+# Coisas para fazer em cada quadro    
+desenhar_plano_de_fundo()
 
 --- /code ---
 
@@ -144,10 +144,10 @@ draw_background()
 
 --- task ---
 
-**Test:** Run your code and check that it draws a black background with half a planet at the bottom.
+**Teste:** Execute seu código e verifique que ele desenha um fundo preto com meio planeta na parte inferior.
 
 --- /task ---
 
-If you have a Raspberry Pi account, on your code editor you can click on the **Save** button to save a copy of your project to your Projects.
+Se você possui uma conta Raspberry Pi, em seu editor de código, você pode clicar no botão **Salvar** para salvar uma cópia do seu projeto em seus Projetos.
 
 --- save ---
