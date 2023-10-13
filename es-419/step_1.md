@@ -1,3 +1,7 @@
+<div class="c-survey-banner" style="width:100%">
+  <a class="c-survey-banner__link" href="https://form.raspberrypi.org/f/code-editor-feedback" target="_blank">Take our survey</a> to help make our Code Editor better!
+</div>
+
 ## Lo que harás
 
 Crea una animación para impulsar un satélite a la órbita, ¡montándote en un cohete! Tu animación creará efectos gráficos geniales y simulará la mejor cantidad de combustible para dar al cohete.
@@ -21,11 +25,12 @@ Vas a:
 
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 175px; flex-grow: 1">  
-Debes suministrar al cohete suficiente combustible para alcanzar la órbita del satélite. Prueba con una cantidad pequeña (alrededor de 10,000 kg) y una cantidad muy grande (alrededor de 50,000 kg) para ver qué sucede. 
+You need to supply the rocket with enough fuel to reach the satellite orbit. Try a small amount (around 10,000kg) and a very large amount (around 50,000kg) to see what happens. 
 
-¿Cuánto combustible es suficiente sin que sobre demasiado?
+How much fuel is just enough without too much left over?
 </div>
-<iframe src="https://trinket.io/embed/python/622b4dd113?outputOnly=true&runOption=run&start=result" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+<iframe src="https://editor.raspberrypi.org/en/embed/viewer/rocket-launch-example" width="600" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen>
+</iframe>
 </div>
 
 --- /task ---
@@ -34,7 +39,7 @@ Debes suministrar al cohete suficiente combustible para alcanzar la órbita del 
 
 --- print-only ---
 
-![Proyecto terminado.](images/showcase.png)
+![Completed project example of rocket ships flying into outer space.](images/showcase.png)
 
 --- /print-only ---
 
