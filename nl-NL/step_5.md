@@ -12,6 +12,8 @@ Om dit te doen, moet je simuleren hoeveel brandstof er tijdens de reis wordt ver
 
 </div>
 
+### Create a fuel variable
+
 --- task ---
 
 Voeg een variabele toe om bij te houden hoeveel brandstof je raket verbruikt (in frames).
@@ -49,6 +51,8 @@ run()
 
 --- /task ---
 
+### Check fuel against burn
+
 De raket mag alleen bewegen als hij niet al zijn brandstof heeft opgebruikt.
 
 --- task ---
@@ -63,10 +67,10 @@ language: python filename: main.py — draw_rocket() line_numbers: true line_num
 line_highlights: 15, 17-18
 ---
 
-  global raket_y, brandstof, verbruik   
-raket_y -= 1   
-brandstof -= verbruik #Brandstof verbruik   
-print('Brandstof over:', brandstof)
+    global raket_y, brandstof, verbruik<br x-id="3" />
+      raket_y -= 1<br x-id="3" />
+      brandstof -= verbruik #Brandstof verbruik<br x-id="3" />
+      print('Brandstof over:', brandstof)
 
 --- /code ---
 
@@ -92,28 +96,19 @@ De regel `image()` hoeft niet te worden ingesprongen omdat je altijd de raket wi
 
 --- code ---
 ---
-language: python filename: main.py — draw_rocket() line_numbers: true line_number_start: 15
+language: python filename: main.py — teken_raket() line_numbers: true line_number_start: 15
 line_highlights: 16-31
 ---
 
-  global raket_y, brandstof, verbruik
-
-  if brandstof >= verbruik: #Nog genoeg brandstof   
-raket_y -= 1   
-brandstof -= verbruik   
-print('Brandstof over: ', brandstof)   
-
     no_stroke() #Schakel de lijn uit   
     
-    voor i in range(25):   
+    for i in range(25):   
       fill(255, 255 - i*10, 0)   
       ellipse(width/2, raket_y + i, 8, 3)    
     
     fill(200, 200, 200, 100)   
     for i in range(20):   
       ellipse(width/2 + randint(-5, 5), rocket_y + randint(20, 50), randint(5, 10), randint(5, 10))
-
-  image(raket, width/2, raket_y, 64, 64)
 
 --- /code ---
 
@@ -127,7 +122,7 @@ print('Brandstof over: ', brandstof)
 
 --- /task ---
 
-Deze computersimulatie is niet erg nauwkeurig, maar goed genoeg voor onze animatie.
+Did your rocket stop when it ran out of fuel? Well done, you sent a rocket to outer space!
 
 --- save ---
 
