@@ -12,6 +12,8 @@
 
 </div>
 
+### Create a fuel variable
+
 --- task ---
 
 Πρόσθεσε μια μεταβλητή για να παρακολουθείς πόσα καύσιμα καίει ο πύραυλός σου (ανά καρέ).
@@ -49,6 +51,8 @@ run()
 
 --- /task ---
 
+### Check fuel against burn
+
 Ο πύραυλος πρέπει να κινείται μόνο εάν δεν έχει κάψει όλο το καύσιμό του.
 
 --- task ---
@@ -63,46 +67,6 @@ language: python filename: main.py — draw_rocket() line_numbers: true line_num
 line_highlights: 15, 17-18
 ---
 
-  global rocket_y, fuel, burn   
-rocket_y -= 1   
-fuel -= burn #Καύση καυσίμου   
-print('Καύσιμο που απέμεινε: ', fuel)
-
---- /code ---
-
---- /task ---
-
---- task ---
-
-**Δοκιμή:** Εκτέλεσε το πρόγραμμά σου για να ελέγξεις ότι η κινούμενη εικόνα δεν ξεκινά πριν να απαντηθεί το `Πόσα κιλά καυσίμου θέλεις να χρησιμοποιήσεις;`. Δοκίμασε να εισαγάγεις `30000` ως ποσότητα καυσίμου.
-
-Ο πύραυλος θα συνεχίσει να λειτουργεί ακόμα κι αν δεν έχει απομείνει καύσιμο.
-
-![Το πρόγραμμα με μια ερώτηση στην περιοχή εξόδου ρωτά πόσο καύσιμο απαιτείται.](images/burn_question.png)
-
---- /task ---
-
---- task ---
-
-Ο πύραυλος πρέπει να κινείται μόνο εάν έχει αρκετό καύσιμο. Πρόσθεσε μια εντολή `if` για να ελέγξεις ότι `fuel >= burn`.
-
-Θα χρειαστεί να τοποθετήσεις με εσοχή όλες τις γραμμές κώδικα πριν από την κλήση της συνάρτησης `image()`. Για να το κάνεις αυτό, επισήμανε όλες τις γραμμές με το ποντίκι και, στη συνέχεια, πάτα το πλήκτρο <kbd>Tab</kbd> από το πληκτρολόγιο για να κάνεις εσοχή σε όλες τις γραμμές ταυτόχρονα.
-
-Η γραμμή `image()` δεν χρειάζεται να έχει εσοχή επειδή θέλεις πάντα να σχεδιάζεις τον πύραυλο.
-
---- code ---
----
-language: python filename: main.py — draw_rocket() line_numbers: true line_number_start: 15
-line_highlights: 16-31
----
-
-  global rocket_y, fuel, burn
-
-  if fuel >= burn: #Ακόμα υπάρχει καύσιμο   
-rocket_y -= 1   
-fuel -= burn   
-print('Καύσιμο που απέμεινε: ', fuel)   
-
     no_stroke() #Απενεργοποίηση πινελιάς
     
     for i in range(25):   
@@ -113,7 +77,52 @@ print('Καύσιμο που απέμεινε: ', fuel)
     for i in range(20):   
       ellipse(width/2 + randint(-5, 5), rocket_y + randint(20, 50), randint(5, 10), randint(5, 10))
 
-  image(rocket, width/2, rocket_y, 64, 64)
+--- /code ---
+
+--- /task ---
+
+--- task ---
+
+**Test:** Run your program to check that the animation doesn't start until `How many kilograms of fuel do you want to use?` has been answered. Try entering `30000` as the amount of fuel.
+
+The rocket will keep going even if it has no fuel left.
+
+![The program with a question in the output area asking how much fuel is required.](images/burn_question.png)
+
+--- /task ---
+
+--- task ---
+
+The rocket should only move if it has enough fuel left. Add an `if` statement to check that `fuel >= burn`.
+
+You will need to indent all of the lines of code before the `image()` function call. To do this, highlight all of the lines with the mouse and then tap the <kbd>Tab</kbd> on the keyboard to indent all the lines at once.
+
+The `image()` line doesn't need to be indented because you always want to draw the rocket.
+
+--- code ---
+---
+language: python filename: main.py — draw_rocket() line_numbers: true line_number_start: 15
+line_highlights: 16-31
+---
+
+    global rocket_y, fuel, burn  
+    
+    if fuel >= burn:  # Still got fuel   
+        rocket_y -= 1   
+        fuel -= burn   
+        print('Fuel left: ', fuel)   
+    
+        no_stroke()  # Turn off the stroke   
+    
+        for i in range(25):   
+            fill(255, 255 - i*10, 0)   
+            ellipse(width/2, rocket_y + i, 8, 3)    
+    
+        fill(200, 200, 200, 100)   
+        for i in range(20):   
+            ellipse(width/2 + randint(-5, 5), rocket_y + randint(20, 50), randint(5, 10), randint(5, 10))   
+    
+    image(rocket, width/2, rocket_y, 64, 64)
 
 --- /code ---
 
@@ -121,13 +130,13 @@ print('Καύσιμο που απέμεινε: ', fuel)
 
 --- task ---
 
-**Δοκιμή:** Εκτέλεσε το πρόγραμμά σου για να ελέγξεις ότι ο πύραυλος σταματά όταν δεν υπάρχει καύσιμο.
+image(rocket, width/2, rocket_y, 64, 64)
 
-![Εικόνα ενός πυραύλου στη μέση της οθόνης με την ένδειξη "Καύσιμο που απέμεινε: 0".](images/burn_empty.png){:width="300px"}
+![Image of a rocket in the middle of the screen with the statement 'Fuel left: 0'.](images/burn_empty.png){:width="300px"}
 
 --- /task ---
 
-Αυτή η προσομοίωση υπολογιστή δεν είναι πολύ ακριβής, αλλά είναι αρκετά καλή για την κινούμενη εικόνα μας.
+Did your rocket stop when it ran out of fuel? Well done, you sent a rocket to outer space!
 
 --- save ---
 
