@@ -15,7 +15,7 @@
 
 У стартовому проєкті тобі надається зображення ракети.
 
-![Зображення ракети в бібліотеці зображень Trinket.](images/trinket_rocket_image.png)
+![Image of the rocket in the code editor image gallery.](images/rocket_image.png)
 
 --- /task ---
 
@@ -30,7 +30,7 @@ line_highlights: 24, 26
 ---
 
 def setup():   
-#Setup your animation here   
+# Setup your animation here   
 size(screen_size, screen_size)   
 image_mode(CENTER)   
 global planet, rocket   
@@ -40,6 +40,8 @@ rocket = load_image('rocket.png')
 --- /code ---
 
 --- /task ---
+
+### Make the rocket fly
 
 Позиція ракети `y` буде починатися з 400 (висота екрану), а потім буде зменшуватися на 1 щоразу, коли буде малюватися новий кадр.
 
@@ -55,7 +57,7 @@ line_highlights: 9
 
 # Налаштування глобальних змінних
 screen_size = 400    
-rocket_y = screen_size #Start at the bottom
+rocket_y = screen_size  # Start at the bottom
 
 --- /code ---
 
@@ -74,10 +76,9 @@ line_highlights: 12-16
 ---
 
 # Функція draw_rocket викликається тут
-def draw_rocket():
-
-  global rocket_y #Use the global rocket_y variable    
-rocket_y -= 1 #Move the rocket    
+def draw_rocket():   
+global rocket_y  # Use the global rocket_y variable    
+rocket_y -= 1  # Move the rocket    
 image(rocket, width/2, rocket_y, 64, 64)
 
 
@@ -87,16 +88,16 @@ image(rocket, width/2, rocket_y, 64, 64)
 
 --- task ---
 
-Виклич свою новостворену `draw_rocket()` у функції `draw()`, щоб ракета на кожному кадрі була перемальована.
+Call your new `draw_rocket()` in the `draw()` function so that the rocket gets redrawn every frame.
 
 --- code ---
 ---
-language: python filename: main.py line_numbers: true line_number_start: 34
-line_highlights: 37
+language: python filename: main.py line_numbers: true line_number_start: 33
+line_highlights: 36
 ---
 
 def draw():   
-#Things to do in every frame   
+# Things to do in every frame   
 draw_background()   
 draw_rocket()
 
@@ -107,9 +108,9 @@ draw_rocket()
 
 --- task ---
 
-**Тест:** Запусти свій код, щоб перевірити, чи стартує ракета внизу екрана та, чи рухається вверх з кожним наступним кадром.
+**Test:** Run your code to check that the rocket starts at the bottom of the screen and moves up each frame.
 
-![Зображення ракети на половину екрана.](images/trinket_rocket_fly.gif)
+![Animation of the rocket flying half way up the screen.](images/rocket_fly.gif)
 
 --- /task ---
 
