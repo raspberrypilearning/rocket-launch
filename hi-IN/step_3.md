@@ -15,7 +15,7 @@
 
 स्टार्टर प्रोजेक्ट में आपके लिए प्रदान की गई एक रॉकेट चित्र है।
 
-![Trinket इमेज लाइब्रेरी में रॉकेट की छवि।](images/trinket_rocket_image.png)
+![Image of the rocket in the code editor image gallery.](images/rocket_image.png)
 
 --- /task ---
 
@@ -30,7 +30,7 @@ line_highlights: 24, 26
 ---
 
 def setup():   
-#Setup your animation here   
+# Setup your animation here   
 size(screen_size, screen_size)   
 image_mode(CENTER)   
 global planet, rocket   
@@ -40,6 +40,8 @@ rocket = load_image('rocket.png')
 --- /code ---
 
 --- /task ---
+
+### Make the rocket fly
 
 रॉकेट की `y` स्थिति 400 (स्क्रीन की ऊंचाई) से शुरू होगी और फिर हर बार एक नया फ्रेम बनाए जाने पर 1 तक कम हो जाएगी।
 
@@ -55,7 +57,7 @@ line_highlights: 9
 
 # वैश्विक वेरिएबल सेटअप करें
 screen_size = 400    
-rocket_y = screen_size #Start at the bottom
+rocket_y = screen_size  # Start at the bottom
 
 --- /code ---
 
@@ -74,10 +76,9 @@ line_highlights: 12-16
 ---
 
 # draway_crock फ़ंक्शन यहाँ जाता है
-def draw_rocket():
-
-  global rocket_y #Use the global rocket_y variable    
-rocket_y -= 1 #Move the rocket    
+def draw_rocket():   
+global rocket_y  # Use the global rocket_y variable    
+rocket_y -= 1  # Move the rocket    
 image(rocket, width/2, rocket_y, 64, 64)
 
 
@@ -87,16 +88,16 @@ image(rocket, width/2, rocket_y, 64, 64)
 
 --- task ---
 
-`draway()` फ़ंक्शन में अपने नए `drawing_rotरॉकेट()` को कॉल करें ताकि रॉकेट हर फ्रेम में फिर से बनाया जा सके।
+Call your new `draw_rocket()` in the `draw()` function so that the rocket gets redrawn every frame.
 
 --- code ---
 ---
-language: python filename: main.py line_numbers: true line_number_start: 34
-line_highlights: 37
+language: python filename: main.py line_numbers: true line_number_start: 33
+line_highlights: 36
 ---
 
 def draw():   
-#Things to do in every frame   
+# Things to do in every frame   
 draw_background()   
 draw_rocket()
 
@@ -107,9 +108,9 @@ draw_rocket()
 
 --- task ---
 
-**परीक्षण:** यह जांचने के लिए अपना कोड चलाएं कि रॉकेट स्क्रीन के नीचे से शुरू होता है और प्रत्येक फ्रेम को ऊपर ले जाता है।
+**Test:** Run your code to check that the rocket starts at the bottom of the screen and moves up each frame.
 
-![रॉकेट की छवि स्क्रीन के आधे रास्ते में।](images/trinket_rocket_fly.gif)
+![Animation of the rocket flying half way up the screen.](images/rocket_fly.gif)
 
 --- /task ---
 
