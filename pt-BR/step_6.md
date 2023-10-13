@@ -12,12 +12,13 @@ O foguete pode mudar de cor para mostrar o sucesso do lançamento.
 </div>
 <div>
 
-![Three side-by-side images showing successful (green tint), over-fueled (amber tint), and unsuccessful (red tint) launches.](images/check_orbit.png){:width="400px"}
+![Três imagens lado a lado mostrando o lançamento bem-sucedido (tonalidade verde), o lançamento 
+com excesso de combustível (tonalidade âmbar) e o lançamento mal sucedido (tonalidade vermelha).](images/check_orbit.png){:width="400px"}
 
 </div>
 </div>
 
-### Draw an orbit line
+### Desenhe uma linha de órbita
 
 --- task ---
 
@@ -46,18 +47,18 @@ Atualize a função `desenhar_plano_de_fundo()` para desenhar uma elipse para re
 
 --- code ---
 ---
-language: python filename: main.py - draw_background() line_numbers: true line_number_start: 38
+language: python filename: main.py - desenhar_plano_de_fundo() line_numbers: true line_number_start: 38
 line_highlights: 42-45
 ---
 
-def draw_background():   
-background(0)  # Short for background(0, 0, 0) — black   
-image(planet, width/2, height, 300, 300)   
+def desenhar_plano_de_fundo():   
+background(0)  # Abreviação de background(0, 0, 0) — preto   
+image(planeta, width/2, height, 300, 300)   
 
-    no_fill()  # Turn off any fill  
-    stroke(255)  # Set a white stroke   
+    no_fill()  # Desligue qualquer preenchimento  
+    stroke(255)  # Defina um traço branco   
     stroke_weight(2)   
-    ellipse(width/2, height, orbit_radius * 2, orbit_radius * 2)
+    ellipse(width/2, height, raio_orbital * 2, raio_orbital * 2)
 
 --- /code ---
 
@@ -65,33 +66,33 @@ image(planet, width/2, height, 300, 300)
 
 --- task ---
 
-**Test:** Run your program and check that a white orbit line is drawn.
+**Teste:** Execute seu programa e verifique que uma linha de órbita branca foi desenhada.
 
-![The screen with planet and new orbit line.](images/draw_orbit.png){:width="300px"}
+![A tela com o planeta e nova linha de órbita.](images/draw_orbit.png){:width="300px"}
 
 --- /task ---
 
-### Launch the rocket to the orbit
+### Lance o foguete para a órbita
 
-The rocket should stop when it reaches the satellite orbit — the end of the mission.
+O foguete deve parar quando atingir a órbita do satélite – o fim da missão.
 
 --- task ---
 
-Update your `if fuel >= burn` code to also check that the rocket hasn't reached the orbit.
+Atualize seu código `if combustivel >= queimar` para verificar também se o foguete não atingiu a órbita.
 
-You can use an `and` in `if` statements to check if two, or more, conditions are true.
+Você pode usar as instruções `and` em `if` para verificar se duas ou mais condições são verdadeiras.
 
 --- code ---
 ---
-language: python filename: main.py - draw_rocket() line_numbers: true line_number_start: 15
+language: python filename: main.py - desenhar_foguete() line_numbers: true line_number_start: 15
 line_highlights: 19
 ---
 
 # A função desenhar_foguete vai aqui
-def draw_rocket():   
-global rocket_y, fuel, burn
+def desenhar_foguete():   
+global foguete_y, combustivel, queimar
 
-        if fuel >= burn and rocket_y > orbit_y:  # Still flying
+        if combustivel >= queimar and foguete_y > orbita_y:  # Ainda voando
 
 --- /code ---
 
@@ -99,28 +100,28 @@ global rocket_y, fuel, burn
 
 --- task ---
 
-**Test:** Run your project and enter `50000` as the amount of fuel. This should be plenty of fuel to reach orbit. The rocket should stop moving when it reaches orbit.
+**Teste:** Execute seu projeto e digite `50000` para a quantidade de combustível. Isso deve ser bastante combustível para alcançar a órbita. O foguete deve parar de se mover quando atingir a órbita.
 
 --- /task ---
 
-### Check if the launch is successful
+### Verifique se o lançamento foi bem-sucedido
 
-The rocket should be coloured red if it runs out of fuel before getting high enough to launch the satellite.
+O foguete deve ficar vermelho se ficar sem combustível antes de ficar alto o suficiente para lançar o satélite.
 
 --- task ---
 
 --- code ---
 ---
-language: python filename: main.py — draw_rocket() line_numbers: true line_number_start: 30
+language: python filename: main.py — desenhar_foguete() line_numbers: true line_number_start: 30
 line_highlights: 34-35
 ---
 
     fill(200, 200, 200, 100)   
     for i in range(20):   
-        ellipse(width/2 + randint(-5, 5), rocket_y + randint(20, 50), randint(5, 10), randint(5, 10))
+        ellipse(width/2 + randint(-5, 5), foguete_y + randint(20, 50), randint(5, 10), randint(5, 10))
     
-    if fuel < burn and rocket_y > orbit_y:  # No more fuel and not in orbit   
-        tint(255, 0, 0)  # Failure
+    if combustivel < queimar and foguete_y > orbita_y:  # Não há mais combustível e não em órbita   
+        tint(255, 0, 0)  # Fracasso
 
 --- /code ---
 
@@ -128,31 +129,31 @@ line_highlights: 34-35
 
 --- task ---
 
-**Test:** Run your code and enter `20000` as the amount of fuel. Check that the rocket turns red when it stops below the orbit.
+**Teste:** Execute seu código e digite `20000` para a quantidade de combustível. Verifique que o foguete fica vermelho quando para abaixo da órbita.
 
-![A red rocket that has run out of fuel before the orbit circle. The planet has also turned red.](images/orbit_failure.png){:width="300px"}
+![Um foguete vermelho que ficou sem combustível antes do círculo orbital. O planeta também ficou vermelho.](images/orbit_failure.png){:width="300px"}
 
-Oh no, the planet has turned red!
+Oh não, o planeta ficou vermelho!
 
 --- /task ---
 
 --- task ---
 
-The `tint()` function sets the tint colour for all images that are drawn until you change the tint or use `no_tint()` to turn it off.
+A função `tint()` define a cor do tom para todas as imagens que são desenhadas até que você altere o tom ou use `no_tint()` para desativá-lo.
 
-**Choose:** Add a call to `no_tint()` after drawing the image so that the planet isn't tinted red in the next frame — or leave it if you like the planet turning red!
+**Escolha:** Adicione uma chamada para `no_tint()` depois de desenhar a imagem para que o planeta não fique vermelho no próximo quadro — ou deixe-o se você gosta do planeta ficando vermelho!
 
 --- code ---
 ---
-language: python filename: main.py - draw_rocket() line_numbers: true line_number_start: 34
+language: python filename: main.py - desenhar_foguete() line_numbers: true line_number_start: 34
 line_highlights: 38
 ---
 
-    if fuel < burn and rocket_y > orbit_y:    
-        tint(255, 0, 0)  # Failure
+    if combustivel < queimar and foguete_y > orbita_y:    
+        tint(255, 0, 0)  # Fracasso
     
-    image(rocket, width/2, rocket_y, 64, 64)   
-    no_tint()  # So the planet isn't tinted red in the next frame!
+    image(foguete, width/2, foguete_y, 64, 64)   
+    no_tint()  # Assim, o planeta não será tingido de vermelho no próximo quadro!
 
 
 --- /code ---
@@ -161,20 +162,20 @@ line_highlights: 38
 
 --- task ---
 
-Use the `tint()` function again, this time to colour the rocket green if the rocket has enough fuel to reach the satellite orbit:
+Use a função `tint()` novamente, desta vez para colorir o foguete de verde se o foguete tiver combustível suficiente para alcançar a órbita do satélite:
 
 --- code ---
 ---
-language: python filename: main.py - draw_rocket() line_numbers: true line_number_start: 34
+language: python filename: main.py - desenhar_foguete() line_numbers: true line_number_start: 34
 line_highlights: 36-37
 ---
 
-    if fuel < burn and rocket_y > orbit_y:    
-        tint(255, 0, 0)  # Failure   
-    elif rocket_y <= orbit_y:   
-        tint(0, 255, 0)  # Success   
+    if combustivel < queimar and foguete_y > orbita_y:    
+        tint(255, 0, 0)  # Fracasso   
+    elif foguete_y <= orbita_y:   
+        tint(0, 255, 0)  # Sucesso   
     
-    image(rocket, width/2, rocket_y, 64, 64)   
+    image(foguete, width/2, foguete_y, 64, 64)   
     no_tint()
 
 --- /code ---
@@ -183,19 +184,19 @@ line_highlights: 36-37
 
 --- task ---
 
-**Test:** Run your project and enter `50000` as the amount of fuel. Check that your rocket turns green when it reaches the satellite orbit.
+**Teste:** Execute seu projeto e digite `50000` para a quantidade de combustível. Verifique que o seu foguete fica verde quando atinge a órbita do satélite.
 
-![A green rocket that has reached the orbit circle and has fuel left.](images/orbit_success.png){:width="300px"}
+![Um foguete verde que atingiu o círculo orbital e ainda tem combustível.](images/orbit_success.png){:width="300px"}
 
 --- /task ---
 
-You now have a simulation that can be used to show how much fuel is needed as a minimum to reach the satellite orbit. That's great; however, you could take a huge amount of fuel and still be successful, but this is costly and wasteful!
+Agora você tem uma simulação que pode ser usada para mostrar quanto combustível é necessário no mínimo para alcançar a órbita do satélite. Isso é ótimo; no entanto, você pode consumir uma enorme quantidade de combustível e ainda ter sucesso, mas isso é caro e um desperdício!
 
 --- task ---
 
-Amend the conditions in your success code so that the rocket only turns green if it reaches the orbit `and` has less than 1,000kg of fuel left.
+Altere as condições em seu código de sucesso para que o foguete só fique verde se atingir a órbita `e` tiver menos de 1.000 kg de combustível restante.
 
-Add code to colour the rocket yellow if the rocket has more than 1,000kg of fuel left when it reaches orbit.
+Adicione um código para colorir o foguete de amarelo se o foguete tiver mais de 1.000 kg de combustível restante quando atingir a órbita.
 
 --- code ---
 ---
@@ -203,15 +204,15 @@ language: python filename: main.py line_numbers: true line_number_start: 34
 line_highlights: 36, 38-39
 ---
 
-    if fuel < burn and rocket_y > orbit_y:   
-        tint(255, 0, 0)  # Failure   
-    elif fuel < 1000 and rocket_y <= orbit_y:   
-        tint(0, 255, 0)  # Success   
-    elif fuel >= 1000 and rocket_y <= orbit_y:    
-        tint(255, 200, 0)  # Too much fuel   
+    if combustivel < queimar and foguete_y > orbita_y:   
+        tint(255, 0, 0)  # Fracasso
+    elif combustivel < 1000 and foguete_y <= orbita_y:   
+        tint(0, 255, 0)  # Sucesso
+    elif combustivel >= 1000 and foguete_y <= orbita_y:    
+        tint(255, 200, 0)  # Excesso de combustível   
     
-    image(rocket, width/2, rocket_y, 64, 64)    
-    no_tint()  # So the planet isn't tinted in the next frame!
+    image(foguete, width/2, foguete_y, 64, 64)    
+    no_tint()  # Assim, o planeta não estará tingido no próximo quadro!
 
 --- /code ---
 
@@ -219,9 +220,9 @@ line_highlights: 36, 38-39
 
 --- task ---
 
-**Test:** Run your program several times with different numbers; for example, 25,000kg of fuel should be the amount needed to turn the rocket green, but also check that the yellow tint works too by using a bigger number.
+**Teste:** Execute seu programa várias vezes com números diferentes; por exemplo, 25.000 kg de combustível deve ser a quantidade necessária para tornar o foguete verde, mas também verifique se a tonalidade amarela também funciona usando um número maior.
 
-![A yellow rocket that has reached the orbit circle and has fuel left.](images/orbit_meh.png){:width="300px"}
+![Um foguete amarelo que atingiu o círculo orbital e ainda tem combustível.](images/orbit_meh.png){:width="300px"}
 
 --- /task ---
 
