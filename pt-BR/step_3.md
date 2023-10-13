@@ -15,7 +15,7 @@ Cada vez que um novo quadro é desenhado, o foguete precisa se mover para cima n
 
 O projeto inicial tem uma imagem de foguete fornecida para você.
 
-![Imagem do foguete na biblioteca de imagens Trinket.](images/trinket_rocket_image.png)
+![Image of the rocket in the code editor image gallery.](images/rocket_image.png)
 
 --- /task ---
 
@@ -30,7 +30,7 @@ line_highlights: 24, 26
 ---
 
 def setup():   
-#Setup your animation here   
+# Setup your animation here   
 size(screen_size, screen_size)   
 image_mode(CENTER)   
 global planet, rocket   
@@ -40,6 +40,8 @@ rocket = load_image('rocket.png')
 --- /code ---
 
 --- /task ---
+
+### Make the rocket fly
 
 A posição `y` do foguete começará em 400 (a altura da tela) e diminuirá em 1 cada vez que um novo quadro for desenhado.
 
@@ -55,7 +57,7 @@ line_highlights: 9
 
 # Configurar variáveis globais
 screen_size = 400    
-rocket_y = screen_size #Start at the bottom
+rocket_y = screen_size  # Start at the bottom
 
 --- /code ---
 
@@ -74,10 +76,9 @@ line_highlights: 12-16
 ---
 
 # A função desenhar_foguete vai aqui
-def draw_rocket():
-
-  global rocket_y #Use the global rocket_y variable    
-rocket_y -= 1 #Move the rocket    
+def draw_rocket():   
+global rocket_y  # Use the global rocket_y variable    
+rocket_y -= 1  # Move the rocket    
 image(rocket, width/2, rocket_y, 64, 64)
 
 
@@ -87,16 +88,16 @@ image(rocket, width/2, rocket_y, 64, 64)
 
 --- task ---
 
-Chame seu novo `desenhar_foguete()` na função `desenhar()` para que o foguete seja redesenhado a cada quadro.
+Call your new `draw_rocket()` in the `draw()` function so that the rocket gets redrawn every frame.
 
 --- code ---
 ---
-language: python filename: main.py line_numbers: true line_number_start: 34
-line_highlights: 37
+language: python filename: main.py line_numbers: true line_number_start: 33
+line_highlights: 36
 ---
 
 def draw():   
-#Things to do in every frame   
+# Things to do in every frame   
 draw_background()   
 draw_rocket()
 
@@ -107,9 +108,9 @@ draw_rocket()
 
 --- task ---
 
-**Teste:** Execute seu código para verificar que o foguete começa na parte inferior da tela e se move para cima a cada quadro.
+**Test:** Run your code to check that the rocket starts at the bottom of the screen and moves up each frame.
 
-![Imagem do foguete a meio caminho da tela.](images/trinket_rocket_fly.gif)
+![Animation of the rocket flying half way up the screen.](images/rocket_fly.gif)
 
 --- /task ---
 
