@@ -12,6 +12,8 @@
 
 </div>
 
+### Create a fuel variable
+
 --- task ---
 
 आपके रॉकेट में कितना ईंधन बर्न होता है इसका ट्रैक रखने के लिए एक वेरिएबल जोड़ें (फ्रेम में)।
@@ -25,7 +27,7 @@ line_highlights: 10
 # वैश्विक वेरिएबल सेटअप करें
 screen_size = 400   
 rocket_y = screen_size  
-burn = 100 #How much fuel is burned in each frame
+burn = 100  # How much fuel is burned in each frame
 
 --- /code ---
 
@@ -38,8 +40,8 @@ burn = 100 #How much fuel is burned in each frame
 
 --- code ---
 ---
-language: python filename: main.py line_numbers: true line_number_start: 52
-line_highlights: 52
+language: python filename: main.py line_numbers: true line_number_start: 51
+line_highlights: 51
 ---
 
 fuel = int(input('How many kilograms of fuel do you want to use?'))   
@@ -48,6 +50,8 @@ run()
 --- /code ---
 
 --- /task ---
+
+### Check fuel against burn
 
 रॉकेट को तभी चलना चाहिए जब उसने अपने सभी ईंधन को नहीं जलाया हो।
 
@@ -63,10 +67,10 @@ language: python filename: main.py — draw_rocket() line_numbers: true line_num
 line_highlights: 15, 17-18
 ---
 
-  global rocket_y, fuel, burn   
-rocket_y -= 1   
-fuel -= burn #Burn fuel   
-print('Fuel left: ', fuel)
+    global rocket_y, fuel, burn   
+    rocket_y -= 1   
+    fuel -= burn  # Burn fuel   
+    print('Fuel left: ', fuel)
 
 --- /code ---
 
@@ -74,46 +78,46 @@ print('Fuel left: ', fuel)
 
 --- task ---
 
-**परीक्षण:** यह जांचने के लिए अपना प्रोग्राम चलाएँ कि एनीमेशन तब तक शुरू नहीं होता जब तक `आप कितने किलोग्राम ईंधन का उपयोग करना चाहते हैं?` का उत्तर नहीं दिया गया है। ईंधन की मात्रा के रूप में `30000` दर्ज करने का प्रयास करें।
+**Test:** Run your program to check that the animation doesn't start until `How many kilograms of fuel do you want to use?` has been answered. Try entering `30000` as the amount of fuel.
 
-रॉकेट तब भी चलता रहेगा जब उसके पास कोई ईंधन नहीं बचा हो।
+The rocket will keep going even if it has no fuel left.
 
-![आउटपुट क्षेत्र में एक प्रश्न के साथ प्रोग्राम यह पूछता है कि कितना ईंधन चाहिए।](images/burn_question.png)
+![The program with a question in the output area asking how much fuel is required.](images/burn_question.png)
 
 --- /task ---
 
 --- task ---
 
-रॉकेट को तभी चलना चाहिए जब उसके पास पर्याप्त ईंधन बचा हो। `fuel>= बर्न` जांचने के लिए एक `if` स्टेटमेंट जोड़ें।
+The rocket should only move if it has enough fuel left. Add an `if` statement to check that `fuel >= burn`.
 
-आपको `image()` फ़ंक्शन कॉल से पहले कोड की सभी पंक्तियों को इंडेंट करने की आवश्यकता होगी। ऐसा करने के लिए, माउस के साथ सभी पंक्तियों को हाइलाइट करें और फिर सभी पंक्तियों को एक बार में इंडेंट करने के लिए कीबोर्ड पर <kbd>tab</kbd> पर टैप करें।
+You will need to indent all of the lines of code before the `image()` function call. To do this, highlight all of the lines with the mouse and then tap the <kbd>Tab</kbd> on the keyboard to indent all the lines at once.
 
-`image()` पंक्ति को इंडेंट करने की आवश्यकता नहीं है क्योंकि आप हमेशा रॉकेट बनाना चाहते हैं।
+The `image()` line doesn't need to be indented because you always want to draw the rocket.
 
 --- code ---
 ---
 language: python filename: main.py — draw_rocket() line_numbers: true line_number_start: 15
-line_highlights: 16-31
+line_highlights: 17-30
 ---
 
-  global rocket_y, fuel, burn
-
-  if fuel >= burn: #Still got fuel   
-rocket_y -= 1   
-fuel -= burn   
-print('Fuel left: ', fuel)   
-
-    no_stroke() #Turn off the stroke   
+    global rocket_y, fuel, burn  
     
-    for i in range(25):   
-      fill(255, 255 - i*10, 0)   
-      ellipse(width/2, rocket_y + i, 8, 3)    
+    if fuel >= burn:  # Still got fuel   
+        rocket_y -= 1   
+        fuel -= burn   
+        print('Fuel left: ', fuel)   
     
-    fill(200, 200, 200, 100)   
-    for i in range(20):   
-      ellipse(width/2 + randint(-5, 5), rocket_y + randint(20, 50), randint(5, 10), randint(5, 10))
-
-  image(rocket, width/2, rocket_y, 64, 64)
+        no_stroke()  # Turn off the stroke   
+    
+        for i in range(25):   
+            fill(255, 255 - i*10, 0)   
+            ellipse(width/2, rocket_y + i, 8, 3)    
+    
+        fill(200, 200, 200, 100)   
+        for i in range(20):   
+            ellipse(width/2 + randint(-5, 5), rocket_y + randint(20, 50), randint(5, 10), randint(5, 10))   
+    
+    image(rocket, width/2, rocket_y, 64, 64)
 
 --- /code ---
 
@@ -121,13 +125,13 @@ print('Fuel left: ', fuel)
 
 --- task ---
 
-**परीक्षण:** यह जांचने के लिए अपना प्रोग्राम चलाएं कि जब कोई ईंधन नहीं बचा तो रॉकेट रुक जाए।
+**Test:** Run your program to check that the rocket stops when there is no fuel left.
 
-!['Fuel left: 0' कथन के साथ स्क्रीन के बीच में एक रॉकेट की छवि।](images/burn_empty.png){:width="300px"}
+![Image of a rocket in the middle of the screen with the statement 'Fuel left: 0'.](images/burn_empty.png){:width="300px"}
 
 --- /task ---
 
-यह कंप्यूटर सिमुलेशन बहुत सटीक नहीं है, लेकिन यह हमारे एनीमेशन के लिए पर्याप्त है।
+Did your rocket stop when it ran out of fuel? Well done, you sent a rocket to outer space!
 
 --- save ---
 
