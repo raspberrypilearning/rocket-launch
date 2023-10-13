@@ -15,7 +15,7 @@ Elke keer dat er een nieuw frame wordt getekend, moet de raket omhoog bewegen op
 
 Het startproject heeft een raketafbeelding voor je.
 
-![Afbeelding van de raket in de Trinket-beeldbibliotheek.](images/trinket_rocket_image.png)
+![Image of the rocket in the code editor image gallery.](images/rocket_image.png)
 
 --- /task ---
 
@@ -40,6 +40,8 @@ raket = load_image('rocket.png')
 --- /code ---
 
 --- /task ---
+
+### Make the rocket fly
 
 De `y` positie van de raket begint bij 400 (de schermhoogte) en neemt vervolgens af met 1 telkens wanneer een nieuw frame wordt getekend.
 
@@ -74,9 +76,7 @@ line_highlights: 12-16
 ---
 
 # De teken_raket functie komt hier
-def teken_raket():
-
-  global raket_y #Gebruik de global raket_y variabele    
+global raket_y #Gebruik de global raket_y variabele    
 raket_y -= 1 #Verplaats de raket    
 image(raket, width/2, raket_y, 64, 64)
 
@@ -109,7 +109,7 @@ teken_raket()
 
 **Test:** Voer je code uit om te controleren of de raket onderaan het scherm begint en elk frame omhoog beweegt.
 
-![Afbeelding van de raket halverwege het scherm.](images/trinket_rocket_fly.gif)
+![Afbeelding van de raket halverwege het scherm.](images/rocket_fly.gif)
 
 --- /task ---
 
