@@ -12,6 +12,8 @@ To do this, you need to simulate how much fuel will be burned on the journey.
 
 </div>
 
+### Create a fuel variable
+
 --- task ---
 
 Add a variable to keep track of how much fuel your rocket burns (in frames).
@@ -25,7 +27,7 @@ line_highlights: 10
 # Setup global variables
 screen_size = 400   
 rocket_y = screen_size  
-burn = 100 #How much fuel is burned in each frame
+burn = 100  # How much fuel is burned in each frame
 
 --- /code ---
 
@@ -38,8 +40,8 @@ At the bottom of your program, add code to ask the user how much fuel to add to 
 
 --- code ---
 ---
-language: python filename: main.py line_numbers: true line_number_start: 52
-line_highlights: 52
+language: python filename: main.py line_numbers: true line_number_start: 51
+line_highlights: 51
 ---
 
 fuel = int(input('How many kilograms of fuel do you want to use?'))   
@@ -48,6 +50,8 @@ run()
 --- /code ---
 
 --- /task ---
+
+### Check fuel against burn
 
 The rocket should only move if it hasn't burned all of its fuel.
 
@@ -63,10 +67,10 @@ language: python filename: main.py — draw_rocket() line_numbers: true line_num
 line_highlights: 15, 17-18
 ---
 
-  global rocket_y, fuel, burn   
-rocket_y -= 1   
-fuel -= burn #Burn fuel   
-print('Fuel left: ', fuel)
+    global rocket_y, fuel, burn   
+    rocket_y -= 1   
+    fuel -= burn  # Burn fuel   
+    print('Fuel left: ', fuel)
 
 --- /code ---
 
@@ -93,27 +97,27 @@ The `image()` line doesn't need to be indented because you always want to draw t
 --- code ---
 ---
 language: python filename: main.py — draw_rocket() line_numbers: true line_number_start: 15
-line_highlights: 16-31
+line_highlights: 17-30
 ---
 
-  global rocket_y, fuel, burn
-
-  if fuel >= burn: #Still got fuel   
-rocket_y -= 1   
-fuel -= burn   
-print('Fuel left: ', fuel)   
-
-    no_stroke() #Turn off the stroke   
+    global rocket_y, fuel, burn  
     
-    for i in range(25):   
-      fill(255, 255 - i*10, 0)   
-      ellipse(width/2, rocket_y + i, 8, 3)    
+    if fuel >= burn:  # Still got fuel   
+        rocket_y -= 1   
+        fuel -= burn   
+        print('Fuel left: ', fuel)   
     
-    fill(200, 200, 200, 100)   
-    for i in range(20):   
-      ellipse(width/2 + randint(-5, 5), rocket_y + randint(20, 50), randint(5, 10), randint(5, 10))
-
-  image(rocket, width/2, rocket_y, 64, 64)
+        no_stroke()  # Turn off the stroke   
+    
+        for i in range(25):   
+            fill(255, 255 - i*10, 0)   
+            ellipse(width/2, rocket_y + i, 8, 3)    
+    
+        fill(200, 200, 200, 100)   
+        for i in range(20):   
+            ellipse(width/2 + randint(-5, 5), rocket_y + randint(20, 50), randint(5, 10), randint(5, 10))   
+    
+    image(rocket, width/2, rocket_y, 64, 64)
 
 --- /code ---
 
@@ -127,7 +131,7 @@ print('Fuel left: ', fuel)
 
 --- /task ---
 
-This computer simulation isn't very accurate, but it's good enough for our animation.
+Did your rocket stop when it ran out of fuel? Well done, you sent a rocket to outer space!
 
 --- save ---
 
