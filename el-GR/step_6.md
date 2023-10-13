@@ -17,6 +17,8 @@
 </div>
 </div>
 
+### Draw an orbit line
+
 --- task ---
 
 Δημιούργησε δύο νέες καθολικές μεταβλητές για να ορίσεις την ακτίνα του κύκλου της τροχιάς και τη θέση `y` της τροχιάς ως το σημείο που πρέπει να φτάσει το κέντρο του πυραύλου για να εκτοξεύσει τον δορυφόρο.
@@ -50,12 +52,12 @@ line_highlights: 42-45
 
 def draw_background():   
 background(0) #Συντόμευση για το background(0, 0, 0) — μαύρο   
-image(planet, width/2, height, 300, 300)
+image(planet, width/2, height, 300, 300)   
 
-  no_fill() #Απενεργοποίηση γεμίσματος  
-stroke(255) #Ορισμός της άσπρης πινελιάς   
-stroke_weight(2)   
-ellipse(width/2, height, orbit_radius * 2, orbit_radius * 2)
+    no_fill()  # Turn off any fill  
+    stroke(255)  # Set a white stroke   
+    stroke_weight(2)   
+    ellipse(width/2, height, orbit_radius * 2, orbit_radius * 2)
 
 --- /code ---
 
@@ -63,32 +65,34 @@ ellipse(width/2, height, orbit_radius * 2, orbit_radius * 2)
 
 --- task ---
 
-**Δοκιμή:** Εκτέλεσε το πρόγραμμά σου και έλεγξε ότι σχεδιάστηκε μια λευκή τροχιά.
+**Test:** Run your program and check that a white orbit line is drawn.
 
-![Η οθόνη με τον πλανήτη και τη νέα γραμμή τροχιάς.](images/draw_orbit.png){:width="300px"}
+![The screen with planet and new orbit line.](images/draw_orbit.png){:width="300px"}
 
 --- /task ---
 
-Ο πύραυλος θα πρέπει να σταματήσει όταν φτάσει στην τροχιά του δορυφόρου - το τέλος της αποστολής.
+### Launch the rocket to the orbit
+
+The rocket should stop when it reaches the satellite orbit — the end of the mission.
 
 --- task ---
 
-Ενημέρωσε τον κώδικά σου `if fuel >= burn` για να ελέγξεις επίσης ότι ο πύραυλος δεν έχει φτάσει στην τροχιά.
+Update your `if fuel >= burn` code to also check that the rocket hasn't reached the orbit.
 
-Μπορείς να χρησιμοποιήσεις το `and` σε ένα `if` για να ελέγξεις εάν ισχύουν δύο ή περισσότερες συνθήκες.
+Ενημέρωσε τον κώδικά σου `if fuel >= burn` για να ελέγξεις επίσης ότι ο πύραυλος δεν έχει φτάσει στην τροχιά.
 
 --- code ---
 ---
-language: python filename: main.py - draw_rocket() line_numbers: true line_number_start: 14
+language: python filename: main.py - draw_rocket() line_numbers: true line_number_start: 15
 line_highlights: 19
 ---
 
 # Η συνάρτηση draw_rocket πηγαίνει εδώ
-def draw_rocket():
+language: python filename: main.py - draw_rocket() line_numbers: true line_number_start: 14
 
-  global rocket_y, fuel, burn
-
-    if fuel >= burn and rocket_y > orbit_y: #Ακόμα πετάει
+        fill(200, 200, 200, 100)   
+    for i in range(20):   
+      ellipse(width/2 + randint(-5, 5), rocket_y + randint(20, 50), randint(5, 10), randint(5, 10))
 
 --- /code ---
 
@@ -96,11 +100,13 @@ def draw_rocket():
 
 --- task ---
 
-**Δοκιμή:** Εκτέλεσε το έργο σου και δώσε `50000` ως ποσότητα καυσίμου. Αυτό θα πρέπει να είναι άφθονο καύσιμο για να φτάσει σε τροχιά. Ο πύραυλος θα πρέπει να σταματήσει να κινείται όταν φτάσει σε τροχιά.
+**Test:** Run your project and enter `50000` as the amount of fuel. This should be plenty of fuel to reach orbit. The rocket should stop moving when it reaches orbit.
 
 --- /task ---
 
-Ο πύραυλος θα πρέπει να έχει κόκκινο χρώμα εάν τελειώσει το καύσιμο πριν φτάσει αρκετά ψηλά για να εκτοξεύσει τον δορυφόρο.
+### Check if the launch is successful
+
+The rocket should be coloured red if it runs out of fuel before getting high enough to launch the satellite.
 
 --- task ---
 
@@ -112,9 +118,10 @@ line_highlights: 34-35
 
     fill(200, 200, 200, 100)   
     for i in range(20):   
-      ellipse(width/2 + randint(-5, 5), rocket_y + randint(20, 50), randint(5, 10), randint(5, 10))
-
-  if fuel < burn and rocket_y > orbit_y: #Δεν υπάρχει καύσιμο και δεν είναι σε τροχιά tint(255, 0, 0) #Αποτυχία
+        ellipse(width/2 + randint(-5, 5), rocket_y + randint(20, 50), randint(5, 10), randint(5, 10))
+    
+    if fuel < burn and rocket_y > orbit_y:  # No more fuel and not in orbit   
+        tint(255, 0, 0)  # Failure
 
 --- /code ---
 
@@ -122,30 +129,31 @@ line_highlights: 34-35
 
 --- task ---
 
-**Δοκιμή:** Εκτέλεσε το έργο σου και δώσε `20000` ως ποσότητα καυσίμου. Έλεγξε ότι ο πύραυλος γίνεται κόκκινος όταν σταματά κάτω από την τροχιά.
+**Test:** Run your code and enter `20000` as the amount of fuel. Check that the rocket turns red when it stops below the orbit.
 
-![Ένας κόκκινος πύραυλος που έχει ξεμείνει από καύσιμα πριν από τον κύκλο της τροχιάς. Ο πλανήτης έχει γίνει κόκκινος.](images/orbit_failure.png){:width="300px"}
+![A red rocket that has run out of fuel before the orbit circle. The planet has also turned red.](images/orbit_failure.png){:width="300px"}
+
+Oh no, the planet has turned red!
+
+--- /task ---
+
+--- task ---
 
 Αχ όχι, ο πλανήτης έγινε κόκκινος!
 
---- /task ---
-
---- task ---
-
-Η συνάρτηση `tint()` ορίζει το χρώμα απόχρωσης για όλες τις εικόνες που σχεδιάζονται μέχρι να αλλάξεις την απόχρωση ή να χρησιμοποιήσεις το `no_tint()` για να το απενεργοποιήσεις.
-
-**Επίλεξε:** Πρόσθεσε μια κλήση στο `no_tint()` αφού σχεδιάσεις την εικόνα, έτσι ώστε ο πλανήτης να μην είναι κόκκινος στο επόμενο καρέ — ή άφησέ το αν θέλεις ο πλανήτης να γίνει κόκκινος!
+**Choose:** Add a call to `no_tint()` after drawing the image so that the planet isn't tinted red in the next frame — or leave it if you like the planet turning red!
 
 --- code ---
 ---
-language: python filename: main.py - draw_rocket() line_numbers: true line_number_start: 34
+Η συνάρτηση `tint()` ορίζει το χρώμα απόχρωσης για όλες τις εικόνες που σχεδιάζονται μέχρι να αλλάξεις την απόχρωση ή να χρησιμοποιήσεις το `no_tint()` για να το απενεργοποιήσεις.
 line_highlights: 38
 ---
 
-if fuel < burn and rocket_y > orbit_y: tint(255, 0, 0) #Αποτυχία
-
-image(rocket, width/2, rocket_y, 64, 64)   
-no_tint() #Έτσι ο πλανήτης δεν θα έχει κόκκινη απόχρωση στο επόμενο καρέ!
+    if fuel < burn and rocket_y > orbit_y:    
+        tint(255, 0, 0)  # Failure
+    
+    image(rocket, width/2, rocket_y, 64, 64)   
+    no_tint()  # So the planet isn't tinted red in the next frame!
 
 
 --- /code ---
@@ -154,7 +162,7 @@ no_tint() #Έτσι ο πλανήτης δεν θα έχει κόκκινη απ
 
 --- task ---
 
-Χρησιμοποίησε ξανά τη συνάρτηση `tint()`, αυτή τη φορά για να χρωματίσεις τον πύραυλο πράσινο εάν ο πύραυλος έχει αρκετό καύσιμο για να φτάσει στην τροχιά του δορυφόρου:
+if fuel < burn and rocket_y > orbit_y: tint(255, 0, 0) #Αποτυχία
 
 --- code ---
 ---
@@ -162,12 +170,13 @@ language: python filename: main.py - draw_rocket() line_numbers: true line_numbe
 line_highlights: 36-37
 ---
 
-if fuel < burn and rocket_y > orbit_y: tint(255, 0, 0) #Αποτυχία   
-elif rocket_y <= orbit_y:   
-tint(0, 255, 0) #Επιτυχία
-
-image(rocket, width/2, rocket_y, 64, 64)   
-no_tint()
+    if fuel < burn and rocket_y > orbit_y:    
+        tint(255, 0, 0)  # Failure   
+    elif rocket_y <= orbit_y:   
+        tint(0, 255, 0)  # Success   
+    
+    image(rocket, width/2, rocket_y, 64, 64)   
+    no_tint()
 
 --- /code ---
 
@@ -175,19 +184,19 @@ no_tint()
 
 --- task ---
 
-**Δοκιμή:** Εκτέλεσε το έργο σου και δώσε `50000` ως ποσότητα καυσίμου. Έλεγξε ότι ο πύραυλός σου γίνεται πράσινος όταν φτάσει στην τροχιά του δορυφόρου.
+**Test:** Run your project and enter `50000` as the amount of fuel. Check that your rocket turns green when it reaches the satellite orbit.
 
-![Ένας πράσινος πύραυλος που έχει φτάσει στον κύκλο της τροχιάς και του έχει μείνει καύσιμο.](images/orbit_success.png){:width="300px"}
+![A green rocket that has reached the orbit circle and has fuel left.](images/orbit_success.png){:width="300px"}
 
 --- /task ---
 
-Τώρα έχεις μια προσομοίωση που μπορεί να χρησιμοποιηθεί για να δείξει πόσο καύσιμο χρειάζεται τουλάχιστον για να φτάσει στην τροχιά του δορυφόρου. Αυτό είναι υπέροχο! Ωστόσο, θα μπορούσες να πάρεις μια τεράστια ποσότητα καυσίμου και να είναι επιτυχημένη η εκτόξευση, αλλά αυτό είναι δαπανηρό και σπάταλο!
+You now have a simulation that can be used to show how much fuel is needed as a minimum to reach the satellite orbit. That's great; however, you could take a huge amount of fuel and still be successful, but this is costly and wasteful!
 
 --- task ---
 
-Τροποποίησε τους όρους στον κώδικα επιτυχίας σου, ώστε ο πύραυλος να γίνει πράσινος μόνο εάν φτάσει στην τροχιά `και` έχει λιγότερο από 1.000 κιλά υπολειπόμενου καυσίμου.
+Amend the conditions in your success code so that the rocket only turns green if it reaches the orbit `and` has less than 1,000kg of fuel left.
 
-Πρόσθεσε κώδικα για να χρωματίσεις τον πύραυλο κίτρινο εάν ο πύραυλος έχει περισσότερα από 1.000 κιλά υπολειπόμενου καυσίμου όταν φτάσει σε τροχιά.
+Add code to colour the rocket yellow if the rocket has more than 1,000kg of fuel left when it reaches orbit.
 
 --- code ---
 ---
@@ -195,14 +204,15 @@ language: python filename: main.py line_numbers: true line_number_start: 34
 line_highlights: 36, 38-39
 ---
 
-if fuel < burn and rocket_y > orbit_y: tint(255, 0, 0) #Αποτυχία   
-elif fuel < 1000 and rocket_y <= orbit_y:   
-tint(0, 255, 0) #Επιτυχία   
-elif fuel >= 1000 and rocket_y <= orbit_y:    
-tint(255, 200, 0) #Πάρα πολύ καύσιμο
-
-image(rocket, width/2, rocket_y, 64, 64)    
-no_tint() #Έτσι ο πλανήτης δεν είναι χρωματισμένος στο επόμενο καρέ!
+    if fuel < burn and rocket_y > orbit_y:   
+        tint(255, 0, 0)  # Failure   
+    elif fuel < 1000 and rocket_y <= orbit_y:   
+        tint(0, 255, 0)  # Success   
+    elif fuel >= 1000 and rocket_y <= orbit_y:    
+        tint(255, 200, 0)  # Too much fuel   
+    
+    image(rocket, width/2, rocket_y, 64, 64)    
+    no_tint()  # So the planet isn't tinted in the next frame!
 
 --- /code ---
 
@@ -210,9 +220,9 @@ no_tint() #Έτσι ο πλανήτης δεν είναι χρωματισμέν
 
 --- task ---
 
-**Δοκιμή:** Εκτέλεσε το πρόγραμμά σου πολλές φορές με διαφορετικούς αριθμούς. Για παράδειγμα, 25.000 κιλά καυσίμου θα πρέπει να είναι η ποσότητα που χρειάζεται για να γίνει πράσινος ο πύραυλος, αλλά επίσης έλεγξε ότι η κίτρινη απόχρωση λειτουργεί επίσης χρησιμοποιώντας μεγαλύτερο αριθμό.
+Τροποποίησε τους όρους στον κώδικα επιτυχίας σου, ώστε ο πύραυλος να γίνει πράσινος μόνο εάν φτάσει στην τροχιά `και` έχει λιγότερο από 1.000 κιλά υπολειπόμενου καυσίμου.
 
-![Ένας κίτρινος πύραυλος που έχει φτάσει στον κύκλο της τροχιάς και του έχει μείνει καύσιμο.](images/orbit_meh.png){:width="300px"}
+![A yellow rocket that has reached the orbit circle and has fuel left.](images/orbit_meh.png){:width="300px"}
 
 --- /task ---
 
