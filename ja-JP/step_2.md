@@ -13,9 +13,9 @@
 
 --- task ---
 
-[プロジェクトテンプレート](https://trinket.io/python/f2199f5a8c){:target="_blank"}を開きます。
+[プロジェクトテンプレート](https://trinket.io/python/ace602d441){:target="_blank"}を開きます。
 
-Trinketアカウントをお持ちの場合は、**Remix**ボタンをクリックして、 `My Trinkets`ライブラリにコピーを保存できます。
+### Create the screen
 
 --- /task ---
 
@@ -57,19 +57,21 @@ size(screen_size, screen_size)
 
 --- /task ---
 
+### Choose an image
+
 --- task ---
 
 スタータープロジェクトには、3つの異なる惑星と月の画像が用意されています。 これらは、[ **View and Add Images**] ボタンを選択することにより、Trinket画像ライブラリで表示できます。
 
-![プラス記号、アップロード記号、および画像記号。 画像記号が強調表示されます。](images/trinket_image.png)
+![A screenshot of the code editor, with the image gallery highlighted containing images of planets and the moon.](images/image_gallery.png)
 
 **選択：** 使いたい画像を決め、ファイル名をメモします。 例えば、`orange_planet.png`などです。
 
 --- /task ---
 
-`setup()` で画像をロードすることをお勧めします。画像を使用する必要があるときには準備ができており、アニメーションがすばやく実行されるからです。
-
 --- task ---
+
+`setup()` で画像をロードすることをお勧めします。
 
 `image_mode(CENTER)` の行は、（左上隅ではなく）画像の中心の座標を指定して画像を配置することを示しています。
 
@@ -92,6 +94,8 @@ planet = load_image('planet.png') #あなたが選んだ惑星
 --- /code ---
 
 --- /task ---
+
+### Draw background
 
 --- task ---
 
@@ -144,5 +148,7 @@ draw_background()
 **テスト：** コードを実行し、下部に惑星が半分描かれた黒い背景が描画されることを確認します。
 
 --- /task ---
+
+If you have a Raspberry Pi account, on your code editor you can click on the **Save** button to save a copy of your project to your Projects.
 
 --- save ---
