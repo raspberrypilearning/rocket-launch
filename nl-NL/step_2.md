@@ -13,9 +13,9 @@ De animatie heeft een ruimte achtergrond nodig met een planeet om de raket vanaf
 
 --- task ---
 
-Open het [-projectsjabloon](https://trinket.io/python/f2199f5a8c){:target="_blank"}.
+Open het [-projectsjabloon](https://trinket.io/python/9ef894a933){:target="_blank"}.
 
-Als je een Trinket-account hebt, kun je op de knop **Remix** klikken om een kopie op te slaan in je `My Trinkets`-bibliotheek.
+### Create the screen
 
 --- /task ---
 
@@ -36,7 +36,7 @@ scherm_grootte = 400
 
 --- /code ---
 
--- /task ---
+--- /task ---
 
 --- task ---
 
@@ -57,19 +57,21 @@ size(scherm_grootte, scherm_grootte)
 
 --- /task ---
 
+### Choose an image
+
 --- task ---
 
 Het startproject heeft drie verschillende planeetafbeeldingen en de maan voor jou beschikbaar. Je kunt deze bekijken in de Trinket-afbeeldingen bibliotheek door de knop **View and Add Images** te selecteren.
 
-![Een plusteken, een uploadsymbool en een afbeeldingssymbool. Het afbeeldingssymbool is gemarkeerd.](images/trinket_image.png)
+![A screenshot of the code editor, with the image gallery highlighted containing images of planets and the moon.](images/image_gallery.png)
 
 **Kies:** Bepaal welke afbeelding je wilt gebruiken en noteer de bestandsnaam. Bijvoorbeeld `orange_planet.png`.
 
 --- /task ---
 
-Het is een goed idee om afbeeldingen in `setup()` te laden, zodat ze klaar zijn wanneer je ze moet gebruiken en je animatie snel zal worden uitgevoerd.
-
 --- task ---
+
+Add code to the `setup()` function to load and position your image.
 
 De regel `image_mode(CENTER)` zegt dat je afbeeldingen gaat positioneren door de coördinaten van het midden van de afbeelding op te geven (in plaats van de linkerbovenhoek).
 
@@ -91,7 +93,9 @@ planeet = load_image('planet.png') #Je gekozen planeet
 
 --- /code ---
 
--- /task ---
+--- /task ---
+
+### Draw background
 
 --- task ---
 
@@ -105,7 +109,7 @@ De `p5` bibliotheek stelt global variabelen `width` (breedte) en `height` (hoogt
 
 --- code ---
 ---
-language: python filename: main.py — draw_background() line_numbers: true line_number_start: 14
+language: python filename: main.py — teken_achtergrond() line_numbers: true line_number_start: 14
 line_highlights: 15-17
 ---
 
@@ -117,9 +121,9 @@ image(planeet, width/2, height, 300, 300) #Teken de afbeelding
 
 --- /code ---
 
-Door alle code voor het tekenen van de achtergrond in één functie te plaatsen, word je code gemakkelijker te begrijpen.
+Door alle code voor het tekenen van de achtergrond in één functie te plaatsen, wordt je code gemakkelijker te begrijpen.
 
--- /task ---
+--- /task ---
 
 --- task ---
 
@@ -137,12 +141,14 @@ teken_achtergrond()
 
 --- /code ---
 
--- /task ---
+--- /task ---
 
 --- task ---
 
 **Test:** Voer je code uit en controleer of deze een zwarte achtergrond tekent met onderaan een halve planeet.
 
--- /task ---
+--- /task ---
+
+Als je een Trinket-account hebt, kun je op de knop **Remix** klikken om een kopie op te slaan in je `My Trinkets`-bibliotheek.
 
 --- save ---
