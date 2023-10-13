@@ -12,6 +12,8 @@
 
 </div>
 
+### Create a fuel variable
+
 --- task ---
 
 أضف متغيرًا لتتبع مقدار الوقود الذي يحرقه صاروخك (في الإطارات).
@@ -49,6 +51,8 @@ run()
 
 --- /task ---
 
+### Check fuel against burn
+
 يجب ألا يتحرك الصاروخ إلا إذا لم يحرق كل وقوده.
 
 --- task ---
@@ -63,10 +67,10 @@ language: python filename: main.py — draw_rocket() line_numbers: true line_num
 line_highlights: 15, 17-18
 ---
 
-  global rocket_y, fuel, burn   
-rocket_y -= 1   
-fuel -= burn #حرق الوقود   
-print('Fuel left: ', fuel)
+    global rocket_y, fuel, burn<br x-id="3" />
+      rocket_y -= 1<br x-id="3" />
+      fuel -= burn #حرق الوقود<br x-id="3" />
+      print('Fuel left: ', fuel)
 
 --- /code ---
 
@@ -74,7 +78,7 @@ print('Fuel left: ', fuel)
 
 --- task ---
 
-**اختبار:** قم بتشغيل البرنامج الخاص بك للتأكد من أن الرسوم المتحركة لا تبدأ حتى يتم الرد على السؤال `كم كيلو جرام من الوقود تريد استخدامه؟`. حاول إدخال `30000` كمقدار للوقود.
+**اختبار:** قم بتشغيل البرنامج الخاص بك للتأكد من أن الرسوم المتحركة لا تبدأ حتى يتم الرد على السؤال `How many kilograms of fuel do you want to use?`. حاول إدخال `30000` كمقدار للوقود.
 
 سيستمر الصاروخ في التحرك حتى لو لم يتبق له وقود.
 
@@ -86,22 +90,15 @@ print('Fuel left: ', fuel)
 
 يجب أن يتحرك الصاروخ فقط في حالة وجود وقود كافٍ. أضف عبارة `if` للتحقق من أن `fuel >= burn`.
 
-ستحتاج إلى مسافة بادئة لجميع أسطر الكود قبل استدعاء الدالة `image ()`. للقيام بذلك ، قم بتمييز جميع الخطوط بالماوس ثم انقر فوق الزر <kbd>Tab</kbd> الموجود على لوحة المفاتيح لوضع مسافة بادئة لجميع الأسطر مرة واحدة.
+ستحتاج إلى مسافة بادئة لجميع أسطر الكود قبل استدعاء الدالة `image()`. للقيام بذلك ، قم بتمييز جميع الخطوط بالماوس ثم انقر فوق الزر <kbd>Tab</kbd> الموجود على لوحة المفاتيح لوضع مسافة بادئة لجميع الأسطر مرة واحدة.
 
-لا يلزم وضع مسافة بادئة للسطر `() image` لأنك تريد دائمًا رسم الصاروخ.
+لا يلزم وضع مسافة بادئة للسطر `image()` لأنك تريد دائمًا رسم الصاروخ.
 
 --- code ---
 ---
 language: python filename: main.py — draw_rocket() line_numbers: true line_number_start: 15
 line_highlights: 16-31
 ---
-
-  global rocket_y, fuel, burn
-
-  if fuel >= burn: #وقود لا يزال موجود   
-rocket_y -= 1   
-fuel -= burn   
-print('Fuel left: ', fuel)   
 
     no_stroke() #اطفاء stroke   
     
@@ -112,8 +109,6 @@ print('Fuel left: ', fuel)
     fill(200, 200, 200, 100)   
     for i in range(20):   
       ellipse(width/2 + randint(-5, 5), rocket_y + randint(20, 50), randint(5, 10), randint(5, 10))
-
-  image(rocket, width/2, rocket_y, 64, 64)
 
 --- /code ---
 
@@ -127,7 +122,7 @@ print('Fuel left: ', fuel)
 
 --- /task ---
 
-هذه المحاكاة الحاسوبية ليست دقيقة للغاية ، لكنها جيدة بما يكفي للرسوم المتحركة لدينا.
+Did your rocket stop when it ran out of fuel? Well done, you sent a rocket to outer space!
 
 --- save ---
 
