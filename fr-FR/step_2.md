@@ -13,9 +13,9 @@ L'animation nécessite un arrière-plan spatiale avec une planète à partir de 
 
 --- task ---
 
-Ouvre le [modèle de projet](https://trinket.io/python/f2199f5a8c){:target="_blank"}.
+Ouvre le [modèle de projet](https://trinket.io/python/c4a1baa437){:target="_blank"}.
 
-Si tu as un compte Trinket, tu peux cliquer sur le bouton **Remix** pour enregistrer une copie dans ta bibliothèque `My Trinkets`.
+### Create the screen
 
 --- /task ---
 
@@ -48,7 +48,7 @@ language: python filename: main.py — setup() line_numbers: true line_number_st
 line_highlights: 20
 ---
 
-def configuration():   
+def setup():   
 #Configure ton animation ici   
 size(taille_ecran, taille_ecran)
 
@@ -57,19 +57,21 @@ size(taille_ecran, taille_ecran)
 
 --- /task ---
 
+### Choose an image
+
 --- task ---
 
 Le projet de démarrage a trois images de planètes différentes et la lune t'est fournie. Tu peux les afficher dans la bibliothèque d'images Trinket en sélectionnant le bouton **View and Add Images**.
 
-![Un symbole plus, un symbole de téléchargement et un symbole d'image. Le symbole de l'image est mis en surbrillance.](images/trinket_image.png)
+![A screenshot of the code editor, with the image gallery highlighted containing images of planets and the moon.](images/image_gallery.png)
 
 **Choisir :** Décide quelle image tu veux utiliser et note le nom du fichier. Par exemple, `orange_planet.png`.
 
 --- /task ---
 
-C'est une bonne idée de charger les images dans `setup()` afin qu'elles soient prêtes lorsque tu en auras besoin et que ton animation s'exécute rapidement.
-
 --- task ---
+
+Add code to the `setup()` function to load and position your image.
 
 La ligne `image_mode(CENTER)` indique que tu vas positionner les images en donnant les coordonnées du centre de l'image (au lieu du coin supérieur gauche).
 
@@ -81,7 +83,7 @@ language: python filename: main.py line_numbers: true line_number_start: 18
 line_highlights: 21-23
 ---
 
-def configuration():   
+def setup():   
 #Configure ton animation ici   
 size(taille_ecran, taille_ecran)   
 image_mode(CENTER)   
@@ -92,6 +94,8 @@ planete = load_image('planet.png') #Ta planète choisie
 --- /code ---
 
 --- /task ---
+
+### Draw background
 
 --- task ---
 
@@ -105,7 +109,7 @@ La bibliothèque `p5` définit des variables globales `width` et `height` en fon
 
 --- code ---
 ---
-language: python filename: main.py — draw_background() line_numbers: true line_number_start: 14
+language: python filename: main.py — dessine_arriere_plan() line_numbers: true line_number_start: 14
 line_highlights: 15-17
 ---
 
@@ -123,7 +127,7 @@ Mettre tout le code pour dessiner l'arrière-plan dans une seule fonction rend t
 
 --- task ---
 
-Pour faire apparaître l'arrière-plan, appelle `dessine_arriere_plan()` dans `dessin()`. Cela fera en sorte que l'arrière-plan soit redessiné chaque fois que `draw()` est appelé, couvrant ainsi tout dessin plus ancien :
+Pour faire apparaître l'arrière-plan, appelle `dessine_arriere_plan()` dans `draw()`. Cela fera en sorte que l'arrière-plan soit redessiné chaque fois que `draw()` est appelé, couvrant ainsi tout dessin plus ancien :
 
 --- code ---
 ---
@@ -131,7 +135,7 @@ language: python filename: main.py — draw() line_numbers: true line_number_sta
 line_highlights: 30
 ---
 
-def dessin():   
+def draw():   
 #choses à faire dans chaque image    
 dessine_arriere_plan()
 
@@ -144,5 +148,7 @@ dessine_arriere_plan()
 **Test :** Exécute ton code et vérifie qu'il dessine un arrière-plan noir avec une demi-planète en bas.
 
 --- /task ---
+
+Si tu as un compte Trinket, tu peux cliquer sur le bouton **Remix** pour enregistrer une copie dans ta bibliothèque `My Trinkets`.
 
 --- save ---
