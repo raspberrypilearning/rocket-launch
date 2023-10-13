@@ -17,6 +17,8 @@
 </div>
 </div>
 
+### Draw an orbit line
+
 --- task ---
 
 2つの新しいグローバル変数を作成して、軌道円の半径と、衛星を発射するためにロケットの中心が到達する必要のあるポイントまでの軌道の `y` 座標を設定します。
@@ -50,12 +52,12 @@ line_highlights: 42-45
 
 def draw_background():   
 background(0) #background(0, 0, 0) の省略形 - 黒   
-image(planet, width/2, height, 300, 300)
+image(planet, width/2, height, 300, 300)   
 
-  no_fill() #塗りつぶしなし  
-stroke(255) #白の境界線を設定   
-stroke_weight(2)   
-ellipse(width/2, height, orbit_radius * 2, orbit_radius * 2)
+    no_fill() #塗りつぶしなし<br x-id="2" />
+      stroke(255) #白の境界線を設定<br x-id="3" />
+      stroke_weight(2)<br x-id="3" />
+      ellipse(width/2, height, orbit_radius * 2, orbit_radius * 2)
 
 --- /code ---
 
@@ -68,6 +70,8 @@ ellipse(width/2, height, orbit_radius * 2, orbit_radius * 2)
 ![惑星と新しい軌道線のある画面。](images/draw_orbit.png){:width="300px"}
 
 --- /task ---
+
+### if fuel < burn and rocket_y > orbit_y: #燃料がなくなり、軌道上にもない tint(255, 0, 0) #失敗
 
 ロケットは衛星軌道に到達したとき - ミッションの終わり - に停止する必要があります。
 
@@ -86,9 +90,7 @@ line_highlights: 19
 # draw_rocket関数はここにあります
 def draw_rocket():
 
-  global rocket_y, fuel, burn
-
-    if fuel >= burn and rocket_y > orbit_y: #まだ飛行中
+        if fuel >= burn and rocket_y > orbit_y: #まだ飛行中
 
 --- /code ---
 
@@ -99,6 +101,8 @@ def draw_rocket():
 **テスト：** プロジェクトを実行し、燃料の量として `50000` を入力します。 これは軌道に到達するのに十分な燃料です。 ロケットは軌道に到達すると動きを停止するはずです。
 
 --- /task ---
+
+### Check if the launch is successful
 
 ロケットが衛星を打ち上げるのに十分な高さになる前に燃料がなくなった場合、ロケットは赤色になります。
 
@@ -113,8 +117,6 @@ line_highlights: 34-35
     fill(200, 200, 200, 100)   
     for i in range(20):   
       ellipse(width/2 + randint(-5, 5), rocket_y + randint(20, 50), randint(5, 10), randint(5, 10))
-
-  if fuel < burn and rocket_y > orbit_y: #燃料がなくなり、軌道上にもない tint(255, 0, 0) #失敗
 
 --- /code ---
 
@@ -134,7 +136,8 @@ line_highlights: 34-35
 
 `tint()` 関数は、色合いを変更するか、 `no_tint()` を使用して色合いをオフにするまで、描画されるすべての画像の色合いの色を変えます。
 
-**選択：** 次のフレームで惑星が赤く染まらないように、画像を描画した後に `no_tint()` の呼び出しを追加します。または、惑星が赤くなるのが好きな場合はそのままにしておきます。
+image(rocket, width/2, rocket_y, 64, 64)    
+no_tint() #次のフレームで惑星が色付けされないように!
 
 --- code ---
 ---
@@ -142,10 +145,8 @@ language: python filename: main.py - draw_rocket() line_numbers: true line_numbe
 line_highlights: 38
 ---
 
-if fuel < burn and rocket_y > orbit_y: tint(255, 0, 0) #失敗
-
-image(rocket, width/2, rocket_y, 64, 64)   
-no_tint() #次のフレームで惑星が赤い色合いにならないように!
+    image(rocket, width/2, rocket_y, 64, 64)<br x-id="3" />
+    no_tint() #次のフレームで惑星が赤い色合いにならないように!
 
 
 --- /code ---
@@ -154,7 +155,7 @@ no_tint() #次のフレームで惑星が赤い色合いにならないように
 
 --- task ---
 
-`tint()` 関数をもう一度使用します。今回は、ロケットに衛星軌道に到達するのに十分な燃料がある場合に、ロケットを緑色に着色します。
+if fuel < burn and rocket_y > orbit_y: tint(255, 0, 0) #失敗
 
 --- code ---
 ---
@@ -162,12 +163,10 @@ language: python filename: main.py - draw_rocket() line_numbers: true line_numbe
 line_highlights: 36-37
 ---
 
-if fuel < burn and rocket_y > orbit_y: tint(255, 0, 0) #失敗   
-elif rocket_y <= orbit_y:   
-tint(0, 255, 0) #成功
-
-image(rocket, width/2, rocket_y, 64, 64)   
-no_tint()
+    if fuel &#060; burn and rocket_y &#062; orbit_y: 
+      tint(255, 0, 0) #失敗<br x-id="3" />
+    elif rocket_y &#060;= orbit_y:<br x-id="3" />
+      tint(0, 255, 0) #成功
 
 --- /code ---
 
@@ -195,14 +194,12 @@ language: python filename: main.py line_numbers: true line_number_start: 34
 line_highlights: 36, 38-39
 ---
 
-if fuel < burn and rocket_y > orbit_y: tint(255, 0, 0) #失敗   
-elif fuel < 1000 and rocket_y <= orbit_y:   
-tint(0, 255, 0) #成功   
-elif fuel >= 1000 and rocket_y <= orbit_y:    
-tint(255, 200, 0) #燃料が多すぎる
-
-image(rocket, width/2, rocket_y, 64, 64)    
-no_tint() #次のフレームで惑星が色付けされないように!
+    if fuel &#060; burn and rocket_y &#062; orbit_y: 
+      tint(255, 0, 0) #失敗<br x-id="3" />
+    elif fuel &#060; 1000 and rocket_y &#060;= orbit_y:<br x-id="3" />
+      tint(0, 255, 0) #成功<br x-id="3" />
+    elif fuel &#062;= 1000 and rocket_y &#060;= orbit_y:<br x-id="4" />
+      tint(255, 200, 0) #燃料が多すぎる
 
 --- /code ---
 
@@ -210,7 +207,7 @@ no_tint() #次のフレームで惑星が色付けされないように!
 
 --- task ---
 
-**テスト：** 異なる数値でプログラムを数回実行します。たとえば、25,000kgの燃料は、ロケットを緑色に変えるのに必要な量である必要がありますが、より大きな数値を使用して、黄色の色合いも機能することを確認してください。
+**テスト：** 異なる数値でプログラムを数回実行します。 たとえば、25,000kgの燃料は、ロケットを緑色に変えるのに必要な量である必要がありますが、より大きな数値を使用して、黄色の色合いも機能することを確認してください。
 
 ![軌道円に到達し、燃料が残っている黄色いロケット。](images/orbit_meh.png){:width="300px"}
 
