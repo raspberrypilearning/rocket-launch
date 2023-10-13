@@ -1,3 +1,7 @@
+<div class="c-survey-banner" style="width:100%">
+  <a class="c-survey-banner__link" href="https://form.raspberrypi.org/f/code-editor-feedback" target="_blank">Take our survey</a> to help make our Code Editor better!
+</div>
+
 ## Ти зробиш
 
 Створиш анімацію, яка виведе супутник на орбіту - скориставшись космічною ракетою! Твоя анімація буде створювати круті графічні ефекти та максимально ефективно використовувати паливо, необхідне для ракети.
@@ -21,11 +25,12 @@
 
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 175px; flex-grow: 1">  
-Тобі потрібно забезпечити ракету достатньою кількістю палива, щоб вона вийшла на орбіту супутника. Спробуй невелику кількість (близько 10,000кг) та дуже велику кількість (близько 50,000кг), щоб дізнатися, що з цього вийде. 
+You need to supply the rocket with enough fuel to reach the satellite orbit. Try a small amount (around 10,000kg) and a very large amount (around 50,000kg) to see what happens. 
 
-Скільки пального достатньо, щоб уникнути його надлишку?
+How much fuel is just enough without too much left over?
 </div>
-<iframe src="https://trinket.io/embed/python/622b4dd113?outputOnly=true&runOption=run&start=result" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+<iframe src="https://editor.raspberrypi.org/en/embed/viewer/rocket-launch-example" width="600" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen>
+</iframe>
 </div>
 
 --- /task ---
@@ -34,7 +39,7 @@
 
 --- print-only ---
 
-![Завершений проєкт.](images/showcase.png)
+![Completed project example of rocket ships flying into outer space.](images/showcase.png)
 
 --- /print-only ---
 
