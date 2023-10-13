@@ -22,9 +22,9 @@ planeta
 
 Quantos quilogramas de combustível você quer usar?
 
-pontos
+Quanto combustível o foguete deve queimar em cada quadro?
 
-How far should the rocket travel each frame?
+Qual a distância que o foguete deve percorrer em cada quadro?
 
 Ciclo
 
