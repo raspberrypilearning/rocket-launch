@@ -13,17 +13,17 @@ A animação precisa de um cenário espacial com um planeta para lançar o fogue
 
 --- task ---
 
-Open the [project template](https://editor.raspberrypi.org/en/projects/rocket-launch-starter){:target="_blank"}.
+Abra o [modelo de projeto](https://editor.raspberrypi.org/en/projects/rocket-launch-starter){:target="_blank"}.
 
-### Create the screen
+### Crie a tela
 
 --- /task ---
 
-You will use a `screen_size` variable to set the size of the screen and in calculations. Variables defined outside functions are **global** so you can use them anywhere in your program.
+Você usará uma variável `tamanho_tela` para definir o tamanho da tela e nos cálculos. As variáveis definidas fora das funções são **globais** para que você possa usá-las em qualquer lugar do seu programa.
 
 --- task ---
 
-Find the comment `Setup global variables` and add a line of code to create your `screen_size` variable:
+Encontre o comentário `Configurar variáveis globais` e adicione uma linha de código para criar sua variável `tamanho_tela`:
 
 --- code ---
 ---
@@ -32,7 +32,7 @@ line_highlights: 8
 ---
 
 # Configurar variáveis globais
-screen_size = 400
+tamanho_tela = 400
 
 --- /code ---
 
@@ -40,7 +40,7 @@ screen_size = 400
 
 --- task ---
 
-Use the `screen_size` variable to create a square 400 by 400 pixels:
+Use a variável `tamanho_tela` para criar um quadrado de 400 por 400 pixels:
 
 --- code ---
 ---
