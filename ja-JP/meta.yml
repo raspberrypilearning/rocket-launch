@@ -2,6 +2,8 @@
 title: ロケット打ち上げ
 hero_image: images/banner.png
 description: 衛星を軌道に乗せるロケットのアニメーションを作成します
+meta_title: Python coding projects for kids and teens | Rocket launch
+meta_description: Learn Python with the Raspberry Pi Foundation's coding projects for kids and teens. Make a Python animation that shows a rocket launching a satellite into orbit.
 version: 0.0.1
 listed: true
 copyedit: true
