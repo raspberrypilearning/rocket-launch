@@ -18,63 +18,67 @@ Fe allwch chi greu effeithiau cŵl drwy ddefnyddio dolen `for` i lunio nifer o s
 <p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;">
 Mae codio'n cael ei ddefnyddio i wneud <span style="color: #0faeb0">**effeithiau graffeg**</span> ar gyfer ffilmiau a gemau. Mae'n gyflymach o lawer ysgrifennu cod na llunio pob ffrâm mewn animeiddiad yn unigol. </p>
 
+### Draw your exhaust
+
 Mae llunio nifer o elipsau melyn mewn gwahanol safleoedd `y` yn creu ôl ecsôst gyda gwaelod crwn.
 
 --- task ---
 
-Mae dolen `for` yn ailadrodd darn o god unwaith ar gyfer bob eitem sy'n cael ei rhoi iddi. Fe allwch chi ddefnyddio'r swyddogaeth `range()` i redeg y cod mewn dolen `for` hyn a hyn o weithiau. Er enghraifft, mae `range(5)` yn creu dilyniant o bum rhif yn dechrau ar 0, felly [0, 1, 2, 3, 4].
-
-Bob tro mae'r ddolen `for` yn ailadrodd, mae'n gosod newidyn ar gyfer yr eitem bresennol er mwyn i chi allu ei defnyddio yn y ddolen.
-
-Diweddarwch eich swyddogaeth `llunio_roced()` i gynnwys dolen `for` sy'n ailadrodd y lluniad o `25` elips ecsôst. Mae'r **newidyn dolen** `i` yn cael ei ychwanegu at `roced_y` i lunio pob elips yn bellach o dan y roced.
+Update your `draw_rocket()` function to include a `for` loop that repeats the drawing of `25` exhaust ellipses. The **loop variable** `i` gets added to `rocket_y` to draw each ellipse further below the rocket.
 
 --- code ---
 ---
 language: python filename: main.py - draw_rocket() line_numbers: true line_number_start: 12
-line_highlights: 16-22
+line_highlights: 16-20
 ---
 
-def draw_rocket():
+def draw_rocket(): global rocket_y   
+rocket_y -= 1   
 
-  global rocket_y   
-rocket_y -= 1
-
-  no_stroke() #Turn off the stroke
-
-  for i in range(25): #Draw 25 burning exhaust ellipses   
-fill(255, 255, 0) #Yellow   
-ellipse(width/2, rocket_y + i, 8, 3) #i increases each time the loop repeats
-
-  image(rocket, width/2, rocket_y, 64, 64)
+    no_stroke()  # Turn off the stroke
+    
+    for i in range(25):  # Draw 25 burning exhaust ellipses   
+        fill(255, 255, 0)  # Yellow   
+        ellipse(width/2, rocket_y + i, 8, 3)  # i increases each time the loop repeats    
+    
+    image(rocket, width/2, rocket_y, 64, 64)
 
 
 --- /code ---
 
 --- /task ---
 
+A `for` loop repeats a piece of code once for every item it is given.
+
+To run the code in a `for` loop a certain number of times, you can use the `range()` function. For example, `range(5)` creates a sequence of five numbers starting from 0, so [0, 1, 2, 3, 4].
+
+Each time the `for` loop repeats, it sets a variable to the current item so that you can use it in the loop.
+
 --- task ---
 
-**Profi:** Rhedwch eich cod i wneud yn siŵr bod gan y roced ôl ecsôst newydd.
+**Test:** Run your code to check the rocket has a new exhaust trail.
 
-![Golwg agos ar y roced gydag ôl ecsôst.](images/rocket_exhaust.png){:width="300px"}
+![A close-up of the rocket with an exhaust trail.](images/rocket_exhaust.png){:width="300px"}
 
 --- /task ---
 
-Mae modd defnyddio'r newidyn `i` hefyd i greu graddiant lliw gyda llai o wyrdd ym mhob elips sy'n cael ei lunio.
+### Add a gradient
+
+The `i` variable can also be used to create a colour gradient with less green in each ellipse that gets drawn.
 
 --- task ---
 
-Newidiwch yr alwad i `fill()` i osod lefel y gwyrdd ar `255 - i*10` fel bod gan yr elips cyntaf yr un faint o goch a gwyrdd, a'r elips olaf ychydig iawn o wyrdd.
+Change the call to `fill()` to set the amount of green to `255 - i * 10` so that the first ellipse has equal amounts of red and green and the last ellipse has very little green.
 
 --- code ---
 ---
-language: python filename: main.py - draw_rocket() line_numbers: true line_number_start: 19
-line_highlights: 20
+language: python filename: main.py - draw_rocket() line_numbers: true line_number_start: 18
+line_highlights: 19
 ---
 
-  for i in range(25):   
-fill(255, 255 - i * 10, 0) #Reduce the amount of green    
-ellipse(width/2, rocket_y + i, 8, 3)
+    for i in range(25):   
+        fill(255, 255 - i * 10, 0)  # Reduce the amount of green    
+        ellipse(width/2, rocket_y + i, 8, 3)
 
 --- /code ---
 
@@ -82,35 +86,37 @@ ellipse(width/2, rocket_y + i, 8, 3)
 
 --- task ---
 
-**Profi:** Gwnewch yn siŵr eich bod yn cael ôl elips sy'n newid o felyn i goch yn raddol.
+**Test:** Check that you get a trail of ellipses gradually changing from yellow to red.
 
 --- /task ---
 
-Mae'r ôl mwg ecsôst yn cael ei greu drwy lunio nifer o elips llwyd sydd ychydig yn dryloyw mewn safle gwahanol ym mhob ffrâm.
+### Create a smoke effect
 
-![Animeiddiad araf o'r effaith mwg.](images/rocket_smoke.gif)
+The smoke exhaust trail is created by drawing lots of slightly transparent grey ellipses at different positions in each frame.
+
+![A slow animation of the smoke effect.](images/rocket_smoke.gif)
 
 --- task ---
 
-Tro hwn, mae'r `fill()` tu allan i'r ddolen gan fod y lliw yr un fath i bob elips mwg. Anhryloywedd yw pedwerydd mewnbwn `fill()`. Mae gwerth anhryloywedd isel yn gwneud y lliw yn fwy tryloyw er mwyn i chi allu gweld y siapiau oddi tano.
+This time the `fill()` is outside the loop as the colour is the same for each smoke ellipse. The fourth input to `fill()` is the opacity, a low opacity value makes the colour more transparent so you can see the shapes underneath.
 
-Ym mhob ffrâm yn yr animeiddiad, bydd 20 elips o feintiau ar hap yn cael eu llunio mewn safleoedd ar hap.
+In each frame of the animation, 20 ellipses of random sizes will be drawn at random positions.
 
 --- code ---
 ---
-language: python filename: main.py - draw_rocket() line_numbers: true line_number_start: 19
-line_highlights: 23-26
+language: python filename: main.py - draw_rocket() line_numbers: true line_number_start: 18
+line_highlights: 22-24
 ---
 
-  for i in range(25):  
-fill(255, 255 - i * 10, 0)   
-ellipse(width/2, rocket_y + i, 8, 3)
-
-  fill(200, 200, 200, 100) #Transparent grey   
-for i in range(20): #Draw 20 random smoke ellipses    
-ellipse(width/2 + randint(-5, 5), rocket_y + randint(20, 50), randint(5, 10), randint(5, 10))
-
-  image(rocket, width/2, rocket_y, 64, 64)
+    for i in range(25):  
+        fill(255, 255 - i * 10, 0)   
+        ellipse(width/2, rocket_y + i, 8, 3)    
+    
+    fill(200, 200, 200, 100)  # Transparent grey   
+    for i in range(20):  # Draw 20 random smoke ellipses    
+        ellipse(width/2 + randint(-5, 5), rocket_y + randint(20, 50), randint(5, 10), randint(5, 10))    
+    
+    image(rocket, width/2, rocket_y, 64, 64)
 
 --- /code ---
 
@@ -118,9 +124,9 @@ ellipse(width/2 + randint(-5, 5), rocket_y + randint(20, 50), randint(5, 10), ra
 
 --- task ---
 
-**Profi:** Rhedwch eich rhaglen a gwneud yn siŵr bod mwg yr ecsôst yn weladwy.
+**Test:** Run your program and check the exhaust fumes are visible.
 
-![Golwg agos ar y roced a'r ôl ecsôst gyda mwy o fwg.](images/rocket_exhaust_circles.gif)
+![An animation of the rocket and exhaust trail with added smoke.](images/rocket_exhaust_circles.gif)
 
 --- /task ---
 
