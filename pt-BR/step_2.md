@@ -86,8 +86,8 @@ line_highlights: 21-23
 def setup():   
 # Configure sua animação aqui   
 size(tamanho_tela, tamanho_tela)   
-image_mode(CENTER)  # Posiciona a imagem no centro global planet   
-planet = load_image('planet.png')  # O planeta que você escolheu
+image_mode(CENTER)  # Posiciona a imagem no centro global planeta   
+planeta = load_image('planet.png')  # O planeta que você escolheu
 
 
 --- /code ---
@@ -115,7 +115,7 @@ line_highlights: 15-17
 # A função desenhar_plano_de_fundo vai aqui
 def desenhar_plano_de_fundo():   
 background(0)  # Abreviação de background(0, 0, 0) — preto    
-image(planet, width/2, height, 300, 300)  # Desenha a imagem
+image(planeta, width/2, height, 300, 300)  # Desenha a imagem
 
 
 --- /code ---
