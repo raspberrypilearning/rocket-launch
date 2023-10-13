@@ -2,6 +2,8 @@
 title: Εκτόξευση πυραύλου
 hero_image: images/banner.png
 description: Δημιούργησε μια κινούμενη εικόνα ενός πυραύλου που προωθεί έναν δορυφόρο σε τροχιά
+meta_title: Python coding projects for kids and teens | Rocket launch
+meta_description: Learn Python with the Raspberry Pi Foundation's coding projects for kids and teens. Make a Python animation that shows a rocket launching a satellite into orbit.
 version: 0.0.1
 listed: true
 copyedit: true
