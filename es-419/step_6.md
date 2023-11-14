@@ -12,12 +12,12 @@ El cohete puede cambiar de color para mostrar el éxito del lanzamiento.
 </div>
 <div>
 
-![Three side-by-side images showing successful (green tint), over-fueled (amber tint), and unsuccessful (red tint) launches.](images/check_orbit.png){:width="400px"}
+![Tres imágenes una al lado de la otra que muestran lanzamientos exitosos (tinte verde), con exceso de combustible (tinte ámbar) y fallidos (tinte rojo).](images/check_orbit.png){:width="400px"}
 
 </div>
 </div>
 
-### Draw an orbit line
+### Dibuja una línea de órbita
 
 --- task ---
 
@@ -51,8 +51,7 @@ line_highlights: 42-45
 ---
 
 def draw_background():   
-background(0)  # Short for background(0, 0, 0) — black   
-image(planet, width/2, height, 300, 300)   
+background(0)  # Abreviatura de background(0, 0, 0) — black<0 /> image(planet, width/2, height, 300, 300)   
 
     no_fill()  # Turn off any fill  
     stroke(255)  # Set a white stroke   
@@ -65,21 +64,21 @@ image(planet, width/2, height, 300, 300)
 
 --- task ---
 
-**Test:** Run your program and check that a white orbit line is drawn.
+**Prueba:** Ejecuta tu programa y verifica que se dibuje una línea de órbita blanca.
 
-![The screen with planet and new orbit line.](images/draw_orbit.png){:width="300px"}
+![La pantalla con el planeta y la nueva línea de órbita.](images/draw_orbit.png){:width="300px"}
 
 --- /task ---
 
-### Launch the rocket to the orbit
+### Lanza el cohete a la órbita
 
-The rocket should stop when it reaches the satellite orbit — the end of the mission.
+El cohete debe detenerse cuando alcance la órbita del satélite: el final de la misión.
 
 --- task ---
 
-Update your `if fuel >= burn` code to also check that the rocket hasn't reached the orbit.
+Actualiza tu código `if fuel >= burn` para verificar también que el cohete no haya alcanzado la órbita.
 
-You can use an `and` in `if` statements to check if two, or more, conditions are true.
+Puedes usar un `and` en declaraciones `if` para verificar si dos o más condiciones son verdaderas.
 
 --- code ---
 ---
@@ -91,7 +90,7 @@ line_highlights: 19
 def draw_rocket():   
 global rocket_y, fuel, burn
 
-        if fuel >= burn and rocket_y > orbit_y:  # Still flying
+        if fuel >= burn and rocket_y > orbit_y:  # sigue volando
 
 --- /code ---
 
@@ -99,13 +98,13 @@ global rocket_y, fuel, burn
 
 --- task ---
 
-**Test:** Run your project and enter `50000` as the amount of fuel. This should be plenty of fuel to reach orbit. The rocket should stop moving when it reaches orbit.
+**Prueba:** Ejecuta tu proyecto e ingresa `50000` como la cantidad de combustible. Esto debería ser suficiente combustible para alcanzar la órbita. El cohete debería dejar de moverse cuando alcance la órbita.
 
 --- /task ---
 
-### Check if the launch is successful
+### Comprueba si el lanzamiento es exitoso
 
-The rocket should be coloured red if it runs out of fuel before getting high enough to launch the satellite.
+El cohete debería tornarse color rojo si se queda sin combustible antes de alcanzar la altura suficiente para lanzar el satélite.
 
 --- task ---
 
@@ -119,8 +118,8 @@ line_highlights: 34-35
     for i in range(20):   
         ellipse(width/2 + randint(-5, 5), rocket_y + randint(20, 50), randint(5, 10), randint(5, 10))
     
-    if fuel < burn and rocket_y > orbit_y:  # No more fuel and not in orbit   
-        tint(255, 0, 0)  # Failure
+    if fuel < burn and rocket_y > orbit_y:  # No tiene más combustible y no ha llegado a la órbita 
+        tint(255, 0, 0)  # Fallo
 
 --- /code ---
 
@@ -128,19 +127,19 @@ line_highlights: 34-35
 
 --- task ---
 
-**Test:** Run your code and enter `20000` as the amount of fuel. Check that the rocket turns red when it stops below the orbit.
+**Prueba:** Ejecuta tu código e ingresa `20000` como la cantidad de combustible. Comprueba que el cohete se vuelve rojo cuando se detiene por debajo de la órbita.
 
-![A red rocket that has run out of fuel before the orbit circle. The planet has also turned red.](images/orbit_failure.png){:width="300px"}
+![Un cohete rojo que se ha quedado sin combustible antes del círculo de la órbita. El planeta también se ha vuelto rojo.](images/orbit_failure.png){:width="300px"}
 
-Oh no, the planet has turned red!
+¡Oh no, el planeta se ha vuelto rojo!
 
 --- /task ---
 
 --- task ---
 
-The `tint()` function sets the tint colour for all images that are drawn until you change the tint or use `no_tint()` to turn it off.
+La función `tint()` establece el color de tinte para todas las imágenes que se dibujan hasta que cambie el tinte o use `no_tint()` para apagarlo.
 
-**Choose:** Add a call to `no_tint()` after drawing the image so that the planet isn't tinted red in the next frame — or leave it if you like the planet turning red!
+**Elige:** Agrega una llamada a `no_tint()` después de dibujar la imagen para que el planeta no se tiña de rojo en el siguiente cuadro, ¡o déjalo si deseas que el planeta se vuelva rojo!
 
 --- code ---
 ---
@@ -149,10 +148,10 @@ line_highlights: 38
 ---
 
     if fuel < burn and rocket_y > orbit_y:    
-        tint(255, 0, 0)  # Failure
+        tint(255, 0, 0)  # Fallo
     
     image(rocket, width/2, rocket_y, 64, 64)   
-    no_tint()  # So the planet isn't tinted red in the next frame!
+    no_tint()  # ¡Para que el planeta no se vuelva rojo en el siguiente fotograma!
 
 
 --- /code ---
@@ -161,7 +160,7 @@ line_highlights: 38
 
 --- task ---
 
-Use the `tint()` function again, this time to colour the rocket green if the rocket has enough fuel to reach the satellite orbit:
+Usa la función `tint()` nuevamente, esta vez para colorear el cohete de verde si el cohete tiene suficiente combustible para alcanzar la órbita del satélite:
 
 --- code ---
 ---
@@ -170,9 +169,9 @@ line_highlights: 36-37
 ---
 
     if fuel < burn and rocket_y > orbit_y:    
-        tint(255, 0, 0)  # Failure   
+        tint(255, 0, 0)  # Fallo
     elif rocket_y <= orbit_y:   
-        tint(0, 255, 0)  # Success   
+        tint(0, 255, 0)  # Éxito   
     
     image(rocket, width/2, rocket_y, 64, 64)   
     no_tint()
@@ -183,19 +182,19 @@ line_highlights: 36-37
 
 --- task ---
 
-**Test:** Run your project and enter `50000` as the amount of fuel. Check that your rocket turns green when it reaches the satellite orbit.
+**Prueba:** Ejecuta tu proyecto e ingresa `50000` como la cantidad de combustible. Comprueba que tu cohete se vuelve verde cuando alcanza la órbita del satélite.
 
-![A green rocket that has reached the orbit circle and has fuel left.](images/orbit_success.png){:width="300px"}
+![Un cohete verde que ha alcanzado el círculo orbital y le queda combustible.](images/orbit_success.png){:width="300px"}
 
 --- /task ---
 
-You now have a simulation that can be used to show how much fuel is needed as a minimum to reach the satellite orbit. That's great; however, you could take a huge amount of fuel and still be successful, but this is costly and wasteful!
+Ahora tienes una simulación que puede usarse para mostrar cuánto combustible se necesita como mínimo para alcanzar la órbita del satélite. Genial; sin embargo, podrías tomar una gran cantidad de combustible y aún así tener éxito, ¡pero esto es costoso y resulta en un desperdicio!
 
 --- task ---
 
-Amend the conditions in your success code so that the rocket only turns green if it reaches the orbit `and` has less than 1,000kg of fuel left.
+Modifica las condiciones en tu código de éxito para que el cohete solo se vuelva verde si alcanza la órbita `y` le quedan menos de 1,000 kg de combustible.
 
-Add code to colour the rocket yellow if the rocket has more than 1,000kg of fuel left when it reaches orbit.
+Agrega un código para colorear el cohete de amarillo si al cohete le quedan más de 1000 kg de combustible cuando alcanza la órbita.
 
 --- code ---
 ---
@@ -204,14 +203,14 @@ line_highlights: 36, 38-39
 ---
 
     if fuel < burn and rocket_y > orbit_y:   
-        tint(255, 0, 0)  # Failure   
+        tint(255, 0, 0)  # Fallo
     elif fuel < 1000 and rocket_y <= orbit_y:   
-        tint(0, 255, 0)  # Success   
+        tint(0, 255, 0)  # Éxito
     elif fuel >= 1000 and rocket_y <= orbit_y:    
-        tint(255, 200, 0)  # Too much fuel   
+        tint(255, 200, 0)  # Demasiado combustible
     
     image(rocket, width/2, rocket_y, 64, 64)    
-    no_tint()  # So the planet isn't tinted in the next frame!
+    no_tint()  # ¡Para que el planeta no se vuelva rojo en el fotograma siguiente!
 
 --- /code ---
 
@@ -219,9 +218,9 @@ line_highlights: 36, 38-39
 
 --- task ---
 
-**Test:** Run your program several times with different numbers; for example, 25,000kg of fuel should be the amount needed to turn the rocket green, but also check that the yellow tint works too by using a bigger number.
+**Prueba:** Ejecuta tu programa varias veces con diferentes números; por ejemplo, 25.000 kg de combustible debería ser la cantidad necesaria para que el cohete se vuelva verde, pero también verifica que el tinte amarillo funcione usando un número mayor.
 
-![A yellow rocket that has reached the orbit circle and has fuel left.](images/orbit_meh.png){:width="300px"}
+![Un cohete amarillo que ha llegado al círculo de la órbita y le queda combustible.](images/orbit_meh.png){:width="300px"}
 
 --- /task ---
 
