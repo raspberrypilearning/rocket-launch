@@ -11,10 +11,10 @@ Here's a version of the project with all those upgrades, so you can see how they
 
 --- collapse ---
 ---
-title: Completed project
+title: Ychwanegu eich delwedd eich hun at Trinket
 ---
 
-You can view the [completed project here](https://editor.raspberrypi.org/en/projects/rocket-launch-example){:target="_blank"}.
+Yna dewiswch **Image Library** a dilyn y cyfarwyddiadau ar y sgrin i lwytho delwedd i fyny i'ch llyfrgell ddelweddau Trinket.
 
 --- /collapse ---
 
