@@ -18,13 +18,13 @@ Puedes crear efectos geniales usando un bucle `for` para dibujar muchas formas e
 <p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;">
 La codificación se usa para hacer <span style="color: #0faeb0">**efectos gráficos**</span> para películas y juegos. Es mucho más rápido escribir código que dibujar cada cuadro de una animación individualmente. </p>
 
-### Draw your exhaust
+### Dibuja tu escape
 
 Dibujar muchas elipses amarillas en diferentes posiciones `y` crea un rastro de escape con un fondo redondo.
 
 --- task ---
 
-Update your `draw_rocket()` function to include a `for` loop that repeats the drawing of `25` exhaust ellipses. The **loop variable** `i` gets added to `rocket_y` to draw each ellipse further below the rocket.
+Actualiza tu función `draw_rocket()` para incluir un bucle `for` que repita el dibujo de `25` elipses para hacer el escape. La variable de bucle **** `i` se suma a `rocket_y` para dibujar cada elipse más abajo del cohete.
 
 --- code ---
 ---
@@ -35,11 +35,11 @@ line_highlights: 16-20
 def draw_rocket(): global rocket_y   
 rocket_y -= 1   
 
-    no_stroke()  # Turn off the stroke
+    no_stroke()  # desactiva el trazo
     
-    for i in range(25):  # Draw 25 burning exhaust ellipses   
-        fill(255, 255, 0)  # Yellow   
-        ellipse(width/2, rocket_y + i, 8, 3)  # i increases each time the loop repeats    
+    for i in range(25):  # dibuja 25 elipses para hacer el escape 
+        fill(255, 255, 0)  # amarillo
+        ellipse(width/2, rocket_y + i, 8, 3)  # i aumenta cada vez que el bucle se ejecuta
     
     image(rocket, width/2, rocket_y, 64, 64)
 
@@ -48,27 +48,27 @@ rocket_y -= 1
 
 --- /task ---
 
-A `for` loop repeats a piece of code once for every item it is given.
+Un bucle `for` repite una pieza de código una vez por cada elemento que se le da.
 
-To run the code in a `for` loop a certain number of times, you can use the `range()` function. For example, `range(5)` creates a sequence of five numbers starting from 0, so [0, 1, 2, 3, 4].
+Para ejecutar el código en un bucle `for` un número específico de veces, puedes hacer uso de la función `range()`. Por ejemplo, `range(5)` crea una secuencia de cinco números a partir de 0, dando [0, 1, 2, 3, 4].
 
-Each time the `for` loop repeats, it sets a variable to the current item so that you can use it in the loop.
+Cada vez que se repite el ciclo `for`, establece una variable en el elemento actual para que pueda usarlo en el ciclo.
 
 --- task ---
 
-**Test:** Run your code to check the rocket has a new exhaust trail.
+**Prueba:** Ejecuta tu código para verificar que el cohete tenga un nuevo rastro de escape.
 
-![A close-up of the rocket with an exhaust trail.](images/rocket_exhaust.png){:width="300px"}
+![Un primer plano del cohete con un rastro de escape.](images/rocket_exhaust.png){:width="300px"}
 
 --- /task ---
 
-### Add a gradient
+### Agregar un degradado
 
-The `i` variable can also be used to create a colour gradient with less green in each ellipse that gets drawn.
+La variable `i` también se puede usar para crear un degradado de color con menos verde en cada elipse que se dibuja.
 
 --- task ---
 
-Change the call to `fill()` to set the amount of green to `255 - i * 10` so that the first ellipse has equal amounts of red and green and the last ellipse has very little green.
+Cambia la llamada a `fill()` para establecer la cantidad de verde en `255 - i*10` para que la primera elipse tenga la misma cantidad de rojo y verde y la última elipse tenga muy poco verde.
 
 --- code ---
 ---
@@ -76,9 +76,9 @@ language: python filename: main.py - draw_rocket() line_numbers: true line_numbe
 line_highlights: 19
 ---
 
-    for i in range(25):   
-        fill(255, 255 - i * 10, 0)  # Reduce the amount of green    
-        ellipse(width/2, rocket_y + i, 8, 3)
+    para i en rango(25):   
+        fill(255, 255 - i * 10, 0) # Reducir la cantidad de verde 
+        elipse (width/2, rocket_y + i, 8, 3)
 
 --- /code ---
 
@@ -86,21 +86,21 @@ line_highlights: 19
 
 --- task ---
 
-**Test:** Check that you get a trail of ellipses gradually changing from yellow to red.
+**Prueba:** Comprueba que obtienes un rastro de elipses que cambia gradualmente de amarillo a rojo.
 
 --- /task ---
 
-### Create a smoke effect
+### Crea un efecto de humo
 
-The smoke exhaust trail is created by drawing lots of slightly transparent grey ellipses at different positions in each frame.
+El rastro humo de escape se crea dibujando muchas elipses grises ligeramente transparentes en diferentes posiciones en cada cuadro.
 
-![A slow animation of the smoke effect.](images/rocket_smoke.gif)
+![Una animación lenta del efecto de humo.](images/rocket_smoke.gif)
 
 --- task ---
 
-This time the `fill()` is outside the loop as the colour is the same for each smoke ellipse. The fourth input to `fill()` is the opacity, a low opacity value makes the colour more transparent so you can see the shapes underneath.
+Esta vez, `fill()` está fuera del bucle ya que el color es el mismo para cada elipse de humo. La cuarta entrada para `fill()` es la opacidad, un valor de opacidad bajo hace que el color sea más transparente para que pueda ver las formas debajo.
 
-In each frame of the animation, 20 ellipses of random sizes will be drawn at random positions.
+En cada fotograma de la animación, se dibujarán 20 elipses de tamaños aleatorios en posiciones aleatorias.
 
 --- code ---
 ---
@@ -112,8 +112,8 @@ line_highlights: 22-24
         fill(255, 255 - i * 10, 0)   
         ellipse(width/2, rocket_y + i, 8, 3)    
     
-    fill(200, 200, 200, 100)  # Transparent grey   
-    for i in range(20):  # Draw 20 random smoke ellipses    
+    fill(200, 200, 200, 100)  # gris transparente
+    for i in range(20):  # dibuja 20 elipses de humo aleatorias    
         ellipse(width/2 + randint(-5, 5), rocket_y + randint(20, 50), randint(5, 10), randint(5, 10))    
     
     image(rocket, width/2, rocket_y, 64, 64)
@@ -124,9 +124,9 @@ line_highlights: 22-24
 
 --- task ---
 
-**Test:** Run your program and check the exhaust fumes are visible.
+**Prueba:** Ejecuta tu programa y verifica que los gases de escape sean visibles.
 
-![An animation of the rocket and exhaust trail with added smoke.](images/rocket_exhaust_circles.gif)
+![Un primer plano del cohete y la estela de escape con humo añadido.](images/rocket_exhaust_circles.gif)
 
 --- /task ---
 
