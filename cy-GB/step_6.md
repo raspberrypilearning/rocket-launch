@@ -12,7 +12,7 @@ Mae'r roced yn gallu newid lliw i ddangos pa mor llwyddiannus oedd y lansiad.
 </div>
 <div>
 
-![Three side-by-side images showing successful (green tint), over-fueled (amber tint), and unsuccessful (red tint) launches.](images/check_orbit.png){:width="400px"}
+![Tair delwedd ochr yn ochr yn dangos lansiadau llwyddiannus (arlliw gwyrdd), gormod o danwydd (arlliw melyngoch) ac aflwyddiannus (arlliw coch).](images/check_orbit.png){:width="400px"}
 
 </div>
 </div>
@@ -46,18 +46,15 @@ Diweddarwch y swyddogaeth `llunio_cefndir()` i lunio elips i gynrychioli orbit y
 
 --- code ---
 ---
-language: python filename: main.py - draw_background() line_numbers: true line_number_start: 38
+language: python filename: main.py - llunio_cefndir() line_numbers: true line_number_start: 37
 line_highlights: 42-45
 ---
 
-def draw_background():   
-background(0)  # Short for background(0, 0, 0) — black   
-image(planet, width/2, height, 300, 300)   
+def llunio_cefndir():   
+background(0) #Byr ar gyfer cefndir(0, 0, 0) — black   
+image(planed, width/2, height, 300, 300)   
 
-    no_fill()  # Turn off any fill  
-    stroke(255)  # Set a white stroke   
-    stroke_weight(2)   
-    ellipse(width/2, height, orbit_radius * 2, orbit_radius * 2)
+    if tanwydd >= llosgi and roced_y > orbit_y: #Dal yn hedfan
 
 --- /code ---
 
@@ -79,7 +76,7 @@ The rocket should stop when it reaches the satellite orbit — the end of the mi
 
 Update your `if fuel >= burn` code to also check that the rocket hasn't reached the orbit.
 
-You can use an `and` in `if` statements to check if two, or more, conditions are true.
+Diweddarwch eich cod `if tanwydd >= llosgi` hefyd i wneud yn siŵr nad yw'r roced wedi cyrraedd yr orbit.
 
 --- code ---
 ---
@@ -88,10 +85,11 @@ line_highlights: 19
 ---
 
 # Mae'r swyddogaeth llunio_roced yn mynd fan hyn
-def draw_rocket():   
-global rocket_y, fuel, burn
+language: python filename: main.py - llunio_roced() line_numbers: true line_number_start: 14
 
-        if fuel >= burn and rocket_y > orbit_y:  # Still flying
+        fill(200, 200, 200, 100)   
+    for i in range(20):   
+      ellipse(width/2 + randint(-5, 5), roced_y + randint(20, 50), randint(5, 10), randint(5, 10))
 
 --- /code ---
 
@@ -105,7 +103,7 @@ global rocket_y, fuel, burn
 
 ### Check if the launch is successful
 
-The rocket should be coloured red if it runs out of fuel before getting high enough to launch the satellite.
+**Profi:** Rhedwch eich prosiect a rhoi `50000` fel y cyfaint tanwydd. Dylai hyn fod yn ddigon o danwydd i gyrraedd orbit. Dylai'r roced stopio symud pan fydd yn cyrraedd orbit.
 
 --- task ---
 
@@ -138,13 +136,13 @@ Oh no, the planet has turned red!
 
 --- task ---
 
-The `tint()` function sets the tint colour for all images that are drawn until you change the tint or use `no_tint()` to turn it off.
+O na, mae'r blaned wedi troi'n goch!
 
 **Choose:** Add a call to `no_tint()` after drawing the image so that the planet isn't tinted red in the next frame — or leave it if you like the planet turning red!
 
 --- code ---
 ---
-language: python filename: main.py - draw_rocket() line_numbers: true line_number_start: 34
+Mae'r swyddogaeth `tint()` yn gosod yr arlliw ar gyfer bob delwedd sy'n cael ei llunio nes eich bod yn newid yr arlliw neu'n defnyddio `no_tint()` i'w diffodd.
 line_highlights: 38
 ---
 
@@ -161,7 +159,7 @@ line_highlights: 38
 
 --- task ---
 
-Use the `tint()` function again, this time to colour the rocket green if the rocket has enough fuel to reach the satellite orbit:
+if tanwydd < llosgi and roced_y > orbit_y: tint(255, 0, 0) #Methiant
 
 --- code ---
 ---
@@ -219,7 +217,7 @@ line_highlights: 36, 38-39
 
 --- task ---
 
-**Test:** Run your program several times with different numbers; for example, 25,000kg of fuel should be the amount needed to turn the rocket green, but also check that the yellow tint works too by using a bigger number.
+Newidiwch yr amodau yn eich cod llwyddiant er mwyn i'r roced ddim ond troi'n wyrdd os yw'n cyrraedd yr orbit a bod ganddi lai na 1,000kg o danwydd yn weddill.
 
 ![A yellow rocket that has reached the orbit circle and has fuel left.](images/orbit_meh.png){:width="300px"}
 
