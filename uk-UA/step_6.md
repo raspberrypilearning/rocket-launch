@@ -12,7 +12,7 @@
 </div>
 <div>
 
-![Three side-by-side images showing successful (green tint), over-fueled (amber tint), and unsuccessful (red tint) launches.](images/check_orbit.png){:width="400px"}
+![Три зображення, які демонструють: успіх (зелений колір), перевантаження паливом (янтарний колір) та невдалий запуск (червоний колір).](images/check_orbit.png){:width="400px"}
 
 </div>
 </div>
@@ -46,18 +46,15 @@ orbit_y = screen_size - orbit_radius
 
 --- code ---
 ---
-language: python filename: main.py - draw_background() line_numbers: true line_number_start: 38
+language: python filename: main.py - draw_background() line_numbers: true line_number_start: 37
 line_highlights: 42-45
 ---
 
 def draw_background():   
-background(0)  # Short for background(0, 0, 0) — black   
+background(0) #Скорочено від background(0, 0, 0) - чорний   
 image(planet, width/2, height, 300, 300)   
 
-    no_fill()  # Turn off any fill  
-    stroke(255)  # Set a white stroke   
-    stroke_weight(2)   
-    ellipse(width/2, height, orbit_radius * 2, orbit_radius * 2)
+    if fuel >= burn and rocket_y > orbit_y: #Продовжує летіти
 
 --- /code ---
 
@@ -79,7 +76,7 @@ The rocket should stop when it reaches the satellite orbit — the end of the mi
 
 Update your `if fuel >= burn` code to also check that the rocket hasn't reached the orbit.
 
-You can use an `and` in `if` statements to check if two, or more, conditions are true.
+Онови свій код `if fuel >= burn`, щоб також перевіряти, якщо ракета не буде досягати орбіти.
 
 --- code ---
 ---
@@ -88,10 +85,11 @@ line_highlights: 19
 ---
 
 # Функція draw_rocket викликається тут
-def draw_rocket():   
-global rocket_y, fuel, burn
+language: python filename: main.py - draw_rocket() line_numbers: true line_number_start: 14
 
-        if fuel >= burn and rocket_y > orbit_y:  # Still flying
+        fill(200, 200, 200, 100)   
+    for i in range(20):   
+      ellipse(width/2 + randint(-5, 5), rocket_y + randint(20, 50), randint(5, 10), randint(5, 10))
 
 --- /code ---
 
@@ -138,7 +136,7 @@ Oh no, the planet has turned red!
 
 --- task ---
 
-The `tint()` function sets the tint colour for all images that are drawn until you change the tint or use `no_tint()` to turn it off.
+О ні, планета теж стала червоною!
 
 **Choose:** Add a call to `no_tint()` after drawing the image so that the planet isn't tinted red in the next frame — or leave it if you like the planet turning red!
 
@@ -161,7 +159,7 @@ line_highlights: 38
 
 --- task ---
 
-Use the `tint()` function again, this time to colour the rocket green if the rocket has enough fuel to reach the satellite orbit:
+if fuel < burn and rocket_y > orbit_y: tint(255, 0, 0) #Провал
 
 --- code ---
 ---
