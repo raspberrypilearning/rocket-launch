@@ -28,8 +28,8 @@ Update your `draw_rocket()` function to include a `for` loop that repeats the dr
 
 --- code ---
 ---
-language: python filename: main.py - draw_rocket() line_numbers: true line_number_start: 12
-line_highlights: 16-20
+Diweddarwch eich swyddogaeth `llunio_roced()` i gynnwys dolen `for` sy'n ailadrodd y lluniad o `25` elips ecsôst. Mae'r **newidyn dolen** `i` yn cael ei ychwanegu at `roced_y` i lunio pob elips yn bellach o dan y roced.
+line_highlights: 16-22
 ---
 
 def draw_rocket(): global rocket_y   
@@ -48,11 +48,14 @@ rocket_y -= 1
 
 --- /task ---
 
-A `for` loop repeats a piece of code once for every item it is given.
+global roced_y   
+roced_y -= 1
 
 To run the code in a `for` loop a certain number of times, you can use the `range()` function. For example, `range(5)` creates a sequence of five numbers starting from 0, so [0, 1, 2, 3, 4].
 
-Each time the `for` loop repeats, it sets a variable to the current item so that you can use it in the loop.
+for i in range(25): #Llunio 25 o elipsau ecsôst sy'n llosgi   
+fill(255, 255, 0) #Melyn   
+ellipse(width/2, roced_y + i, 8, 3) #i yn cynyddu bob tro mae'r ddolen yn ailadrodd
 
 --- task ---
 
@@ -64,7 +67,7 @@ Each time the `for` loop repeats, it sets a variable to the current item so that
 
 ### Add a gradient
 
-The `i` variable can also be used to create a colour gradient with less green in each ellipse that gets drawn.
+**Profi:** Rhedwch eich cod i wneud yn siŵr bod gan y roced ôl ecsôst newydd.
 
 --- task ---
 
@@ -73,7 +76,7 @@ Change the call to `fill()` to set the amount of green to `255 - i * 10` so that
 --- code ---
 ---
 language: python filename: main.py - draw_rocket() line_numbers: true line_number_start: 18
-line_highlights: 19
+line_highlights: 20
 ---
 
     for i in range(25):   
@@ -86,7 +89,9 @@ line_highlights: 19
 
 --- task ---
 
-**Test:** Check that you get a trail of ellipses gradually changing from yellow to red.
+for i in range(25):   
+fill(255, 255 - i * 10, 0) #Lleihau lefel y gwyrdd    
+ellipse(width/2, roced_y + i, 8, 3)
 
 --- /task ---
 
@@ -100,12 +105,12 @@ The smoke exhaust trail is created by drawing lots of slightly transparent grey 
 
 This time the `fill()` is outside the loop as the colour is the same for each smoke ellipse. The fourth input to `fill()` is the opacity, a low opacity value makes the colour more transparent so you can see the shapes underneath.
 
-In each frame of the animation, 20 ellipses of random sizes will be drawn at random positions.
+Mae'r ôl mwg ecsôst yn cael ei greu drwy lunio nifer o elips llwyd sydd ychydig yn dryloyw mewn safle gwahanol ym mhob ffrâm.
 
 --- code ---
 ---
 language: python filename: main.py - draw_rocket() line_numbers: true line_number_start: 18
-line_highlights: 22-24
+line_highlights: 23-26
 ---
 
     for i in range(25):  
@@ -124,7 +129,7 @@ line_highlights: 22-24
 
 --- task ---
 
-**Test:** Run your program and check the exhaust fumes are visible.
+language: python filename: main.py - llunio_roced() line_numbers: true line_number_start: 19
 
 ![An animation of the rocket and exhaust trail with added smoke.](images/rocket_exhaust_circles.gif)
 
