@@ -27,7 +27,7 @@ line_highlights: 10
 # Налаштування глобальних змінних
 screen_size = 400   
 rocket_y = screen_size  
-burn = 100  # How much fuel is burned in each frame
+burn = 100 #Скільки палива спалюється на кожному кадрі
 
 --- /code ---
 
@@ -40,8 +40,8 @@ burn = 100  # How much fuel is burned in each frame
 
 --- code ---
 ---
-language: python filename: main.py line_numbers: true line_number_start: 51
-line_highlights: 51
+language: python filename: main.py line_numbers: true line_number_start: 52
+line_highlights: 52
 ---
 
 fuel = int(input('How many kilograms of fuel do you want to use?'))   
@@ -67,10 +67,15 @@ language: python filename: main.py — draw_rocket() line_numbers: true line_num
 line_highlights: 15, 17-18
 ---
 
-    global rocket_y, fuel, burn   
-    rocket_y -= 1   
-    fuel -= burn  # Burn fuel   
-    print('Fuel left: ', fuel)
+    no_stroke() #Видалення обведення   
+    
+    for i in range(25):   
+      fill(255, 255 - i*10, 0)   
+      ellipse(width/2, rocket_y + i, 8, 3)    
+    
+    fill(200, 200, 200, 100)   
+    for i in range(20):   
+      ellipse(width/2 + randint(-5, 5), rocket_y + randint(20, 50), randint(5, 10), randint(5, 10))
 
 --- /code ---
 
@@ -97,7 +102,7 @@ The `image()` line doesn't need to be indented because you always want to draw t
 --- code ---
 ---
 language: python filename: main.py — draw_rocket() line_numbers: true line_number_start: 15
-line_highlights: 17-30
+line_highlights: 16-31
 ---
 
     global rocket_y, fuel, burn  
@@ -125,7 +130,7 @@ line_highlights: 17-30
 
 --- task ---
 
-**Test:** Run your program to check that the rocket stops when there is no fuel left.
+image(rocket, width/2, rocket_y, 64, 64)
 
 ![Image of a rocket in the middle of the screen with the statement 'Fuel left: 0'.](images/burn_empty.png){:width="300px"}
 
