@@ -12,8 +12,7 @@ O foguete pode mudar de cor para mostrar o sucesso do lançamento.
 </div>
 <div>
 
-![Três imagens lado a lado mostrando o lançamento bem-sucedido (tonalidade verde), o lançamento 
-com excesso de combustível (tonalidade âmbar) e o lançamento mal sucedido (tonalidade vermelha).](images/check_orbit.png){:width="400px"}
+![Três imagens lado a lado mostrando lançamento bem-sucedido (tonalidade verde), lançamento sobrecarregado (tonalidade âmbar) e lançamento mal sucedido (tonalidade vermelha).](images/check_orbit.png){:width="400px"}
 
 </div>
 </div>
@@ -47,18 +46,18 @@ Atualize a função `desenhar_plano_de_fundo()` para desenhar uma elipse para re
 
 --- code ---
 ---
-language: python filename: main.py - desenhar_plano_de_fundo() line_numbers: true line_number_start: 38
+language: python filename: main.py - desenhar_plano_de_fundo() line_numbers: true line_number_start: 37
 line_highlights: 42-45
 ---
 
 def desenhar_plano_de_fundo():   
-background(0)  # Abreviação de background(0, 0, 0) — preto   
+background(0) #Abreviação de plano de fundo (0, 0, 0) — preto   
 image(planeta, width/2, height, 300, 300)   
 
-    no_fill()  # Desligue qualquer preenchimento  
-    stroke(255)  # Defina um traço branco   
-    stroke_weight(2)   
-    ellipse(width/2, height, raio_orbital * 2, raio_orbital * 2)
+    no_fill() #Desligue qualquer preenchimento<br x-id="2" />
+      stroke(255) #Defina um traço branco<br x-id="3" />
+      stroke_weight(2)<br x-id="3" />
+      ellipse(width/2, height, raio_orbital * 2, raio_orbital * 2)
 
 --- /code ---
 
@@ -78,21 +77,20 @@ O foguete deve parar quando atingir a órbita do satélite – o fim da missão.
 
 --- task ---
 
-Atualize seu código `if combustivel >= queimar` para verificar também se o foguete não atingiu a órbita.
+Atualize seu código `if combustivel >= queima` para verificar também se o foguete não atingiu a órbita.
 
 Você pode usar as instruções `and` em `if` para verificar se duas ou mais condições são verdadeiras.
 
 --- code ---
 ---
-language: python filename: main.py - desenhar_foguete() line_numbers: true line_number_start: 15
+language: python filename: main.py - desenhar_foguete() line_numbers: true line_number_start: 14
 line_highlights: 19
 ---
 
 # A função desenhar_foguete vai aqui
-def desenhar_foguete():   
 global foguete_y, combustivel, queimar
 
-        if combustivel >= queimar and foguete_y > orbita_y:  # Ainda voando
+        if combustivel >= queimar and foguete_y > orbita_y: #Ainda voando
 
 --- /code ---
 
@@ -118,10 +116,7 @@ line_highlights: 34-35
 
     fill(200, 200, 200, 100)   
     for i in range(20):   
-        ellipse(width/2 + randint(-5, 5), foguete_y + randint(20, 50), randint(5, 10), randint(5, 10))
-    
-    if combustivel < queimar and foguete_y > orbita_y:  # Não há mais combustível e não em órbita   
-        tint(255, 0, 0)  # Fracasso
+      ellipse(width/2 + randint(-5, 5), foguete_y + randint(20, 50), randint(5, 10), randint(5, 10))
 
 --- /code ---
 
@@ -149,11 +144,8 @@ language: python filename: main.py - desenhar_foguete() line_numbers: true line_
 line_highlights: 38
 ---
 
-    if combustivel < queimar and foguete_y > orbita_y:    
-        tint(255, 0, 0)  # Fracasso
-    
-    image(foguete, width/2, foguete_y, 64, 64)   
-    no_tint()  # Assim, o planeta não será tingido de vermelho no próximo quadro!
+    image(foguete, width/2, foguete_y, 64, 64)<br x-id="3" />
+    no_tint() #Assim, o planeta não está tingido de vermelho no próximo quadro!
 
 
 --- /code ---
@@ -170,13 +162,10 @@ language: python filename: main.py - desenhar_foguete() line_numbers: true line_
 line_highlights: 36-37
 ---
 
-    if combustivel < queimar and foguete_y > orbita_y:    
-        tint(255, 0, 0)  # Fracasso   
-    elif foguete_y <= orbita_y:   
-        tint(0, 255, 0)  # Sucesso   
-    
-    image(foguete, width/2, foguete_y, 64, 64)   
-    no_tint()
+    if combustivel &#060; queimar and foguete_y &#062; orbita_y:    
+      tint(255, 0, 0) #Fracasso<br x-id="3" />
+    elif foguete_y &#060;= orbita_y:<br x-id="3" />
+      tint(0, 255, 0) #Sucesso
 
 --- /code ---
 
@@ -204,15 +193,12 @@ language: python filename: main.py line_numbers: true line_number_start: 34
 line_highlights: 36, 38-39
 ---
 
-    if combustivel < queimar and foguete_y > orbita_y:   
-        tint(255, 0, 0)  # Fracasso
-    elif combustivel < 1000 and foguete_y <= orbita_y:   
-        tint(0, 255, 0)  # Sucesso
-    elif combustivel >= 1000 and foguete_y <= orbita_y:    
-        tint(255, 200, 0)  # Excesso de combustível   
-    
-    image(foguete, width/2, foguete_y, 64, 64)    
-    no_tint()  # Assim, o planeta não estará tingido no próximo quadro!
+    if combustivel &#060; queimar and foguete_y &#062; orbita_y:   
+      tint(255, 0, 0) #Fracasso<br x-id="3" />
+    elif combustivel &#060; 1000 and foguete_y &#060;= orbita_y:<br x-id="3" />
+      tint(0, 255, 0) #Sucesso<br x-id="3" />
+    elif combustivel &#062;= 1000 and foguete_y &#060;= orbita_y:<br x-id="4" />
+      tint(255, 200, 0) #Excesso de combustível
 
 --- /code ---
 
