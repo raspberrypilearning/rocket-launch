@@ -29,7 +29,7 @@ Update your `draw_rocket()` function to include a `for` loop that repeats the dr
 --- code ---
 ---
 language: python filename: main.py - draw_rocket() line_numbers: true line_number_start: 12
-line_highlights: 16-20
+line_highlights: 16-22
 ---
 
 def draw_rocket(): global rocket_y   
@@ -48,11 +48,14 @@ rocket_y -= 1
 
 --- /task ---
 
-A `for` loop repeats a piece of code once for every item it is given.
+global rocket_y   
+rocket_y -= 1
 
 To run the code in a `for` loop a certain number of times, you can use the `range()` function. For example, `range(5)` creates a sequence of five numbers starting from 0, so [0, 1, 2, 3, 4].
 
-Each time the `for` loop repeats, it sets a variable to the current item so that you can use it in the loop.
+for i in range(25): #Малювання 25 овалів вихлопу   
+fill(255, 255, 0) #Жовтий   
+ellipse(width/2, rocket_y + i, 8, 3) #i збільшується з кожним повторенням циклу
 
 --- task ---
 
@@ -64,7 +67,7 @@ Each time the `for` loop repeats, it sets a variable to the current item so that
 
 ### Add a gradient
 
-The `i` variable can also be used to create a colour gradient with less green in each ellipse that gets drawn.
+**Тест:** Запустити свій код, щоб перевірити, чи має ракета новий вихлопний слід.
 
 --- task ---
 
@@ -73,7 +76,7 @@ Change the call to `fill()` to set the amount of green to `255 - i * 10` so that
 --- code ---
 ---
 language: python filename: main.py - draw_rocket() line_numbers: true line_number_start: 18
-line_highlights: 19
+line_highlights: 20
 ---
 
     for i in range(25):   
@@ -86,7 +89,9 @@ line_highlights: 19
 
 --- task ---
 
-**Test:** Check that you get a trail of ellipses gradually changing from yellow to red.
+for i in range(25):   
+fill(255, 255 - i * 10, 0) #Зменшити кількість зеленого кольору    
+ellipse(width/2, rocket_y + i, 8, 3)
 
 --- /task ---
 
@@ -100,12 +105,12 @@ The smoke exhaust trail is created by drawing lots of slightly transparent grey 
 
 This time the `fill()` is outside the loop as the colour is the same for each smoke ellipse. The fourth input to `fill()` is the opacity, a low opacity value makes the colour more transparent so you can see the shapes underneath.
 
-In each frame of the animation, 20 ellipses of random sizes will be drawn at random positions.
+Слід димового вихлопу створюється шляхом випадкового малювання ледь прозорих сірих овалів у різних положеннях на кожному кадрі.
 
 --- code ---
 ---
 language: python filename: main.py - draw_rocket() line_numbers: true line_number_start: 18
-line_highlights: 22-24
+line_highlights: 23-26
 ---
 
     for i in range(25):  
@@ -124,7 +129,7 @@ line_highlights: 22-24
 
 --- task ---
 
-**Test:** Run your program and check the exhaust fumes are visible.
+language: python filename: main.py - draw_rocket() line_numbers: true line_number_start: 19
 
 ![An animation of the rocket and exhaust trail with added smoke.](images/rocket_exhaust_circles.gif)
 
