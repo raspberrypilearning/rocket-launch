@@ -13,7 +13,7 @@
 
 --- task ---
 
-Open the [project template](https://editor.raspberrypi.org/en/projects/rocket-launch-starter){:target="_blank"}.
+Відкрий [шаблон проєкту](https://trinket.io/python/77c37dd931){:target="_blank"}.
 
 ### Create the screen
 
@@ -71,7 +71,7 @@ The starter project has three different planet images and the moon provided for 
 
 --- task ---
 
-Add code to the `setup()` function to load and position your image.
+Зображення зручно завантажувати в `setup()`, щоб вони завжди були напоготові, коли тобі потрібно буде їх використати, а твоя анімація буде швидко запускатись.
 
 The `image_mode(CENTER)` line says that you will be positioning images by giving the coordinates of the centre of the image (instead of the top left corner).
 
