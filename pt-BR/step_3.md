@@ -15,7 +15,7 @@ Cada vez que um novo quadro é desenhado, o foguete precisa se mover para cima n
 
 O projeto inicial tem uma imagem de foguete fornecida para você.
 
-![Imagem do foguete na galeria de imagens do editor de código.](images/rocket_image.png)
+![Imagem do foguete na biblioteca de imagens Trinket.](images/rocket_image.png)
 
 --- /task ---
 
@@ -30,7 +30,7 @@ line_highlights: 24, 26
 ---
 
 def setup():   
-# Configure sua animação aqui   
+#Configure sua animação aqui   
 size(tamanho_tela, tamanho_tela)   
 image_mode(CENTER)   
 global planeta, foguete   
@@ -57,7 +57,7 @@ line_highlights: 9
 
 # Configurar variáveis globais
 tamanho_tela = 400    
-foguete_y = tamanho_tela  # Começar na parte inferior
+foguete_y = tamanho_tela #Comece na parte inferior
 
 --- /code ---
 
@@ -76,9 +76,8 @@ line_highlights: 12-16
 ---
 
 # A função desenhar_foguete vai aqui
-def desenhar_foguete():   
-global foguete_y  # Use a variável global foguete_y    
-foguete_y -= 1  # Mova o foguete    
+global foguete_y #Use a variável global foguete_y    
+foguete_y -= 1 #Mova o foguete    
 image(foguete, width/2, foguete_y, 64, 64)
 
 
@@ -92,12 +91,12 @@ Chame seu novo `desenhar_foguete()` na função `draw()` para que o foguete seja
 
 --- code ---
 ---
-language: python filename: main.py line_numbers: true line_number_start: 33
-line_highlights: 36
+language: python filename: main.py line_numbers: true line_number_start: 34
+line_highlights: 37
 ---
 
 def draw():   
-# Coisas para fazer em cada quadro   
+#O que fazer em cada quadro   
 desenhar_plano_de_fundo()   
 desenhar_foguete()
 
@@ -110,7 +109,7 @@ desenhar_foguete()
 
 **Teste:** Execute seu código para verificar que o foguete começa na parte inferior da tela e se move para cima a cada quadro.
 
-![Animação do foguete voando até a metade da tela.](images/rocket_fly.gif)
+![Imagem do foguete a meio caminho da tela.](images/rocket_fly.gif)
 
 --- /task ---
 
