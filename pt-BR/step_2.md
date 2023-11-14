@@ -13,13 +13,13 @@ A animação precisa de um cenário espacial com um planeta para lançar o fogue
 
 --- task ---
 
-Abra o [modelo de projeto](https://editor.raspberrypi.org/en/projects/rocket-launch-starter){:target="_blank"}.
+Abra o [modelo de projeto](https://trinket.io/python/f7354cbf88){:target="_blank"}.
 
 ### Crie a tela
 
 --- /task ---
 
-Você usará uma variável `tamanho_tela` para definir o tamanho da tela e nos cálculos. As variáveis definidas fora das funções são **globais** para que você possa usá-las em qualquer lugar do seu programa.
+Você usará uma variável `tamanho_tela` para definir o tamanho da tela e nos cálculos. As variáveis definidas fora das funções são **global** para que você possa usá-las em qualquer lugar do seu programa.
 
 --- task ---
 
@@ -49,7 +49,7 @@ line_highlights: 20
 ---
 
 def setup():   
-# Configure sua animação aqui   
+#Configure sua animação aqui   
 size(tamanho_tela, tamanho_tela)
 
 
@@ -61,7 +61,7 @@ size(tamanho_tela, tamanho_tela)
 
 --- task ---
 
-O projeto inicial tem três imagens diferentes de planetas e a lua fornecidas para você. Você pode visualizá-los na **Galeria de imagens** no lado esquerdo do editor de código.
+O projeto inicial tem três imagens diferentes de planetas e a lua fornecidas para você. Você pode visualizá-las na biblioteca de imagens Trinket selecionando o botão **Ver e adidionar imagens**.
 
 ![Uma captura de tela do editor de código, com a galeria de imagens destacada contendo imagens de planetas e da lua.](images/image_gallery.png)
 
@@ -73,9 +73,9 @@ O projeto inicial tem três imagens diferentes de planetas e a lua fornecidas pa
 
 Adicione código à função `setup()` para carregar e posicionar sua imagem.
 
-A linha `image_mode(CENTER)` indica que você posicionará as imagens fornecendo as coordenadas do centro da imagem (em vez do canto superior esquerdo).
+A linha `image_mode(CENTER)` diz que você posicionará as imagens fornecendo as coordenadas do centro da imagem (em vez do canto superior esquerdo).
 
-Em seguida, carregue sua imagem em uma variável global `planeta`. A variável precisa ser global para que você possa usá-la mais tarde ao desenhar o planeta na tela.
+Adicione também código à função `setup()` para carregar sua imagem escolhida em uma variável global `planeta`. A variável precisa ser global para que você possa usá-la mais tarde quando desenhar o planeta na tela.
 
 --- code ---
 ---
@@ -84,10 +84,11 @@ line_highlights: 21-23
 ---
 
 def setup():   
-# Configure sua animação aqui   
+#Configure sua animação aqui   
 size(tamanho_tela, tamanho_tela)   
-image_mode(CENTER)  # Posiciona a imagem no centro global planeta   
-planeta = load_image('planet.png')  # O planeta que você escolheu
+image_mode(CENTER)   
+global planeta   
+planeta = load_image('planet.png') #Seu planeta escolhido
 
 
 --- /code ---
@@ -98,13 +99,13 @@ planeta = load_image('planet.png')  # O planeta que você escolheu
 
 --- task ---
 
-Defina a função `desenhar_plano_de_fundo()`, para desenhar o fundo, abaixo do comentário que informa onde ela deve ir.
+Defina uma função `desenhar_plano_de_fundo()`, para desenhar o plano de fundo, abaixo do comentário que informa para onde deve ir.
 
-Use `background(0)` para definir a cor de fundo como preto e adicione uma função `image()` para desenhar o planeta. A função `image()` exemplificada:
+Use `background(0)` para definir a cor de fundo para preto e adicione uma função `image()` para desenhar o planeta. A função `image()` é apresentada:
 
-`image(nome do arquivo de imagem, coordenada-x, coordenada-y, largura_da_imagem, altura_da_imagem)`
+`image(nome do arquivo de imagem, coordenada x, coordenada y, largura_imagem, altura_imagem)`
 
-A linha de código `from p5 import *` fornece variáveis globais de `largura` e de `altura` com base no tamanho da tela. Use-os em seu código para posicionar o planeta com seu centro na metade da largura (`width/2`) e na parte inferior (`height`) da tela.
+A biblioteca `p5` define variáveis globais `width` e `height` com base no tamanho da tela. Use-os em seu código para posicionar o planeta com o centro a meio da largura (`width/2`) e na parte inferior (`height`) da tela.
 
 --- code ---
 ---
@@ -114,8 +115,8 @@ line_highlights: 15-17
 
 # A função desenhar_plano_de_fundo vai aqui
 def desenhar_plano_de_fundo():   
-background(0)  # Abreviação de background(0, 0, 0) — preto    
-image(planeta, width/2, height, 300, 300)  # Desenha a imagem
+background(0) #Abreviação de plano de fundo (0, 0, 0) — preto    
+image(planeta, width/2, height, 300, 300) #Desenhe a imagem
 
 
 --- /code ---
@@ -126,7 +127,7 @@ Colocar todo o código para desenhar o plano de fundo em uma função torna seu 
 
 --- task ---
 
-Para fazer o plano de fundo aparecer, chame `desenhar_plano_de_fundo()` em `draw()`. Isso fará com que o plano de fundo seja redesenhado toda vez que `draw()` for chamado, cobrindo qualquer desenho mais antigo:
+Para fazer o plano de fundo aparecer, chame `desenhar_plano_de_fundo()` in `draw()`. Isso fará com que o plano de fundo seja redesenhado toda vez que `draw()` for chamado, cobrindo qualquer desenho mais antigo:
 
 --- code ---
 ---
@@ -135,7 +136,7 @@ line_highlights: 30
 ---
 
 def draw():   
-# Coisas para fazer em cada quadro    
+#O que fazer em cada quadro    
 desenhar_plano_de_fundo()
 
 --- /code ---
@@ -148,6 +149,6 @@ desenhar_plano_de_fundo()
 
 --- /task ---
 
-Se você possui uma conta Raspberry Pi, em seu editor de código, você pode clicar no botão **Salvar** para salvar uma cópia do seu projeto em seus Projetos.
+Se você tiver uma conta Trinket, você pode clicar no botão **Remix** para salvar uma cópia em sua biblioteca `My Trinkets`.
 
 --- save ---
