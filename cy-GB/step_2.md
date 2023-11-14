@@ -13,7 +13,7 @@ Mae'r animeiddiad angen cefndir gofod gyda phlaned i lansio'r roced ohoni.
 
 --- task ---
 
-Open the [project template](https://editor.raspberrypi.org/en/projects/rocket-launch-starter){:target="_blank"}.
+Agorwch [dempled y prosiect](https://trinket.io/python/58565016a2){:target="_blank"}.
 
 ### Create the screen
 
@@ -48,9 +48,7 @@ language: python filename: main.py — setup() line_numbers: true line_number_st
 line_highlights: 20
 ---
 
-def setup():   
-# Setup your animation here   
-size(screen_size, screen_size)
+language: python filename: main.py — setup() line_numbers: true line_number_start: 18
 
 
 --- /code ---
@@ -71,7 +69,7 @@ The starter project has three different planet images and the moon provided for 
 
 --- task ---
 
-Add code to the `setup()` function to load and position your image.
+Mae'n syniad da llwytho delweddau yn `setup()` fel eu bod yn barod pan fyddwch chi angen eu defnyddio a bydd eich animeiddiad yn rhedeg yn gyflym.
 
 The `image_mode(CENTER)` line says that you will be positioning images by giving the coordinates of the centre of the image (instead of the top left corner).
 
@@ -83,11 +81,7 @@ language: python filename: main.py line_numbers: true line_number_start: 18
 line_highlights: 21-23
 ---
 
-def setup():   
-# Setup your animation here   
-size(screen_size, screen_size)   
-image_mode(CENTER)  # Positions the image in the center global planet   
-planet = load_image('planet.png')  # Your chosen planet
+language: python filename: main.py line_numbers: true line_number_start: 18
 
 
 --- /code ---
@@ -113,9 +107,7 @@ line_highlights: 15-17
 ---
 
 # Mae'r swyddogaeth llunio_cefndir yn mynd fan hyn
-def draw_background():   
-background(0)  # Short for background(0, 0, 0) — black    
-image(planet, width/2, height, 300, 300)  # Draw the image
+language: python filename: main.py — llunio_cefndir() line_numbers: true line_number_start: 14
 
 
 --- /code ---
@@ -134,9 +126,7 @@ language: python filename: main.py — draw() line_numbers: true line_number_sta
 line_highlights: 30
 ---
 
-def draw():   
-# Things to do in every frame    
-draw_background()
+language: python filename: main.py — draw() line_numbers: true line_number_start: 28
 
 --- /code ---
 
