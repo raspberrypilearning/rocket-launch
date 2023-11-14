@@ -39,7 +39,7 @@ How much fuel is just enough without too much left over?
 
 --- print-only ---
 
-![Completed project example of rocket ships flying into outer space.](images/showcase.png)
+![Завершений проєкт.](images/showcase.png)
 
 --- /print-only ---
 
