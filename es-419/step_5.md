@@ -12,7 +12,7 @@ Para hacer esto, debes simular cuánto combustible se quemará en el viaje.
 
 </div>
 
-### Create a fuel variable
+### Crear una variable de combustible
 
 --- task ---
 
@@ -27,7 +27,7 @@ line_highlights: 10
 # Configurar variables globales
 screen_size = 400   
 rocket_y = screen_size  
-burn = 100  # How much fuel is burned in each frame
+burn = 100  # la cantidad de combustible que se usa en cada fotograma
 
 --- /code ---
 
@@ -51,7 +51,7 @@ run()
 
 --- /task ---
 
-### Check fuel against burn
+### Comprueba el combustible contra lo que se usa
 
 El cohete solo debería moverse si no ha quemado todo su combustible.
 
@@ -78,21 +78,21 @@ line_highlights: 15, 17-18
 
 --- task ---
 
-**Test:** Run your program to check that the animation doesn't start until `How many kilograms of fuel do you want to use?` has been answered. Try entering `30000` as the amount of fuel.
+**Prueba:** Ejecuta tu programa para verificar que la animación no comience hasta que se conteste la pregunta `¿Cuántos kilogramos de combustible deseas usar?`. Intenta ingresar `30000` como la cantidad de combustible.
 
-The rocket will keep going even if it has no fuel left.
+El cohete seguirá funcionando aunque no le quede combustible.
 
-![The program with a question in the output area asking how much fuel is required.](images/burn_question.png)
+![El programa con una pregunta en el área de salida que pregunta cuánto combustible se requiere.](images/burn_question.png)
 
 --- /task ---
 
 --- task ---
 
-The rocket should only move if it has enough fuel left. Add an `if` statement to check that `fuel >= burn`.
+El cohete solo debe moverse si le queda suficiente combustible. Agrega una declaración `if` para verificar que `combustible >= burn`.
 
-You will need to indent all of the lines of code before the `image()` function call. To do this, highlight all of the lines with the mouse and then tap the <kbd>Tab</kbd> on the keyboard to indent all the lines at once.
+Deberá sangrar todas las líneas de código antes de la llamada a la función `image()`. Para hacer esto, resalta todas las líneas con el mouse y luego toca el <kbd>Tab</kbd> en el teclado para sangrar todas las líneas a la vez.
 
-The `image()` line doesn't need to be indented because you always want to draw the rocket.
+No es necesario sangrar la línea `image()` porque siempre querrás dibujar el cohete.
 
 --- code ---
 ---
@@ -102,12 +102,12 @@ line_highlights: 17-30
 
     global rocket_y, fuel, burn  
     
-    if fuel >= burn:  # Still got fuel   
+    if fuel >= burn:  # Todavía tengo combustible
         rocket_y -= 1   
         fuel -= burn   
-        print('Fuel left: ', fuel)   
+        print('Combustible restante: ', fuel)   
     
-        no_stroke()  # Turn off the stroke   
+        no_stroke()  # apaga el trazado
     
         for i in range(25):   
             fill(255, 255 - i*10, 0)   
@@ -125,13 +125,13 @@ line_highlights: 17-30
 
 --- task ---
 
-**Test:** Run your program to check that the rocket stops when there is no fuel left.
+**Prueba:** Ejecuta tu programa para comprobar que el cohete se detiene cuando no le queda combustible.
 
-![Image of a rocket in the middle of the screen with the statement 'Fuel left: 0'.](images/burn_empty.png){:width="300px"}
+![Imagen de un cohete en el centro de la pantalla con la declaración "Combustible restante: 0".](images/burn_empty.png){:width="300px"}
 
 --- /task ---
 
-Did your rocket stop when it ran out of fuel? Well done, you sent a rocket to outer space!
+¿Tu cohete se detuvo cuando se quedó sin combustible? ¡Bien hecho, enviaste un cohete al espacio exterior!
 
 --- save ---
 
