@@ -11,10 +11,10 @@ Here's a version of the project with all those upgrades, so you can see how they
 
 --- collapse ---
 ---
-title: Completed project
+title: Додавання власних картинок у Trinket
 ---
 
-You can view the [completed project here](https://editor.raspberrypi.org/en/projects/rocket-launch-example){:target="_blank"}.
+Потім вибери **Image Library** та дотримуйся інструкцій на екрані, щоб завантажити зображення до бібліотеки зображень Trinket.
 
 --- /collapse ---
 
