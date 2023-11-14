@@ -15,7 +15,7 @@
 
 У стартовому проєкті тобі надається зображення ракети.
 
-![Image of the rocket in the code editor image gallery.](images/rocket_image.png)
+![Зображення ракети в бібліотеці зображень Trinket.](images/rocket_image.png)
 
 --- /task ---
 
@@ -30,7 +30,7 @@ line_highlights: 24, 26
 ---
 
 def setup():   
-# Setup your animation here   
+#Налаштувати анімацію можна тут   
 size(screen_size, screen_size)   
 image_mode(CENTER)   
 global planet, rocket   
@@ -57,7 +57,7 @@ line_highlights: 9
 
 # Налаштування глобальних змінних
 screen_size = 400    
-rocket_y = screen_size  # Start at the bottom
+rocket_y = screen_size #Старт знизу
 
 --- /code ---
 
@@ -76,10 +76,7 @@ line_highlights: 12-16
 ---
 
 # Функція draw_rocket викликається тут
-def draw_rocket():   
-global rocket_y  # Use the global rocket_y variable    
-rocket_y -= 1  # Move the rocket    
-image(rocket, width/2, rocket_y, 64, 64)
+def draw_rocket():
 
 
 --- /code ---
@@ -93,13 +90,10 @@ Call your new `draw_rocket()` in the `draw()` function so that the rocket gets r
 --- code ---
 ---
 language: python filename: main.py line_numbers: true line_number_start: 33
-line_highlights: 36
+line_highlights: 37
 ---
 
-def draw():   
-# Things to do in every frame   
-draw_background()   
-draw_rocket()
+language: python filename: main.py line_numbers: true line_number_start: 34
 
 
 --- /code ---
