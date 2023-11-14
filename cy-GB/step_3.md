@@ -15,7 +15,7 @@ Bob tro mae ffrâm newydd yn cael ei llunio, mae angen i'r roced symud i fyny'r 
 
 Mae'r prosiect dechreuol wedi darparu delwedd o roced i chi.
 
-![Image of the rocket in the code editor image gallery.](images/rocket_image.png)
+![Delwedd o'r roced yn llyfrgell ddelweddau Trinket.](images/rocket_image.png)
 
 --- /task ---
 
@@ -30,12 +30,12 @@ line_highlights: 24, 26
 ---
 
 def setup():   
-# Setup your animation here   
+#Gosodwch eich animeiddiad yma   
 size(screen_size, screen_size)   
 image_mode(CENTER)   
-global planet, rocket   
-planet = load_image('planet.png')    
-rocket = load_image('rocket.png')
+global planed, roced   
+planed = load_image('planet.png')    
+roced = load_image('rocket.png')
 
 --- /code ---
 
@@ -57,7 +57,7 @@ line_highlights: 9
 
 # Gosod newidynnau cyffredinol
 screen_size = 400    
-rocket_y = screen_size  # Start at the bottom
+roced_y = screen_size #Dechrau ar y gwaelod
 
 --- /code ---
 
@@ -76,10 +76,7 @@ line_highlights: 12-16
 ---
 
 # Mae'r swyddogaeth llunio_roced yn mynd fan hyn
-def draw_rocket():   
-global rocket_y  # Use the global rocket_y variable    
-rocket_y -= 1  # Move the rocket    
-image(rocket, width/2, rocket_y, 64, 64)
+def llunio_roced():
 
 
 --- /code ---
@@ -93,13 +90,10 @@ Call your new `draw_rocket()` in the `draw()` function so that the rocket gets r
 --- code ---
 ---
 language: python filename: main.py line_numbers: true line_number_start: 33
-line_highlights: 36
+line_highlights: 37
 ---
 
-def draw():   
-# Things to do in every frame   
-draw_background()   
-draw_rocket()
+language: python filename: main.py line_numbers: true line_number_start: 34
 
 
 --- /code ---
