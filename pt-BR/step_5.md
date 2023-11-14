@@ -27,7 +27,7 @@ line_highlights: 10
 # Configurar variáveis globais
 tamanho_tela = 400   
 foguete_y = tamanho_tela  
-queimar = 100  # Quanto combustível é queimado em cada quadro
+queimar = 100 #Quanto combustível é queimado em cada quadro
 
 --- /code ---
 
@@ -40,8 +40,8 @@ Na parte inferior do seu programa, adicione código para perguntar ao usuário q
 
 --- code ---
 ---
-language: python filename: main.py line_numbers: true line_number_start: 51
-line_highlights: 51
+language: python filename: main.py line_numbers: true line_number_start: 52
+line_highlights: 52
 ---
 
 fuel = int(input('How many kilograms of fuel do you want to use?'))   
@@ -67,10 +67,10 @@ language: python filename: main.py — draw_rocket() line_numbers: true line_num
 line_highlights: 15, 17-18
 ---
 
-    global foguete_y, combustivel, queimar   
-    foguete_y -= 1   
-    combustivel -= queimar  # Queimar combustível   
-    print('Combustível restante: ', combustivel)
+    global foguete_y, combustivel, queimar<br x-id="3" />
+      foguete_y -= 1<br x-id="3" />
+      combustivel -= queimar #Queimar combustível<br x-id="3" />
+      print('Combustível restante: ', combustivel)
 
 --- /code ---
 
@@ -90,34 +90,25 @@ O foguete continuará funcionando mesmo que não tenha mais combustível.
 
 O foguete só deve se mover se tiver combustível suficiente. Adicione uma declaração `if` para verificar se `combustivel >= queima`.
 
-Você precisará indentar todas as linhas de código antes da chamada de função `image()`. Para fazer isso, destaque todas as linhas com o mouse e, em seguida, pressione a tecla <kbd>Tab</kbd> no teclado para recuar todas as linhas de uma vez.
+Você precisará indentar todas as linhas de código antes da chamada de função `image()`. Para fazer isso, destaque todas as linhas com o mouse e, em seguida, carregue na tecla <kbd>Tab</kbd> no teclado para recuar todas as linhas de uma vez.
 
 A linha `image()` não precisa ser recuada porque você sempre quer desenhar o foguete.
 
 --- code ---
 ---
 language: python filename: main.py — desenhar_foguete() line_numbers: true line_number_start: 15
-line_highlights: 17-30
+line_highlights: 16-31
 ---
 
-    global foguete_y, combustivel, queimar  
+    no_stroke() #Desligue o lançamento   
     
-    if combustivel >= queimar:  # Ainda tem combustível   
-        foguete_y -= 1   
-        combustivel -= queimar   
-        print('Combustível restante: ', combustivel)   
+    for i in range(25):   
+      fill(255, 255 - i*10, 0)   
+      ellipse(width/2, foguete_y + i, 8, 3)    
     
-        no_stroke()  # Desligar traço   
-    
-        for i in range(25):   
-            fill(255, 255 - i*10, 0)   
-            ellipse(width/2, foguete_y + i, 8, 3)    
-    
-        fill(200, 200, 200, 100)   
-        for i in range(20):   
-            ellipse(width/2 + randint(-5, 5), foguete_y + randint(20, 50), randint(5, 10), randint(5, 10))   
-    
-    image(foguete, width/2, foguete_y, 64, 64)
+    fill(200, 200, 200, 100)   
+    for i in range(20):   
+      ellipse(width/2 + randint(-5, 5), foguete_y + randint(20, 50), randint(5, 10), randint(5, 10))
 
 --- /code ---
 
@@ -125,7 +116,7 @@ line_highlights: 17-30
 
 --- task ---
 
-**Teste:** Execute seu programa para verificar que o foguete para quando não há mais combustível.
+**Teste:** Execute seu programa para verificar que o foguete pára quando não há mais combustível.
 
 ![Imagem de um foguete no meio da tela com a declaração 'Combustível restante: 0'.](images/burn_empty.png){:width="300px"}
 
