@@ -104,7 +104,7 @@ Usa `background(0)` para establecer el color de fondo en negro y agrega la funci
 
 `image(image filename, x-coordinate, y-coordinate, image_width, image_height)`
 
-La línea de código `from p5 import *` teancho proporciona variables globales `width` (ancho) y `height` (largo) según el tamaño de la pantalla. Úsalos en tu código para colocar el planeta con su centro en la mitad (`width/2`) y en la parte inferior (`height`) de la pantalla.
+La línea de código `from p5 import *` te proporciona variables globales `width` (ancho) y `height` (largo) según el tamaño de la pantalla. Úsalos en tu código para colocar el planeta con su centro en la mitad (`width/2`) y en la parte inferior (`height`) de la pantalla.
 
 --- code ---
 ---
