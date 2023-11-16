@@ -29,7 +29,7 @@ You need to supply the rocket with enough fuel to reach the satellite orbit. Try
 
 How much fuel is just enough without too much left over?
 </div>
-<iframe src="https://editor.raspberrypi.org/en/embed/viewer/rocket-launch-example" width="600" height="900" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen>
+<iframe src="https://editor.raspberrypi.org/en/embed/viewer/rocket-launch-example" width="600" height="800" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen>
 </iframe>
 </div>
 
