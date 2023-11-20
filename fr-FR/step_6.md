@@ -223,7 +223,7 @@ if carburant < brule and fusee_y > orbite_y:
   tint(255, 0, 0) #Échec   
 elif carburant < 1000 and fusee_y <= orbite_y:   
   tint(0, 255, 0) #Succès   
-elif carburant >= 1000 et brule_y <= orbite_y :    
+elif carburant >= 1000 and fusee_y <= orbite_y :    
   tint(255, 200, 0) #Trop de carburant
 
 image(fusee, width/2, fusee_y, 64, 64)    

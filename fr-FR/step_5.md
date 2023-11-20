@@ -117,7 +117,7 @@ line_highlights: 16-31
 
     no_stroke() #Désactiver le trait   
     
-    for i in la plage (25):   
+    for i in range(25):   
       fill(255, 255 - i*10, 0)   
       ellipse(width/2, fusee_y + i, 8, 3)    
     
