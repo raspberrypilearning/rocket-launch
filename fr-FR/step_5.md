@@ -12,7 +12,7 @@ Pour ce faire, tu dois simuler la quantité de carburant qui sera brûlée penda
 
 </div>
 
-### Create a fuel variable
+### Créer une variable de carburant
 
 --- task ---
 
@@ -27,7 +27,7 @@ line_highlights: 10
 # Configurer les variables globales
 taille_ecran = 400   
 fusee_y = taille_ecran  
-brule = 100 #Combien de carburant est brûlé dans chaque image
+brule = 100 # Quelle est la quantité de carburant brûlée dans chaque image
 
 --- /code ---
 
@@ -40,8 +40,8 @@ Au bas de ton programme, ajoute du code pour demander à l'utilisateur la quanti
 
 --- code ---
 ---
-language: python filename: main.py line_numbers: true line_number_start: 52
-line_highlights: 52
+language: python filename: main.py line_numbers: true line_number_start: 51
+line_highlights: 51
 ---
 
 carburant = int(input('Combien de kilos de carburant veux-tu utiliser ?'))   
@@ -51,7 +51,7 @@ run()
 
 --- /task ---
 
-### Check fuel against burn
+### Vérifier le carburant par rapport au brûlé
 
 La fusée ne devrait se déplacer que si elle n'a pas brûlé tout son carburant.
 
@@ -67,9 +67,9 @@ language: python filename: main.py — draw_rocket() line_numbers: true line_num
 line_highlights: 15, 17-18
 ---
 
-    global fusee_y, carburant, brule<br x-id="3" />
-      fusee_y -= 1<br x-id="3" />
-      carburant -= brule #Carburant brûlé<br x-id="3" />
+    global fusee_y, carburant, brule   
+      fusee_y -=1   
+      carburant -= brule # Carburant brûlé   
       print('Carburant restant : ', carburant)
 
 --- /code ---
@@ -78,11 +78,11 @@ line_highlights: 15, 17-18
 
 --- task ---
 
-**Test :** Exécute ton programme pour vérifier que l'animation ne démarre pas avant `Combien de kilos de carburant veux-tu utiliser ?` a été répondu. Essaye d'entrer `30000` comme quantité de carburant.
+**Test :** exécute ton programme pour vérifier que l'animation ne démarre pas avant d'avoir répondu à la question `Combien de kilogrammes de carburant voulez-vous utiliser ?`. Essaye d'entrer `30000` comme quantité de carburant.
 
 La fusée continuera même s'il n'y a plus de carburant.
 
-![Le programme avec une question dans la zone de sortie demandant combien de carburant est nécessaire.](images/burn_question.png)
+![Le programme avec une question dans la zone de sortie demandant quelle quantité de carburant est nécessaire.](images/burn_question.png)
 
 --- /task ---
 
@@ -97,27 +97,27 @@ La ligne `image()` n'a pas besoin d'être indentée car tu veux toujours dessine
 --- code ---
 ---
 language: python filename: main.py — dessine_fusee() line_numbers: true line_number_start: 15
-line_highlights: 16-31
+line_highlights: 17-30
 ---
 
-    global rocket_y, fuel, burn  
+    global fusee_y, carburant, brule  
     
-    if fuel >= burn:  # Still got fuel   
-        rocket_y -= 1   
-        fuel -= burn   
-        print('Fuel left: ', fuel)   
+    if carburant >= brule:  # il y a encore du carburant   
+        fusee_y -= 1   
+        carburant -= brule   
+        print('Carburant restant: ', carburant)   
     
-        no_stroke()  # Turn off the stroke   
+        no_stroke()  # plus de trait   
     
         for i in range(25):   
             fill(255, 255 - i*10, 0)   
-            ellipse(width/2, rocket_y + i, 8, 3)    
+            ellipse(width/2, fusee_y + i, 8, 3)    
     
         fill(200, 200, 200, 100)   
         for i in range(20):   
             ellipse(width/2 + randint(-5, 5), rocket_y + randint(20, 50), randint(5, 10), randint(5, 10))   
     
-    image(rocket, width/2, rocket_y, 64, 64)
+    image(fusee, width/2, fusee_y, 64, 64)
 
 --- /code ---
 
@@ -125,13 +125,13 @@ line_highlights: 16-31
 
 --- task ---
 
-**Test :** Exécute ton programme pour vérifier que la fusée s'arrête lorsqu'il n'y a plus de carburant.
+**Test :** exécute ton programme pour vérifier que la fusée s'arrête lorsqu'il n'y a plus de carburant.
 
-![Image of a rocket in the middle of the screen with the statement 'Fuel left: 0'.](images/burn_empty.png){:width="300px"}
+![Image d'une fusée au milieu de l'écran avec la mention « Carburant restant : 0 ».](images/burn_empty.png){:width="300px"}
 
 --- /task ---
 
-Did your rocket stop when it ran out of fuel? Well done, you sent a rocket to outer space!
+Ta fusée s'est-elle arrêtée lorsqu'elle était à court de carburant ? Bravo, tu as envoyé une fusée dans l'espace !
 
 --- save ---
 
