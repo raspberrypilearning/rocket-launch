@@ -1,89 +1,89 @@
 #!/bin/python3
 
-# Import library code
+# Importer le code de la bibliothèque
 from p5 import *
 from random import randint
 
-# Setup global variables
-screen_size = 400
-rocket_y = screen_size  # Start at the bottom
-burn = 100  # How much fuel is burned in each frame
-orbit_radius = 250
-orbit_y = screen_size - orbit_radius
-high_orbit_radius = 350
-high_orbit_y = screen_size - high_orbit_radius
-speed = 1  # How far the rocket flies each frame
+# Configuration des variables globales
+taille_ecran = 400
+fusee_y = taille_ecran # commencer en bas
+brule = 100 # quelle est la quantité de carburant brûlée dans chaque image
+rayon_orbite = 250
+orbite_y = taille_ecran - rayon_orbite
+rayon_orbite_haut = 350
+orbite_haut_y = taille_ecran - rayon_orbite_haut
+vitesse = 1 # Jusqu'où la fusée vole à chaque image
 
-# The draw_rocket function goes here
+# La fonction dessine_fusee vient ici
 
 
-def draw_rocket():
-    global rocket_y, fuel, burn
+def dessine_fusee():
+    global fusee_y, carburant, brule
 
-    if fuel >= burn and rocket_y > high_orbit_y:  # Still flying
-        rocket_y -= speed  # Move the rocket
-        fuel -= burn  # Burn fuel
-        print('Fuel left: ', fuel)
+    if carburant >= brule and fusee_y > orbite_haut_y: # toujours en vol
+        fusee_y -= vitesse # Déplace la fusée
+        carburant -= brule # brûler du carburant
+        print('Carburant restant : ', carburant)
 
-        no_stroke()  # Turn off the stroke
+        no_stroke() # Désactive le trait
 
-        for i in range(25):  # Draw 25 burning exhaust ellipses
-            fill(255, 255 - i*10, 0)  # yellow
-            # i increases each time the loop repeats
-            ellipse(width/2, rocket_y + i, 8, 3)
+        for i in range(25): # dessiner 25 ellipses d'échappement en combustion
+            fill(255, 255 - i*10, 0) # jaune
+            # i augmente à chaque fois que la boucle se répète
+            ellipse(width/2, fusee_y + i, 8, 3)
 
-        fill(200, 200, 200, 100)  # transparent grey
+        fill(200, 200, 200, 100) # gris transparent
 
-        for i in range(20):  # draw 20 random smoke ellipses
-            ellipse(width/2 + randint(-5, 5), rocket_y +
+        for i in range(20): # dessiner 20 ellipses de fumée aléatoire
+            ellipse(width/2 + randint(-5, 5), fusee_y +
                     randint(20, 50), randint(5, 10), randint(5, 10))
 
-    if fuel < burn and rocket_y > high_orbit_y:  # No more fuel and not in orbit
-        tint(255, 0, 0)  # Failure
-    elif rocket_y <= orbit_y and rocket_y > high_orbit_y:
-        tint(0, 255, 0)  # Success
-    elif fuel < 1000 and rocket_y <= high_orbit_y:
-        tint(0, 100, 200)  # High orbit success
-    elif fuel >= 1000 and rocket_y <= high_orbit_y:
-        tint(255, 200, 0)  # Too much fuel
+    if carburant < brule and fusee_y > orbite_haut_y: # Plus de carburant et pas en orbite
+        tint(255, 0, 0)  # Échec
+    elif fusee_y <= orbite_y and fusee_y > orbite_haut_y:
+        tint(0, 255, 0)  # Succès
+    elif carburant < 1000 and fusee_y <= orbite_haut_y:
+        tint(0, 100, 200)  # succès orbite haute
+    elif carburant >= 1000 and fusee_y <= orbite_haut_y:
+        tint(255, 200, 0) # Trop de carburant
 
-    image(rocket, width/2, rocket_y, 64, 64)
+    image(fusee, width/2, fusee_y, 64, 64)
     no_tint()
 
 
-# The draw_background function goes here
-def draw_background():
-    background(0)  # Short for background(0, 0, 0) - black
-    image(planet, width/2, height, 300, 300)  # draw the image
+# La fonction dessine_arriere_plan vient ici
+def dessine_arriere_plan():
+    background(0) # raccourci pour background(0, 0, 0) - noir
+    image(planete, width/2, height, 300, 300) # dessine l'image
 
-    # Draw the lower orbit
-    no_fill()  # Turn off any fill
-    stroke(255)  # Set a white stroke
+    # Dessine l'orbite basse
+    no_fill() # Désactive tout remplissage
+    stroke(255) # Définir un trait blanc
     stroke_weight(2)
-    ellipse(width/2, height, orbit_radius*2, orbit_radius*2)
+    ellipse(width/2, height, rayon_orbite*2, rayon_orbite*2)
 
-    # Draw the higher orbit
-    stroke(0, 100, 200)  # Set a bluish stroke
+    # Dessine l'orbite haute
+    stroke(0, 100, 200) # Définir un trait bleuâtre
     stroke_weight(2)
-    ellipse(width/2, height, high_orbit_radius*2, high_orbit_radius*2)
+    ellipse(width/2, height, rayon_orbite_haut*2, rayon_orbite_haut*2)
 
 
-def setup():
-    # Setup your animation here
-    size(screen_size, screen_size)
+def configuration():
+    # Configure ton animation ici
+    size(taille_ecran, taille_ecran)
     image_mode(CENTER)
-    global planet, rocket
-    planet = load_image('orange_planet.png')  # Your chosen planet
-    rocket = load_image('rocket.png')
+    global planete, fusee
+    planete = load_image('orange_planet.png') # ta planète choisie
+    fusee = load_image('rocket.png')
 
 
-def draw():
-    # Things to do in every frame
-    draw_background()
-    draw_rocket()
+def dessin():
+    # Choses à faire dans chaque image
+    dessine_arriere_plan()
+    dessine_fusee()
 
 
-fuel = int(input('How many kilograms of fuel do you want to use?'))
-burn = int(input('How much fuel should the rocket burn each frame?'))
-speed = int(input('How far should the rocket travel each frame?'))
+carburant = int(input('Combien de kilos de carburant veux-tu utiliser ?'))
+brule = int(input('Quelle quantité de carburant la fusée doit-elle brûler à chaque image ?'))
+vitesse = int(input('Quelle distance la fusée doit-elle parcourir à chaque image ?'))
 run()
