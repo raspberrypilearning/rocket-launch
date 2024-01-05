@@ -1,73 +1,73 @@
 #!/bin/python3
 
-# Import library code
+# Importer le code de la bibliothèque
 from p5 import *
 from random import randint
 
-# Setup global variables
-screen_size = 400
-rocket_y = 400
-burn = 100
-orbit_radius = 250
-orbit_y = screen_size - orbit_radius
+# Configuration des variables globales
+taille_ecran = 400
+fusee_y = 400
+brule = 100
+rayon_orbite = 250
+orbite_y = taille_ecran = rayon_orbite
 
 
-# The draw_rocket function goes here
-def draw_rocket():
-    global rocket_y, fuel, burn
+# La fonction dessine_fusee vient ici
+def dessine_fusee():
+    global fusee_y, carburant, brule
 
-    if fuel >= burn and rocket_y > orbit_y:
-        rocket_y -= 1
-        fuel -= burn
-        print('Fuel left: ', fuel)
+    if carburant >= brule and fusee_y > orbite_y:
+        fusee_y -= 1
+        carburant -= brule
+        print('Carburant restant : ', carburant)
 
         no_stroke()
 
         for i in range(25):
             fill(255, 255 - i * 10, 0)
-            ellipse(width/2, rocket_y + i, 8, 3)
+            ellipse(width/2, fusee_y + i, 8, 3)
 
-        fill(200, 200, 200, 100)  # Transparent grey
-        for i in range(20):  # Draw 20 random smoke ellipses
-            ellipse(width/2 + randint(-5, 5), rocket_y +
+        fill(200, 200, 200, 100) # gris transparent
+        for i in range(20): # dessiner 20 ellipses de fumée aléatoire
+            ellipse(width/2 + randint(-5, 5), fusee_y +
                     randint(20, 50), randint(5, 10), randint(5, 10))
 
-    if fuel < burn and rocket_y > orbit_y:
+    if carburant < brule and fusee_y > orbite_y:
         tint(255, 0, 0)
-    elif fuel < 1000 and rocket_y <= orbit_y:
+    elif carburant < 1000 and fusee_y <= orbite_y:
         tint(0, 255, 0)
-    elif fuel >= 1000 and rocket_y <= orbit_y:
+    elif carburant >= 1000 and fusee_y <= orbite_y:
         tint(255, 200, 0)
 
-    image(rocket, width/2, rocket_y, 64, 64)
+    image(fusee, width/2, fusee_y, 64, 64)
     no_tint()
 
 
-# The draw_background function goes here
-def draw_background():
+# La fonction dessine_arriere_plan vient ici
+def dessine_arriere_plan():
     background(0)
-    image(planet, width/2, height, 300, 300)
+    image(planete, width/2, height, 300, 300)
 
     no_fill()
     stroke(255)
     stroke_weight(2)
-    ellipse(width/2, height, orbit_radius * 2, orbit_radius * 2)
+    ellipse(width/2, height, rayon_orbite * 2, rayon_orbite*2)
 
 
-def setup():
-    # Setup your animation here
-    size(screen_size, screen_size)
+def configuration():
+    # Configure ton animation ici
+    size(taille_ecran, taille_ecran)
     image_mode(CENTER)
-    global planet, rocket
-    planet = load_image('planet.png')
-    rocket = load_image('rocket.png')
+    global planete, fusee
+    planete = load_image('planet.png')
+    fusee = load_image('rocket.png')
 
 
-def draw():
-    # Things to do in every frame
-    draw_background()
-    draw_rocket()
+def dessin():
+    # Choses à faire dans chaque image
+    dessine_arriere_plan()
+    dessine_fusee()
 
 
-fuel = int(input('How many kilograms of fuel do you want to use?'))
+carburant = int(input('Combien de kilos de carburant veux-tu utiliser ?'))
 run()
