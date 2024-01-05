@@ -17,7 +17,7 @@ La fusée peut changer de couleur pour montrer le succès du lancement.
 </div>
 </div>
 
-### Draw an orbit line
+### Tracer une ligne d'orbite
 
 --- task ---
 
@@ -46,17 +46,17 @@ Mets à jour la fonction `dessine_arriere_plan()` pour dessiner une ellipse repr
 
 --- code ---
 ---
-language: python filename: main.py - desinne_arriere_plan() line_numbers: true line_number_start: 37
+language: python filename: main.py - dessine_arriere_plan() line_numbers: true line_number_start: 38
 line_highlights: 42-45
 ---
 
-def desinne_arriere_plan():   
-background(0) #Raccourci pour background(0, 0, 0) — noir   
+def dessine_arriere_plan():   
+background(0) # Raccourci pour background(0, 0, 0) — noir   
 image(planete, width/2, height, 300, 300)   
 
-    no_fill() #Désactiver tout remplissage<br x-id="2" />
-      stroke(255) #Définir un trait blanc<br x-id="3" />
-      stroke_weight(2)<br x-id="3" />
+    no_fill() # Désactive tout remplissage  
+      stroke(255) # Définis un trait blanc   
+      stroke_weight(2)   
       ellipse(width/2, height, rayon_orbite * 2, rayon_orbite * 2)
 
 --- /code ---
@@ -65,33 +65,33 @@ image(planete, width/2, height, 300, 300)
 
 --- task ---
 
-**Test :** Exécute ton programme et vérifie qu'une ligne d'orbite blanche est tracée.
+**Test :** exécute ton programme et vérifie qu'une ligne d'orbite blanche est tracée.
 
 ![L'écran avec la planète et la nouvelle ligne d'orbite.](images/draw_orbit.png){:width="300px"}
 
 --- /task ---
 
-### Launch the rocket to the orbit
+### Lancer la fusée en orbite
 
-La fusée devrait s'arrêter lorsqu'elle atteindra l'orbite du satellite - la fin de la mission.
+La fusée doit s'arrêter lorsqu'elle atteint l'orbite du satellite, c'est-à-dire à la fin de la mission.
 
 --- task ---
 
-Mets à jour ton code `si carburant >= brule` pour vérifier également que la fusée n'a pas atteint l'orbite.
+Mets à jour ton code `if carburant >= brule` pour vérifier également que la fusée n'a pas atteint l'orbite.
 
-Tu peux utiliser les instructions `and` sur `if` pour vérifier si deux conditions ou plus sont vraies.
+Tu peux utiliser les instructions `and` dans les instructions `if` pour vérifier si deux conditions ou plus sont vraies.
 
 --- code ---
 ---
-language: python filename: main.py - dessine_fusee() line_numbers: true line_number_start: 14
+language: python filename: main.py - dessine_fusee() line_numbers: true line_number_start: 15
 line_highlights: 19
 ---
 
 # La fonction dessine_fusee vient ici
-def draw_rocket():   
-global rocket_y, fuel, burn
+def dessine_fusee():   
+global fusee_y, carburant, brule
 
-        if carburant >= brule and fusee_y > orbite_y : #Toujours en vol
+        if carburant >= brule and fusee_y > orbite_y : # Toujours en vol
 
 --- /code ---
 
@@ -99,11 +99,11 @@ global rocket_y, fuel, burn
 
 --- task ---
 
-**Test :** Exécute ton projet et entre `50000` comme quantité de carburant. Cela devrait être suffisant pour atteindre l'orbite. La fusée devrait cesser de bouger lorsqu'elle atteint l'orbite.
+**Test :** exécute ton projet et entre `50000` comme quantité de carburant. Cela devrait être suffisant pour atteindre l'orbite. La fusée devrait cesser de bouger lorsqu'elle atteint l'orbite.
 
 --- /task ---
 
-### Check if the launch is successful
+### Vérifier si le lancement est réussi
 
 La fusée doit être colorée en rouge si elle manque de carburant avant d'être suffisamment haute pour lancer le satellite.
 
@@ -117,7 +117,10 @@ line_highlights: 34-35
 
     fill(200, 200, 200, 100)   
     for i in range(20):   
-      ellipse(width/2 + randint(-5, 5), fusee_y + randint(20, 50), randint(5, 10), randint(5, 10))
+        ellipse(width/2 + randint(-5, 5), fusee_y + randint(20, 50), randint(5, 10), randint(5, 10))
+    
+    if carburant < brule and fusee_y > orbite_y:  # Plus de carburant et pas en orbite   
+        tint(255, 0, 0)  # Échec
 
 --- /code ---
 
@@ -125,7 +128,7 @@ line_highlights: 34-35
 
 --- task ---
 
-**Test :** Exécute ton code et entre `20000` comme quantité de carburant. Vérifie que la fusée devient rouge lorsqu'elle s'arrête sous l'orbite.
+**Test :** exécute ton code et entre `20000` comme quantité de carburant. Vérifie que la fusée devient rouge lorsqu'elle s'arrête sous l'orbite.
 
 ![Une fusée rouge à court de carburant avant le cercle orbital. La planète est également devenue rouge.](images/orbit_failure.png){:width="300px"}
 
@@ -137,7 +140,7 @@ Oh non, la planète est devenue rouge !
 
 La fonction `tint()` définit la couleur de teinte pour toutes les images dessinées jusqu'à ce que tu changes la teinte ou que tu utilises `no_tint()` pour la désactiver.
 
-**Choisir :** Ajoute un appel à `no_tint()` après avoir dessiné l'image afin que la planète ne soit pas teintée de rouge dans l'image suivante — ou laisse-le si tu aimes que la planète devienne rouge !
+**Choisir :** ajoute un appel à `no_tint()` après avoir dessiné l'image pour que la planète ne soit pas teintée en rouge dans l'image suivante - ou laisse-le si tu aimes que la planète devienne rouge !
 
 --- code ---
 ---
@@ -145,8 +148,11 @@ language: python filename: main.py - dessine_fusee() line_numbers: true line_num
 line_highlights: 38
 ---
 
-    if carburant < brule and fusee_y > orbite_y: #Plus de carburant et pas en orbite 
-        tint(255, 0, 0) #Échec
+    if carburant < brule and fusee_y > orbite_y:    
+        tint(255, 0, 0)  # Échec
+    
+    image(fusee, width/2, fusee_y, 64, 64)   
+    no_tint()  # La planète n'est donc pas teintée de rouge dans l'image suivante !
 
 
 --- /code ---
@@ -163,10 +169,13 @@ language: python filename: main.py - dessine_fusee() line_numbers: true line_num
 line_highlights: 36-37
 ---
 
-    if carburant &#060; brule and fusee_y &#062; orbite_y: 
-      tint(255, 0, 0) #Échec<br x-id="3" />
-    elif fusee_y &#060;= orbite_y:<br x-id="3" />
-      tint(0, 255, 0) #Succès
+    if carburant < brule and fusee_y > orbite_y:    
+        tint(255, 0, 0)  # Échec   
+    elif fusee_y <= orbite_y:   
+        tint(0, 255, 0)  # Succès   
+    
+    image(fusee, width/2, fusee_y, 64, 64)   
+    no_tint()
 
 --- /code ---
 
@@ -174,19 +183,19 @@ line_highlights: 36-37
 
 --- task ---
 
-**Test :** Exécute ton projet et entre `50000` comme quantité de carburant. Vérifie que ta fusée devient verte lorsqu'elle atteint l'orbite du satellite.
+**Test :** exécute ton projet et entre `50000` comme quantité de carburant. Vérifie que ta fusée devient verte lorsqu'elle atteint l'orbite du satellite.
 
 ![Une fusée verte qui a atteint le cercle orbital et qui a encore du carburant.](images/orbit_success.png){:width="300px"}
 
 --- /task ---
 
-Tu as maintenant une simulation qui peut être utilisée pour montrer combien de carburant est nécessaire au minimum pour atteindre l'orbite du satellite. C'est génial ; cependant, tu pourrais prendre une énorme quantité de carburant et réussir quand même, mais c'est coûteux et inutile !
+Tu as maintenant une simulation qui peut être utilisée pour montrer quelle quantité carburant est nécessaire au minimum pour atteindre l'orbite du satellite. C'est génial ; cependant, tu pourrais prendre une énorme quantité de carburant et réussir quand même, mais c'est coûteux et inutile !
 
 --- task ---
 
 Modifie les conditions de ton code de réussite afin que la fusée ne devienne verte que si elle atteint l'orbite `et` a moins de 1 000 kg de carburant restant.
 
-Ajoute un code pour colorer la fusée en jaune s'il reste plus de 1 000 kg de carburant à la fusée lorsqu'elle atteint l'orbite.
+Ajoute du code pour colorer la fusée en jaune s'il reste plus de 1 000 kg de carburant à la fusée lorsqu'elle atteint l'orbite.
 
 --- code ---
 ---
@@ -194,12 +203,15 @@ language: python filename: main.py line_numbers: true line_number_start: 34
 line_highlights: 36, 38-39
 ---
 
-    if carburant &#060; brule and fusee_y &#062; orbite_y: 
-      tint(255, 0, 0) #Échec<br x-id="3" />
-    elif carburant &#060; 1000 and fusee_y &#060;= orbite_y:<br x-id="3" />
-      tint(0, 255, 0) #Succès<br x-id="3" />
-    elif carburant &#062;= 1000 et brule_y &#060;= orbite_y :<br x-id="4" />
-      tint(255, 200, 0) #Trop de carburant
+    if carburant < brule and fusee_y > orbite_y:   
+        tint(255, 0, 0)  # Échec      
+    elif carburant < 1000 and fusee_y <= orbite_y:   
+        tint(0, 255, 0)  # Succès   
+    elif carburant >= 1000 and fusee_y <= orbite_y:    
+        tint(255, 200, 0)  # Trop de carburant   
+    
+    image(fusee, width/2, fusee_y, 64, 64)    
+    no_tint()  # La planète n'est donc pas teintée dans l'image suivante !
 
 --- /code ---
 
@@ -207,7 +219,7 @@ line_highlights: 36, 38-39
 
 --- task ---
 
-**Test :** Exécute plusieurs fois ton programme avec des nombres différents ; par exemple, 25 000 kg de carburant devraient être la quantité nécessaire pour rendre la fusée verte, mais vérifie également que la teinte jaune fonctionne également en utilisant un nombre plus grand.
+**Test :** exécute plusieurs fois ton programme avec des nombres différents ; par exemple, 25 000 kg de carburant devraient être la quantité nécessaire pour rendre la fusée verte, mais vérifie également que la teinte jaune fonctionne également en utilisant un nombre plus grand.
 
 ![Une fusée jaune qui a atteint le cercle orbital et qui a encore du carburant.](images/orbit_meh.png){:width="300px"}
 
