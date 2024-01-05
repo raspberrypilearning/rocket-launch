@@ -15,7 +15,7 @@ Chaque fois qu'une nouvelle image est dessinée, la fusée doit remonter l'écra
 
 Le projet de démarrage a une image de fusée qui t'est fournie.
 
-![Image of the rocket in the code editor image gallery.](images/rocket_image.png)
+![Image de la fusée dans la galerie d'images de l'éditeur de code.](images/rocket_image.png)
 
 --- /task ---
 
@@ -29,8 +29,8 @@ language: python filename: main.py line_numbers: true line_number_start: 20
 line_highlights: 24, 26
 ---
 
-def setup():   
-#Configure ton animation ici   
+def configuration():   
+# Configure ton animation ici   
 size(taille_ecran, taille_ecran)   
 image_mode(CENTER)   
 global planete, fusee   
@@ -41,7 +41,7 @@ fusee = load_image( 'rocket.png')
 
 --- /task ---
 
-### Make the rocket fly
+### Faire voler la fusée
 
 La position `y` de la fusée commencera à 400 (la hauteur de l'écran) puis diminuera de 1 à chaque fois qu'une nouvelle image est dessinée.
 
@@ -76,8 +76,8 @@ line_highlights: 12-16
 ---
 
 # La fonction dessine_fusee vient ici
-global fusee_y #Utiliser la variable globale fusee_y    
-fusee_y -= 1 #Déplacer la fusée    
+global fusee_y # Utilise la variable globale fusee_y    
+fusee_y -= 1 # Déplace la fusée    
 image(fusee, width/2, fusee_y, 64, 64)
 
 
@@ -87,17 +87,17 @@ image(fusee, width/2, fusee_y, 64, 64)
 
 --- task ---
 
-Appelle ton nouveau `dessine_fusee()` dans la fonction `draw()` afin que la fusée soit redessinée à chaque image.
+Appelle ton nouveau `dessine_fusee()` dans la fonction `dessin()` afin que la fusée soit redessinée à chaque image.
 
 --- code ---
 ---
-language: python filename: main.py line_numbers: true line_number_start: 34
-line_highlights: 37
+language: python filename: main.py line_numbers: true line_number_start: 33
+line_highlights: 36
 ---
 
 def dessin():   
-#Choses à faire dans chaque image   
-dessine-arriere_plan()   
+# Choses à faire dans chaque image   
+dessine_arriere_plan()   
 dessine_fusee()
 
 
@@ -107,9 +107,9 @@ dessine_fusee()
 
 --- task ---
 
-**Test :** Exécute ton code pour vérifier que la fusée démarre en bas de l'écran et remonte à chaque image.
+**Test :** exécute ton code pour vérifier que la fusée démarre en bas de l'écran et remonte à chaque image.
 
-![Animation of the rocket flying half way up the screen.](images/rocket_fly.gif)
+![Animation de la fusée volant à mi-hauteur de l'écran.](images/rocket_fly.gif)
 
 --- /task ---
 
