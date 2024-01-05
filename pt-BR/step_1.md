@@ -29,7 +29,7 @@ Você precisa abastecer o foguete com combustível suficiente para alcançar a �
 
 Quanto combustível é suficiente sem sobrar muito?
 </div>
-<iframe src="https://editor.raspberrypi.org/en/embed/viewer/rocket-launch-example" width="600" height="800" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen>
+<iframe src="https://editor.raspberrypi.org/en/embed/viewer/rocket-launch-example" width="400" height="710" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen>
 </iframe>
 </div>
 
