@@ -54,7 +54,7 @@ Gris transparent
 
 Dessiner 20 ellipses de fumée aléatoire
 
-Combien de carburant est brûlé dans chaque image
+Quelle est la quantité de carburant brûlée dans chaque image
 
 Brûler du carburant
 
