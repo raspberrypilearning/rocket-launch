@@ -1,27 +1,27 @@
 #!/bin/python3
 
-# Import library code
+# Importer le code de la bibliothèque
 from p5 import *
 from random import randint
 
-# Setup global variables
+# Configuration des variables globales
 
 
-# The draw_rocket function goes here
-
-
-
-# The draw_background function goes here
+# La fonction dessine_fusee vient ici
 
 
 
-def setup():
-  # Setup your animation here
+# La fonction dessine_arriere_plan vient ici
+
+
+
+def configuration():
+  # Configure ton animation ici
   
 
 
-def draw():
-  # Things to do in every frame
+def dessin():
+  # Choses à faire dans chaque image
     
 
 
