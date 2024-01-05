@@ -10,7 +10,7 @@ Si tu suis le parcours [Introduction à Python](https://projects.raspberrypi.org
 
 --- no-print ---
 
-<iframe src="https://editor.raspberrypi.org/en/embed/viewer/fruit-face-example" width="600" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen>
+<iframe src="https://editor.raspberrypi.org/en/embed/viewer/fruit-face-example" width="400" height="710" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen>
 </iframe>
 
 --- /no-print ---
