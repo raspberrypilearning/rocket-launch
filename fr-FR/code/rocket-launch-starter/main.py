@@ -15,12 +15,12 @@ from random import randint
 
 
 
-def configuration():
+def setup():
   # Configure ton animation ici
   
 
 
-def dessin():
+def draw():
   # Choses à faire dans chaque image
     
 
