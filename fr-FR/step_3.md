@@ -76,6 +76,7 @@ line_highlights: 12-16
 ---
 
 # La fonction dessine_fusee vient ici
+def dessine_fusee():   
 global fusee_y # Utilise la variable globale fusee_y    
 fusee_y -= 1 # Déplace la fusée    
 image(fusee, width/2, fusee_y, 64, 64)
