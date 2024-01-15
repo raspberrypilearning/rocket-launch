@@ -44,11 +44,11 @@ Utilise la variable `taille_ecran` pour créer un carré de 400 par 400 pixels 
 
 --- code ---
 ---
-language: python filename: main.py — configuration() line_numbers: true line_number_start: 18
+language: python filename: main.py — setup() line_numbers: true line_number_start: 18
 line_highlights: 20
 ---
 
-def configuration():   
+def setup():   
 # Configure ton animation ici   
 size(taille_ecran, taille_ecran)
 
@@ -71,11 +71,11 @@ Le projet de démarrage a trois images de planètes différentes et la lune t'es
 
 --- task ---
 
-Ajoute du code à la fonction `configuration()` pour charger et positionner ton image.
+Ajoute du code à la fonction `setup()` pour charger et positionner ton image.
 
 La ligne `image_mode(CENTER)` indique que tu vas positionner les images en donnant les coordonnées du centre de l'image (au lieu du coin supérieur gauche).
 
-Ajoute également du code à la fonction `configuration()` pour charger l'image choisie dans une variable globale `planete`. La variable doit être globale afin que tu puisses l'utiliser plus tard lorsque tu dessines la planète à l'écran.
+Ajoute également du code à la fonction `setup()` pour charger l'image choisie dans une variable globale `planete`. La variable doit être globale afin que tu puisses l'utiliser plus tard lorsque tu dessines la planète à l'écran.
 
 --- code ---
 ---
@@ -83,7 +83,7 @@ language: python filename: main.py line_numbers: true line_number_start: 18
 line_highlights: 21-23
 ---
 
-def configuration():   
+def setup():   
 # Configure ton animation ici   
 size(taille_ecran, taille_ecran)   
 image_mode(CENTER)   
@@ -109,7 +109,7 @@ La ligne de code `from p5 import *` te donne des variables globales `width` et `
 
 --- code ---
 ---
-language: python filename: main.py — dessine_arriere_plan() line_numbers: true line_number_start: 14
+language: python filename: main.py — draw_background() line_numbers: true line_number_start: 14
 line_highlights: 15-17
 ---
 
@@ -127,7 +127,7 @@ Mettre tout le code pour dessiner l'arrière-plan dans une seule fonction rend t
 
 --- task ---
 
-Pour faire apparaître l'arrière-plan, appelle `dessine_arriere_plan()` dans `dessin()`. Cela fera en sorte que l'arrière-plan soit redessiné chaque fois que `dessin()` est appelé, couvrant ainsi tout dessin plus ancien :
+Pour faire apparaître l'arrière-plan, appelle `dessine_arriere_plan()` dans `draw()`. Cela fera en sorte que l'arrière-plan soit redessiné chaque fois que `draw()` est appelé, couvrant ainsi tout dessin plus ancien :
 
 --- code ---
 ---
@@ -135,7 +135,7 @@ language: python filename: main.py — dessin() line_numbers: true line_number_s
 line_highlights: 30
 ---
 
-def dessin():   
+def draw():   
 # Choses à faire dans chaque image    
 dessine_arriere_plan()
 
