@@ -21,7 +21,7 @@ Le projet de démarrage a une image de fusée qui t'est fournie.
 
 --- task ---
 
-Ajoute du code à la fonction `configuration()` pour charger l'image de la fusée dans une variable globale `fusee`.
+Ajoute du code à la fonction `setup()` pour charger l'image de la fusée dans une variable globale `fusee`.
 
 --- code ---
 ---
@@ -29,7 +29,7 @@ language: python filename: main.py line_numbers: true line_number_start: 20
 line_highlights: 24, 26
 ---
 
-def configuration():   
+def setup():   
 # Configure ton animation ici   
 size(taille_ecran, taille_ecran)   
 image_mode(CENTER)   
@@ -88,7 +88,7 @@ image(fusee, width/2, fusee_y, 64, 64)
 
 --- task ---
 
-Appelle ton nouveau `dessine_fusee()` dans la fonction `dessin()` afin que la fusée soit redessinée à chaque image.
+Appelle ton nouveau `dessine_fusee()` dans la fonction `draw()` afin que la fusée soit redessinée à chaque image.
 
 --- code ---
 ---
@@ -96,7 +96,7 @@ language: python filename: main.py line_numbers: true line_number_start: 33
 line_highlights: 36
 ---
 
-def dessin():   
+def draw():   
 # Choses à faire dans chaque image   
 dessine_arriere_plan()   
 dessine_fusee()
