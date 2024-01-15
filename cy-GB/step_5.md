@@ -44,7 +44,7 @@ language: python filename: main.py line_numbers: true line_number_start: 52
 line_highlights: 52
 ---
 
-fuel = int(input('How many kilograms of fuel do you want to use?'))   
+tanwydd = int(input('Sawl cilogram o danwydd ydych chi am ei ddefnyddio?'))   
 run()
 
 --- /code ---
