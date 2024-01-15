@@ -29,7 +29,7 @@ Tu dois fournir suffisamment de carburant à la fusée pour atteindre l'orbite d
 
 Quelle quantité de carburant est juste suffisante sans qu'il en reste trop ?
 </div>
-<iframe src="https://editor.raspberrypi.org/en/embed/viewer/rocket-launch-example-fr-FR" width="400" height="710" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen>
+<iframe src="https://editor.raspberrypi.org/fr-FR/embed/viewer/rocket-launch-example" width="400" height="710" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen>
 </iframe>
 </div>
 
