@@ -15,7 +15,7 @@ legend: Питання 1 з 3
 
 ```python
 for i in range(5):
-  print("Looping", i)
+  print("Зациклення", i)
 ```
 
 --- choices ---
