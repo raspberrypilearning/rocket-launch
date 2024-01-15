@@ -1,16 +1,14 @@
-## Réflexion
+## Questionnaire rapide
 
-Bravo, tu as beaucoup appris ! Maintenant, il est temps de réfléchir - la réflexion est une partie importante de l'apprentissage, car elle aide à établir de nouvelles connexions dans ton cerveau.
+Réponds aux trois questions. Il y a des indices pour te guider vers la bonne réponse.
 
-Réponds aux trois questions ci-dessous pour réfléchir à ce que tu as appris.
-
-Après chaque question, appuie sur **soumettre**. Tu seras guidé vers la bonne réponse. Tu peux faire cette activité autant de fois que tu le souhaites.
+Lorsque tu as répondu à chaque question, clique sur **Vérifier ma réponse**.
 
 Amuse-toi bien !
 
 --- question ---
 ---
-legend : Question 1 sur 3
+legend: Question 1 sur 3
 ---
 
 Quel résultat t'attendrais-tu si tu exécutais le programme ci-dessous ?

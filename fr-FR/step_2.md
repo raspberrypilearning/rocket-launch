@@ -13,9 +13,9 @@ L'animation nécessite un arrière-plan spatiale avec une planète à partir de 
 
 --- task ---
 
-Ouvre le [modèle de projet](https://trinket.io/python/c4a1baa437){:target="_blank"}.
+Ouvre le [modèle de projet](https://editor.raspberrypi.org/en/projects/rocket-launch-starter-fr-FR){:target="_blank"}.
 
-Si tu as un compte Trinket, tu peux cliquer sur le bouton **Remix** pour enregistrer une copie dans ta bibliothèque `My Trinkets`.
+### Créer l'écran
 
 --- /task ---
 
@@ -27,14 +27,14 @@ Trouve le commentaire `Configurer les variables globales` et ajoute une ligne de
 
 --- code ---
 ---
-language: python 
-filename: main.py 
-line_numbers: true 
-line_number_start: 7
+language: python
+filename: main.py
+line_numbers: true
+line_number_start: 7 
 line_highlights: 8
 ---
 
-#Configurer les variables globales
+# Configurer les variables globales
 taille_ecran = 400
 
 --- /code ---
@@ -47,15 +47,15 @@ Utilise la variable `taille_ecran` pour créer un carré de 400 par 400 pixels 
 
 --- code ---
 ---
-language: python 
-filename: main.py — setup() 
-line_numbers: true 
+language: python
+filename: main.py — setup()
+line_numbers: true
 line_number_start: 18
 line_highlights: 20
 ---
 
-def setup():   
-    #Configure ton animation ici   
+def configuration():   
+    # Configure ton animation ici   
     size(taille_ecran, taille_ecran)
 
 
@@ -63,44 +63,48 @@ def setup():
 
 --- /task ---
 
+### Choisir une image
+
 --- task ---
 
-Le projet de démarrage a trois images de planètes différentes et la lune t'est fournie. Tu peux les afficher dans la bibliothèque d'images Trinket en sélectionnant le bouton **View and Add Images**.
+Le projet de démarrage a trois images de planètes différentes et la lune t'est fournie. Tu peux les afficher dans la **galerie d'images** à gauche de l'éditeur de code.
 
-![Un symbole plus, un symbole de téléchargement et un symbole d'image. Le symbole de l'image est mis en surbrillance.](images/trinket_image.png)
+![Une capture d'écran de l'éditeur de code, avec la galerie d'images mise en évidence contenant des images de planètes et de la lune.](images/image_gallery.png)
 
-**Choisir :** Décide quelle image tu veux utiliser et note le nom du fichier. Par exemple, `orange_planet.png`.
+**Choisir :** décide quelle image tu veux utiliser et note le nom du fichier. Par exemple, `orange_planet.png`.
 
 --- /task ---
 
-C'est une bonne idée de charger les images dans `setup()` afin qu'elles soient prêtes lorsque tu en auras besoin et que ton animation s'exécute rapidement.
-
 --- task ---
+
+Ajoute du code à la fonction `configuration()` pour charger et positionner ton image.
 
 La ligne `image_mode(CENTER)` indique que tu vas positionner les images en donnant les coordonnées du centre de l'image (au lieu du coin supérieur gauche).
 
-Ajoute également du code à la fonction `setup()` pour charger l'image choisie dans une variable globale `planete`. La variable doit être globale afin que tu puisses l'utiliser plus tard lorsque tu dessines la planète à l'écran.
+Ajoute également du code à la fonction `configuration()` pour charger l'image choisie dans une variable globale `planete`. La variable doit être globale afin que tu puisses l'utiliser plus tard lorsque tu dessines la planète à l'écran.
 
 --- code ---
 ---
-language: python 
-filename: main.py 
-line_numbers: true 
-line_number_start: 18
+language: python
+filename: main.py
+line_numbers: true
+line_number_start: 18 
 line_highlights: 21-23
 ---
 
-def setup():   
-    #Configure ton animation ici   
+def configuration():   
+    # Configure ton animation ici   
     size(taille_ecran, taille_ecran)   
     image_mode(CENTER)   
     global planete   
-    planete = load_image('planet.png') #Ta planète choisie
+    planete = load_image('planet.png') # Ta planète choisie
 
 
 --- /code ---
 
 --- /task ---
+
+### Dessiner l'arrière-plan
 
 --- task ---
 
@@ -110,21 +114,21 @@ Utilise `background(0)` pour définir la couleur d'arrière-plan sur noir et ajo
 
 `image(nom du fichier image, coordonnée x, coordonnée y, largeur_image, hauteur_image)`
 
-La bibliothèque `p5` définit des variables globales `width` et `height` en fonction de la taille de l'écran. Utilise-les dans ton code pour positionner la planète avec son centre à mi-chemin (`width/2`) et en bas (`height`) de l'écran.
+La ligne de code `from p5 import *` te donne des variables globales `width` et `height` basées sur la taille de l'écran. Utilise-les dans ton code pour positionner la planète avec son centre à mi-chemin (`width/2`) et en bas (`height`) de l'écran.
 
 --- code ---
 ---
-language: python 
-filename: main.py — dessine_arriere_plan() 
-line_numbers: true 
-line_number_start: 14
+language: python
+filename: main.py — draw_background()
+line_numbers: true
+line_number_start: 14 
 line_highlights: 15-17
 ---
 
-#La fonction dessine_arriere_plan vient ici
+# La fonction dessine_arriere_plan vient ici
 def dessine_arriere_plan():   
-    background(0) #Raccourci pour background(0, 0, 0) — noir    
-    image(planete, width/2, height, 300, 300) #Dessiner l'image
+    background(0) # Raccourci pour background(0, 0, 0) — noir    
+    image(planete, width/2, height, 300, 300) # Dessine l'image
 
 
 --- /code ---
@@ -135,19 +139,19 @@ Mettre tout le code pour dessiner l'arrière-plan dans une seule fonction rend t
 
 --- task ---
 
-Pour faire apparaître l'arrière-plan, appelle `dessine_arriere_plan()` dans `draw()`. Cela fera en sorte que l'arrière-plan soit redessiné chaque fois que `draw()` est appelé, couvrant ainsi tout dessin plus ancien :
+Pour faire apparaître l'arrière-plan, appelle `dessine_arriere_plan()` dans `dessin()`. Cela fera en sorte que l'arrière-plan soit redessiné chaque fois que `dessin()` est appelé, couvrant ainsi tout dessin plus ancien :
 
 --- code ---
 ---
-language: python 
-filename: main.py — draw() 
-line_numbers: true 
-line_number_start: 28
+language: python
+filename: main.py — draw()
+line_numbers: true
+line_number_start: 28 
 line_highlights: 30
 ---
 
-def draw():   
-    #choses à faire dans chaque image    
+def dessin():   
+    # Choses à faire dans chaque image    
     dessine_arriere_plan()
 
 --- /code ---
@@ -156,8 +160,10 @@ def draw():
 
 --- task ---
 
-**Test :** Exécute ton code et vérifie qu'il dessine un arrière-plan noir avec une demi-planète en bas.
+**Test :** exécute ton code et vérifie qu'il dessine un arrière-plan noir avec une demi-planète en bas.
 
 --- /task ---
+
+Si tu as un compte Raspberry Pi, tu peux cliquer sur le bouton **Save** de ton éditeur de code pour enregistrer une copie de ton projet dans tes Projets.
 
 --- save ---
