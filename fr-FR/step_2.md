@@ -13,7 +13,7 @@ L'animation nécessite un arrière-plan spatiale avec une planète à partir de 
 
 --- task ---
 
-Ouvre le [modèle de projet](https://trinket.io/python/c4a1baa437){:target="_blank"}.
+Ouvre le [modèle de projet](https://editor.raspberrypi.org/en/projects/rocket-launch-starter){:target="_blank"}.
 
 ### Créer l'écran
 
