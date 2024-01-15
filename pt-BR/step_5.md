@@ -44,7 +44,7 @@ language: python filename: main.py line_numbers: true line_number_start: 52
 line_highlights: 52
 ---
 
-fuel = int(input('How many kilograms of fuel do you want to use?'))   
+combustivel = int(input('Quantos quilogramas de combustível você quer usar?'))   
 run()
 
 --- /code ---
