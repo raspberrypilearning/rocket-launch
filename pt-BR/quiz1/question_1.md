@@ -15,7 +15,7 @@ Qual resultado você esperaria se executasse o programa abaixo?
 
 ```python
 for i in range(5):
-  print("Looping", i)
+  print("Ciclo", i)
 ```
 
 --- choices ---
