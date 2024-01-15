@@ -30,11 +30,11 @@ line_highlights: 11-12
 ---
 
 # Configurar variáveis globais
-screen_size = 400   
-rocket_y = screen_size   
-burn = 100   
-orbit_radius = 250   
-orbit_y = screen_size - orbit_radius
+tamanho_tela = 400   
+foguete_y = tamanho_tela   
+queimar = 100   
+raio_orbital = 250   
+orbita_y = tamanho_tela - raio_orbital
 
 --- /code ---
 
