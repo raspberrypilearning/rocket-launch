@@ -51,7 +51,7 @@ def dessine_arriere_plan():
     no_fill()
     stroke(255)
     stroke_weight(2)
-    ellipse(width/2, height, rayon_orbite * 2, rayon_orbite*2)
+    ellipse(width/2, height, rayon_orbite * 2, rayon_orbite * 2)
 
 
 def configuration():
