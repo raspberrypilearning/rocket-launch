@@ -10,12 +10,12 @@ Mae'r cod hwn yn defnyddio `tint()` i liwio roced mewn gêm i ddangos i'r chwara
 language: python
 ---
 
-if points >= 100:    
-tint(0, 255, 0) #Green   
-elif points < 100 and lives == 1:   
-tint(255, 200, 0) #Amber    
-elif points < 100 and lives == 0:     
-tint(255, 0, 0) #Red     
+if pwyntiau >= 100:    
+tint(0, 255, 0) #Gwyrdd   
+elif pwyntiau < 100 and bywydau == 1:   
+tint(255, 200, 0) #Melyngoch    
+elif pwyntiau < 100 and bywydau == 0:     
+tint(255, 0, 0) #Coch     
 else:      
 no_tint()
 
