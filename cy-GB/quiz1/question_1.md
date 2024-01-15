@@ -15,7 +15,7 @@ Which output would you expect if you ran the program below?
 
 ```python
 for i in range(5):
-  print("Looping", i)
+  print("Gwneud dolen", i)
 ```
 
 --- choices ---
