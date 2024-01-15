@@ -9,7 +9,7 @@ taille_ecran = 400
 fusee_y = 400
 brule = 100
 rayon_orbite = 250
-orbite_y = taille_ecran = rayon_orbite
+orbite_y = taille_ecran - rayon_orbite
 
 
 # La fonction dessine_fusee vient ici
@@ -51,7 +51,7 @@ def dessine_arriere_plan():
     no_fill()
     stroke(255)
     stroke_weight(2)
-    ellipse(width/2, height, rayon_orbite * 2, rayon_orbite*2)
+    ellipse(width/2, height, rayon_orbite * 2, rayon_orbite * 2)
 
 
 def configuration():
