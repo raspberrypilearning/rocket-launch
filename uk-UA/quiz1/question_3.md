@@ -11,11 +11,11 @@ language: python
 ---
 
 if points >= 100:    
-tint(0, 255, 0) #Green   
+tint(0, 255, 0) #Зелений   
 elif points < 100 and lives == 1:   
-tint(255, 200, 0) #Amber    
+tint(255, 200, 0) #Янтар    
 elif points < 100 and lives == 0:     
-tint(255, 0, 0) #Red     
+tint(255, 0, 0) #Червоний     
 else:      
 no_tint()
 
