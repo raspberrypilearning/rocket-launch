@@ -31,10 +31,10 @@ line_highlights: 11-12
 
 # Gosod newidynnau cyffredinol
 screen_size = 400   
-rocket_y = screen_size   
-burn = 100   
-orbit_radius = 250   
-orbit_y = screen_size - orbit_radius
+roced_y = screen_size   
+llosgi = 100   
+radiws_orbit = 250   
+orbit_y = screen_size - radiws_orbit
 
 --- /code ---
 
