@@ -68,7 +68,7 @@ def dessine_arriere_plan():
     ellipse(width/2, height, rayon_orbite_haut*2, rayon_orbite_haut*2)
 
 
-def configuration():
+def setup():
     # Configure ton animation ici
     size(taille_ecran, taille_ecran)
     image_mode(CENTER)
@@ -77,7 +77,7 @@ def configuration():
     fusee = load_image('rocket.png')
 
 
-def dessin():
+def draw():
     # Choses à faire dans chaque image
     dessine_arriere_plan()
     dessine_fusee()

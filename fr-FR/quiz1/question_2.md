@@ -11,7 +11,7 @@ Un projet a ce code `configuration` pour charger une image de planète et dire q
 language: python
 ---
 
-def configuration():   
+def setup():   
   size(400, 400)   
   image_mode(CENTER)   
   global planete   

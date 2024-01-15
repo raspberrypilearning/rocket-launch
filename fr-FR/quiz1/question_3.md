@@ -27,7 +27,7 @@ Si la variable `points` a la valeur `99` et la variable `vies` a la valeur `1`, 
 
 --- choices ---
 
-- (X)
+- (x)
 
 ![Une image de fusée avec une teinte orange.](images/rocket_amber.png) <div style="text-align: center;">Orange
 
