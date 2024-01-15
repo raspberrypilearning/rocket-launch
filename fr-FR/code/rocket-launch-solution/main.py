@@ -9,7 +9,7 @@ taille_ecran = 400
 fusee_y = 400
 brule = 100
 rayon_orbite = 250
-orbite_y = taille_ecran = rayon_orbite
+orbite_y = taille_ecran - rayon_orbite
 
 
 # La fonction dessine_fusee vient ici
