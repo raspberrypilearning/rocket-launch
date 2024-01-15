@@ -10,12 +10,12 @@ Este código usa `tint()` para colorir um foguete em um jogo para mostrar ao jog
 language: python
 ---
 
-if points >= 100:    
-tint(0, 255, 0) #Green   
-elif points < 100 and lives == 1:   
-tint(255, 200, 0) #Amber    
-elif points < 100 and lives == 0:     
-tint(255, 0, 0) #Red     
+if pontos >= 100:    
+tint(0, 255, 0) #Verde   
+elif pontos < 100 and vidas == 1:   
+tint(255, 200, 0) #Âmbar    
+elif pontos < 100 and vidas == 0:     
+tint(255, 0, 0) #Vermelho     
 else:      
 no_tint()
 
