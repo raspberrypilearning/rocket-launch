@@ -115,7 +115,7 @@ line_highlights: 17-30
     
         fill(200, 200, 200, 100)   
         for i in range(20):   
-            ellipse(width/2 + randint(-5, 5), rocket_y + randint(20, 50), randint(5, 10), randint(5, 10))   
+            ellipse(width/2 + randint(-5, 5), fusee_y + randint(20, 50), randint(5, 10), randint(5, 10))   
     
     image(fusee, width/2, fusee_y, 64, 64)
 
