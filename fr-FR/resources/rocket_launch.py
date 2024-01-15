@@ -1,72 +1,72 @@
 #!/bin/python3
 
-# Importer le code de la bibliothèque
+# Import library code
 from p5 import *
 from random import randint
 
-# Configurer les variables globales
-taille_ecran = 400
-fusee_y = taille_ecran # commencer en bas
-brule = 100 # combien de carburant est brûlé dans chaque image
-rayon_orbite = 250
-orbite_y = taille_ecran - rayon_orbite
+# Setup global variables
+screen_size = 400
+rocket_y = screen_size # start at the bottom
+burn = 100 # how much fuel is burned in each frame
+orbit_radius = 250
+orbit_y = screen_size - orbit_radius
 
-# La fonction dessine_fusee vient ici
-def dessine_fusee():
+# The draw_rocket function goes here
+def draw_rocket():
 
-  global fusee_y, carburant, brule
+  global rocket_y, fuel, burn
   
-  if carburant >= brule and fusee_y > orbite_y: # toujours en vol
-    fusee_y -= 1 # déplace la fusée
-    carburant -= brule # brûler du carburant
-    print('Carburant restant : ', carburant)
+  if fuel >= burn and rocket_y > orbit_y: # still flying
+    rocket_y -= 1 # move the rocket
+    fuel -= burn # burn fuel
+    print('Fuel left: ', fuel)
   
-    no_stroke() # Désactive le trait
+    no_stroke() # Turn off the stroke
   
-    for i in range(25): # dessiner 25 ellipses d'échappement brûlant
-      fill(255, 255 - i*10, 0) # jaune
-      ellipse(width/2, fusee_y + i, 8, 3) # i augmente à chaque fois que la boucle se répète
+    for i in range(25): # draw 25 burning exhaust ellipses
+      fill(255, 255 - i*10, 0) # yellow
+      ellipse(width/2, rocket_y + i, 8, 3) # i increases each time the loop repeats
     
-    fill(200, 200, 200, 100) # gris transparent
-    for i in range(20): # dessiner 20 ellipses de fumée aléatoire
-      ellipse(width/2 + randint(-5, 5), fusee_y + randint(20, 50), randint(5, 10), randint(5, 10))
+    fill(200, 200, 200, 100) # transparent grey
+    for i in range(20): # draw 20 random smoke ellipses
+      ellipse(width/2 + randint(-5, 5), rocket_y + randint(20, 50), randint(5, 10), randint(5, 10))
   
-  if carburant < brule and fusee_y > orbite_y: # Plus de carburant et pas en orbite
-    tint(255, 0, 0) # Échec
-  elif carburant < 1000 and fusee_y <= orbite_y:
-    tint(0, 255, 0) # Succès
-  elif carburant >= 1000 and fusee_y <= orbite_y: 
-    tint(255, 200, 0) # Trop de carburant
+  if fuel < burn and rocket_y > orbit_y: # No more fuel and not in orbit
+    tint(255, 0, 0) # Failure
+  elif fuel < 1000 and rocket_y <= orbit_y:
+    tint(0, 255, 0) # Success
+  elif fuel >= 1000 and rocket_y <= orbit_y: 
+    tint(255, 200, 0) # Too much fuel
   
-  image(fusee, width/2, fusee_y, 64, 64)
+  image(rocket, width/2, rocket_y, 64, 64)
   no_tint()
   
 
-# La fonction dessine_arriere_plan vient ici
-def dessine_arriere_plan():
-  background(0) # raccourci pour background(0, 0, 0) - noir 
-  image(planete, width/2, height, 300, 300) # dessine l'image
+# The draw_background function goes here
+def draw_background():
+  background(0) # short for background(0, 0, 0) - black 
+  image(planet, width/2, height, 300, 300) # draw the image
   
-  no_fill() # Désactive tout remplissage
-  stroke(255) # Définir un trait blanc
+  no_fill() # Turn off any fill
+  stroke(255) # Set a white stroke
   stroke_weight(2)
-  ellipse(width/2, height, rayon_orbite*2, rayon_orbite*2)
+  ellipse(width/2, height, orbit_radius*2, orbit_radius*2)
   
 
 def setup():
-  # Configure ton animation ici
-  size(taille_ecran, taille_ecran)
+  # Setup your animation here
+  size(screen_size, screen_size)
   image_mode(CENTER)
-  global planete, fusee
-  planete = load_image('planet.png') # ta planète choisie
-  fusee = load_image('rocket.png')
+  global planet, rocket
+  planet = load_image('planet.png') # your chosen planet
+  rocket = load_image('rocket.png')
 
 
 def draw():
-  # Choses à faire dans chaque image
-  dessine_arriere_plan()
-  dessine_fusee()
+  # Things to do in every frame
+  draw_background()  
+  draw_rocket()
   
 
-carburant = int(input('Combien de kilos de carburant veux-tu utiliser ?'))
+fuel = int(input('How many kilograms of fuel do you want to use?'))
 run()
