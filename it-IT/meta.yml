@@ -1,32 +1,32 @@
 ---
-title: Rocket launch
+title: Lancio di un razzo
 hero_image: images/banner.png
-description: Make an animation of a rocket propelling a satellite into orbit
-meta_title: Python coding projects for kids and teens | Rocket launch
-meta_description: Learn Python with the Raspberry Pi Foundation's coding projects for kids and teens. Make a Python animation that shows a rocket launching a satellite into orbit.
+description: Realizza un'animazione di un razzo che spinge un satellite in orbita
+meta_title: Progetti di programmazione Python per bambini e ragazzi | Lancio di un razzo
+meta_description: Impara Python con i progetti di coding della Raspberry Pi Foundation per bambini e adolescenti. Realizza un'animazione Python che mostri un razzo che lancia un satellite in orbita.
 version: 0.0.1
 listed: true
 copyedit: true
 last_tested: "2021-10-06"
 steps:
   - 
-    title: You will make
+    title: Quello che farai
   - 
-    title: Set the scene
+    title: Imposta la scena
   - 
-    title: Liftoff!
+    title: Decollo!
     completion:
       - engaged
   - 
-    title: Exhaust effects
+    title: Effetti dei gas di scarico
   - 
-    title: Burn fuel
+    title: Brucia carburante
   - 
-    title: Reaching orbit
+    title: Raggiungere l'orbita
     completion:
       - internal
   - 
-    title: Quick quiz
+    title: Quiz veloce
     knowledge_quiz:
       path: quiz1
       version: 1
@@ -35,6 +35,6 @@ steps:
     completion:
       - external
   - 
-    title: Upgrade your project
+    title: Migliora il tuo progetto
   - 
-    title: What next?
+    title: E adesso?
