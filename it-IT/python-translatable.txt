@@ -1,33 +1,33 @@
-screen_size
+dimensione dello schermo
 
 rocket_y
 
-burn
+bruciare
 
-orbit_radius
+raggio_orbita
 
 orbit_y
 
-draw_rocket
+disegna_razzo
 
-fuel
+carburante
 
-Fuel left:
+Carburante residuo:
 
-rocket
+razzo
 
-draw_background
+disegna_sfondo
 
-planet
+pianeta
 
-How many kilograms of fuel do you want to use?
+Quanti chilogrammi di carburante vuoi utilizzare?
 
-How much fuel should the rocket burn each frame?
+Quanto carburante dovrebbe bruciare il razzo per ogni fotogramma?
 
-How far should the rocket travel each frame?
+Quanta strada dovrebbe percorrere il razzo per ogni fotogramma?
 
-Looping
+Ciclo
 
-points
+punti
 
-lives
+vite
