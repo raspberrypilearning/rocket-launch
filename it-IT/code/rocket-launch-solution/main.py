@@ -1,10 +1,10 @@
 #!/bin/python3
 
-# Import library code
+# Importa il codice della libreria
 from p5 import *
 from random import randint
 
-# Setup global variables
+# Imposta le variabili globali
 screen_size = 400
 rocket_y = 400
 burn = 100
@@ -12,7 +12,7 @@ orbit_radius = 250
 orbit_y = screen_size - orbit_radius
 
 
-# The draw_rocket function goes here
+# La funzione draw_rocket va qui
 def draw_rocket():
     global rocket_y, fuel, burn
 
@@ -27,8 +27,8 @@ def draw_rocket():
             fill(255, 255 - i * 10, 0)
             ellipse(width/2, rocket_y + i, 8, 3)
 
-        fill(200, 200, 200, 100)  # Transparent grey
-        for i in range(20):  # Draw 20 random smoke ellipses
+        fill(200, 200, 200, 100) # Grigio trasparente
+        for i in range(20): # Disegna 20 ellissi di fumo casuali
             ellipse(width/2 + randint(-5, 5), rocket_y +
                     randint(20, 50), randint(5, 10), randint(5, 10))
 
@@ -43,7 +43,7 @@ def draw_rocket():
     no_tint()
 
 
-# The draw_background function goes here
+# La funzione draw_ background va qui
 def draw_background():
     background(0)
     image(planet, width/2, height, 300, 300)
@@ -55,7 +55,7 @@ def draw_background():
 
 
 def setup():
-    # Setup your animation here
+    # Imposta la tua animazione qui
     size(screen_size, screen_size)
     image_mode(CENTER)
     global planet, rocket
@@ -64,10 +64,10 @@ def setup():
 
 
 def draw():
-    # Things to do in every frame
+    # Cose da fare in ogni fotogramma
     draw_background()
     draw_rocket()
 
 
-fuel = int(input('How many kilograms of fuel do you want to use?'))
+fuel = int(input('Quanti chilogrammi di carburante vuoi usare?'))
 run()
