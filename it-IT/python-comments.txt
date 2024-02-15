@@ -1,85 +1,85 @@
-Import library code
+Importa la libreria di codice
 
-Setup global variables
+Imposta le variabili globali
 
-The draw_rocket function goes here
+La funzione draw_rocket va qui
 
-The draw_background function goes here
+La funzione draw_ background va qui
 
-Setup your animation here
+Imposta la tua animazione qui
 
-Things to do in every frame
+Cose da fare in ogni fotogramma
 
-Definitions for compatibility with the p5py processing library
+Definizioni per la compatibilità con la libreria di elaborazione p5py
 
-Shape
+Forma
 
-Fonts
+Caratteri
 
-Text
+Testo
 
-Colour
+Colore
 
-Images
+Immagini
 
-Environment
+Ambiente
 
-Transform
+Trasformare
 
-Keyboard
+Tastiera
 
-Your chosen planet
+Il pianeta che hai scelto
 
-Short for background(0, 0, 0) — black
+Abbreviazione per background(0, 0, 0) — black
 
-Draw the image
+Disegna l'immagine
 
-Start at the bottom
+Inizia dal basso
 
-Use the global rocket_y variable
+Usa la variabile globale rocket_y
 
-Move the rocket
+Muovi il razzo
 
-Turn off the stroke
+Disattiva la linea
 
-Draw 25 burning exhaust ellipses
+Disegna 25 ellissi di fiamme dallo scarico
 
-Yellow
+Giallo
 
-i increases each time the loop repeats
+i aumenta ogni volta che il ciclo si ripete
 
-Reduce the amount of green
+Riduci la quantità di verde
 
-Transparent grey
+Grigio trasparente
 
-Draw 20 random smoke ellipses
+Disegna 20 ellissi di fumo casuali
 
-How much fuel is burned in each frame
+Quanto carburante viene bruciato ad ogni frame
 
-Burn fuel
+Brucia carburante
 
-Still got fuel
+Ho ancora carburante
 
-Turn off any fill
+Disattiva qualsiasi riempimento
 
-Set a white stroke
+Imposta una linea bianca
 
-Still flying
+Sta ancora volando
 
-No more fuel and not in orbit
+Niente più carburante e non in orbita
 
-Failure
+Fallimento
 
-So the planet isn't tinted red in the next frame!
+In questo modo il pianeta non è colorato di rosso nel fotogramma successivo!
 
-Success
+Successo
 
-Too much fuel
+Troppo carburante
 
-So the planet isn't tinted in the next frame!
+In questo modo il pianeta non è colorato nel fotogramma successivo!
 
-Green
+Verde
 
-Amber
+Giallo
 
-Red
+Rosso
