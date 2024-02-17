@@ -1,11 +1,11 @@
-## Effetti dei gas di scarico
+## Effetto gas di scarico
 
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">
 
-Il razzo apparirà più realistico con alcuni effetti speciali per simulare la scia di scarico. 
+Il razzo apparirà più realistico con alcuni effetti speciali che simulino la scia di scarico. 
 
-Puoi creare fantastici effetti utilizzando un ciclo "for" per disegnare molte forme in ciascun fotogramma.
+Puoi creare fantastici effetti utilizzando un ciclo "for" che disegni molte forme in ciascun fotogramma.
 
 </div>
 <div>
