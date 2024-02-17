@@ -1,22 +1,22 @@
-## Burn fuel
+## Brucia carburante
 
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">
 
-One of the most important things to decide when launching a rocket is how much fuel to load into it. 
+Una delle cose più importanti da decidere quando si lancia un razzo è quanto carburante caricare a bordo. 
 
-To do this, you need to simulate how much fuel will be burned on the journey.
+Per fare ciò, è necessario simulare la quantità di carburante che verrà bruciata durante il viaggio.
 </div>
 
 ![The program with a question in the output area asking how much fuel is required.](images/burn_question_full.png){:width="300px"}
 
 </div>
 
-### Create a fuel variable
+### Crea una variabile fuel
 
 --- task ---
 
-Add a variable to keep track of how much fuel your rocket burns (in frames).
+Aggiungi una variabile per tenere traccia della quantità di carburante bruciato dal tuo razzo (in frame).
 
 --- code ---
 ---
@@ -24,10 +24,10 @@ language: python filename: main.py line_numbers: true line_number_start: 7
 line_highlights: 10
 ---
 
-# Setup global variables
+# Imposta le variabili globali
 screen_size = 400   
 rocket_y = screen_size  
-burn = 100  # How much fuel is burned in each frame
+burn = 100  # Quanto carburante viene bruciato in ogni frame
 
 --- /code ---
 
@@ -36,7 +36,7 @@ burn = 100  # How much fuel is burned in each frame
 
 --- task ---
 
-At the bottom of your program, add code to ask the user how much fuel to add to the rocket and store their answer in a `fuel` global variable.
+Nella parte inferiore del programma, aggiungi il codice per chiedere all'utente quanto carburante intende aggiungere al razzo e memorizza la risposta in una variabile globale `fuel`.
 
 --- code ---
 ---
@@ -44,22 +44,21 @@ language: python filename: main.py line_numbers: true line_number_start: 51
 line_highlights: 51
 ---
 
-fuel = int(input('How many kilograms of fuel do you want to use?'))   
-run()
+fuel = int(input('Quanti kg di carburante vuoi usare?'))
 
 --- /code ---
 
 --- /task ---
 
-### Check fuel against burn
+### Controlla il pieno e il carburante consumato
 
-The rocket should only move if it hasn't burned all of its fuel.
+Il razzo potrà muoversi solo se non ha bruciato tutto il carburante.
 
 --- task ---
 
-Add code to the `draw_rocket()` function to reduce the remaining `fuel` by the `burn` of each frame. Use `print()` to show how much fuel is left in each frame.
+Aggiungi il codice alla funzione `draw_rocket()` per ridurre il `carburante` della quantità `bruciata` in ciascun fotogramma. Usa `print()` per mostrare quanto carburante è rimasto in ogni fotogramma.
 
-You need to say that you want to use the global `fuel` and `burn` variables.
+Devi dichiarare che vuoi utilizzare le variabili globali `fuel` e `burn` .
 
 --- code ---
 ---
@@ -78,21 +77,21 @@ line_highlights: 15, 17-18
 
 --- task ---
 
-**Test:** Run your program to check that the animation doesn't start until `How many kilograms of fuel do you want to use?` has been answered. Try entering `30000` as the amount of fuel.
+**Test:** Esegui il programma per verificare che l'animazione non inizi prima che si sia risposto alla domanda `Quanti chilogrammi di carburante vuoi utilizzare?` . Prova a inserire `30000` come quantità di carburante.
 
-The rocket will keep going even if it has no fuel left.
+Il razzo continuerà a funzionare anche se non avrà più carburante.
 
-![The program with a question in the output area asking how much fuel is required.](images/burn_question.png)
+![L'area di output del programma con una domanda che chiede quanto carburante è necessario.](images/burn_question.png)
 
 --- /task ---
 
 --- task ---
 
-The rocket should only move if it has enough fuel left. Add an `if` statement to check that `fuel >= burn`.
+Il razzo dovrebbe muoversi solo se sarà rimasto abbastanza carburante. Aggiungi un'istruzione `if` per verificare che `fuel >= burn`.
 
-You will need to indent all of the lines of code before the `image()` function call. To do this, highlight all of the lines with the mouse and then tap the <kbd>Tab</kbd> on the keyboard to indent all the lines at once.
+Dovrai rientrare tutte le righe di codice prima della chiamata alla funzione `image()` . Per fare ciò, evidenzia tutte le righe con il mouse e quindi premi <kbd>Tab</kbd> sulla tastiera per rientrare tutte le righe contemporaneamente.
 
-The `image()` line doesn't need to be indented because you always want to draw the rocket.
+Non è necessario che la riga `image()` sia rientrata perché vuoi che venga eseguita sempre indipendentemente dalla dichiarazione <0>If</0> .
 
 --- code ---
 ---
@@ -102,12 +101,12 @@ line_highlights: 17-30
 
     global rocket_y, fuel, burn  
     
-    if fuel >= burn:  # Still got fuel   
+    if fuel >= burn:  # C'è ancora carburante   
         rocket_y -= 1   
         fuel -= burn   
         print('Fuel left: ', fuel)   
     
-        no_stroke()  # Turn off the stroke   
+        no_stroke()  # Non disegnare righe   
     
         for i in range(25):   
             fill(255, 255 - i*10, 0)   
@@ -125,13 +124,13 @@ line_highlights: 17-30
 
 --- task ---
 
-**Test:** Run your program to check that the rocket stops when there is no fuel left.
+**Test:** Esegui il programma per verificare che il razzo si fermi quando non rimane più carburante.
 
-![Image of a rocket in the middle of the screen with the statement 'Fuel left: 0'.](images/burn_empty.png){:width="300px"}
+![Immagine di un razzo al centro dello schermo con la dicitura "Fuel left: 0".](images/burn_empty.png){:width="300px"}
 
 --- /task ---
 
-Did your rocket stop when it ran out of fuel? Well done, you sent a rocket to outer space!
+Il tuo razzo si è fermato quando ha finito il carburante? Ben fatto, hai inviato un razzo nello spazio!
 
 --- save ---
 
