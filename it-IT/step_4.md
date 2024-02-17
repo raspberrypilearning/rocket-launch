@@ -126,7 +126,7 @@ line_highlights: 22-24
 
 **Test:** Esegui il programma e verifica che i fumi di scarico siano visibili.
 
-![An animation of the rocket and exhaust trail with added smoke.](images/rocket_exhaust_circles.gif)
+![Un'animazione del razzo e della scia di scarico con aggiunta di fumo.](images/rocket_exhaust_circles.gif)
 
 --- /task ---
 
