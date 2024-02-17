@@ -1,11 +1,11 @@
-## Exhaust effects
+## Effetti dei gas di scarico
 
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">
 
-The rocket will look more realistic with some special effects to simulate the exhaust trail. 
+Il razzo apparirà più realistico con alcuni effetti speciali per simulare la scia di scarico. 
 
-You can create cool effects by using a `for` loop to draw lots of shapes in each frame.
+Puoi creare fantastici effetti utilizzando un ciclo "for" per disegnare molte forme in ciascun fotogramma.
 
 </div>
 <div>
@@ -16,15 +16,15 @@ You can create cool effects by using a `for` loop to draw lots of shapes in each
 </div>
 
 <p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;">
-Coding is used to make <span style="color: #0faeb0">**graphic effects**</span> for movies and games. It's much quicker to write code than to draw each frame of an animation individually. </p>
+Il coding viene utilizzato per creare <span style="color: #0faeb0">**effetti grafici**</span> per film e giochi. È molto più veloce scrivere il codice che disegnare individualmente ciascun fotogramma di un'animazione. </p>
 
-### Draw your exhaust
+### Disegna i tuoi gas di scarico
 
-Drawing lots of yellow ellipses at different `y` positions creates an exhaust trail with a round bottom.
+Disegnare molte ellissi gialle in diverse posizioni `y` crea una scia di scarico con un fondo rotondo.
 
 --- task ---
 
-Update your `draw_rocket()` function to include a `for` loop that repeats the drawing of `25` exhaust ellipses. The **loop variable** `i` gets added to `rocket_y` to draw each ellipse further below the rocket.
+Aggiorna la tua funzione `draw_rocket()` per includere un ciclo `for` che ripete il disegno di `25` ellissi di scarico. La  **variabile del ciclo** `i` viene aggiunta a `rocket_y` per disegnare ciascuna ellisse più in basso del razzo.
 
 --- code ---
 ---
@@ -35,11 +35,11 @@ line_highlights: 16-20
 def draw_rocket(): global rocket_y   
 rocket_y -= 1   
 
-    no_stroke()  # Turn off the stroke
+    no_stroke()  # Fa in modo che non venga disegnata la linea
     
-    for i in range(25):  # Draw 25 burning exhaust ellipses   
-        fill(255, 255, 0)  # Yellow   
-        ellipse(width/2, rocket_y + i, 8, 3)  # i increases each time the loop repeats    
+    for i in range(25):  # Disegna 25 ellissi di gas di scarico
+        fill(255, 255, 0)  # Giallo
+        ellipse(width/2, rocket_y + i, 8, 3)  # aumenta I ad ogni ciclo 
     
     image(rocket, width/2, rocket_y, 64, 64)
 
@@ -48,23 +48,23 @@ rocket_y -= 1
 
 --- /task ---
 
-A `for` loop repeats a piece of code once for every item it is given.
+Un ciclo `for` ripete un pezzo di codice una volta per ogni elemento fornito.
 
-To run the code in a `for` loop a certain number of times, you can use the `range()` function. For example, `range(5)` creates a sequence of five numbers starting from 0, so [0, 1, 2, 3, 4].
+Per eseguire il codice in un ciclo `for` un certo numero di volte, puoi utilizzare la funzione `range()`. Ad esempio, `range(5)` crea una sequenza di cinque numeri a partire da 0, quindi [0, 1, 2, 3, 4].
 
-Each time the `for` loop repeats, it sets a variable to the current item so that you can use it in the loop.
+Ogni volta che il ciclo `for` si ripete, imposta una variabile sull'elemento corrente in modo da poterlo utilizzare nel ciclo.
 
 --- task ---
 
-**Test:** Run your code to check the rocket has a new exhaust trail.
+**Test:** Esegui il codice per verificare che il razzo abbia una nuova scia di scarico.
 
 ![A close-up of the rocket with an exhaust trail.](images/rocket_exhaust.png){:width="300px"}
 
 --- /task ---
 
-### Add a gradient
+### Aggiungi una sfumatura
 
-The `i` variable can also be used to create a colour gradient with less green in each ellipse that gets drawn.
+La variabile `i` può essere utilizzata anche per creare una sfumatura di colore con meno verde in ogni ellisse disegnata.
 
 --- task ---
 
