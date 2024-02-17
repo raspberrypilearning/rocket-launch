@@ -1,13 +1,13 @@
-## Reaching orbit
+## Raggiungere l'orbita
 
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">
 
-The point of launching the rocket is to propel a satellite into orbit. 
+Lo scopo del lancio del razzo è spingere un satellite in orbita. 
 
-An orbit is a curved path that one object takes around another due to gravity.
+Un'orbita è un percorso curvo che un oggetto compie attorno a un altro a causa della gravità.
 
-The rocket can change colour to show how successful the launch was. 
+Il razzo può cambiare colore per mostrare che il lancio è avvenuto con successo. 
 
 </div>
 <div>
@@ -17,11 +17,11 @@ The rocket can change colour to show how successful the launch was.
 </div>
 </div>
 
-### Draw an orbit line
+### Disegna una linea orbitale
 
 --- task ---
 
-Create two new global variables to set the radius of the orbit circle and the `y` coordinate of the orbit to the point the rocket centre needs to reach to launch the satellite.
+Crea due nuove variabili globali per impostare il raggio del cerchio orbitale e le coordinate `y` dell'orbita nel punto che il centro del razzo deve raggiungere per lanciare il satellite.
 
 --- code ---
 ---
@@ -29,7 +29,7 @@ language: python filename: main.py line_numbers: true line_number_start: 7
 line_highlights: 11-12
 ---
 
-# Setup global variables
+# Imposta le variabili globali
 screen_size = 400   
 rocket_y = screen_size   
 burn = 100   
@@ -42,7 +42,7 @@ orbit_y = screen_size - orbit_radius
 
 --- task ---
 
-Update the `draw_background()` function to draw an ellipse to represent the satellite orbit that the rocket needs to reach.
+Aggiorna la funzione `draw_ background()` per rappresentare l'orbita del satellite che il razzo deve raggiungere tramite il disegno di un'ellisse.
 
 --- code ---
 ---
@@ -51,11 +51,11 @@ line_highlights: 42-45
 ---
 
 def draw_background():   
-background(0)  # Short for background(0, 0, 0) — black   
+background(0)  # Forme breve di background(0, 0, 0) — nero   
 image(planet, width/2, height, 300, 300)   
 
-    no_fill()  # Turn off any fill  
-    stroke(255)  # Set a white stroke   
+    no_fill()  # Termina di riempire di colore  
+    stroke(255)  # Imposta il tratto di disegno bianco   
     stroke_weight(2)   
     ellipse(width/2, height, orbit_radius * 2, orbit_radius * 2)
 
@@ -65,21 +65,21 @@ image(planet, width/2, height, 300, 300)
 
 --- task ---
 
-**Test:** Run your program and check that a white orbit line is drawn.
+**Test:** Esegui il programma e verifica che venga disegnata una linea orbitale bianca.
 
-![The screen with planet and new orbit line.](images/draw_orbit.png){:width="300px"}
+![Lo schermo con il pianeta e la nuova linea orbitale.](images/draw_orbit.png){:width="300px"}
 
 --- /task ---
 
-### Launch the rocket to the orbit
+### Lancia il razzo in orbita
 
-The rocket should stop when it reaches the satellite orbit — the end of the mission.
+Il razzo dovrebbe fermarsi quando raggiunge l'orbita del satellite: cioè la fine della missione.
 
 --- task ---
 
-Update your `if fuel >= burn` code to also check that the rocket hasn't reached the orbit.
+Aggiorna il tuo codice `if fuel>= burn` in modo che verifichi anche che il razzo non abbia raggiunto l'orbita.
 
-You can use an `and` in `if` statements to check if two, or more, conditions are true.
+Puoi utilizzare `and` nelle istruzioni `if` per verificare se due o più condizioni sono vere.
 
 --- code ---
 ---
@@ -87,11 +87,11 @@ language: python filename: main.py - draw_rocket() line_numbers: true line_numbe
 line_highlights: 19
 ---
 
-# The draw_rocket function goes here
+# La funzione draw_rocket va qui
 def draw_rocket():   
 global rocket_y, fuel, burn
 
-        if fuel >= burn and rocket_y > orbit_y:  # Still flying
+        if fuel >= burn and rocket_y > orbit_y:  # E' ancora in volo
 
 --- /code ---
 
@@ -99,13 +99,13 @@ global rocket_y, fuel, burn
 
 --- task ---
 
-**Test:** Run your project and enter `50000` as the amount of fuel. This should be plenty of fuel to reach orbit. The rocket should stop moving when it reaches orbit.
+**Test:** Esegui il tuo progetto e inserisci `50000` come quantità di carburante. Dovrebbe esserci abbastanza carburante per raggiungere l'orbita. Il razzo dovrebbe smettere di muoversi quando raggiunge l'orbita.
 
 --- /task ---
 
-### Check if the launch is successful
+### Controlla se il lancio ha avuto successo
 
-The rocket should be coloured red if it runs out of fuel before getting high enough to launch the satellite.
+Il razzo dovrebbe colorarsi di rosso se esaurisce il carburante prima di raggiungere un'altezza sufficiente per lanciare il satellite.
 
 --- task ---
 
@@ -120,7 +120,7 @@ line_highlights: 34-35
         ellipse(width/2 + randint(-5, 5), rocket_y + randint(20, 50), randint(5, 10), randint(5, 10))
     
     if fuel < burn and rocket_y > orbit_y:  # No more fuel and not in orbit   
-        tint(255, 0, 0)  # Failure
+        tint(255, 0, 0)  # Fallito
 
 --- /code ---
 
@@ -128,19 +128,19 @@ line_highlights: 34-35
 
 --- task ---
 
-**Test:** Run your code and enter `20000` as the amount of fuel. Check that the rocket turns red when it stops below the orbit.
+**Test:** Esegui il tuo progetto e inserisci `20000` come quantità di carburante. Controlla che il razzo diventi rosso quando si ferma sotto l'orbita.
 
-![A red rocket that has run out of fuel before the orbit circle. The planet has also turned red.](images/orbit_failure.png){:width="300px"}
+![Un razzo rosso che ha esaurito il carburante prima del cerchio orbitale. Anche il pianeta è diventato rosso.](images/orbit_failure.png){:width="300px"}
 
-Oh no, the planet has turned red!
+Oh no, il pianeta è diventato rosso!
 
 --- /task ---
 
 --- task ---
 
-The `tint()` function sets the tint colour for all images that are drawn until you change the tint or use `no_tint()` to turn it off.
+La funzione `tint()` imposta il colore della tinta per tutte le immagini disegnate finché non cambi la tinta o usi `no_tint()` per disattivarla.
 
-**Choose:** Add a call to `no_tint()` after drawing the image so that the planet isn't tinted red in the next frame — or leave it if you like the planet turning red!
+**Scegli:** Aggiungi una chiamata alla funzione `no_tint()` dopo aver disegnato l'immagine in modo che il pianeta non sia colorato di rosso nel fotogramma successivo — oppure lascialo così se ti piace che il pianeta diventi rosso!
 
 --- code ---
 ---
@@ -149,10 +149,10 @@ line_highlights: 38
 ---
 
     if fuel < burn and rocket_y > orbit_y:    
-        tint(255, 0, 0)  # Failure
+        tint(255, 0, 0)  # Fallito
     
     image(rocket, width/2, rocket_y, 64, 64)   
-    no_tint()  # So the planet isn't tinted red in the next frame!
+    no_tint()  # Così il pianeta non sarà tinto di rosso nel fotogramma successivo!
 
 
 --- /code ---
@@ -161,7 +161,7 @@ line_highlights: 38
 
 --- task ---
 
-Use the `tint()` function again, this time to colour the rocket green if the rocket has enough fuel to reach the satellite orbit:
+Usa di nuovo la funzione `tint()` , questa volta per colorare il razzo di verde se il razzo ha abbastanza carburante per raggiungere l'orbita del satellite:
 
 --- code ---
 ---
@@ -170,7 +170,7 @@ line_highlights: 36-37
 ---
 
     if fuel < burn and rocket_y > orbit_y:    
-        tint(255, 0, 0)  # Failure   
+        tint(255, 0, 0)  # Fallito
     elif rocket_y <= orbit_y:   
         tint(0, 255, 0)  # Success   
     
@@ -183,19 +183,19 @@ line_highlights: 36-37
 
 --- task ---
 
-**Test:** Run your project and enter `50000` as the amount of fuel. Check that your rocket turns green when it reaches the satellite orbit.
+**Test:** Esegui il tuo progetto e inserisci `50000` come quantità di carburante. Controlla che il tuo razzo diventi verde quando raggiunge l'orbita del satellite.
 
-![A green rocket that has reached the orbit circle and has fuel left.](images/orbit_success.png){:width="300px"}
+![Un razzo verde che ha raggiunto il cerchio orbitale e ha ancora carburante.](images/orbit_success.png){:width="300px"}
 
 --- /task ---
 
-You now have a simulation that can be used to show how much fuel is needed as a minimum to reach the satellite orbit. That's great; however, you could take a huge amount of fuel and still be successful, but this is costly and wasteful!
+Ora hai una simulazione che può essere utilizzata per mostrare la quantità minima di carburante necessaria per raggiungere l'orbita del satellite. È fantastico; tuttavia, potresti anche prendere un'enorme quantità di carburante e avere comunque successo, questo però sarebbe costoso e dispendioso!
 
 --- task ---
 
-Amend the conditions in your success code so that the rocket only turns green if it reaches the orbit `and` has less than 1,000kg of fuel left.
+Modifica le condizioni nel tuo codice corretto in modo che il razzo diventi verde solo se raggiunge l'orbita `e` se ha meno di 1.000 kg di carburante rimasto.
 
-Add code to colour the rocket yellow if the rocket has more than 1,000kg of fuel left when it reaches orbit.
+Aggiungi il codice per colorare il razzo di giallo se al razzo rimangono più di 1.000 kg di carburante quando raggiunge l'orbita.
 
 --- code ---
 ---
@@ -204,14 +204,14 @@ line_highlights: 36, 38-39
 ---
 
     if fuel < burn and rocket_y > orbit_y:   
-        tint(255, 0, 0)  # Failure   
+        tint(255, 0, 0)  # Fallito
     elif fuel < 1000 and rocket_y <= orbit_y:   
-        tint(0, 255, 0)  # Success   
+        tint(0, 255, 0)  # Eseguito con successo
     elif fuel >= 1000 and rocket_y <= orbit_y:    
-        tint(255, 200, 0)  # Too much fuel   
+        tint(255, 200, 0)  # Troppo carburante   
     
     image(rocket, width/2, rocket_y, 64, 64)    
-    no_tint()  # So the planet isn't tinted in the next frame!
+    no_tint()  # Così il pianeta non sarà colorato di rosso nel prossimo fotogramma!
 
 --- /code ---
 
@@ -219,9 +219,9 @@ line_highlights: 36, 38-39
 
 --- task ---
 
-**Test:** Run your program several times with different numbers; for example, 25,000kg of fuel should be the amount needed to turn the rocket green, but also check that the yellow tint works too by using a bigger number.
+**Test:** Esegui il tuo programma più volte con numeri diversi; ad esempio, 25.000 kg di carburante dovrebbero essere la quantità necessaria per far diventare verde il razzo, ma verifica anche che si colori di giallo quando utilizzi una quantità maggiore.
 
-![A yellow rocket that has reached the orbit circle and has fuel left.](images/orbit_meh.png){:width="300px"}
+![Un razzo giallo che ha raggiunto il cerchio orbitale e ha ancora carburante.](images/orbit_meh.png){:width="300px"}
 
 --- /task ---
 
