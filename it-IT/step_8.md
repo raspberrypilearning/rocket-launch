@@ -1,20 +1,20 @@
-## Upgrade your project
-Your project is complete, but you can still make it better if you want. Here are a few upgrades to consider:
+## Migliora il tuo progetto
+Il tuo progetto è completo, ma puoi ancora migliorarlo se lo desideri. Ecco alcuni possibili aggiornamenti:
 
- + Let the user set the rate at which the rocket burns fuel or how far the rocket flies in each frame.
- + Add a second, higher, orbit for the rocket to reach and drop off another satellite. Have it change colour again when it gets there.
+ + Lascia che l'utente imposti la velocità con cui il razzo brucia carburante o la distanza percorsa dal razzo in ciascun fotogramma.
+ + Aggiungi una seconda orbita, più alta, affinché il razzo raggiunga e lasci cadere un altro satellite. Fagli nuovamente cambiare colore quando arriva lì.
 
-Here's a version of the project with all those upgrades, so you can see how they could work. Click Run to launch the rocket:
+Ecco una versione del progetto con tutti questi aggiornamenti, in modo che tu possa vedere come potrebbero funzionare. Fare clic su Run/Esegui per lanciare il razzo:
 
 <iframe src="https://editor.raspberrypi.org/en/embed/viewer/rocket-launch-upgrade" width="600" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen>
-</iframe> You can view the [completed upgrade project here](https://editor.raspberrypi.org/en/projects/rocket-launch-upgrade){:target="_blank"}.
+</iframe> Puoi vedere [qui il progetto completo con i miglioramenti ](https://editor.raspberrypi.org/en/projects/rocket-launch-upgrade){:target="_blank"}.
 
 --- collapse ---
 ---
-title: Completed project
+title: Il progetto completo
 ---
 
-You can view the [completed project here](https://editor.raspberrypi.org/en/projects/rocket-launch-example){:target="_blank"}.
+Qui puoi visualizzare il [progetto completato](https://editor.raspberrypi.org/en/projects/rocket-launch-example){:target="_blank"}.
 
 --- /collapse ---
 
