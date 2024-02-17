@@ -58,7 +58,7 @@ Ogni volta che il ciclo `for` si ripete, imposta una variabile sull'elemento cor
 
 **Test:** Esegui il codice per verificare che il razzo abbia una nuova scia di scarico.
 
-![A close-up of the rocket with an exhaust trail.](images/rocket_exhaust.png){:width="300px"}
+![Un primo piano del razzo con la scia di scarico.](images/rocket_exhaust.png){:width="300px"}
 
 --- /task ---
 
@@ -68,7 +68,7 @@ La variabile `i` può essere utilizzata anche per creare una sfumatura di colore
 
 --- task ---
 
-Change the call to `fill()` to set the amount of green to `255 - i * 10` so that the first ellipse has equal amounts of red and green and the last ellipse has very little green.
+Cambia la chiamata della funzione `fill()` per impostare la quantità di verde al valore di `255 - i * 10` in modo che la prima ellisse abbia la stessa quantità di rosso e verde e l'ultima ellisse ha pochissimo verde.
 
 --- code ---
 ---
@@ -77,7 +77,7 @@ line_highlights: 19
 ---
 
     for i in range(25):   
-        fill(255, 255 - i * 10, 0)  # Reduce the amount of green    
+        fill(255, 255 - i * 10, 0)  # Riduce la quantità di verde    
         ellipse(width/2, rocket_y + i, 8, 3)
 
 --- /code ---
@@ -86,21 +86,21 @@ line_highlights: 19
 
 --- task ---
 
-**Test:** Check that you get a trail of ellipses gradually changing from yellow to red.
+**Test:** Controlla di avere ottenuto una scia di ellissi che cambiano gradualmente dal giallo al rosso.
 
 --- /task ---
 
-### Create a smoke effect
+### Crea un effetto fumo
 
-The smoke exhaust trail is created by drawing lots of slightly transparent grey ellipses at different positions in each frame.
+La scia del fumo viene creata disegnando molte ellissi grigie leggermente trasparenti in diverse posizioni in ciascun fotogramma.
 
-![A slow animation of the smoke effect.](images/rocket_smoke.gif)
+![Un'animazione lenta dell'effetto fumo.](images/rocket_smoke.gif)
 
 --- task ---
 
-This time the `fill()` is outside the loop as the colour is the same for each smoke ellipse. The fourth input to `fill()` is the opacity, a low opacity value makes the colour more transparent so you can see the shapes underneath.
+Questa volta la funzione `fill()` è esterna al ciclo poiché il colore è lo stesso per ogni ellisse di fumo. Il quarto valore in input per `fill()` è l'opacità, un valore di opacità basso rende il colore più trasparente in modo da poter vedere le forme sottostanti.
 
-In each frame of the animation, 20 ellipses of random sizes will be drawn at random positions.
+In ogni fotogramma dell'animazione, verranno disegnate 20 ellissi di dimensioni casuali in posizioni casuali.
 
 --- code ---
 ---
@@ -112,8 +112,8 @@ line_highlights: 22-24
         fill(255, 255 - i * 10, 0)   
         ellipse(width/2, rocket_y + i, 8, 3)    
     
-    fill(200, 200, 200, 100)  # Transparent grey   
-    for i in range(20):  # Draw 20 random smoke ellipses    
+    fill(200, 200, 200, 100)  # Grigio trasparente   
+    for i in range(20):  # Disegna 20 ellissi di fumo    
         ellipse(width/2 + randint(-5, 5), rocket_y + randint(20, 50), randint(5, 10), randint(5, 10))    
     
     image(rocket, width/2, rocket_y, 64, 64)
@@ -124,7 +124,7 @@ line_highlights: 22-24
 
 --- task ---
 
-**Test:** Run your program and check the exhaust fumes are visible.
+**Test:** Esegui il programma e verifica che i fumi di scarico siano visibili.
 
 ![An animation of the rocket and exhaust trail with added smoke.](images/rocket_exhaust_circles.gif)
 
