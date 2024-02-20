@@ -1,40 +1,20 @@
-Bibliotheekcode importeren
-
 Global variabelen instellen
-
-De teken_raket functie komt hier
-
-De functie teken_achtergrond komt hier
 
 Stel hier je animatie in
 
-Dingen om te doen in elk frame
-
-Definities voor de p5py-bibliotheek
-
-Vormgeving
-
-Lettertypen
-
-Tekst
-
-Kleur
-
-Afbeeldingen
-
-Omgeving
-
-Omzetten
-
-Toetsenbord
+Positions the image in the center
 
 Jouw gekozen planeet
+
+De functie teken_achtergrond komt hier
 
 Afkorting voor background(0, 0, 0) - zwart
 
 Teken de afbeelding
 
-Begin onderaan
+Dingen om te doen in elk frame
+
+De teken_raket functie komt hier
 
 Gebruik de global raket_y variabele
 
@@ -56,11 +36,15 @@ Teken 20 willekeurige rook ellipsen
 
 Hoeveel brandstof wordt er in elk frame verbruikt
 
+How many kilograms of fuel do you want to use?
+
 Brandstof verbruik
+
+Fuel left: 
 
 Nog genoeg brandstof
 
-Zet elke vulling uit
+Turn off the stroke
 
 Stel een witte lijn in
 
@@ -76,10 +60,11 @@ Gelukt
 
 Te veel brandstof
 
-Dus de planeet is niet rood gekleurd in het volgende frame!
+Looping
 
 Groen
 
 Amber
 
 Rood
+
