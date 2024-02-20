@@ -16,6 +16,8 @@ Short for background(0, 0, 0) — black
 
 Η συνάρτηση draw_rocket πηγαίνει εδώ
 
+Start at the bottom
+
 Χρήση της καθολικής μεταβλητήςrocket_y
 
 Μετακίνησε τον πύραυλο
