@@ -1,40 +1,20 @@
-Import library code
-
 Setup global variables
-
-The draw_rocket function goes here
-
-The draw_background function goes here
 
 Setup your animation here
 
-Things to do in every frame
-
-Definitions for compatibility with the p5py processing library
-
-Shape
-
-Fonts
-
-Text
-
-Colour
-
-Images
-
-Environment
-
-Transform
-
-Keyboard
+Positions the image in the center
 
 Your chosen planet
+
+The draw_background function goes here
 
 Short for background(0, 0, 0) — black
 
 Draw the image
 
-Start at the bottom
+Things to do in every frame
+
+The draw_rocket function goes here
 
 Use the global rocket_y variable
 
@@ -56,11 +36,15 @@ Draw 20 random smoke ellipses
 
 How much fuel is burned in each frame
 
+How many kilograms of fuel do you want to use?
+
 Burn fuel
+
+Fuel left: 
 
 Still got fuel
 
-Turn off any fill
+Turn off the stroke
 
 Set a white stroke
 
@@ -76,10 +60,11 @@ Success
 
 Too much fuel
 
-So the planet isn't tinted in the next frame!
+Looping
 
 Green
 
 Amber
 
 Red
+
