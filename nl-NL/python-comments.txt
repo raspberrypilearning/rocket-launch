@@ -16,6 +16,8 @@ Dingen om te doen in elk frame
 
 De teken_raket functie komt hier
 
+Start at the bottom
+
 Gebruik de global raket_y variabele
 
 Verplaats de raket
