@@ -1,40 +1,20 @@
-Importer le code de la bibliothèque
-
 Configurer les variables globales
-
-La fonction dessine_fusee vient ici
-
-La fonction dessine_arriere_plan vient ici
 
 Configure ton animation ici
 
-Choses à faire dans chaque image
-
-Définitions pour la compatibilité avec la bibliothèque de traitement p5py
-
-Forme
-
-Polices
-
-Texte
-
-Couleur
-
-Images
-
-Environnement
-
-Transformer
-
-Clavier
+Positions the image in the center
 
 Ta planète choisie
+
+La fonction dessine_arriere_plan vient ici
 
 Raccourci pour background(0, 0, 0) - noir
 
 Dessine l'image
 
-Commencer en bas
+Choses à faire dans chaque image
+
+La fonction dessine_fusee vient ici
 
 Utiliser la variable globale fusee_y
 
@@ -56,11 +36,15 @@ Dessiner 20 ellipses de fumée aléatoire
 
 Quelle est la quantité de carburant brûlée dans chaque image
 
+How many kilograms of fuel do you want to use?
+
 Brûler du carburant
+
+Fuel left: 
 
 Encore assez de carburant
 
-Désactive tout remplissage
+Turn off the stroke
 
 Définir un trait blanc
 
@@ -76,10 +60,11 @@ Succès
 
 Trop de carburant
 
-Donc la planète n'est pas teintée dans l'image suivante !
+Looping
 
 Vert
 
 Orange
 
 Rouge
+
