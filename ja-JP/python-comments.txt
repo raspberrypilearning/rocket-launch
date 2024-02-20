@@ -1,40 +1,20 @@
-ライブラリコードをインポートする
-
 グローバル変数を設定する
-
-draw_rocket関数はここにあります
-
-draw_background関数はここにあります
 
 ここでアニメーションをセットアップします
 
-フレームごとに行うこと
-
-p5py処理ライブラリとの互換性のための定義
-
-形
-
-フォント
-
-テキスト
-
-色
-
-画像
-
-環境
-
-トランスフォーム
-
-キーボード
+Positions the image in the center
 
 選択した惑星
+
+draw_background関数はここにあります
 
 background(0, 0, 0) の省略形 - 黒
 
 描画する
 
-一番下から開始
+フレームごとに行うこと
+
+draw_rocket関数はここにあります
 
 rocket_yグローバル変数を使う
 
@@ -56,11 +36,15 @@ rocket_yグローバル変数を使う
 
 各フレームで燃焼する燃料の量
 
+How many kilograms of fuel do you want to use?
+
 燃料を燃焼させる
+
+Fuel left: 
 
 まだ燃料が残っている
 
-塗りつぶしをなしにする
+Turn off the stroke
 
 境界線を白にする
 
@@ -76,10 +60,11 @@ rocket_yグローバル変数を使う
 
 燃料が多すぎる
 
-次のフレームで惑星が色付けされないように!
+Looping
 
 緑
 
 アンバー
 
 赤
+
