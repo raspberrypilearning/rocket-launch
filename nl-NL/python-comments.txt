@@ -2,7 +2,7 @@ Global variabelen instellen
 
 Stel hier je animatie in
 
-Positions the image in the center
+Plaatst de afbeelding in het midden
 
 Jouw gekozen planeet
 
@@ -36,15 +36,15 @@ Teken 20 willekeurige rook ellipsen
 
 Hoeveel brandstof wordt er in elk frame verbruikt
 
-How many kilograms of fuel do you want to use?
+Hoeveel kilogram brandstof wil je gebruiken?
 
 Brandstof verbruik
 
-Fuel left: 
+Brandstof over: 
 
 Nog genoeg brandstof
 
-Turn off the stroke
+Zet de lijn uit
 
 Stel een witte lijn in
 
@@ -60,7 +60,7 @@ Gelukt
 
 Te veel brandstof
 
-Looping
+Lus
 
 Groen
 
