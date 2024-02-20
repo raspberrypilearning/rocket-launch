@@ -16,6 +16,8 @@ Things to do in every frame
 
 The draw_rocket function goes here
 
+Start at the bottom
+
 Use the global rocket_y variable
 
 Move the rocket
