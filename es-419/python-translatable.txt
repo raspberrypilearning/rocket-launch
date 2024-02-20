@@ -1,33 +1,24 @@
 tamano_pantalla
 
+planeta
+
+dibujar_fondo
+
+cohete
+
 cohete_y
 
+dibujar_cohete
+
 quemar
+
+combustible
 
 orbita_radio
 
 orbita_y
 
-dibujar_cohete
-
-combustible
-
-Combustible restante:
-
-cohete
-
-dibujar_fondo
-
-planeta
-
-¿Cuántos kilogramos de combustible quieres usar?
-
-¿Cuánto combustible debe quemar el cohete en cada fotograma?
-
-¿Qué distancia debe recorrer el cohete en cada fotograma?
-
-Bucle
-
 puntos
 
 vidas
+
