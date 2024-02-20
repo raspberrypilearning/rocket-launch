@@ -1,33 +1,24 @@
 tamanho_tela
 
+planeta
+
+desenhar_plano_de_fundo
+
+foguete
+
 foguete_y
 
+desenhar_foguete
+
 queimar
+
+combustivel
 
 raio_orbital
 
 orbita_y
 
-desenhar_foguete
-
-combustivel
-
-Combustível restante:
-
-foguete
-
-desenhar_plano_de_fundo
-
-planeta
-
-Quantos quilogramas de combustível você quer usar?
-
-Quanto combustível o foguete deve queimar em cada quadro?
-
-Qual a distância que o foguete deve percorrer em cada quadro?
-
-Ciclo
-
 pontos
 
 vidas
+
