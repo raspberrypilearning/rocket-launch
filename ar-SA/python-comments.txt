@@ -16,6 +16,8 @@ Positions the image in the center
 
 يتم وضع دالة draw_rocket هنا
 
+Start at the bottom
+
 استخدم متغير الصاروخ rocket_y variable
 
 حرك الصاروخ
