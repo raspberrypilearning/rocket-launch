@@ -1,33 +1,24 @@
 maint_sgrin
 
+planed
+
+llunio_cefndir
+
+roced
+
 roced_y
 
+llunio_roced
+
 llosgi
+
+tanwydd
 
 radiws_orbit
 
 orbit_y
 
-llunio_roced
-
-tanwydd
-
-Tanwydd yn weddill:
-
-roced
-
-llunio_cefndir
-
-planed
-
-Sawl cilogram o danwydd ydych chi am ei ddefnyddio?
-
-How much fuel should the rocket burn each frame?
-
-How far should the rocket travel each frame?
-
-Gwneud dolen
-
 pwyntiau
 
 bywydau
+
