@@ -16,6 +16,8 @@ Choses à faire dans chaque image
 
 La fonction dessine_fusee vient ici
 
+Start at the bottom
+
 Utiliser la variable globale fusee_y
 
 Déplace la fusée
