@@ -1,33 +1,24 @@
 screen_size
 
+planet
+
+draw_background
+
+rocket
+
 rocket_y
 
+draw_rocket
+
 burn
+
+fuel
 
 orbit_radius
 
 orbit_y
 
-draw_rocket
-
-fuel
-
-Υπολειπόμενο καύσιμο:
-
-rocket
-
-draw_background
-
-planet
-
-Πόσα κιλά καυσίμου θέλεις να χρησιμοποιήσεις;
-
-How much fuel should the rocket burn each frame?
-
-How far should the rocket travel each frame?
-
-Βρόχος
-
 points
 
 lives
+
