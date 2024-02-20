@@ -16,6 +16,8 @@ O que fazer em cada quadro
 
 A função desenhar_foguete vai aqui
 
+Start at the bottom
+
 Use a variável global foguete_y
 
 Mova o foguete
