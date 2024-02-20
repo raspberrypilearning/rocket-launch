@@ -1,33 +1,24 @@
 screen_size
 
+ग्रह
+
+drawage_background बनाएं
+
+रॉकेट
+
 crocket_y
 
+draway_crock
+
 बर्न करें
+
+फ्यूल
 
 orbit_radius
 
 orbit_y
 
-draway_crock
-
-फ्यूल
-
-शेष ईंधन:
-
-रॉकेट
-
-drawage_background बनाएं
-
-ग्रह
-
-आप कितने किलोग्राम ईंधन का उपयोग करना चाहते हैं?
-
-How much fuel should the rocket burn each frame?
-
-How far should the rocket travel each frame?
-
-लूपिंग
-
 पॉइंट्स
 
 रहता है
+
