@@ -1,33 +1,24 @@
 screen_size
 
+planet
+
+draw_background
+
+rocket
+
 rocket_y
 
+draw_rocket
+
 burn
+
+fuel
 
 orbit_radius
 
 orbit_y
 
-draw_rocket
-
-fuel
-
-Fuel left:
-
-rocket
-
-draw_background
-
-planet
-
-How many kilograms of fuel do you want to use?
-
-How much fuel should the rocket burn each frame?
-
-How far should the rocket travel each frame?
-
-Looping
-
 points
 
 lives
+
