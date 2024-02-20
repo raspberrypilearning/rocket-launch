@@ -16,6 +16,8 @@ Pethau i'w gwneud ym mhob ffrâm
 
 Mae'r swyddogaeth llunio_roced yn mynd fan hyn
 
+Start at the bottom
+
 Defnyddio'r newidyn roced_y cyffredinol
 
 Symud y roced
