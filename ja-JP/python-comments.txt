@@ -16,6 +16,8 @@ background(0, 0, 0) の省略形 - 黒
 
 draw_rocket関数はここにあります
 
+Start at the bottom
+
 rocket_yグローバル変数を使う
 
 ロケットを動かす
