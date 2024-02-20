@@ -1,40 +1,20 @@
-Mewngludo cod llyfrgell
-
 Gosod newidynnau cyffredinol
-
-Mae'r swyddogaeth llunio_roced yn mynd fan hyn
-
-Mae'r swyddogaeth llunio_cefndir yn mynd fan hyn
 
 Gosodwch eich animeiddiad yma
 
-Pethau i'w gwneud ym mhob ffrâm
-
-Diffiniadau ar gyfer cydnawsedd â'r llyfrgell brosesu p5py
-
-Siâp
-
-Ffontiau
-
-Testun
-
-Lliw
-
-Delweddau
-
-Amgylchedd
-
-Trawsnewid
-
-Bysellfwrdd
+Positions the image in the center
 
 Y blaned o'ch dewis
+
+Mae'r swyddogaeth llunio_cefndir yn mynd fan hyn
 
 Byr ar gyfer cefndir(0, 0, 0) — black
 
 Llunio'r ddelwedd
 
-Dechrau ar y gwaelod
+Pethau i'w gwneud ym mhob ffrâm
+
+Mae'r swyddogaeth llunio_roced yn mynd fan hyn
 
 Defnyddio'r newidyn roced_y cyffredinol
 
@@ -56,11 +36,15 @@ Llunio 20 o elipsau mwg ar hap
 
 Faint o danwydd sy'n cael ei losgi ym mhob ffrâm
 
+How many kilograms of fuel do you want to use?
+
 Llosgi tanwydd
+
+Fuel left: 
 
 Tanwydd yn weddill
 
-Diffodd unrhyw lenwad
+Turn off the stroke
 
 Gosod strôc wen
 
@@ -76,10 +60,11 @@ Llwyddiant
 
 Gormod o danwydd
 
-I atal y blaned rhag cael arlliw yn y ffrâm nesaf!
+Looping
 
 Gwyrdd
 
 Melyngoch
 
 Coch
+
