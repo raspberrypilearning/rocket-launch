@@ -1,40 +1,20 @@
-Importa la libreria di codice
-
 Imposta le variabili globali
-
-La funzione draw_rocket va qui
-
-La funzione draw_ background va qui
 
 Imposta la tua animazione qui
 
-Cose da fare in ogni fotogramma
-
-Definizioni per la compatibilità con la libreria di elaborazione p5py
-
-Forma
-
-Caratteri
-
-Testo
-
-Colore
-
-Immagini
-
-Ambiente
-
-Trasformare
-
-Tastiera
+Positions the image in the center
 
 Il pianeta che hai scelto
+
+La funzione draw_ background va qui
 
 Abbreviazione per background(0, 0, 0) — black
 
 Disegna l'immagine
 
-Inizia dal basso
+Cose da fare in ogni fotogramma
+
+La funzione draw_rocket va qui
 
 Usa la variabile globale rocket_y
 
@@ -56,11 +36,15 @@ Disegna 20 ellissi di fumo casuali
 
 Quanto carburante viene bruciato ad ogni frame
 
+How many kilograms of fuel do you want to use?
+
 Brucia carburante
+
+Fuel left: 
 
 Ho ancora carburante
 
-Disattiva qualsiasi riempimento
+Turn off the stroke
 
 Imposta una linea bianca
 
@@ -76,10 +60,11 @@ Successo
 
 Troppo carburante
 
-In questo modo il pianeta non è colorato nel fotogramma successivo!
+Looping
 
 Verde
 
 Giallo
 
 Rosso
+
