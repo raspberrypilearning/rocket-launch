@@ -1,33 +1,24 @@
 dimensione dello schermo
 
+pianeta
+
+disegna_sfondo
+
+razzo
+
 rocket_y
 
+disegna_razzo
+
 bruciare
+
+carburante
 
 raggio_orbita
 
 orbit_y
 
-disegna_razzo
-
-carburante
-
-Carburante residuo:
-
-razzo
-
-disegna_sfondo
-
-pianeta
-
-Quanti chilogrammi di carburante vuoi utilizzare?
-
-Quanto carburante dovrebbe bruciare il razzo per ogni fotogramma?
-
-Quanta strada dovrebbe percorrere il razzo per ogni fotogramma?
-
-Ciclo
-
 punti
 
 vite
+
