@@ -16,6 +16,8 @@ Positions the image in the center
 
 Функція draw_rocket викликається тут
 
+Start at the bottom
+
 Використання глобальної змінної rocket_y
 
 Переміщення ракети
