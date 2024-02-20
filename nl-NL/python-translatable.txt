@@ -1,33 +1,24 @@
 scherm_grootte
 
+planeet
+
+teken_achtergrond
+
+raket
+
 raket_y
 
+teken_raket
+
 verbruik
+
+brandstof
 
 omloopbaan_straal
 
 omloopbaan_y
 
-teken_raket
-
-brandstof
-
-Brandstof over:
-
-raket
-
-teken_achtergrond
-
-planeet
-
-Hoeveel kilogram brandstof wil je gebruiken?
-
-How much fuel should the rocket burn each frame?
-
-How far should the rocket travel each frame?
-
-Lus
-
 punten
 
 levens
+
