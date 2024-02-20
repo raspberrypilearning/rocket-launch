@@ -16,6 +16,8 @@ Cose da fare in ogni fotogramma
 
 La funzione draw_rocket va qui
 
+Start at the bottom
+
 Usa la variabile globale rocket_y
 
 Muovi il razzo
