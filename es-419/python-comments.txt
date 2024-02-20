@@ -16,6 +16,8 @@ Cosas que hacer en cada cuadro
 
 La función dibujar_cohete va aquí
 
+Start at the bottom
+
 Utiliza la variable global cohete_y
 
 Mueve el cohete
