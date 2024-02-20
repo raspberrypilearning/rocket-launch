@@ -16,6 +16,8 @@ draway_background फ़ंक्शन यहाँ जाता है
 
 draway_crock फ़ंक्शन यहाँ जाता है
 
+Start at the bottom
+
 वैश्विक रॉकेट_y वेरिएबल का उपयोग करें
 
 रॉकेट को हिलाएं
