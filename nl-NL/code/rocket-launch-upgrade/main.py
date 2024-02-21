@@ -1,26 +1,26 @@
 #!/bin/python3
 
-# Import library code
+# Bibliotheekcode importeren
 from p5 import *
 from random import randint
 
-# Setup global variables
-screen_size = 400
-rocket_y = screen_size  # Start at the bottom
-burn = 100  # How much fuel is burned in each frame
-orbit_radius = 250
-orbit_y = screen_size - orbit_radius
-high_orbit_radius = 350
-high_orbit_y = screen_size - high_orbit_radius
-speed = 1  # How far the rocket flies each frame
+# Globale variabelen instellen
+scherm_grootte = 400
+raket_y = scherm_grootte # begin onderaan
+verbruik = 100 # hoeveel brandstof wordt er in elk frame verbruikt
+omloopbaan_straal = 250
+omloopbaan_y = scherm_grootte - omloopbaan_straal
+hoge_baanradius = 350
+hoge_omloopbaan_y = scherm_grootte - hoge_omloopbaan_straal
+snelheid = 1 # Hoe ver de raket elk frame vliegt
 
-# The draw_rocket function goes here
+# De teken_raket functie komt hier
 
 
-def draw_rocket():
-    global rocket_y, fuel, burn
+def teken_raket():
+    global raket_y, brandstof, verbruik
 
-    if fuel >= burn and rocket_y > high_orbit_y:  # Still flying
+    if brandstof >= verbruik and raket_y > hoge_omloopbaan_y: # vliegt nog steeds
         rocket_y -= speed  # Move the rocket
         fuel -= burn  # Burn fuel
         print('Fuel left: ', fuel)
@@ -34,56 +34,56 @@ def draw_rocket():
 
         fill(200, 200, 200, 100)  # transparent grey
 
-        for i in range(20):  # draw 20 random smoke ellipses
-            ellipse(width/2 + randint(-5, 5), rocket_y +
+        for i in range(20): # Teken 20 willekeurige rook ellipsen
+            ellipse(width/2 + randint(-5, 5), raket_y +
                     randint(20, 50), randint(5, 10), randint(5, 10))
 
-    if fuel < burn and rocket_y > high_orbit_y:  # No more fuel and not in orbit
-        tint(255, 0, 0)  # Failure
-    elif rocket_y <= orbit_y and rocket_y > high_orbit_y:
-        tint(0, 255, 0)  # Success
-    elif fuel < 1000 and rocket_y <= high_orbit_y:
-        tint(0, 100, 200)  # High orbit success
-    elif fuel >= 1000 and rocket_y <= high_orbit_y:
-        tint(255, 200, 0)  # Too much fuel
+    if brandstof < verbruik and raket_y > omloopbaan_y: # Geen brandstof meer en niet in een omloopbaan
+        tint(255, 0, 0) # Mislukt
+    elif raket_y <= orbit_y en raket_y > high_orbit_y:
+        tint(0, 255, 0) # Gelukt
+    elif brandstof < 1000 en raket_y <= omloopbaan_y:
+        tint(0, 100, 200) # Succes met hoge baan
+    elif brandstof >= 1000 en raket_y <= omloopbaan_y:
+        tint(255, 200, 0) # Te veel brandstof
 
-    image(rocket, width/2, rocket_y, 64, 64)
+    image(raket, width/2, height/2, 64, 64)
     no_tint()
 
 
-# The draw_background function goes here
-def draw_background():
-    background(0)  # Short for background(0, 0, 0) - black
-    image(planet, width/2, height, 300, 300)  # draw the image
+# De functie teken_achtergrond komt hier
+def teken_achtergrond():
+    achtergrond(0) # afkorting voor achtergrond(0, 0, 0) - zwart
+    image(planeet, width/2, height, 300, 300) # teken de afbeelding
 
-    # Draw the lower orbit
-    no_fill()  # Turn off any fill
-    stroke(255)  # Set a white stroke
+    # Teken de onderste baan
+    no_fill() # Zet elke vulling uit
+    stroke(255) # Stel een witte lijn in
     stroke_weight(2)
-    ellipse(width/2, height, orbit_radius*2, orbit_radius*2)
+    ellipse(width/2, height, omloopbaan_straal*2, omloopbaan_straal*2)
 
-    # Draw the higher orbit
-    stroke(0, 100, 200)  # Set a bluish stroke
+    # Teken de hogere baan
+    stroke(0, 100, 200) # Stel een blauwachtige streek in
     stroke_weight(2)
-    ellipse(width/2, height, high_orbit_radius*2, high_orbit_radius*2)
+    ellipse(width/2, height, omloopbaan_straal*2, omloopbaan_straal*2)
 
 
 def setup():
-    # Setup your animation here
-    size(screen_size, screen_size)
+    # Stel hier je animatie in
+    size(scherm_grootte, scherm_grootte)
     image_mode(CENTER)
-    global planet, rocket
-    planet = load_image('orange_planet.png')  # Your chosen planet
-    rocket = load_image('rocket.png')
+    global planeet, raket
+    planeet = load_image('planet.png') # jouw gekozen planeet
+    raket = load_image('rocket.png')
 
 
 def draw():
-    # Things to do in every frame
-    draw_background()
-    draw_rocket()
+    # Dingen om te doen in elk frame
+    teken_achtergrond()
+    teken_raket()
 
 
-fuel = int(input('How many kilograms of fuel do you want to use?'))
-burn = int(input('How much fuel should the rocket burn each frame?'))
-speed = int(input('How far should the rocket travel each frame?'))
+brandstof = int(input('Hoeveel kilogram brandstof wil je gebruiken?'))
+verbruik = int(input('Hoeveel brandstof moet de raket per frame verbruiken?'))
+snelheid = int(input('Hoe ver moet de raket per frame reizen?'))
 run()
