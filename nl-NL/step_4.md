@@ -18,7 +18,7 @@ Je kunt coole effecten creëren door een `for`-lus te gebruiken om veel vormen i
 <p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;">
 Coderen wordt gebruikt om <span style="color: #0faeb0">**grafische effecten**</span> te maken voor films en games. Het is veel sneller om code te schrijven dan om elk frame van een animatie afzonderlijk te tekenen. </p>
 
-### Draw your exhaust
+### Teken je uitlaat
 
 Door veel gele ellipsen op verschillende `y`-posities te tekenen, ontstaat een uitlaatspoor met een ronde onderkant.
 
@@ -60,7 +60,7 @@ Elke keer dat de `for`-lus wordt herhaald, stelt het een variabele in op het hui
 
 --- /task ---
 
-### Add a gradient
+### Voeg een verloop toe
 
 De variabele `i` kan ook worden gebruikt om een kleurverloop te maken met minder groen in elke ellips die wordt getekend.
 
@@ -88,7 +88,7 @@ line_highlights: 20
 
 --- /task ---
 
-### Create a smoke effect
+### Creëer een rookeffect
 
 Het rookafvoerspoor wordt gecreëerd door veel licht transparante grijze ellipsen op verschillende posities in elk frame te tekenen.
 
