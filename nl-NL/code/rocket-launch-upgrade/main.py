@@ -10,7 +10,7 @@ raket_y = scherm_grootte # begin onderaan
 verbruik = 100 # hoeveel brandstof wordt er in elk frame verbruikt
 omloopbaan_straal = 250
 omloopbaan_y = scherm_grootte - omloopbaan_straal
-hoge_baanradius = 350
+hoge_omloopbaan_straal = 350
 hoge_omloopbaan_y = scherm_grootte - hoge_omloopbaan_straal
 snelheid = 1 # Hoe ver de raket elk frame vliegt
 
@@ -21,18 +21,18 @@ def teken_raket():
     global raket_y, brandstof, verbruik
 
     if brandstof >= verbruik and raket_y > hoge_omloopbaan_y: # vliegt nog steeds
-        rocket_y -= speed  # Move the rocket
-        fuel -= burn  # Burn fuel
-        print('Fuel left: ', fuel)
+        raket_y -= snelheid # Verplaats de raket
+        brandstof -= verbruik # brandstof verbruik
+        print('Brandstof over: ', brandstof)
 
-        no_stroke()  # Turn off the stroke
+        no_stroke() # Zet de lijn uit
 
-        for i in range(25):  # Draw 25 burning exhaust ellipses
-            fill(255, 255 - i*10, 0)  # yellow
-            # i increases each time the loop repeats
-            ellipse(width/2, rocket_y + i, 8, 3)
+        for i in range(25): # teken 25 brandende uitstoot ellipsen
+            fill(255, 255 - i*10, 0) # geel
+            # i neemt toe elke keer dat de lus wordt herhaald
+            ellipse(width/2, raket_y + i, 8, 3)
 
-        fill(200, 200, 200, 100)  # transparent grey
+        fill(200, 200, 200, 100) # Transparant grijs
 
         for i in range(20): # Teken 20 willekeurige rook ellipsen
             ellipse(width/2 + randint(-5, 5), raket_y +
