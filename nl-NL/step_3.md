@@ -15,7 +15,7 @@ Elke keer dat er een nieuw frame wordt getekend, moet de raket omhoog bewegen op
 
 Het startproject heeft een raketafbeelding voor je.
 
-![Image of the rocket in the code editor image gallery.](images/rocket_image.png)
+![Afbeelding van de raket in de code-editor beeldbibliotheek.](images/rocket_image.png)
 
 --- /task ---
 
@@ -41,7 +41,7 @@ raket = load_image('rocket.png')
 
 --- /task ---
 
-### Make the rocket fly
+### Laat de raket vliegen
 
 De `y` positie van de raket begint bij 400 (de schermhoogte) en neemt vervolgens af met 1 telkens wanneer een nieuw frame wordt getekend.
 
