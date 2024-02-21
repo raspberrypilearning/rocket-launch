@@ -1,6 +1,6 @@
-## Quick quiz
+## Snelle quiz
 
-Answer the three questions. There are hints to guide you to the correct answer.
+Beantwoord de drie vragen. Je wordt naar het juiste antwoord geleid.
 
 Druk na elke vraag op **indienen**. Je wordt naar het juiste antwoord geleid.
 
@@ -40,7 +40,7 @@ Niet helemaal, de **lus variabele** van een `for` lus - in dit geval `i` - bevat
 
   --- feedback ---
 
-Correct. De lus loopt één keer, in volgorde, voor elk item `i` in het bereik [0, 1, 2, 3, 4].
+Juist. De lus loopt één keer, in volgorde, voor elk item `i` in het bereik [0, 1, 2, 3, 4].
 
   --- /feedback ---
 
