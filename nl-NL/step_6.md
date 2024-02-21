@@ -17,7 +17,7 @@ De raket kan van kleur veranderen om te laten zien hoe succesvol de lancering wa
 </div>
 </div>
 
-### Draw an orbit line
+### Teken een lijn voor de baan
 
 --- task ---
 
@@ -71,7 +71,7 @@ image(planet, width/2, height, 300, 300)
 
 --- /task ---
 
-### Launch the rocket to the orbit
+### Lanceer de raket naar de baan
 
 De raket moet stoppen wanneer hij de omloopbaan van de satelliet bereikt - het einde van de missie.
 
@@ -88,8 +88,8 @@ line_highlights: 19
 ---
 
 # De teken_raket functie komt hier
-def draw_rocket():   
-global rocket_y, fuel, burn
+def teken_raket():   
+global raket_y, brandstof, verbruik
 
         if brandstof >= verbruik and raket_y > omloopbaan_y: #Vliegt nog steeds
 
@@ -103,7 +103,7 @@ global rocket_y, fuel, burn
 
 --- /task ---
 
-### Check if the launch is successful
+### Controleer of de lancering succesvol is
 
 De raket moet rood gekleurd zijn als de brandstof opraakt voordat hij hoog genoeg is om de satelliet te lanceren.
 
