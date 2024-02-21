@@ -12,7 +12,7 @@ Om dit te doen, moet je simuleren hoeveel brandstof er tijdens de reis wordt ver
 
 </div>
 
-### Create a fuel variable
+### Maak een brandstofvariabele
 
 --- task ---
 
@@ -51,7 +51,7 @@ run()
 
 --- /task ---
 
-### Check fuel against burn
+### Controleer de brandstof op verbranding
 
 De raket mag alleen bewegen als hij niet al zijn brandstof heeft opgebruikt.
 
@@ -122,7 +122,7 @@ line_highlights: 16-31
 
 --- /task ---
 
-Did your rocket stop when it ran out of fuel? Well done, you sent a rocket to outer space!
+Stopte je raket toen de brandstof op was? Goed gedaan, je hebt een raket naar de ruimte gestuurd!
 
 --- save ---
 
