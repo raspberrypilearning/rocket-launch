@@ -15,7 +15,7 @@ De animatie heeft een ruimte achtergrond nodig met een planeet om de raket vanaf
 
 Open het [-projectsjabloon](https://trinket.io/python/9ef894a933){:target="_blank"}.
 
-### Create the screen
+### Maak het scherm
 
 --- /task ---
 
@@ -57,13 +57,13 @@ size(scherm_grootte, scherm_grootte)
 
 --- /task ---
 
-### Choose an image
+### Kies een afbeelding
 
 --- task ---
 
 Het startproject heeft drie verschillende planeetafbeeldingen en de maan voor jou beschikbaar. Je kunt deze bekijken in de Trinket-afbeeldingen bibliotheek door de knop **View and Add Images** te selecteren.
 
-![A screenshot of the code editor, with the image gallery highlighted containing images of planets and the moon.](images/image_gallery.png)
+![Een screenshot van de code-editor, waarbij de afbeeldingengalerij is gemarkeerd met afbeeldingen van planeten en de maan.](images/image_gallery.png)
 
 **Kies:** Bepaal welke afbeelding je wilt gebruiken en noteer de bestandsnaam. Bijvoorbeeld `orange_planet.png`.
 
@@ -71,7 +71,7 @@ Het startproject heeft drie verschillende planeetafbeeldingen en de maan voor jo
 
 --- task ---
 
-Add code to the `setup()` function to load and position your image.
+Voeg code toe aan de `setup()` functie om je afbeelding te laden en te positioneren.
 
 De regel `image_mode(CENTER)` zegt dat je afbeeldingen gaat positioneren door de coördinaten van het midden van de afbeelding op te geven (in plaats van de linkerbovenhoek).
 
@@ -95,7 +95,7 @@ planeet = load_image('planet.png') #Je gekozen planeet
 
 --- /task ---
 
-### Draw background
+### Teken achtergrond
 
 --- task ---
 
