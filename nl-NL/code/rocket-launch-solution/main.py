@@ -34,9 +34,9 @@ def teken_raket():
 
     if brandstof < verbruik and raket_y > omloopbaan_y:
         tint(255, 0, 0)
-    elif brandstof < 1000 en raket_y <= omloopbaan_y:
+    elif brandstof < 1000 and raket_y <= omloopbaan_y:
         tint(0, 255, 0)
-    elif brandstof >= 1000 en raket_y <= omloopbaan_y:
+    elif brandstof >= 1000 and raket_y <= omloopbaan_y:
         tint(255, 200, 0)
 
     image(raket, width/2, height/2, 64, 64)
