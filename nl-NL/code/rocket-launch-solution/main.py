@@ -4,10 +4,10 @@
 from p5 import *
 from random import randint
 
-# Globale variabelen instellen
+# Global variabelen instellen
 scherm_grootte = 400
 raket_y = 400
-branden = 100
+verbruik = 100
 omloopbaan_straal = 250
 omloopbaan_y = scherm_grootte - omloopbaan_straal
 
