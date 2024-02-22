@@ -40,11 +40,11 @@ def teken_raket():
 
     if brandstof < verbruik and raket_y > omloopbaan_y: # Geen brandstof meer en niet in een omloopbaan
         tint(255, 0, 0) # Mislukt
-    elif raket_y <= orbit_y en raket_y > high_orbit_y:
+    elif raket_y <= orbit_y and raket_y > high_orbit_y:
         tint(0, 255, 0) # Gelukt
-    elif brandstof < 1000 en raket_y <= omloopbaan_y:
+    elif brandstof < 1000 and raket_y <= omloopbaan_y:
         tint(0, 100, 200) # Succes met hoge baan
-    elif brandstof >= 1000 en raket_y <= omloopbaan_y:
+    elif brandstof >= 1000 and raket_y <= omloopbaan_y:
         tint(255, 200, 0) # Te veel brandstof
 
     image(raket, width/2, height/2, 64, 64)
