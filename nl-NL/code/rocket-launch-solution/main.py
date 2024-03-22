@@ -17,7 +17,7 @@ def teken_raket():
     global raket_y, brandstof, verbruik
 
     if brandstof >= verbruik and raket_y > omloopbaan_y:
-        raket_y = 1
+        raket_y -= 1
         brandstof -= verbruik
         print('Brandstof over: ', brandstof)
 
@@ -51,7 +51,7 @@ def teken_achtergrond():
     no_fill()
     stroke(255)
     stroke_weight(2)
-    ellipse(width/2, height, omloopbaan_straal*2, omloopbaan_straal*2)
+    ellipse(width/2, height, omloopbaan_straal * 2, omloopbaan_straal * 2)
 
 
 def setup():
