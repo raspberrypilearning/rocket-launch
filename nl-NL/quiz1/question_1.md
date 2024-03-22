@@ -2,7 +2,7 @@
 
 Beantwoord de drie vragen. Je wordt naar het juiste antwoord geleid.
 
-Druk na elke vraag op **indienen**. Je wordt naar het juiste antwoord geleid.
+Klik na het beantwoorden van elke vraag op **Indienen**.
 
 Veel plezier!
 
@@ -32,7 +32,7 @@ Niet helemaal, een `for` lus in Python herhaalt zijn code in een gegeven reeks, 
 
   --- feedback ---
 
-Niet helemaal, de **lus variabele** van een `for` lus - in dit geval `i` - bevat de waarde van het aantal maal dat de lus wordt doorlopen.
+Niet helemaal, de **lus variabele** van een `for` lus - in dit geval `i` - bevat de huidige waarde uit de reeks waar de lus doorheen loopt.
 
   --- /feedback ---
 
@@ -48,7 +48,7 @@ Juist. De lus loopt één keer, in volgorde, voor elk item `i` in het bereik [0,
 
   --- feedback ---
 
-Niet helemaal, een `for` lus doorloopt de reeks van items die in de gegeven volgorde. Omdat `range()` een geordende reeks geeft van 0 tot het nummer dat wordt doorgegeven, is dat de volgorde die je zou verwachten getoond te worden door deze `for` lus.
+Niet helemaal, een `for` lus doorloopt de reeks van items in de gegeven volgorde. Omdat `range()` een geordende reeks geeft van 0 tot het getal dat wordt doorgegeven, is dat de volgorde die je zou verwachten getoond te worden door deze `for` lus.
 
   --- /feedback ---
 
