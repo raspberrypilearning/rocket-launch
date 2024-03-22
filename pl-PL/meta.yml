@@ -1,32 +1,32 @@
 ---
-title: Rocket launch
+title: Wystrzelenie rakiety
 hero_image: images/banner.png
-description: Make an animation of a rocket propelling a satellite into orbit
-meta_title: Python coding projects for kids and teens | Rocket launch
-meta_description: Learn Python with the Raspberry Pi Foundation's coding projects for kids and teens. Make a Python animation that shows a rocket launching a satellite into orbit.
+description: Stwórz animację rakiety napędzającej satelitę na orbitę
+meta_title: Projekty kodowania w Pythonie dla dzieci i młodzieży | Rocket launch
+meta_description: Naucz się języka Python z projektami programistycznymi Fundacji Raspberry Pi dla dzieci i młodzieży. Stwórz animację w Pythonie, która pokazuje rakietę wystrzeliwującą satelitę na orbitę.
 version: 0.0.1
 listed: true
 copyedit: true
 last_tested: "2021-10-06"
 steps:
   - 
-    title: You will make
+    title: Zrobisz to
   - 
-    title: Set the scene
+    title: Ustaw scenę
   - 
-    title: Liftoff!
+    title: Startuj!
     completion:
       - engaged
   - 
-    title: Exhaust effects
+    title: Efekty wydechu
   - 
-    title: Burn fuel
+    title: Spalić paliwo
   - 
-    title: Reaching orbit
+    title: Dotarcie na orbitę
     completion:
       - internal
   - 
-    title: Quick quiz
+    title: Szybki quiz
     knowledge_quiz:
       path: quiz1
       version: 1
