@@ -52,12 +52,12 @@ line_highlights: 42-45
 
 def teken_achtergrond():   
 background(0) # Staat voor background(0, 0, 0) — zwart   
-image(planet, width/2, height, 300, 300)   
+image(planeet, width/2, height, 300, 300)   
 
-    no_fill() #Schakel elke vulling uit<br x-id="2" />
-      stroke(255) #Stel een witte lijn in<br x-id="3" />
-      stroke_weight(2)<br x-id="3" />
-      ellipse(width/2, height, omloopbaan_straal * 2, omloopbaan_straal * 2)
+    no_fill() # Schakel elke vulling uit
+    stroke(255) # Stel een witte lijn in
+    stroke_weight(2)
+    ellipse(width/2, height, omloopbaan_straal * 2, omloopbaan_straal * 2)
 
 --- /code ---
 
@@ -91,7 +91,7 @@ line_highlights: 19
 def teken_raket():   
 global raket_y, brandstof, verbruik
 
-        if brandstof >= verbruik and raket_y > omloopbaan_y: #Vliegt nog steeds
+        if brandstof >= verbruik and raket_y > omloopbaan_y: # Vliegt nog steeds
 
 --- /code ---
 
@@ -99,7 +99,7 @@ global raket_y, brandstof, verbruik
 
 --- task ---
 
-**Test:** Voer je project uit en geef `50000` in als de hoeveelheid brandstof. Dit zou voldoende brandstof moeten zijn om een baan om de aarde te bereiken. De raket moet stoppen wanneer hij zijn baan bereikt.
+**Test:** Voer je project uit en geef `50000` in als de hoeveelheid brandstof. Dit zou voldoende brandstof moeten zijn om een baan om de satelliet te bereiken. De raket moet stoppen wanneer hij zijn baan bereikt.
 
 --- /task ---
 
@@ -118,6 +118,9 @@ line_highlights: 34-35
     fill(200, 200, 200, 100)   
     for i in range(20):   
       ellipse(width/2 + randint(-5, 5), raket_y + randint(20, 50), randint(5, 10), randint(5, 10))
+    
+    if brandstof < verbruik and raket_y > omloopbaan_y:  # Geen brandstof mee en niet in de omloopbaan 
+        tint(255, 0, 0)  # Mislukt
 
 --- /code ---
 
@@ -145,8 +148,11 @@ language: python filename: main.py - teken_raket() line_numbers: true line_numbe
 line_highlights: 38
 ---
 
-    image(raket, width/2, raket_y, 64, 64)<br x-id="3" />
-    no_tint() #Dus de planeet is niet rood gekleurd in het volgende frame!
+    if brandstof < verbruik and raket_y > orbit_y:    
+        tint(255, 0, 0)  # Mislukt
+    
+    image(raket, width/2, raket_y, 64, 64)
+    no_tint() # Dus de planeet is niet rood gekleurd in het volgende frame!
 
 
 --- /code ---
@@ -163,10 +169,13 @@ language: python filename: main.py - teken_raket() line_numbers: true line_numbe
 line_highlights: 36-37
 ---
 
-    if brandstof &#060; verbruik and raket_y &#062; omloopbaan_y: 
-      tint(255, 0, 0) #Mislukt<br x-id="3" />
-    elif raket_y &#060;= omloopbaan_y:<br x-id="3" />
-      tint(0, 255, 0) #Gelukt
+    if brandstof < verbruik and raket_y > omloopbaan_y: 
+      tint(255, 0, 0) # Mislukt
+    elif raket_y <= omloopbaan_y:
+      tint(0, 255, 0) # Gelukt
+    
+    image(raket, width/2, raket_y, 64, 64)   
+    no_tint()
 
 --- /code ---
 
@@ -194,12 +203,15 @@ language: python filename: main.py line_numbers: true line_number_start: 34
 line_highlights: 36, 38-39
 ---
 
-    if brandstof &#060; verbruik and raket_y &#062; omloopbaan_y: 
-      tint(255, 0, 0) #Mislukt<br x-id="3" />
-    elif brandstof &#060; 1000 and raket_y &#060;= omloopbaan_y:<br x-id="3" />
-      tint(0, 255, 0) #Gelukt<br x-id="3" />
-    elif brandstof &#062;= 1000 and raket_y &#060;= omloopbaant_y:<br x-id="4" />
-      tint(255, 200, 0) #Te veel brandstof
+    if brandstof < verbruik and raket_y > omloopbaan_y: 
+      tint(255, 0, 0) # Mislukt
+    elif brandstof < 1000 and raket_y <= omloopbaan_y:
+      tint(0, 255, 0) # Gelukt
+    elif brandstof >= 1000 and raket_y <= omloopbaant_y:
+      tint(255, 200, 0) # Te veel brandstof
+    
+    image(raket, width/2, raket_y, 64, 64)    
+    no_tint()  # Zodat de planeet niet meer gekleurd is in het volgende frame!
 
 --- /code ---
 
