@@ -13,13 +13,13 @@ De animatie heeft een ruimte achtergrond nodig met een planeet om de raket vanaf
 
 --- task ---
 
-Open het [-projectsjabloon](https://trinket.io/python/9ef894a933){:target="_blank"}.
+Open het [projectsjabloon](https://editor.raspberrypi.org/en/projects/rocket-launch-starter){:target="_blank"}.
 
 ### Maak het scherm
 
 --- /task ---
 
-Je gebruikt een `scherm_grootte` variabele om de grootte van het scherm en in berekeningen in te stellen. Variabelen die buiten functies zijn gedefinieerd, zijn **global**, dus je kunt ze overal in je programma gebruiken.
+Je gebruikt een `scherm_grootte` variabele om de grootte van het scherm in te stellen en in berekeningen te gebruiken. Variabelen die buiten functies zijn gedefinieerd, zijn **global**, dus je kunt ze overal in je programma gebruiken.
 
 --- task ---
 
@@ -49,7 +49,7 @@ line_highlights: 20
 ---
 
 def setup():   
-#Stel hier je animatie in   
+# Stel hier je animatie in   
 size(scherm_grootte, scherm_grootte)
 
 
@@ -61,7 +61,7 @@ size(scherm_grootte, scherm_grootte)
 
 --- task ---
 
-Het startproject heeft drie verschillende planeetafbeeldingen en de maan voor jou beschikbaar. Je kunt deze bekijken in de Trinket-afbeeldingen bibliotheek door de knop **View and Add Images** te selecteren.
+Het startproject heeft drie verschillende planeetafbeeldingen en de maan voor jou beschikbaar. Je kunt deze bekijken in de **Afbeeldingengalerij** aan de linkerkant van de code-editor.
 
 ![Een screenshot van de code-editor, waarbij de afbeeldingengalerij is gemarkeerd met afbeeldingen van planeten en de maan.](images/image_gallery.png)
 
@@ -75,7 +75,7 @@ Voeg code toe aan de `setup()` functie om je afbeelding te laden en te positione
 
 De regel `image_mode(CENTER)` zegt dat je afbeeldingen gaat positioneren door de coördinaten van het midden van de afbeelding op te geven (in plaats van de linkerbovenhoek).
 
-Voeg ook code toe aan de functie `setup()` om de door jou gekozen afbeelding in een global variabele genaamd `planeet` te laden. De variabele moet global zijn, zodat je deze later kunt gebruiken wanneer je de planeet op het scherm toont.
+Laad vervolgens je afbeelding in een globale `planeet` variabele. De variabele moet global zijn, zodat je deze later kunt gebruiken wanneer je de planeet op het scherm toont.
 
 --- code ---
 ---
@@ -84,10 +84,9 @@ line_highlights: 21-23
 ---
 
 def setup():   
-#Stel hier je animatie in   
+# Stel hier je animatie in   
 size(scherm_grootte, scherm_grootte)   
-image_mode(CENTER)   
-global planeet   
+image_mode(CENTER)  # Plaats de afbeelding in het midden global planeet   
 planeet = load_image('planet.png') #Je gekozen planeet
 
 
@@ -105,7 +104,7 @@ Gebruik `background(0)` om de achtergrondkleur op zwart te zetten en voeg een `i
 
 `image(bestandsnaam afbeelding, x-coördinaat, y-coördinaat, afbeeldingsbreedte, afbeeldingshoogte)`
 
-De `p5` bibliotheek stelt global variabelen `width` (breedte) en `height` (hoogte) in op basis van de grootte van het scherm. Gebruik deze in je code om de planeet te positioneren met het midden halverwege (`width/2`) en aan de onderkant (`height`) van het scherm.
+De coderegel `from p5 import *` geeft je globale `width` en `height` variabelen gebaseerd op de grootte van het scherm. Gebruik deze in je code om de planeet te positioneren met het midden halverwege (`width/2`) en aan de onderkant (`height`) van het scherm.
 
 --- code ---
 ---
@@ -136,7 +135,7 @@ line_highlights: 30
 ---
 
 def draw():   
-#Dingen om te doen in elk frame    
+# Dingen om te doen in elk frame    
 teken_achtergrond()
 
 --- /code ---
@@ -149,6 +148,6 @@ teken_achtergrond()
 
 --- /task ---
 
-Als je een Trinket-account hebt, kun je op de knop **Remix** klikken om een kopie op te slaan in je `My Trinkets`-bibliotheek.
+Als je een Raspberry Pi-account hebt, kun je in je code-editor op de knop **Save** klikken om een kopie van je project in je projecten op te slaan.
 
 --- save ---
