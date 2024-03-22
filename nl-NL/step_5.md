@@ -27,7 +27,7 @@ line_highlights: 10
 # Globale variabelen instellen
 scherm_grootte = 400   
 raket_y = scherm_grootte  
-verbruik = 100 #Hoeveel brandstof wordt er in elk frame verbruikt
+verbruik = 100 # Hoeveel brandstof wordt er in elk frame verbruikt
 
 --- /code ---
 
@@ -67,10 +67,10 @@ language: python filename: main.py — draw_rocket() line_numbers: true line_num
 line_highlights: 15, 17-18
 ---
 
-    global raket_y, brandstof, verbruik<br x-id="3" />
-      raket_y -= 1<br x-id="3" />
-      brandstof -= verbruik #Brandstof verbruik<br x-id="3" />
-      print('Brandstof over:', brandstof)
+    global raket_y, brandstof, verbruik
+    raket_y -= 1
+    brandstof -= verbruik #B randstof verbruik
+    print('Brandstof over:', brandstof)
 
 --- /code ---
 
@@ -100,15 +100,24 @@ language: python filename: main.py — teken_raket() line_numbers: true line_num
 line_highlights: 16-31
 ---
 
-    no_stroke() #Schakel de lijn uit   
+    global raket_y, brandstof, verbruik
     
-    for i in range(25):   
-      fill(255, 255 - i*10, 0)   
-      ellipse(width/2, raket_y + i, 8, 3)    
+    if brandstof>= verbruik:  # Heb nog brandstof   
+        rocket_y -= 1   
+        brandstof -= verbruik
+        print('Brandstof over: ', brandstof)   
     
-    fill(200, 200, 200, 100)   
-    for i in range(20):   
-      ellipse(width/2 + randint(-5, 5), rocket_y + randint(20, 50), randint(5, 10), randint(5, 10))
+        no_stroke()  # Zet de lijn uit 
+    
+        for i in range(25):   
+            fill(255, 255 - i*10, 0)   
+            ellipse(width/2, raket_y + i, 8, 3)    
+    
+        fill(200, 200, 200, 100)   
+        for i in range(20):   
+            ellipse(width/2 + randint(-5, 5), raket_y + randint(20, 50), randint(5, 10), randint(5, 10))   
+    
+    image(raket, width/2, raket_y, 64, 64)
 
 --- /code ---
 
