@@ -7,14 +7,14 @@ Je project is voltooid, maar je kunt het nog beter maken als je dat wilt. Hier z
 Hier is een versie van het project met al die upgrades, zodat je kunt zien hoe ze zouden kunnen werken. Klik op Run om de raket te lanceren:
 
 <iframe src="https://editor.raspberrypi.org/en/embed/viewer/rocket-launch-upgrade" width="600" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen>
-</iframe> Hier is een versie van het project met al die upgrades, zodat je kunt zien hoe ze zouden kunnen werken:
+</iframe> Je kunt het [voltooide upgradeproject hier](https://editor.raspberrypi.org/en/projects/rocket-launch-upgrade){:target="_blank" bekijken}.
 
 --- collapse ---
 ---
 title: Voltooid project
 ---
 
-Je kunt het [voltooide project hier](https://trinket.io/python/ff750578b1){:target="_blank"} bekijken.
+Je kunt het [voltooide project hier](https://editor.raspberrypi.org/en/projects/rocket-launch-example){:target="_blank"} bekijken.
 
 --- /collapse ---
 
