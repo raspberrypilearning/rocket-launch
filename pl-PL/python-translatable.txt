@@ -1,24 +1,24 @@
-screen_size
+rozmiar_ekranu
 
-planet
+planeta
 
 draw_background
 
-rocket
+rakieta
 
 rocket_y
 
 draw_rocket
 
-burn
+spal
 
-fuel
+paliwo
 
 orbit_radius
 
 orbit_y
 
-points
+punkty
 
-lives
+życia
 
