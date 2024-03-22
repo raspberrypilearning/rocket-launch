@@ -1,33 +1,33 @@
 <div class="c-survey-banner" style="width:100%">
-  <a class="c-survey-banner__link" href="https://form.raspberrypi.org/f/code-editor-feedback" target="_blank">Take our survey</a> to help make our Code Editor better!
+  <a class="c-survey-banner__link" href="https://form.raspberrypi.org/f/code-editor-feedback" target="_blank"> Weź naszą ankietę </a>, aby pomóc ulepszyć nasz edytor kodu!
 </div>
 
-## You will make
+## Zrobisz to
 
-Make an animation to propel a satellite into orbit — by hitching a ride on a rocket! Your animation will create cool graphic effects and simulate the best amount of fuel to give the rocket.
+Stwórz animację, która wypchnie satelitę na orbitę — przez przyłączenie go do rakiety! Twoja animacja stworzy fajne efekty graficzne i symuluje najlepszą ilość paliwa, aby dać rakietę.
 
-![Side-by-side screens showing one green rocket in orbit and one red rocket that has failed to reach orbit.](images/showcase.png)
+![Ekrany obok siebie pokazujące jedną zieloną rakietę na orbicie i jedną czerwoną rakietę, która nie dotarła na orbitę.](images/showcase.png)
 
 <p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;">
-<span style="color: #0faeb0">**Computer simulations**</span> are used to calculate what will happen when we send a rocket into space. Running simulations and making plans on a computer reduces the risk of expensive or dangerous problems in space.
+<span style="color: #0faeb0">**Symulacje komputerowe**</span> są używane do obliczenia, co się stanie, gdy wyślemy rakietę w kosmos. Uruchamianie symulacji i tworzenie planów na komputerze zmniejsza ryzyko kosztownych lub niebezpiecznych problemów w kosmosie.
 </p>
 
 Co zrobisz:
-+ Use **images** in your animations
-+ Use `for` loops to repeat actions
-+ Join conditions with `and`
++ Użyj ** ** w swoich animacjach
++ Użyj pętli ` ` , aby powtórzyć akcje
++ Połącz warunki z ` `
 
 --- no-print ---
 
-### Play ▶️
+### Graj ▶️
 
 --- task ---
 
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 175px; flex-grow: 1">  
-You need to supply the rocket with enough fuel to reach the satellite orbit. Try a small amount (around 10,000kg) and a very large amount (around 50,000kg) to see what happens. 
+Musisz zaopatrzyć rakietę w wystarczającą ilość paliwa, aby dotrzeć na orbitę satelity. Wypróbuj niewielką ilość (około 10 000 kg) i bardzo dużą ilość (około 50 000 kg), aby zobaczyć, co się stanie. 
 
-How much fuel is just enough without too much left over?
+Ile paliwa wystarczy bez zbyt dużej ilości resztek?
 </div>
 <iframe src="https://editor.raspberrypi.org/en/embed/viewer/rocket-launch-example" width="400" height="710" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen>
 </iframe>
@@ -39,10 +39,10 @@ How much fuel is just enough without too much left over?
 
 --- print-only ---
 
-![Completed project example of rocket ships flying into outer space.](images/showcase.png)
+![Ukończony przykład projektu statków rakietowych lecących w kosmos.](images/showcase.png)
 
 --- /print-only ---
 
-<p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;"> ![Dorothy Vaughan](images/dorothy_vaughan.jpeg){:width="300px"} Dorothy Vaughan made important contributions to early spaceflight. Seeing that the future would use electronic computers, she taught herself, and her team, how to code.
+<p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;"> ![Dorothy Vaughan](images/dorothy_vaughan.jpeg){:width="300px"} Dorothy Vaughan wniosła ważny wkład we wczesne loty kosmiczne. Widząc, że przyszłość będzie korzystać z komputerów elektronicznych, nauczyła siebie i swój zespół, jak kodować.
 
-The film *Hidden Figures* tells the story of how Dorothy and other Black women played a key role in the success of the US space program. 
+Film * Ukryte * opowiada historię o tym, jak Dorotka i inne czarne kobiety odegrały kluczową rolę w sukcesie amerykańskiego programu kosmicznego. 
