@@ -4,7 +4,7 @@
 legend: Pytanie 2 z 3
 ---
 
-A project has this `setup` code to load a planet image and say that images should be positioned at their centre:
+Projekt ma ten kod ` `, aby załadować obraz planety i powiedzieć, że obrazy powinny być umieszczone w ich środku:
 
 --- code ---
 ---
@@ -14,55 +14,55 @@ language: python
 def setup():   
 size(400, 400)   
 image_mode(CENTER)   
-global planet   
+global    
 planet = load_image('planet.png')
 
 --- /code ---
 
-Coordinates start from (0, 0) in the top-left corner. In the project you drew planet and rocket images using the `image(image_file, x-coord, y-coord, x-width, y-width)` function.
+Współrzędne zaczynają się od (0, 0) w lewym górnym rogu. W projekcie narysowałeś obrazy planet i rakiet za pomocą funkcji ` image(image_file, x-coord, y-coord, x-width, y-width)` .
 
-Where will this code position the planet image?
+Gdzie ten kod będzie umieszczał obraz planety?
 
 --- code ---
 ---
 language: python
 ---
 
-image(planet, 300, 100, 128, 128)
+obraz(planeta, 300, 100, 128, 128)
 
 --- /code ---
 
 --- choices ---
 
-- ( ) ![A planet image positioned horizontally off at the right of the screen and vertically in the middle.](images/planet400200.png)
+- ( ) ![Obraz planety ustawiony poziomo z prawej strony ekranu i pionowo pośrodku.](images/planet400200.png)
 
   --- feedback ---
 
-The second and third inputs to the `image()` function are the `x` and `y` coordinates for the centre of the image. This planet has the coordinates `(400, 200)`.
+Drugim i trzecim wejściem do funkcji ` image()` są współrzędne ` ` i ` ` dla środka obrazu. Ta planeta ma współrzędne `(400, 200)`.
 
   --- /feedback ---
 
-- ( ) ![A planet image positioned in the middle of the bottom-left quadrant.](images/planet100300.png)
+- ( ) ![Obraz planety umieszczony pośrodku lewego dolnego kwadrantu.](images/planet100300.png)
 
   --- feedback ---
 
-The second and third inputs to the `image()` function are the `x` and `y` coordinates for the centre of the image. This planet has the coordinates `(100, 300)`.
+Drugim i trzecim wejściem do funkcji ` image()` są współrzędne ` ` i ` ` dla środka obrazu. Ta planeta ma współrzędne `(100, 300)`.
 
   --- /feedback ---
 
-- (x) ![A planet image positioned in the middle of the top-right quadrant.](images/planet300100.png)
+- (x) ![Obraz planety umieszczony pośrodku prawego górnego kwadrantu.](images/planet300100.png)
 
   --- feedback ---
 
-Poprawna odpowiedź! The second and third inputs to the `image()` function are the `x` and `y` coordinates for the centre of the image. This image has the coordinates (300, 100) so it is 300 (out of 400) pixels from the left for the `x` coordinate and 100 (out of 400) pixels down from the top.
+Poprawna odpowiedź! Drugim i trzecim wejściem do funkcji ` image()` są współrzędne ` ` i ` ` dla środka obrazu. Ten obraz ma współrzędne (300, 100), więc wynosi 300 (z 400) pikseli od lewej strony dla współrzędnej ` ` i 100 (z 400) pikseli od góry.
 
   --- /feedback ---
 
-- () ![A planet image positioned in the top-left quadrant.](images/planet128128.png)
+- () ![Obraz planety umieszczony w lewym górnym kwadrancie.](images/planet128128.png)
 
   --- feedback ---
 
-The fourth and fifth inputs give the size of the image. The second and third inputs to the `image()` function are the `x` and `y` coordinates for the centre of the image. This planet has the coordinates `(128, 128)`.
+Czwarte i piąte wejścia określają rozmiar obrazu. Drugim i trzecim wejściem do funkcji ` image()` są współrzędne ` ` i ` ` dla środka obrazu. Ta planeta ma współrzędne `(128, 128)`.
 
   --- /feedback ---
 
