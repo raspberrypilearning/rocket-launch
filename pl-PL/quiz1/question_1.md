@@ -1,54 +1,54 @@
-## Quick quiz
+## Szybki quiz
 
-Answer the three questions. There are hints to guide you to the correct answer.
+Odpowiedz na trzy pytania. Istnieją wskazówki, które poprowadzą Cię do prawidłowej odpowiedzi.
 
-When you have answered each question, click on **Check my answer**.
+Po udzieleniu odpowiedzi na każde pytanie kliknij ** Sprawdź moją odpowiedź **.
 
-Have fun!
+Miłej zabawy!
 
 --- question ---
 ---
 legend: Pytanie 1 z 3
 ---
 
-Which output would you expect if you ran the program below?
+Jakiego wyniku oczekiwałbyś, gdybyś uruchomił poniższy program?
 
 ```python
-for i in range(5):
-  print("Looping", i)
+For i in range(5):
+Print("Pętla", i)
 ```
 
 --- choices ---
 
-- ( ) Looping 1 <br> Looping 2 <br> Looping 3 <br> Looping 4 <br> Looping 5
+- ( ) Pętla 1 <br> Pętla 2 <br> Pętla 3 <br> Pętla 4 <br> Pętla 5
 
   --- feedback ---
 
-Not quite, a `for` loop in Python repeats its code once for each item in a sequence it's given, and here `range` creates a sequence starting from `0`.
+Nie do końca, pętla ` ` w Pythonie powtarza swój kod raz dla każdego elementu w podanej sekwencji, a tutaj ` ` tworzy sekwencję zaczynającą się od ` 0 `.
 
   --- /feedback ---
 
-- ( ) Looping i
+- ( ) Pętla i.
 
   --- feedback ---
 
-Not quite, the **loop variable** from a `for` loop — in this case `i` — holds the current value from the sequence the loop is working through.
+Nie do końca, zmienna pętli ** ** z pętli ` ` — w tym przypadku ` ` — przechowuje bieżącą wartość z sekwencji, przez którą pracuje pętla.
 
   --- /feedback ---
 
-- (x) Looping 0 <br> Looping 1 <br> Looping 2 <br> Looping 3 <br> Looping 4
+- (X) Pętla 0 <br> Pętla 1 <br> Pętla 2 <br> Pętla 3 <br> Pętla 4
 
   --- feedback ---
 
-Correct. The loop runs once, in order, for each item `i` in the range [0, 1, 2, 3, 4].
+Poprawnie. Pętla uruchamia się raz, w kolejności, dla każdego elementu ` ` z zakresu [0, 1, 2, 3, 4].
 
   --- /feedback ---
 
-- ( ) Looping 4 <br> Looping 3 <br> Looping 2 <br> Looping 1 <br> Looping 0
+- ( ) Pętla <br> Pętla 3 <br> Pętla 2 <br> Pętla 4 <br> Pętla 0
 
   --- feedback ---
 
-Nto quite, a `for` loop runs through the sequence of items it is given in order. Because `range()` gives an ordered sequence from 0 to the number it is passed, that is the order you would expect to see printed out by this `for` loop.
+NWreszcie pętla ` ` przechodzi przez sekwencję elementów, które jest podana w kolejności. Ponieważ ` range()` nadaje uporządkowaną sekwencję od 0 do liczby, którą jest przekazywana, to jest to kolejność, w której można się spodziewać wydrukowania przez tę pętlę ` `.
 
   --- /feedback ---
 
