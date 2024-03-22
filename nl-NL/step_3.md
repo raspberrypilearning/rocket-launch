@@ -30,7 +30,7 @@ line_highlights: 24, 26
 ---
 
 def setup():   
-#Stel je animatie hier in   
+# Stel je animatie hier in   
 size(scherm_grootte, scherm_grootte)   
 image_mode(CENTER)   
 global planeet, raket   
@@ -57,7 +57,7 @@ line_highlights: 9
 
 # Global variabelen instellen
 scherm_grootte = 400    
-raket_y = scherm_grootte #Begin onderaan
+raket_y = scherm_grootte # Begin onderaan
 
 --- /code ---
 
@@ -76,8 +76,9 @@ line_highlights: 12-16
 ---
 
 # De teken_raket functie komt hier
-global raket_y #Gebruik de global raket_y variabele    
-raket_y -= 1 #Verplaats de raket    
+def teken_raket():   
+global raket_y # Gebruik de globale raket_y variabele    
+raket_y -= 1 # Verplaats de raket    
 image(raket, width/2, raket_y, 64, 64)
 
 
@@ -96,7 +97,7 @@ line_highlights: 37
 ---
 
 def draw():   
-#Dingen om te doen in elk frame   
+# Dingen om te doen in elk frame   
 teken_achtergrond()   
 teken_raket()
 
