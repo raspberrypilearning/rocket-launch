@@ -24,7 +24,7 @@ Door veel gele ellipsen op verschillende `y`-posities te tekenen, ontstaat een u
 
 --- task ---
 
-Werk je `teken_raket()` functie bij om een `for`-lus op te nemen die het tekenen van `25` uitlaatellipsen herhaalt. De **lusvariabele** `i` wordt toegevoegd aan `raket_y` om elke ellips verder onder de raket te tekenen.
+Werk je `teken_raket()` functie bij om een `for`-lus op te nemen die het tekenen van `25` uitlaatellipsen herhaalt. De **lusvariabele** `i` wordt opgeteld bij `raket_y` om elke ellips verder onder de raket te tekenen.
 
 --- code ---
 ---
@@ -32,12 +32,16 @@ language: python filename: main.py - teken_raket() line_numbers: true line_numbe
 line_highlights: 16-22
 ---
 
-global raket_y   
+def teken_raket(): global raket_y   
 raket_y -= 1   
 
-    for i in range(25): #Teken 25 brandende uitlaatellipsen<br x-id="3" />
-        fill(255, 255, 0) #Geel<br x-id="3" />
-        ellipse(width/2, raket_y + i, 8, 3) #i neemt toe elke keer dat de lus wordt herhaald
+    no_stroke() # Schakel de lijn uit
+    
+    for i in range(25): # Teken 25 brandende uitlaatellipsen
+        fill(255, 255, 0) # Geel
+        ellipse(width/2, raket_y + i, 8, 3) # i neemt toe elke keer dat de lus wordt herhaald
+    
+    image(raket, width/2, raket_y, 64, 64)
 
 
 --- /code ---
@@ -74,8 +78,8 @@ language: python filename: main.py - teken_raket() line_numbers: true line_numbe
 line_highlights: 20
 ---
 
-    for i in range(25):<br x-id="3" />
-        fill(255, 255 - i * 10, 0) #Verminder de hoeveelheid groen<br x-id="4" />
+    for i in range(25):
+        fill(255, 255 - i * 10, 0) # Verminder de hoeveelheid groen
         ellipse(width/2, raket_y + i, 8, 3)
 
 --- /code ---
@@ -106,9 +110,15 @@ language: python filename: main.py - teken_raket() line_numbers: true line_numbe
 line_highlights: 23-26
 ---
 
-    for i in range(25):<br x-id="2" />
-        fill(255, 255 - i * 10, 0)<br x-id="3" />
+    for i in range(25):
+        fill(255, 255 - i * 10, 0)
         ellipse(width/2, raket_y + i, 8, 3)
+    
+    fill(200, 200, 200, 100) # Transparant grijs
+    for i in range(20): # Teken 20 willekeurige rookellipsen
+      ellipse(width/2 + randint(-5, 5), raket_y + randint(20, 50), randint(5, 10), randint(5, 10))
+    
+    image(raket, width/2, raket_y, 64, 64)
 
 --- /code ---
 
@@ -118,7 +128,7 @@ line_highlights: 23-26
 
 **Test:** Voer je programma uit en controleer of de uitlaatgassen zichtbaar zijn.
 
-![Een close-up van de raket en het uitlaatspoor met toegevoegde rook.](images/rocket_exhaust_circles.gif)
+![Een animatie van de raket en het uitlaatspoor met toegevoegde rook.](images/rocket_exhaust_circles.gif)
 
 --- /task ---
 
