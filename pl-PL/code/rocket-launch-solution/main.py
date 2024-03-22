@@ -1,73 +1,73 @@
 #!/bin/python3
 
-# Import library code
+# Importuj kod biblioteki
 from p5 import *
 from random import randint
 
-# Setup global variables
+# Ustaw zmienne globalne
 screen_size = 400
 rocket_y = 400
-burn = 100
-orbit_radius = 250
+spalenie = 100
+orbita_promień = 250
 orbit_y = screen_size - orbit_radius
 
 
-# The draw_rocket function goes here
+# Funkcja draw_rocket pojawia się tutaj
 def draw_rocket():
-    global rocket_y, fuel, burn
+    global rocket_y, paliwo, spalanie
 
-    if fuel >= burn and rocket_y > orbit_y:
+    if fuel >= spal i rocket_y > orbit_y:
         rocket_y -= 1
-        fuel -= burn
-        print('Fuel left: ', fuel)
+        paliwo -= spalanie
+        Print('Pozostało paliwo: ', paliwo)
 
         no_stroke()
 
         for i in range(25):
             fill(255, 255 - i * 10, 0)
-            ellipse(width/2, rocket_y + i, 8, 3)
+            elipsa(width/2, rocket_y + i, 8, 3)
 
-        fill(200, 200, 200, 100)  # Transparent grey
-        for i in range(20):  # Draw 20 random smoke ellipses
-            ellipse(width/2 + randint(-5, 5), rocket_y +
+        Fill(200, 200, 200, 100) # Przezroczysty szary
+        For i in range(20): # Rysuj 20 losowych elips dymu
+            elipsa(width/2 + randint(-5, 5), rocket_y +
                     randint(20, 50), randint(5, 10), randint(5, 10))
 
-    if fuel < burn and rocket_y > orbit_y:
+    if paliwo < burn and rocket_y > orbit_y:
         tint(255, 0, 0)
-    elif fuel < 1000 and rocket_y <= orbit_y:
+    paliwo elif < 1000 i rocket_y <= orbita_y:
         tint(0, 255, 0)
-    elif fuel >= 1000 and rocket_y <= orbit_y:
+    paliwo elif >= 1000 i rocket_y <= orbit_y:
         tint(255, 200, 0)
 
-    image(rocket, width/2, rocket_y, 64, 64)
+    image(rakieta, width/2, rocket_y, 64, 64)
     no_tint()
 
 
-# The draw_background function goes here
+# Funkcja draw_background pojawia się tutaj
 def draw_background():
     background(0)
-    image(planet, width/2, height, 300, 300)
+    obraz(planeta, szerokość/2, wysokość, 300, 300)
 
     no_fill()
     stroke(255)
     stroke_weight(2)
-    ellipse(width/2, height, orbit_radius * 2, orbit_radius * 2)
+    elipsa(width/2, height, orbit_radius * 2, orbit_radius * 2)
 
 
 def setup():
-    # Setup your animation here
-    size(screen_size, screen_size)
-    image_mode(CENTER)
-    global planet, rocket
-    planet = load_image('planet.png')
+    # Ustaw swoją animację tutaj
+    rozmiar(screen_size, screen_size)
+    Image_mode(ŚRODEK)
+    globalna planeta, rakieta
+    planeta = load_image('planet.png')
     rocket = load_image('rocket.png')
 
 
 def draw():
-    # Things to do in every frame
+    # Rzeczy do zrobienia w każdej klatce
     draw_background()
     draw_rocket()
 
 
-fuel = int(input('How many kilograms of fuel do you want to use?'))
+Paliwo = int(input('Ile kilogramów paliwa chcesz użyć?'))
 run()
