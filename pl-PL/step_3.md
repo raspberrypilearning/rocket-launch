@@ -1,27 +1,27 @@
-## Liftoff!
+## Startuj!
 
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">
-Each time a new frame is drawn, the rocket needs to move up the screen to create an animation effect.
+Za każdym razem, gdy rysowana jest nowa klatka, rakieta musi przesunąć się w górę ekranu, aby stworzyć efekt animacji.
 </div>
 <div>
 
-![A rocket flying at a steady speed from the bottom to the top of the screen.](images/fly.gif){:width="300px"}
+![rakieta latająca ze stałą prędkością od dołu do góry ekranu.](images/fly.gif){:width="300px"}
 
 </div>
 </div>
 
 --- task ---
 
-The starter project has a rocket image provided for you.
+Projekt startowy ma obraz rakiety dla Ciebie.
 
-![Image of the rocket in the code editor image gallery.](images/rocket_image.png)
+![Obrazek rakiety w galerii obrazów edytora kodu.](images/rocket_image.png)
 
 --- /task ---
 
 --- task ---
 
-Add code to the `setup()` function to load the rocket image into a `rocket` global variable.
+Dodaj kod do funkcji ` setup()` , aby załadować obraz rakiety do zmiennej globalnej ` ` .
 
 --- code ---
 ---
@@ -30,24 +30,24 @@ line_highlights: 24, 26
 ---
 
 def setup():   
-# Setup your animation here   
-size(screen_size, screen_size)   
-image_mode(CENTER)   
-global planet, rocket   
-planet = load_image('planet.png')    
+# Ustaw swoją animację tutaj    
+rozmiar(screen_size, screen_size)   
+Image_mode(CENTER)   
+globalna planeta, rakieta    
+planeta = load_image('planet.png')    
 rocket = load_image('rocket.png')
 
 --- /code ---
 
 --- /task ---
 
-### Make the rocket fly
+### Spraw, aby rakieta latała
 
-The `y` position of the rocket will start at 400 (the screen height) and then decrease by 1 each time a new frame is drawn.
+Pozycja rakiety `.` rozpocznie się od 400 (wysokość ekranu), a następnie zmniejszy się o 1 za każdym razem, gdy zostanie narysowana nowa klatka.
 
 --- task ---
 
-Add a `rocket_y` global variable to keep track of the rocket's `y` position.
+Dodaj zmienną globalną ` rocket_`, aby śledzić pozycję rakiety `.`.
 
 --- code ---
 ---
@@ -55,9 +55,9 @@ language: python filename: main.py line_numbers: true line_number_start: 7
 line_highlights: 9
 ---
 
-# Setup global variables
-screen_size = 400    
-rocket_y = screen_size  # Start at the bottom
+# Ustaw zmienne globalne
+Screen_size = 400     
+ROCKET_y = screen_size # Zacznij od dołu
 
 --- /code ---
 
@@ -65,9 +65,9 @@ rocket_y = screen_size  # Start at the bottom
 
 --- task ---
 
-Define a `draw_rocket()` function to change the rocket's `y` position and redraw it.
+Zdefiniuj funkcję ` draw_rocket()` , aby zmienić pozycję rakiety `.` i ją przerysować.
 
-`rocket_y -= 1` is a shorter way of saying `rocket_y = rocket_y - 1`.
+` rocket_y -= 1 ` to krótszy sposób powiedzenia ` rocket_y = rocket_y - 1 `.
 
 --- code ---
 ---
@@ -75,11 +75,11 @@ language: python filename: main.py line_numbers: true line_number_start: 11
 line_highlights: 12-16
 ---
 
-# The draw_rocket function goes here
+# Tutaj pojawi się funkcja draw_rocket
 def draw_rocket():   
-global rocket_y  # Use the global rocket_y variable    
-rocket_y -= 1  # Move the rocket    
-image(rocket, width/2, rocket_y, 64, 64)
+Global ROCKET_y # Użyj globalnej zmiennej ROCKET_y     
+Rocket_y -= 1 # Przesuń rakietę     
+image(rakieta, width/2, rocket_y, 64, 64)
 
 
 --- /code ---
@@ -88,7 +88,7 @@ image(rocket, width/2, rocket_y, 64, 64)
 
 --- task ---
 
-Call your new `draw_rocket()` in the `draw()` function so that the rocket gets redrawn every frame.
+Wywołaj swój nowy ` draw_rocket()` w funkcji ` draw()`, aby rakieta była rysowana ponownie w każdej klatce.
 
 --- code ---
 ---
@@ -97,7 +97,7 @@ line_highlights: 36
 ---
 
 def draw():   
-# Things to do in every frame   
+# rzeczy do zrobienia w każdej ramce    
 draw_background()   
 draw_rocket()
 
@@ -108,9 +108,9 @@ draw_rocket()
 
 --- task ---
 
-**Test:** Run your code to check that the rocket starts at the bottom of the screen and moves up each frame.
+** Test:** Uruchom swój kod, aby sprawdzić, czy rakieta zaczyna się u dołu ekranu i przesuwa się w górę każdej klatki.
 
-![Animation of the rocket flying half way up the screen.](images/rocket_fly.gif)
+![Animacja rakiety lecącej w połowie drogi w górę ekranu.](images/rocket_fly.gif)
 
 --- /task ---
 
