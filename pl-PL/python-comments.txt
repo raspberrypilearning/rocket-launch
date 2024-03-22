@@ -1,72 +1,72 @@
-Setup global variables
+Ustaw zmienne globalne
 
-Setup your animation here
+Tutaj skonfiguruj swoją animację
 
-Positions the image in the center
+Ustawia obraz na środku
 
-Your chosen planet
+Twoja wybrana planeta
 
-The draw_background function goes here
+Pojawi się tutaj funkcja draw_background
 
-Short for background(0, 0, 0) — black
+Skrót od background(0, 0, 0) — czarny
 
-Draw the image
+Narysuj obraz
 
-Things to do in every frame
+Rzeczy do zrobienia w każdej klatce
 
-The draw_rocket function goes here
+Tutaj pojawi się funkcja draw_rocket
 
-Start at the bottom
+Zacznij od dołu
 
-Use the global rocket_y variable
+Użyj zmiennej Global ROCKET_y
 
-Move the rocket
+Przesuń rakietę
 
-Turn off the stroke
+Wyłącz obrys
 
-Draw 25 burning exhaust ellipses
+Narysuj 25 palące się elipsy wydechowe
 
-Yellow
+Żółty
 
-i increases each time the loop repeats
+zwiększam się za każdym razem, gdy pętla się powtarza
 
-Reduce the amount of green
+Zmniejsz ilość zieleni
 
-Transparent grey
+Przezroczysty szary
 
-Draw 20 random smoke ellipses
+Narysuj 20 losowe elipsy dymu
 
-How much fuel is burned in each frame
+Ile paliwa jest spalane w każdej klatce
 
-How many kilograms of fuel do you want to use?
+Ile kilogramów paliwa chcesz użyć?
 
-Burn fuel
+Spalić paliwo
 
-Fuel left: 
+Pozostawione paliwo: 
 
-Still got fuel
+Wciąż mam paliwo
 
-Turn off the stroke
+Wyłącz obrys
 
-Set a white stroke
+Ustaw biały obrys
 
-Still flying
+Wciąż latają
 
-No more fuel and not in orbit
+Nigdy więcej paliwa i nie na orbicie
 
-Failure
+Błąd
 
-So the planet isn't tinted red in the next frame!
+Więc planeta nie jest zabarwiona na czerwono w następnej klatce!
 
-Success
+Sukces
 
-Too much fuel
+Za dużo paliwa
 
-Looping
+Zapętlenie
 
-Green
+Zielony
 
-Amber
+Bursztynowy
 
-Red
+Czerwony
 
