@@ -1,72 +1,72 @@
 #!/bin/python3
 
-# Bibliotheekcode importeren
+# Import library code
 from p5 import *
 from random import randint
 
-# Globale variabelen instellen
-scherm_grootte = 400
-raket_y = scherm_grootte # begin onderaan
-verbruik = 100 # hoeveel brandstof wordt er in elk frame verbrand
-omloopbaan_straal = 250
-omloopbaan_y = scherm_grootte - omloopbaan_straal
+# Setup global variables
+screen_size = 400
+rocket_y = screen_size # start at the bottom
+burn = 100 # how much fuel is burned in each frame
+orbit_radius = 250
+orbit_y = screen_size - orbit_radius
 
-# De teken_raket functie komt hier
-def teken_raket():
+# The draw_rocket function goes here
+def draw_rocket():
 
-  global raket_y, brandstof, verbruik
+  global rocket_y, fuel, burn
   
-  if brandstof >= verbruik and raket_y > omloopbaan_y: # vliegt nog steeds
-    raket_y -= 1 # verplaats de raket
-    brandstof -= verbruik # brandstof verbruik
-    print('Brandstof over: ', brandstof)
+  if fuel >= burn and rocket_y > orbit_y: # still flying
+    rocket_y -= 1 # move the rocket
+    fuel -= burn # burn fuel
+    print('Fuel left: ', fuel)
   
-    no_stroke() # Zet de lijn uit
+    no_stroke() # Turn off the stroke
   
-    for i in range(25): # teken 25 brandende uitstoot ellipsen
-      fill(255, 255 - i*10, 0) # geel
-      ellipse(width/2, raket_y + i, 8, 3) # i neemt toe elke keer dat de lus wordt herhaald
+    for i in range(25): # draw 25 burning exhaust ellipses
+      fill(255, 255 - i*10, 0) # yellow
+      ellipse(width/2, rocket_y + i, 8, 3) # i increases each time the loop repeats
     
-    fill(200, 200, 200, 100) # transparant grijs
-    for i in range(20): # teken 20 willekeurige rook ellipsen
-      ellipse(width/2 + randint(-5, 5), raket_y + randint(20, 50), randint(5, 10), randint(5, 10))
+    fill(200, 200, 200, 100) # transparent grey
+    for i in range(20): # draw 20 random smoke ellipses
+      ellipse(width/2 + randint(-5, 5), rocket_y + randint(20, 50), randint(5, 10), randint(5, 10))
   
-  if brandstof < verbruik and raket_y > omloopbaan_y: # Geen brandstof meer en niet in een omloopbaan
-    tint(255, 0, 0) # Mislukt
-  elif brandstof < 1000 and raket_y <= omloopbaan_y:
-    tint(0, 255, 0) # Gelukt
-  elif brandstof >= 1000 and raket_y <= omloopbaan_y: 
-    tint(255, 200, 0) # Te veel brandstof
+  if fuel < burn and rocket_y > orbit_y: # No more fuel and not in orbit
+    tint(255, 0, 0) # Failure
+  elif fuel < 1000 and rocket_y <= orbit_y:
+    tint(0, 255, 0) # Success
+  elif fuel >= 1000 and rocket_y <= orbit_y: 
+    tint(255, 200, 0) # Too much fuel
   
-  image(raket, width/2, height/2, 64, 64)
+  image(rocket, width/2, rocket_y, 64, 64)
   no_tint()
   
 
-# De functie teken_achtergrond komt hier
-def teken_achtergrond():
-  background(0) # afkorting voor background(0, 0, 0) - zwart 
-  image(planeet, width/2, height, 300, 300) # teken de afbeelding
+# The draw_background function goes here
+def draw_background():
+  background(0) # short for background(0, 0, 0) - black 
+  image(planet, width/2, height, 300, 300) # draw the image
   
-  no_fill() # Zet elke vulling uit
-  stroke(255) # Stel een witte lijn in
+  no_fill() # Turn off any fill
+  stroke(255) # Set a white stroke
   stroke_weight(2)
-  ellipse(width/2, height, omloopbaan_straal*2, omloopbaan_straal*2)
+  ellipse(width/2, height, orbit_radius*2, orbit_radius*2)
   
 
 def setup():
-  # Stel hier je animatie in
-  size(scherm_grootte, scherm_grootte)
+  # Setup your animation here
+  size(screen_size, screen_size)
   image_mode(CENTER)
-  global planeet, raket
-  planeet = load_image('planet.png') # jouw gekozen planeet
-  raket = load_image('rocket.png')
+  global planet, rocket
+  planet = load_image('planet.png') # your chosen planet
+  rocket = load_image('rocket.png')
 
 
 def draw():
-  # Dingen om te doen in elk frame
-  teken_achtergrond()  
-  teken_raket()
+  # Things to do in every frame
+  draw_background()  
+  draw_rocket()
   
 
-brandstof = int(input('Hoeveel kilogram brandstof wil je gebruiken?'))
+fuel = int(input('How many kilograms of fuel do you want to use?'))
 run()

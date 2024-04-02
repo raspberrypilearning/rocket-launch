@@ -12,23 +12,25 @@ Om dit te doen, moet je simuleren hoeveel brandstof er tijdens de reis wordt ver
 
 </div>
 
+### Maak een brandstofvariabele
+
 --- task ---
 
 Voeg een variabele toe om bij te houden hoeveel brandstof je raket verbruikt (in frames).
 
 --- code ---
 ---
-language: python 
-filename: main.py 
-line_numbers: true 
-line_number_start: 7
+language: python
+filename: main.py
+line_numbers: true
+line_number_start: 7 
 line_highlights: 10
 ---
 
-#Globale variabelen instellen
+# Globale variabelen instellen
 scherm_grootte = 400   
 raket_y = scherm_grootte  
-verbruik = 100 #Hoeveel brandstof wordt er in elk frame verbruikt
+verbruik = 100 # Hoeveel brandstof wordt er in elk frame verbruikt
 
 --- /code ---
 
@@ -41,11 +43,11 @@ Voeg onderaan je programma code toe om de gebruiker te vragen hoeveel brandstof 
 
 --- code ---
 ---
-language: python 
+language: python
 filename: main.py 
-line_numbers: true 
-line_number_start: 52
-line_highlights: 52
+line_numbers: true
+line_number_start: 51
+line_highlights: 51
 ---
 
 brandstof = int(input('Hoeveel kilogram brandstof wil je gebruiken?'))   
@@ -54,6 +56,8 @@ run()
 --- /code ---
 
 --- /task ---
+
+### Controleer de brandstof op verbranding
 
 De raket mag alleen bewegen als hij niet al zijn brandstof heeft opgebruikt.
 
@@ -65,17 +69,17 @@ Je moet aangeven dat je de global variabelen `brandstof` en `verbruik` wilt gebr
 
 --- code ---
 ---
-language: python 
-filename: main.py — teken_raket() 
-line_numbers: true 
-line_number_start: 15
+language: python
+filename: main.py — draw_rocket()
+line_numbers: true
+line_number_start: 15 
 line_highlights: 15, 17-18
 ---
 
-  global raket_y, brandstof, verbruik   
-  raket_y -= 1   
-  brandstof -= verbruik #Brandstof verbruik   
-  print('Brandstof over:', brandstof)
+    global raket_y, brandstof, verbruik
+    raket_y -= 1
+    brandstof -= verbruik # Brandstof verbruik
+    print('Brandstof over: ', brandstof)
 
 --- /code ---
 
@@ -101,31 +105,31 @@ De regel `image()` hoeft niet te worden ingesprongen omdat je altijd de raket wi
 
 --- code ---
 ---
-language: python 
-filename: main.py — teken_raket() 
-line_numbers: true 
+language: python
+filename: main.py — draw_rocket()
+line_numbers: true
 line_number_start: 15
-line_highlights: 16-31
+line_highlights: 17-30
 ---
 
-  global raket_y, brandstof, verbruik
-
-  if brandstof >= verbruik: #Nog genoeg brandstof   
-    raket_y -= 1   
-    brandstof -= verbruik   
-    print('Brandstof over: ', brandstof)   
-
-    no_stroke() #Schakel de lijn uit   
+    global raket_y, brandstof, verbruik
     
-    for i in range(25):   
-      fill(255, 255 - i*10, 0)   
-      ellipse(width/2, raket_y + i, 8, 3)    
+    if brandstof >= verbruik:  # Heb nog brandstof   
+        rocket_y -= 1   
+        brandstof -= verbruik
+        print('Brandstof over: ', brandstof)   
     
-    fill(200, 200, 200, 100)   
-    for i in range(20):   
-      ellipse(width/2 + randint(-5, 5), rocket_y + randint(20, 50), randint(5, 10), randint(5, 10))
-
-  image(raket, width/2, raket_y, 64, 64)
+        no_stroke()  # Zet de lijn uit 
+    
+        for i in range(25):   
+            fill(255, 255 - i*10, 0)   
+            ellipse(width/2, raket_y + i, 8, 3)    
+    
+        fill(200, 200, 200, 100)   
+        for i in range(20):   
+            ellipse(width/2 + randint(-5, 5), raket_y + randint(20, 50), randint(5, 10), randint(5, 10))   
+    
+    image(raket, width/2, raket_y, 64, 64)
 
 --- /code ---
 
@@ -139,7 +143,7 @@ line_highlights: 16-31
 
 --- /task ---
 
-Deze computersimulatie is niet erg nauwkeurig, maar goed genoeg voor onze animatie.
+Stopte je raket toen de brandstof op was? Goed gedaan, je hebt een raket naar de ruimte gestuurd!
 
 --- save ---
 

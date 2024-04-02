@@ -19,7 +19,7 @@ def setup():
 
 --- /code ---
 
-Coördinaten beginnen bij (0, 0) in de linkerbovenhoek. In het project heb je afbeeldingen van planeten en raketten getekend met de functie `image(bestandsnaam afbeelding, x-coördinaat, y-coördinaat, afbeeldingsbreedte, afbeeldingshoogte)`.
+Coördinaten beginnen bij (0, 0) in de linkerbovenhoek. In het project heb je afbeeldingen van planeten en raketten getekend met de functie `image(image_file, x-coord, y-coord, x-width, y-width)`.
 
 Waar zal deze code het planeetbeeld positioneren?
 

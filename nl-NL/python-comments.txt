@@ -1,0 +1,72 @@
+Global variabelen instellen
+
+Stel hier je animatie in
+
+Plaatst de afbeelding in het midden
+
+Jouw gekozen planeet
+
+De functie teken_achtergrond komt hier
+
+Afkorting voor background(0, 0, 0) - zwart
+
+Teken de afbeelding
+
+Dingen om te doen in elk frame
+
+De teken_raket functie komt hier
+
+Begin onderaan
+
+Gebruik de global raket_y variabele
+
+Verplaats de raket
+
+Zet de lijn uit
+
+Teken 25 brandende uitstoot ellipsen
+
+Geel
+
+i neemt toe elke keer dat de lus wordt herhaald
+
+Verminder de hoeveelheid groen
+
+Transparant grijs
+
+Teken 20 willekeurige rook ellipsen
+
+Hoeveel brandstof wordt er in elk frame verbruikt
+
+Hoeveel kilogram brandstof wil je gebruiken?
+
+Brandstof verbruik
+
+Brandstof over: 
+
+Nog genoeg brandstof
+
+Zet de lijn uit
+
+Stel een witte lijn in
+
+Vliegt nog steeds
+
+Geen brandstof meer en niet in een omloopbaan
+
+Mislukt
+
+Dus de planeet is niet rood gekleurd in het volgende frame!
+
+Gelukt
+
+Te veel brandstof
+
+Lus
+
+Groen
+
+Amber
+
+Rood
+

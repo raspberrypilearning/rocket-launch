@@ -18,42 +18,45 @@ Je kunt coole effecten creëren door een `for`-lus te gebruiken om veel vormen i
 <p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;">
 Coderen wordt gebruikt om <span style="color: #0faeb0">**grafische effecten**</span> te maken voor films en games. Het is veel sneller om code te schrijven dan om elk frame van een animatie afzonderlijk te tekenen. </p>
 
+### Teken je uitlaat
+
 Door veel gele ellipsen op verschillende `y`-posities te tekenen, ontstaat een uitlaatspoor met een ronde onderkant.
 
 --- task ---
 
-Een `for` lus herhaalt een stuk code eenmaal voor elk item dat het wordt gegeven. Om de code in een `for` lus een aantal malen uit te voeren, kun je de `range()` functie gebruiken. Bijvoorbeeld, `range(5)` creëert een reeks van vijf getallen beginnend bij 0, dus [0, 1, 2, 3, 4].
-
-Elke keer dat de `for`-lus wordt herhaald, stelt het een variabele in op het huidige item, zodat je het in de lus kunt gebruiken.
-
-Werk je `teken_raket()` functie bij om een `for`-lus op te nemen die het tekenen van `25` uitlaatellipsen herhaalt. De **lusvariabele** `i` wordt toegevoegd aan `raket_y` om elke ellips verder onder de raket te tekenen.
+Werk je `teken_raket()` functie bij om een `for`-lus op te nemen die het tekenen van `25` uitlaatellipsen herhaalt. De **lusvariabele** `i` wordt opgeteld bij `raket_y` om elke ellips verder onder de raket te tekenen.
 
 --- code ---
 ---
-language: python 
-filename: main.py - teken_raket() 
-line_numbers: true 
+language: python
+filename: main.py - draw_rocket()
+line_numbers: true
 line_number_start: 12
-line_highlights: 16-22
+line_highlights: 16-20
 ---
 
 def teken_raket():
+    global raket_y   
+    raket_y -= 1   
 
-  global raket_y   
-  raket_y -= 1
-
-  no_stroke() # Zet de lijn uit
-
-  for i in range(25): #Teken 25 brandende uitlaatellipsen   
-    fill(255, 255, 0) #Geel   
-    ellipse(width/2, raket_y + i, 8, 3) #i neemt toe elke keer dat de lus wordt herhaald
-
-  image(raket, width/2, raket_y, 64, 64)
+    no_stroke() # Schakel de lijn uit
+    
+    for i in range(25): # Teken 25 brandende uitlaatellipsen
+        fill(255, 255, 0) # Geel
+        ellipse(width/2, raket_y + i, 8, 3) # i neemt toe elke keer dat de lus wordt herhaald
+    
+    image(raket, width/2, raket_y, 64, 64)
 
 
 --- /code ---
 
 --- /task ---
+
+En `for` lus herhaalt een stuk code eenmaal voor elk item dat het wordt gegeven.
+
+Om de code in een `for` lus een aantal malen uit te voeren, kun je de `range()` functie gebruiken. Bijvoorbeeld, `range(5)` creëert een reeks van vijf getallen beginnend bij 0, dus [0, 1, 2, 3, 4].
+
+Elke keer dat de `for`-lus wordt herhaald, stelt het een variabele in op het huidige item, zodat je het in de lus kunt gebruiken.
 
 --- task ---
 
@@ -63,6 +66,8 @@ def teken_raket():
 
 --- /task ---
 
+### Voeg een verloop toe
+
 De variabele `i` kan ook worden gebruikt om een kleurverloop te maken met minder groen in elke ellips die wordt getekend.
 
 --- task ---
@@ -71,16 +76,16 @@ Verander de aanroep in `fill()` om de hoeveelheid groen in te stellen op `255 - 
 
 --- code ---
 ---
-language: python 
-filename: main.py - teken_raket() 
-line_numbers: true 
-line_number_start: 19
-line_highlights: 20
+language: python
+filename: main.py - draw_rocket()
+line_numbers: true
+line_number_start: 18
+line_highlights: 19
 ---
 
-  for i in range(25):   
-    fill(255, 255 - i * 10, 0) #Verminder de hoeveelheid groen    
-    ellipse(width/2, raket_y + i, 8, 3)
+    for i in range(25):
+        fill(255, 255 - i * 10, 0) # Verminder de hoeveelheid groen
+        ellipse(width/2, raket_y + i, 8, 3)
 
 --- /code ---
 
@@ -91,6 +96,8 @@ line_highlights: 20
 **Test:** Controleer of je een spoor van ellipsen krijgt die geleidelijk veranderen van geel naar rood.
 
 --- /task ---
+
+### Creëer een rookeffect
 
 Het rookafvoerspoor wordt gecreëerd door veel licht transparante grijze ellipsen op verschillende posities in elk frame te tekenen.
 
@@ -104,22 +111,22 @@ In elk frame van de animatie worden 20 ellipsen van willekeurige grootte op will
 
 --- code ---
 ---
-language: python 
-filename: main.py - teken_raket() 
-line_numbers: true 
-line_number_start: 19
-line_highlights: 23-26
+language: python
+filename: main.py - draw_rocket()
+line_numbers: true
+line_number_start: 18
+line_highlights: 22-24
 ---
 
-  for i in range(25):  
-    fill(255, 255 - i * 10, 0)   
-    ellipse(width/2, raket_y + i, 8, 3)
-
-  fill(200, 200, 200, 100) #Transparant grijs   
-  for i in range(20): #Teken 20 willikeurige rook ellipsen    
-    ellipse(width/2 + randint(-5, 5), raket_y + randint(20, 50), randint(5, 10), randint(5, 10))
-
-  image(raket, width/2, raket_y, 64, 64)
+    for i in range(25):
+        fill(255, 255 - i * 10, 0)
+        ellipse(width/2, raket_y + i, 8, 3)
+    
+    fill(200, 200, 200, 100) # Transparant grijs
+    for i in range(20): # Teken 20 willekeurige rookellipsen
+        ellipse(width/2 + randint(-5, 5), raket_y + randint(20, 50), randint(5, 10), randint(5, 10))
+    
+    image(raket, width/2, raket_y, 64, 64)
 
 --- /code ---
 
@@ -129,7 +136,7 @@ line_highlights: 23-26
 
 **Test:** Voer je programma uit en controleer of de uitlaatgassen zichtbaar zijn.
 
-![Een close-up van de raket en het uitlaatspoor met toegevoegde rook.](images/rocket_exhaust_circles.gif)
+![Een animatie van de raket en het uitlaatspoor met toegevoegde rook.](images/rocket_exhaust_circles.gif)
 
 --- /task ---
 
