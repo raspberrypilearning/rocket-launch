@@ -29,7 +29,8 @@ Als de variabele `punten` de waarde `99` heeft en de variabele `levens` de waard
 
 - (x)
 
-![Een raketafbeelding met amberkleurige tint.](images/rocket_amber.png) <div style="text-align: center;">Amber
+![Een raketafbeelding met amberkleurige tint.](images/rocket_amber.png)
+<div style="text-align: center;">Amber
 
  --- feedback ---
 
@@ -39,7 +40,8 @@ Als de variabele `punten` de waarde `99` heeft en de variabele `levens` de waard
 
 - ( )
 
-![Een raketafbeelding zonder tint](images/rocket_original.png) <div style="text-align: center;">Geen tint
+![Een raketafbeelding zonder tint](images/rocket_original.png)
+<div style="text-align: center;">Geen tint
 
  --- feedback ---
 
@@ -49,7 +51,8 @@ Als de variabele `punten` de waarde `99` heeft en de variabele `levens` de waard
 
 - ( )
 
-![Een raketafbeelding met groene tint](images/rocket_green.png) <div style="text-align: center;">Groen
+![Een raketafbeelding met groene tint](images/rocket_green.png)
+<div style="text-align: center;">Groen
 
  --- feedback ---
 
@@ -59,7 +62,8 @@ Als de variabele `punten` de waarde `99` heeft en de variabele `levens` de waard
 
 - ( )
 
-![Een raketafbeelding met rode tint](images/rocket_red.png) <div style="text-align: center;">Rood
+![Een raketafbeelding met rode tint](images/rocket_red.png)
+<div style="text-align: center;">Rood
 
  --- feedback ---
 
