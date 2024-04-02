@@ -1,30 +1,31 @@
 ---
 title: Raket lancering
 hero_image: images/banner.png
-description: Maak een animatie van een raket die een satelliet in een baan om de aarde
-  brengt
+description: Maak een animatie van een raket die een satelliet in een baan om de aarde brengt
+meta_title: Python programmeer projecten voor kinderen en tieners | Raket lancering
+meta_description: Leer Python met de codeerprojecten van de Raspberry Pi Foundation voor kinderen en tieners. Maak een Python-animatie waarin een raket een satelliet in een baan om de aarde lanceert.
 version: 0.0.1
 listed: true
 copyedit: true
-last_tested: '2021-10-06'
+last_tested: "2021-10-06"
 steps:
-- title: Inleiding
-- title: Het opzetten van de scene
-- title: Lancering!
-  completion:
-  - engaged
-- title: Uitlaat effecten
-- title: Brandstof verbruik
-- title: Omloopbaan bereiken
-  completion:
-  - internal
-- title: Reflectie
-  knowledge_quiz:
-    path: quiz1
-    version: 1
-    questions: 3
-    passing_score: 3
-  completion:
-  - external
-- title: Verbeter je project
-- title: Wat kun je verder nog doen?
+  - title: Wat ga je maken
+  - title: Het opzetten van de scene
+  - title: Lancering!
+    completion:
+      - engaged
+  - title: Uitlaat effecten
+  - title: Brandstof verbruik
+  - title: Omloopbaan bereiken
+    completion:
+      - internal
+  - title: Snelle quiz
+    knowledge_quiz:
+      path: quiz1
+      version: 1
+      questions: 3
+      passing_score: 3
+    completion:
+      - external
+  - title: Verbeter je project
+  - title: Wat kun je verder nog doen?
