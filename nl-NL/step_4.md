@@ -48,9 +48,7 @@ raket_y -= 1
 
 --- /task ---
 
-fill(200, 200, 200, 100) #Transparant grijs   
-for i in range(20): #Teken 20 willikeurige rook ellipsen    
-ellipse(width/2 + randint(-5, 5), raket_y + randint(20, 50), randint(5, 10), randint(5, 10))
+Een `for` lus herhaalt een stuk code eenmaal voor elk item dat het wordt gegeven.
 
 Om de code in een `for` lus een aantal malen uit te voeren, kun je de `range()` functie gebruiken. Bijvoorbeeld, `range(5)` creëert een reeks van vijf getallen beginnend bij 0, dus [0, 1, 2, 3, 4].
 
