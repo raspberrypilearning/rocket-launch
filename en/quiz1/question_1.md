@@ -48,7 +48,7 @@ Correct. The loop runs once, in order, for each item `i` in the range [0, 1, 2, 
 
   --- feedback ---
 
-Nto quite, a `for` loop runs through the sequence of items it is given in order. Because `range()` gives an ordered sequence from 0 to the number it is passed, that is the order you would expect to see printed out by this `for` loop.
+Not quite, a `for` loop runs through the sequence of items it is given in order. Because `range()` gives an ordered sequence from 0 to the number it is passed, that is the order you would expect to see printed out by this `for` loop.
   
   --- /feedback ---
 
