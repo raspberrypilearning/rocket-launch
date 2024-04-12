@@ -29,7 +29,8 @@ Se la variabile `points` ha il valore `99` e la variabile `lives` ha il valore `
 
 - (x)
 
-![Un'immagine di un razzo colorato di giallo.](images/rocket_amber.png) <div style="text-align: center;">Giallo
+![Un'immagine di un razzo colorato di giallo.](images/rocket_amber.png)
+<div style="text-align: center;">Giallo
 
  --- feedback ---
 
@@ -39,7 +40,8 @@ Se la variabile `points` ha il valore `99` e la variabile `lives` ha il valore `
 
 - ( )
 
-![Un'immagine di un razzo senza colore](images/rocket_original.png) <div style="text-align: center;">No tint
+![Un'immagine di un razzo senza colore](images/rocket_original.png)
+<div style="text-align: center;">No tint
 
  --- feedback ---
 
@@ -49,7 +51,8 @@ Se la variabile `points` ha il valore `99` e la variabile `lives` ha il valore `
 
 - ( )
 
-![Un'immagine di un razzo colorato di verde](images/rocket_green.png) <div style="text-align: center;">Verde
+![Un'immagine di un razzo colorato di verde](images/rocket_green.png)
+<div style="text-align: center;">Verde
 
  --- feedback ---
 
@@ -59,7 +62,8 @@ Se la variabile `points` ha il valore `99` e la variabile `lives` ha il valore `
 
 - ( )
 
-![Un'immagine di un razzo colorato di rosso](images/rocket_red.png) <div style="text-align: center;">Rosso
+![Un'immagine di un razzo colorato di rosso](images/rocket_red.png)
+<div style="text-align: center;">Rosso
 
  --- feedback ---
 
