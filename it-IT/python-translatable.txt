@@ -1,4 +1,4 @@
-dimensione dello schermo
+dimensione_dello_schermo
 
 pianeta
 
