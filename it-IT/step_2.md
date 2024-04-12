@@ -13,7 +13,7 @@ L'animazione necessita di uno sfondo spaziale con un pianeta da cui lanciare il 
 
 --- task ---
 
-Apri il [progetto modello](https://editor.raspberrypi.org/en/projects/rocket-launch-starter){:target="_blank"}.
+Apri il [template del progetto](https://editor.raspberrypi.org/en/projects/rocket-launch-starter){:target="_blank"}.
 
 ### Crea lo schermo
 
@@ -104,7 +104,7 @@ Usa `background(0)` per impostare il colore di sfondo su nero e aggiungi una fun
 
 `image(nome immagine, coordinata x, coordinata y, larghezza, altezza)`
 
-La riga di codice `from p5 import *` fornisce le variabili globali `larghezza` e `altezza` in base alla dimensione dello schermo. Usali nel tuo codice per posizionare il pianeta con il suo centro a metà strada (`width/2`) e nella parte inferiore (`height`) del schermo.
+La riga di codice `from p5 import *` fornisce le variabili globali `width` e `height` in base alla dimensione dello schermo. Usali nel tuo codice per posizionare il pianeta con il suo centro a metà strada (`width/2`) e nella parte inferiore (`height`) del schermo.
 
 --- code ---
 ---
