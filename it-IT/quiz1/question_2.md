@@ -4,7 +4,7 @@
 legend: Domanda 2 di 3
 ---
 
-Un progetto ha questo codice di `configurazione` per caricare un'immagine del pianeta e dire che le immagini dovrebbero essere posizionate al centro:
+Un progetto ha questo codice di `configurazione (setup)` per caricare un'immagine del pianeta e dire che le immagini dovrebbero essere posizionate al centro:
 
 --- code ---
 ---
