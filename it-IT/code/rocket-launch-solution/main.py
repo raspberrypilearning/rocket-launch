@@ -19,7 +19,7 @@ def draw_rocket():
     if fuel >= burn and rocket_y > orbit_y:
         rocket_y -= 1
         fuel -= burn
-        print('Fuel left: ', fuel)
+        print('Carburante rimanente: ', fuel)
 
         no_stroke()
 
