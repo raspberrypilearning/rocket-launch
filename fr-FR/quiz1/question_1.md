@@ -48,7 +48,7 @@ Correct. La boucle s'exécute une fois, dans l'ordre, pour chaque élément `i` 
 
   --- feedback ---
 
-Pas tout à fait, une boucle `for` parcourt la séquence d'éléments qui lui est donnée dans l'ordre. Parce que `range()` donne une séquence ordonnée de 0 au nombre qui lui est passé, c'est l'ordre que tu t'attends à voir imprimé par cette boucle `for`.
+Parce que `range()` donne une séquence ordonnée de 0 au nombre qui lui est passé, c'est l'ordre que tu t'attends à voir imprimé par cette boucle `for`. Parce que `range()` donne une séquence ordonnée de 0 au nombre qui lui est passé, c'est l'ordre que tu t'attends à voir imprimé par cette boucle `for`.
 
   --- /feedback ---
 
