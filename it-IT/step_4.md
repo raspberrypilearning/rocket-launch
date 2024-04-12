@@ -10,7 +10,7 @@ Puoi creare fantastici effetti utilizzando un ciclo "for" che disegni molte form
 </div>
 <div>
 
-![The rocket mid flight with an exhaust trail.](images/flying_rocket.gif){:width="300px"}
+![Il razzo a mezz'aria con una scia di fumo](images/flying_rocket.gif){:width="300px"}
 
 </div>
 </div>
