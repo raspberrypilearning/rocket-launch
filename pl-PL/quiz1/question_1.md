@@ -48,7 +48,7 @@ Poprawnie. Pętla uruchamia się raz, w kolejności, dla każdego elementu ` ` z
 
   --- feedback ---
 
-NWreszcie pętla ` ` przechodzi przez sekwencję elementów, które jest podana w kolejności. Ponieważ ` range()` nadaje uporządkowaną sekwencję od 0 do liczby, którą jest przekazywana, to jest to kolejność, w której można się spodziewać wydrukowania przez tę pętlę ` `.
+Not quite, a `for` loop runs through the sequence of items it is given in order. Ponieważ ` range()` nadaje uporządkowaną sekwencję od 0 do liczby, którą jest przekazywana, to jest to kolejność, w której można się spodziewać wydrukowania przez tę pętlę ` `.
 
   --- /feedback ---
 
