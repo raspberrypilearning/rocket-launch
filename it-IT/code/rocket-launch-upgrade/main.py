@@ -23,7 +23,7 @@ def draw_rocket():
     if fuel >= burn and rocket_y > high_orbit_y:  # Sta ancora volando
         rocket_y -= speed  # Muovi il razzo
         fuel -= burn  # Brucia il carburante
-        print('Fuel left: ', fuel)
+        print('Carburante rimanente: ', fuel)
 
         no_stroke()  # Disattiva il disegno della linea
 
@@ -85,5 +85,5 @@ def draw():
 
 fuel = int(input('Quanti kg di carburante vuoi usare?'))
 burn = int(input('Quanto carburante dovrebbe bruciare il razzo per ogni fotogramma?'))
-speed = int(input('Quanto carburante dovrebbe bruciare il razzo ad ogni fotogramma?'))
+speed = int(input('Quanto lontano dovrà andare il razzo ad ogni fotogramma?'))
 run()
