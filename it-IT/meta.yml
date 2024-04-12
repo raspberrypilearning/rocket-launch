@@ -1,0 +1,31 @@
+---
+title: Lancio di un razzo
+hero_image: images/banner.png
+description: Realizza un'animazione di un razzo che spinge un satellite in orbita
+meta_title: Progetti di programmazione Python per bambini e ragazzi | Lancio di un razzo
+meta_description: Impara Python con i progetti di coding della Raspberry Pi Foundation per bambini e adolescenti. Realizza un'animazione Python che mostri un razzo che lancia un satellite in orbita.
+version: 0.0.1
+listed: true
+copyedit: true
+last_tested: "2021-10-06"
+steps:
+  - title: Quello che farai
+  - title: Imposta la scena
+  - title: Decollo!
+    completion:
+      - engaged
+  - title: Effetti dei gas di scarico
+  - title: Brucia carburante
+  - title: Raggiungere l'orbita
+    completion:
+      - internal
+  - title: Quiz veloce
+    knowledge_quiz:
+      path: quiz1
+      version: 1
+      questions: 3
+      passing_score: 3
+    completion:
+      - external
+  - title: Migliora il tuo progetto
+  - title: E adesso?
