@@ -23,7 +23,7 @@ image(rocket, width/2, height/2, 64, 64)
 
 --- /code ---
 
-Se la variabile `punti` ha il valore `99` e la variabile `lives` ha il valore `1`, come sarà il razzo?
+Se la variabile `points` ha il valore `99` e la variabile `lives` ha il valore `1`, come sarà il razzo?
 
 --- choices ---
 
