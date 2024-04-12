@@ -8,7 +8,7 @@ Una delle cose più importanti da decidere quando si lancia un razzo è quanto c
 Per fare ciò, è necessario simulare la quantità di carburante che verrà bruciata durante il viaggio.
 </div>
 
-![The program with a question in the output area asking how much fuel is required.](images/burn_question_full.png){:width="300px"}
+![Il programma con una domanda nell'output, chiede quanto carburante serve.](images/burn_question_full.png){:width="300px"}
 
 </div>
 
@@ -69,7 +69,7 @@ line_highlights: 15, 17-18
     global rocket_y, fuel, burn   
     rocket_y -= 1   
     fuel -= burn  # Burn fuel   
-    print('Fuel left: ', fuel)
+    print('Carburante rimasto: ', fuel)
 
 --- /code ---
 
@@ -104,7 +104,7 @@ line_highlights: 17-30
     if fuel >= burn:  # C'è ancora carburante   
         rocket_y -= 1   
         fuel -= burn   
-        print('Fuel left: ', fuel)   
+        print('Carburante rimanente: ', fuel)   
     
         no_stroke()  # Non disegnare righe   
     
@@ -126,7 +126,7 @@ line_highlights: 17-30
 
 **Test:** Esegui il programma per verificare che il razzo si fermi quando non rimane più carburante.
 
-![Immagine di un razzo al centro dello schermo con la dicitura "Fuel left: 0".](images/burn_empty.png){:width="300px"}
+![Immagine di un razzo al centro dello schermo con la dicitura "Carburante rimanente: 0".](images/burn_empty.png){:width="300px"}
 
 --- /task ---
 
