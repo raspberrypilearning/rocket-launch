@@ -12,7 +12,7 @@ Il razzo può cambiare colore per mostrare che il lancio è avvenuto con success
 </div>
 <div>
 
-![Three side-by-side images showing successful (green tint), over-fueled (amber tint), and unsuccessful (red tint) launches.](images/check_orbit.png){:width="400px"}
+![Tre immagini affiancate che mostrano i lanci riusciti (colore verde verde), il pieno di carburante (colore giallo) e i lanci non riusciti (colore rosso).](images/check_orbit.png){:width="400px"}
 
 </div>
 </div>
@@ -54,7 +54,7 @@ def draw_background():
 background(0)  # Forme breve di background(0, 0, 0) — nero   
 image(planet, width/2, height, 300, 300)   
 
-    no_fill()  # Termina di riempire di colore  
+    no_fill()  # Non riempire il cerchio  
     stroke(255)  # Imposta il tratto di disegno bianco   
     stroke_weight(2)   
     ellipse(width/2, height, orbit_radius * 2, orbit_radius * 2)
@@ -119,7 +119,7 @@ line_highlights: 34-35
     for i in range(20):   
         ellipse(width/2 + randint(-5, 5), rocket_y + randint(20, 50), randint(5, 10), randint(5, 10))
     
-    if fuel < burn and rocket_y > orbit_y:  # No more fuel and not in orbit   
+    if fuel < burn and rocket_y > orbit_y:  # Carburante finito e non in orbita   
         tint(255, 0, 0)  # Fallito
 
 --- /code ---
@@ -172,7 +172,7 @@ line_highlights: 36-37
     if fuel < burn and rocket_y > orbit_y:    
         tint(255, 0, 0)  # Fallito
     elif rocket_y <= orbit_y:   
-        tint(0, 255, 0)  # Success   
+        tint(0, 255, 0)  # Successo   
     
     image(rocket, width/2, rocket_y, 64, 64)   
     no_tint()
