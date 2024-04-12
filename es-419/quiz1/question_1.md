@@ -48,7 +48,7 @@ Correcto. El bucle se ejecuta una vez, en orden, para cada elemento `i` en el ra
 
   --- feedback ---
 
-Not quite, a `for` loop runs through the sequence of items it is given in order. Debido a que `range()` da una secuencia ordenada desde 0 hasta el número que se pasa, ese es el orden que esperaría ver impreso por este bucle `for`.
+No exactamente, un bucle `for` recorre la secuencia de elementos que se le dan en orden. Debido a que `range()` da una secuencia ordenada desde 0 hasta el número que se pasa, ese es el orden que esperaría ver impreso por este bucle `for`.
 
   --- /feedback ---
 
