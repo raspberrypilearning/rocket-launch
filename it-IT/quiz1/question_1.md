@@ -44,11 +44,11 @@ Corretto. Il ciclo viene eseguito una volta, in ordine, per ogni elemento `i` ne
 
   --- /feedback ---
 
-- ( ) Ciclo 1 <br> Ciclo 2 <br> Ciclo 3 <br> Ciclo 4 <br> Ciclo 0
+- ( ) Ciclo 4 <br> Ciclo 3 <br> Ciclo 2 <br> Ciclo 1 <br> Ciclo 0
 
   --- feedback ---
 
-Non proprio, un ciclo `for` esegue la sequenza di elementi forniti in ordine. Dato che`range()` restituisce una sequenza ordinata di numeri da 0 al numero che gli è stato passato, questo è l'ordine che dovrai aspettarti che verrà stampato ad un ciclo di `for`.
+Not quite, a `for` loop runs through the sequence of items it is given in order. Dato che`range()` restituisce una sequenza ordinata di numeri da 0 al numero che gli è stato passato, questo è l'ordine che dovrai aspettarti che verrà stampato ad un ciclo di `for`.
 
   --- /feedback ---
 
