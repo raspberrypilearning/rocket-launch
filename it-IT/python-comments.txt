@@ -2,7 +2,7 @@ Imposta le variabili globali
 
 Imposta la tua animazione qui
 
-Positions the image in the center
+Posiziona l'immagine al centro
 
 Il pianeta che hai scelto
 
@@ -16,7 +16,7 @@ Cose da fare in ogni fotogramma
 
 La funzione draw_rocket va qui
 
-Start at the bottom
+Inizia dal basso
 
 Usa la variabile globale rocket_y
 
@@ -38,15 +38,15 @@ Disegna 20 ellissi di fumo casuali
 
 Quanto carburante viene bruciato ad ogni frame
 
-How many kilograms of fuel do you want to use?
+Quanti chilogrammi di carburante vuoi utilizzare?
 
 Brucia carburante
 
-Fuel left: 
+Carburante residuo: 
 
 Ho ancora carburante
 
-Turn off the stroke
+Disattiva la linea
 
 Imposta una linea bianca
 
@@ -62,7 +62,7 @@ Successo
 
 Troppo carburante
 
-Looping
+Ciclo
 
 Verde
 
