@@ -1,4 +1,8 @@
-## Introdução
+<div class="c-survey-banner" style="width:100%">
+  <a class="c-survey-banner__link" href="https://form.raspberrypi.org/f/code-editor-feedback" target="_blank">Responda à nossa pesquisa</a> para ajudar a melhorar nosso Editor de código!
+</div>
+
+## O que você vai fazer
 
 Faça uma animação para colocar um satélite em órbita — pegando carona em um foguete! Sua animação criará efeitos gráficos bacanas e simulará a melhor quantidade de combustível para dar ao foguete.
 
@@ -15,16 +19,18 @@ Você irá:
 
 --- no-print ---
 
+### Jogar ▶️
+
 --- task ---
 
-### Experimente
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 175px; flex-grow: 1">  
 Você precisa abastecer o foguete com combustível suficiente para alcançar a órbita do satélite. Experimente uma pequena quantidade (cerca de 10.000kg) e uma quantidade muito grande (cerca de 50.000kg) para ver o que acontece. 
 
 Quanto combustível é suficiente sem sobrar muito?
 </div>
-<iframe src="https://trinket.io/embed/python/96d2ac33b8?outputOnly=true&runOption=run&start=result" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+<iframe src="https://editor.raspberrypi.org/pt-BR/embed/viewer/rocket-launch-example" width="400" height="710" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen>
+</iframe>
 </div>
 
 --- /task ---
@@ -33,7 +39,7 @@ Quanto combustível é suficiente sem sobrar muito?
 
 --- print-only ---
 
-![Projeto concluído.](images/showcase.png)
+![Exemplo de projeto concluído de foguetes voando para o espaço sideral.](images/showcase.png)
 
 --- /print-only ---
 

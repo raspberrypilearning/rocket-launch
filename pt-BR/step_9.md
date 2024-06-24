@@ -10,7 +10,7 @@ Se você está seguindo o caminho [Introdução ao Python](https://projects.rasp
 
 --- no-print ---
 
-<iframe src="https://trinket.io/embed/python/6bad88800b?outputOnly=true&start=result" width="600" height="500" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen>
+<iframe src="https://editor.raspberrypi.org/pt-BR/embed/viewer/fruit-face-example" width="400" height="710" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen>
 </iframe>
 
 --- /no-print ---
@@ -18,9 +18,11 @@ Se você está seguindo o caminho [Introdução ao Python](https://projects.rasp
 Se você quiser se divertir mais explorando Python, então você pode experimentar qualquer um [destes projetos](https://projects.raspberrypi.org/pt-BR/projects?software%5B%5D=python).
 
 ***
+
 Este projeto foi traduzido por voluntários:
 
 Flavio Miranda Da Silva
 Diego Sá
+Vinícius
 
 Graças a voluntários, podemos dar às pessoas de todo o mundo a chance de aprender em seu próprio idioma. Você pode nos ajudar a alcançar mais pessoas oferecendo-se para traduzir - mais informações em rpf.io/translate.

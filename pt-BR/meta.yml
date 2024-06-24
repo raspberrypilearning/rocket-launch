@@ -2,12 +2,14 @@
 title: Lançamento do foguete
 hero_image: images/banner.png
 description: Faça uma animação de um foguete colocando um satélite em órbita
+meta_title: Projetos de codificação Python para crianças e adolescentes | Lançamento do foguete
+meta_description: Aprenda Python com os projetos de codificação da Raspberry Pi Foundation para crianças e adolescentes. Faça uma animação Python que mostre um foguete lançando um satélite em órbita.
 version: 0.0.1
 listed: true
 copyedit: true
-last_tested: '2021-10-06'
+last_tested: "2021-10-06"
 steps:
-  - title: Introdução
+  - title: Você vai fazer
   - title: Preparando o cenário
   - title: Decolar!
     completion:
@@ -17,7 +19,7 @@ steps:
   - title: Alcançando a órbita
     completion:
       - internal
-  - title: Reflexão
+  - title: Perguntas rápidas
     knowledge_quiz:
       path: quiz1
       version: 1
