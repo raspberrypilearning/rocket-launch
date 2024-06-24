@@ -88,6 +88,7 @@ line_highlights: 19
 ---
 
 # A função desenhar_foguete vai aqui
+def desenhar_foguete():   
 global foguete_y, combustivel, queimar
 
         if combustivel >= queimar and foguete_y > orbita_y: #Ainda voando
@@ -116,7 +117,10 @@ line_highlights: 34-35
 
     fill(200, 200, 200, 100)   
     for i in range(20):   
-      ellipse(width/2 + randint(-5, 5), foguete_y + randint(20, 50), randint(5, 10), randint(5, 10))
+        ellipse(width/2 + randint(-5, 5), foguete_y + randint(20, 50), randint(5, 10), randint(5, 10))
+    
+    if combustivel < queimar and foguete_y > orbita_y:  # Não há mais combustível e não em órbita   
+        tint(255, 0, 0)  # Fracasso
 
 --- /code ---
 
@@ -144,8 +148,11 @@ language: python filename: main.py - desenhar_foguete() line_numbers: true line_
 line_highlights: 38
 ---
 
-    image(foguete, width/2, foguete_y, 64, 64)<br x-id="3" />
-    no_tint() #Assim, o planeta não está tingido de vermelho no próximo quadro!
+    if combustivel < queimar and foguete_y > orbita_y:    
+        tint(255, 0, 0)  # Fracasso
+    
+    image(foguete, width/2, foguete_y, 64, 64)   
+    no_tint()  # Assim, o planeta não será tingido de vermelho no próximo quadro!
 
 
 --- /code ---
@@ -162,10 +169,13 @@ language: python filename: main.py - desenhar_foguete() line_numbers: true line_
 line_highlights: 36-37
 ---
 
-    if combustivel &#060; queimar and foguete_y &#062; orbita_y:    
-      tint(255, 0, 0) #Fracasso<br x-id="3" />
-    elif foguete_y &#060;= orbita_y:<br x-id="3" />
-      tint(0, 255, 0) #Sucesso
+    if combustivel < queimar and foguete_y > orbita_y:    
+        tint(255, 0, 0)  # Fracasso   
+    elif foguete_y <= orbita_y:   
+        tint(0, 255, 0)  # Sucesso   
+    
+    image(foguete, width/2, foguete_y, 64, 64)   
+    no_tint()
 
 --- /code ---
 
@@ -193,12 +203,15 @@ language: python filename: main.py line_numbers: true line_number_start: 34
 line_highlights: 36, 38-39
 ---
 
-    if combustivel &#060; queimar and foguete_y &#062; orbita_y:   
-      tint(255, 0, 0) #Fracasso<br x-id="3" />
-    elif combustivel &#060; 1000 and foguete_y &#060;= orbita_y:<br x-id="3" />
-      tint(0, 255, 0) #Sucesso<br x-id="3" />
-    elif combustivel &#062;= 1000 and foguete_y &#060;= orbita_y:<br x-id="4" />
-      tint(255, 200, 0) #Excesso de combustível
+    if combustivel < queimar and foguete_y > orbita_y:   
+        tint(255, 0, 0)  # Fracasso
+    elif combustivel < 1000 and foguete_y <= orbita_y:   
+        tint(0, 255, 0)  # Sucesso
+    elif combustivel >= 1000 and foguete_y <= orbita_y:    
+        tint(255, 200, 0)  # Excesso de combustível   
+    
+    image(foguete, width/2, foguete_y, 64, 64)    
+    no_tint()  # Assim, o planeta não estará tingido no próximo quadro!
 
 --- /code ---
 
