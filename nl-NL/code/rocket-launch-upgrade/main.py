@@ -40,7 +40,7 @@ def teken_raket():
 
     if brandstof < verbruik and raket_y > omloopbaan_y: # Geen brandstof meer en niet in een omloopbaan
         tint(255, 0, 0) # Mislukt
-    elif raket_y <= orbit_y and raket_y > high_orbit_y:
+    elif raket_y <= omloopbaan_y and raket_y > hoge_omloopbaan_y:
         tint(0, 255, 0) # Gelukt
     elif brandstof < 1000 and raket_y <= omloopbaan_y:
         tint(0, 100, 200) # Succes met hoge baan
@@ -53,7 +53,7 @@ def teken_raket():
 
 # De functie teken_achtergrond komt hier
 def teken_achtergrond():
-    achtergrond(0) # afkorting voor achtergrond(0, 0, 0) - zwart
+    background(0) # afkorting voor achtergrond(0, 0, 0) - zwart
     image(planeet, width/2, height, 300, 300) # teken de afbeelding
 
     # Teken de onderste baan
