@@ -48,7 +48,7 @@ Corretto. Il ciclo viene eseguito una volta, in ordine, per ogni elemento `i` ne
 
   --- feedback ---
 
-Not quite, a `for` loop runs through the sequence of items it is given in order. Dato che`range()` restituisce una sequenza ordinata di numeri da 0 al numero che gli è stato passato, questo è l'ordine che dovrai aspettarti che verrà stampato ad un ciclo di `for`.
+Dato che`range()` restituisce una sequenza ordinata di numeri da 0 al numero che gli è stato passato, questo è l'ordine che dovrai aspettarti che verrà stampato ad un ciclo di `for`. Dato che`range()` restituisce una sequenza ordinata di numeri da 0 al numero che gli è stato passato, questo è l'ordine che dovrai aspettarti che verrà stampato ad un ciclo di `for`.
 
   --- /feedback ---
 
