@@ -76,8 +76,9 @@ line_highlights: 12-16
 ---
 
 # A função desenhar_foguete vai aqui
-global foguete_y #Use a variável global foguete_y    
-foguete_y -= 1 #Mova o foguete    
+def desenhar_foguete():   
+global foguete_y  # Use a variável global foguete_y    
+foguete_y -= 1  # Mova o foguete    
 image(foguete, width/2, foguete_y, 64, 64)
 
 
