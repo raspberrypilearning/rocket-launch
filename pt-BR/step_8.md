@@ -7,7 +7,7 @@ Seu projeto está completo, mas você ainda pode melhorá-lo se quiser. Aqui est
 Aqui está uma versão do projeto com todas essas atualizações, para que você possa ver como elas podem funcionar. Clique em Executar para lançar o foguete:
 
 <iframe src="https://editor.raspberrypi.org/en/embed/viewer/rocket-launch-upgrade" width="600" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen>
-</iframe> Aqui está uma versão do projeto com todas essas atualizações, para que você possa ver como elas podem funcionar:
+</iframe> Você pode ver o [projeto melhorado concluído aqui](https://editor.raspberrypi.org/en/projects/rocket-launch-upgrade){:target="_blank"}.
 
 --- collapse ---
 ---
