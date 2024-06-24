@@ -2,7 +2,7 @@ Configurar variáveis globais
 
 Configure sua animação aqui
 
-Positions the image in the center
+Posiciona a imagem no centro
 
 Seu planeta escolhido
 
@@ -16,7 +16,7 @@ O que fazer em cada quadro
 
 A função desenhar_foguete vai aqui
 
-Start at the bottom
+Comece na parte inferior
 
 Use a variável global foguete_y
 
@@ -38,15 +38,15 @@ Desenhe 20 elipses de fumaça aleatórias
 
 Quanto combustível é queimado em cada quadro
 
-How many kilograms of fuel do you want to use?
+Quantos quilogramas de combustível você quer usar?
 
 Queimar combustível
 
-Fuel left: 
+Combustível restante: 
 
 Ainda tem combustível
 
-Turn off the stroke
+Desligue o lançamento
 
 Defina um traço branco
 
@@ -62,7 +62,7 @@ Sucesso
 
 Excesso de combustível
 
-Looping
+Ciclo
 
 Verde
 
