@@ -1,73 +1,73 @@
 #!/bin/python3
 
-# Import library code
+# Importar código da biblioteca
 from p5 import *
 from random import randint
 
-# Setup global variables
-screen_size = 400
-rocket_y = 400
-burn = 100
-orbit_radius = 250
-orbit_y = screen_size - orbit_radius
+# Configurar variáveis globais
+tamanho_da_tela = 400
+foguete_y = 400
+queimar = 100
+raio_orbita = 250
+orbita_y = tamanho_da_tela - raio_orbita
 
 
-# The draw_rocket function goes here
-def draw_rocket():
-    global rocket_y, fuel, burn
+# A função desenhar_foguete vai aqui
+def desenha_foguete():
+    global foguete_y, combustível, queimar
 
-    if fuel >= burn and rocket_y > orbit_y:
-        rocket_y -= 1
-        fuel -= burn
-        print('Fuel left: ', fuel)
+    if combustivel >= queimar and foguete_y > orbita_y:
+        foguete_y -= 1
+        combustível -= queimar
+        print('Combustível restante: ', combustivel)
 
         no_stroke()
 
         for i in range(25):
             fill(255, 255 - i * 10, 0)
-            ellipse(width/2, rocket_y + i, 8, 3)
+            elipse (largura/2, foguete_y + i, 8, 3)
 
-        fill(200, 200, 200, 100)  # Transparent grey
-        for i in range(20):  # Draw 20 random smoke ellipses
-            ellipse(width/2 + randint(-5, 5), rocket_y +
+        fill(200, 200, 200, 100) # Cinza transparente
+        for i in range(20): # Desenha 20 elipses de fumaça aleatórias
+            elipse(largura/2 + randint(-5, 5), foguete_y +
                     randint(20, 50), randint(5, 10), randint(5, 10))
 
-    if fuel < burn and rocket_y > orbit_y:
+    if combustível < queimar and foguete_y >orbita_y:
         tint(255, 0, 0)
-    elif fuel < 1000 and rocket_y <= orbit_y:
+    elif combustivel <1000 and foguete_y <= orbita_y:
         tint(0, 255, 0)
-    elif fuel >= 1000 and rocket_y <= orbit_y:
+    elif combustivel >= 1000 and foguete_y <= orbita_y:
         tint(255, 200, 0)
 
-    image(rocket, width/2, rocket_y, 64, 64)
+    imagem(foguete, largura/2, foguete_y, 64, 64)
     no_tint()
 
 
-# The draw_background function goes here
-def draw_background():
+# A função desenhar_fundo vai aqui
+def desenhar_plano_de_fundo():
     background(0)
-    image(planet, width/2, height, 300, 300)
+    image(planeta, largura/2, altura, 300, 300)
 
     no_fill()
     stroke(255)
     stroke_weight(2)
-    ellipse(width/2, height, orbit_radius * 2, orbit_radius * 2)
+    ellipse(largura/2, altura, raio_orbita * 2, raio_orbita * 2)
 
 
 def setup():
-    # Setup your animation here
-    size(screen_size, screen_size)
-    image_mode(CENTER)
-    global planet, rocket
-    planet = load_image('planet.png')
-    rocket = load_image('rocket.png')
+    # Configure sua animação aqui
+    tamanho(tamanho_da_tela, tamanho_da_tela)
+    modo_imagem(CENTRO)
+    planeta global, foguete
+    planeta = carregar_imagem('planeta.png')
+    foguete = carregar_imagem('rocket.png')
 
 
 def draw():
-    # Things to do in every frame
-    draw_background()
-    draw_rocket()
+    # Coisas para fazer em cada quadro
+    desenhar_plano_de_fundo()
+    desenhar_foguete()
 
 
-fuel = int(input('How many kilograms of fuel do you want to use?'))
+combustivel = int(input('Quantos quilogramas de combustível você quer usar?'))
 run()
