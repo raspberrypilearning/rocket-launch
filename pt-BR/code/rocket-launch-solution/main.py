@@ -13,7 +13,7 @@ orbita_y = tamanho_da_tela - raio_orbita
 
 
 # A função desenhar_foguete vai aqui
-def desenha_foguete():
+def desenhar_foguete():
     global foguete_y, combustível, queimar
 
     if combustivel >= queimar and foguete_y > orbita_y:
