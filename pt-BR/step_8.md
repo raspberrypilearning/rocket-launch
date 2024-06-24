@@ -15,7 +15,7 @@ Você pode ver o [projeto melhorado concluído aqui](https://editor.raspberrypi.
 title: Projeto concluído
 ---
 
-Você pode ver o [projeto concluído aqui](https://trinket.io/python/96d2ac33b8){:target="_blank"}.
+Você pode ver o [projeto concluído aqui](https://editor.raspberrypi.org/en/projects/rocket-launch-example){:target="_blank"}.
 
 --- /collapse ---
 
