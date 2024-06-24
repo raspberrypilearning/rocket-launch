@@ -100,15 +100,24 @@ language: python filename: main.py — desenhar_foguete() line_numbers: true lin
 line_highlights: 16-31
 ---
 
-    no_stroke() #Desligue o lançamento   
+    global foguete_y, combustivel, queimar  
     
-    for i in range(25):   
-      fill(255, 255 - i*10, 0)   
-      ellipse(width/2, foguete_y + i, 8, 3)    
+    if combustivel >= queimar:  # Ainda tem combustível   
+        foguete_y -= 1   
+        combustivel -= queimar   
+        print('Combustível restante: ', combustivel)   
     
-    fill(200, 200, 200, 100)   
-    for i in range(20):   
-      ellipse(width/2 + randint(-5, 5), foguete_y + randint(20, 50), randint(5, 10), randint(5, 10))
+        no_stroke()  # Desligar traço   
+    
+        for i in range(25):   
+            fill(255, 255 - i*10, 0)   
+            ellipse(width/2, foguete_y + i, 8, 3)    
+    
+        fill(200, 200, 200, 100)   
+        for i in range(20):   
+            ellipse(width/2 + randint(-5, 5), foguete_y + randint(20, 50), randint(5, 10), randint(5, 10))   
+    
+    image(foguete, width/2, foguete_y, 64, 64)
 
 --- /code ---
 
