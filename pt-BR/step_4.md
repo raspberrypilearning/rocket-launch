@@ -32,12 +32,16 @@ language: python filename: main.py - desenhar_foguete() line_numbers: true line_
 line_highlights: 16-22
 ---
 
-global foguete_y   
+def desenhar_foguete(): global foguete_y   
 foguete_y -= 1   
 
-    for i in range(25): #Desenhe 25 elipses de combustão em chamas<br x-id="3" />
-        fill(255, 255, 0) #Amarelo<br x-id="3" />
-        ellipse(width/2, foguete_y + i, 8, 3) #i aumenta cada vez que o ciclo se repete
+    no_stroke()  # Desliga o traço
+    
+    for i in range(25):  # Desenhe 25 elipses de combustão em chamas   
+        fill(255, 255, 0)  # Amarelo   
+        ellipse(width/2, foguete_y + i, 8, 3)  # i aumenta cada vez que o ciclo se repete    
+    
+    image(foguete, width/2, foguete_y, 64, 64)
 
 
 --- /code ---
@@ -106,9 +110,15 @@ language: python filename: main.py - desenhar_foguete() line_numbers: true line_
 line_highlights: 23-26
 ---
 
-    for i in range(25):<br x-id="2" />
-        fill(255, 255 - i * 10, 0)<br x-id="3" />
-        ellipse(width/2, foguete_y + i, 8, 3)
+    for i in range(25):  
+        fill(255, 255 - i * 10, 0)   
+        ellipse(width/2, foguete_y + i, 8, 3)    
+    
+    fill(200, 200, 200, 100)  # Cinza transparente   
+    for i in range(20):  # Desenhar 20 elipses de fumaça aleatórias    
+        ellipse(width/2 + randint(-5, 5), foguete_y + randint(20, 50), randint(5, 10), randint(5, 10))    
+    
+    image(foguete, width/2, foguete_y, 64, 64)
 
 --- /code ---
 
