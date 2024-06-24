@@ -15,7 +15,7 @@ A animação precisa de um cenário espacial com um planeta para lançar o fogue
 
 Abra o [modelo de projeto](https://trinket.io/python/f7354cbf88){:target="_blank"}.
 
-Se você tiver uma conta Trinket, você pode clicar no botão **Remix** para salvar uma cópia em sua biblioteca `My Trinkets`.
+### Crie a tela
 
 --- /task ---
 
@@ -27,14 +27,14 @@ Encontre o comentário `Configurar variáveis globais` e adicione uma linha de c
 
 --- code ---
 ---
-language: python 
-filename: main.py 
-line_numbers: true 
-line_number_start: 7
+language: python
+filename: main.py
+line_numbers: true
+line_number_start: 7 
 line_highlights: 8
 ---
 
-#Configurar variáveis globais
+# Configurar variáveis globais
 tamanho_tela = 400
 
 --- /code ---
@@ -55,27 +55,29 @@ line_highlights: 20
 ---
 
 def setup():   
-  #Configure sua animação aqui   
-  size(tamanho_tela, tamanho_tela)   
+    #Configure sua animação aqui   
+    size(tamanho_tela, tamanho_tela)
 
 
 --- /code ---
 
 --- /task ---
 
+### Escolha uma imagem
+
 --- task ---
 
 O projeto inicial tem três imagens diferentes de planetas e a lua fornecidas para você. Você pode visualizá-las na biblioteca de imagens Trinket selecionando o botão **Ver e adidionar imagens**.
 
-![Um símbolo de adição, um símbolo de upload e um símbolo de imagem. O símbolo da imagem é realçado.](images/trinket_image.png)
+![Uma captura de tela do editor de código, com a galeria de imagens destacada contendo imagens de planetas e da lua.](images/image_gallery.png)
 
 **Escolha:** Decida qual imagem deseja usar e anote o nome do arquivo. Por exemplo, `orange_planet.png`.
 
 --- /task ---
 
-É uma boa idéia carregar imagens em `setup()` para que estejam prontas quando você precisar usá-las e sua animação será executada rapidamente.
-
 --- task ---
+
+Adicione código à função `setup()` para carregar e posicionar sua imagem.
 
 A linha `image_mode(CENTER)` diz que você posicionará as imagens fornecendo as coordenadas do centro da imagem (em vez do canto superior esquerdo).
 
@@ -91,17 +93,18 @@ line_highlights: 21-23
 ---
 
 def setup():   
-  #Configure sua animação aqui   
-  size(tamanho_tela, tamanho_tela)   
-  image_mode(CENTER)   
-  global planeta   
-  planeta = load_image('planet.png') #Seu planeta escolhido
-
+    #Configure sua animação aqui   
+    size(tamanho_tela, tamanho_tela)   
+    mage_mode(CENTER)   
+    global planeta   
+    planeta = load_image('planet.png') # Seu planeta escolhido
 
 
 --- /code ---
 
 --- /task ---
+
+### Desenhar o plano de fundo
 
 --- task ---
 
@@ -115,17 +118,17 @@ A biblioteca `p5` define variáveis globais `width` e `height` com base no taman
 
 --- code ---
 ---
-language: python 
-filename: main.py — desenhar_plano_de_fundo() 
-line_numbers: true 
-line_number_start: 14
+language: python
+filename: main.py — draw_background()
+line_numbers: true
+line_number_start: 14 
 line_highlights: 15-17
 ---
 
-#A função desenhar_plano_de_fundo vai aqui
+# A função desenhar_plano_de_fundo vai aqui
 def desenhar_plano_de_fundo():   
-  background(0) #Abreviação de plano de fundo (0, 0, 0) — preto    
-  image(planeta, width/2, height, 300, 300) #Desenhe a imagem
+    background(0) # Abreviação de plano de fundo (0, 0, 0) — preto    
+    image(planeta, width/2, height, 300, 300) # Desenhe a imagem
 
 
 --- /code ---
@@ -140,16 +143,16 @@ Para fazer o plano de fundo aparecer, chame `desenhar_plano_de_fundo()` in `draw
 
 --- code ---
 ---
-language: python 
-filename: main.py — draw() 
-line_numbers: true 
-line_number_start: 28
+language: python
+filename: main.py — draw()
+line_numbers: true
+line_number_start: 28 
 line_highlights: 30
 ---
 
 def draw():   
-  #O que fazer em cada quadro    
-  desenhar_plano_de_fundo()
+    #O que fazer em cada quadro    
+    desenhar_plano_de_fundo()
 
 --- /code ---
 
@@ -160,5 +163,7 @@ def draw():
 **Teste:** Execute seu código e verifique que ele desenha um fundo preto com meio planeta na parte inferior.
 
 --- /task ---
+
+Se você possui uma conta Raspberry Pi, em seu editor de código, você pode clicar no botão **Salvar** para salvar uma cópia do seu projeto em seus Projetos.
 
 --- save ---

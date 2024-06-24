@@ -11,13 +11,13 @@ language: python
 ---
 
 if pontos >= 100:    
-    tint(0, 255, 0) #Verde   
+    tint(0, 255, 0) # Verde   
 elif pontos < 100 and vidas == 1:   
-    tint(255, 200, 0) #Âmbar    
+    tint(255, 200, 0) # Âmbar    
 elif pontos < 100 and vidas == 0:     
-    tint(255, 0, 0) #Vermelho     
+    tint(255, 0, 0) # Vermelho     
 else:      
-    no_tint()
+    no_tint()   
 
 image(rocket, width/2, height/2, 64, 64)
 

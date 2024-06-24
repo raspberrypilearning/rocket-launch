@@ -17,20 +17,22 @@ O foguete pode mudar de cor para mostrar o sucesso do lançamento.
 </div>
 </div>
 
+### Desenhe uma linha de órbita
+
 --- task ---
 
 Crie duas novas variáveis globais para definir o raio do círculo da órbita e a coordenada `y` da órbita para o ponto que o centro do foguete precisa alcançar para lançar o satélite.
 
 --- code ---
 ---
-language: python 
-filename: main.py 
-line_numbers: true 
-line_number_start: 7
+language: python
+filename: main.py
+line_numbers: true
+line_number_start: 7 
 line_highlights: 11-12
 ---
 
-#Configurar variáveis globais
+# Configurar variáveis globais
 tamanho_tela = 400   
 foguete_y = tamanho_tela   
 queimar = 100   
@@ -48,21 +50,20 @@ Atualize a função `desenhar_plano_de_fundo()` para desenhar uma elipse para re
 --- code ---
 ---
 language: python
-filename: main.py - desenhar_plano_de_fundo()
+filename: main.py - draw_background()
 line_numbers: true
-line_number_start: 37
+line_number_start: 38
 line_highlights: 42-45
 ---
 
 def desenhar_plano_de_fundo():   
-  background(0) #Abreviação de plano de fundo (0, 0, 0) — preto   
-  image(planeta, width/2, height, 300, 300)   
+    background(0) # Abreviação de plano de fundo (0, 0, 0) — preto   
+    image(planeta, width/2, height, 300, 300)   
 
-  no_fill() #Desligue qualquer preenchimento  
-  stroke(255) #Defina um traço branco   
-  stroke_weight(2)   
-  ellipse(width/2, height, raio_orbital * 2, raio_orbital * 2)  
-
+    no_fill() # Desligue qualquer preenchimento<br x-id="2" />
+    stroke(255) # Defina um traço branco
+    stroke_weight(2)
+    ellipse(width/2, height, raio_orbital * 2, raio_orbital * 2)
 
 --- /code ---
 
@@ -76,6 +77,8 @@ def desenhar_plano_de_fundo():
 
 --- /task ---
 
+### Lance o foguete para a órbita
+
 O foguete deve parar quando atingir a órbita do satélite – o fim da missão.
 
 --- task ---
@@ -86,19 +89,18 @@ Você pode usar as instruções `and` em `if` para verificar se duas ou mais con
 
 --- code ---
 ---
-language: python 
-filename: main.py - desenhar_foguete() 
-line_numbers: true 
-line_number_start: 14
+language: python
+filename: main.py - draw_rocket()
+line_numbers: true
+line_number_start: 15
 line_highlights: 19
 ---
 
-#A função desenhar_foguete vai aqui
-def desenhar_foguete():   
-  
-  global foguete_y, combustivel, queimar
-  
-    if combustivel >= queimar and foguete_y > orbita_y: #Ainda voando
+# A função desenhar_foguete vai aqui
+def desenhar_foguete():
+    global foguete_y, combustivel, queimar
+
+        if combustivel >= queimar and foguete_y > orbita_y: # Ainda voando
 
 --- /code ---
 
@@ -110,6 +112,8 @@ def desenhar_foguete():
 
 --- /task ---
 
+### Verifique se o lançamento foi bem-sucedido
+
 O foguete deve ficar vermelho se ficar sem combustível antes de ficar alto o suficiente para lançar o satélite.
 
 --- task ---
@@ -117,7 +121,7 @@ O foguete deve ficar vermelho se ficar sem combustível antes de ficar alto o su
 --- code ---
 ---
 language: python
-filename: main.py — desenhar_foguete()
+filename: main.py — draw_rocket()
 line_numbers: true
 line_number_start: 30
 line_highlights: 34-35
@@ -125,10 +129,10 @@ line_highlights: 34-35
 
     fill(200, 200, 200, 100)   
     for i in range(20):   
-      ellipse(width/2 + randint(-5, 5), foguete_y + randint(20, 50), randint(5, 10), randint(5, 10))
+        ellipse(width/2 + randint(-5, 5), foguete_y + randint(20, 50), randint(5, 10), randint(5, 10))
 
-  if combustivel < queimar and foguete_y > orbita_y: #Não há mais combustível e não em órbita   
-    tint(255, 0, 0) #Fracasso
+    if combustivel < queimar and foguete_y > orbita_y:  # Não há mais combustível e não em órbita   
+        tint(255, 0, 0)  # Fracasso
 
 --- /code ---
 
@@ -153,17 +157,17 @@ A função `tint()` define a cor do tom para todas as imagens que são desenhada
 --- code ---
 ---
 language: python
-filename: main.py - desenhar_foguete()
+filename: main.py - draw_rocket()
 line_numbers: true
 line_number_start: 34
 line_highlights: 38
 ---
 
-if combustivel < queimar and foguete_y > orbita_y:    
-  tint(255, 0, 0) #Fracasso
-    
-image(foguete, width/2, foguete_y, 64, 64)   
-no_tint() #Assim, o planeta não está tingido de vermelho no próximo quadro!
+    if combustivel < queimar and foguete_y > orbita_y:    
+        tint(255, 0, 0)  # Fracasso
+
+    image(foguete, width/2, foguete_y, 64, 64)   
+    no_tint()  # Assim, o planeta não será tingido de vermelho no próximo quadro!
 
 
 --- /code ---
@@ -177,19 +181,19 @@ Use a função `tint()` novamente, desta vez para colorir o foguete de verde se 
 --- code ---
 ---
 language: python
-filename: main.py - desenhar_foguete()
+filename: main.py - draw_rocket()
 line_numbers: true
 line_number_start: 34
 line_highlights: 36-37
 ---
 
-if combustivel < queimar and foguete_y > orbita_y:    
-  tint(255, 0, 0) #Fracasso   
-elif foguete_y <= orbita_y:   
-  tint(0, 255, 0) #Sucesso   
+    if combustivel < queimar and foguete_y > orbita_y:    
+        tint(255, 0, 0)  # Fracasso   
+    elif foguete_y <= orbita_y:   
+        tint(0, 255, 0)  # Sucesso   
 
-image(foguete, width/2, foguete_y, 64, 64)   
-no_tint()
+    image(foguete, width/2, foguete_y, 64, 64)   
+    no_tint()
 
 --- /code ---
 
@@ -220,15 +224,15 @@ line_number_start: 34
 line_highlights: 36, 38-39
 ---
 
-if combustivel < queimar and foguete_y > orbita_y:   
-  tint(255, 0, 0) #Fracasso   
-elif combustivel < 1000 and foguete_y <= orbita_y:   
-  tint(0, 255, 0) #Sucesso   
-elif combustivel >= 1000 and foguete_y <= orbita_y:    
-  tint(255, 200, 0) #Excesso de combustível   
-    
-image(foguete, width/2, foguete_y, 64, 64)    
-no_tint() #Assim, o planeta não está tingido no próximo quadro!
+    if combustivel < queimar and foguete_y > orbita_y:   
+      tint(255, 0, 0) # Fracasso
+    elif combustivel < 1000 and foguete_y <= orbita_y:
+      tint(0, 255, 0) # Sucesso
+    elif combustivel >= 1000 and foguete_y <= orbita_y:
+      tint(255, 200, 0) # Excesso de combustível
+
+    image(foguete, width/2, foguete_y, 64, 64)    
+    no_tint()  # Assim, o planeta não estará tingido no próximo quadro!
 
 --- /code ---
 

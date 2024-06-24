@@ -18,42 +18,47 @@ Você pode criar efeitos legais usando um ciclo `for` para desenhar muitas forma
 <p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;">
 A programação é usada para fazer <span style="color: #0faeb0">**efeitos gráficos**</span> para filmes e jogos. É muito mais rápido escrever código do que desenhar cada quadro de uma animação individualmente. </p>
 
+### Desenhe sua combustão
+
 Desenhar muitas elipses amarelas em diferentes posições `y` cria uma trilha de combustão com fundo redondo.
 
 --- task ---
-
-Um ciclo `for` repete um pedaço de código uma vez para cada item que é fornecido. Para executar o código em um ciclo `for` um certo número de vezes, você pode usar a função `range()`. Por exemplo, `range(5)` cria uma sequência de cinco números começando em 0, então [0, 1, 2, 3, 4].
-
-Cada vez que o ciclo `for` se repete, ele define uma variável para o item atual para que você possa usá-lo no ciclo.
 
 Atualize sua função `desenhar_foguete()` para incluir um ciclo `for` que repete o desenho de `25` elipses da combustão. A variável de ciclo **** `i` é adicionada a `foguete_y` para desenhar cada elipse mais abaixo do foguete.
 
 --- code ---
 ---
-language: python 
-filename: main.py - desenhar_foguete() 
-line_numbers: true 
+language: python
+filename: main.py - draw_rocket()
+line_numbers: true
 line_number_start: 12
-line_highlights: 16-22
+line_highlights: 16-20
 ---
 
 def desenhar_foguete():
-  
-  global foguete_y   
-  foguete_y -= 1   
+    global foguete_y   
+    foguete_y -= 1   
+    
+    no_stroke()  # Desliga o traço
 
-  no_stroke() #Desligue o lançamento
+    for i in range(25): # Desenhe 25 elipses de combustão em chamas
+        fill(255, 255, 0) # Amarelo
+        ellipse(width/2, foguete_y + i, 8, 3) # i aumenta cada vez que o ciclo se repete
 
-  for i in range(25): #Desenhe 25 elipses de combustão em chamas   
-    fill(255, 255, 0) #Amarelo   
-    ellipse(width/2, foguete_y + i, 8, 3) #i aumenta cada vez que o ciclo se repete    
-
-  image(foguete, width/2, foguete_y, 64, 64)
+         image(rocket, width/2, foguete_y, 64, 64)   
 
 
 --- /code ---
 
 --- /task ---
+
+fill(200, 200, 200, 100) #Cinza transparente   
+for i in range(20): #Desenhe 20 elipses de fumaça aleatórias    
+ellipse(width/2 + randint(-5, 5), foguete_y + randint(20, 50), randint(5, 10), randint(5, 10))
+
+Para executar o código em um ciclo `for` um certo número de vezes, você pode usar a função `range()`. Por exemplo, `range(5)` cria uma sequência de cinco números começando em 0, então [0, 1, 2, 3, 4].
+
+Cada vez que o ciclo `for` se repete, ele define uma variável para o item atual para que você possa usá-lo no ciclo.
 
 --- task ---
 
@@ -62,6 +67,8 @@ def desenhar_foguete():
 ![Uma vista de perto do foguete com uma trilha de combustão.](images/rocket_exhaust.png){:width="300px"}
 
 --- /task ---
+
+### Adicione um gradiente
 
 A variável `i` também pode ser usada para criar um gradiente de cor com menos verde em cada elipse desenhada.
 
@@ -72,15 +79,15 @@ Altere a chamada para `fill()` para definir a quantidade de verde para `255 - i*
 --- code ---
 ---
 language: python
-filename: main.py - desenhar_foguete()
+filename: main.py - draw_rocket()
 line_numbers: true
-line_number_start: 19
-line_highlights: 20
+line_number_start: 18
+line_highlights: 19
 ---
 
-  for i in range(25):   
-    fill(255, 255 - i * 10, 0) #Reduza a quantidade de verde    
-    ellipse(width/2, foguete_y + i, 8, 3)
+    for i in range(25):
+        fill(255, 255 - i * 10, 0) #Reduza a quantidade de verde
+        ellipse(width/2, foguete_y + i, 8, 3)
 
 --- /code ---
 
@@ -91,6 +98,8 @@ line_highlights: 20
 **Teste:** Verifique que você obtém um rastro de elipses mudando gradualmente de amarelo para vermelho.
 
 --- /task ---
+
+### Crie um efeito de fumaça
 
 A trilha de gases de escape é criada desenhando muitas elipses cinzas levemente transparentes em diferentes posições em cada quadro.
 
@@ -105,22 +114,22 @@ Em cada quadro da animação, 20 elipses de tamanhos aleatórios serão desenhad
 --- code ---
 ---
 language: python
-filename: main.py - desenhar_foguete()
+filename: main.py - draw_rocket()
 line_numbers: true
-line_number_start: 19
-line_highlights: 23-26
+line_number_start: 18
+line_highlights: 22-24
 ---
 
-  for i in range(25):  
+for i in range(25):  
     fill(255, 255 - i * 10, 0)   
     ellipse(width/2, foguete_y + i, 8, 3)    
 
-  fill(200, 200, 200, 100) #Cinza transparente   
-  for i in range(20): #Desenhe 20 elipses de fumaça aleatórias    
+fill(200, 200, 200, 100)  # Cinza transparente   
+for i in range(20):  # Desenhar 20 elipses de fumaça aleatórias    
     ellipse(width/2 + randint(-5, 5), foguete_y + randint(20, 50), randint(5, 10), randint(5, 10))    
-  
-  image(foguete, width/2, foguete_y, 64, 64)
-  
+
+image(foguete, width/2, foguete_y, 64, 64)
+
 --- /code ---
 
 --- /task ---

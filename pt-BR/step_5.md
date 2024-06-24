@@ -12,23 +12,25 @@ Para fazer isso, você precisa simular quanto combustível será queimado na via
 
 </div>
 
+### Crie uma variável de combustível
+
 --- task ---
 
 Adicione uma variável para acompanhar a quantidade de combustível que seu foguete queima (em quadros).
 
 --- code ---
 ---
-language: python 
-filename: main.py 
-line_numbers: true 
-line_number_start: 7
+language: python
+filename: main.py
+line_numbers: true
+line_number_start: 7 
 line_highlights: 10
 ---
 
-#Configurar variáveis globais
+# Configurar variáveis globais
 tamanho_tela = 400   
 foguete_y = tamanho_tela  
-queimar = 100 #Quanto combustível é queimado em cada quadro
+queimar = 100 # Quanto combustível é queimado em cada quadro
 
 --- /code ---
 
@@ -44,8 +46,8 @@ Na parte inferior do seu programa, adicione código para perguntar ao usuário q
 language: python
 filename: main.py 
 line_numbers: true
-line_number_start: 52
-line_highlights: 52
+line_number_start: 51
+line_highlights: 51
 ---
 
 combustivel = int(input('Quantos quilogramas de combustível você quer usar?'))   
@@ -55,27 +57,29 @@ run()
 
 --- /task ---
 
+### Verificar o combustível em relação à queima
+
 O foguete só deve se mover se não tiver queimado todo o seu combustível.
 
 --- task ---
 
-Adicione código à função `desenhar_foguete()` para reduzir o restante `combustivel` pela `queima` de cada quadro. Use `print()` para mostrar quanto combustível resta em cada quadro.
+Adicione código à função `desenhar_foguete()` para reduzir o restante `combustivel` pela `queima` de cada quadro. Use `imprimir()` para mostrar quanto combustível resta em cada quadro.
 
 Você precisa dizer que deseja usar as variáveis globais `combustivel` e `queima`.
 
 --- code ---
 ---
 language: python
-filename: main.py — desenhar_foguete()
+filename: main.py — draw_rocket()
 line_numbers: true
 line_number_start: 15 
 line_highlights: 15, 17-18
 ---
 
-  global foguete_y, combustivel, queimar   
-  foguete_y -= 1   
-  combustivel -= queimar #Queimar combustível   
-  print('Combustível restante: ', combustivel) 
+    global foguete_y, combustivel, queimar
+      foguete_y -= 1
+      combustivel -= queimar #Queimar combustível
+      print('Combustível restante: ', combustivel)
 
 --- /code ---
 
@@ -102,31 +106,30 @@ A linha `image()` não precisa ser recuada porque você sempre quer desenhar o f
 --- code ---
 ---
 language: python
-filename: main.py — desenhar_foguete()
+filename: main.py — draw_rocket()
 line_numbers: true
 line_number_start: 15
-line_highlights: 16-31
+line_highlights: 17-30
 ---
 
-  global foguete_y, combustivel, queimar  
+global foguete_y, combustivel, queimar  
 
-  if combustivel >= queimar: #Ainda tem combustível   
+if combustivel >= queimar:  # Ainda tem combustível   
     foguete_y -= 1   
     combustivel -= queimar   
     print('Combustível restante: ', combustivel)   
-    
-    no_stroke() #Desligue o lançamento   
-    
+
+    no_stroke()  # Desligar traço   
+
     for i in range(25):   
-      fill(255, 255 - i*10, 0)   
-      ellipse(width/2, foguete_y + i, 8, 3)    
-    
+        fill(255, 255 - i*10, 0)   
+        ellipse(width/2, foguete_y + i, 8, 3)    
+
     fill(200, 200, 200, 100)   
     for i in range(20):   
-      ellipse(width/2 + randint(-5, 5), foguete_y + randint(20, 50), randint(5, 10), randint(5, 10))   
+        ellipse(width/2 + randint(-5, 5), foguete_y + randint(20, 50), randint(5, 10), randint(5, 10))   
 
-  image(foguete, width/2, foguete_y, 64, 64)
-
+image(foguete, width/2, foguete_y, 64, 64)
 
 --- /code ---
 
@@ -140,7 +143,7 @@ line_highlights: 16-31
 
 --- /task ---
 
-Esta simulação de computador não é muito precisa, mas é boa o suficiente para nossa animação.
+Seu foguete parou quando ficou sem combustível? Muito bem, você enviou um foguete para o espaço sideral!
 
 --- save ---
 

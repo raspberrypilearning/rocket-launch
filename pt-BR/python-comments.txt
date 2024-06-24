@@ -1,38 +1,20 @@
-Importar código da biblioteca
-
 Configurar variáveis globais
-
-A função desenhar_foguete vai aqui
-
-A função desenhar_plano_de_fundo vai aqui
 
 Configure sua animação aqui
 
-O que fazer em cada quadro
-
-Definições para compatibilidade com a biblioteca de processamento p5py
-
-Forma
-
-Fontes
-
-Texto
-
-Cor
-
-Imagens
-
-Ambiente
-
-Transformar
-
-Teclado
+Posiciona a imagem no centro
 
 Seu planeta escolhido
+
+A função desenhar_plano_de_fundo vai aqui
 
 Abreviação de plano de fundo (0, 0, 0) — preto
 
 Desenhe a imagem
+
+O que fazer em cada quadro
+
+A função desenhar_foguete vai aqui
 
 Comece na parte inferior
 
@@ -56,11 +38,15 @@ Desenhe 20 elipses de fumaça aleatórias
 
 Quanto combustível é queimado em cada quadro
 
+Quantos quilogramas de combustível você quer usar?
+
 Queimar combustível
+
+Combustível restante: 
 
 Ainda tem combustível
 
-Desligue qualquer preenchimento
+Desligue o lançamento
 
 Defina um traço branco
 
@@ -76,10 +62,11 @@ Sucesso
 
 Excesso de combustível
 
-Assim, o planeta não está tingido no próximo quadro!
+Ciclo
 
 Verde
 
 Âmbar
 
 Vermelho
+
