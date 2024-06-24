@@ -149,6 +149,6 @@ desenhar_plano_de_fundo()
 
 --- /task ---
 
-Se você tiver uma conta Trinket, você pode clicar no botão **Remix** para salvar uma cópia em sua biblioteca `My Trinkets`.
+Se você possui uma conta Raspberry Pi, em seu editor de código, você pode clicar no botão **Salvar** para salvar uma cópia do seu projeto em seus Projetos.
 
 --- save ---
