@@ -6,7 +6,7 @@ from random import randint
 
 # Configurar variáveis globais
 tamanho_da_tela = 400
-foguete_y = tamanho_tela #Comece na parte inferior
+foguete_y = tamanho_da_tela #Comece na parte inferior
 queimar = 100 # Quanto combustível é queimado em cada quadro
 raio_orbital = 250
 orbita_y = tamanho_da_tela - raio_orbital
@@ -17,7 +17,7 @@ velocidade = 1 # Quão longe o foguete voa em cada quadro
 # A função desenhar_foguete vai aqui
 
 
-def desenha_foguete():
+def desenhar_foguete():
     global foguete_y, combustivel, queimar
 
     if combustivel >= queimar and foguete_y > orbita_y_alto: # Ainda voando
