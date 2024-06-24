@@ -207,7 +207,7 @@ line_highlights: 36, 38-39
       tint(255, 0, 0) # Mislukt
     elif brandstof < 1000 and raket_y <= omloopbaan_y:
       tint(0, 255, 0) # Gelukt
-    elif brandstof >= 1000 and raket_y <= omloopbaant_y:
+    elif brandstof >= 1000 and raket_y <= omloopbaan_y:
       tint(255, 200, 0) # Te veel brandstof
     
     image(raket, width/2, raket_y, 64, 64)    
