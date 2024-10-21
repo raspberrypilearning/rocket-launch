@@ -2,7 +2,7 @@
 
 --- task ---
 
-Open the [project template](https://editor.raspberrypi.org/en/projects/rocket-launch-starter){:target="_blank"}.
+Open the [starter project](https://editor.raspberrypi.org/en/projects/rocket-launch-starter){:target="_blank"}.
 
 --- /task ---
 

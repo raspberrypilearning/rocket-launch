@@ -1,10 +1,8 @@
-#!/bin/python3
-
 # Import library code
 from p5 import *
 from random import randint
 
-# Setup global variables
+# Set up global variables
 
 
 # The draw_rocket function goes here
@@ -16,7 +14,7 @@ from random import randint
 
 
 def setup():
-  # Setup your animation here
+  # Set up your animation here
   
 
 
