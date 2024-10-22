@@ -14,8 +14,8 @@ Add code to the `setup()` function to load the rocket image into a `rocket` glob
 language: python
 filename: main.py
 line_numbers: true
-line_number_start: 18
-line_highlights: 22, 24
+line_number_start: 17
+line_highlights: 21, 23
 ---
 
 def setup():   
@@ -37,11 +37,11 @@ Add a `rocket_position` global variable to keep track of the rocket's `y` positi
 ---
 language: python
 line_numbers: true
-line_number_start: 6 
-line_highlights: 8
+line_number_start: 5
+line_highlights: 7
 ---
 
-# Setup global variables    
+# Set up global variables    
 screen_size = 400    
 rocket_position = screen_size  
 
@@ -52,28 +52,6 @@ rocket_position = screen_size
 
 The `y` position of the rocket will start at 400 (the screen height) and then decrease by 1 each time a new frame is drawn.
 
---- task ---
-
-Add a `rocket_y` global variable to keep track of the rocket's `y` position. 
-
---- code ---
----
-language: python
-filename: main.py
-line_numbers: true
-line_number_start: 7 
-line_highlights: 9
----
-
-# Setup global variables    
-screen_size = 400    
-rocket_y = screen_size  # Start at the bottom
-
---- /code ---
-
-The `rocket_position` is set to the `screen_size` at the start so that the rocket appears right at the bottom edge of the screen. 
-
---- /task ---
 
 --- task ---
 
@@ -105,8 +83,8 @@ Call the `draw_rocket()` function.
 ---
 language: python
 line_numbers: true
-line_number_start: 28 
-line_highlights: 31 
+line_number_start: 29 
+line_highlights: 32 
 ---
 
 def draw():
@@ -138,11 +116,10 @@ The `rocket_position` of the rocket will start at 400 (the screen height) and th
 ---
 language: python
 line_numbers: true
-line_number_start: 8 
-line_highlights: 11
+line_number_start: 10 
+line_highlights: 12
 ---
 
-# The draw_rocket function goes here   
 def draw_rocket():   
     global rocket_position     
     rocket_position = rocket_position - 1    
