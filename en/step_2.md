@@ -35,8 +35,8 @@ Add this function to the list of things to `draw()` in every frame.
 ---
 language: python
 line_numbers: true
-line_number_start: 23 
-line_highlights: 25
+line_number_start: 25 
+line_highlights: 27
 ---
 
 def draw():
@@ -52,19 +52,11 @@ def draw():
 **Test:** Run your code and you should see a black square. 
 --- /task ---
 
-**Tip**: The three numbers in `background(0, 0, 0)` are red, green and blue values. If you'd like your version of space to be a different colour, try changing these numbers to any whole number between 0 and 255.
+
 
 --- task ---
 
-Display an image of a planet.
-
-The `image()` function needs the following data:
-
-- image filename
-- x coordinate
-- y coordinate
-- image width
-- image height
+Add a line of code to display an image of a planet.
 
 --- code ---
 ---
@@ -77,6 +69,14 @@ def draw_background():
     background(0,0,0)
     image(planet, screen_size/2, screen_size, 300, 300)
 --- /code ---
+
+The `image()` function needs the following data:
+
+- image filename - we have already loaded the planet image
+- x coordinate - we have already set the screen size
+- y coordinate
+- image width
+- image height
 
 --- /task ---
 
@@ -102,8 +102,8 @@ If you want to change the planet image, change `planet.png` in the code to the f
 ---
 language: python
 line_numbers: true
-line_number_start: 18 
-line_highlights: 23
+line_number_start: 17 
+line_highlights: 22
 ---
 def setup():
     # Set up your animation here
@@ -115,4 +115,3 @@ def setup():
 
 --- /task ---
 
---- save ---
