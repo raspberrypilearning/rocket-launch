@@ -13,7 +13,7 @@ Make your rocket move faster or slower.
 --- /task ---
 
 --- task ---
-Add to your animation so that the rocket appears to reappear and land on a different planet.
+Add to your animation so that the rocket reappears and lands on a different planet.
 --- /task ---
 
 
