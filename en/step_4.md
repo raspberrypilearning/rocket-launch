@@ -37,6 +37,27 @@ def draw_rocket():
 
 
 --- task ---
+The outline around the circles is called the **stroke**. Add some code to turn it off. 
+
+
+--- code ---
+---
+language: python
+line_numbers: true
+line_number_start: 14
+line_highlights: 15
+---
+
+    fill(200, 200, 200, 100) 
+    no_stroke()
+    
+
+--- /code ---
+
+--- /task ---
+
+
+--- task ---
 
 Generate a random number between 5 and 10 for the size of the circle, then draw it at the bottom of the rocket.
 
@@ -44,11 +65,11 @@ Generate a random number between 5 and 10 for the size of the circle, then draw 
 ---
 language: python
 line_numbers: true
-line_number_start: 14
-line_highlights: 15-16
+line_number_start: 15
+line_highlights: 16-22
 ---
 
-fill(200, 200, 200, 100) 
+no_stroke()
 circle_size = randint(5,10) 
 ellipse(
     screen_size/2, 
@@ -76,7 +97,7 @@ Indent the code you used to draw the circle, and add a loop which will run the c
 language: python
 line_numbers: true
 line_number_start: 10
-line_highlights: 15-22
+line_highlights: 16-23
 ---
 
 def draw_rocket():
@@ -84,6 +105,7 @@ def draw_rocket():
     rocket_position = rocket_position - 1
     image(rocket, width/2, rocket_position, 64, 64)
     fill(200, 200, 200, 100) 
+    no_stroke()
     for i in range(20):
         circle_size = randint(5,10)
         ellipse(
@@ -112,8 +134,8 @@ Generate a random number and add it to the x and y position of each circle so th
 ---
 language: python
 line_numbers: true
-line_number_start: 16
-line_highlights: 17-18
+line_number_start: 24
+line_highlights: 25-26
 ---
 
 ellipse(
@@ -128,25 +150,6 @@ ellipse(
 --- /task ---
 
 
---- task ---
-The outline around the circles is called the **stroke**. Add some code to turn it off. 
-
-
---- code ---
----
-language: python
-line_numbers: true
-line_number_start: 13
-line_highlights: 14
----
-
-    fill(200, 200, 200, 100) 
-    no_stroke()
-    
-
---- /code ---
-
---- /task ---
 
 
 --- task ---

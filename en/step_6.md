@@ -2,18 +2,19 @@
 
 ## Challenge
 
-Your project is complete, but you can still make it better if you want. Here are a few upgrades to consider:
+You could:
 
- + Let the user set the rate at which the rocket burns fuel or how far the rocket flies in each frame.
- + Add a second, higher, orbit for the rocket to reach and drop off another satellite. Have it change colour again when it gets there. 
+--- task ---
+Give your smoke circles a range of different colours.
+--- /task ---
 
-Here's a version of the project with all those upgrades, so you can see how they could work. Click Run to launch the rocket:
+--- task ---
+Make your rocket move faster or slower.
+--- /task ---
 
-<iframe src="https://editor.raspberrypi.org/en/embed/viewer/rocket-launch-upgrade" width="600" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen>
-</iframe>
-You can view the [completed upgrade project here](https://editor.raspberrypi.org/en/projects/rocket-launch-upgrade){:target="_blank"}.
-
-
+--- task ---
+Add to your animation so that the rocket appears to reappear and land on a different planet.
+--- /task ---
 
 
 --- /challenge ---
