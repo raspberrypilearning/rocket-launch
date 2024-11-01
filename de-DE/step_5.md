@@ -1,22 +1,22 @@
-## Burn fuel
+## Treibstoff verbrennen
 
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">
 
-One of the most important things to decide when launching a rocket is how much fuel to load into it. 
+Eine der wichtigsten Entscheidungen beim Start einer Rakete ist, wie viel Treibstoff sie laden soll. 
 
-To do this, you need to simulate how much fuel will be burned on the journey.
+Dazu muss simuliert werden, wie viel Treibstoff während der Fahrt verbraucht wird.
 </div>
 
-![The program with a question in the output area asking how much fuel is required.](images/burn_question_full.png){:width="300px"}
+![Das Programm mit einer Frage im Ausgabebereich, wie viel Treibstoff benötigt wird.](images/burn_question_full.png){:width="300px"}
 
 </div>
 
-### Create a fuel variable
+### Erstelle eine Variable für den Treibstoff
 
 --- task ---
 
-Add a variable to keep track of how much fuel your rocket burns (in frames).
+Füge eine Variable hinzu, um zu verfolgen, wie viel Treibstoff deine Rakete verbraucht (pro Frame).
 
 --- code ---
 ---
@@ -24,10 +24,10 @@ language: python filename: main.py line_numbers: true line_number_start: 7
 line_highlights: 10
 ---
 
-# Setup global variables
-screen_size = 400   
-rocket_y = screen_size  
-burn = 100  # How much fuel is burned in each frame
+# Globale Variablen einrichten
+bildschirm_groesse = 400   
+rakete_y = bildschirm_groesse  
+verbrennen = 100  # Wieviel Treibstoff wird in jedem Frame verbrannt
 
 --- /code ---
 
@@ -36,7 +36,7 @@ burn = 100  # How much fuel is burned in each frame
 
 --- task ---
 
-At the bottom of your program, add code to ask the user how much fuel to add to the rocket and store their answer in a `fuel` global variable.
+Füge am Ende deines Programms Code hinzu, der abfragt, wie viel Treibstoff der Rakete hinzugefügt werden soll, und speichere diese Antwort in einer globalen Variablen `treibstoff`.
 
 --- code ---
 ---
@@ -44,22 +44,22 @@ language: python filename: main.py line_numbers: true line_number_start: 51
 line_highlights: 51
 ---
 
-fuel = int(input('How many kilograms of fuel do you want to use?'))   
+treibstoff = int(input('Wie viele Kilogramm Treibstoff willst Du verbrauchen?'))   
 run()
 
 --- /code ---
 
 --- /task ---
 
-### Check fuel against burn
+### Treibstoff auf Verbrennung prüfen
 
-The rocket should only move if it hasn't burned all of its fuel.
+Die Rakete sollte sich nur bewegen, wenn sie nicht ihren gesamten Treibstoff verbraucht hat.
 
 --- task ---
 
-Add code to the `draw_rocket()` function to reduce the remaining `fuel` by the `burn` of each frame. Use `print()` to show how much fuel is left in each frame.
+Füge der Funktion `zeichne_rakete()` Code hinzu, um den verbleibenden `treibstoff` um `verbrennen` in jedem Frame zu reduzieren. Verwende `print()`, um anzuzeigen, wie viel Treibstoff in jedem Frame übrig ist.
 
-You need to say that you want to use the global `fuel` and `burn` variables.
+Du musst angeben, dass du die globalen Variablen `treibstoff` und `verbrennen` verwenden möchtest.
 
 --- code ---
 ---
@@ -67,10 +67,10 @@ language: python filename: main.py — draw_rocket() line_numbers: true line_num
 line_highlights: 15, 17-18
 ---
 
-    global rocket_y, fuel, burn   
-    rocket_y -= 1   
-    fuel -= burn  # Burn fuel   
-    print('Fuel left: ', fuel)
+    global rakete_y, treibstoff, verbrennen   
+    rakete_y -= 1   
+    treibstoff -= verbrennen  # Treibstoff verbrennen   
+    print('Verbleibender Treibstoff: ', treibstoff)
 
 --- /code ---
 
@@ -78,21 +78,21 @@ line_highlights: 15, 17-18
 
 --- task ---
 
-**Test:** Run your program to check that the animation doesn't start until `How many kilograms of fuel do you want to use?` has been answered. Try entering `30000` as the amount of fuel.
+**Test:** Führe dein Programm aus, um zu überprüfen, dass die Animation erst startet, nachdem `Wie viele Kilogramm Kraftstoff möchtest du verbrauchen?` beantwortet wurde. Probier es mal mit `30000` als Treibstoffmenge.
 
-The rocket will keep going even if it has no fuel left.
+Die Rakete wird weiterfliegen, auch wenn sie keinen Treibstoff mehr hat.
 
-![The program with a question in the output area asking how much fuel is required.](images/burn_question.png)
+![Das Programm mit der Abfrage im Ausgabebereich, wie viel Treibstoff benötigt wird.](images/burn_question.png)
 
 --- /task ---
 
 --- task ---
 
-The rocket should only move if it has enough fuel left. Add an `if` statement to check that `fuel >= burn`.
+Die Rakete sollte sich nur bewegen, wenn sie noch genügend Treibstoff hat. Füge eine `if`-Anweisung hinzu, um zu überprüfen, ob `treibstoff >= verbrennen` ist.
 
-You will need to indent all of the lines of code before the `image()` function call. To do this, highlight all of the lines with the mouse and then tap the <kbd>Tab</kbd> on the keyboard to indent all the lines at once.
+Du musst alle Codezeilen vor dem Funktionsaufruf `image()` einrücken. Markiere dazu alle Zeilen mit der Maus und tippe dann auf der Tastatur auf <kbd>Tabulator</kbd>, um alle Zeilen auf einmal einzurücken.
 
-The `image()` line doesn't need to be indented because you always want to draw the rocket.
+Die Zeile mit `image()` muss nicht eingerückt werden, da du immer die Rakete zeichnen möchtest.
 
 --- code ---
 ---
@@ -100,24 +100,24 @@ language: python filename: main.py — draw_rocket() line_numbers: true line_num
 line_highlights: 17-30
 ---
 
-    global rocket_y, fuel, burn  
+    global rakete_y, treibstoff, verbrennen  
     
-    if fuel >= burn:  # Still got fuel   
-        rocket_y -= 1   
-        fuel -= burn   
-        print('Fuel left: ', fuel)   
+    if treibstoff >= verbrennen:  # Noch Treibstoff verfügbar   
+        rakete_y -= 1   
+        treibstoff -= verbrennen   
+        print('Verbleibender Treibstoff: ', treibstoff)   
     
-        no_stroke()  # Turn off the stroke   
+        no_stroke()  # Schaltet Zeichnen aus   
     
         for i in range(25):   
             fill(255, 255 - i*10, 0)   
-            ellipse(width/2, rocket_y + i, 8, 3)    
+            ellipse(width/2, rakete_y + i, 8, 3)    
     
         fill(200, 200, 200, 100)   
         for i in range(20):   
-            ellipse(width/2 + randint(-5, 5), rocket_y + randint(20, 50), randint(5, 10), randint(5, 10))   
+            ellipse(width/2 + randint(-5, 5), rakete_y + randint(20, 50), randint(5, 10), randint(5, 10))   
     
-    image(rocket, width/2, rocket_y, 64, 64)
+    image(rakete, width/2, rakete_y, 64, 64)
 
 --- /code ---
 
@@ -125,13 +125,13 @@ line_highlights: 17-30
 
 --- task ---
 
-**Test:** Run your program to check that the rocket stops when there is no fuel left.
+**Test:** Führe dein Programm aus, um zu überprüfen, ob die Rakete stoppt, wenn kein Treibstoff mehr vorhanden ist.
 
-![Image of a rocket in the middle of the screen with the statement 'Fuel left: 0'.](images/burn_empty.png){:width="300px"}
+![Bild einer Rakete in der Mitte des Bildschirms mit der Meldung „Verbleibender Treibstoff: 0“.](images/burn_empty.png){:width="300px"}
 
 --- /task ---
 
-Did your rocket stop when it ran out of fuel? Well done, you sent a rocket to outer space!
+Ist deine Rakete stehen geblieben, als ihr der Treibstoff ausgegangen ist? Gut gemacht, du hast eine Rakete in den Weltraum geschickt!
 
 --- save ---
 
