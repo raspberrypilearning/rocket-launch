@@ -42,7 +42,7 @@ orbit_y = screen_size - orbit_radius
 
 --- task ---
 
-Aggiorna la funzione `draw_ background()` per rappresentare l'orbita del satellite che il razzo deve raggiungere tramite il disegno di un'ellisse.
+Aggiorna la funzione `draw_background()` per rappresentare l'orbita del satellite che il razzo deve raggiungere tramite il disegno di un'ellisse.
 
 --- code ---
 ---
@@ -219,7 +219,7 @@ line_highlights: 36, 38-39
 
 --- task ---
 
-**Test:** Esegui il tuo programma più volte con numeri diversi; ad esempio, 25.000 kg di carburante dovrebbero essere la quantità necessaria per far diventare verde il razzo, ma verifica anche che si colori di giallo quando utilizzi una quantità maggiore.
+**Test:** Esegui il tuo programma più volte con numeri diversi; ad esempio, 25.000 kg di carburante dovrebbe essere la quantità necessaria per far diventare verde il razzo, ma verifica anche che si colori di giallo quando utilizzi una quantità maggiore.
 
 ![Un razzo giallo che ha raggiunto il cerchio orbitale e ha ancora carburante.](images/orbit_meh.png){:width="300px"}
 
