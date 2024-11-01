@@ -12,7 +12,7 @@ screen_size = 400
 # The draw_background function goes here
 
 
-
+ 
 def setup():
     # Set up your animation here
     size(screen_size, screen_size)
@@ -28,3 +28,5 @@ def draw():
 
 
 run()
+ 
+ 
