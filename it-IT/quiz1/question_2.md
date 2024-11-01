@@ -54,7 +54,7 @@ Il secondo e il terzo input della funzione `image()` sono le coordinate `x` e `y
 
   --- feedback ---
 
-Corretto! Il secondo e il terzo input della funzione `image()` sono le coordinate `x` e `y` per il centro dell'immagine. Questa immagine ha le coordinate (300, 100), quindi è 300 (su 400) pixel da sinistra per la coordinata `x` e 100 (su 400) pixel verso il basso dall'alto.
+Corretto! Il secondo e il terzo input della funzione `image()` sono le coordinate `x` e `y` per il centro dell'immagine. Questa immagine ha le coordinate (300, 100), quindi è 300 (su 400) pixel da sinistra per la coordinata `x` e 100 (su 400) pixel verso il basso dalla sommità.
 
   --- /feedback ---
 
