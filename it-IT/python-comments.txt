@@ -6,7 +6,7 @@ Posiziona l'immagine al centro
 
 Il pianeta che hai scelto
 
-La funzione draw_ background va qui
+La funzione draw_background va qui
 
 Abbreviazione per background(0, 0, 0) — black
 
@@ -40,7 +40,7 @@ Quanto carburante viene bruciato ad ogni frame
 
 Quanti chilogrammi di carburante vuoi utilizzare?
 
-Brucia carburante
+Carburante da bruciare
 
 Carburante residuo: 
 
