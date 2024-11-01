@@ -4,7 +4,7 @@
 
 ## Quello che farai
 
-Realizza un'animazione nella quale mandi un satellite in orbita, facendo trasportare da un razzo! La tua animazione creerà fantastici effetti grafici e simulerà la migliore quantità di carburante da fornire al razzo.
+Realizza un'animazione nella quale mandi un satellite in orbita, facendolo trasportare da un razzo! La tua animazione creerà fantastici effetti grafici e simulerà la migliore quantità di carburante da fornire al razzo.
 
 ![Schermate affiancate che mostrano un razzo verde in orbita e un razzo rosso che non è riuscito a raggiungere l'orbita.](images/showcase.png)
 
