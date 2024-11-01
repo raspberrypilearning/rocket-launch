@@ -1,30 +1,30 @@
-## Exhaust effects
+## Abgaseffekte
 
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">
 
-The rocket will look more realistic with some special effects to simulate the exhaust trail. 
+Mit einigen Spezialeffekten zur Simulation der Abgasspur wird die Rakete realistischer aussehen. 
 
-You can create cool effects by using a `for` loop to draw lots of shapes in each frame.
+Du kannst coole Effekte erstellen, indem du mit einer „for“-Schleife viele Formen in jeden Frame zeichnest.
 
 </div>
 <div>
 
-![The rocket mid flight with an exhaust trail.](images/flying_rocket.gif){:width="300px"}
+![Die Rakete mitten im Flug mit einer Abgasspur.](images/flying_rocket.gif){:width="300px"}
 
 </div>
 </div>
 
 <p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;">
-Coding is used to make <span style="color: #0faeb0">**graphic effects**</span> for movies and games. It's much quicker to write code than to draw each frame of an animation individually. </p>
+Mithilfe von Programmierung werden <span style="color: #0faeb0">**Grafikeffekte**</span> für Filme und Spiele erstellt. Es ist viel schneller, Code zu schreiben, als jedes Bild einer Animation einzeln zu zeichnen. </p>
 
-### Draw your exhaust
+### Zeichne dein Abgas
 
-Drawing lots of yellow ellipses at different `y` positions creates an exhaust trail with a round bottom.
+Durch das Zeichnen vieler gelber Ellipsen an verschiedenen `y` Positionen entsteht eine Abgasspur mit runder Unterseite.
 
 --- task ---
 
-Update your `draw_rocket()` function to include a `for` loop that repeats the drawing of `25` exhaust ellipses. The **loop variable** `i` gets added to `rocket_y` to draw each ellipse further below the rocket.
+Verfeinere deine Funktion `zeichne_rakete()` mit einer `for`-Schleife, die das Zeichnen von `25` Abgasellipsen wiederholt. Die **Schleifenvariable** `i` wird zu `rakete_y` addiert, um jede Ellipse weiter unterhalb der Rakete zu zeichnen.
 
 --- code ---
 ---
@@ -32,43 +32,43 @@ language: python filename: main.py - draw_rocket() line_numbers: true line_numbe
 line_highlights: 16-20
 ---
 
-def draw_rocket(): global rocket_y   
-rocket_y -= 1   
+def zeichne_rakete(): global rakete_y   
+rakete_y -= 1   
 
-    no_stroke()  # Turn off the stroke
+    no_stroke() # Schaltet Zeichnen aus
     
-    for i in range(25):  # Draw 25 burning exhaust ellipses   
-        fill(255, 255, 0)  # Yellow   
-        ellipse(width/2, rocket_y + i, 8, 3)  # i increases each time the loop repeats    
+    for i in range(25): # Zeichne 25 brennende Abgasellipsen   
+        fill(255, 255, 0) # Gelb   
+        ellipse(width/2, rakete_y + i, 8, 3) # i erhöht sich bei jeder Wiederholung der Schleife    
     
-    image(rocket, width/2, rocket_y, 64, 64)
+    image(rakete, width/2, rakete_y, 64, 64)
 
 
 --- /code ---
 
 --- /task ---
 
-A `for` loop repeats a piece of code once for every item it is given.
+Eine `for`-Schleife wiederholt einen Codeabschnitt einmal für jedes ihr übergebene Element.
 
-To run the code in a `for` loop a certain number of times, you can use the `range()` function. For example, `range(5)` creates a sequence of five numbers starting from 0, so [0, 1, 2, 3, 4].
+Um den Code in einer `for`-Schleife eine bestimmte Anzahl von Malen auszuführen, kannst du die Funktion `range()` verwenden. Beispielsweise erstellt `range(5)` eine Folge von fünf Zahlen, beginnend bei 0, also [0, 1, 2, 3, 4].
 
-Each time the `for` loop repeats, it sets a variable to the current item so that you can use it in the loop.
+Bei jeder Wiederholung der `for`-Schleife wird eine Variable auf das aktuelle Element gesetzt, sodass du sie in der Schleife verwenden kannst.
 
 --- task ---
 
-**Test:** Run your code to check the rocket has a new exhaust trail.
+**Test:** Führe deinen Code aus, um zu überprüfen, ob die Rakete eine neue Abgasspur hat.
 
-![A close-up of the rocket with an exhaust trail.](images/rocket_exhaust.png){:width="300px"}
+![Eine Nahaufnahme der Rakete mit einer Rauchspur.](images/rocket_exhaust.png){:width="300px"}
 
 --- /task ---
 
-### Add a gradient
+### Füge einen Farbverlauf hinzu
 
-The `i` variable can also be used to create a colour gradient with less green in each ellipse that gets drawn.
+Die Variable `i` kann auch verwendet werden, um einen Farbverlauf mit weniger Grün in jeder gezeichneten Ellipse zu erstellen.
 
 --- task ---
 
-Change the call to `fill()` to set the amount of green to `255 - i * 10` so that the first ellipse has equal amounts of red and green and the last ellipse has very little green.
+Ändere den Aufruf in `fill()`, um den Grünanteil auf `255 - i * 10` festzulegen, sodass die erste Ellipse gleiche Mengen Rot und Grün aufweist und die letzte Ellipse sehr wenig Grün.
 
 --- code ---
 ---
@@ -77,8 +77,8 @@ line_highlights: 19
 ---
 
     for i in range(25):   
-        fill(255, 255 - i * 10, 0)  # Reduce the amount of green    
-        ellipse(width/2, rocket_y + i, 8, 3)
+        fill(255, 255 - i * 10, 0)  # Grünanteil reduzieren    
+        ellipse(width/2, rakete_y + i, 8, 3)
 
 --- /code ---
 
@@ -86,21 +86,21 @@ line_highlights: 19
 
 --- task ---
 
-**Test:** Check that you get a trail of ellipses gradually changing from yellow to red.
+**Test:** Überprüfe, ob du eine Spur von Ellipsen erhältst, deren Farbe allmählich von Gelb nach Rot wechselt.
 
 --- /task ---
 
-### Create a smoke effect
+### Erzeuge einen Raucheffekt
 
-The smoke exhaust trail is created by drawing lots of slightly transparent grey ellipses at different positions in each frame.
+Die Rauchspur wird durch das Zeichnen vieler leicht transparenter grauer Ellipsen an unterschiedlichen Positionen in jedem Frame erstellt.
 
-![A slow animation of the smoke effect.](images/rocket_smoke.gif)
+![Eine langsame Animation des Raucheffekts.](images/rocket_smoke.gif)
 
 --- task ---
 
-This time the `fill()` is outside the loop as the colour is the same for each smoke ellipse. The fourth input to `fill()` is the opacity, a low opacity value makes the colour more transparent so you can see the shapes underneath.
+Dieses Mal liegt `fill()` außerhalb der Schleife, da die Farbe für jede Rauchellipse gleich ist. Die vierte Eingabe für `fill()` ist die Deckkraft. Ein niedriger Deckkraftwert macht die Farbe transparenter, sodass du die darunter liegenden Formen sehen kannst.
 
-In each frame of the animation, 20 ellipses of random sizes will be drawn at random positions.
+In jedem Frame der Animation werden 20 Ellipsen zufälliger Größe an zufälligen Positionen gezeichnet.
 
 --- code ---
 ---
@@ -110,13 +110,13 @@ line_highlights: 22-24
 
     for i in range(25):  
         fill(255, 255 - i * 10, 0)   
-        ellipse(width/2, rocket_y + i, 8, 3)    
+        ellipse(width/2, rakete_y + i, 8, 3)    
     
-    fill(200, 200, 200, 100)  # Transparent grey   
-    for i in range(20):  # Draw 20 random smoke ellipses    
-        ellipse(width/2 + randint(-5, 5), rocket_y + randint(20, 50), randint(5, 10), randint(5, 10))    
+    fill(200, 200, 200, 100)  # Transparent grau   
+    for i in range(20):  # Zeichne 20 zufällige Rauchellipsen    
+        ellipse(width/2 + randint(-5, 5), rakete_y + randint(20, 50), randint(5, 10), randint(5, 10))    
     
-    image(rocket, width/2, rocket_y, 64, 64)
+    image(rakete, width/2, rakete_y, 64, 64)
 
 --- /code ---
 
@@ -124,9 +124,9 @@ line_highlights: 22-24
 
 --- task ---
 
-**Test:** Run your program and check the exhaust fumes are visible.
+**Test:** Führe dein Programm aus und prüfe, ob die Abgase sichtbar sind.
 
-![An animation of the rocket and exhaust trail with added smoke.](images/rocket_exhaust_circles.gif)
+![Eine Animation der Rakete und der Rauchspur mit zusätzlichem Rauch.](images/rocket_exhaust_circles.gif)
 
 --- /task ---
 
