@@ -1,29 +1,29 @@
-## Set the scene
+## Einrichten der Szene
 
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">
-The animation needs a space backdrop with a planet to launch the rocket from.
+Für die Animation wird ein Weltraumhintergrund mit einem Planeten benötigt, von dem aus die Rakete gestartet werden kann.
 </div>
 <div>
 
-![A planet against a black background.](images/step_2.png){:width="300px"}
+![Ein Planet vor einem schwarzen Hintergrund.](images/step_2.png){:width="300px"}
 
 </div>
 </div>
 
 --- task ---
 
-Open the [project template](https://editor.raspberrypi.org/en/projects/rocket-launch-starter){:target="_blank"}.
+Öffne die [Projektvorlage](https://editor.raspberrypi.org/en/projects/rocket-launch-starter){:target="_blank"}.
 
-### Create the screen
+### Erstelle die Bildfläche
 
 --- /task ---
 
-You will use a `screen_size` variable to set the size of the screen and in calculations. Variables defined outside functions are **global** so you can use them anywhere in your program.
+Du verwendest eine Variable `bildschirm_groesse` für die Bildschirmgröße und für Berechnungen. Variablen, die außerhalb von Funktionen definiert werden, sind **global**, dass du sie von überall in deinem Programm verwenden kannst.
 
 --- task ---
 
-Find the comment `Setup global variables` and add a line of code to create your `screen_size` variable:
+Suche den Kommentar `Globale Variablen einrichten` und füge eine Codezeile hinzu, um deine Variable `bildschirm_groesse` zu erstellen:
 
 --- code ---
 ---
@@ -31,8 +31,8 @@ language: python filename: main.py line_numbers: true line_number_start: 7
 line_highlights: 8
 ---
 
-# Setup global variables
-screen_size = 400
+# Globale Variablen einrichten
+bildschirm_groesse = 400
 
 --- /code ---
 
@@ -40,7 +40,7 @@ screen_size = 400
 
 --- task ---
 
-Use the `screen_size` variable to create a square 400 by 400 pixels:
+Benutze die Variable `bildschirm_groesse`, um ein Quadrat mit 400 x 400 Pixeln zu erstellen:
 
 --- code ---
 ---
@@ -49,33 +49,33 @@ line_highlights: 20
 ---
 
 def setup():   
-# Setup your animation here   
-size(screen_size, screen_size)
+# Richte hier Deine Animation ein   
+size(bidschirm_groesse, bildschirm_groesse)
 
 
 --- /code ---
 
 --- /task ---
 
-### Choose an image
+### Wähle ein Bild
 
 --- task ---
 
-The starter project has three different planet images and the moon provided for you. You can view these in the **Image gallery** on the left hand side of the code editor.
+Im Starterprojekt stehen dir drei verschiedene Planetenbilder und der Mond zur Verfügung. Du kannst diese in der **Bildergalerie** (engl.: "Image gallery") auf der linken Seite des Code-Editors ansehen.
 
-![A screenshot of the code editor, with the image gallery highlighted containing images of planets and the moon.](images/image_gallery.png)
+![Ein Screenshot des Code-Editors mit hervorgehobener Bildergalerie mit Bildern von Planeten und dem Mond.](images/image_gallery.png)
 
-**Choose:** Decide which image you want to use and make a note of the filename. For example, `orange_planet.png`.
+**Wähle:** Entscheide welches Bild du verwenden möchtest und notiere den Dateinamen. Beispiel: `orange_planet.png`.
 
 --- /task ---
 
 --- task ---
 
-Add code to the `setup()` function to load and position your image.
+Füge der Funktion `setup()` Code hinzu, um dein Bild zu laden und zu positionieren.
 
-The `image_mode(CENTER)` line says that you will be positioning images by giving the coordinates of the centre of the image (instead of the top left corner).
+Die Zeile `image_mode(CENTER)` besagt, dass Bilder anhand von Koordinaten der Bildmitte positioniert werden (anstelle der oberen linken Ecke).
 
-Next load your image into a global `planet` variable. The variable needs to be global so you can use it later when you draw the planet to the screen.
+Lade als Nächstes dein Bild in eine globale Variable `planet`. Die Variable muss global sein, damit du sie später verwenden kannst, wenn du den Planeten auf dem Bildschirm zeichnest.
 
 --- code ---
 ---
@@ -84,27 +84,27 @@ line_highlights: 21-23
 ---
 
 def setup():   
-# Setup your animation here   
-size(screen_size, screen_size)   
-image_mode(CENTER)  # Positions the image in the center global planet   
-planet = load_image('planet.png')  # Your chosen planet
+# Richte hier Deine Animation ein   
+size(bildschirm_groesse, bildschirm_groesse)   
+image_mode(CENTER)  # Positioniert das Bild in der Mitte global planet   
+planet = load_image('planet.png')  # Dein gewählter Planet
 
 
 --- /code ---
 
 --- /task ---
 
-### Draw background
+### Hintergrund zeichnen
 
 --- task ---
 
-Define a `draw_background()` function, to draw the background, below the comment that tells you where it should go.
+Definiere eine Funktion `zeichne_hintergrund()` unter dem entsprechenden Kommentar, um den Hintergrund zu zeichnen.
 
-Use `background(0)` to set the background colour to black and add an `image()` function to draw the planet. The `image()` function is laid out:
+Verwende `background(0)`, um die Hintergrundfarbe auf Schwarz festzulegen, und füge eine `image()` Funktion hinzu, um den Planeten zu zeichnen. Die Funktion `image()` ist wie folgt aufgebaut:
 
-`image(image filename, x-coordinate, y-coordinate, image_width, image_height)`
+`image(Bilddateiname, X-Koordinate, Y-Koordinate, Bildbreite, Bildhöhe)`
 
-The line of code `from p5 import *` gives you global `width` and `height` variables based on the size of the screen. Use these in your code to position the planet with its centre half-way across (`width/2`) and at the bottom (`height`) of the screen.
+Die Codezeile `from p5 import *` gibt dir die globalen Variablen `width` (Breite) und `height` (Höhe) basierend auf der Bildschirmgröße. Verwende diese in deinem Code, um den Planeten mit seinem Mittelpunkt auf halber Breite (`width/2`) und am unteren Rand (`height`) des Bildschirms zu positionieren.
 
 --- code ---
 ---
@@ -112,21 +112,21 @@ language: python filename: main.py — draw_background() line_numbers: true line
 line_highlights: 15-17
 ---
 
-# The draw_background function goes here
-def draw_background():   
-background(0)  # Short for background(0, 0, 0) — black    
-image(planet, width/2, height, 300, 300)  # Draw the image
+# Die Funktion „zeichne_hintergrund“ kommt hierher
+def zeichne_hintergrund():   
+background(0) # Kurzform für background(0, 0, 0) — schwarz    
+image(planet, width/2, height, 300, 300) # Zeichnet das Bild
 
 
 --- /code ---
 
-Putting all the code for drawing the background into one function makes your code easier to understand.
+Wenn du den gesamten Code zum Zeichnen des Hintergrunds in einer Funktion bündelst, wird dein Code leichter verständlich.
 
 --- /task ---
 
 --- task ---
 
-To make the background appear, call `draw_background()` in `draw()`. This will cause the background to be re-drawn every time `draw()` is called, covering over any older drawing:
+Um den Hintergrund anzuzeigen, rufe `zeichne_hintergrund()` in `draw()` (engl. "to draw" = "zeichnen") auf. Dies führt dazu, dass der Hintergrund bei jedem Aufruf von `draw()` neu gezeichnet wird und alle älteren Zeichnungen überdeckt:
 
 --- code ---
 ---
@@ -135,8 +135,8 @@ line_highlights: 30
 ---
 
 def draw():   
-# Things to do in every frame    
-draw_background()
+# Dinge die in jedem Frame passieren    
+zeichne_hintergrund()
 
 --- /code ---
 
@@ -144,10 +144,10 @@ draw_background()
 
 --- task ---
 
-**Test:** Run your code and check that it draws a black background with half a planet at the bottom.
+**Test:** Führe deinen Code aus und prüfe, ob er einen schwarzen Hintergrund mit einem halben Planeten darunter zeichnet.
 
 --- /task ---
 
-If you have a Raspberry Pi account, on your code editor you can click on the **Save** button to save a copy of your project to your Projects.
+Wenn Du ein Raspberry Pi Konto hast, kannst Du auf **Speichern** klicken, um eine Kopie in Deinen Projekten zu speichern.
 
 --- save ---
