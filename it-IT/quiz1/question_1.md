@@ -24,7 +24,7 @@ for i in range(5):
 
   --- feedback ---
 
-Non proprio, un ciclo`for` in Python ripete il suo codice una volta nella sequenza stabilita, e qui `range` inizia la sequenza partendo da`0`.
+Non proprio, un ciclo `for` in Python ripete il suo codice una volta nella sequenza stabilita, e qui `range` inizia la sequenza partendo da `0`.
 
   --- /feedback ---
 
@@ -48,7 +48,7 @@ Corretto. Il ciclo viene eseguito una volta, in ordine, per ogni elemento `i` ne
 
   --- feedback ---
 
-Dato che`range()` restituisce una sequenza ordinata di numeri da 0 al numero che gli è stato passato, questo è l'ordine che dovrai aspettarti che verrà stampato ad un ciclo di `for`. Dato che`range()` restituisce una sequenza ordinata di numeri da 0 al numero che gli è stato passato, questo è l'ordine che dovrai aspettarti che verrà stampato ad un ciclo di `for`.
+Dato che `range()` restituisce una sequenza ordinata di numeri da 0 al numero che gli è stato passato, questo è l'ordine che dovrai aspettarti che verrà stampato ad un ciclo di `for`. Dato che`range()` restituisce una sequenza ordinata di numeri da 0 al numero che gli è stato passato, questo è l'ordine che dovrai aspettarti che verrà stampato ad un ciclo di `for`.
 
   --- /feedback ---
 
