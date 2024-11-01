@@ -1,54 +1,54 @@
-## Quick quiz
+## Kurzes Quiz
 
-Answer the three questions. There are hints to guide you to the correct answer.
+Beantworte die drei Fragen. Hinweise helfen dir beim Finden der richtigen Antwort.
 
-When you have answered each question, click on **Check my answer**.
+Nach dem Beantworten jeder Frage wähle **Meine Antwort prüfen**.
 
-Have fun!
+Viel Spaß!
 
 --- question ---
 ---
-legend: Question 1 of 3
+legend: Frage 1 von 3
 ---
 
-Which output would you expect if you ran the program below?
+Welche Ausgabe würdest du erwarten, wenn du das folgende Programm ausführen würdest?
 
 ```python
 for i in range(5):
-  print("Looping", i)
+  print("Schleife", i)
 ```
 
 --- choices ---
 
-- ( ) Looping 1 <br> Looping 2 <br> Looping 3 <br> Looping 4 <br> Looping 5
+- ( ) Schleife 1 <br> Schleife 2 <br> Schleife 3 <br> Schleife 4 <br> Schleife 5
 
   --- feedback ---
 
-Not quite, a `for` loop in Python repeats its code once for each item in a sequence it's given, and here `range` creates a sequence starting from `0`.
+Nicht ganz, eine `for`-Schleife in Python wiederholt ihren Code einmal für jedes Element in einer gegebenen Sequenz, und hier erstellt `range` eine Sequenz, die bei `0`beginnt.
 
   --- /feedback ---
 
-- ( ) Looping i
+- ( ) Schleife i
 
   --- feedback ---
 
-Not quite, the **loop variable** from a `for` loop — in this case `i` — holds the current value from the sequence the loop is working through.
+Nicht ganz, die **Schleifenvariable** aus einer `for`-Schleife – in diesem Fall `i` – enthält den aktuellen Wert aus der Sequenz, die die Schleife durchläuft.
 
   --- /feedback ---
 
-- (x) Looping 0 <br> Looping 1 <br> Looping 2 <br> Looping 3 <br> Looping 4
+- (x) Schleife 0 <br> Schleife 1 <br> Schleife 2 <br> Schleife 3 <br> Schleife 4
 
   --- feedback ---
 
-Correct. The loop runs once, in order, for each item `i` in the range [0, 1, 2, 3, 4].
+Korrekt. Die Schleife wird der Reihe nach einmal für jedes Element `i` in der Sequenz [0, 1, 2, 3, 4] ausgeführt.
 
   --- /feedback ---
 
-- ( ) Looping 4 <br> Looping 3 <br> Looping 2 <br> Looping 1 <br> Looping 0
+- ( ) Schleife 4 <br> Schleife 3 <br> Schleife 2 <br> Schleife 1 <br> Schleife 0
 
   --- feedback ---
 
-Not quite, a `for` loop runs through the sequence of items it is given in order. Because `range()` gives an ordered sequence from 0 to the number it is passed, that is the order you would expect to see printed out by this `for` loop.
+Nicht ganz, eine `for`-Schleife durchläuft die ihr angegebene Elementfolge der Reihe nach. Da `range()` eine geordnete Folge von 0 bis zur übergebenen Zahl ergibt, ist dies die Reihenfolge, die du bei der Ausgabe dieser `for`-Schleife erwarten würdest.
 
   --- /feedback ---
 
