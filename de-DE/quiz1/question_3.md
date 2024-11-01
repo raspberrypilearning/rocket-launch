@@ -1,21 +1,21 @@
 --- question ---
 ---
-legend: Question 3 of 3
+legend: Frage 3 von 3
 ---
 
-This code uses `tint()` to colour a rocket in a game to show the player how they are doing.
+Dieser Code verwendet `tint()`, um eine Rakete in einem Spiel einzufärben und anzuzeigen, wie es gerade läuft.
 
 --- code ---
 ---
 language: python
 ---
 
-if points >= 100:    
-tint(0, 255, 0) #Green   
-elif points < 100 and lives == 1:   
-tint(255, 200, 0) #Amber    
-elif points < 100 and lives == 0:     
-tint(255, 0, 0) #Red     
+if punkte >= 100:    
+tint(0, 255, 0) #Grün   
+elif punkte < 100 and leben == 1:   
+tint(255, 200, 0) #Gelb    
+elif punkte < 100 and leben == 0:     
+tint(255, 0, 0) #Rot     
 else:      
 no_tint()
 
@@ -23,47 +23,47 @@ image(rocket, width/2, height/2, 64, 64)
 
 --- /code ---
 
-If the `points` variable has the value `99` and the `lives` variable has the value `1`, what will the rocket look like?
+Wenn die Variable `punkte` den Wert `99` und die Variable `leben` den Wert `1`hat, wie wird die Rakete aussehen?
 
 --- choices ---
 
 - (x)
 
-![A rocket image with amber tint.](images/rocket_amber.png) <div style="text-align: center;">Amber
+![Ein Raketenbild mit gelben Farbton.](images/rocket_amber.png) <div style="text-align: center;">Gelb
 
  --- feedback ---
 
- Correct! The player has less than 100 points and only 1 life left. The rocket is coloured amber to let them know that this is their last chance to win!
+ Korrekt! Der Spieler hat weniger als 100 Punkte und nur noch 1 Leben. Die Rakete ist gelb, um anzuzeigen, dass dies die letzte Chance ist, zu gewinnen!
 
  --- /feedback ---
 
 - ( )
 
-![A rocket image with no tint](images/rocket_original.png) <div style="text-align: center;">No tint
+![Ein Raketenbild ohne Tönung](images/rocket_original.png) <div style="text-align: center;">Keine Tönung
 
  --- feedback ---
 
- Not quite, the rocket has a tint as one of the statements is true.
+ Nicht ganz, die Rakete hat eine Tönung, da eine der Aussagen wahr ist.
 
  --- /feedback ---
 
 - ( )
 
-![A rocket image with green tint](images/rocket_green.png) <div style="text-align: center;">Green
+![Ein Raketenbild mit grünem Farbton](images/rocket_green.png) <div style="text-align: center;">Grün
 
  --- feedback ---
 
- Not quite, the player would need `>= 100` points to win and turn their rocket green. They have `99`, which is not enough. Check the conditions carefully.
+ Nicht ganz, es wären `>= 100` Punkte nötig, um zu gewinnen und die Rakete grün zu färben. Hier ist die Punktezahl `99`, was nicht genug ist. Prüfe die Bedingungen sorgfältig.
 
  --- /feedback ---
 
 - ( )
 
-![A rocket image with red tint](images/rocket_red.png) <div style="text-align: center;">Red
+![Ein Raketenbild mit rotem Farbton](images/rocket_red.png) <div style="text-align: center;">Rot
 
  --- feedback ---
 
- Not quite, the player has `< 100` points but lives does not equal `0`. Check the conditions carefully.
+ Nicht ganz, es wurden `< 100` Punkte erzielt, aber Anzahl Leben ist nicht `0`. Prüfe die Bedingungen sorgfältig.
 
  --- /feedback ---
 
