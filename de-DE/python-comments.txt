@@ -1,72 +1,72 @@
-Setup global variables
+Globale Variablen einrichten
 
-Setup your animation here
+Richte hier Deine Animation hier ein
 
-Positions the image in the center
+Positioniert das Bild in der Mitte
 
-Your chosen planet
+Dein gewählter Planet
 
-The draw_background function goes here
+Die Funktion „zeichne_hintergrund“ kommt hierher
 
-Short for background(0, 0, 0) — black
+Kurzform für background(0, 0, 0) – schwarz
 
-Draw the image
+Zeichne das Bild
 
-Things to do in every frame
+Dinge die in jedem Frame passieren
 
-The draw_rocket function goes here
+Die Funktion „zeichne_rakete“ kommt hierher
 
-Start at the bottom
+Unten starten
 
-Use the global rocket_y variable
+Verwende die globale Variable rakete_y
 
-Move the rocket
+Bewege die Rakete
 
-Turn off the stroke
+Zeichnen ausschalten
 
-Draw 25 burning exhaust ellipses
+Zeichne 25 brennende Abgasellipsen
 
-Yellow
+Gelb
 
-i increases each time the loop repeats
+i erhöht sich bei jeder Wiederholung der Schleife
 
-Reduce the amount of green
+Reduziere die Menge an Grün
 
-Transparent grey
+Transparentes Grau
 
-Draw 20 random smoke ellipses
+Zeichne 20 zufällige Rauchellipsen
 
-How much fuel is burned in each frame
+Wie viel Kraftstoff wird in jedem Frame verbrannt
 
-How many kilograms of fuel do you want to use?
+Wie viele Kilogramm Treibstoff willst Du verbrauchen?
 
-Burn fuel
+Treibstoff verbrennen
 
-Fuel left: 
+Verbleibender Treibstoff: 
 
-Still got fuel
+Noch Treibstoff verfügbar
 
-Turn off the stroke
+Zeichnen ausschalten
 
-Set a white stroke
+Weißen Strich einstellen
 
-Still flying
+Fliegt immer noch
 
-No more fuel and not in orbit
+Kein Treibstoff mehr und nicht im Orbit
 
-Failure
+Versagen
 
-So the planet isn't tinted red in the next frame!
+Damit der Planet im nächsten Frame nicht rot gefärbt ist!
 
-Success
+Erfolg
 
-Too much fuel
+Zu viel Treibstoff
 
-Looping
+Schleife
 
-Green
+Grün
 
-Amber
+Gelb
 
-Red
+Rot
 
