@@ -20,7 +20,7 @@ Il coding viene utilizzato per creare <span style="color: #0faeb0">**effetti gra
 
 ### Disegna i tuoi gas di scarico
 
-Disegnare molte ellissi gialle in diverse posizioni `y` crea una scia di scarico con un fondo rotondo.
+Disegnare molte ellissi gialle in diverse posizioni `y` crea una scia di scarico di forma tondeggiante.
 
 --- task ---
 
@@ -68,7 +68,7 @@ La variabile `i` può essere utilizzata anche per creare una sfumatura di colore
 
 --- task ---
 
-Cambia la chiamata della funzione `fill()` per impostare la quantità di verde al valore di `255 - i * 10` in modo che la prima ellisse abbia la stessa quantità di rosso e verde e l'ultima ellisse ha pochissimo verde.
+Cambia la chiamata della funzione `fill()` per impostare la quantità di verde al valore di `255 - i * 10` in modo che la prima ellisse abbia la stessa quantità di rosso e verde e l'ultima ellisse abbia pochissimo verde.
 
 --- code ---
 ---
