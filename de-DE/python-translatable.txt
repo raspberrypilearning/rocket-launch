@@ -1,24 +1,24 @@
-screen_size
+bildschirm_groesse
 
 planet
 
-draw_background
+zeichne_hintergrund
 
-rocket
+rakete
 
-rocket_y
+rakete_y
 
-draw_rocket
+zeichne_rakete
 
-burn
+verbrennen
 
-fuel
+treibstoff
 
 orbit_radius
 
 orbit_y
 
-points
+punkte
 
-lives
+leben
 
