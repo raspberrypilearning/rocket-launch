@@ -48,7 +48,7 @@ Juist. De lus loopt één keer, in volgorde, voor elk item `i` in het bereik [0,
 
   --- feedback ---
 
-Omdat `range()` een geordende reeks geeft van 0 tot het getal dat wordt doorgegeven, is dat de volgorde die je zou verwachten getoond te worden door deze `for` lus. Omdat `range()` een geordende reeks geeft van 0 tot het getal dat wordt doorgegeven, is dat de volgorde die je zou verwachten getoond te worden door deze `for` lus.
+Niet helemaal, een `for` lus doorloopt de reeks van items in de gegeven volgorde. Omdat `range()` een geordende reeks geeft van 0 tot het getal dat wordt doorgegeven, is dat de volgorde die je zou verwachten getoond te worden door deze `for` lus.
 
   --- /feedback ---
 
