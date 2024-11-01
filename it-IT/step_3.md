@@ -67,7 +67,7 @@ rocket_y = screen_size # Inizia dal basso
 
 Definisci una funzione `draw_rocket()` per modificare la posizione `y` del razzo e ridisegnarlo.
 
-`rocket_y -= 1`è un modo più breve per dire `rocket_y = rocket_y - 1`.
+`rocket_y -= 1` è un modo più breve per dire `rocket_y = rocket_y - 1`.
 
 --- code ---
 ---
