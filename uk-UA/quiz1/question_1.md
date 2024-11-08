@@ -15,20 +15,20 @@ legend: Питання 1 з 3
 
 ```python
 for i in range(5):
-  print("Зациклення", i)
+  print(i)
 ```
 
 --- choices ---
 
-- ( ) Зациклення 1 <br> Зациклення 2 <br> Зациклення 3 <br> Зациклення 4 <br> Зациклення 5
+- ( )  1 <br> 2 <br> 3 <br> 4 <br> 5
 
   --- feedback ---
 
-Не зовсім так. В Python, цикл `for` повторює код один раз для кожного рядка в заданій послідовності, а тут `range` створює послідовність, яка починається з `0`.
+Not quite, a `for` loop in Python starts from 0, unless otherwise specified.
 
   --- /feedback ---
 
-- ( ) Зациклення i
+- ( ) i <br> i <br> i <br> i <br> i
 
   --- feedback ---
 
@@ -36,7 +36,7 @@ for i in range(5):
 
   --- /feedback ---
 
-- (x) Зациклення 0 <br> Зациклення 1 <br> Зациклення 2 <br> Зациклення 3 <br> Зациклення 4
+- (x) 0 <br> 1 <br> 2 <br> 3 <br> 4
 
   --- feedback ---
 
@@ -44,11 +44,11 @@ for i in range(5):
 
   --- /feedback ---
 
-- ( ) Зациклення 4 <br> Зациклення 3 <br> Зациклення 2 <br> Зациклення 1 <br> Зациклення 0
+- ( ) 4 <br>  3 <br> 2 <br> 1 <br> 0
 
   --- feedback ---
 
-Not quite, a `for` loop runs through the sequence of items it is given in order. Оскільки `range()` забезпечує вивід впорядкованої послідовності від 0 до заданого числа, тобто тієї послідовності, яку ти очікуєш отримати при виконанні цього циклу `for`.
+Not quite. Unless you have specified otherwise, a `for` loop will start at 0 and count up the number of times specified in the range.
 
   --- /feedback ---
 
