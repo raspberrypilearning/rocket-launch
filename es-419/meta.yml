@@ -7,26 +7,20 @@ meta_description: Aprende Python con los proyectos de codificación de la Fundac
 version: 0.0.1
 listed: true
 copyedit: true
-last_tested: "2021-10-06"
+last_tested: "2024-10-21"
 steps:
   - 
-    title: Lo que harás
+    title: What you will make
   - 
-    title: Establece la escena
-  - 
-    title: '¡El despegue!'
+    title: Draw the background
     completion:
       - engaged
   - 
+    title: '¡El despegue!'
+  - 
     title: Efectos de escape
   - 
-    title: Quemar combustible
-  - 
-    title: Alcanzando la órbita
-    completion:
-      - internal
-  - 
-    title: Prueba Rapida
+    title: Quick quiz
     knowledge_quiz:
       path: quiz1
       version: 1
@@ -35,6 +29,7 @@ steps:
     completion:
       - external
   - 
-    title: Mejora tu proyecto
+    title: Challenge
+    challenge: true
   - 
-    title: '¿Qué sigue?'
+    title: What can you do now?
