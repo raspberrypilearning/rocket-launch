@@ -7,26 +7,20 @@ meta_description: Lerne Python mit den Programmierprojekten für Kinder und Juge
 version: 0.0.1
 listed: true
 copyedit: true
-last_tested: "2021-10-06"
+last_tested: "2024-10-21"
 steps:
   - 
-    title: Das wirst du machen
+    title: What you will make
   - 
-    title: Einrichten der Szene
-  - 
-    title: Abheben!
+    title: Draw the background
     completion:
       - engaged
   - 
+    title: Abheben!
+  - 
     title: Abgaseffekte
   - 
-    title: Treibstoff verbrennen
-  - 
-    title: Erreichen der Umlaufbahn
-    completion:
-      - internal
-  - 
-    title: Kurzes Quiz
+    title: Quick quiz
     knowledge_quiz:
       path: quiz1
       version: 1
@@ -35,6 +29,7 @@ steps:
     completion:
       - external
   - 
-    title: Mach dein Projekt noch cooler
+    title: Challenge
+    challenge: true
   - 
-    title: Wie geht es weiter?
+    title: What can you do now?
