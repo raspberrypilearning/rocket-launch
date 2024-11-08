@@ -1,11 +1,9 @@
-#!/bin/python3
-
 # Importuj kod biblioteki
 from p5 import *
 from random import randint
 
-# Ustaw zmienne globalne
-
+# Set up global variables
+screen_size = 400
 
 # Funkcja draw_rocket pojawia się tutaj
 
@@ -14,15 +12,21 @@ from random import randint
 # Funkcja draw_background pojawia się tutaj
 
 
-
+ 
 def setup():
-  # Ustaw swoją animację tutaj
-  
-
+    # Set up your animation here
+    size(screen_size, screen_size)
+    image_mode(CENTER)
+    global planet
+    planet = load_image('planet.png')
+   
 
 def draw():
-  # Rzeczy do zrobienia w każdej klatce
+    # Rzeczy do zrobienia w każdej klatce
+
     
 
 
 run()
+ 
+ 
