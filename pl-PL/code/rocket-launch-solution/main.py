@@ -1,66 +1,42 @@
-#!/bin/python3
-
 # Importuj kod biblioteki
 from p5 import *
 from random import randint
 
-# Ustaw zmienne globalne
+# Set up global variables
 screen_size = 400
-rocket_y = 400
-spalenie = 100
-orbita_promień = 250
-orbit_y = screen_size - orbit_radius
+rocket_position = screen_size
 
 
 # Funkcja draw_rocket pojawia się tutaj
 def draw_rocket():
-    global rocket_y, paliwo, spalanie
-
-    if fuel >= spal i rocket_y > orbit_y:
-        rocket_y -= 1
-        paliwo -= spalanie
-        Print('Pozostało paliwo: ', paliwo)
-
-        no_stroke()
-
-        for i in range(25):
-            fill(255, 255 - i * 10, 0)
-            elipsa(width/2, rocket_y + i, 8, 3)
-
-        Fill(200, 200, 200, 100) # Przezroczysty szary
-        For i in range(20): # Rysuj 20 losowych elips dymu
-            elipsa(width/2 + randint(-5, 5), rocket_y +
-                    randint(20, 50), randint(5, 10), randint(5, 10))
-
-    if paliwo < burn and rocket_y > orbit_y:
-        tint(255, 0, 0)
-    paliwo elif < 1000 i rocket_y <= orbita_y:
-        tint(0, 255, 0)
-    paliwo elif >= 1000 i rocket_y <= orbit_y:
-        tint(255, 200, 0)
-
-    image(rakieta, width/2, rocket_y, 64, 64)
-    no_tint()
+    global rocket_position
+    rocket_position = rocket_position - 1
+    image(rocket, width / 2, rocket_position, 64, 64)
+    fill(200, 200, 200, 100)
+    no_stroke()
+    for i in range(20):
+        circle_size = randint(5, 10)
+        ellipse(
+            screen_size / 2 + randint(-5, 5),
+            rocket_position + randint(20, 50),
+            circle_size,
+            circle_size,
+        )
 
 
 # Funkcja draw_background pojawia się tutaj
 def draw_background():
-    background(0)
-    obraz(planeta, szerokość/2, wysokość, 300, 300)
-
-    no_fill()
-    stroke(255)
-    stroke_weight(2)
-    elipsa(width/2, height, orbit_radius * 2, orbit_radius * 2)
+    background(0, 0, 0)
+    image(planet, screen_size / 2, screen_size, 300, 300)
 
 
 def setup():
-    # Ustaw swoją animację tutaj
+    # Set up your animation here
     rozmiar(screen_size, screen_size)
     Image_mode(ŚRODEK)
     globalna planeta, rakieta
-    planeta = load_image('planet.png')
-    rocket = load_image('rocket.png')
+    planet = load_image("purple_planet.png")
+    rocket = load_image("rocket.png")
 
 
 def draw():
@@ -69,5 +45,4 @@ def draw():
     draw_rocket()
 
 
-Paliwo = int(input('Ile kilogramów paliwa chcesz użyć?'))
 run()
