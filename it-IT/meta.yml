@@ -7,26 +7,20 @@ meta_description: Impara Python con i progetti di coding della Raspberry Pi Foun
 version: 0.0.1
 listed: true
 copyedit: true
-last_tested: "2021-10-06"
+last_tested: "2024-10-21"
 steps:
   - 
-    title: Quello che farai
+    title: What you will make
   - 
-    title: Imposta la scena
-  - 
-    title: Decollo!
+    title: Draw the background
     completion:
       - engaged
   - 
+    title: Decollo!
+  - 
     title: Effetto gas di scarico
   - 
-    title: Brucia carburante
-  - 
-    title: Raggiungere l'orbita
-    completion:
-      - internal
-  - 
-    title: Quiz veloce
+    title: Quick quiz
     knowledge_quiz:
       path: quiz1
       version: 1
@@ -35,6 +29,7 @@ steps:
     completion:
       - external
   - 
-    title: Migliora il tuo progetto
+    title: Challenge
+    challenge: true
   - 
-    title: E adesso?
+    title: What can you do now?
