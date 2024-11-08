@@ -15,20 +15,20 @@ legend: Pregunta 1 de 3
 
 ```python
 for i in range(5):
-  print("Bucle", i)
+  print(i)
 ```
 
 --- choices ---
 
-- ( ) Bucle 1 <br> Bucle 2 <br> Bucle 3 <br> Bucle 4 <br> Bucle 5
+- ( )  1 <br> 2 <br> 3 <br> 4 <br> 5
 
   --- feedback ---
 
-No exactamente, un bucle `for` en Python repite su código una vez para cada elemento en una secuencia que se le da, y aquí `range` crea una secuencia que comienza en `0`.
+Not quite, a `for` loop in Python starts from 0, unless otherwise specified.
 
   --- /feedback ---
 
-- ( ) Bucle i
+- ( ) i <br> i <br> i <br> i <br> i
 
   --- feedback ---
 
@@ -36,7 +36,7 @@ No exactamente, la **variable de bucle** de un bucle `for`, en este caso `i`, co
 
   --- /feedback ---
 
-- (x) Bucle 0 <br> Bucle 1 <br> Bucle 2 <br> Bucle 3 <br> Bucle 4
+- (x) 0 <br> 1 <br> 2 <br> 3 <br> 4
 
   --- feedback ---
 
@@ -44,11 +44,11 @@ Correcto. El bucle se ejecuta una vez, en orden, para cada elemento `i` en el ra
 
   --- /feedback ---
 
-- ( ) Bucle 4 <br> Bucle 3 <br> Bucle 2 <br> Bucle 1 <br> Bucle 0
+- ( ) 4 <br>  3 <br> 2 <br> 1 <br> 0
 
   --- feedback ---
 
-No exactamente, un bucle `for` recorre la secuencia de elementos que se le dan en orden. Debido a que `range()` da una secuencia ordenada desde 0 hasta el número que se pasa, ese es el orden que esperaría ver impreso por este bucle `for`.
+Not quite. Unless you have specified otherwise, a `for` loop will start at 0 and count up the number of times specified in the range.
 
   --- /feedback ---
 
