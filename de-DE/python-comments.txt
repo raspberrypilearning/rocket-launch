@@ -1,0 +1,72 @@
+Globale Variablen einrichten
+
+Richte hier Deine Animation hier ein
+
+Positioniert das Bild in der Mitte
+
+Dein gewählter Planet
+
+Die Funktion „zeichne_hintergrund“ kommt hierher
+
+Kurzform für background(0, 0, 0) – schwarz
+
+Zeichne das Bild
+
+Dinge die in jedem Frame passieren
+
+Die Funktion „zeichne_rakete“ kommt hierher
+
+Unten starten
+
+Verwende die globale Variable rakete_y
+
+Bewege die Rakete
+
+Zeichnen ausschalten
+
+Zeichne 25 brennende Abgasellipsen
+
+Gelb
+
+i erhöht sich bei jeder Wiederholung der Schleife
+
+Reduziere die Menge an Grün
+
+Transparentes Grau
+
+Zeichne 20 zufällige Rauchellipsen
+
+Wie viel Kraftstoff wird in jedem Frame verbrannt
+
+Wie viele Kilogramm Treibstoff willst Du verbrauchen?
+
+Treibstoff verbrennen
+
+Verbleibender Treibstoff: 
+
+Noch Treibstoff verfügbar
+
+Zeichnen ausschalten
+
+Weißen Strich einstellen
+
+Fliegt immer noch
+
+Kein Treibstoff mehr und nicht im Orbit
+
+Versagen
+
+Damit der Planet im nächsten Frame nicht rot gefärbt ist!
+
+Erfolg
+
+Zu viel Treibstoff
+
+Schleife
+
+Grün
+
+Gelb
+
+Rot
+

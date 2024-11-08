@@ -1,0 +1,31 @@
+---
+title: Raketenstart
+hero_image: images/banner.png
+description: Erstelle eine Animation einer Rakete, die einen Satelliten in die Umlaufbahn bringt
+meta_title: Python Programmierprojekte für Kinder und Jugendliche | Raketenstart
+meta_description: Lerne Python mit den Programmierprojekten für Kinder und Jugendliche der Raspberry Pi Foundation. Erstelle eine Python-Animation, die zeigt, wie eine Rakete einen Satelliten in die Umlaufbahn bringt.
+version: 0.0.1
+listed: true
+copyedit: true
+last_tested: "2021-10-06"
+steps:
+  - title: Das wirst du machen
+  - title: Einrichten der Szene
+  - title: Abheben!
+    completion:
+      - engaged
+  - title: Abgaseffekte
+  - title: Treibstoff verbrennen
+  - title: Erreichen der Umlaufbahn
+    completion:
+      - internal
+  - title: Kurzes Quiz
+    knowledge_quiz:
+      path: quiz1
+      version: 1
+      questions: 3
+      passing_score: 3
+    completion:
+      - external
+  - title: Mach dein Projekt noch cooler
+  - title: Wie geht es weiter?
