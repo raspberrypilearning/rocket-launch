@@ -15,20 +15,20 @@ Quale risultato ti aspetteresti se eseguissi il programma seguente?
 
 ```python
 for i in range(5):
-  print("Ciclo", i)
+  print(i)
 ```
 
 --- choices ---
 
-- ( ) Ciclo 1 <br> Ciclo 2 <br> Ciclo 3 <br> Ciclo 4 <br> Ciclo 5
+- ( )  1 <br> 2 <br> 3 <br> 4 <br> 5
 
   --- feedback ---
 
-Non proprio, un ciclo `for` in Python ripete il suo codice una volta nella sequenza stabilita, e qui `range` inizia la sequenza partendo da `0`.
+Not quite, a `for` loop in Python starts from 0, unless otherwise specified.
 
   --- /feedback ---
 
-- ( ) Ciclo i
+- ( ) i <br> i <br> i <br> i <br> i
 
   --- feedback ---
 
@@ -36,7 +36,7 @@ Non proprio,  **la variabile del ciclo** che varia ad ogni ciclo `for` — in qu
 
   --- /feedback ---
 
-- (x) Ciclo 0 <br> Ciclo 1 <br> Ciclo 2 <br> Ciclo 3 <br> Ciclo 4
+- (x) 0 <br> 1 <br> 2 <br> 3 <br> 4
 
   --- feedback ---
 
@@ -44,11 +44,11 @@ Corretto. Il ciclo viene eseguito una volta, in ordine, per ogni elemento `i` ne
 
   --- /feedback ---
 
-- ( ) Ciclo 4 <br> Ciclo 3 <br> Ciclo 2 <br> Ciclo 1 <br> Ciclo 0
+- ( ) 4 <br>  3 <br> 2 <br> 1 <br> 0
 
   --- feedback ---
 
-Dato che `range()` restituisce una sequenza ordinata di numeri da 0 al numero che gli è stato passato, questo è l'ordine che dovrai aspettarti che verrà stampato ad un ciclo di `for`. Dato che`range()` restituisce una sequenza ordinata di numeri da 0 al numero che gli è stato passato, questo è l'ordine che dovrai aspettarti che verrà stampato ad un ciclo di `for`.
+Not quite. Unless you have specified otherwise, a `for` loop will start at 0 and count up the number of times specified in the range.
 
   --- /feedback ---
 
