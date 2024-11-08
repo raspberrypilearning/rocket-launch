@@ -3,78 +3,83 @@
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">
 
-سيبدو الصاروخ أكثر واقعية مع بعض المؤثرات الخاصة لمحاكاة مسار العادم. 
-
-يمكنك إنشاء تأثيرات رائعة باستخدام حلقة `for` لرسم الكثير من الأشكال في كل إطار.
-
+Add some grey circles to simulate the exhaust trail. 
 </div>
 <div>
 
-![سقوط الصاروخ مع مسار عادم.](images/flying_rocket.gif){:width="300px"}
-
+![A slow animation of the smoke effect.](images/rocket_smoke.gif)
 </div>
 </div>
 
-<p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;">
-تستخدم الشفرة البرمجية لعمل <span style="color: #0faeb0">** تأثيرات رسومية **</span> للأفلام والألعاب. إن كتابة الشفرة البرمجية أسرع بكثير من رسم كل إطار من الرسوم المتحركة على حدة. </p>
-
-### Draw your exhaust
-
-يؤدي رسم الكثير من الأشكال البيضاوية الصفراء في مواضع مختلفة من `y` إلى إنشاء مسار العادم.
-
---- task ---
-
-قم بتحديث الدالة `draw_rocket()` لتشمل حلقة `for` التي تكرر رسم `25` علامات للعادم. تتم إضافة متغير الحلقة **متغير الحلقة** `i` إلى `rocket_y`لرسم التاثيرات الحركية للعادم اسفل الصاروخ.
+--- task --- Set the fill colour for the smoke to transparent grey.
 
 --- code ---
 ---
-language: python filename: main.py - draw_rocket() line_numbers: true line_number_start: 12
+language: python line_numbers: true line_number_start: 10
+line_highlights: 14
+---
+
+def draw_rocket(): global rocket_position rocket_position = rocket_position - 1 image(rocket, width/2, rocket_position, 64, 64) fill(200, 200, 200, 100)
+
+
+--- /code ---
+
+--- /task ---
+
+
+--- task --- The outline around the circles is called the **stroke**. Add some code to turn it off.
+
+
+--- code ---
+---
+language: python line_numbers: true line_number_start: 14
+line_highlights: 15
+---
+
+    fill(200, 200, 200, 100) 
+    no_stroke()
+
+
+--- /code ---
+
+--- /task ---
+
+
+--- task ---
+
+Generate a random number between 5 and 10 for the size of the circle, then draw it at the bottom of the rocket.
+
+--- code ---
+---
+language: python line_numbers: true line_number_start: 15
 line_highlights: 16-22
 ---
 
-global rocket_y   
-rocket_y -= 1   
-
-    for i in range(25): #ارسم 25 شكلًا بيضاويًا محترقًا في العادم<br x-id="3" />
-        fill(255, 255, 0) #أصفر<br x-id="3" />
-        ellipse(width/2, rocket_y + i, 8, 3) #يزيد في كل مرة تتكرر فيها الحلقة
-
+no_stroke() circle_size = randint(5,10) ellipse( screen_size/2, rocket_position, circle_size, circle_size )
 
 --- /code ---
 
 --- /task ---
 
-تكرر الحلقة `for` جزءًا من الشفرة البرمجية مرة واحدة لكل عنصر يتم تقديمه.
-
-لتشغيل الشفرة البرمجية في حلقة `for` لعدد معين من المرات ، يمكنك استخدام الدالة `range()`. على سبيل المثال ، يُنشئ النطاق `(5)range` سلسلة من خمسة أرقام تبدأ من 0 ، [0, 1, 2, 3, 4].
-
-في كل مرة تتكرر فيها الحلقة `for` ، فإنها تحدد متغيرًا للعنصر الحالي بحيث يمكنك استخدامه في الحلقة.
-
 --- task ---
 
-**الاختبار:** لنقم بتشغيل الشفرة البرمجية للتحقق من أن الصاروخ يحتوي على مسار عادم جديد.
-
-![لقطة مقرّبة للصاروخ مع أثر عادم.](images/rocket_exhaust.png){:width="300px"}
+**Test:** Run your program and you should see a grey circle appear at the bottom of the rocket.
 
 --- /task ---
 
-### Add a gradient
-
-يمكن أيضًا استخدام المتغير `i` لإنشاء تدرج لوني أقل من اللون الأخضر في كل شكل بيضاوي يتم رسمه.
-
 --- task ---
 
-قم بتغيير الاستدعاء إلى `fill()` لتعيين مقدار اللون الأخضر إلى `255 - i*10` بحيث يكون للشكل البيضوي الأول كميات متساوية من الأحمر والأخضر ويكون آخر شكل أخضر قليلًا جدًا.
+Indent the code you used to draw the circle, and add a loop which will run the code 20 times.
 
 --- code ---
 ---
-language: python filename: main.py - draw_rocket() line_numbers: true line_number_start: 19
-line_highlights: 20
+language: python line_numbers: true line_number_start: 10
+line_highlights: 16-23
 ---
 
-    for i in range(25):<br x-id="3" />
-        fill(255, 255 - i * 10, 0) #تقليل مقدار القطع الناقص الأخضر<br x-id="4" />
-        ellipse(width/2, rocket_y + i, 8, 3)
+def draw_rocket(): global rocket_position rocket_position = rocket_position - 1 image(rocket, width/2, rocket_position, 64, 64) fill(200, 200, 200, 100) no_stroke() for i in range(20): circle_size = randint(5,10) ellipse( screen_size/2, rocket_position, circle_size,    
+circle_size )
+
 
 --- /code ---
 
@@ -82,42 +87,26 @@ line_highlights: 20
 
 --- task ---
 
-**اختبار:** تأكد من حصولك على أثر من الأشكال البيضاوية يتغير تدريجيًا من الأصفر إلى الأحمر.
+**Test:** Run your program. You will still see a flashing grey circle at the bottom of the rocket - all of the circles have been drawn on top of each other!
 
 --- /task ---
 
-### Create a smoke effect
+--- task --- Generate a random number and add it to the x and y position of each circle so they aren't all drawn in the same place.
 
-يتم إنشاء مسار عادم الدخان عن طريق رسم الكثير من الأشكال البيضاوية الرمادية الشفافة قليلاً في مواضع مختلفة في كل إطار.
-
-![رسم متحرك بطيء لتأثير الدخان.](images/rocket_smoke.gif)
-
---- task ---
-
-هذه المرة ، تكون التعبئة`fill()` خارج الحلقة حيث أن اللون هو نفسه لكل شكل بيضاوي من الدخان. الإدخال الرابع لـ `fill()` هو العتامة ، قيمة عتامة منخفضة تجعل اللون أكثر شفافية حتى تتمكن من رؤية الأشكال الموجودة تحته.
-
-في كل إطار من إطارات الرسوم المتحركة ، سيتم رسم 20 علامة بيضاوية بأحجام عشوائية في مواضع عشوائية.
 
 --- code ---
 ---
-language: python filename: main.py - draw_rocket() line_numbers: true line_number_start: 19
-line_highlights: 23-26
+language: python line_numbers: true line_number_start: 24
+line_highlights: 25-26
 ---
 
-    fill(200, 200, 200, 100) #Transparent grey<br x-id="3" />
-      for i in range(20): #Draw 20 random smoke ellipses<br x-id="4" />
-        ellipse(width/2 + randint(-5, 5), rocket_y + randint(20, 50), randint(5, 10), randint(5, 10))
+ellipse( screen_size/2 + randint(-5,5), rocket_position + randint(20,50), circle_size, circle_size )
 
 --- /code ---
 
 --- /task ---
 
---- task ---
 
-**اختبار:** لنقم بتشغيل البرنامج ونتحقق من أن أبخرة العادم مرئية.
 
-![لقطة مقرّبة للصاروخ ومسار العادم مع إضافة دخان.](images/rocket_exhaust_circles.gif)
 
---- /task ---
-
---- save ---
+--- task --- **Test:** Run your program and you should see lots of grey circles in random places at the bottom of the rocket. --- /task ---
