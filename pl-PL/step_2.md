@@ -1,144 +1,70 @@
-## Ustaw scenę
-
-<div style="display: flex; flex-wrap: wrap">
-<div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">
-Animacja potrzebuje kosmicznego tła z planetą, z której można wystrzelić rakietę.
-</div>
-<div>
-
-![Planeta na czarnym tle.](images/step_2.png){:width="300px"}
-
-</div>
-</div>
+## Draw the background
 
 --- task ---
 
-Otwórz szablon projektu [ ](https://editor.raspberrypi.org/en/projects/rocket-launch-starter){:target="_blank"}.
-
-### Utwórz ekran
+Open the [starter project](https://editor.raspberrypi.org/en/projects/rocket-launch-starter){:target="_blank"}.
 
 --- /task ---
 
-Użyjesz zmiennej ` screen_`, aby ustawić rozmiar ekranu i w obliczeniach. Zmienne zdefiniowane funkcje zewnętrzne to ** global **, więc możesz ich używać w dowolnym miejscu w swoim programie.
+First, you will create a black background to represent space.
 
---- task ---
-
-Znajdź komentarz ` Konfiguracja zmiennych ` i dodaj wiersz kodu, aby utworzyć zmienną ` screen_`:
+--- task --- Define a `draw_background()` function, and set the background colour to black.
 
 --- code ---
 ---
-language: python filename: main.py line_numbers: true line_number_start: 7
-line_highlights: 8
----
-
-# Ustaw zmienne globalne
-screen_size = 400
-
---- /code ---
-
---- /task ---
-
---- task ---
-
-Użyj zmiennej ` screen_` , aby utworzyć kwadrat 400 na 400 pikseli:
-
---- code ---
----
-language: python filename: main.py — setup() line_numbers: true line_number_start: 18
-line_highlights: 20
----
-
-def setup():   
-# Ustaw swoją animację tutaj    
-rozmiar(screen_size, screen_size)
-
-
---- /code ---
-
---- /task ---
-
-### Wybierz obraz
-
---- task ---
-
-Projekt startowy ma trzy różne obrazy planet i księżyc dla Ciebie. Możesz je wyświetlić w galerii obrazów **.** po lewej stronie edytora kodu.
-
-![Zrzut ekranu edytora kodu z podświetloną galerią obrazów zawierającą obrazy planet i księżyca.](images/image_gallery.png)
-
-** Wybierz:** Zdecyduj, którego obrazu chcesz użyć i zanotuj nazwę pliku. Na przykład: ` orange_`.
-
---- /task ---
-
---- task ---
-
-Dodaj kod do funkcji ` setup()`, aby załadować i ustawić obraz.
-
-Linia ` image_mode(CENTER)` mówi, że będziesz pozycjonować obrazy, podając współrzędne środka obrazu (zamiast lewego górnego rogu).
-
-Następnie załaduj swój obraz do globalnej zmiennej ` `. Zmienna musi być globalna, więc możesz jej użyć później podczas rysowania planety na ekranie.
-
---- code ---
----
-language: python filename: main.py line_numbers: true line_number_start: 18
-line_highlights: 21-23
----
-
-def setup():   
-# Ustaw swoją animację tutaj    
-rozmiar(screen_size, screen_size)   
-Image_mode(CENTER) # ustawia obraz na środku globalna planeta    
-planeta = load_image('planet.png') # wybrana planeta
-
-
---- /code ---
-
---- /task ---
-
-### Narysuj tło
-
---- task ---
-
-Zdefiniuj funkcję ` draw_background()`, aby narysować tło pod komentarzem, który powie, gdzie powinno się udać.
-
-Użyj ` background(0)`, aby ustawić kolor tła na czarny i dodać funkcję ` image()`, aby narysować planetę. Funkcja ` image()` jest podzielona:
-
-`image(nazwa pliku obrazu, współrzędna x, współrzędna y, szerokość_obrazu, wysokość_obrazu)`
-
-Linia kodu ` z importu p5 *` daje globalne zmienne ` ` i ` ` w zależności od rozmiaru ekranu. Użyj ich w swoim kodzie, aby umieścić planetę w połowie poprzek (szerokość ` / 2 `) i u dołu (wysokość ` `) ekranu.
-
---- code ---
----
-language: python filename: main.py — draw_background() line_numbers: true line_number_start: 14
-line_highlights: 15-17
+language: python line_numbers: true line_number_start: 12
+line_highlights: 13-14
 ---
 
 # Pojawi się tutaj funkcja draw_background
 def draw_background():   
-background(0) # Krótkie dla tła(0, 0, 0) —     
-Image(planeta, szerokość/2, wysokość, 300, 300) # Rysuj obraz
-
+background(0, 0, 0)
 
 --- /code ---
-
-Umieszczenie całego kodu do rysowania tła w jednej funkcji ułatwia zrozumienie kodu.
 
 --- /task ---
 
 --- task ---
 
-Aby wyświetlić tło, wywołaj ` draw_background()` in ` draw()`. Spowoduje to ponowne narysowanie tła za każdym razem, gdy zostanie wywołany ` losw()`, zakrywając każdy starszy rysunek:
+Add this function to the list of things to `draw()` in every frame.
 
 --- code ---
 ---
-language: python filename: main.py — draw() line_numbers: true line_number_start: 28
-line_highlights: 30
+language: python line_numbers: true line_number_start: 25
+line_highlights: 27
 ---
 
-def draw():   
-# rzeczy do zrobienia w każdej ramce     
-draw_background()
+def draw(): # Things to do in every frame draw_background()
 
 --- /code ---
+
+--- /task ---
+
+--- task ---
+
+**Test:** Run your code and you should see a black square. --- /task ---
+
+
+
+--- task ---
+
+Add a line of code to display an image of a planet.
+
+--- code ---
+---
+language: python line_numbers: true line_number_start: 13
+line_highlights: 15-16
+---
+def draw_background():  
+background(0,0,0) image(planet, screen_size/2, screen_size, 300, 300) --- /code ---
+
+The `image()` function needs the following data:
+
+- image filename - we have already loaded the planet image
+- x coordinate - we have already set the screen size
+- y coordinate
+- image width
+- image height
 
 --- /task ---
 
@@ -146,8 +72,26 @@ draw_background()
 
 ** Test:** Uruchom swój kod i sprawdź, czy rysuje czarne tło z połową planety na dole.
 
+![A planet against a black background.](images/step_2.png){:width="300px"}
+
 --- /task ---
 
-Jeśli masz konto Raspberry Pi, w edytorze kodu możesz kliknąć przycisk ** Saved ** , aby zapisać kopię swojego projektu w swoich projektach.
+### A different planet?
 
---- save ---
+--- task ---
+
+Click on the image icon to the left to view the image gallery.
+
+![Choose a different planet](images/image_gallery.png)
+
+If you want to change the planet image, change `planet.png` in the code to the filename of your chosen planet, for example, `orange_planet.png`.
+
+--- code ---
+---
+language: python line_numbers: true line_number_start: 17
+line_highlights: 22
+---
+def setup(): # Set up your animation here size(screen_size, screen_size) image_mode(CENTER) global planet planet = load_image('planet.png') --- /code ---
+
+--- /task ---
+
