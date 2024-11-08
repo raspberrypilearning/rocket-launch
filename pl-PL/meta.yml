@@ -7,26 +7,20 @@ meta_description: Naucz się języka Python z projektami programistycznymi Funda
 version: 0.0.1
 listed: true
 copyedit: true
-last_tested: "2021-10-06"
+last_tested: "2024-10-21"
 steps:
   - 
-    title: Zrobisz to
+    title: What you will make
   - 
-    title: Ustaw scenę
-  - 
-    title: Startuj!
+    title: Draw the background
     completion:
       - engaged
   - 
+    title: Startuj!
+  - 
     title: Efekty wydechu
   - 
-    title: Spalić paliwo
-  - 
-    title: Dotarcie na orbitę
-    completion:
-      - internal
-  - 
-    title: Szybki quiz
+    title: Quick quiz
     knowledge_quiz:
       path: quiz1
       version: 1
@@ -35,6 +29,7 @@ steps:
     completion:
       - external
   - 
-    title: Ulepsz swój projekt
+    title: Challenge
+    challenge: true
   - 
-    title: Co dalej?
+    title: What can you do now?
