@@ -14,21 +14,21 @@ legend: Pytanie 1 z 3
 Jakiego wyniku oczekiwałbyś, gdybyś uruchomił poniższy program?
 
 ```python
-For i in range(5):
-Print("Pętla", i)
+for i in range(5):
+  print(i)
 ```
 
 --- choices ---
 
-- ( ) Pętla 1 <br> Pętla 2 <br> Pętla 3 <br> Pętla 4 <br> Pętla 5
+- ( )  1 <br> 2 <br> 3 <br> 4 <br> 5
 
   --- feedback ---
 
-Nie do końca, pętla ` ` w Pythonie powtarza swój kod raz dla każdego elementu w podanej sekwencji, a tutaj ` ` tworzy sekwencję zaczynającą się od ` 0 `.
+Not quite, a `for` loop in Python starts from 0, unless otherwise specified.
 
   --- /feedback ---
 
-- ( ) Pętla i.
+- ( ) i <br> i <br> i <br> i <br> i
 
   --- feedback ---
 
@@ -36,7 +36,7 @@ Nie do końca, zmienna pętli ** ** z pętli ` ` — w tym przypadku ` ` — prz
 
   --- /feedback ---
 
-- (X) Pętla 0 <br> Pętla 1 <br> Pętla 2 <br> Pętla 3 <br> Pętla 4
+- (x) 0 <br> 1 <br> 2 <br> 3 <br> 4
 
   --- feedback ---
 
@@ -44,11 +44,11 @@ Poprawnie. Pętla uruchamia się raz, w kolejności, dla każdego elementu ` ` z
 
   --- /feedback ---
 
-- ( ) Pętla <br> Pętla 3 <br> Pętla 2 <br> Pętla 4 <br> Pętla 0
+- ( ) 4 <br>  3 <br> 2 <br> 1 <br> 0
 
   --- feedback ---
 
-Not quite, a `for` loop runs through the sequence of items it is given in order. Ponieważ ` range()` nadaje uporządkowaną sekwencję od 0 do liczby, którą jest przekazywana, to jest to kolejność, w której można się spodziewać wydrukowania przez tę pętlę ` `.
+Not quite. Unless you have specified otherwise, a `for` loop will start at 0 and count up the number of times specified in the range.
 
   --- /feedback ---
 
