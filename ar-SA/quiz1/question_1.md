@@ -15,20 +15,20 @@ Answer the three questions. There are hints to guide you to the correct answer.
 
 ```python
 for i in range(5):
-  print("Looping", i)
+  print(i)
 ```
 
 --- choices ---
 
-- ( ) Looping 1 <br> Looping 2 <br> Looping 3 <br> Looping 4 <br> Looping 5
+- ( )  1 <br> 2 <br> 3 <br> 4 <br> 5
 
   --- feedback ---
 
-ليس تمامًا ، حلقة `for` في Python تكرر شفرتها البرمجية مرة واحدة لكل عنصر في تسلسل يتم تقديمه ، وهنا ينشئ `range` تسلسلًا يبدأ من `0`.
+Not quite, a `for` loop in Python starts from 0, unless otherwise specified.
 
   --- /feedback ---
 
-- ( ) Looping i
+- ( ) i <br> i <br> i <br> i <br> i
 
   --- feedback ---
 
@@ -36,7 +36,7 @@ for i in range(5):
 
   --- /feedback ---
 
-- (x) Looping 0 <br> Looping 1 <br> Looping 2 <br> Looping 3 <br> Looping 4
+- (x) 0 <br> 1 <br> 2 <br> 3 <br> 4
 
   --- feedback ---
 
@@ -44,11 +44,11 @@ for i in range(5):
 
   --- /feedback ---
 
-- ( ) Looping 4 <br> Looping 3 <br> Looping 2 <br> Looping 1 <br> Looping 0
+- ( ) 4 <br>  3 <br> 2 <br> 1 <br> 0
 
   --- feedback ---
 
-نظرًا لأن `()range` يعطي تسلسلًا مرتبًا من 0 إلى الرقم الذي تم تمريره ، فهذا هو الترتيب الذي تتوقع أن تراه مطبوعاً بواسطة حلقة `for` هذه. ليس تمامًا ، تمر حلقة `for` خلال تسلسل العناصر المعطاة بالترتيب.
+Not quite. Unless you have specified otherwise, a `for` loop will start at 0 and count up the number of times specified in the range.
 
   --- /feedback ---
 
