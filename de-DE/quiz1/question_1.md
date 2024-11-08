@@ -15,20 +15,20 @@ Welche Ausgabe würdest du erwarten, wenn du das folgende Programm ausführen w�
 
 ```python
 for i in range(5):
-  print("Schleife", i)
+  print(i)
 ```
 
 --- choices ---
 
-- ( ) Schleife 1 <br> Schleife 2 <br> Schleife 3 <br> Schleife 4 <br> Schleife 5
+- ( )  1 <br> 2 <br> 3 <br> 4 <br> 5
 
   --- feedback ---
 
-Nicht ganz, eine `for`-Schleife in Python wiederholt ihren Code einmal für jedes Element in einer gegebenen Sequenz, und hier erstellt `range` eine Sequenz, die bei `0`beginnt.
+Not quite, a `for` loop in Python starts from 0, unless otherwise specified.
 
   --- /feedback ---
 
-- ( ) Schleife i
+- ( ) i <br> i <br> i <br> i <br> i
 
   --- feedback ---
 
@@ -36,7 +36,7 @@ Nicht ganz, die **Schleifenvariable** aus einer `for`-Schleife – in diesem Fal
 
   --- /feedback ---
 
-- (x) Schleife 0 <br> Schleife 1 <br> Schleife 2 <br> Schleife 3 <br> Schleife 4
+- (x) 0 <br> 1 <br> 2 <br> 3 <br> 4
 
   --- feedback ---
 
@@ -44,11 +44,11 @@ Korrekt. Die Schleife wird der Reihe nach einmal für jedes Element `i` in der S
 
   --- /feedback ---
 
-- ( ) Schleife 4 <br> Schleife 3 <br> Schleife 2 <br> Schleife 1 <br> Schleife 0
+- ( ) 4 <br>  3 <br> 2 <br> 1 <br> 0
 
   --- feedback ---
 
-Nicht ganz, eine `for`-Schleife durchläuft die ihr angegebene Elementfolge der Reihe nach. Da `range()` eine geordnete Folge von 0 bis zur übergebenen Zahl ergibt, ist dies die Reihenfolge, die du bei der Ausgabe dieser `for`-Schleife erwarten würdest.
+Not quite. Unless you have specified otherwise, a `for` loop will start at 0 and count up the number of times specified in the range.
 
   --- /feedback ---
 
