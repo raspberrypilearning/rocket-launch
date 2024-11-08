@@ -1,82 +1,65 @@
-## Απογείωση!
-
-<div style="display: flex; flex-wrap: wrap">
-<div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">
-Κάθε φορά που σχεδιάζεται ένα νέο καρέ, ο πύραυλος πρέπει να ανεβαίνει στην οθόνη για να δημιουργήσει ένα εφέ κίνησης.
-</div>
-<div>
-
-![Ένας πύραυλος που πετά με σταθερή ταχύτητα από το κάτω μέρος προς το επάνω μέρος της οθόνης.](images/fly.gif){:width="300px"}
-
-</div>
-</div>
-
---- task ---
+## Lift off!
 
 Το αρχικό έργο σου προσφέρει μια εικόνα πυραύλου.
 
 ![Εικόνα του πυραύλου στη βιβλιοθήκη εικόνων Trinket.](images/rocket_image.png)
 
---- /task ---
+--- task --- Add code to the `setup()` function to load the rocket image into a `rocket` global variable.
 
---- task ---
-
-Πρόσθεσε επίσης κώδικα στη συνάρτηση `setup()` για να φορτώσεις την εικόνα του πύραυλου σε μια καθολική μεταβλητή `rocket`.
+<div class="c-project-code">
 
 --- code ---
 ---
-language: python filename: main.py line_numbers: true line_number_start: 20
-line_highlights: 24, 26
+language: python filename: main.py line_numbers: true line_number_start: 17
+line_highlights: 21, 23
 ---
 
 def setup():   
-#Ορισμός της κινούμενης εικόνας εδώ   
+# Set up your animation here   
 size(screen_size, screen_size)   
 image_mode(CENTER)   
 global planet, rocket   
 planet = load_image('planet.png')    
 rocket = load_image('rocket.png')
 
+--- /code --- --- /task ---
+
+--- task ---
+
+Add a `rocket_position` global variable to keep track of the rocket's `y` position.
+
+--- code ---
+---
+language: python line_numbers: true line_number_start: 5
+line_highlights: 7
+---
+
+# Set up global variables
+screen_size = 400    
+rocket_position = screen_size
+
 --- /code ---
 
 --- /task ---
 
-### Make the rocket fly
 
 Η θέση `y` του πυραύλου θα ξεκινά από το 400 (το ύψος της οθόνης) και στη συνέχεια θα μειώνεται κατά 1 κάθε φορά που σχεδιάζεται ένα νέο καρέ.
 
---- task ---
-
-Πρόσθεσε μια καθολική μεταβλητή `rocket_y` για να παρακολουθείς τη θέση `y` του πυραύλου.
-
---- code ---
----
-language: python filename: main.py line_numbers: true line_number_start: 7
-line_highlights: 9
----
-
-# Ρύθμιση καθολικών μεταβλητών
-screen_size = 400    
-rocket_y = screen_size #Ξεκινάει από την κάτω πλευρά
-
---- /code ---
-
---- /task ---
 
 --- task ---
 
-Όρισε μια συνάρτηση `draw_rocket()` για να αλλάξεις τη θέση του `y` του πυραύλου και σχεδίασέ τον ξανά.
-
-`rocket_y -= 1` είναι ένας πιο σύντομος τρόπος για το `rocket_y = rocket_y - 1`.
+Define a `draw_rocket()` function to make the rocket appear on the screen.
 
 --- code ---
 ---
-language: python filename: main.py line_numbers: true line_number_start: 11
-line_highlights: 12-16
+language: python line_numbers: true line_number_start: 9
+line_highlights: 10-12
 ---
 
 # Η συνάρτηση draw_rocket πηγαίνει εδώ
-def draw_rocket():
+def draw_rocket():   
+global rocket_position      
+image(rocket, width/2, rocket_position, 64, 64)
 
 
 --- /code ---
@@ -85,15 +68,15 @@ def draw_rocket():
 
 --- task ---
 
-Call your new `draw_rocket()` in the `draw()` function so that the rocket gets redrawn every frame.
+Call the `draw_rocket()` function.
 
 --- code ---
 ---
-language: python filename: main.py line_numbers: true line_number_start: 33
-line_highlights: 37
+language: python line_numbers: true line_number_start: 29
+line_highlights: 32
 ---
 
-language: python filename: main.py line_numbers: true line_number_start: 34
+def draw(): # Things to do in every frame draw_background() draw_rocket()
 
 
 --- /code ---
@@ -102,10 +85,39 @@ language: python filename: main.py line_numbers: true line_number_start: 34
 
 --- task ---
 
-**Test:** Run your code to check that the rocket starts at the bottom of the screen and moves up each frame.
+**Test:** Run your code and check that the rocket appears at the bottom of the image.
 
-![Animation of the rocket flying half way up the screen.](images/rocket_fly.gif)
 
 --- /task ---
 
---- save ---
+
+Each time a new frame is drawn, you need to move the rocket one pixel up the screen to create an animation effect.
+
+
+--- task ---
+
+The `rocket_position` of the rocket will start at 400 (the screen height) and then decrease by 1 each time a new frame is drawn.
+
+--- code ---
+---
+language: python line_numbers: true line_number_start: 10
+line_highlights: 12
+---
+
+def draw_rocket():   
+global rocket_position     
+rocket_position = rocket_position - 1    
+image(rocket, width/2, rocket_position, 64, 64)    
+--- /code ---
+
+--- /task ---
+
+
+--- task ---
+
+**Test:** Run your code to check that the rocket blasts off from the bottom of the screen.
+
+
+![A rocket flying at a steady speed from the bottom to the top of the screen.](images/fly.gif){:width="300px"}
+
+--- /task ---
