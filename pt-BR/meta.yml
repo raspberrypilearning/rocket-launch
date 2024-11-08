@@ -7,26 +7,20 @@ meta_description: Aprenda Python com os projetos de codificação da Raspberry P
 version: 0.0.1
 listed: true
 copyedit: true
-last_tested: "2021-10-06"
+last_tested: "2024-10-21"
 steps:
   - 
-    title: Você vai fazer
+    title: What you will make
   - 
-    title: Preparando o cenário
-  - 
-    title: Decolar!
+    title: Draw the background
     completion:
       - engaged
   - 
+    title: Decolar!
+  - 
     title: Efeitos da combustão
   - 
-    title: Queimar combustível
-  - 
-    title: Alcançando a órbita
-    completion:
-      - internal
-  - 
-    title: Perguntas rápidas
+    title: Quick quiz
     knowledge_quiz:
       path: quiz1
       version: 1
@@ -35,6 +29,7 @@ steps:
     completion:
       - external
   - 
-    title: Melhore o seu projeto
+    title: Challenge
+    challenge: true
   - 
-    title: E agora?
+    title: What can you do now?
