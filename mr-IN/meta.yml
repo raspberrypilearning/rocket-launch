@@ -7,34 +7,29 @@ meta_description: Learn Python with the Raspberry Pi Foundation's coding project
 version: 0.0.1
 listed: true
 copyedit: true
-last_tested: "2021-10-06"
+last_tested: "2024-10-21"
 steps:
   - 
-    title: You will make
+    title: What you will make
   - 
-    title: दृश्य सेट करा
-  - 
-    title: Liftoff!
+    title: Draw the background
     completion:
       - engaged
   - 
+    title: Liftoff!
+  - 
     title: Exhaust effects
-  - 
-    title: Burn fuel
-  - 
-    title: Reaching orbit
-    completion:
-      - internal
   - 
     title: Quick quiz
     knowledge_quiz:
       path: quiz1
-      version: 0
+      version: 1
       questions: 3
       passing_score: 3
     completion:
       - external
   - 
-    title: तुमचा प्रोजेक्ट अपग्रेड करा
+    title: Challenge
+    challenge: true
   - 
-    title: पुढे काय?
+    title: What can you do now?
