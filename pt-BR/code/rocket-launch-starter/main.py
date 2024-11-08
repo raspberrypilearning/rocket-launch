@@ -1,11 +1,9 @@
-#!/bin/python3
-
 # Importar código da biblioteca
 from p5 import *
 from random import randint
 
-# Configurar variáveis globais
-
+# Set up global variables
+screen_size = 400
 
 # A função desenhar_foguete vai aqui
 
@@ -14,15 +12,21 @@ from random import randint
 # A função desenhar_fundo vai aqui
 
 
-
+ 
 def setup():
-  # Configure sua animação aqui
-  
-
+    # Set up your animation here
+    size(screen_size, screen_size)
+    image_mode(CENTER)
+    global planet
+    planet = load_image('planet.png')
+   
 
 def draw():
-  # Coisas para fazer em cada quadro
+    # Coisas para fazer em cada quadro
+
     
 
 
 run()
+ 
+ 
