@@ -3,84 +3,83 @@
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">
 
-O foguete ficará mais realista com alguns efeitos especiais para simular a trilha dos gases resultantes da combustão. 
-
-Você pode criar efeitos legais usando um ciclo `for` para desenhar muitas formas em cada quadro.
-
+Add some grey circles to simulate the exhaust trail. 
 </div>
 <div>
 
-![O foguete no meio do voo com uma trilha de combustão.](images/flying_rocket.gif){:width="300px"}
-
+![A slow animation of the smoke effect.](images/rocket_smoke.gif)
 </div>
 </div>
 
-<p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;">
-A programação é usada para fazer <span style="color: #0faeb0">**efeitos gráficos**</span> para filmes e jogos. É muito mais rápido escrever código do que desenhar cada quadro de uma animação individualmente. </p>
-
-### Desenhe sua combustão
-
-Desenhar muitas elipses amarelas em diferentes posições `y` cria uma trilha de combustão com fundo redondo.
-
---- task ---
-
-Atualize sua função `desenhar_foguete()` para incluir um ciclo `for` que repete o desenho de `25` elipses da combustão. A variável de ciclo **** `i` é adicionada a `foguete_y` para desenhar cada elipse mais abaixo do foguete.
+--- task --- Set the fill colour for the smoke to transparent grey.
 
 --- code ---
 ---
-language: python filename: main.py - desenhar_foguete() line_numbers: true line_number_start: 12
+language: python line_numbers: true line_number_start: 10
+line_highlights: 14
+---
+
+def draw_rocket(): global rocket_position rocket_position = rocket_position - 1 image(rocket, width/2, rocket_position, 64, 64) fill(200, 200, 200, 100)
+
+
+--- /code ---
+
+--- /task ---
+
+
+--- task --- The outline around the circles is called the **stroke**. Add some code to turn it off.
+
+
+--- code ---
+---
+language: python line_numbers: true line_number_start: 14
+line_highlights: 15
+---
+
+    fill(200, 200, 200, 100) 
+    no_stroke()
+
+
+--- /code ---
+
+--- /task ---
+
+
+--- task ---
+
+Generate a random number between 5 and 10 for the size of the circle, then draw it at the bottom of the rocket.
+
+--- code ---
+---
+language: python line_numbers: true line_number_start: 15
 line_highlights: 16-22
 ---
 
-def desenhar_foguete(): global foguete_y   
-foguete_y -= 1   
-
-    no_stroke()  # Desliga o traço
-    
-    for i in range(25):  # Desenhe 25 elipses de combustão em chamas   
-        fill(255, 255, 0)  # Amarelo   
-        ellipse(width/2, foguete_y + i, 8, 3)  # i aumenta cada vez que o ciclo se repete    
-    
-    image(foguete, width/2, foguete_y, 64, 64)
-
+no_stroke() circle_size = randint(5,10) ellipse( screen_size/2, rocket_position, circle_size, circle_size )
 
 --- /code ---
 
 --- /task ---
 
-fill(200, 200, 200, 100) #Cinza transparente   
-for i in range(20): #Desenhe 20 elipses de fumaça aleatórias    
-ellipse(width/2 + randint(-5, 5), foguete_y + randint(20, 50), randint(5, 10), randint(5, 10))
-
-Para executar o código em um ciclo `for` um certo número de vezes, você pode usar a função `range()`. Por exemplo, `range(5)` cria uma sequência de cinco números começando em 0, então [0, 1, 2, 3, 4].
-
-Cada vez que o ciclo `for` se repete, ele define uma variável para o item atual para que você possa usá-lo no ciclo.
-
 --- task ---
 
-**Teste:** Execute seu código para verificar que o foguete tem um novo rastro de combustão.
-
-![Uma vista de perto do foguete com uma trilha de combustão.](images/rocket_exhaust.png){:width="300px"}
+**Test:** Run your program and you should see a grey circle appear at the bottom of the rocket.
 
 --- /task ---
 
-### Adicione um gradiente
-
-A variável `i` também pode ser usada para criar um gradiente de cor com menos verde em cada elipse desenhada.
-
 --- task ---
 
-Altere a chamada para `fill()` para definir a quantidade de verde para `255 - i*10` para que a primeira elipse tenha quantidades iguais de vermelho e verde e a última elipse tenha muito pouco verde.
+Indent the code you used to draw the circle, and add a loop which will run the code 20 times.
 
 --- code ---
 ---
-language: python filename: main.py - desenhar_foguete() line_numbers: true line_number_start: 19
-line_highlights: 20
+language: python line_numbers: true line_number_start: 10
+line_highlights: 16-23
 ---
 
-    for i in range(25):<br x-id="3" />
-        fill(255, 255 - i * 10, 0) #Reduza a quantidade de verde<br x-id="4" />
-        ellipse(width/2, foguete_y + i, 8, 3)
+def draw_rocket(): global rocket_position rocket_position = rocket_position - 1 image(rocket, width/2, rocket_position, 64, 64) fill(200, 200, 200, 100) no_stroke() for i in range(20): circle_size = randint(5,10) ellipse( screen_size/2, rocket_position, circle_size,    
+circle_size )
+
 
 --- /code ---
 
@@ -88,48 +87,26 @@ line_highlights: 20
 
 --- task ---
 
-**Teste:** Verifique que você obtém um rastro de elipses mudando gradualmente de amarelo para vermelho.
+**Test:** Run your program. You will still see a flashing grey circle at the bottom of the rocket - all of the circles have been drawn on top of each other!
 
 --- /task ---
 
-### Crie um efeito de fumaça
+--- task --- Generate a random number and add it to the x and y position of each circle so they aren't all drawn in the same place.
 
-A trilha de gases de escape é criada desenhando muitas elipses cinzas levemente transparentes em diferentes posições em cada quadro.
-
-![Uma animação lenta do efeito de fumaça.](images/rocket_smoke.gif)
-
---- task ---
-
-Desta vez, o `fill()` está fora do laço, pois a cor é a mesma para cada elipse de fumaça. A quarta entrada para `fill()` é a opacidade, um valor de opacidade baixo torna a cor mais transparente para que você possa ver as formas abaixo.
-
-Em cada quadro da animação, 20 elipses de tamanhos aleatórios serão desenhadas em posições aleatórias.
 
 --- code ---
 ---
-language: python filename: main.py - desenhar_foguete() line_numbers: true line_number_start: 19
-line_highlights: 23-26
+language: python line_numbers: true line_number_start: 24
+line_highlights: 25-26
 ---
 
-    for i in range(25):  
-        fill(255, 255 - i * 10, 0)   
-        ellipse(width/2, foguete_y + i, 8, 3)    
-    
-    fill(200, 200, 200, 100)  # Cinza transparente   
-    for i in range(20):  # Desenhar 20 elipses de fumaça aleatórias    
-        ellipse(width/2 + randint(-5, 5), foguete_y + randint(20, 50), randint(5, 10), randint(5, 10))    
-    
-    image(foguete, width/2, foguete_y, 64, 64)
+ellipse( screen_size/2 + randint(-5,5), rocket_position + randint(20,50), circle_size, circle_size )
 
 --- /code ---
 
 --- /task ---
 
---- task ---
 
-**Teste:** Execute o seu programa e verifique que os gases de escape estão visíveis.
 
-![Uma vista de perto do foguete e da trilha de exaustão com fumaça adicional.](images/rocket_exhaust_circles.gif)
 
---- /task ---
-
---- save ---
+--- task --- **Test:** Run your program and you should see lots of grey circles in random places at the bottom of the rocket. --- /task ---
