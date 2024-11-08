@@ -1,85 +1,65 @@
-## Startuj!
-
-<div style="display: flex; flex-wrap: wrap">
-<div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">
-Za każdym razem, gdy rysowana jest nowa klatka, rakieta musi przesunąć się w górę ekranu, aby stworzyć efekt animacji.
-</div>
-<div>
-
-![rakieta latająca ze stałą prędkością od dołu do góry ekranu.](images/fly.gif){:width="300px"}
-
-</div>
-</div>
-
---- task ---
+## Lift off!
 
 Projekt startowy ma obraz rakiety dla Ciebie.
 
 ![Obrazek rakiety w galerii obrazów edytora kodu.](images/rocket_image.png)
 
---- /task ---
+--- task --- Add code to the `setup()` function to load the rocket image into a `rocket` global variable.
 
---- task ---
-
-Dodaj kod do funkcji ` setup()` , aby załadować obraz rakiety do zmiennej globalnej ` ` .
+<div class="c-project-code">
 
 --- code ---
 ---
-language: python filename: main.py line_numbers: true line_number_start: 20
-line_highlights: 24, 26
+language: python filename: main.py line_numbers: true line_number_start: 17
+line_highlights: 21, 23
 ---
 
 def setup():   
-# Ustaw swoją animację tutaj    
-rozmiar(screen_size, screen_size)   
-Image_mode(CENTER)   
-globalna planeta, rakieta    
-planeta = load_image('planet.png')    
+# Set up your animation here   
+size(screen_size, screen_size)   
+image_mode(CENTER)   
+global planet, rocket   
+planet = load_image('planet.png')    
 rocket = load_image('rocket.png')
+
+--- /code --- --- /task ---
+
+--- task ---
+
+Add a `rocket_position` global variable to keep track of the rocket's `y` position.
+
+--- code ---
+---
+language: python line_numbers: true line_number_start: 5
+line_highlights: 7
+---
+
+# Set up global variables
+screen_size = 400    
+rocket_position = screen_size
 
 --- /code ---
 
 --- /task ---
 
-### Spraw, aby rakieta latała
 
 Pozycja rakiety `.` rozpocznie się od 400 (wysokość ekranu), a następnie zmniejszy się o 1 za każdym razem, gdy zostanie narysowana nowa klatka.
 
---- task ---
-
-Dodaj zmienną globalną ` rocket_`, aby śledzić pozycję rakiety `.`.
-
---- code ---
----
-language: python filename: main.py line_numbers: true line_number_start: 7
-line_highlights: 9
----
-
-# Ustaw zmienne globalne
-Screen_size = 400     
-ROCKET_y = screen_size # Zacznij od dołu
-
---- /code ---
-
---- /task ---
 
 --- task ---
 
-Zdefiniuj funkcję ` draw_rocket()` , aby zmienić pozycję rakiety `.` i ją przerysować.
-
-` rocket_y -= 1 ` to krótszy sposób powiedzenia ` rocket_y = rocket_y - 1 `.
+Define a `draw_rocket()` function to make the rocket appear on the screen.
 
 --- code ---
 ---
-language: python filename: main.py line_numbers: true line_number_start: 11
-line_highlights: 12-16
+language: python line_numbers: true line_number_start: 9
+line_highlights: 10-12
 ---
 
 # Tutaj pojawi się funkcja draw_rocket
 def draw_rocket():   
-Global ROCKET_y # Użyj globalnej zmiennej ROCKET_y     
-Rocket_y -= 1 # Przesuń rakietę     
-image(rakieta, width/2, rocket_y, 64, 64)
+global rocket_position      
+image(rocket, width/2, rocket_position, 64, 64)
 
 
 --- /code ---
@@ -88,18 +68,15 @@ image(rakieta, width/2, rocket_y, 64, 64)
 
 --- task ---
 
-Wywołaj swój nowy ` draw_rocket()` w funkcji ` draw()`, aby rakieta była rysowana ponownie w każdej klatce.
+Call the `draw_rocket()` function.
 
 --- code ---
 ---
-language: python filename: main.py line_numbers: true line_number_start: 33
-line_highlights: 36
+language: python line_numbers: true line_number_start: 29
+line_highlights: 32
 ---
 
-def draw():   
-# rzeczy do zrobienia w każdej ramce    
-draw_background()   
-draw_rocket()
+def draw(): # Things to do in every frame draw_background() draw_rocket()
 
 
 --- /code ---
@@ -108,10 +85,39 @@ draw_rocket()
 
 --- task ---
 
-** Test:** Uruchom swój kod, aby sprawdzić, czy rakieta zaczyna się u dołu ekranu i przesuwa się w górę każdej klatki.
+**Test:** Run your code and check that the rocket appears at the bottom of the image.
 
-![Animacja rakiety lecącej w połowie drogi w górę ekranu.](images/rocket_fly.gif)
 
 --- /task ---
 
---- save ---
+
+Each time a new frame is drawn, you need to move the rocket one pixel up the screen to create an animation effect.
+
+
+--- task ---
+
+The `rocket_position` of the rocket will start at 400 (the screen height) and then decrease by 1 each time a new frame is drawn.
+
+--- code ---
+---
+language: python line_numbers: true line_number_start: 10
+line_highlights: 12
+---
+
+def draw_rocket():   
+global rocket_position     
+rocket_position = rocket_position - 1    
+image(rocket, width/2, rocket_position, 64, 64)    
+--- /code ---
+
+--- /task ---
+
+
+--- task ---
+
+**Test:** Run your code to check that the rocket blasts off from the bottom of the screen.
+
+
+![A rocket flying at a steady speed from the bottom to the top of the screen.](images/fly.gif){:width="300px"}
+
+--- /task ---
