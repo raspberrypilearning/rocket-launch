@@ -1,82 +1,65 @@
-## انطلاق الصاروخ!
-
-<div style="display: flex; flex-wrap: wrap">
-<div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">
-في كل مرة يتم فيها رسم إطار جديد ، يحتاج الصاروخ إلى تحريك الشاشة للأعلى لإنشاء تأثير حركي (يبين ان الصاروخ يقلع في الفضاء).
-</div>
-<div>
-
-! [صاروخ يطير بسرعة ثابتة من أسفل إلى أعلى الشاشة.](images/fly.gif){:width="300px"}
-
-</div>
-</div>
-
---- task ---
+## Lift off!
 
 عند بداية المشروع سنحصل على صورة الصاروخ جاهزة.
 
 ![Image of the rocket in the code editor image gallery.](images/rocket_image.png)
 
---- /task ---
+--- task --- Add code to the `setup()` function to load the rocket image into a `rocket` global variable.
 
---- task ---
-
-أضف الشفرة البرمجية إلى الدالة `setup()` لتحميل صورة الصاروخ التي اخترناها في متغير عام `rocket`.
+<div class="c-project-code">
 
 --- code ---
 ---
-language: python filename: main.py line_numbers: true line_number_start: 20
-line_highlights: 24, 26
+language: python filename: main.py line_numbers: true line_number_start: 17
+line_highlights: 21, 23
 ---
 
 def setup():   
-#إعداد الرسوم المتحركة هنا   
+# Set up your animation here   
 size(screen_size, screen_size)   
 image_mode(CENTER)   
 global planet, rocket   
 planet = load_image('planet.png')    
 rocket = load_image('rocket.png')
 
+--- /code --- --- /task ---
+
+--- task ---
+
+Add a `rocket_position` global variable to keep track of the rocket's `y` position.
+
+--- code ---
+---
+language: python line_numbers: true line_number_start: 5
+line_highlights: 7
+---
+
+# Set up global variables
+screen_size = 400    
+rocket_position = screen_size
+
 --- /code ---
 
 --- /task ---
 
-### Make the rocket fly
 
 سيبدأ احداثي `y` للصاروخ عند 400 (ارتفاع الشاشة) ثم ينخفض بمقدار 1 في كل مرة يتم فيها رسم إطار جديد.
 
---- task ---
-
-نضيف `rocket_y` كمتغيرًا عاماً لتتبع موقع `y` للصاروخ.
-
---- code ---
----
-language: python filename: main.py line_numbers: true line_number_start: 7
-line_highlights: 9
----
-
-# تهيئة المتغيرات العامة
-screen_size = 400    
-rocket_y = screen_size # ابدأ من الأسفل
-
---- /code ---
-
---- /task ---
 
 --- task ---
 
-حدد دالة `draw_rocket()` لتغيير احداثي `y` للصاروخ وإعادة رسمه.
-
-`rocket_y -= 1` هي اقصر طريقة لكتابة `rocket_y = rocket_y - 1`.
+Define a `draw_rocket()` function to make the rocket appear on the screen.
 
 --- code ---
 ---
-language: python filename: main.py line_numbers: true line_number_start: 11
-line_highlights: 12-16
+language: python line_numbers: true line_number_start: 9
+line_highlights: 10-12
 ---
 
 # يتم وضع دالة draw_rocket هنا
-def draw_rocket():
+def draw_rocket():   
+global rocket_position      
+image(rocket, width/2, rocket_position, 64, 64)
 
 
 --- /code ---
@@ -85,18 +68,15 @@ def draw_rocket():
 
 --- task ---
 
-استدع `draw_rocket()` الجديد في دالة `draw()` بحيث يُعاد رسم الصاروخ كل إطار.
+Call the `draw_rocket()` function.
 
 --- code ---
 ---
-language: python filename: main.py line_numbers: true line_number_start: 34
-line_highlights: 37
+language: python line_numbers: true line_number_start: 29
+line_highlights: 32
 ---
 
-def draw():   
-#الأشياء التي يجب القيام بها في كل إطار   
-draw_background()   
-draw_rocket()
+def draw(): # Things to do in every frame draw_background() draw_rocket()
 
 
 --- /code ---
@@ -105,10 +85,39 @@ draw_rocket()
 
 --- task ---
 
-**اختبار:** لنقم بتشغيل الشفرة البرمجية للتحقق من أن الصاروخ يبدأ من أسفل الشاشة ويتحرك للأعلى في كل إطار.
+**Test:** Run your code and check that the rocket appears at the bottom of the image.
 
-![صورة الصاروخ في منتصف الشاشة.](images/rocket_fly.gif)
 
 --- /task ---
 
---- save ---
+
+Each time a new frame is drawn, you need to move the rocket one pixel up the screen to create an animation effect.
+
+
+--- task ---
+
+The `rocket_position` of the rocket will start at 400 (the screen height) and then decrease by 1 each time a new frame is drawn.
+
+--- code ---
+---
+language: python line_numbers: true line_number_start: 10
+line_highlights: 12
+---
+
+def draw_rocket():   
+global rocket_position     
+rocket_position = rocket_position - 1    
+image(rocket, width/2, rocket_position, 64, 64)    
+--- /code ---
+
+--- /task ---
+
+
+--- task ---
+
+**Test:** Run your code to check that the rocket blasts off from the bottom of the screen.
+
+
+![A rocket flying at a steady speed from the bottom to the top of the screen.](images/fly.gif){:width="300px"}
+
+--- /task ---
