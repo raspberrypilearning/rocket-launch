@@ -15,20 +15,20 @@ legend: 質問1/3
 
 ```python
 for i in range(5):
-  print("ループ中", i)
+  print(i)
 ```
 
 --- choices ---
 
-- ( ) ループ中 1 <br> ループ中 2 <br> ループ中 3 <br> ループ中 4 <br> ループ中 5
+- ( )  1 <br> 2 <br> 3 <br> 4 <br> 5
 
   --- feedback ---
 
-残念です。 Pythonの`for` ループは、書かれたコードを順番どおりに各アイテムを1回ずつ繰り返します。 ここで、 `range` は、 `0`から始まる数字の並びを作成します。
+Not quite, a `for` loop in Python starts from 0, unless otherwise specified.
 
   --- /feedback ---
 
-- ( ) ループ中 i
+- ( ) i <br> i <br> i <br> i <br> i
 
   --- feedback ---
 
@@ -36,7 +36,7 @@ for i in range(5):
 
   --- /feedback ---
 
-- (x) ループ中 0 <br> ループ中 1 <br> ループ中 2 <br> ループ中 3 <br> ループ中 4
+- (x) 0 <br> 1 <br> 2 <br> 3 <br> 4
 
   --- feedback ---
 
@@ -44,11 +44,11 @@ for i in range(5):
 
   --- /feedback ---
 
-- ( ) ループ中 4 <br> ループ中 3 <br> ループ中 2 <br> ループ中 1 <br> ループ中 0
+- ( ) 4 <br>  3 <br> 2 <br> 1 <br> 0
 
   --- feedback ---
 
-`for` ループは、指定された順にアイテムを実行します。 `range()` は、0から指定された数値までの順番に並んだ数値を返すからです。 これは、この `for` ループによって出力されると予想される順序です。
+Not quite. Unless you have specified otherwise, a `for` loop will start at 0 and count up the number of times specified in the range.
 
   --- /feedback ---
 
