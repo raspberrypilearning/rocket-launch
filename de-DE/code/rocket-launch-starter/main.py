@@ -1,11 +1,9 @@
-#!/bin/python3
-
 # Bibliothekscode importieren
 from p5 import *
 from random import randint
 
-# Globale Variablen einrichten
-
+# Set up global variables
+screen_size = 400
 
 # Die Funktion „zeichne_rakete“ kommt hierher
 
@@ -14,15 +12,21 @@ from random import randint
 # Die Funktion „zeichne_hintergrund“ kommt hierher
 
 
-
+ 
 def setup():
-  # Richte hier Deine Animation ein
-  
-
+    # Set up your animation here
+    size(screen_size, screen_size)
+    image_mode(CENTER)
+    global planet
+    planet = load_image('planet.png')
+   
 
 def draw():
-  # Dinge die in jedem Frame passieren
+    # Dinge die in jedem Frame passieren
+
     
 
 
 run()
+ 
+ 
