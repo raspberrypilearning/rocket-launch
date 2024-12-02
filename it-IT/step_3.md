@@ -1,21 +1,21 @@
-## Lift off!
+## Decollo!
 
 Il progetto iniziale include l'immagine di un razzo.
 
 ![Immagine del razzo nella galleria immagini dell'editor di codice.](images/rocket_image.png)
 
---- task --- Add code to the `setup()` function to load the rocket image into a `rocket` global variable.
+Aggiungi il codice alla funzione `setup()` per caricare l'immagine del razzo in una variabile globale `rocket` .
 
 <div class="c-project-code">
 
 --- code ---
 ---
-language: python filename: main.py line_numbers: true line_number_start: 17
-line_highlights: 21, 23
+language: python filename: main.py line_numbers: true line_number_start: 20
+line_highlights: 24, 26
 ---
 
 def setup():   
-# Set up your animation here   
+# Imposta qui la tua animazione   
 size(screen_size, screen_size)   
 image_mode(CENTER)   
 global planet, rocket   
@@ -26,17 +26,17 @@ rocket = load_image('rocket.png')
 
 --- task ---
 
-Add a `rocket_position` global variable to keep track of the rocket's `y` position.
+Aggiungi una variabile globale `rocket_y` per tenere traccia della posizione `y` del razzo.
 
 --- code ---
 ---
-language: python line_numbers: true line_number_start: 5
-line_highlights: 7
+language: python filename: main.py line_numbers: true line_number_start: 7
+line_highlights: 9
 ---
 
-# Set up global variables
+# Imposta le variabili globali
 screen_size = 400    
-rocket_position = screen_size
+rocket_y = screen_size # Inizia dal basso
 
 --- /code ---
 
@@ -48,18 +48,19 @@ La posizione `y` del razzo inizierà a 400 (l'altezza dello schermo) e poi dimin
 
 --- task ---
 
-Define a `draw_rocket()` function to make the rocket appear on the screen.
+Definisci una funzione `draw_rocket()` per modificare la posizione `y` del razzo e ridisegnarlo.
 
 --- code ---
 ---
-language: python line_numbers: true line_number_start: 9
-line_highlights: 10-12
+--- save ---
+line_highlights: 12-16
 ---
 
 # La funzione draw_rocket va qui
 def draw_rocket():   
-global rocket_position      
-image(rocket, width/2, rocket_position, 64, 64)
+global rocket_y  # Usa la variabile globale rocket_y variable    
+rocket_y -= 1  # Muove il razzo    
+image(rocket, width/2, rocket_y, 64, 64)
 
 
 --- /code ---
@@ -68,15 +69,18 @@ image(rocket, width/2, rocket_position, 64, 64)
 
 --- task ---
 
-Call the `draw_rocket()` function.
+Richiama la tua nuova funzione `draw_rocket()` nella funzione `draw()` in modo che il razzo venga ridisegnato a ogni fotogramma.
 
 --- code ---
 ---
-language: python line_numbers: true line_number_start: 29
-line_highlights: 32
+language: python filename: main.py line_numbers: true line_number_start: 33
+line_highlights: 36
 ---
 
-def draw(): # Things to do in every frame draw_background() draw_rocket()
+def draw():   
+# Cose da fare ad ogni cambio di frame   
+draw_background()   
+draw_rocket()
 
 
 --- /code ---
@@ -85,39 +89,35 @@ def draw(): # Things to do in every frame draw_background() draw_rocket()
 
 --- task ---
 
-**Test:** Run your code and check that the rocket appears at the bottom of the image.
+Fai volare il razzo
 
 
 --- /task ---
 
 
-Each time a new frame is drawn, you need to move the rocket one pixel up the screen to create an animation effect.
+Ogni volta che viene disegnato un nuovo fotogramma, il razzo deve spostarsi verso l'alto sullo schermo per creare un effetto di animazione.
 
 
 --- task ---
 
-The `rocket_position` of the rocket will start at 400 (the screen height) and then decrease by 1 each time a new frame is drawn.
+!\[Un razzo che vola a velocità costante dal basso verso l'alto dello schermo.\](images/fly.gif){:width="300px"}
 
 --- code ---
 ---
-language: python line_numbers: true line_number_start: 10
+language: python filename: main.py line_numbers: true line_number_start: 11
 line_highlights: 12
 ---
 
-def draw_rocket():   
-global rocket_position     
-rocket_position = rocket_position - 1    
-image(rocket, width/2, rocket_position, 64, 64)    
---- /code ---
+`rocket_y -= 1`è un modo più breve per dire `rocket_y = rocket_y - 1`.
 
 --- /task ---
 
 
 --- task ---
 
-**Test:** Run your code to check that the rocket blasts off from the bottom of the screen.
+**Test:** Esegui il codice per verificare che il razzo parta dalla parte inferiore dello schermo e si muova verso l'alto in ogni fotogramma.
 
 
-![A rocket flying at a steady speed from the bottom to the top of the screen.](images/fly.gif){:width="300px"}
+![Animazione del razzo che vola a metà dello schermo.](images/fly.gif){:width="300px"}
 
 --- /task ---
