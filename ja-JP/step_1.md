@@ -4,7 +4,7 @@
 
 ## What you will make
 
-Make an animation to launch a rocket into orbit.
+ロケットに乗って、人工衛星を軌道に乗せるアニメーションを作ってみよう！
 
 
 
