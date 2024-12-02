@@ -7,7 +7,7 @@ Add some grey circles to simulate the exhaust trail.
 </div>
 <div>
 
-![A slow animation of the smoke effect.](images/rocket_smoke.gif)
+Une animation lente de l'effet de fumée.
 </div>
 </div>
 
@@ -63,7 +63,7 @@ no_stroke() circle_size = randint(5,10) ellipse( screen_size/2, rocket_position,
 
 --- task ---
 
-**Test:** Run your program and you should see a grey circle appear at the bottom of the rocket.
+**Test :** exécute ton programme et vérifie que les gaz d'échappement sont visibles.
 
 --- /task ---
 
@@ -73,7 +73,7 @@ Indent the code you used to draw the circle, and add a loop which will run the c
 
 --- code ---
 ---
-language: python line_numbers: true line_number_start: 10
+language: python filename: main.py - draw_rocket() line_numbers: true line_number_start: 12
 line_highlights: 16-23
 ---
 
@@ -87,7 +87,7 @@ circle_size )
 
 --- task ---
 
-**Test:** Run your program. You will still see a flashing grey circle at the bottom of the rocket - all of the circles have been drawn on top of each other!
+**Test :** exécute ton code pour vérifier que la fusée a une nouvelle traînée d'échappement. You will still see a flashing grey circle at the bottom of the rocket - all of the circles have been drawn on top of each other!
 
 --- /task ---
 
@@ -96,11 +96,11 @@ circle_size )
 
 --- code ---
 ---
-language: python line_numbers: true line_number_start: 24
+for i in range(25): fill(255, 255 - i * 10, 0) # Réduis la quantité de vert ellipse(width/2, fusee_y + i, 8, 3)
 line_highlights: 25-26
 ---
 
-ellipse( screen_size/2 + randint(-5,5), rocket_position + randint(20,50), circle_size, circle_size )
+for i in range(25): fill(255, 255 - i * 10, 0) ellipse(width/2, fusee_y + i, 8, 3) fill(200, 200, 200, 100)  # Gris transparent for i in range(20):  # Dessine 20 ellipses de fumée ellipse(width/2 + randint(-5, 5), fusee_y + randint(20, 50), randint(5, 10), randint(5, 10)) image(fusee, width/2, fusee_y, 64, 64)
 
 --- /code ---
 
