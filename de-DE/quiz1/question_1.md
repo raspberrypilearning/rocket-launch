@@ -15,16 +15,16 @@ Welche Ausgabe würdest du erwarten, wenn du das folgende Programm ausführen w�
 
 ```python
 for i in range(5):
-  print(i)
+  print("Schleife", i)
 ```
 
 --- choices ---
 
-- ( )  1 <br> 2 <br> 3 <br> 4 <br> 5
+- ( ) Schleife 1 <br> Schleife 2 <br> Schleife 3 <br> Schleife 4 <br> Schleife 5
 
   --- feedback ---
 
-Not quite, a `for` loop in Python starts from 0, unless otherwise specified.
+Nicht ganz, eine `for`-Schleife in Python wiederholt ihren Code einmal für jedes Element in einer gegebenen Sequenz, und hier erstellt `range` eine Sequenz, die bei `0`beginnt.
 
   --- /feedback ---
 
@@ -36,7 +36,7 @@ Nicht ganz, die **Schleifenvariable** aus einer `for`-Schleife – in diesem Fal
 
   --- /feedback ---
 
-- (x) 0 <br> 1 <br> 2 <br> 3 <br> 4
+- (x) Schleife 0 <br> Schleife 1 <br> Schleife 2 <br> Schleife 3 <br> Schleife 4
 
   --- feedback ---
 
@@ -44,7 +44,7 @@ Korrekt. Die Schleife wird der Reihe nach einmal für jedes Element `i` in der S
 
   --- /feedback ---
 
-- ( ) 4 <br>  3 <br> 2 <br> 1 <br> 0
+- ( ) Schleife 4 <br> Schleife 3 <br> Schleife 2 <br> Schleife 1 <br> Schleife 0
 
   --- feedback ---
 
