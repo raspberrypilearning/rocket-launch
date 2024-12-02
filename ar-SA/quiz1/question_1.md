@@ -15,16 +15,16 @@ Answer the three questions. There are hints to guide you to the correct answer.
 
 ```python
 for i in range(5):
-  print(i)
+  print("Looping", i)
 ```
 
 --- choices ---
 
-- ( )  1 <br> 2 <br> 3 <br> 4 <br> 5
+- ( ) Looping 1 <br> Looping 2 <br> Looping 3 <br> Looping 4 <br> Looping 5
 
   --- feedback ---
 
-Not quite, a `for` loop in Python starts from 0, unless otherwise specified.
+ليس تمامًا ، حلقة `for` في Python تكرر شفرتها البرمجية مرة واحدة لكل عنصر في تسلسل يتم تقديمه ، وهنا ينشئ `range` تسلسلًا يبدأ من `0`.
 
   --- /feedback ---
 
@@ -36,7 +36,7 @@ Not quite, a `for` loop in Python starts from 0, unless otherwise specified.
 
   --- /feedback ---
 
-- (x) 0 <br> 1 <br> 2 <br> 3 <br> 4
+- (x) Looping 0 <br> Looping 1 <br> Looping 2 <br> Looping 3 <br> Looping 4
 
   --- feedback ---
 
@@ -44,7 +44,7 @@ Not quite, a `for` loop in Python starts from 0, unless otherwise specified.
 
   --- /feedback ---
 
-- ( ) 4 <br>  3 <br> 2 <br> 1 <br> 0
+- ( ) Looping 4 <br> Looping 3 <br> Looping 2 <br> Looping 1 <br> Looping 0
 
   --- feedback ---
 
