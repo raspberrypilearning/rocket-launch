@@ -10,26 +10,26 @@ copyedit: true
 last_tested: "2024-10-21"
 steps:
   - 
-    title: What you will make
+    title: Lo que harás
   - 
-    title: Draw the background
+    title: Dibuja el fondo
     completion:
-      - engaged
+      - comprometido
   - 
     title: '¡El despegue!'
   - 
     title: Efectos de escape
   - 
-    title: Quick quiz
+    title: Examen rápido
     knowledge_quiz:
-      path: quiz1
+      path: prueba 1
       version: 1
       questions: 3
       passing_score: 3
     completion:
-      - external
+      - externo
   - 
-    title: Challenge
+    title: Desafío
     challenge: true
   - 
-    title: What can you do now?
+    title: '¿Qué puedes hacer ahora?'
