@@ -7,7 +7,7 @@ Add some grey circles to simulate the exhaust trail.
 </div>
 <div>
 
-![A slow animation of the smoke effect.](images/rocket_smoke.gif)
+Un'animazione lenta dell'effetto fumo.
 </div>
 </div>
 
@@ -19,7 +19,8 @@ language: python line_numbers: true line_number_start: 10
 line_highlights: 14
 ---
 
-def draw_rocket(): global rocket_position rocket_position = rocket_position - 1 image(rocket, width/2, rocket_position, 64, 64) fill(200, 200, 200, 100)
+def draw_rocket(): global rocket_y   
+rocket_y -= 1
 
 
 --- /code ---
@@ -55,7 +56,7 @@ language: python line_numbers: true line_number_start: 15
 line_highlights: 16-22
 ---
 
-no_stroke() circle_size = randint(5,10) ellipse( screen_size/2, rocket_position, circle_size, circle_size )
+for i in range(25): fill(255, 255 - i * 10, 0)  # Riduce la quantità di verde ellipse(width/2, rocket_y + i, 8, 3)
 
 --- /code ---
 
@@ -63,7 +64,7 @@ no_stroke() circle_size = randint(5,10) ellipse( screen_size/2, rocket_position,
 
 --- task ---
 
-**Test:** Run your program and you should see a grey circle appear at the bottom of the rocket.
+**Test:** Esegui il programma e verifica che i fumi di scarico siano visibili.
 
 --- /task ---
 
@@ -73,12 +74,11 @@ Indent the code you used to draw the circle, and add a loop which will run the c
 
 --- code ---
 ---
-language: python line_numbers: true line_number_start: 10
+Cambia la chiamata della funzione `fill()` per impostare la quantità di verde al valore di `255 - i * 10` in modo che la prima ellisse abbia la stessa quantità di rosso e verde e l'ultima ellisse ha pochissimo verde.
 line_highlights: 16-23
 ---
 
-def draw_rocket(): global rocket_position rocket_position = rocket_position - 1 image(rocket, width/2, rocket_position, 64, 64) fill(200, 200, 200, 100) no_stroke() for i in range(20): circle_size = randint(5,10) ellipse( screen_size/2, rocket_position, circle_size,    
-circle_size )
+no_stroke()  # Fa in modo che non venga disegnata la linea for i in range(25):  # Disegna 25 ellissi di gas di scarico fill(255, 255, 0)  # Giallo ellipse(width/2, rocket_y + i, 8, 3)  # aumenta I ad ogni ciclo image(rocket, width/2, rocket_y, 64, 64)
 
 
 --- /code ---
@@ -87,7 +87,7 @@ circle_size )
 
 --- task ---
 
-**Test:** Run your program. You will still see a flashing grey circle at the bottom of the rocket - all of the circles have been drawn on top of each other!
+**Test:** Esegui il codice per verificare che il razzo abbia una nuova scia di scarico. You will still see a flashing grey circle at the bottom of the rocket - all of the circles have been drawn on top of each other!
 
 --- /task ---
 
@@ -96,11 +96,11 @@ circle_size )
 
 --- code ---
 ---
-language: python line_numbers: true line_number_start: 24
+language: python filename: main.py - draw_rocket() line_numbers: true line_number_start: 18
 line_highlights: 25-26
 ---
 
-ellipse( screen_size/2 + randint(-5,5), rocket_position + randint(20,50), circle_size, circle_size )
+for i in range(25): fill(255, 255 - i * 10, 0) ellipse(width/2, rocket_y + i, 8, 3) fill(200, 200, 200, 100)  # Grigio trasparente for i in range(20):  # Disegna 20 ellissi di fumo ellipse(width/2 + randint(-5, 5), rocket_y + randint(20, 50), randint(5, 10), randint(5, 10)) image(rocket, width/2, rocket_y, 64, 64)
 
 --- /code ---
 
