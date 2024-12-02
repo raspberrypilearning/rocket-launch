@@ -15,12 +15,12 @@ legend: Питання 1 з 3
 
 ```python
 for i in range(5):
-  print(i)
+  print("Зациклення", i)
 ```
 
 --- choices ---
 
-- ( )  1 <br> 2 <br> 3 <br> 4 <br> 5
+- ( ) Зациклення 1 <br> Зациклення 2 <br> Зациклення 3 <br> Зациклення 4 <br> Зациклення 5
 
   --- feedback ---
 
@@ -28,7 +28,7 @@ Not quite, a `for` loop in Python starts from 0, unless otherwise specified.
 
   --- /feedback ---
 
-- ( ) i <br> i <br> i <br> i <br> i
+- ( ) Зациклення i
 
   --- feedback ---
 
@@ -36,7 +36,7 @@ Not quite, a `for` loop in Python starts from 0, unless otherwise specified.
 
   --- /feedback ---
 
-- (x) 0 <br> 1 <br> 2 <br> 3 <br> 4
+- (x) Зациклення 0 <br> Зациклення 1 <br> Зациклення 2 <br> Зациклення 3 <br> Зациклення 4
 
   --- feedback ---
 
@@ -44,7 +44,7 @@ Not quite, a `for` loop in Python starts from 0, unless otherwise specified.
 
   --- /feedback ---
 
-- ( ) 4 <br>  3 <br> 2 <br> 1 <br> 0
+- ( ) Зациклення 4 <br> Зациклення 3 <br> Зациклення 2 <br> Зациклення 1 <br> Зациклення 0
 
   --- feedback ---
 
