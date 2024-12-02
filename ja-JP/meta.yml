@@ -7,12 +7,12 @@ meta_description: Learn Python with the Raspberry Pi Foundation's coding project
 version: 0.0.1
 listed: true
 copyedit: true
-last_tested: "2024-10-21"
+last_tested: "2021-10-06"
 steps:
   - 
-    title: What you will make
+    title: はじめに
   - 
-    title: Draw the background
+    title: シーンを設定する
     completion:
       - engaged
   - 
@@ -20,7 +20,7 @@ steps:
   - 
     title: 排気効果
   - 
-    title: Quick quiz
+    title: 燃料を燃やす
     knowledge_quiz:
       path: quiz1
       version: 1
@@ -29,7 +29,7 @@ steps:
     completion:
       - external
   - 
-    title: Challenge
+    title: 軌道に到達
     challenge: true
   - 
-    title: What can you do now?
+    title: ふりかえり
