@@ -14,6 +14,7 @@ Add some grey circles to simulate the exhaust trail.
 
  
 --- task ---
+
 Set the fill colour for the smoke to transparent grey. 
 
 --- code ---
@@ -37,6 +38,7 @@ def draw_rocket():
 
 
 --- task ---
+
 The outline around the circles is called the **stroke**. Add some code to turn it off. 
 
 
@@ -55,7 +57,6 @@ line_highlights: 15
 --- /code ---
 
 --- /task ---
-
 
 --- task ---
 
@@ -127,8 +128,8 @@ def draw_rocket():
 --- /task ---
 
 --- task ---
-Generate a random number and add it to the x and y position of each circle so they aren't all drawn in the same place.
 
+Generate a random number and add it to the x and y position of each circle so they aren't all drawn in the same place.
 
 --- code ---
 ---
@@ -149,9 +150,8 @@ ellipse(
 
 --- /task ---
 
-
-
-
 --- task ---
+
 **Test:** Run your program and you should see lots of grey circles in random places at the bottom of the rocket. 
+
 --- /task ---
