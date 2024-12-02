@@ -1,14 +1,14 @@
-## Draw the background
+## Dibuja el fondo
 
 --- task ---
 
-Open the [starter project](https://editor.raspberrypi.org/en/projects/rocket-launch-starter){:target="_blank"}.
+Abre el [proyecto básico](https://editor.raspberrypi.org/en/projects/rocket-launch-starter){:target="_blank"}.
 
 --- /task ---
 
-First, you will create a black background to represent space.
+Primero, crearás un fondo negro para representar el espacio.
 
---- task --- Define a `draw_background()` function, and set the background colour to black.
+--- task --- Define una función `dibujar_fondo()` y establece el color de fondo en negro.
 
 --- code ---
 ---
@@ -17,7 +17,7 @@ line_highlights: 13-14
 ---
 
 # La función dibujar_fondo va aquí
-def draw_background():   
+def dibujar_fondo():   
 background(0, 0, 0)
 
 --- /code ---
@@ -26,7 +26,7 @@ background(0, 0, 0)
 
 --- task ---
 
-Add this function to the list of things to `draw()` in every frame.
+Añade esta función a la lista de cosas para `dibujar ()` en cada cuadro.
 
 --- code ---
 ---
@@ -34,7 +34,7 @@ language: python line_numbers: true line_number_start: 25
 line_highlights: 27
 ---
 
-def draw(): # Things to do in every frame draw_background()
+def dibujar(): #Cosas que hacer en cada cuadro dibujar_fondo()
 
 --- /code ---
 
@@ -42,29 +42,29 @@ def draw(): # Things to do in every frame draw_background()
 
 --- task ---
 
-**Test:** Run your code and you should see a black square. --- /task ---
+**Prueba:** Ejecuta tu código y deberías ver un cuadrado negro. --- /task ---
 
 
 
 --- task ---
 
-Add a line of code to display an image of a planet.
+Añade una línea de código para mostrar una imagen de un planeta.
 
 --- code ---
 ---
 language: python line_numbers: true line_number_start: 13
 line_highlights: 15-16
 ---
-def draw_background():  
+def dibujar_fondo():  
 background(0,0,0) image(planet, screen_size/2, screen_size, 300, 300) --- /code ---
 
-The `image()` function needs the following data:
+La función `image()` necesita los siguientes datos:
 
-- image filename - we have already loaded the planet image
-- x coordinate - we have already set the screen size
-- y coordinate
-- image width
-- image height
+- nombre de archivo de la imagen: ya hemos cargado la imagen del planeta
+- coordenada x: ya hemos establecido el tamaño de la pantalla
+- coordenada y
+- ancho de la imagen
+- altura de la imagen
 
 --- /task ---
 
@@ -72,26 +72,26 @@ The `image()` function needs the following data:
 
 **Prueba:** Ejecuta tu código y comprueba que dibuje un fondo negro con medio planeta en la parte inferior.
 
-![A planet against a black background.](images/step_2.png){:width="300px"}
+![Un planeta sobre un fondo negro.](images/step_2.png){:width="300px"}
 
 --- /task ---
 
-### A different planet?
+### ¿Un planeta diferente?
 
 --- task ---
 
-Click on the image icon to the left to view the image gallery.
+Haz clic en el icono de la imagen a la izquierda para ver la galería de imágenes.
 
-![Choose a different planet](images/image_gallery.png)
+![Elige un planeta diferente](images/image_gallery.png)
 
-If you want to change the planet image, change `planet.png` in the code to the filename of your chosen planet, for example, `orange_planet.png`.
+Si quieres cambiar la imagen del planeta, cambia `planet.png` en el código por el nombre de archivo del planeta elegido, por ejemplo, `orange_planet.png`.
 
 --- code ---
 ---
 language: python line_numbers: true line_number_start: 17
 line_highlights: 22
 ---
-def setup(): # Set up your animation here size(screen_size, screen_size) image_mode(CENTER) global planet planet = load_image('planet.png') --- /code ---
+def setup(): #Configura tu animación aquí tamano(tamano_pantalla, tamano_pantalla) image_mode(CENTER) global planeta planeta = load_image('planet.png') #Tu planeta elegido
 
 --- /task ---
 
