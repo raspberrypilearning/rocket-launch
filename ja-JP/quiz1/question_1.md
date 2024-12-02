@@ -15,12 +15,12 @@ legend: 質問1/3
 
 ```python
 for i in range(5):
-  print(i)
+  print("ループ中", i)
 ```
 
 --- choices ---
 
-- ( )  1 <br> 2 <br> 3 <br> 4 <br> 5
+- ( ) ループ中 1 <br> ループ中 2 <br> ループ中 3 <br> ループ中 4 <br> ループ中 5
 
   --- feedback ---
 
@@ -36,7 +36,7 @@ Not quite, a `for` loop in Python starts from 0, unless otherwise specified.
 
   --- /feedback ---
 
-- (x) 0 <br> 1 <br> 2 <br> 3 <br> 4
+- (x) ループ中 0 <br> ループ中 1 <br> ループ中 2 <br> ループ中 3 <br> ループ中 4
 
   --- feedback ---
 
@@ -44,7 +44,7 @@ Not quite, a `for` loop in Python starts from 0, unless otherwise specified.
 
   --- /feedback ---
 
-- ( ) 4 <br>  3 <br> 2 <br> 1 <br> 0
+- ( ) ループ中 4 <br> ループ中 3 <br> ループ中 2 <br> ループ中 1 <br> ループ中 0
 
   --- feedback ---
 
