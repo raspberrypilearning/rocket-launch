@@ -2,9 +2,9 @@
   <a class="c-survey-banner__link" href="https://form.raspberrypi.org/f/code-editor-feedback" target="_blank">Partecipa al nostro sondaggio</a> per contribuire a migliorare il nostro editor di codice!
 </div>
 
-## What you will make
+## Quello che farai
 
-Make an animation to launch a rocket into orbit.
+Realizza un'animazione nella quale mandi un satellite in orbita, facendo trasportare da un razzo!
 
 
 
