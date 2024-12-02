@@ -15,12 +15,12 @@ Which output would you expect if you ran the program below?
 
 ```python
 for i in range(5):
-  print(i)
+  print("Gwneud dolen", i)
 ```
 
 --- choices ---
 
-- ( )  1 <br> 2 <br> 3 <br> 4 <br> 5
+- ( ) Gwneud dolen 1 <br> Gwneud dolen 2 <br> Gwneud dolen 3 <br> Gwneud dolen 4 <br> Gwneud dolen 5
 
   --- feedback ---
 
@@ -28,7 +28,7 @@ Not quite, a `for` loop in Python starts from 0, unless otherwise specified.
 
   --- /feedback ---
 
-- ( ) i <br> i <br> i <br> i <br> i
+- ( ) Gwneud dolen i
 
   --- feedback ---
 
@@ -36,7 +36,7 @@ Not quite, the **loop variable** from a `for` loop — in this case `i` — hold
 
   --- /feedback ---
 
-- (x) 0 <br> 1 <br> 2 <br> 3 <br> 4
+- (x) Gwneud dolen 0 <br> Gwneud dolen 1 <br> Gwneud dolen 2 <br> Gwneud dolen 3 <br> Gwneud dolen 4
 
   --- feedback ---
 
@@ -44,7 +44,7 @@ Correct. The loop runs once, in order, for each item `i` in the range [0, 1, 2, 
 
   --- /feedback ---
 
-- ( ) 4 <br>  3 <br> 2 <br> 1 <br> 0
+- ( ) Gwneud dolen 4 <br> Gwneud dolen 3 <br> Gwneud dolen 2 <br> Gwneud dolen 1 <br> Gwneud dolen 0
 
   --- feedback ---
 
