@@ -7,7 +7,7 @@ Add some grey circles to simulate the exhaust trail.
 </div>
 <div>
 
-![A slow animation of the smoke effect.](images/rocket_smoke.gif)
+رسم متحرك بطيء لتأثير الدخان.
 </div>
 </div>
 
@@ -19,7 +19,7 @@ language: python line_numbers: true line_number_start: 10
 line_highlights: 14
 ---
 
-def draw_rocket(): global rocket_position rocket_position = rocket_position - 1 image(rocket, width/2, rocket_position, 64, 64) fill(200, 200, 200, 100)
+image(rocket, width/2, rocket_y, 64, 64)
 
 
 --- /code ---
@@ -63,7 +63,7 @@ no_stroke() circle_size = randint(5,10) ellipse( screen_size/2, rocket_position,
 
 --- task ---
 
-**Test:** Run your program and you should see a grey circle appear at the bottom of the rocket.
+**اختبار:** لنقم بتشغيل البرنامج ونتحقق من أن أبخرة العادم مرئية.
 
 --- /task ---
 
@@ -73,12 +73,11 @@ Indent the code you used to draw the circle, and add a loop which will run the c
 
 --- code ---
 ---
-language: python line_numbers: true line_number_start: 10
-line_highlights: 16-23
+language: python filename: main.py - draw_rocket() line_numbers: true line_number_start: 12
+line_highlights: 23-26
 ---
 
-def draw_rocket(): global rocket_position rocket_position = rocket_position - 1 image(rocket, width/2, rocket_position, 64, 64) fill(200, 200, 200, 100) no_stroke() for i in range(20): circle_size = randint(5,10) ellipse( screen_size/2, rocket_position, circle_size,    
-circle_size )
+image(rocket, width/2, rocket_y, 64, 64)
 
 
 --- /code ---
@@ -87,7 +86,7 @@ circle_size )
 
 --- task ---
 
-**Test:** Run your program. You will still see a flashing grey circle at the bottom of the rocket - all of the circles have been drawn on top of each other!
+**الاختبار:** لنقم بتشغيل الشفرة البرمجية للتحقق من أن الصاروخ يحتوي على مسار عادم جديد. You will still see a flashing grey circle at the bottom of the rocket - all of the circles have been drawn on top of each other!
 
 --- /task ---
 
@@ -96,11 +95,17 @@ circle_size )
 
 --- code ---
 ---
-language: python line_numbers: true line_number_start: 24
-line_highlights: 25-26
+for i in range(25): #ارسم 25 شكلًا بيضاويًا محترقًا في العادم   
+fill(255, 255, 0) #أصفر   
+ellipse(width/2, rocket_y + i, 8, 3) #يزيد في كل مرة تتكرر فيها الحلقة
+for i in range(25):  
+fill(255, 255 - i * 10, 0)   
+ellipse(width/2, rocket_y + i, 8, 3)
 ---
 
-ellipse( screen_size/2 + randint(-5,5), rocket_position + randint(20,50), circle_size, circle_size )
+fill(200, 200, 200, 100) #Transparent grey   
+for i in range(20): #Draw 20 random smoke ellipses    
+ellipse(width/2 + randint(-5, 5), rocket_y + randint(20, 50), randint(5, 10), randint(5, 10))
 
 --- /code ---
 
