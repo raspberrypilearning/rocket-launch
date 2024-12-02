@@ -24,7 +24,7 @@ for i in range(5):
 
   --- feedback ---
 
-Not quite, a `for` loop in Python starts from 0, unless otherwise specified.
+No exactamente, un bucle `for` en Python comienza desde 0, a menos que se especifiques algo diferente.
 
   --- /feedback ---
 
@@ -48,7 +48,7 @@ Correcto. El bucle se ejecuta una vez, en orden, para cada elemento `i` en el ra
 
   --- feedback ---
 
-Not quite. Unless you have specified otherwise, a `for` loop will start at 0 and count up the number of times specified in the range.
+No exactamente. A menos que hayas especificado otro número, un bucle `for` comenzará en 0 y contará la cantidad de veces especificada en el rango.
 
   --- /feedback ---
 
