@@ -4,7 +4,7 @@
 
 ## What you will make
 
-Make an animation to launch a rocket into orbit.
+اصنع رسمًا متحركًا لدفع قمر صناعي إلى مداره - عن طريق ركوب صاروخ!
 
 
 
