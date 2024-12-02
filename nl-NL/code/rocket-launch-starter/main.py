@@ -2,7 +2,7 @@
 from p5 import *
 from random import randint
 
-# Set up global variables
+# Globale variabelen instellen
 screen_size = 400
 
 # De teken_raket functie komt hier
@@ -14,7 +14,7 @@ screen_size = 400
 
  
 def setup():
-    # Set up your animation here
+    # Stel hier je animatie in
     size(screen_size, screen_size)
     image_mode(CENTER)
     global planet
