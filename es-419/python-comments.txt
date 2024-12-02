@@ -2,7 +2,7 @@ Configurar variables globales
 
 Configura tu animación aquí
 
-Positions the image in the center
+Posiciona la imagen en el centro
 
 Tu planeta elegido
 
@@ -16,7 +16,7 @@ Cosas que hacer en cada cuadro
 
 La función dibujar_cohete va aquí
 
-Start at the bottom
+Empezar desde abajo
 
 Utiliza la variable global cohete_y
 
@@ -38,15 +38,15 @@ Dibujar 20 elipses de humo al azar
 
 Cuánto combustible se quema en cada fotograma
 
-How many kilograms of fuel do you want to use?
+¿Cuántos kilogramos de combustible quieres usar?
 
 Quemar combustible
 
-Fuel left: 
+Combustible restante: 
 
 Todavía tengo combustible
 
-Turn off the stroke
+Desactiva el trazo
 
 Establecer un trazo blanco
 
@@ -62,7 +62,7 @@ Fallo
 
 Demasiado combustible
 
-Looping
+Bucle
 
 Verde
 
