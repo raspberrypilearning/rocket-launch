@@ -1,8 +1,8 @@
---- challenge ---
+--- task ---
 
-## Challenge
+## Вихід на орбіту
 
-You could:
+Створи дві нові глобальні змінні, щоб встановити радіус кола орбіти та координату орбіти `y` до точки, якої повинен досягти центр ракети, щоб запустити супутник.
 
 --- task --- Give your smoke circles a range of different colours. --- /task ---
 
@@ -11,4 +11,4 @@ You could:
 --- task --- Add to your animation so that the rocket reappears and lands on a different planet. --- /task ---
 
 
---- /challenge ---
+--- /code ---
