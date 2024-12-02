@@ -2,7 +2,7 @@
 from p5 import *
 from random import randint
 
-# Set up global variables
+# Globale Variablen einrichten
 screen_size = 400
 
 # Die Funktion „zeichne_rakete“ kommt hierher
@@ -14,7 +14,7 @@ screen_size = 400
 
  
 def setup():
-    # Set up your animation here
+    # Richte hier Deine Animation ein
     size(screen_size, screen_size)
     image_mode(CENTER)
     global planet
