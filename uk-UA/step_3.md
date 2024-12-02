@@ -1,4 +1,4 @@
-## Lift off!
+## Зліт!
 
 У стартовому проєкті тобі надається зображення ракети.
 
@@ -10,8 +10,8 @@
 
 --- code ---
 ---
-language: python filename: main.py line_numbers: true line_number_start: 17
-line_highlights: 21, 23
+Додай код до функції `setup()`, щоб завантажити зображення ракети в глобальну змінну `rocket`.
+line_highlights: 24, 26
 ---
 
 def setup():   
@@ -22,7 +22,7 @@ global planet, rocket
 planet = load_image('planet.png')    
 rocket = load_image('rocket.png')
 
---- /code --- --- /task ---
+language: python filename: main.py line_numbers: true line_number_start: 20
 
 --- task ---
 
@@ -30,11 +30,11 @@ Add a `rocket_position` global variable to keep track of the rocket's `y` positi
 
 --- code ---
 ---
-language: python line_numbers: true line_number_start: 5
-line_highlights: 7
+Позиція ракети `y` буде починатися з 400 (висота екрану), а потім буде зменшуватися на 1 щоразу, коли буде малюватися новий кадр.
+line_highlights: 9
 ---
 
-# Set up global variables
+# Налаштування глобальних змінних
 screen_size = 400    
 rocket_position = screen_size
 
@@ -43,7 +43,7 @@ rocket_position = screen_size
 --- /task ---
 
 
-Позиція ракети `y` буде починатися з 400 (висота екрану), а потім буде зменшуватися на 1 щоразу, коли буде малюватися новий кадр.
+language: python filename: main.py line_numbers: true line_number_start: 7
 
 
 --- task ---
@@ -53,13 +53,11 @@ Define a `draw_rocket()` function to make the rocket appear on the screen.
 --- code ---
 ---
 language: python line_numbers: true line_number_start: 9
-line_highlights: 10-12
+line_highlights: 12-16
 ---
 
 # Функція draw_rocket викликається тут
-def draw_rocket():   
-global rocket_position      
-image(rocket, width/2, rocket_position, 64, 64)
+Визнач функцію `draw_rocket()`, щоб змінювати позицію ракети `y` та перемалювати її.
 
 
 --- /code ---
@@ -68,12 +66,12 @@ image(rocket, width/2, rocket_position, 64, 64)
 
 --- task ---
 
-Call the `draw_rocket()` function.
+def draw_rocket():
 
 --- code ---
 ---
 language: python line_numbers: true line_number_start: 29
-line_highlights: 32
+line_highlights: 37
 ---
 
 def draw(): # Things to do in every frame draw_background() draw_rocket()
@@ -85,7 +83,7 @@ def draw(): # Things to do in every frame draw_background() draw_rocket()
 
 --- task ---
 
-**Test:** Run your code and check that the rocket appears at the bottom of the image.
+language: python filename: main.py line_numbers: true line_number_start: 34
 
 
 --- /task ---
