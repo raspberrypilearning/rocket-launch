@@ -1,19 +1,19 @@
-## Draw the background
+## Gosod yr olygfa
 
 --- task ---
 
-Open the [starter project](https://editor.raspberrypi.org/en/projects/rocket-launch-starter){:target="_blank"}.
+Agorwch [dempled y prosiect](https://trinket.io/python/58565016a2){:target="_blank"}.
 
 --- /task ---
 
 First, you will create a black background to represent space.
 
---- task --- Define a `draw_background()` function, and set the background colour to black.
+Byddwch chi'n defnyddio newidyn `maint_sgrin` i osod maint y sgrin ac mewn cyfrifiadau. Mae newidynnau sy'n cael eu diffinio tu allan i swyddogaethau yn rhai **cyffredinol (global)** felly gallwch chi eu defnyddio unrhyw le yn eich rhaglen.
 
 --- code ---
 ---
-language: python line_numbers: true line_number_start: 12
-line_highlights: 13-14
+Dewch o hyd i'r sylw `Gosod newidynnau cyffredinol` ac ychwanegu llinell o god i greu eich newidyn `maint_sgrin`:
+line_highlights: 8
 ---
 
 # Mae'r swyddogaeth llunio_cefndir yn mynd fan hyn
@@ -30,8 +30,8 @@ Add this function to the list of things to `draw()` in every frame.
 
 --- code ---
 ---
-language: python line_numbers: true line_number_start: 25
-line_highlights: 27
+Defnyddiwch y newidyn `maint_sgrin` i greu sgwâr 400 wrth 400 picsel:
+line_highlights: 20
 ---
 
 def draw(): # Things to do in every frame draw_background()
@@ -48,17 +48,17 @@ def draw(): # Things to do in every frame draw_background()
 
 --- task ---
 
-Add a line of code to display an image of a planet.
+Mae gan y prosiect dechreuol dair delwedd wahanol o blaned a'r lleuad wedi'u llunio'n barod i chi. Fe allwch chi weld y rhain yn llyfrgell ddelweddau Trinket drwy ddewis y botwm **View and Add Images**.
 
 --- code ---
 ---
-language: python line_numbers: true line_number_start: 13
-line_highlights: 15-16
+**Dewiswch:** Penderfynwch pa ddelwedd rydych chi am ei defnyddio a gwneud nodyn o enw'r ffeil. Er enghraifft, `orange_planet.png`.
+line_highlights: 21-23
 ---
 def draw_background():  
 background(0,0,0) image(planet, screen_size/2, screen_size, 300, 300) --- /code ---
 
-The `image()` function needs the following data:
+Mae'n syniad da llwytho delweddau yn `setup()` fel eu bod yn barod pan fyddwch chi angen eu defnyddio a bydd eich animeiddiad yn rhedeg yn gyflym.
 
 - image filename - we have already loaded the planet image
 - x coordinate - we have already set the screen size
@@ -70,7 +70,7 @@ The `image()` function needs the following data:
 
 --- task ---
 
-**Test:** Run your code and check that it draws a black background with half a planet at the bottom.
+Hefyd, ychwanegwch god at y swyddogaeth `setup()` i lwytho'r ddelwedd o'ch dewis i newidyn cyffredinol `planed`. Rhaid i'r newidyn fod yn un cyffredinol er mwyn i chi allu ei ddefnyddio nes ymlaen wrth lunio'r blaned ar y sgrin.
 
 ![A planet against a black background.](images/step_2.png){:width="300px"}
 
@@ -88,8 +88,8 @@ If you want to change the planet image, change `planet.png` in the code to the f
 
 --- code ---
 ---
-language: python line_numbers: true line_number_start: 17
-line_highlights: 22
+Defnyddiwch `background(0)` i osod lliw'r cefndir i ddu ac ychwanegu swyddogaeth `image()` i lunio'r blaned. Mae'r swyddogaeth `image()` wedi'i gosod fel:
+line_highlights: 15-17
 ---
 def setup(): # Set up your animation here size(screen_size, screen_size) image_mode(CENTER) global planet planet = load_image('planet.png') --- /code ---
 
