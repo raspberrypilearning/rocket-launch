@@ -2,9 +2,9 @@
   <a class="c-survey-banner__link" href="https://form.raspberrypi.org/f/code-editor-feedback" target="_blank">¡Responde a nuestra encuesta</a> para ayudar a mejorar nuestro Editor de código!
 </div>
 
-## What you will make
+## Lo que harás
 
-Make an animation to launch a rocket into orbit.
+Haz una animación para lanzar un cohete a la órbita.
 
 
 
