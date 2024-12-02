@@ -1,4 +1,4 @@
-## Lift off!
+## Απογείωση!
 
 Το αρχικό έργο σου προσφέρει μια εικόνα πυραύλου.
 
@@ -10,8 +10,8 @@
 
 --- code ---
 ---
-language: python filename: main.py line_numbers: true line_number_start: 17
-line_highlights: 21, 23
+Πρόσθεσε επίσης κώδικα στη συνάρτηση `setup()` για να φορτώσεις την εικόνα του πύραυλου σε μια καθολική μεταβλητή `rocket`.
+line_highlights: 24, 26
 ---
 
 def setup():   
@@ -22,7 +22,7 @@ global planet, rocket
 planet = load_image('planet.png')    
 rocket = load_image('rocket.png')
 
---- /code --- --- /task ---
+language: python filename: main.py line_numbers: true line_number_start: 20
 
 --- task ---
 
@@ -30,11 +30,11 @@ Add a `rocket_position` global variable to keep track of the rocket's `y` positi
 
 --- code ---
 ---
-language: python line_numbers: true line_number_start: 5
-line_highlights: 7
+Η θέση `y` του πυραύλου θα ξεκινά από το 400 (το ύψος της οθόνης) και στη συνέχεια θα μειώνεται κατά 1 κάθε φορά που σχεδιάζεται ένα νέο καρέ.
+line_highlights: 9
 ---
 
-# Set up global variables
+# Ρύθμιση καθολικών μεταβλητών
 screen_size = 400    
 rocket_position = screen_size
 
@@ -53,13 +53,11 @@ Define a `draw_rocket()` function to make the rocket appear on the screen.
 --- code ---
 ---
 language: python line_numbers: true line_number_start: 9
-line_highlights: 10-12
+line_highlights: 12-16
 ---
 
 # Η συνάρτηση draw_rocket πηγαίνει εδώ
-def draw_rocket():   
-global rocket_position      
-image(rocket, width/2, rocket_position, 64, 64)
+Όρισε μια συνάρτηση `draw_rocket()` για να αλλάξεις τη θέση του `y` του πυραύλου και σχεδίασέ τον ξανά.
 
 
 --- /code ---
@@ -68,12 +66,12 @@ image(rocket, width/2, rocket_position, 64, 64)
 
 --- task ---
 
-Call the `draw_rocket()` function.
+def draw_rocket():
 
 --- code ---
 ---
 language: python line_numbers: true line_number_start: 29
-line_highlights: 32
+line_highlights: 37
 ---
 
 def draw(): # Things to do in every frame draw_background() draw_rocket()
@@ -85,7 +83,7 @@ def draw(): # Things to do in every frame draw_background() draw_rocket()
 
 --- task ---
 
-**Test:** Run your code and check that the rocket appears at the bottom of the image.
+language: python filename: main.py line_numbers: true line_number_start: 34
 
 
 --- /task ---
