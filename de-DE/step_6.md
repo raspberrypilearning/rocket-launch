@@ -1,4 +1,4 @@
---- challenge ---
+--- task ---
 
 ## Challenge
 
@@ -11,4 +11,4 @@ You could:
 --- task --- Add to your animation so that the rocket reappears and lands on a different planet. --- /task ---
 
 
---- /challenge ---
+--- /code ---
