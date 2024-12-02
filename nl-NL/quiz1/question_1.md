@@ -15,16 +15,16 @@ Welke uitvoer zou je verwachten als je het onderstaande programma zou draaien?
 
 ```python
 for i in range(5):
-  print(i)
+  print("Lus", i)
 ```
 
 --- choices ---
 
-- ( )  1 <br> 2 <br> 3 <br> 4 <br> 5
+- ( ) Lus 1 <br> Lus 2 <br> Lus 3 <br> Lus 4 <br> Lus 5
 
   --- feedback ---
 
-Not quite, a `for` loop in Python starts from 0, unless otherwise specified.
+Niet helemaal, een `for` lus in Python herhaalt zijn code in een gegeven reeks, en hier creëert `range` een reeks die begint bij `0`.
 
   --- /feedback ---
 
@@ -36,7 +36,7 @@ Niet helemaal, de **lus variabele** van een `for` lus - in dit geval `i` - bevat
 
   --- /feedback ---
 
-- (x) 0 <br> 1 <br> 2 <br> 3 <br> 4
+- (x) Lus 0 <br> Lus 1 <br> Lus 2 <br> Lus 3 <br> Lus 4
 
   --- feedback ---
 
@@ -44,7 +44,7 @@ Juist. De lus loopt één keer, in volgorde, voor elk item `i` in het bereik [0,
 
   --- /feedback ---
 
-- ( ) 4 <br>  3 <br> 2 <br> 1 <br> 0
+- ( ) Lus 4 <br> Lus 3 <br> Lus 2 <br> Lus 1 <br> Lus 0
 
   --- feedback ---
 
