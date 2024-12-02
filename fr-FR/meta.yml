@@ -7,12 +7,12 @@ meta_description: Apprendre Python avec les projets de codage de la Raspberry Pi
 version: 0.0.1
 listed: true
 copyedit: true
-last_tested: "2024-10-21"
+last_tested: "2021-10-06"
 steps:
   - 
-    title: What you will make
+    title: Ce que tu vas faire
   - 
-    title: Draw the background
+    title: Créer la scène
     completion:
       - engaged
   - 
@@ -20,7 +20,7 @@ steps:
   - 
     title: Effets d'échappement
   - 
-    title: Quick quiz
+    title: Brûler du carburant
     knowledge_quiz:
       path: quiz1
       version: 1
@@ -29,7 +29,7 @@ steps:
     completion:
       - external
   - 
-    title: Challenge
+    title: Atteindre l'orbite
     challenge: true
   - 
-    title: What can you do now?
+    title: Questionnaire rapide
