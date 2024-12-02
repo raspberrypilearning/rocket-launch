@@ -1,48 +1,48 @@
-# Import library code
+# Importar código de biblioteca
 from p5 import *
 from random import randint
 
-# Set up global variables
-screen_size = 400
-rocket_position = screen_size
+# Configurar variables globales
+tamano_pantalla = 400
+posicion_cohete = tamano_pantalla
 
 
-# The draw_rocket function goes here
-def draw_rocket():
-    global rocket_position
-    rocket_position = rocket_position - 1
-    image(rocket, width / 2, rocket_position, 64, 64)
+# Aquí va la función dibujar_cohete
+def dibujar_cohete():
+    global posicion_cohete
+    posicion_cohete = posicion_cohete - 1
+    image(cohete, ancho/2, cohete_y, 64, 64)
     fill(200, 200, 200, 100)
     no_stroke()
     for i in range(20):
-        circle_size = randint(5, 10)
-        ellipse(
-            screen_size / 2 + randint(-5, 5),
-            rocket_position + randint(20, 50),
-            circle_size,
-            circle_size,
+        tamano_circulo = randint(5, 10)
+        elipse(
+            tamano_pantalla / 2 + randint(-5, 5),
+            posicion_cohete + randint(20, 50),
+            tamano_circulo
+            tamano_circulo,
         )
 
 
-# The draw_background function goes here
-def draw_background():
+# Aquí va la función dibujar_fondo
+def dibujar_fondo():
     background(0, 0, 0)
-    image(planet, screen_size / 2, screen_size, 300, 300)
+    image(planeta, tamano_pantalla / 2, tamano_pantalla, 300, 300)
 
 
 def setup():
-    # Set up your animation here
-    size(screen_size, screen_size)
+    # Configura tu animación aquí
+    size(tamano_pantalla, tamano_pantalla)
     image_mode(CENTER)
-    global planet, rocket
-    planet = load_image("purple_planet.png")
-    rocket = load_image("rocket.png")
+    global planeta, cohete
+    planeta = load_image("purple_planet.png")
+    cohete = load_image("rocket.png")
 
 
 def draw():
-    # Things to do in every frame
-    draw_background()
-    draw_rocket()
+    # Cosas que hacer en cada cuadro
+    dibujar_fondo()
+    dibujar_cohete()
 
 
 run()
