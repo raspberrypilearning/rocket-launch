@@ -2,7 +2,7 @@
 from p5 import *
 from random import randint
 
-# Set up global variables
+# Imposta le variabili globali
 screen_size = 400
 
 # La funzione draw_rocket va qui
@@ -14,7 +14,7 @@ screen_size = 400
 
  
 def setup():
-    # Set up your animation here
+    # Imposta la tua animazione qui
     size(screen_size, screen_size)
     image_mode(CENTER)
     global planet
