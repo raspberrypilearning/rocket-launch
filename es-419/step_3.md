@@ -1,10 +1,10 @@
-## Lift off!
+## ¡Despegar!
 
 El proyecto de inicio tiene una imagen de cohete provista para tí.
 
 ![Imagen del cohete en la galería de imágenes del editor de código.](images/rocket_image.png)
 
---- task --- Add code to the `setup()` function to load the rocket image into a `rocket` global variable.
+--- task --- Agrega código a la función `setup()` para cargar la imagen del cohete en una variable global `cohete`.
 
 <div class="c-project-code">
 
@@ -15,18 +15,18 @@ line_highlights: 21, 23
 ---
 
 def setup():   
-# Set up your animation here   
-size(screen_size, screen_size)   
+#Configura tu animación aquí   
+tamano(tamano_pantalla, tamano_pantalla)   
 image_mode(CENTER)   
-global planet, rocket   
-planet = load_image('planet.png')    
-rocket = load_image('rocket.png')
+global planeta, cohete   
+planeta = load_image('planet.png')    
+cohete = load_image( 'rocket.png')
 
 --- /code --- --- /task ---
 
 --- task ---
 
-Add a `rocket_position` global variable to keep track of the rocket's `y` position.
+Agrega una variable global `posicion_cohete` para realizar un seguimiento de la posición `y` del cohete.
 
 --- code ---
 ---
@@ -34,9 +34,9 @@ language: python line_numbers: true line_number_start: 5
 line_highlights: 7
 ---
 
-# Set up global variables
-screen_size = 400    
-rocket_position = screen_size
+# Configurar variables globales
+tamano_de_pantalla = 400    
+posición_del_cohete = tamano_de_pantalla
 
 --- /code ---
 
@@ -48,7 +48,7 @@ La posición `y` del cohete comenzará en 400 (la altura de la pantalla) y luego
 
 --- task ---
 
-Define a `draw_rocket()` function to make the rocket appear on the screen.
+Define una función `dibujar_cohete()` para hacer que el cohete aparezca en la pantalla.
 
 --- code ---
 ---
@@ -57,9 +57,9 @@ line_highlights: 10-12
 ---
 
 # La función draw_rocket va aquí
-def draw_rocket():   
-global rocket_position      
-image(rocket, width/2, rocket_position, 64, 64)
+def dibujar_cohete():   
+posicion_cohete global      
+image(cohete, ancho/2, posicion_cohete, 64, 64)
 
 
 --- /code ---
@@ -68,7 +68,7 @@ image(rocket, width/2, rocket_position, 64, 64)
 
 --- task ---
 
-Call the `draw_rocket()` function.
+Llama a la función `dibujar_cohete()`.
 
 --- code ---
 ---
@@ -76,7 +76,7 @@ language: python line_numbers: true line_number_start: 29
 line_highlights: 32
 ---
 
-def draw(): # Things to do in every frame draw_background() draw_rocket()
+def dibujar(): #Cosas a hacer en cada fotograma dibujar_fondo() dibujar_cohete()
 
 
 --- /code ---
@@ -85,18 +85,18 @@ def draw(): # Things to do in every frame draw_background() draw_rocket()
 
 --- task ---
 
-**Test:** Run your code and check that the rocket appears at the bottom of the image.
+**Prueba:** Ejecuta tu código y verifica que el cohete aparece en la parte inferior de la imagen.
 
 
 --- /task ---
 
 
-Each time a new frame is drawn, you need to move the rocket one pixel up the screen to create an animation effect.
+Cada vez que se dibuja un nuevo cuadro, el cohete debe moverse hacia arriba en la pantalla para crear un efecto de animación.
 
 
 --- task ---
 
-The `rocket_position` of the rocket will start at 400 (the screen height) and then decrease by 1 each time a new frame is drawn.
+La `posicion_cohete` comenzará en 400 (la altura de la pantalla) y luego disminuirá en 1 cada vez que se dibuje un nuevo cuadro.
 
 --- code ---
 ---
@@ -104,20 +104,20 @@ language: python line_numbers: true line_number_start: 10
 line_highlights: 12
 ---
 
-def draw_rocket():   
-global rocket_position     
-rocket_position = rocket_position - 1    
-image(rocket, width/2, rocket_position, 64, 64)    
---- /code ---
+def dibujar_cohete():   
+posicion_cohete global     
+posicion_cohete = posicion_cohete - 1    
+image(cohete, ancho/2, posicion_cohete, 64, 64)    
+--- /code---
 
 --- /task ---
 
 
 --- task ---
 
-**Test:** Run your code to check that the rocket blasts off from the bottom of the screen.
+**Prueba:** Ejecuta tu código para verificar que el cohete despegue desde la parte inferior de la pantalla.
 
 
-![A rocket flying at a steady speed from the bottom to the top of the screen.](images/fly.gif){:width="300px"}
+![Un cohete que vuela a una velocidad constante desde la parte inferior hasta la parte superior de la pantalla.](images/fly.gif){:width="300px"}
 
 --- /task ---
