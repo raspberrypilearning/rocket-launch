@@ -7,7 +7,7 @@ Add some grey circles to simulate the exhaust trail.
 </div>
 <div>
 
-![A slow animation of the smoke effect.](images/rocket_smoke.gif)
+![Ракета посередині шляху зі слідом вихлопних газів.](images/flying_rocket.gif){:width="300px"}
 </div>
 </div>
 
@@ -47,7 +47,7 @@ line_highlights: 15
 
 --- task ---
 
-Generate a random number between 5 and 10 for the size of the circle, then draw it at the bottom of the rocket.
+image(rocket, width/2, rocket_y, 64, 64)
 
 --- code ---
 ---
@@ -63,7 +63,7 @@ no_stroke() circle_size = randint(5,10) ellipse( screen_size/2, rocket_position,
 
 --- task ---
 
-**Test:** Run your program and you should see a grey circle appear at the bottom of the rocket.
+Змінна `i` може також використовуватися для створення кольорового градієнта з меншою кількістю зеленого кольору в кожному наступному овалі, який буде малюватися.
 
 --- /task ---
 
@@ -73,7 +73,9 @@ Indent the code you used to draw the circle, and add a loop which will run the c
 
 --- code ---
 ---
-language: python line_numbers: true line_number_start: 10
+for i in range(25):   
+fill(255, 255 - i * 10, 0) #Зменшити кількість зеленого кольору    
+ellipse(width/2, rocket_y + i, 8, 3)
 line_highlights: 16-23
 ---
 
@@ -100,7 +102,7 @@ language: python line_numbers: true line_number_start: 24
 line_highlights: 25-26
 ---
 
-ellipse( screen_size/2 + randint(-5,5), rocket_position + randint(20,50), circle_size, circle_size )
+На кожному кадрі анімації буде намальовано 20 овалів випадкових розмірів на випадкових позиціях.
 
 --- /code ---
 
