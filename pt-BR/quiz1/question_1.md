@@ -15,16 +15,16 @@ Qual resultado você esperaria se executasse o programa abaixo?
 
 ```python
 for i in range(5):
-  print(i)
+  print("Ciclo", i)
 ```
 
 --- choices ---
 
-- ( )  1 <br> 2 <br> 3 <br> 4 <br> 5
+- ( ) Ciclo 1 <br> Ciclo 2 <br> Ciclo 3 <br> Ciclo 4 <br> Ciclo 5
 
   --- feedback ---
 
-Not quite, a `for` loop in Python starts from 0, unless otherwise specified.
+Não exatamente, um ciclo `for` em Python repete seu código uma vez para cada item em uma sequência que é fornecida, e aqui `range` cria uma sequência começando em `0`.
 
   --- /feedback ---
 
@@ -36,7 +36,7 @@ Não exatamente, a **variável de ciclo** de um ciclo `for` — neste caso `i` �
 
   --- /feedback ---
 
-- (x) 0 <br> 1 <br> 2 <br> 3 <br> 4
+- (x) Ciclo 0 <br> Ciclo 1 <br> Ciclo 2 <br> Ciclo 3 <br> Ciclo 4
 
   --- feedback ---
 
@@ -44,7 +44,7 @@ Correto. O ciclo é executado uma vez, em ordem, para cada item `i` no intervalo
 
   --- /feedback ---
 
-- ( ) 4 <br>  3 <br> 2 <br> 1 <br> 0
+- ( ) Ciclo 1 <br> Ciclo 2 <br> Ciclo 3 <br> Ciclo 4 <br> Ciclo 0
 
   --- feedback ---
 
