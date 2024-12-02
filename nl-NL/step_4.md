@@ -7,7 +7,7 @@ Add some grey circles to simulate the exhaust trail.
 </div>
 <div>
 
-![A slow animation of the smoke effect.](images/rocket_smoke.gif)
+Een langzame animatie van het rookeffect.
 </div>
 </div>
 
@@ -19,7 +19,8 @@ language: python line_numbers: true line_number_start: 10
 line_highlights: 14
 ---
 
-def draw_rocket(): global rocket_position rocket_position = rocket_position - 1 image(rocket, width/2, rocket_position, 64, 64) fill(200, 200, 200, 100)
+def teken_raket(): global raket_y   
+raket_y -= 1
 
 
 --- /code ---
@@ -63,7 +64,7 @@ no_stroke() circle_size = randint(5,10) ellipse( screen_size/2, rocket_position,
 
 --- task ---
 
-**Test:** Run your program and you should see a grey circle appear at the bottom of the rocket.
+**Test:** Voer je programma uit en controleer of de uitlaatgassen zichtbaar zijn.
 
 --- /task ---
 
@@ -73,12 +74,11 @@ Indent the code you used to draw the circle, and add a loop which will run the c
 
 --- code ---
 ---
-language: python line_numbers: true line_number_start: 10
+language: python filename: main.py - draw_rocket() line_numbers: true line_number_start: 12
 line_highlights: 16-23
 ---
 
-def draw_rocket(): global rocket_position rocket_position = rocket_position - 1 image(rocket, width/2, rocket_position, 64, 64) fill(200, 200, 200, 100) no_stroke() for i in range(20): circle_size = randint(5,10) ellipse( screen_size/2, rocket_position, circle_size,    
-circle_size )
+no_stroke() # Schakel de lijn uit for i in range(25): # Teken 25 brandende uitlaatellipsen fill(255, 255, 0) # Geel ellipse(width/2, raket_y + i, 8, 3) # i neemt toe elke keer dat de lus wordt herhaald image(raket, width/2, raket_y, 64, 64)
 
 
 --- /code ---
@@ -87,7 +87,7 @@ circle_size )
 
 --- task ---
 
-**Test:** Run your program. You will still see a flashing grey circle at the bottom of the rocket - all of the circles have been drawn on top of each other!
+**Test:** Voer je code uit om te controleren of de raket een nieuw uitlaatspoor heeft. You will still see a flashing grey circle at the bottom of the rocket - all of the circles have been drawn on top of each other!
 
 --- /task ---
 
@@ -96,11 +96,11 @@ circle_size )
 
 --- code ---
 ---
-language: python line_numbers: true line_number_start: 24
+for i in range(25): fill(255, 255 - i * 10, 0) # Verminder de hoeveelheid groen ellipse(width/2, raket_y + i, 8, 3)
 line_highlights: 25-26
 ---
 
-ellipse( screen_size/2 + randint(-5,5), rocket_position + randint(20,50), circle_size, circle_size )
+for i in range(25): fill(255, 255 - i * 10, 0) ellipse(width/2, raket_y + i, 8, 3) fill(200, 200, 200, 100) # Transparant grijs for i in range(20): # Teken 20 willekeurige rookellipsen ellipse(width/2 + randint(-5, 5), raket_y + randint(20, 50), randint(5, 10), randint(5, 10)) image(raket, width/2, raket_y, 64, 64)
 
 --- /code ---
 
