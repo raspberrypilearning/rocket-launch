@@ -1,21 +1,21 @@
-## Lift off!
+## 発射！
 
 スタータープロジェクトには、ロケットの画像が用意されています。
 
 ![Image of the rocket in the code editor image gallery.](images/rocket_image.png)
 
---- task --- Add code to the `setup()` function to load the rocket image into a `rocket` global variable.
+`setup()` 関数にコードを追加して、ロケットの画像を `rocket` グローバル変数にロードします。
 
 <div class="c-project-code">
 
 --- code ---
 ---
-language: python filename: main.py line_numbers: true line_number_start: 17
-line_highlights: 21, 23
+language: python filename: main.py line_numbers: true line_number_start: 20
+line_highlights: 24, 26
 ---
 
 def setup():   
-# Set up your animation here   
+#ここでアニメーションをセットアップします   
 size(screen_size, screen_size)   
 image_mode(CENTER)   
 global planet, rocket   
@@ -26,17 +26,17 @@ rocket = load_image('rocket.png')
 
 --- task ---
 
-Add a `rocket_position` global variable to keep track of the rocket's `y` position.
+`rocket_y` グローバル変数を追加して、ロケットの `y`座標を追跡します。
 
 --- code ---
 ---
-language: python line_numbers: true line_number_start: 5
-line_highlights: 7
+def draw_rocket():
+line_highlights: 9
 ---
 
-# Set up global variables
+# グローバル変数を設定する
 screen_size = 400    
-rocket_position = screen_size
+rocket_y = screen_size #一番下から開始
 
 --- /code ---
 
@@ -48,18 +48,16 @@ rocket_position = screen_size
 
 --- task ---
 
-Define a `draw_rocket()` function to make the rocket appear on the screen.
+画面の途中にあるロケットの画像。
 
 --- code ---
 ---
-language: python line_numbers: true line_number_start: 9
-line_highlights: 10-12
+language: python filename: main.py line_numbers: true line_number_start: 7
+line_highlights: 12-16
 ---
 
 # draw_rocket関数はここにあります
-def draw_rocket():   
-global rocket_position      
-image(rocket, width/2, rocket_position, 64, 64)
+`draw_rocket()` 関数を定義して、ロケットの `y`座標置を変更して再描画させます。
 
 
 --- /code ---
@@ -68,15 +66,18 @@ image(rocket, width/2, rocket_position, 64, 64)
 
 --- task ---
 
-Call the `draw_rocket()` function.
+`draw()` 関数で新しい `draw_rocket()` を呼び出して、ロケットがフレームごとに再描画されるようにします。
 
 --- code ---
 ---
-language: python line_numbers: true line_number_start: 29
-line_highlights: 32
+language: python filename: main.py line_numbers: true line_number_start: 34
+line_highlights: 37
 ---
 
-def draw(): # Things to do in every frame draw_background() draw_rocket()
+def draw():   
+#フレームごとにやること   
+draw_background()   
+draw_rocket()
 
 
 --- /code ---
@@ -85,39 +86,37 @@ def draw(): # Things to do in every frame draw_background() draw_rocket()
 
 --- task ---
 
-**Test:** Run your code and check that the rocket appears at the bottom of the image.
+Trinket画像ライブラリのロケットの画像。
 
 
 --- /task ---
 
 
-Each time a new frame is drawn, you need to move the rocket one pixel up the screen to create an animation effect.
+新しいフレームが描画されるたびに、ロケットはアニメーション効果を生み出すために画面を上に移動する必要があります。
 
 
 --- task ---
 
-The `rocket_position` of the rocket will start at 400 (the screen height) and then decrease by 1 each time a new frame is drawn.
+`rocket_y -= 1` は、 `rocket_y = rocket_y - 1`の短縮形です。
 
 --- code ---
 ---
-language: python line_numbers: true line_number_start: 10
+language: python filename: main.py line_numbers: true line_number_start: 11
 line_highlights: 12
 ---
 
-def draw_rocket():   
-global rocket_position     
-rocket_position = rocket_position - 1    
-image(rocket, width/2, rocket_position, 64, 64)    
---- /code ---
+global rocket_y #rocket_yグローバル変数を使う    
+rocket_y -= 1 #ロケットを動かす    
+image(rocket, width/2, rocket_y, 64, 64)
 
 --- /task ---
 
 
 --- task ---
 
-**Test:** Run your code to check that the rocket blasts off from the bottom of the screen.
+**テスト：** コードを実行して、ロケットが画面の下部から始まり、フレームごとに上に移動することを確認します。
 
 
-![A rocket flying at a steady speed from the bottom to the top of the screen.](images/fly.gif){:width="300px"}
+![![画面の下から上に一定の速度で飛んでいるロケット。](images/fly.gif)](images/fly.gif){:width="300px"}
 
 --- /task ---
