@@ -7,7 +7,7 @@ Add some grey circles to simulate the exhaust trail.
 </div>
 <div>
 
-![A slow animation of the smoke effect.](images/rocket_smoke.gif)
+煙の効果の遅いアニメーション。
 </div>
 </div>
 
@@ -19,7 +19,7 @@ language: python line_numbers: true line_number_start: 10
 line_highlights: 14
 ---
 
-def draw_rocket(): global rocket_position rocket_position = rocket_position - 1 image(rocket, width/2, rocket_position, 64, 64) fill(200, 200, 200, 100)
+def draw_rocket():
 
 
 --- /code ---
@@ -63,7 +63,7 @@ no_stroke() circle_size = randint(5,10) ellipse( screen_size/2, rocket_position,
 
 --- task ---
 
-**Test:** Run your program and you should see a grey circle appear at the bottom of the rocket.
+**テスト：** プログラムを実行し、排気ガスが見えることを確認します。
 
 --- /task ---
 
@@ -73,12 +73,13 @@ Indent the code you used to draw the circle, and add a loop which will run the c
 
 --- code ---
 ---
-language: python line_numbers: true line_number_start: 10
-line_highlights: 16-23
+language: python filename: main.py - draw_rocket() line_numbers: true line_number_start: 12
+images/rocket_exhaust.png
 ---
 
-def draw_rocket(): global rocket_position rocket_position = rocket_position - 1 image(rocket, width/2, rocket_position, 64, 64) fill(200, 200, 200, 100) no_stroke() for i in range(20): circle_size = randint(5,10) ellipse( screen_size/2, rocket_position, circle_size,    
-circle_size )
+fill(200, 200, 200, 100) #透明な灰色   
+for i in range(20): #排煙をランダムに20回描画    
+ellipse(width/2 + randint(-5, 5), rocket_y + randint(20, 50), randint(5, 10), randint(5, 10))
 
 
 --- /code ---
@@ -87,7 +88,7 @@ circle_size )
 
 --- task ---
 
-**Test:** Run your program. You will still see a flashing grey circle at the bottom of the rocket - all of the circles have been drawn on top of each other!
+**テスト：** コードを実行して、ロケットに新しい排気ガスの軌跡があることを確認します。 You will still see a flashing grey circle at the bottom of the rocket - all of the circles have been drawn on top of each other!
 
 --- /task ---
 
@@ -96,11 +97,15 @@ circle_size )
 
 --- code ---
 ---
-language: python line_numbers: true line_number_start: 24
-line_highlights: 25-26
+for i in range(25):   
+fill(255, 255 - i * 10, 0) #緑の量を減らす    
+ellipse(width/2, rocket_y + i, 8, 3)
+line_highlights: 23-26
 ---
 
-ellipse( screen_size/2 + randint(-5,5), rocket_position + randint(20,50), circle_size, circle_size )
+for i in range(25):  
+fill(255, 255 - i * 10, 0)   
+ellipse(width/2, rocket_y + i, 8, 3)
 
 --- /code ---
 
