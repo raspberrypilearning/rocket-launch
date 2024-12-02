@@ -7,12 +7,12 @@ meta_description: Learn Python with the Raspberry Pi Foundation's coding project
 version: 0.0.1
 listed: true
 copyedit: true
-last_tested: "2024-10-21"
+last_tested: "2021-10-06"
 steps:
   - 
-    title: What you will make
+    title: Εισαγωγή
   - 
-    title: Draw the background
+    title: Στήνοντας τη σκηνή
     completion:
       - engaged
   - 
@@ -20,7 +20,7 @@ steps:
   - 
     title: Εφέ καυσαερίων
   - 
-    title: Quick quiz
+    title: Καύση καυσίμου
     knowledge_quiz:
       path: quiz1
       version: 1
@@ -29,7 +29,7 @@ steps:
     completion:
       - external
   - 
-    title: Challenge
+    title: Φτάνοντας σε τροχιά
     challenge: true
   - 
-    title: What can you do now?
+    title: Αναστοχασμός
