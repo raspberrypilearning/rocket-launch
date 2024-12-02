@@ -2,7 +2,7 @@
 from p5 import *
 from random import randint
 
-# Set up global variables
+# Configurar variáveis globais
 screen_size = 400
 
 # A função desenhar_foguete vai aqui
@@ -14,7 +14,7 @@ screen_size = 400
 
  
 def setup():
-    # Set up your animation here
+    # Configure sua animação aqui
     size(screen_size, screen_size)
     image_mode(CENTER)
     global planet
