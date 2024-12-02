@@ -2,9 +2,9 @@
   <a class="c-survey-banner__link" href="https://form.raspberrypi.org/f/code-editor-feedback" target="_blank">Nimm an unserer Umfrage teil</a> um unseren Code Editor zu verbessern!
 </div>
 
-## What you will make
+## Das wirst du machen
 
-Make an animation to launch a rocket into orbit.
+Erstelle eine Animation, um einen Satelliten in die Umlaufbahn zu bringen – mit Hilfe einer Trägerrakete!
 
 
 
