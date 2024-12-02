@@ -2,7 +2,7 @@
 from p5 import *
 from random import randint
 
-# Set up global variables
+# Configuration des variables globales
 screen_size = 400
 
 # La fonction dessine_fusee vient ici
@@ -14,7 +14,7 @@ screen_size = 400
 
  
 def setup():
-    # Set up your animation here
+    # Configure ton animation ici
     size(screen_size, screen_size)
     image_mode(CENTER)
     global planet
