@@ -7,7 +7,7 @@ Add some grey circles to simulate the exhaust trail.
 </div>
 <div>
 
-![A slow animation of the smoke effect.](images/rocket_smoke.gif)
+![Ο πύραυλος στο μέσο της πτήσης με ίχνος εξάτμισης.](images/flying_rocket.gif){:width="300px"}
 </div>
 </div>
 
@@ -47,7 +47,7 @@ line_highlights: 15
 
 --- task ---
 
-Generate a random number between 5 and 10 for the size of the circle, then draw it at the bottom of the rocket.
+image(rocket, width/2, rocket_y, 64, 64)
 
 --- code ---
 ---
@@ -63,7 +63,7 @@ no_stroke() circle_size = randint(5,10) ellipse( screen_size/2, rocket_position,
 
 --- task ---
 
-**Test:** Run your program and you should see a grey circle appear at the bottom of the rocket.
+Η μεταβλητή `i` μπορεί επίσης να χρησιμοποιηθεί για τη δημιουργία μιας χρωματικής διαβάθμισης με λιγότερο πράσινο σε κάθε έλλειψη που σχεδιάζεται.
 
 --- /task ---
 
@@ -73,7 +73,9 @@ Indent the code you used to draw the circle, and add a loop which will run the c
 
 --- code ---
 ---
-language: python line_numbers: true line_number_start: 10
+for i in range(25):   
+fill(255, 255 - i * 10, 0) #Μείωση της ποσότητας του πράσινου    
+ellipse(width/2, rocket_y + i, 8, 3)
 line_highlights: 16-23
 ---
 
@@ -100,7 +102,7 @@ language: python line_numbers: true line_number_start: 24
 line_highlights: 25-26
 ---
 
-ellipse( screen_size/2 + randint(-5,5), rocket_position + randint(20,50), circle_size, circle_size )
+Σε κάθε καρέ του κινούμενου σχεδίου, θα σχεδιαστούν 20 ελλείψεις τυχαίων μεγεθών σε τυχαίες θέσεις.
 
 --- /code ---
 
