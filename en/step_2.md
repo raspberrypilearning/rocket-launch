@@ -9,6 +9,7 @@ Open the [starter project](https://editor.raspberrypi.org/en/projects/rocket-lau
 First, you will create a black background to represent space.
 
 --- task ---
+
 Define a `draw_background()` function, and set the background colour to black.
 
 --- code ---
@@ -50,6 +51,7 @@ def draw():
 --- task ---
 
 **Test:** Run your code and you should see a black square. 
+
 --- /task ---
 
 
