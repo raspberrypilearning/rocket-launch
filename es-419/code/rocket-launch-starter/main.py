@@ -1,28 +1,28 @@
-# Import library code
+# Importar código de biblioteca
 from p5 import *
 from random import randint
 
-# Set up global variables
-screen_size = 400
+# Configurar variables globales
+tamano_pantalla = 400
 
-# The draw_rocket function goes here
+# Aquí va la función dibujar_cohete
 
 
 
-# The draw_background function goes here
+# Aquí va la función dibujar_fondo
 
 
  
 def setup():
-    # Set up your animation here
-    size(screen_size, screen_size)
+    # Configura tu animación aquí
+    size(tamano_pantalla, tamano_pantalla)
     image_mode(CENTER)
-    global planet
-    planet = load_image('planet.png')
+    global planeta
+    planeta = load_image('planet.png')
    
 
 def draw():
-    # Things to do in every frame
+    # Cosas que hacer en cada cuadro
 
     
 
