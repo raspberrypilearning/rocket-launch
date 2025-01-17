@@ -19,6 +19,8 @@ steps:
     title: Décollage !
   - 
     title: Effets d'échappement
+    completion:
+      - internal
   - 
     title: Brûler du carburant
     knowledge_quiz:
