@@ -19,6 +19,8 @@ steps:
     title: Lancering!
   - 
     title: Uitlaat effecten
+    completion:
+      - internal
   - 
     title: Brandstof verbruik
     knowledge_quiz:
