@@ -19,6 +19,8 @@ steps:
     title: Decolar!
   - 
     title: Efeitos da combustão
+    completion:
+      - internal
   - 
     title: Queimar combustível
     knowledge_quiz:
