@@ -73,7 +73,7 @@ Indent the code you used to draw the circle, and add a loop which will run the c
 
 --- code ---
 ---
-language: python filename: main.py - draw_rocket() line_numbers: true line_number_start: 12
+Remplace l'appel par `fill()` pour définir la quantité de vert sur `255 - i * 10` afin que la première ellipse ait des quantités égales de rouge et de vert et que la dernière ellipse ait très peu de vert.
 line_highlights: 16-23
 ---
 
