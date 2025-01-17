@@ -73,7 +73,7 @@ Indent the code you used to draw the circle, and add a loop which will run the c
 
 --- code ---
 ---
-language: python filename: main.py - draw_rocket() line_numbers: true line_number_start: 12
+def draw_rocket():
 line_highlights: 23-26
 ---
 
