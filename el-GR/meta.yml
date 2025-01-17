@@ -19,6 +19,8 @@ steps:
     title: Απογείωση!
   - 
     title: Εφέ καυσαερίων
+    completion:
+      - internal
   - 
     title: Καύση καυσίμου
     knowledge_quiz:
