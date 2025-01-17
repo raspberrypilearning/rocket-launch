@@ -19,6 +19,8 @@ steps:
     title: Startuj!
   - 
     title: Efekty wydechu
+    completion:
+      - internal
   - 
     title: Quick quiz
     knowledge_quiz:
