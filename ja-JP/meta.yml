@@ -19,6 +19,8 @@ steps:
     title: 発射！
   - 
     title: 排気効果
+    completion:
+      - internal
   - 
     title: 燃料を燃やす
     knowledge_quiz:
