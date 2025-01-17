@@ -19,6 +19,8 @@ steps:
     title: Liftoff!
   - 
     title: Exhaust effects
+    completion:
+      - internal
   - 
     title: Quick quiz
     knowledge_quiz:
