@@ -19,6 +19,8 @@ steps:
     title: '¡El despegue!'
   - 
     title: Efectos de escape
+    completion:
+      - internal
   - 
     title: Examen rápido
     knowledge_quiz:
