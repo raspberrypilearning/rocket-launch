@@ -74,7 +74,7 @@ Indent the code you used to draw the circle, and add a loop which will run the c
 
 --- code ---
 ---
-language: python filename: main.py - draw_rocket() line_numbers: true line_number_start: 12
+Verander de aanroep in `fill()` om de hoeveelheid groen in te stellen op `255 - i*10` zodat de eerste ellips evenveel rood en groen heeft en de laatste ellips heel weinig groen.
 line_highlights: 16-23
 ---
 
