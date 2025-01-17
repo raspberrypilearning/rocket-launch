@@ -19,6 +19,8 @@ steps:
     title: Abheben!
   - 
     title: Abgaseffekte
+    completion:
+      - internal
   - 
     title: Treibstoff verbrennen
     knowledge_quiz:
