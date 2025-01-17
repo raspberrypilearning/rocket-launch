@@ -19,6 +19,8 @@ steps:
     title: Ffwrdd â ni!
   - 
     title: Effeithiau'r ecsôst
+    completion:
+      - internal
   - 
     title: Llosgi tanwydd
     knowledge_quiz:
