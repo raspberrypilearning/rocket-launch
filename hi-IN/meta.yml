@@ -19,6 +19,8 @@ steps:
     title: liftcof!
   - 
     title: निकास प्रभाव
+    completion:
+      - internal
   - 
     title: Quick quiz
     knowledge_quiz:
