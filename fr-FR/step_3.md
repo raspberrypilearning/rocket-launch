@@ -4,7 +4,9 @@ Le projet de démarrage a une image de fusée qui t'est fournie.
 
 ![Image de la fusée dans la galerie d'images de l'éditeur de code.](images/rocket_image.png)
 
-Ajoute du code à la fonction `setup()` pour charger l'image de la fusée dans une variable globale `fusee`.
+--- task ---
+
+Add code to the `setup()` function to load the rocket image into a `rocket` global variable.
 
 <div class="c-project-code">
 
@@ -22,7 +24,9 @@ global planete, fusee
 planete = load_image('planet.png')    
 fusee = load_image( 'rocket.png')
 
---- /code --- --- /task ---
+--- /code ---
+
+--- /task ---
 
 --- task ---
 
