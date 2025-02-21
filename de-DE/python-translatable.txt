@@ -1,24 +1,17 @@
-bildschirm_groesse
+zeichne_hintergrund
 
 planet
 
-zeichne_hintergrund
+bildschirm_groesse
 
 rakete
 
-rakete_y
+rocket_position
 
 zeichne_rakete
 
-verbrennen
-
-treibstoff
-
-orbit_radius
-
-orbit_y
+circle_size
 
 punkte
 
 leben
-
