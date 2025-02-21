@@ -1,24 +1,17 @@
-screen_size
+drawage_background बनाएं
 
 ग्रह
 
-drawage_background बनाएं
+screen_size
 
 रॉकेट
 
-crocket_y
+rocket_position
 
 draway_crock
 
-बर्न करें
-
-फ्यूल
-
-orbit_radius
-
-orbit_y
+circle_size
 
 पॉइंट्स
 
 रहता है
-
