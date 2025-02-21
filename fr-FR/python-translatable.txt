@@ -1,24 +1,17 @@
-taille_ecran
+dessine_arriere_plan
 
 planete
 
-dessine_arriere_plan
+taille_ecran
 
 fusee
 
-fusee_y
+rocket_position
 
 dessine_fusee
 
-brule
-
-carburant
-
-rayon_orbite
-
-orbite_y
+circle_size
 
 points
 
 vies
-
