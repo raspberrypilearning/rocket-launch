@@ -1,72 +1,15 @@
-Gosod newidynnau cyffredinol
-
-Gosodwch eich animeiddiad yma
-
-Positions the image in the center
-
-Y blaned o'ch dewis
-
 Mae'r swyddogaeth llunio_cefndir yn mynd fan hyn
-
-Byr ar gyfer cefndir(0, 0, 0) — black
-
-Llunio'r ddelwedd
 
 Pethau i'w gwneud ym mhob ffrâm
 
+Set up your animation here
+
+Set up global variables
+
 Mae'r swyddogaeth llunio_roced yn mynd fan hyn
-
-Start at the bottom
-
-Defnyddio'r newidyn roced_y cyffredinol
-
-Symud y roced
-
-Diffodd y strôc
-
-Llunio 25 o elipsau ecsôst sy'n llosgi
-
-Melyn
-
-i yn cynyddu bob tro mae'r ddolen yn ailadrodd
-
-Lleihau lefel y gwyrdd
-
-Llwyd tryloyw
-
-Llunio 20 o elipsau mwg ar hap
-
-Faint o danwydd sy'n cael ei losgi ym mhob ffrâm
-
-How many kilograms of fuel do you want to use?
-
-Llosgi tanwydd
-
-Fuel left: 
-
-Tanwydd yn weddill
-
-Turn off the stroke
-
-Gosod strôc wen
-
-Dal yn hedfan
-
-Dim mwy o danwydd a ddim mewn orbit
-
-Methiant
-
-I atal y blaned rhag cael arlliw coch yn y ffrâm nesaf!
-
-Llwyddiant
-
-Gormod o danwydd
-
-Looping
 
 Gwyrdd
 
 Melyngoch
 
 Coch
-
