@@ -4,7 +4,9 @@ Mae'r prosiect dechreuol wedi darparu delwedd o roced i chi.
 
 ![Delwedd o'r roced yn llyfrgell ddelweddau Trinket.](images/rocket_image.png)
 
---- task --- Add code to the `setup()` function to load the rocket image into a `rocket` global variable.
+--- task ---
+
+Add code to the `setup()` function to load the rocket image into a `rocket` global variable.
 
 <div class="c-project-code">
 
@@ -22,7 +24,9 @@ global planet, rocket
 planet = load_image('planet.png')    
 rocket = load_image('rocket.png')
 
-language: python filename: main.py line_numbers: true line_number_start: 20
+--- /code ---
+
+--- /task ---
 
 --- task ---
 
