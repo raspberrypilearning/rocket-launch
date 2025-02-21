@@ -37,6 +37,7 @@ def draw_rocket():
 
 
 --- task ---
+
 The outline around the circles is called the **stroke**. Add some code to turn it off. 
 
 

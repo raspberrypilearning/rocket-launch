@@ -5,6 +5,7 @@ The starter project has a rocket image provided for you.
 ![Image of the rocket in the code editor image gallery.](images/rocket_image.png)
 
 --- task ---
+
 Add code to the `setup()` function to load the rocket image into a `rocket` global variable. 
 
 <div class="c-project-code">
@@ -27,6 +28,7 @@ def setup():
     rocket = load_image('rocket.png')    
 
 --- /code ---
+
 --- /task ---
 
 --- task ---
