@@ -4,7 +4,9 @@ Il progetto iniziale include l'immagine di un razzo.
 
 ![Immagine del razzo nella galleria immagini dell'editor di codice.](images/rocket_image.png)
 
-Aggiungi il codice alla funzione `setup()` per caricare l'immagine del razzo in una variabile globale `rocket` .
+--- task ---
+
+Add code to the `setup()` function to load the rocket image into a `rocket` global variable.
 
 <div class="c-project-code">
 
@@ -22,7 +24,9 @@ global planet, rocket
 planet = load_image('planet.png')    
 rocket = load_image('rocket.png')
 
---- /code --- --- /task ---
+--- /code ---
+
+--- /task ---
 
 --- task ---
 
