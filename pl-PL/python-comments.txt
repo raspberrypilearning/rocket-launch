@@ -1,72 +1,15 @@
-Ustaw zmienne globalne
-
-Tutaj skonfiguruj swoją animację
-
-Ustawia obraz na środku
-
-Twoja wybrana planeta
-
 Pojawi się tutaj funkcja draw_background
-
-Skrót od background(0, 0, 0) — czarny
-
-Narysuj obraz
 
 Rzeczy do zrobienia w każdej klatce
 
+Set up your animation here
+
+Set up global variables
+
 Tutaj pojawi się funkcja draw_rocket
-
-Zacznij od dołu
-
-Użyj zmiennej Global ROCKET_y
-
-Przesuń rakietę
-
-Wyłącz obrys
-
-Narysuj 25 palące się elipsy wydechowe
-
-Żółty
-
-zwiększam się za każdym razem, gdy pętla się powtarza
-
-Zmniejsz ilość zieleni
-
-Przezroczysty szary
-
-Narysuj 20 losowe elipsy dymu
-
-Ile paliwa jest spalane w każdej klatce
-
-Ile kilogramów paliwa chcesz użyć?
-
-Spalić paliwo
-
-Pozostawione paliwo: 
-
-Wciąż mam paliwo
-
-Wyłącz obrys
-
-Ustaw biały obrys
-
-Wciąż latają
-
-Nigdy więcej paliwa i nie na orbicie
-
-Błąd
-
-Więc planeta nie jest zabarwiona na czerwono w następnej klatce!
-
-Sukces
-
-Za dużo paliwa
-
-Zapętlenie
 
 Zielony
 
 Bursztynowy
 
 Czerwony
-
