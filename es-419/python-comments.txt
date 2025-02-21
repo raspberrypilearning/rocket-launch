@@ -1,72 +1,15 @@
-Configurar variables globales
-
-Configura tu animación aquí
-
-Posiciona la imagen en el centro
-
-Tu planeta elegido
-
 La función dibujar_fondo va aquí
-
-Abreviatura de fondo (0, 0, 0) - negro
-
-Dibujar la imagen
 
 Cosas que hacer en cada cuadro
 
+Set up your animation here
+
+Set up global variables
+
 La función dibujar_cohete va aquí
-
-Empezar desde abajo
-
-Utiliza la variable global cohete_y
-
-Mueve el cohete
-
-Desactiva el trazo
-
-Dibujar 25 elipses de escape en llamas
-
-Amarillo
-
-i aumenta cada vez que se repite el bucle
-
-Reduce la cantidad de verde
-
-Gris transparente
-
-Dibujar 20 elipses de humo al azar
-
-Cuánto combustible se quema en cada fotograma
-
-¿Cuántos kilogramos de combustible quieres usar?
-
-Quemar combustible
-
-Combustible restante: 
-
-Todavía tengo combustible
-
-Desactiva el trazo
-
-Establecer un trazo blanco
-
-Sigue volando
-
-No más combustible y no en órbita
-
-Fallo
-
-¡Así que el planeta no está teñido de rojo en el siguiente fotograma!
-
-Éxito
-
-Demasiado combustible
-
-Bucle
 
 Verde
 
 Ámbar
 
 Rojo
-
