@@ -45,7 +45,6 @@ rocket_position = screen_size
 
 Bydd safle `y` y roced yn dechrau ar 400 (uchder y sgrin) ac yn lleihau 1 bob tro mae ffrâm newydd yn cael ei llunio.
 
-
 --- task ---
 
 Define a `draw_rocket()` function to make the rocket appear on the screen.
@@ -85,7 +84,6 @@ def draw(): # Things to do in every frame draw_background() draw_rocket()
 
 language: python filename: main.py line_numbers: true line_number_start: 34
 
-
 --- /task ---
 
 
@@ -96,6 +94,7 @@ Each time a new frame is drawn, you need to move the rocket one pixel up the scr
 
 The `rocket_position` of the rocket will start at 400 (the screen height) and then decrease by 1 each time a new frame is drawn.
 
+
 --- code ---
 ---
 language: python line_numbers: true line_number_start: 10
@@ -105,7 +104,8 @@ line_highlights: 12
 def draw_rocket():   
 global rocket_position     
 rocket_position = rocket_position - 1    
-image(rocket, width/2, rocket_position, 64, 64)    
+image(rocket, width/2, rocket_position, 64, 64)
+
 --- /code ---
 
 --- /task ---
@@ -119,3 +119,4 @@ image(rocket, width/2, rocket_position, 64, 64)
 ![A rocket flying at a steady speed from the bottom to the top of the screen.](images/fly.gif){:width="300px"}
 
 --- /task ---
+
