@@ -8,7 +8,9 @@ Ouvre le [modèle de projet](https://editor.raspberrypi.org/fr-FR/projects/rocke
 
 First, you will create a black background to represent space.
 
-Utilise `background(0)` pour définir la couleur d'arrière-plan sur noir et ajoute une fonction `image()` pour dessiner la planète.
+--- task ---
+
+Define a `draw_background()` function, and set the background colour to black.
 
 --- code ---
 ---
@@ -45,7 +47,9 @@ dessine_arriere_plan()
 
 --- task ---
 
-**Test:** Run your code and you should see a black square. --- /task ---
+**Test:** Run your code and you should see a black square.
+
+--- /task ---
 
 
 
@@ -58,9 +62,11 @@ Add a line of code to display an image of a planet.
 language: python filename: main.py — setup() line_numbers: true line_number_start: 18
 line_highlights: 21-23
 ---
-def dessine_arriere_plan():   
-background(0) # Raccourci pour background(0, 0, 0) — noir    
-image(planete, width/2, height, 300, 300) # Dessine l'image
+def draw_background():  
+background(0,0,0) image(planet, screen_size/2, screen_size, 300, 300)
+
+--- /code ---
+
 
 La fonction `image()` se présente comme suit :
 
@@ -95,12 +101,9 @@ Par exemple, `orange_planet.png`.
 language: python filename: main.py line_numbers: true line_number_start: 18
 line_highlights: 15-17
 ---
-def setup():   
-# Configure ton animation ici   
-size(taille_ecran, taille_ecran)   
-image_mode(CENTER)   
-global planete   
-planete = load_image('planet.png') # Ta planète choisie
+def setup(): # Set up your animation here size(screen_size, screen_size) image_mode(CENTER) global planet planet = load_image('planet.png')
+
+--- /code ---
 
 --- /task ---
 
