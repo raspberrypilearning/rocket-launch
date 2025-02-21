@@ -8,7 +8,9 @@ Apri il [template del progetto](https://editor.raspberrypi.org/it-IT/projects/ro
 
 First, you will create a black background to represent space.
 
-Definisci una funzione `draw_ background()` , per disegnare lo sfondo, sotto il commento che ti dice dove dovrebbe andare.
+--- task ---
+
+Define a `draw_background()` function, and set the background colour to black.
 
 --- code ---
 ---
@@ -45,7 +47,9 @@ draw_background()
 
 --- task ---
 
-**Test:** Run your code and you should see a black square. --- /task ---
+**Test:** Run your code and you should see a black square.
+
+--- /task ---
 
 
 
@@ -58,9 +62,11 @@ Add a line of code to display an image of a planet.
 language: python filename: main.py — setup() line_numbers: true line_number_start: 18
 line_highlights: 21-23
 ---
-def draw_background():   
-background(0)  # Abbreviazione per background(0, 0, 0) — black    
-image(planet, width/2, height, 300, 300)  # Disegna l'immagine
+def draw_background():  
+background(0,0,0) image(planet, screen_size/2, screen_size, 300, 300)
+
+--- /code ---
+
 
 La funzione `image()` è così strutturata:
 
@@ -95,11 +101,9 @@ Ad esempio, `orange_planet.png`.
 language: python filename: main.py line_numbers: true line_number_start: 18
 line_highlights: 15-17
 ---
-def setup():   
-# Imposta qui la tua animazione   
-size(screen_size, screen_size)   
-image_mode(CENTER) # Posiziona l'immagine al centro global planet   
-planet = load_image('planet.png') # Il pianeta scelto
+def setup(): # Set up your animation here size(screen_size, screen_size) image_mode(CENTER) global planet planet = load_image('planet.png')
+
+--- /code ---
 
 --- /task ---
 
