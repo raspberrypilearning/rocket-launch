@@ -11,7 +11,9 @@ Uma animação lenta do efeito de fumaça.
 </div>
 </div>
 
---- task --- Set the fill colour for the smoke to transparent grey.
+--- task ---
+
+Set the fill colour for the smoke to transparent grey.
 
 --- code ---
 ---
@@ -22,7 +24,6 @@ line_highlights: 14
 def desenhar_foguete(): global foguete_y   
 foguete_y -= 1
 
-
 --- /code ---
 
 --- /task ---
@@ -30,6 +31,8 @@ foguete_y -= 1
 
 --- task --- The outline around the circles is called the **stroke**. Add some code to turn it off.
 
+
+--- task ---
 
 --- code ---
 ---
@@ -42,9 +45,6 @@ line_highlights: 15
 
 
 --- /code ---
-
---- /task ---
-
 
 --- task ---
 
@@ -91,7 +91,9 @@ no_stroke()  # Desliga o traço for i in range(25): # Desenhe 25 elipses de comb
 
 --- /task ---
 
---- task --- Generate a random number and add it to the x and y position of each circle so they aren't all drawn in the same place.
+--- task ---
+
+Generate a random number and add it to the x and y position of each circle so they aren't all drawn in the same place.
 
 
 --- code ---
@@ -111,6 +113,9 @@ ellipse(width/2 + randint(-5, 5), foguete_y + randint(20, 50), randint(5, 10), r
 --- /task ---
 
 
+--- task ---
 
+**Test:** Run your program and you should see lots of grey circles in random places at the bottom of the rocket.
 
---- task --- **Test:** Run your program and you should see lots of grey circles in random places at the bottom of the rocket. --- /task ---
+--- /task ---
+
