@@ -45,7 +45,6 @@ posición_del_cohete = tamano_de_pantalla
 
 La posición `y` del cohete comenzará en 400 (la altura de la pantalla) y luego disminuirá en 1 cada vez que se dibuje un nuevo fotograma.
 
-
 --- task ---
 
 Define una función `dibujar_cohete()` para hacer que el cohete aparezca en la pantalla.
@@ -87,7 +86,6 @@ def dibujar(): #Cosas a hacer en cada fotograma dibujar_fondo() dibujar_cohete()
 
 **Prueba:** Ejecuta tu código y verifica que el cohete aparece en la parte inferior de la imagen.
 
-
 --- /task ---
 
 
@@ -98,17 +96,19 @@ Cada vez que se dibuja un nuevo cuadro, el cohete debe moverse hacia arriba en l
 
 La `posicion_cohete` comenzará en 400 (la altura de la pantalla) y luego disminuirá en 1 cada vez que se dibuje un nuevo cuadro.
 
+
 --- code ---
 ---
 language: python line_numbers: true line_number_start: 10
 line_highlights: 12
 ---
 
-def dibujar_cohete():   
-posicion_cohete global     
-posicion_cohete = posicion_cohete - 1    
-image(cohete, ancho/2, posicion_cohete, 64, 64)    
---- /code---
+def draw_rocket():   
+global rocket_position     
+rocket_position = rocket_position - 1    
+image(rocket, width/2, rocket_position, 64, 64)
+
+--- /code ---
 
 --- /task ---
 
@@ -121,3 +121,4 @@ image(cohete, ancho/2, posicion_cohete, 64, 64)
 ![Un cohete que vuela a una velocidad constante desde la parte inferior hasta la parte superior de la pantalla.](images/fly.gif){:width="300px"}
 
 --- /task ---
+
