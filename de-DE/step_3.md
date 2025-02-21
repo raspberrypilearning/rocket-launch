@@ -4,7 +4,9 @@ Das Starterprojekt stellt dir ein Raketenbild zur Verfügung.
 
 ![Bild der Rakete in der Bildergalerie des Code-Editors.](images/rocket_image.png)
 
-Füge der Funktion `setup()` Code hinzu, um das Raketenbild in eine globale Variable `rakete` zu laden.
+--- task ---
+
+Add code to the `setup()` function to load the rocket image into a `rocket` global variable.
 
 <div class="c-project-code">
 
@@ -22,7 +24,9 @@ global planet, rakete
 planet = load_image('planet.png')    
 rakete = load_image('rocket.png')
 
---- /code --- --- /task ---
+--- /code ---
+
+--- /task ---
 
 --- task ---
 
