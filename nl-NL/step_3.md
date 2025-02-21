@@ -4,25 +4,29 @@ Het startproject heeft een raketafbeelding voor je.
 
 ![Afbeelding van de raket in de code-editor beeldbibliotheek.](images/rocket_image.png)
 
-Voeg code toe aan de `setup()` functie om de raketafbeelding in een `raket` global variabele te laden.
+--- task ---
+
+Add code to the `setup()` function to load the rocket image into a `rocket` global variable.
 
 <div class="c-project-code">
 
 --- code ---
 ---
-language: python filename: main.py line_numbers: true line_number_start: 20
-line_highlights: 24, 26
+language: python filename: main.py line_numbers: true line_number_start: 17
+line_highlights: 21, 23
 ---
 
 def setup():   
-# Stel je animatie hier in   
-size(scherm_grootte, scherm_grootte)   
+# Set up your animation here   
+size(screen_size, screen_size)   
 image_mode(CENTER)   
-global planeet, raket   
-planeet = load_image('planet.png')    
-raket = load_image('rocket.png')
+global planet, rocket   
+planet = load_image('planet.png')    
+rocket = load_image('rocket.png')
 
---- /code --- --- /task ---
+--- /code ---
+
+--- /task ---
 
 --- task ---
 
@@ -30,13 +34,13 @@ Voeg een global variabele `raket_y` toe om de `y` positie van de raket bij te ho
 
 --- code ---
 ---
-language: python filename: main.py line_numbers: true line_number_start: 7
-line_highlights: 9
+language: python line_numbers: true line_number_start: 5
+line_highlights: 7
 ---
 
-# Global variabelen instellen
-scherm_grootte = 400    
-raket_y = scherm_grootte # Begin onderaan
+# Set up global variables
+screen_size = 400    
+rocket_position = screen_size
 
 --- /code ---
 
@@ -51,15 +55,14 @@ Definieer een `teken_raket()` functie om de `y` positie van de raket te wijzigen
 
 --- code ---
 ---
---- save ---
-line_highlights: 12-16
+language: python line_numbers: true line_number_start: 9
+line_highlights: 10-12
 ---
 
-# De teken_raket functie komt hier
-def teken_raket():   
-global raket_y # Gebruik de globale raket_y variabele    
-raket_y -= 1 # Verplaats de raket    
-image(raket, width/2, raket_y, 64, 64)
+# The draw_rocket function goes here
+def draw_rocket():   
+global rocket_position      
+image(rocket, width/2, rocket_position, 64, 64)
 
 
 --- /code ---
@@ -72,11 +75,11 @@ Neem je nieuwe `teken_raket()` op in de `draw()` functie zodat de raket elk fram
 
 --- code ---
 ---
-language: python filename: main.py line_numbers: true line_number_start: 33
-line_highlights: 36
+language: python line_numbers: true line_number_start: 29
+line_highlights: 32
 ---
 
-Laat de raket vliegen
+def draw(): # Things to do in every frame draw_background() draw_rocket()
 
 
 --- /code ---
@@ -100,7 +103,7 @@ Afbeelding van de raket halverwege het scherm.
 
 --- code ---
 ---
-language: python filename: main.py line_numbers: true line_number_start: 11
+language: python line_numbers: true line_number_start: 10
 line_highlights: 12
 ---
 
