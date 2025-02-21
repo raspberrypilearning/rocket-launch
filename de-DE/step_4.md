@@ -11,7 +11,9 @@ Eine langsame Animation des Raucheffekts.
 </div>
 </div>
 
---- task --- Set the fill colour for the smoke to transparent grey.
+--- task ---
+
+Set the fill colour for the smoke to transparent grey.
 
 --- code ---
 ---
@@ -22,7 +24,6 @@ line_highlights: 14
 def zeichne_rakete(): global rakete_y   
 rakete_y -= 1
 
-
 --- /code ---
 
 --- /task ---
@@ -30,6 +31,8 @@ rakete_y -= 1
 
 --- task --- The outline around the circles is called the **stroke**. Add some code to turn it off.
 
+
+--- task ---
 
 --- code ---
 ---
@@ -42,9 +45,6 @@ line_highlights: 15
 
 
 --- /code ---
-
---- /task ---
-
 
 --- task ---
 
@@ -91,7 +91,9 @@ no_stroke() # Schaltet Zeichnen aus for i in range(25): # Zeichne 25 brennende A
 
 --- /task ---
 
---- task --- Generate a random number and add it to the x and y position of each circle so they aren't all drawn in the same place.
+--- task ---
+
+Generate a random number and add it to the x and y position of each circle so they aren't all drawn in the same place.
 
 
 --- code ---
@@ -107,6 +109,9 @@ for i in range(25): fill(255, 255 - i * 10, 0) ellipse(width/2, rakete_y + i, 8,
 --- /task ---
 
 
+--- task ---
 
+**Test:** Run your program and you should see lots of grey circles in random places at the bottom of the rocket.
 
---- task --- **Test:** Run your program and you should see lots of grey circles in random places at the bottom of the rocket. --- /task ---
+--- /task ---
+
