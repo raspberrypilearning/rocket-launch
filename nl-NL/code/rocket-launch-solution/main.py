@@ -26,7 +26,7 @@ def teken_raket():
 
 # De functie teken_achtergrond komt hier
 def teken_achtergrond():
-    background(0)
+    background(0, 0, 0)
     image(planeet, width/2, height, 300, 300)
 
 
