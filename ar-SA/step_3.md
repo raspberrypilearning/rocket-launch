@@ -4,7 +4,9 @@
 
 ![Image of the rocket in the code editor image gallery.](images/rocket_image.png)
 
-أضف الشفرة البرمجية إلى الدالة `setup()` لتحميل صورة الصاروخ التي اخترناها في متغير عام `rocket`.
+--- task ---
+
+Add code to the `setup()` function to load the rocket image into a `rocket` global variable.
 
 <div class="c-project-code">
 
@@ -22,7 +24,9 @@ global planet, rocket
 planet = load_image('planet.png')    
 rocket = load_image('rocket.png')
 
---- /code --- --- /task ---
+--- /code ---
+
+--- /task ---
 
 --- task ---
 
