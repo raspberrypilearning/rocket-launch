@@ -29,10 +29,12 @@ rocket_y -= 1
 --- /task ---
 
 
---- task --- The outline around the circles is called the **stroke**. Add some code to turn it off.
-
-
 --- task ---
+
+The outline around the circles is called the **stroke**. Add some code to turn it off.
+
+
+--- /task ---
 
 --- code ---
 ---
