@@ -1,72 +1,15 @@
-Configurar variáveis globais
-
-Configure sua animação aqui
-
-Posiciona a imagem no centro
-
-Seu planeta escolhido
-
 A função desenhar_plano_de_fundo vai aqui
-
-Abreviação de plano de fundo (0, 0, 0) — preto
-
-Desenhe a imagem
 
 O que fazer em cada quadro
 
+Set up your animation here
+
+Set up global variables
+
 A função desenhar_foguete vai aqui
-
-Comece na parte inferior
-
-Use a variável global foguete_y
-
-Mova o foguete
-
-Desligue o lançamento
-
-Desenhe 25 elipses de combustão em chamas
-
-Amarelo
-
-i aumenta cada vez que o ciclo se repete
-
-Reduza a quantidade de verde
-
-Cinza transparente
-
-Desenhe 20 elipses de fumaça aleatórias
-
-Quanto combustível é queimado em cada quadro
-
-Quantos quilogramas de combustível você quer usar?
-
-Queimar combustível
-
-Combustível restante: 
-
-Ainda tem combustível
-
-Desligue o lançamento
-
-Defina um traço branco
-
-Ainda voando
-
-Não há mais combustível e não em órbita
-
-Fracasso
-
-Assim, o planeta não está tingido de vermelho no próximo quadro!
-
-Sucesso
-
-Excesso de combustível
-
-Ciclo
 
 Verde
 
 Âmbar
 
 Vermelho
-
