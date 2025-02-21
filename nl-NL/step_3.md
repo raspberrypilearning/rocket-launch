@@ -45,7 +45,6 @@ raket_y = scherm_grootte # Begin onderaan
 
 De `y` positie van de raket begint bij 400 (de schermhoogte) en neemt vervolgens af met 1 telkens wanneer een nieuw frame wordt getekend.
 
-
 --- task ---
 
 Definieer een `teken_raket()` functie om de `y` positie van de raket te wijzigen en deze opnieuw te tekenen.
@@ -88,7 +87,6 @@ Laat de raket vliegen
 
 `raket_y -= 1` is een kortere manier om te zeggen `raket_y = raket_y - 1`.
 
-
 --- /task ---
 
 
@@ -99,16 +97,19 @@ Elke keer dat er een nieuw frame wordt getekend, moet de raket omhoog bewegen op
 
 Afbeelding van de raket halverwege het scherm.
 
+
 --- code ---
 ---
 language: python filename: main.py line_numbers: true line_number_start: 11
 line_highlights: 12
 ---
 
-def draw():   
-# Dingen om te doen in elk frame   
-teken_achtergrond()   
-teken_raket()
+def draw_rocket():   
+global rocket_position     
+rocket_position = rocket_position - 1    
+image(rocket, width/2, rocket_position, 64, 64)
+
+--- /code ---
 
 --- /task ---
 
@@ -121,3 +122,4 @@ teken_raket()
 ![![Een raket die met een constante snelheid van de onderkant naar de bovenkant van het scherm vliegt.](images/fly.gif){:width="300px"}](images/fly.gif){:width="300px"}
 
 --- /task ---
+
