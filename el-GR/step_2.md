@@ -8,7 +8,9 @@
 
 First, you will create a black background to represent space.
 
---- task --- Define a `draw_background()` function, and set the background colour to black.
+--- task ---
+
+Define a `draw_background()` function, and set the background colour to black.
 
 --- code ---
 ---
@@ -42,7 +44,9 @@ def draw(): # Things to do in every frame draw_background()
 
 --- task ---
 
-**Test:** Run your code and you should see a black square. --- /task ---
+**Test:** Run your code and you should see a black square.
+
+--- /task ---
 
 
 
@@ -56,7 +60,10 @@ language: python line_numbers: true line_number_start: 13
 line_highlights: 21-23
 ---
 def draw_background():  
-background(0,0,0) image(planet, screen_size/2, screen_size, 300, 300) --- /code ---
+background(0,0,0) image(planet, screen_size/2, screen_size, 300, 300)
+
+--- /code ---
+
 
 Είναι καλή ιδέα να φορτώνεις εικόνες στο `setup()`, ώστε να είναι έτοιμες όταν χρειαστεί να τις χρησιμοποιήσεις και η κινούμενη εικόνα σου να εκτελείται γρήγορα.
 
@@ -91,7 +98,9 @@ If you want to change the planet image, change `planet.png` in the code to the f
 language: python line_numbers: true line_number_start: 17
 line_highlights: 15-17
 ---
-def setup(): # Set up your animation here size(screen_size, screen_size) image_mode(CENTER) global planet planet = load_image('planet.png') --- /code ---
+def setup(): # Set up your animation here size(screen_size, screen_size) image_mode(CENTER) global planet planet = load_image('planet.png')
+
+--- /code ---
 
 --- /task ---
 
