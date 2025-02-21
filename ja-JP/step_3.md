@@ -45,7 +45,6 @@ rocket_y = screen_size #一番下から開始
 
 ロケットの`y`位置は、400(画面の高さ) から始まり、新しいフレームが描画されるたびに1ずつ減少します。
 
-
 --- task ---
 
 画面の途中にあるロケットの画像。
@@ -88,7 +87,6 @@ draw_rocket()
 
 Trinket画像ライブラリのロケットの画像。
 
-
 --- /task ---
 
 
@@ -99,15 +97,19 @@ Trinket画像ライブラリのロケットの画像。
 
 `rocket_y -= 1` は、 `rocket_y = rocket_y - 1`の短縮形です。
 
+
 --- code ---
 ---
 language: python filename: main.py line_numbers: true line_number_start: 11
 line_highlights: 12
 ---
 
-global rocket_y #rocket_yグローバル変数を使う    
-rocket_y -= 1 #ロケットを動かす    
-image(rocket, width/2, rocket_y, 64, 64)
+def draw_rocket():   
+global rocket_position     
+rocket_position = rocket_position - 1    
+image(rocket, width/2, rocket_position, 64, 64)
+
+--- /code ---
 
 --- /task ---
 
@@ -120,3 +122,4 @@ image(rocket, width/2, rocket_y, 64, 64)
 ![![画面の下から上に一定の速度で飛んでいるロケット。](images/fly.gif)](images/fly.gif){:width="300px"}
 
 --- /task ---
+
