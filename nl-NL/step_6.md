@@ -1,4 +1,4 @@
---- task ---
+--- challenge ---
 
 ## Challenge
 
@@ -22,5 +22,5 @@ Add to your animation so that the rocket reappears and lands on a different plan
 
 --- /task ---
 
---- /code ---
+--- /challenge ---
 
