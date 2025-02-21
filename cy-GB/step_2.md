@@ -8,7 +8,9 @@ Agorwch [dempled y prosiect](https://trinket.io/python/58565016a2){:target="_bla
 
 First, you will create a black background to represent space.
 
-Byddwch chi'n defnyddio newidyn `maint_sgrin` i osod maint y sgrin ac mewn cyfrifiadau. Mae newidynnau sy'n cael eu diffinio tu allan i swyddogaethau yn rhai **cyffredinol (global)** felly gallwch chi eu defnyddio unrhyw le yn eich rhaglen.
+--- task ---
+
+Define a `draw_background()` function, and set the background colour to black.
 
 --- code ---
 ---
@@ -42,7 +44,9 @@ def draw(): # Things to do in every frame draw_background()
 
 --- task ---
 
-**Test:** Run your code and you should see a black square. --- /task ---
+**Test:** Run your code and you should see a black square.
+
+--- /task ---
 
 
 
@@ -56,7 +60,10 @@ Mae gan y prosiect dechreuol dair delwedd wahanol o blaned a'r lleuad wedi'u llu
 line_highlights: 21-23
 ---
 def draw_background():  
-background(0,0,0) image(planet, screen_size/2, screen_size, 300, 300) --- /code ---
+background(0,0,0) image(planet, screen_size/2, screen_size, 300, 300)
+
+--- /code ---
+
 
 Mae'n syniad da llwytho delweddau yn `setup()` fel eu bod yn barod pan fyddwch chi angen eu defnyddio a bydd eich animeiddiad yn rhedeg yn gyflym.
 
@@ -91,7 +98,9 @@ If you want to change the planet image, change `planet.png` in the code to the f
 Defnyddiwch `background(0)` i osod lliw'r cefndir i ddu ac ychwanegu swyddogaeth `image()` i lunio'r blaned. Mae'r swyddogaeth `image()` wedi'i gosod fel:
 line_highlights: 15-17
 ---
-def setup(): # Set up your animation here size(screen_size, screen_size) image_mode(CENTER) global planet planet = load_image('planet.png') --- /code ---
+def setup(): # Set up your animation here size(screen_size, screen_size) image_mode(CENTER) global planet planet = load_image('planet.png')
+
+--- /code ---
 
 --- /task ---
 
