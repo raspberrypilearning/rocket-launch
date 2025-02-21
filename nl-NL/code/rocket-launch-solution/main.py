@@ -35,8 +35,8 @@ def setup():
     size(scherm_grootte, scherm_grootte)
     image_mode(CENTER)
     global planeet, raket
-    planeet = load_image('planet.png')
-    raket = load_image('rocket.png')
+    planeet = load_image("purple_planet.png")
+    raket = load_image("rocket.png")
 
 
 def draw():
