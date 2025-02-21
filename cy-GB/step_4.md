@@ -30,10 +30,12 @@ Mae dolen `for` yn ailadrodd darn o god unwaith ar gyfer bob eitem sy'n cael ei 
 --- /task ---
 
 
---- task --- The outline around the circles is called the **stroke**. Add some code to turn it off.
-
-
 --- task ---
+
+The outline around the circles is called the **stroke**. Add some code to turn it off.
+
+
+--- /task ---
 
 --- code ---
 ---
