@@ -4,7 +4,9 @@ O projeto inicial tem uma imagem de foguete fornecida para você.
 
 ![Imagem do foguete na biblioteca de imagens Trinket.](images/rocket_image.png)
 
-Adicione código à função `configuração()` para carregar a imagem do foguete em uma variável global `foguete`.
+--- task ---
+
+Add code to the `setup()` function to load the rocket image into a `rocket` global variable.
 
 <div class="c-project-code">
 
@@ -22,7 +24,9 @@ global planeta, foguete
 planeta = load_image('planet.png')    
 foguete = load_image('rocket.png')
 
---- /code --- --- /task ---
+--- /code ---
+
+--- /task ---
 
 --- task ---
 
