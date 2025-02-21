@@ -8,7 +8,9 @@ Abre el [proyecto básico](https://editor.raspberrypi.org/en/projects/rocket-lau
 
 Primero, crearás un fondo negro para representar el espacio.
 
---- task --- Define una función `dibujar_fondo()` y establece el color de fondo en negro.
+--- task ---
+
+Define a `draw_background()` function, and set the background colour to black.
 
 --- code ---
 ---
@@ -42,7 +44,9 @@ def dibujar(): #Cosas que hacer en cada cuadro dibujar_fondo()
 
 --- task ---
 
-**Prueba:** Ejecuta tu código y deberías ver un cuadrado negro. --- /task ---
+**Prueba:** Ejecuta tu código y deberías ver un cuadrado negro.
+
+--- /task ---
 
 
 
@@ -55,8 +59,11 @@ Añade una línea de código para mostrar una imagen de un planeta.
 language: python line_numbers: true line_number_start: 13
 line_highlights: 15-16
 ---
-def dibujar_fondo():  
-background(0,0,0) image(planet, screen_size/2, screen_size, 300, 300) --- /code ---
+def draw_background():  
+background(0,0,0) image(planet, screen_size/2, screen_size, 300, 300)
+
+--- /code ---
+
 
 La función `image()` necesita los siguientes datos:
 
@@ -91,7 +98,9 @@ Si quieres cambiar la imagen del planeta, cambia `planet.png` en el código por 
 language: python line_numbers: true line_number_start: 17
 line_highlights: 22
 ---
-def setup(): #Configura tu animación aquí tamano(tamano_pantalla, tamano_pantalla) image_mode(CENTER) global planeta planeta = load_image('planet.png') #Tu planeta elegido
+def setup(): # Set up your animation here size(screen_size, screen_size) image_mode(CENTER) global planet planet = load_image('planet.png')
+
+--- /code ---
 
 --- /task ---
 
