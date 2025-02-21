@@ -13,7 +13,9 @@ Fe allwch chi greu effeithiau cŵl drwy ddefnyddio dolen `for` i lunio nifer o s
 </div>
 </div>
 
-Mae codio'n cael ei ddefnyddio i wneud <span style="color: #0faeb0">**effeithiau graffeg**</span> ar gyfer ffilmiau a gemau. Mae'n gyflymach o lawer ysgrifennu cod na llunio pob ffrâm mewn animeiddiad yn unigol.
+--- task ---
+
+Set the fill colour for the smoke to transparent grey.
 
 --- code ---
 ---
@@ -23,7 +25,6 @@ line_highlights: 14
 
 Mae dolen `for` yn ailadrodd darn o god unwaith ar gyfer bob eitem sy'n cael ei rhoi iddi. Fe allwch chi ddefnyddio'r swyddogaeth `range()` i redeg y cod mewn dolen `for` hyn a hyn o weithiau. Er enghraifft, mae `range(5)` yn creu dilyniant o bum rhif yn dechrau ar 0, felly [0, 1, 2, 3, 4].
 
-
 --- /code ---
 
 --- /task ---
@@ -31,6 +32,8 @@ Mae dolen `for` yn ailadrodd darn o god unwaith ar gyfer bob eitem sy'n cael ei 
 
 --- task --- The outline around the circles is called the **stroke**. Add some code to turn it off.
 
+
+--- task ---
 
 --- code ---
 ---
@@ -43,9 +46,6 @@ line_highlights: 15
 
 
 --- /code ---
-
---- /task ---
-
 
 --- task ---
 
@@ -95,7 +95,9 @@ circle_size )
 
 --- /task ---
 
---- task --- Generate a random number and add it to the x and y position of each circle so they aren't all drawn in the same place.
+--- task ---
+
+Generate a random number and add it to the x and y position of each circle so they aren't all drawn in the same place.
 
 
 --- code ---
@@ -111,6 +113,9 @@ Ym mhob ffrâm yn yr animeiddiad, bydd 20 elips o feintiau ar hap yn cael eu llu
 --- /task ---
 
 
+--- task ---
 
+**Test:** Run your program and you should see lots of grey circles in random places at the bottom of the rocket.
 
---- task --- **Test:** Run your program and you should see lots of grey circles in random places at the bottom of the rocket. --- /task ---
+--- /task ---
+
