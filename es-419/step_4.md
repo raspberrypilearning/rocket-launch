@@ -28,10 +28,12 @@ def dibujar_cohete(): posicion_cohete global posicion_cohete = posicion_cohete -
 --- /task ---
 
 
---- task --- El contorno alrededor de los círculos se llama **trazo**. Añade código para desactivarlo.
-
-
 --- task ---
+
+The outline around the circles is called the **stroke**. Añade código para desactivarlo.
+
+
+--- /task ---
 
 --- code ---
 ---
