@@ -1,24 +1,17 @@
-dimensione_dello_schermo
+disegna_sfondo
 
 pianeta
 
-disegna_sfondo
+dimensione_dello_schermo
 
 razzo
 
-rocket_y
+rocket_position
 
 disegna_razzo
 
-bruciare
-
-carburante
-
-raggio_orbita
-
-orbit_y
+circle_size
 
 punti
 
 vite
-
