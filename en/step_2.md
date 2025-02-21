@@ -9,6 +9,7 @@ Open the [starter project](https://editor.raspberrypi.org/en/projects/rocket-lau
 First, you will create a black background to represent space.
 
 --- task ---
+
 Define a `draw_background()` function, and set the background colour to black.
 
 --- code ---
@@ -50,6 +51,7 @@ def draw():
 --- task ---
 
 **Test:** Run your code and you should see a black square. 
+
 --- /task ---
 
 
@@ -68,7 +70,9 @@ line_highlights: 15-16
 def draw_background():  
     background(0,0,0)
     image(planet, screen_size/2, screen_size, 300, 300)
+
 --- /code ---
+
 
 The `image()` function needs the following data:
 
@@ -111,6 +115,7 @@ def setup():
     image_mode(CENTER)
     global planet
     planet = load_image('planet.png')
+
 --- /code ---
 
 --- /task ---
