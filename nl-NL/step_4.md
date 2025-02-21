@@ -21,18 +21,19 @@ language: python line_numbers: true line_number_start: 10
 line_highlights: 14
 ---
 
-def teken_raket(): global raket_y   
-raket_y -= 1
+def draw_rocket(): global rocket_position rocket_position = rocket_position - 1 image(rocket, width/2, rocket_position, 64, 64) fill(200, 200, 200, 100)
 
 --- /code ---
 
 --- /task ---
 
 
---- task --- The outline around the circles is called the **stroke**. Add some code to turn it off.
-
-
 --- task ---
+
+The outline around the circles is called the **stroke**. Add some code to turn it off.
+
+
+--- /task ---
 
 --- code ---
 ---
@@ -74,11 +75,12 @@ Indent the code you used to draw the circle, and add a loop which will run the c
 
 --- code ---
 ---
-Verander de aanroep in `fill()` om de hoeveelheid groen in te stellen op `255 - i*10` zodat de eerste ellips evenveel rood en groen heeft en de laatste ellips heel weinig groen.
+language: python line_numbers: true line_number_start: 10
 line_highlights: 16-23
 ---
 
-no_stroke() # Schakel de lijn uit for i in range(25): # Teken 25 brandende uitlaatellipsen fill(255, 255, 0) # Geel ellipse(width/2, raket_y + i, 8, 3) # i neemt toe elke keer dat de lus wordt herhaald image(raket, width/2, raket_y, 64, 64)
+def draw_rocket(): global rocket_position rocket_position = rocket_position - 1 image(rocket, width/2, rocket_position, 64, 64) fill(200, 200, 200, 100) no_stroke() for i in range(20): circle_size = randint(5,10) ellipse( screen_size/2, rocket_position, circle_size,    
+circle_size )
 
 
 --- /code ---
@@ -98,11 +100,11 @@ Generate a random number and add it to the x and y position of each circle so th
 
 --- code ---
 ---
-for i in range(25): fill(255, 255 - i * 10, 0) # Verminder de hoeveelheid groen ellipse(width/2, raket_y + i, 8, 3)
+language: python line_numbers: true line_number_start: 24
 line_highlights: 25-26
 ---
 
-for i in range(25): fill(255, 255 - i * 10, 0) ellipse(width/2, raket_y + i, 8, 3) fill(200, 200, 200, 100) # Transparant grijs for i in range(20): # Teken 20 willekeurige rookellipsen ellipse(width/2 + randint(-5, 5), raket_y + randint(20, 50), randint(5, 10), randint(5, 10)) image(raket, width/2, raket_y, 64, 64)
+ellipse( screen_size/2 + randint(-5,5), rocket_position + randint(20,50), circle_size, circle_size )
 
 --- /code ---
 
