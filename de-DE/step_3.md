@@ -45,7 +45,6 @@ rakete_y = bildschirm_groesse # unten starten
 
 Die Position `y` der Rakete beginnt bei 400 (der Bildschirmhöhe) und verringert sich dann bei jedem gezeichneten Frame um 1.
 
-
 --- task ---
 
 Definiere eine `zeichne_rakete()`-Funktion, um die `y` Position der Rakete zu ändern und sie neu zu zeichnen.
@@ -88,7 +87,6 @@ zeichne_rakete()
 
 `rakete_y -= 1` ist eine kürzere Art zu sagen: `rakete_y = rakete_y - 1`.
 
-
 --- /task ---
 
 
@@ -99,16 +97,19 @@ Jedes Mal, wenn ein neues Bild gezeichnet wird, muss sich die Rakete auf dem Bil
 
 !\[Eine Rakete, die mit gleichmäßiger Geschwindigkeit vom unteren zum oberen Bildschirmrand fliegt.\](images/fly.gif){:width="300px"}
 
+
 --- code ---
 ---
 language: python filename: main.py line_numbers: true line_number_start: 11
 line_highlights: 12
 ---
 
-def zeichne_rakete():   
-global rakete_y  # Benutze die globale Variable rakete_y    
-rakete_y -= 1  # Bewege die Rakete    
-image(rakete, width/2, rakete_y, 64, 64)
+def draw_rocket():   
+global rocket_position     
+rocket_position = rocket_position - 1    
+image(rocket, width/2, rocket_position, 64, 64)
+
+--- /code ---
 
 --- /task ---
 
@@ -121,3 +122,4 @@ image(rakete, width/2, rakete_y, 64, 64)
 ![Animation der Rakete, die auf halber Höhe des Bildschirms fliegt.](images/fly.gif){:width="300px"}
 
 --- /task ---
+
