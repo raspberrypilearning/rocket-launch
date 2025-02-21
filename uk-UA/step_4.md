@@ -28,10 +28,12 @@ def draw_rocket(): global rocket_position rocket_position = rocket_position - 1 
 --- /task ---
 
 
---- task --- The outline around the circles is called the **stroke**. Add some code to turn it off.
-
-
 --- task ---
+
+The outline around the circles is called the **stroke**. Add some code to turn it off.
+
+
+--- /task ---
 
 --- code ---
 ---
