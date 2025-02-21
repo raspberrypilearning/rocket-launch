@@ -4,7 +4,9 @@ El proyecto de inicio tiene una imagen de cohete provista para tí.
 
 ![Imagen del cohete en la galería de imágenes del editor de código.](images/rocket_image.png)
 
---- task --- Agrega código a la función `setup()` para cargar la imagen del cohete en una variable global `cohete`.
+--- task ---
+
+Add code to the `setup()` function to load the rocket image into a `rocket` global variable.
 
 <div class="c-project-code">
 
@@ -22,7 +24,9 @@ global planeta, cohete
 planeta = load_image('planet.png')    
 cohete = load_image( 'rocket.png')
 
---- /code --- --- /task ---
+--- /code ---
+
+--- /task ---
 
 --- task ---
 
