@@ -4,21 +4,21 @@ from random import randint
 
 # Configuration des variables globales
 taille_ecran = 400
-orbite_y = taille_ecran - rayon_orbite
+rocket_position = screen_size
 
 
 # La fonction dessine_fusee vient ici
 def dessine_fusee():
-    global fusee_y, carburant, brule
+    global rocket_position
     rocket_position = rocket_position - 1
     image(fusee, width/2, fusee_y, 64, 64)
-    fill(200, 200, 200, 100) # gris transparent
+    fill(200, 200, 200, 100)
     no_stroke()
-    for i in range(25):
-        fill(255, 255 - i * 10, 0)
-        ellipse(width/2, fusee_y + i, 8, 3)
-            ellipse(width/2 + randint(-5, 5), fusee_y +
-            randint(20, 50), randint(5, 10), randint(5, 10))
+    for i in range(20):
+        circle_size = randint(5, 10)
+        ellipse(
+            screen_size / 2 + randint(-5, 5),
+            rocket_position + randint(20, 50),
             circle_size,
             circle_size,
         )
@@ -26,8 +26,8 @@ def dessine_fusee():
 
 # La fonction dessine_arriere_plan vient ici
 def dessine_arriere_plan():
-    background(0)
-    image(planete, width/2, height, 300, 300)
+    background(0, 0, 0)
+    image(planet, screen_size / 2, screen_size, 300, 300)
 
 
 def setup():
@@ -35,8 +35,8 @@ def setup():
     size(taille_ecran, taille_ecran)
     image_mode(CENTER)
     global planete, fusee
-    planete = load_image('planet.png')
-    fusee = load_image('rocket.png')
+    planet = load_image("purple_planet.png")
+    fusee = load_image("rocket.png")
 
 
 def draw():
