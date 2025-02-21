@@ -74,7 +74,7 @@ Indent the code you used to draw the circle, and add a loop which will run the c
 
 --- code ---
 ---
-Ändere den Aufruf in `fill()`, um den Grünanteil auf `255 - i * 10` festzulegen, sodass die erste Ellipse gleiche Mengen Rot und Grün aufweist und die letzte Ellipse sehr wenig Grün.
+language: python filename: main.py - draw_rocket() line_numbers: true line_number_start: 12
 line_highlights: 16-23
 ---
 
