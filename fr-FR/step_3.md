@@ -45,7 +45,6 @@ fusee_y = taille_ecran #Commence en bas
 
 La position `y` de la fusée commencera à 400 (la hauteur de l'écran) puis diminuera de 1 à chaque fois qu'une nouvelle image est dessinée.
 
-
 --- task ---
 
 Define a `draw_rocket()` function to make the rocket appear on the screen.
@@ -90,7 +89,6 @@ dessine_fusee()
 
 Appelle ton nouveau `dessine_fusee()` dans la fonction `draw()` afin que la fusée soit redessinée à chaque image.
 
-
 --- /task ---
 
 
@@ -101,13 +99,19 @@ Chaque fois qu'une nouvelle image est dessinée, la fusée doit remonter l'écra
 
 !\[Une fusée volant à vitesse constante du bas vers le haut de l'écran.\](images/fly.gif){:width="300px"}
 
+
 --- code ---
 ---
 language: python filename: main.py line_numbers: true line_number_start: 11
 line_highlights: 12
 ---
 
-Définis une fonction `dessine_fusee()` pour changer la position `y` de la fusée et la redessiner.
+def draw_rocket():   
+global rocket_position     
+rocket_position = rocket_position - 1    
+image(rocket, width/2, rocket_position, 64, 64)
+
+--- /code ---
 
 --- /task ---
 
@@ -120,3 +124,4 @@ Définis une fonction `dessine_fusee()` pour changer la position `y` de la fusé
 ![A rocket flying at a steady speed from the bottom to the top of the screen.](images/fly.gif){:width="300px"}
 
 --- /task ---
+
