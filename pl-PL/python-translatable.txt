@@ -1,24 +1,17 @@
-rozmiar_ekranu
+draw_background
 
 planeta
 
-draw_background
+rozmiar_ekranu
 
 rakieta
 
-rocket_y
+rocket_position
 
 draw_rocket
 
-spal
-
-paliwo
-
-orbit_radius
-
-orbit_y
+circle_size
 
 punkty
 
 życia
-
