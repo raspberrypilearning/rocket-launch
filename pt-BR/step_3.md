@@ -45,7 +45,6 @@ foguete_y = tamanho_tela # Comece na parte inferior
 
 A posição `y` do foguete começará em 400 (a altura da tela) e diminuirá em 1 cada vez que um novo quadro for desenhado.
 
-
 --- task ---
 
 Defina uma função `desenhar_foguete()` para alterar a posição `y` do foguete e redesenhá-lo.
@@ -87,7 +86,6 @@ Faça o foguete voar
 
 `foguete_y -= 1` é uma forma mais curta de dizer `foguete_y = foguete_y - 1`.
 
-
 --- /task ---
 
 
@@ -98,16 +96,19 @@ Cada vez que um novo quadro é desenhado, o foguete precisa se mover para cima n
 
 !\[Um foguete voando a uma velocidade constante de baixo para cima da tela.\](images/fly.gif){:width="300px"}
 
+
 --- code ---
 ---
 language: python filename: main.py line_numbers: true line_number_start: 11
 line_highlights: 12
 ---
 
-def draw():   
-# O que fazer em cada quadro   
-desenhar_plano_de_fundo()   
-desenhar_foguete()
+def draw_rocket():   
+global rocket_position     
+rocket_position = rocket_position - 1    
+image(rocket, width/2, rocket_position, 64, 64)
+
+--- /code ---
 
 --- /task ---
 
@@ -120,3 +121,4 @@ desenhar_foguete()
 ![Imagem do foguete a meio caminho da tela.](images/fly.gif){:width="300px"}
 
 --- /task ---
+
