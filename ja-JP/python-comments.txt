@@ -1,72 +1,15 @@
-グローバル変数を設定する
-
-ここでアニメーションをセットアップします
-
-Positions the image in the center
-
-選択した惑星
-
 draw_background関数はここにあります
-
-background(0, 0, 0) の省略形 - 黒
-
-描画する
 
 フレームごとに行うこと
 
+Set up your animation here
+
+Set up global variables
+
 draw_rocket関数はここにあります
-
-Start at the bottom
-
-rocket_yグローバル変数を使う
-
-ロケットを動かす
-
-境界線をなしにする
-
-排気ガスを25個描く
-
-黄色
-
-ループが繰り返されるたびに i が増加する
-
-緑の量を減らす
-
-透明な灰色
-
-ランダムな排煙を20個描く
-
-各フレームで燃焼する燃料の量
-
-How many kilograms of fuel do you want to use?
-
-燃料を燃焼させる
-
-Fuel left: 
-
-まだ燃料が残っている
-
-Turn off the stroke
-
-境界線を白にする
-
-まだ飛行中
-
-燃料がなくなり、軌道に乗っていない
-
-失敗
-
-次のフレームで惑星が赤い色合いにならないように!
-
-成功
-
-燃料が多すぎる
-
-Looping
 
 緑
 
 アンバー
 
 赤
-
