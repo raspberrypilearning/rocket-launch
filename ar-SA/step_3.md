@@ -45,7 +45,6 @@ rocket_y = screen_size # ابدأ من الأسفل
 
 سيبدأ احداثي `y` للصاروخ عند 400 (ارتفاع الشاشة) ثم ينخفض بمقدار 1 في كل مرة يتم فيها رسم إطار جديد.
 
-
 --- task ---
 
 استدع `draw_rocket()` الجديد في دالة `draw()` بحيث يُعاد رسم الصاروخ كل إطار.
@@ -87,7 +86,6 @@ def draw_rocket():
 
 `rocket_y -= 1` هي اقصر طريقة لكتابة `rocket_y = rocket_y - 1`.
 
-
 --- /task ---
 
 
@@ -98,16 +96,19 @@ def draw_rocket():
 
 صورة الصاروخ في منتصف الشاشة.
 
+
 --- code ---
 ---
 language: python filename: main.py line_numbers: true line_number_start: 11
 line_highlights: 12
 ---
 
-def draw():   
-#الأشياء التي يجب القيام بها في كل إطار   
-draw_background()   
-draw_rocket()
+def draw_rocket():   
+global rocket_position     
+rocket_position = rocket_position - 1    
+image(rocket, width/2, rocket_position, 64, 64)
+
+--- /code ---
 
 --- /task ---
 
@@ -120,3 +121,4 @@ draw_rocket()
 ![![صاروخ يطير بسرعة ثابتة من أسفل إلى أعلى الشاشة.](images/fly.gif){:width="300px"}](images/fly.gif){:width="300px"}
 
 --- /task ---
+
