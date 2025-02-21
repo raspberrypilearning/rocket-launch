@@ -1,24 +1,17 @@
-tamano_pantalla
+dibujar_fondo
 
 planeta
 
-dibujar_fondo
+tamano_pantalla
 
 cohete
 
-cohete_y
+rocket_position
 
 dibujar_cohete
 
-quemar
-
-combustible
-
-orbita_radio
-
-orbita_y
+circle_size
 
 puntos
 
 vidas
-
