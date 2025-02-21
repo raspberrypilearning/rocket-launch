@@ -14,7 +14,7 @@ def teken_raket():
     image(rocket, width / 2, rocket_position, 64, 64)
     fill(200, 200, 200, 100)
     no_stroke()
-    for i in range(25):
+    for i in range(20):
         circle_size = randint(5, 10)
         ellipse(
             screen_size / 2 + randint(-5, 5),
