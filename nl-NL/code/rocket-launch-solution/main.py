@@ -4,21 +4,21 @@ from random import randint
 
 # Global variabelen instellen
 scherm_grootte = 400
-omloopbaan_y = scherm_grootte - omloopbaan_straal
+rocket_position = screen_size
 
 
 # De teken_raket functie komt hier
 def teken_raket():
-    global raket_y, brandstof, verbruik
-    raket_y -= 1
-    image(raket, width/2, height/2, 64, 64)
-    fill(200, 200, 200, 100) # Transparant grijs
+    global rocket_position
+    rocket_position = rocket_position - 1
+    image(rocket, width / 2, rocket_position, 64, 64)
+    fill(200, 200, 200, 100)
     no_stroke()
     for i in range(25):
-        fill(255, 255 - i * 10, 0)
+        circle_size = randint(5, 10)
         ellipse(
-            ellipse(width/2 + randint(-5, 5), raket_y +
-            randint(20, 50), randint(5, 10), randint(5, 10))
+            screen_size / 2 + randint(-5, 5),
+            rocket_position + randint(20, 50),
             circle_size,
             circle_size,
         )
@@ -27,7 +27,7 @@ def teken_raket():
 # De functie teken_achtergrond komt hier
 def teken_achtergrond():
     background(0, 0, 0)
-    image(planeet, width/2, height, 300, 300)
+    image(planet, screen_size / 2, screen_size, 300, 300)
 
 
 def setup():
