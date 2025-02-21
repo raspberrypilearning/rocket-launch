@@ -8,7 +8,9 @@
 
 First, you will create a black background to represent space.
 
-背景を描画する`draw_background()` 関数をコメントの下のあるべき位置で定義します。
+--- task ---
+
+Define a `draw_background()` function, and set the background colour to black.
 
 --- code ---
 ---
@@ -45,7 +47,9 @@ draw_background()
 
 --- task ---
 
-**Test:** Run your code and you should see a black square. --- /task ---
+**Test:** Run your code and you should see a black square.
+
+--- /task ---
 
 
 
@@ -58,9 +62,11 @@ Add a line of code to display an image of a planet.
 language: python filename: main.py — setup() line_numbers: true line_number_start: 18
 line_highlights: 21-23
 ---
-def draw_background():   
-background(0) #background(0, 0, 0) の省略形 - 黒    
-image(planet, width/2, height, 300, 300) #画像を描く
+def draw_background():  
+background(0,0,0) image(planet, screen_size/2, screen_size, 300, 300)
+
+--- /code ---
+
 
 `image()` 関数の構成は以下のとおりです：
 
@@ -95,12 +101,9 @@ Click on the image icon to the left to view the image gallery.
 language: python filename: main.py line_numbers: true line_number_start: 18
 line_highlights: 15-17
 ---
-def setup():   
-#ここでアニメーションをセットアップします   
-size(screen_size, screen_size)   
-image_mode(CENTER)   
-global planet   
-planet = load_image('planet.png') #あなたが選んだ惑星
+def setup(): # Set up your animation here size(screen_size, screen_size) image_mode(CENTER) global planet planet = load_image('planet.png')
+
+--- /code ---
 
 --- /task ---
 
