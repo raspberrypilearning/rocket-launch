@@ -14,8 +14,8 @@ language: python
 def setup():   
 size(400, 400)   
 image_mode(CENTER)   
-global planeet   
-planeet = load_image('planet.png')
+global planet   
+planet = load_image('planet.png')
 
 --- /code ---
 
@@ -28,7 +28,7 @@ Waar zal deze code het planeetbeeld positioneren?
 language: python
 ---
 
-image(planeet, 300, 100, 128, 128)
+image(planet, 300, 100, 128, 128)
 
 --- /code ---
 
