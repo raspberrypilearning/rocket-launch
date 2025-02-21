@@ -1,24 +1,17 @@
-maint_sgrin
+llunio_cefndir
 
 planed
 
-llunio_cefndir
+maint_sgrin
 
 roced
 
-roced_y
+rocket_position
 
 llunio_roced
 
-llosgi
-
-tanwydd
-
-radiws_orbit
-
-orbit_y
+circle_size
 
 pwyntiau
 
 bywydau
-
