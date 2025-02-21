@@ -8,7 +8,9 @@
 
 First, you will create a black background to represent space.
 
-Definiere eine Funktion `zeichne_hintergrund()` unter dem entsprechenden Kommentar, um den Hintergrund zu zeichnen.
+--- task ---
+
+Define a `draw_background()` function, and set the background colour to black.
 
 --- code ---
 ---
@@ -45,7 +47,9 @@ zeichne_hintergrund()
 
 --- task ---
 
-**Test:** Run your code and you should see a black square. --- /task ---
+**Test:** Run your code and you should see a black square.
+
+--- /task ---
 
 
 
@@ -58,9 +62,11 @@ Add a line of code to display an image of a planet.
 language: python filename: main.py — setup() line_numbers: true line_number_start: 18
 line_highlights: 21-23
 ---
-def zeichne_hintergrund():   
-background(0) # Kurzform für background(0, 0, 0) — schwarz    
-image(planet, width/2, height, 300, 300) # Zeichnet das Bild
+def draw_background():  
+background(0,0,0) image(planet, screen_size/2, screen_size, 300, 300)
+
+--- /code ---
+
 
 Die Funktion `image()` ist wie folgt aufgebaut:
 
@@ -95,11 +101,9 @@ Lade als Nächstes dein Bild in eine globale Variable `planet`.
 language: python filename: main.py line_numbers: true line_number_start: 18
 line_highlights: 15-17
 ---
-def setup():   
-# Richte hier Deine Animation ein   
-size(bildschirm_groesse, bildschirm_groesse)   
-image_mode(CENTER)  # Positioniert das Bild in der Mitte global planet   
-planet = load_image('planet.png')  # Dein gewählter Planet
+def setup(): # Set up your animation here size(screen_size, screen_size) image_mode(CENTER) global planet planet = load_image('planet.png')
+
+--- /code ---
 
 --- /task ---
 
