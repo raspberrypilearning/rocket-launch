@@ -70,6 +70,7 @@ line_highlights: 15-16
 def draw_background():  
     background(0,0,0)
     image(planet, screen_size/2, screen_size, 300, 300)
+
 --- /code ---
 
 The `image()` function needs the following data:
@@ -113,6 +114,7 @@ def setup():
     image_mode(CENTER)
     global planet
     planet = load_image('planet.png')
+
 --- /code ---
 
 --- /task ---

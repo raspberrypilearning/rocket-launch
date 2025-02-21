@@ -126,6 +126,7 @@ def draw_rocket():
     global rocket_position     
     rocket_position = rocket_position - 1    
     image(rocket, width/2, rocket_position, 64, 64)    
+
 --- /code ---
 
 --- /task ---
