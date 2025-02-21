@@ -8,7 +8,9 @@
 
 First, you will create a black background to represent space.
 
---- task --- Define a `draw_background()` function, and set the background colour to black.
+--- task ---
+
+Define a `draw_background()` function, and set the background colour to black.
 
 --- code ---
 ---
@@ -45,7 +47,9 @@ draw_background()
 
 --- task ---
 
-**Test:** Run your code and you should see a black square. --- /task ---
+**Test:** Run your code and you should see a black square.
+
+--- /task ---
 
 
 
@@ -58,9 +62,11 @@ Add a line of code to display an image of a planet.
 language: python filename: main.py — setup() line_numbers: true line_number_start: 18
 line_highlights: 21-23
 ---
-def draw_background():   
-background(0) #مختصر الخلفية (0, 0, 0) — اسود    
-image(planet, width/2, height, 300, 300) #ارسم الصورة
+def draw_background():  
+background(0,0,0) image(planet, screen_size/2, screen_size, 300, 300)
+
+--- /code ---
+
 
 تم وضع الدالة `image()`:
 
@@ -95,11 +101,9 @@ Click on the image icon to the left to view the image gallery.
 language: python filename: main.py line_numbers: true line_number_start: 18
 line_highlights: 15-17
 ---
-def setup():   
-#إعداد الرسوم المتحركة هنا size(screen_size, screen_size)   
-image_mode(CENTER)   
-global planet   
-planet = load_image('planet.png') #الكوكب الذي اخترته
+def setup(): # Set up your animation here size(screen_size, screen_size) image_mode(CENTER) global planet planet = load_image('planet.png')
+
+--- /code ---
 
 --- /task ---
 
