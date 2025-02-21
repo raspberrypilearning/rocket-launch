@@ -45,7 +45,6 @@ rocket_y = screen_size # Inizia dal basso
 
 La posizione `y` del razzo inizierà a 400 (l'altezza dello schermo) e poi diminuirà di 1 ogni volta che viene disegnato un nuovo fotogramma.
 
-
 --- task ---
 
 Definisci una funzione `draw_rocket()` per modificare la posizione `y` del razzo e ridisegnarlo.
@@ -91,7 +90,6 @@ draw_rocket()
 
 Fai volare il razzo
 
-
 --- /task ---
 
 
@@ -102,13 +100,19 @@ Ogni volta che viene disegnato un nuovo fotogramma, il razzo deve spostarsi vers
 
 !\[Un razzo che vola a velocità costante dal basso verso l'alto dello schermo.\](images/fly.gif){:width="300px"}
 
+
 --- code ---
 ---
 language: python filename: main.py line_numbers: true line_number_start: 11
 line_highlights: 12
 ---
 
-`rocket_y -= 1`è un modo più breve per dire `rocket_y = rocket_y - 1`.
+def draw_rocket():   
+global rocket_position     
+rocket_position = rocket_position - 1    
+image(rocket, width/2, rocket_position, 64, 64)
+
+--- /code ---
 
 --- /task ---
 
@@ -121,3 +125,4 @@ line_highlights: 12
 ![Animazione del razzo che vola a metà dello schermo.](images/fly.gif){:width="300px"}
 
 --- /task ---
+
