@@ -8,7 +8,9 @@ Abra o [modelo de projeto](https://trinket.io/python/f7354cbf88){:target="_blank
 
 First, you will create a black background to represent space.
 
---- task --- Define a `draw_background()` function, and set the background colour to black.
+--- task ---
+
+Define a `draw_background()` function, and set the background colour to black.
 
 --- code ---
 ---
@@ -45,7 +47,9 @@ desenhar_plano_de_fundo()
 
 --- task ---
 
-**Test:** Run your code and you should see a black square. --- /task ---
+**Test:** Run your code and you should see a black square.
+
+--- /task ---
 
 
 
@@ -58,9 +62,11 @@ Add a line of code to display an image of a planet.
 language: python filename: main.py — setup() line_numbers: true line_number_start: 18
 line_highlights: 21-23
 ---
-def desenhar_plano_de_fundo():   
-background(0) # Abreviação de plano de fundo (0, 0, 0) — preto    
-image(planeta, width/2, height, 300, 300) # Desenhe a imagem
+def draw_background():  
+background(0,0,0) image(planet, screen_size/2, screen_size, 300, 300)
+
+--- /code ---
+
 
 A função `image()` é apresentada:
 
@@ -95,12 +101,9 @@ Por exemplo, `orange_planet.png`.
 language: python filename: main.py line_numbers: true line_number_start: 18
 line_highlights: 15-17
 ---
-def setup():   
-#Configure sua animação aqui   
-size(tamanho_tela, tamanho_tela)   
-mage_mode(CENTER)   
-global planeta   
-planeta = load_image('planet.png') # Seu planeta escolhido
+def setup(): # Set up your animation here size(screen_size, screen_size) image_mode(CENTER) global planet planet = load_image('planet.png')
+
+--- /code ---
 
 --- /task ---
 
