@@ -73,6 +73,7 @@ def draw_background():
 
 --- /code ---
 
+
 The `image()` function needs the following data:
 
 - image filename - we have already loaded the planet image
