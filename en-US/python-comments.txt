@@ -1,72 +1,15 @@
-Setup global variables
-
-Setup your animation here
-
-Positions the image in the center
-
-Your chosen planet
-
 The draw_background function goes here
-
-Short for background(0, 0, 0) — black
-
-Draw the image
 
 Things to do in every frame
 
+Set up your animation here
+
+Set up global variables
+
 The draw_rocket function goes here
-
-Start at the bottom
-
-Use the global rocket_y variable
-
-Move the rocket
-
-Turn off the stroke
-
-Draw 25 burning exhaust ellipses
-
-Yellow
-
-i increases each time the loop repeats
-
-Reduce the amount of green
-
-Transparent grey
-
-Draw 20 random smoke ellipses
-
-How much fuel is burned in each frame
-
-How many kilograms of fuel do you want to use?
-
-Burn fuel
-
-Fuel left: 
-
-Still got fuel
-
-Turn off the stroke
-
-Set a white stroke
-
-Still flying
-
-No more fuel and not in orbit
-
-Failure
-
-So the planet isn't tinted red in the next frame!
-
-Success
-
-Too much fuel
-
-Looping
 
 Green
 
 Amber
 
 Red
-
