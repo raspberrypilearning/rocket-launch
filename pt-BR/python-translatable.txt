@@ -1,24 +1,17 @@
-tamanho_tela
+desenhar_plano_de_fundo
 
 planeta
 
-desenhar_plano_de_fundo
+tamanho_tela
 
 foguete
 
-foguete_y
+rocket_position
 
 desenhar_foguete
 
-queimar
-
-combustivel
-
-raio_orbital
-
-orbita_y
+circle_size
 
 pontos
 
 vidas
-
