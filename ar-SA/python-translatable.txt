@@ -1,24 +1,17 @@
-screen_size
+draw_background
 
 planet
 
-draw_background
+screen_size
 
 rocket
 
-rocket_y
+rocket_position
 
 draw_rocket
 
-burn
-
-fuel
-
-orbit_radius
-
-orbit_y
+circle_size
 
 points
 
 lives
-
