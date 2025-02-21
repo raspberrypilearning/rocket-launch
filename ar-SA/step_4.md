@@ -28,10 +28,12 @@ image(rocket, width/2, rocket_y, 64, 64)
 --- /task ---
 
 
---- task --- The outline around the circles is called the **stroke**. Add some code to turn it off.
-
-
 --- task ---
+
+The outline around the circles is called the **stroke**. Add some code to turn it off.
+
+
+--- /task ---
 
 --- code ---
 ---
