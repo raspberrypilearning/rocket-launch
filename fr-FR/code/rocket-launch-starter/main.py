@@ -17,7 +17,7 @@ def setup():
     # Configure ton animation ici
     size(taille_ecran, taille_ecran)
     image_mode(CENTER)
-    global planet
+    global planete
     planete = load_image('planet.png')
    
 
