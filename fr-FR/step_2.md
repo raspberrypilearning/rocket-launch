@@ -1,16 +1,16 @@
-## Draw the background
+## Dessiner l'arrière-plan
 
 --- task ---
 
-Ouvre le [modèle de projet](https://editor.raspberrypi.org/fr-FR/projects/rocket-launch-starter){:target="_blank"}.
+Ouvre le [projet de démarrage](https://editor.raspberrypi.org/en/projects/rocket-launch-starter){:target="_blank"}.
 
 --- /task ---
 
-First, you will create a black background to represent space.
+Tu vas d'abord créer un arrière-plan pour représenter l'espace.
 
 --- task ---
 
-Define a `draw_background()` function, and set the background colour to black.
+Crée une fonction `dessine_arriere_plan()` et définis la couleur d'arrière-plan sur noir.
 
 --- code ---
 ---
