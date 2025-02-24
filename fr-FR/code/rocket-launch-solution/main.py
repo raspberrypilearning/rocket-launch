@@ -9,7 +9,7 @@ position_fusee = taille_ecran
 
 # La fonction dessine_fusee vient ici
 def dessine_fusee():
-    position_fusee globale
+    global position_fusee
     position_fusee = position_fusee - 1
     image(fusee, width / 2, position_fusee, 64, 64)
     fill(200, 200, 200, 100)
