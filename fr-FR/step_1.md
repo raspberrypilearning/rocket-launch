@@ -1,10 +1,10 @@
 <div class="c-survey-banner" style="width:100%">
-  <a class="c-survey-banner__link" href="https://form.raspberrypi.org/f/code-editor-feedback" target="_blank">Réponds à notre enquête</a> pour nous aider à améliorer notre éditeur de code !
+  <a class="c-survey-banner__link" href="https://form.raspberrypi.org/f/code-editor-feedback" target="_blank">Réponds à notre enquête</a> pour nous aider à améliorer notre Code Editor !
 </div>
 
 ## Ce que tu vas faire
 
-Réalise une animation pour propulser un satellite en orbite - en utilisant une fusée !
+Réalise une animation pour lancer une fusée en orbite.
 
 
 
