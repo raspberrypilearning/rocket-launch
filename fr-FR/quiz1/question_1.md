@@ -8,7 +8,7 @@ Amuse-toi bien !
 
 --- question ---
 ---
-legend : Question 1 sur 3
+legend: Question 1 sur 3
 ---
 
 Quel résultat t'attendrais-tu si tu exécutais le programme ci-dessous ?
@@ -24,7 +24,7 @@ for i in range(5):
 
   --- feedback ---
 
-Pas tout à fait, une boucle `for` en Python répète son code une fois pour chaque élément dans une séquence qui lui est donnée, et ici `range` crée une séquence à partir de `0`.
+Pas tout à fait, une boucle `for` en Python commence à partir de 0, sauf indication contraire.
 
   --- /feedback ---
 
@@ -48,7 +48,7 @@ Correct. La boucle s'exécute une fois, dans l'ordre, pour chaque élément `i` 
 
   --- feedback ---
 
-Not quite. Unless you have specified otherwise, a `for` loop will start at 0 and count up the number of times specified in the range.
+Pas tout à fait. Sauf indication contraire, une boucle `for` commence à 0 et compte le nombre de fois spécifié dans l'intervalle.
 
   --- /feedback ---
 
