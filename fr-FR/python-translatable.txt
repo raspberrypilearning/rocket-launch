@@ -6,11 +6,11 @@ taille_ecran
 
 fusee
 
-rocket_position
+position_fusee
 
 dessine_fusee
 
-circle_size
+taille_cercle
 
 points
 
