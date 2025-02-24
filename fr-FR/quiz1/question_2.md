@@ -1,7 +1,7 @@
 
 --- question ---
 ---
-legend : Question 2 sur 3
+legend: Question 2 sur 3
 ---
 
 Un projet a ce code `configuration` pour charger une image de planète et dire que les images doivent être positionnées en leur centre :
