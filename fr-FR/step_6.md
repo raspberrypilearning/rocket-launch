@@ -1,24 +1,24 @@
 --- task ---
 
-## Challenge
+## Défi
 
-You could:
+Tu pourrais :
 
 --- task ---
 
-Give your smoke circles a range of different colours.
+Donner à tes cercles de fumée des couleurs différentes.
 
 --- /task ---
 
 --- task ---
 
-Make your rocket move faster or slower.
+Faire en sorte que ta fusée se déplace plus vite ou plus lentement.
 
 --- /task ---
 
 --- task ---
 
-Add to your animation so that the rocket reappears and lands on a different planet.
+Compléter ton animation pour que la fusée réapparaisse et atterrisse sur une autre planète.
 
 --- /task ---
 
