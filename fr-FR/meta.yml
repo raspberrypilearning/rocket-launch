@@ -1,9 +1,9 @@
 ---
 title: Lancement de fusée
 hero_image: images/banner.png
-description: Faire une animation d'une fusée propulsant un satellite en orbite
+description: Fais une animation d'une fusée propulsant un satellite en orbite
 meta_title: Projets de codage Python pour enfants et adolescents | Lancement de fusée
-meta_description: Apprendre Python avec les projets de codage de la Raspberry Pi Foundation pour les enfants et les adolescents. Créer une animation Python qui montre une fusée lançant un satellite en orbite.
+meta_description: Apprends Python avec les projets de codage de la Raspberry Pi Foundation pour les enfants et les adolescents. Crée une animation Python qui montre une fusée lançant un satellite en orbite.
 version: 0.0.1
 listed: true
 copyedit: true
@@ -12,7 +12,7 @@ steps:
   - 
     title: Ce que tu vas faire
   - 
-    title: Créer la scène
+    title: Dessiner l'arrière-plan
     completion:
       - engaged
   - 
@@ -22,7 +22,7 @@ steps:
     completion:
       - internal
   - 
-    title: Brûler du carburant
+    title: Questionnaire rapide
     knowledge_quiz:
       path: quiz1
       version: 1
@@ -31,7 +31,7 @@ steps:
     completion:
       - external
   - 
-    title: Atteindre l'orbite
+    title: Défi
     challenge: true
   - 
-    title: Questionnaire rapide
+    title: Que peux-tu faire maintenant ?
