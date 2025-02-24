@@ -3,17 +3,17 @@
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">
 
-Add some grey circles to simulate the exhaust trail. 
+Ajoute quelques cercles gris pour simuler la traînée d'échappement. 
 </div>
 <div>
 
-Une animation lente de l'effet de fumée.
+![Une animation lente de l'effet de fumée.](images/rocket_smoke.gif)
 </div>
 </div>
 
 --- task ---
 
-Set the fill colour for the smoke to transparent grey.
+Définis la couleur de remplissage de la fumée sur gris transparent.
 
 --- code ---
 ---
@@ -30,7 +30,7 @@ def draw_rocket(): global rocket_position rocket_position = rocket_position - 1 
 
 --- task ---
 
-The outline around the circles is called the **stroke**. Add some code to turn it off.
+Le contour autour des cercles est appelé le **trait**. Ajoute du code pour le désactiver.
 
 
 --- /task ---
@@ -49,7 +49,7 @@ line_highlights: 15
 
 --- task ---
 
-Generate a random number between 5 and 10 for the size of the circle, then draw it at the bottom of the rocket.
+Génère un nombre aléatoire entre 5 et 10 pour la taille du cercle, puis dessine-le au bas de la fusée.
 
 --- code ---
 ---
@@ -71,7 +71,7 @@ no_stroke() circle_size = randint(5,10) ellipse( screen_size/2, rocket_position,
 
 --- task ---
 
-Indent the code you used to draw the circle, and add a loop which will run the code 20 times.
+Indente le code que tu as utilisé pour dessiner le cercle et ajoute une boucle qui exécutera le code 20 fois.
 
 --- code ---
 ---
@@ -89,13 +89,13 @@ circle_size )
 
 --- task ---
 
-**Test :** exécute ton code pour vérifier que la fusée a une nouvelle traînée d'échappement. You will still see a flashing grey circle at the bottom of the rocket - all of the circles have been drawn on top of each other!
+**Test :** exécute ton programme. Tu verras toujours un cercle gris clignotant au bas de la fusée. Tous les cercles ont été dessinés les uns sur les autres !
 
 --- /task ---
 
 --- task ---
 
-Generate a random number and add it to the x and y position of each circle so they aren't all drawn in the same place.
+Génère un nombre aléatoire et ajoute-le à la position x et y de chaque cercle afin qu'ils ne soient pas tous dessinés au même endroit.
 
 
 --- code ---
@@ -113,7 +113,7 @@ for i in range(25): fill(255, 255 - i * 10, 0) ellipse(width/2, fusee_y + i, 8, 
 
 --- task ---
 
-**Test:** Run your program and you should see lots of grey circles in random places at the bottom of the rocket.
+**Test :** exécute ton programme et tu devrais voir de nombreux cercles gris à des endroits aléatoires au bas de la fusée.
 
 --- /task ---
 
