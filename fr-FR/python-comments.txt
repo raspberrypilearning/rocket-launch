@@ -2,9 +2,9 @@ La fonction dessine_arriere_plan vient ici
 
 Choses à faire dans chaque image
 
-Set up your animation here
+Configure ton animation ici
 
-Set up global variables
+Configurer les variables globales
 
 La fonction dessine_fusee vient ici
 
