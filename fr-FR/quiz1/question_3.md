@@ -1,6 +1,6 @@
 --- question ---
 ---
-legend : Question 3 sur 3
+legend: Question 3 sur 3
 ---
 
 Ce code utilise `tint()` pour colorer une fusée dans un jeu afin de montrer au joueur comment il se débrouille.
