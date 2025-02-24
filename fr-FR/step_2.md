@@ -29,7 +29,7 @@ size(taille_ecran, taille_ecran)
 
 --- task ---
 
-Add this function to the list of things to `draw()` in every frame.
+Ajoute cette fonction à la liste des éléments à `draw()` dans chaque image.
 
 --- code ---
 ---
@@ -47,7 +47,7 @@ dessine_arriere_plan()
 
 --- task ---
 
-**Test:** Run your code and you should see a black square.
+**Test :** exécute ton code et tu devrais voir un carré noir.
 
 --- /task ---
 
@@ -55,7 +55,7 @@ dessine_arriere_plan()
 
 --- task ---
 
-Add a line of code to display an image of a planet.
+Ajoute une ligne de code pour afficher l'image d'une planète.
 
 --- code ---
 ---
@@ -68,13 +68,13 @@ background(0,0,0) image(planet, screen_size/2, screen_size, 300, 300)
 --- /code ---
 
 
-La fonction `image()` se présente comme suit :
+La fonction `image()` doit avoir les données suivantes :
 
-- image filename - we have already loaded the planet image
-- x coordinate - we have already set the screen size
-- y coordinate
-- image width
-- image height
+- nom du fichier image : nous avons déjà chargé l'image de la planète
+- coordonnée x : nous avons déjà défini la taille de l'écran
+- coordonnées y
+- largeur de l'image
+- hauteur de l'image
 
 --- /task ---
 
@@ -82,17 +82,17 @@ La fonction `image()` se présente comme suit :
 
 **Test :** exécute ton code et vérifie qu'il dessine un arrière-plan noir avec une demi-planète en bas.
 
-![![Une planète sur fond noir.](images/step_2.png){:width="300px"}](images/step_2.png){:width="300px"}
+![Une planète sur un arrière-plan noir.](images/step_2.png){:width="300px"}
 
 --- /task ---
 
-### A different planet?
+### Une autre planète ?
 
 --- task ---
 
-Click on the image icon to the left to view the image gallery.
+Clique sur l'icône d'image à gauche pour voir la galerie d'images.
 
-![Choose a different planet](images/image_gallery.png)
+![Choisir une autre planète](images/image_gallery.png)
 
 Par exemple, `orange_planet.png`.
 
