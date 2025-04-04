@@ -22,7 +22,7 @@ def draw_rocket():
 
     if fuel >= burn and rocket_y > high_orbit_y:  # Sta ancora volando
         rocket_y -= speed  # Muovi il razzo
-        fuel -= burn  # Brucia il carburante
+        fuel -= burn  # Carburante da bruciare
         print('Carburante rimanente: ', fuel)
 
         no_stroke()  # Disattiva il disegno della linea
