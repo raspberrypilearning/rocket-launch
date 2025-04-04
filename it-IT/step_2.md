@@ -108,7 +108,7 @@ def setup():
 
 --- task ---
 
-Definisci una funzione `draw_ background()` , per disegnare lo sfondo, sotto il commento che ti dice dove dovrebbe andare.
+Definisci una funzione `draw_background()` , per disegnare lo sfondo, sotto il commento che ti dice dove dovrebbe andare.
 
 Usa `background(0)` per impostare il colore di sfondo su nero e aggiungi una funzione `image()` per disegnare il pianeta. La funzione `image()` è così strutturata:
 
@@ -125,7 +125,7 @@ line_number_start: 14
 line_highlights: 15-17
 ---
 
-# La funzione draw_ background va qui
+# La funzione draw_background va qui
 def draw_background():   
     background(0)  # Abbreviazione per background(0, 0, 0) — black    
     image(planet, width/2, height, 300, 300)  # Disegna l'immagine
@@ -139,7 +139,7 @@ Inserire tutto il codice per disegnare lo sfondo in un'unica funzione semplifica
 
 --- task ---
 
-Per far apparire lo sfondo, richiama `draw_ background()` in `draw()`. Ciò farà sì che lo sfondo venga ridisegnato ogni volta che viene chiamata `draw()`, coprendo qualsiasi disegno precedente:
+Per far apparire lo sfondo, richiama `draw_background()` in `draw()`. Ciò farà sì che lo sfondo venga ridisegnato ogni volta che viene chiamata `draw()`, coprendo qualsiasi disegno precedente:
 
 --- code ---
 ---

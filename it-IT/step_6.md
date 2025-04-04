@@ -45,7 +45,7 @@ orbit_y = screen_size - orbit_radius
 
 --- task ---
 
-Aggiorna la funzione `draw_ background()` per rappresentare l'orbita del satellite che il razzo deve raggiungere tramite il disegno di un'ellisse.
+Aggiorna la funzione `draw_background()` per rappresentare l'orbita del satellite che il razzo deve raggiungere tramite il disegno di un'ellisse.
 
 --- code ---
 ---
