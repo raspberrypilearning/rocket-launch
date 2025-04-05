@@ -6,7 +6,7 @@ Das Starterprojekt stellt dir ein Raketenbild zur Verfügung.
 
 --- task ---
 
-Add code to the `setup()` function to load the rocket image into a `rocket` global variable.
+Füge der Funktion `setup()` Code hinzu, um das Raketenbild in eine globale Variable `rakete` zu laden.
 
 <div class="c-project-code">
 
