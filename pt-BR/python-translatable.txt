@@ -6,11 +6,11 @@ tamanho_tela
 
 foguete
 
-rocket_position
+foguete_y
 
 desenhar_foguete
 
-circle_size
+tamanho_tela
 
 pontos
 
