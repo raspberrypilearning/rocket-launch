@@ -13,7 +13,7 @@ Añade algunos círculos grises para simular el rastro del escape.
 
 --- task ---
 
-Set the fill colour for the smoke to transparent grey.
+Establece el color de relleno del humo en gris transparente.
 
 --- code ---
 ---
@@ -30,7 +30,7 @@ def dibujar_cohete(): posicion_cohete global posicion_cohete = posicion_cohete -
 
 --- task ---
 
-The outline around the circles is called the **stroke**. Añade código para desactivarlo.
+El contorno alrededor de los círculos se llama **trazo**. Añade código para desactivarlo.
 
 
 --- /task ---
@@ -95,7 +95,7 @@ medida_circulo )
 
 --- task ---
 
-Generate a random number and add it to the x and y position of each circle so they aren't all drawn in the same place.
+Genera un número aleatorio y agrégalo a la posición x e y de cada círculo para que no se dibujen todos en el mismo lugar.
 
 
 --- code ---
@@ -113,7 +113,7 @@ ellipse( medida_pantalla/2 + randint(-5,5), posicion_cohete + randint(20,50), me
 
 --- task ---
 
-**Test:** Run your program and you should see lots of grey circles in random places at the bottom of the rocket.
+**Prueba:** Ejecuta tu programa y deberías ver aparecer un círculo gris en la parte inferior del cohete.
 
 --- /task ---
 
