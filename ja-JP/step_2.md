@@ -10,7 +10,7 @@ First, you will create a black background to represent space.
 
 --- task ---
 
-Define a `draw_background()` function, and set the background colour to black.
+背景を描画する`draw_background()` 関数をコメントの下のあるべき位置で定義します。
 
 --- code ---
 ---
@@ -47,7 +47,7 @@ draw_background()
 
 --- task ---
 
-**Test:** Run your code and you should see a black square.
+Trinketアカウントをお持ちの場合は、**Remix**ボタンをクリックして、 `My Trinkets`ライブラリにコピーを保存できます。
 
 --- /task ---
 
