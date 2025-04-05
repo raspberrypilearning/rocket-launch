@@ -47,7 +47,7 @@ def teken_raket():
     elif brandstof >= 1000 and raket_y <= omloopbaan_y:
         tint(255, 200, 0) # Te veel brandstof
 
-    image(raket, width/2, height/2, 64, 64)
+    image(raket, width/2, raket_y, 64, 64)
     no_tint()
 
 
@@ -65,7 +65,7 @@ def teken_achtergrond():
     # Teken de hogere baan
     stroke(0, 100, 200) # Stel een blauwachtige streek in
     stroke_weight(2)
-    ellipse(width/2, height, omloopbaan_straal*2, omloopbaan_straal*2)
+    ellipse(width/2, height, hoge_omloopbaan_straal*2, hoge_omloopbaan_straal*2)
 
 
 def setup():
