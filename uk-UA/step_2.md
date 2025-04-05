@@ -65,45 +65,40 @@ background(0,0,0) image(planet, screen_size/2, screen_size, 300, 300)
 --- /code ---
 
 
-Зображення зручно завантажувати в `setup()`, щоб вони завжди були напоготові, коли тобі потрібно буде їх використати, а твоя анімація буде швидко запускатись.
+Для функції `image()` потрібні такі дані:
 
-- image filename - we have already loaded the planet image
-- x coordinate - we have already set the screen size
-- y coordinate
-- image width
-- image height
+- назва файлу зображення — ми вже завантажили зображення планети;
+- координата x — ми вже встановили розмір екрана;
+- координата y;
+- ширина зображення;
+- висота зображення.
 
 --- /task ---
 
 --- task ---
 
-def setup():   
-#Налаштувати анімацію можна тут   
-size(screen_size, screen_size)   
-image_mode(CENTER)   
-global planet   
-planet = load_image('planet.png') #Твоя обрана планета
+**Протестуй:** запусти свій код. Він має малювати чорне тло і пів планети внизу.
 
-![A planet against a black background.](images/step_2.png){:width="300px"}
+![Планета на чорному фоні.](images/step_2.png){:width="300px"}
 
 --- /task ---
 
-### A different planet?
+### Інша планета?
 
 --- task ---
 
-Визнач функцію `draw_background()`, щоб намалювати фон, внизу коментаря, який підказує, куди його треба поставити.
+Натисни на значок зображення ліворуч, щоб переглянути галерею зображень.
 
-![Choose a different planet](images/image_gallery.png)
+![Вибрати іншу планету](images/image_gallery.png)
 
-If you want to change the planet image, change `planet.png` in the code to the filename of your chosen planet, for example, `orange_planet.png`.
+Якщо ти хочеш вибрати інше зображення планети, зміни `planet.png` у коді на назву файлу вибраної планети, наприклад, `orange_planet.png`.
 
 --- code ---
 ---
 language: python line_numbers: true line_number_start: 17
-line_highlights: 15-17
+line_highlights: 22
 ---
-def setup(): # Set up your animation here size(screen_size, screen_size) image_mode(CENTER) global planet planet = load_image('planet.png')
+def setup(): # Тут налаштуй анімацію size(screen_size, screen_size) image_mode(CENTER) global planet planet = load_image('planet.png')
 
 --- /code ---
 
