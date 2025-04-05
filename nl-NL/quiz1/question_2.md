@@ -1,7 +1,7 @@
 
 --- question ---
 ---
-legend: Vraag 2 van 3
+legenda: Vraag 2 van 3
 ---
 
 Een project heeft deze `setup` code om een planeetafbeelding te laden en te zeggen dat afbeeldingen in hun midden moeten worden geplaatst:
@@ -19,7 +19,7 @@ planet = load_image('planet.png')
 
 --- /code ---
 
-Coördinaten beginnen bij (0, 0) in de linkerbovenhoek. In het project heb je afbeeldingen van planeten en raketten getekend met de functie `image(image_file, x-coord, y-coord, x-width, y-width)`.
+Coördinaten beginnen bij (0, 0) in de linkerbovenhoek. In het project heb je afbeeldingen van planeten en raketten getekend met de functie `image(bestandsnaam afbeelding, x-coördinaat, y-coördinaat, afbeeldingsbreedte, afbeeldingshoogte)`.
 
 Waar zal deze code het planeetbeeld positioneren?
 
