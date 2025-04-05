@@ -2,8 +2,6 @@
   <a class="c-survey-banner__link" href="https://form.raspberrypi.org/f/code-editor-feedback" target="_blank">Réponds à notre enquête</a> pour nous aider à améliorer notre Code Editor !
 </div>
 
-## Ce que tu vas faire
-
 Réalise une animation pour lancer une fusée en orbite.
 
 
