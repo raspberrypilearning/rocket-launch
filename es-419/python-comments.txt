@@ -2,9 +2,9 @@ La función dibujar_fondo va aquí
 
 Cosas que hacer en cada cuadro
 
-Set up your animation here
+Configura tu animación aquí
 
-Set up global variables
+Configurar las variables globales
 
 La función dibujar_cohete va aquí
 
