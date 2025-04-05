@@ -1,15 +1,15 @@
-Функція draw_background викликається тут
+Тут буде функція draw_background
 
 Що відбувається на кожному кадрі
 
-Set up your animation here
+Тут налаштуй анімацію
 
-Set up global variables
+Встанови глобальні змінні
 
-Функція draw_rocket викликається тут
+Тут буде функція draw_rocket
 
 Зелений
 
-Янтар
+Жовтий
 
 Червоний
