@@ -2,9 +2,9 @@ Die Funktion „zeichne_hintergrund“ kommt hierher
 
 Dinge die in jedem Frame passieren
 
-Set up your animation here
+Richte hier Deine Animation hier ein
 
-Set up global variables
+Globale Variablen einrichten
 
 Die Funktion „zeichne_rakete“ kommt hierher
 
