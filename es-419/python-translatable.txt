@@ -6,11 +6,11 @@ tamano_pantalla
 
 cohete
 
-rocket_position
+posicion_cohete
 
 dibujar_cohete
 
-circle_size
+tamano_circulo
 
 puntos
 
