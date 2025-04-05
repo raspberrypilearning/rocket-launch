@@ -30,7 +30,7 @@ rocket = load_image('rocket.png')
 
 --- task ---
 
-Add a `rocket_position` global variable to keep track of the rocket's `y` position.
+Η θέση `y` του πυραύλου θα ξεκινά από το 400 (το ύψος της οθόνης) και στη συνέχεια θα μειώνεται κατά 1 κάθε φορά που σχεδιάζεται ένα νέο καρέ.
 
 --- code ---
 ---
