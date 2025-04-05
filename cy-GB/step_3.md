@@ -30,7 +30,7 @@ rocket = load_image('rocket.png')
 
 --- task ---
 
-Add a `rocket_position` global variable to keep track of the rocket's `y` position.
+Bydd safle `y` y roced yn dechrau ar 400 (uchder y sgrin) ac yn lleihau 1 bob tro mae ffrâm newydd yn cael ei llunio.
 
 --- code ---
 ---
