@@ -10,7 +10,7 @@ First, you will create a black background to represent space.
 
 --- task ---
 
-Define a `draw_background()` function, and set the background colour to black.
+Definisci una funzione `draw_background()` , per disegnare lo sfondo, sotto il commento che ti dice dove dovrebbe andare.
 
 --- code ---
 ---
@@ -47,7 +47,7 @@ draw_background()
 
 --- task ---
 
-**Test:** Run your code and you should see a black square.
+Trova il commento `Imposta le variabili globali` e aggiungi una riga di codice per creare la variabile `screen_size`:
 
 --- /task ---
 
