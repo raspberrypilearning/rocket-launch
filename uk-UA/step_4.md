@@ -3,17 +3,17 @@
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">
 
-Add some grey circles to simulate the exhaust trail. 
+Додай кілька сірих кіл, які будуть створювати вихлопний слід. 
 </div>
 <div>
 
-![Ракета посередині шляху зі слідом вихлопних газів.](images/flying_rocket.gif){:width="300px"}
+![Повільна анімація ефекту диму.](images/rocket_smoke.gif)
 </div>
 </div>
 
 --- task ---
 
-Намалювавши багато жовтих овалів у різних позиціях `y`, можна створити вихлопний слід із заокругленим кінцем.
+Встанови колір заливки диму на прозоро-сірий.
 
 --- code ---
 ---
@@ -30,7 +30,7 @@ def draw_rocket(): global rocket_position rocket_position = rocket_position - 1 
 
 --- task ---
 
-The outline around the circles is called the **stroke**. Add some code to turn it off.
+Функція **stroke** керує контуром кіл. За допомогою рядка коду можна вимкнути контур.
 
 
 --- /task ---
@@ -49,7 +49,7 @@ line_highlights: 15
 
 --- task ---
 
-image(rocket, width/2, rocket_y, 64, 64)
+Згенеруй випадкове число від 5 до 10 для розміру кола, а потім намалюй його внизу ракети.
 
 --- code ---
 ---
@@ -65,21 +65,17 @@ no_stroke() circle_size = randint(5,10) ellipse( screen_size/2, rocket_position,
 
 --- task ---
 
-Зміни виклик функції `fill()`, встановивши кількість зеленого кольору на `255 - i*10` так, щоб у першому колі було однакова кількість червоного та зеленого кольорів, а в останньому - дуже мало зеленого.
+**Протестуй:** запусти свою програму. Ти маєш побачити сіре коло внизу ракети.
 
 --- /task ---
 
 --- task ---
 
-for i in range(25):   
-fill(255, 255 - i * 10, 0) #Зменшити кількість зеленого кольору    
-ellipse(width/2, rocket_y + i, 8, 3)
+Зроби відступ у коді, яким ти малюєш коло, і додай цикл, який запускатиме код 20 разів.
 
 --- code ---
 ---
-for i in range(25):   
-fill(255, 255 - i * 10, 0) #Зменшити кількість зеленого кольору    
-ellipse(width/2, rocket_y + i, 8, 3)
+language: python line_numbers: true line_number_start: 10
 line_highlights: 16-23
 ---
 
@@ -93,13 +89,13 @@ circle_size )
 
 --- task ---
 
-**Test:** Run your program. You will still see a flashing grey circle at the bottom of the rocket - all of the circles have been drawn on top of each other!
+**Протестуй:** запусти свою програму. Ти все одно побачиш миготливе сіре коло у нижній частині ракети – усі кола намалювались одне на одному!
 
 --- /task ---
 
 --- task ---
 
-На кожному кадрі анімації буде намальовано 20 овалів випадкових розмірів на випадкових позиціях.
+Згенеруй випадкове число і додай його до положень x і y кожного кола, щоб вони не малювалися в одному місці.
 
 
 --- code ---
@@ -108,7 +104,7 @@ language: python line_numbers: true line_number_start: 24
 line_highlights: 25-26
 ---
 
-На кожному кадрі анімації буде намальовано 20 овалів випадкових розмірів на випадкових позиціях.
+ellipse( screen_size/2 + randint(-5,5), rocket_position + randint(20,50), circle_size, circle_size )
 
 --- /code ---
 
@@ -117,7 +113,7 @@ line_highlights: 25-26
 
 --- task ---
 
-**Test:** Run your program and you should see lots of grey circles in random places at the bottom of the rocket.
+**Протестуй:** запусти свою програму. Ти маєш побачити багато сірих кіл у випадкових місцях внизу ракети.
 
 --- /task ---
 
