@@ -6,11 +6,11 @@ Open het [projectsjabloon](https://editor.raspberrypi.org/nl-NL/projects/rocket-
 
 --- /task ---
 
-First, you will create a black background to represent space.
+Eerst maak je een zwarte achtergrond om de ruimte weer te geven.
 
 --- task ---
 
-Define a `draw_background()` function, and set the background colour to black.
+Definieer een `teken_achtergrond()` functie, en stel de achtergrondkleur in op zwart.
 
 --- code ---
 ---
@@ -28,7 +28,7 @@ background(0, 0, 0)
 
 --- task ---
 
-Add this function to the list of things to `draw()` in every frame.
+Voeg deze functie toe aan de lijst met dingen om te `tekenen()` in elk frame.
 
 --- code ---
 ---
@@ -44,7 +44,7 @@ def draw(): # Things to do in every frame draw_background()
 
 --- task ---
 
-**Test:** Run your code and you should see a black square.
+**Test:** Voer je code uit, je zou een zwart vierkant moeten zien.
 
 --- /task ---
 
@@ -52,7 +52,7 @@ def draw(): # Things to do in every frame draw_background()
 
 --- task ---
 
-Add a line of code to display an image of a planet.
+Voeg een regel code toe om een afbeelding van een planeet weer te geven.
 
 --- code ---
 ---
@@ -65,13 +65,13 @@ background(0,0,0) image(planet, screen_size/2, screen_size, 300, 300)
 --- /code ---
 
 
-De functie `image()` is als volgt ingedeeld:
+De functie `image()` heeft de volgende gegevens nodig:
 
-- image filename - we have already loaded the planet image
-- x coordinate - we have already set the screen size
-- y coordinate
-- image width
-- image height
+- afbeelding bestandnaam - we hebben de planeetafbeelding al geladen
+- x-coördinaat - we hebben de schermgrootte al ingesteld
+- y-coördinaat
+- breedte afbeelding
+- hoogte afbeelding
 
 --- /task ---
 
@@ -79,19 +79,19 @@ De functie `image()` is als volgt ingedeeld:
 
 **Test:** Voer je code uit en controleer of deze een zwarte achtergrond tekent met onderaan een halve planeet.
 
-![![Een planeet tegen een zwarte achtergrond.](images/step_2.png){:width="300px"}](images/step_2.png){:width="300px"}
+![Een planeet tegen een zwarte achtergrond.](images/step_2.png){:width="300px"}
 
 --- /task ---
 
-### A different planet?
+### Een andere planeet?
 
 --- task ---
 
-Click on the image icon to the left to view the image gallery.
+Klik op het afbeeldingsicoontje links om de galerij met afbeeldingen te bekijken.
 
-![Choose a different planet](images/image_gallery.png)
+![Kies een andere planeet](images/image_gallery.png)
 
-Bijvoorbeeld `orange_planet.png`.
+Als u de afbeelding van de planeet wilt wijzigen, vervangt u `planet.png` in de code door de bestandsnaam van de door u gekozen planeet, bijvoorbeeld `orange_planet.png`.
 
 --- code ---
 ---
