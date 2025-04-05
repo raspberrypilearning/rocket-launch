@@ -1,13 +1,13 @@
-# Import library code
+# Імпортуй код бібліотеки
 from p5 import *
 from random import randint
 
-# Set up global variables
+# Встанови глобальні змінні
 screen_size = 400
 rocket_position = screen_size
 
 
-# The draw_rocket function goes here
+# Тут буде функція draw_rocket
 def draw_rocket():
     global rocket_position
     rocket_position = rocket_position - 1
@@ -24,14 +24,14 @@ def draw_rocket():
         )
 
 
-# The draw_background function goes here
+# Тут буде функція draw_background
 def draw_background():
     background(0, 0, 0)
     image(planet, screen_size / 2, screen_size, 300, 300)
 
 
 def setup():
-    # Set up your animation here
+    # Тут налаштуй анімацію
     size(screen_size, screen_size)
     image_mode(CENTER)
     global planet, rocket
@@ -40,7 +40,7 @@ def setup():
 
 
 def draw():
-    # Things to do in every frame
+    # Що відбувається на кожному кадрі
     draw_background()
     draw_rocket()
 
