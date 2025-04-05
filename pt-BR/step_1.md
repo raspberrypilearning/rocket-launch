@@ -2,8 +2,6 @@
   <a class="c-survey-banner__link" href="https://form.raspberrypi.org/f/code-editor-feedback" target="_blank">Responda à nossa pesquisa</a> para ajudar a melhorar nosso Editor de código!
 </div>
 
-## O que você vai fazer
-
 Faça uma animação para colocar um satélite em órbita — pegando carona em um foguete!
 
 
