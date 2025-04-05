@@ -1,32 +1,16 @@
-screen_size
-
-rocket_y
-
-burn
-
-orbit_radius
-
-orbit_y
-
-draw_rocket
-
-fuel
-
-Пального залишилось:
-
-rocket
-
 draw_background
 
 planet
 
-Скільки кілограмів пального ти хочеш використати?
+screen_size
 
-Скільки палива повинна спалювати ракета на кожному кадрі?
+rocket
 
-Яку відстань повинна пролетіти ракета на кожному кадрі?
+rocket_position
 
-Зациклення
+draw_rocket
+
+circle_size
 
 points
 
