@@ -1,23 +1,23 @@
 ## Зліт!
 
-У стартовому проєкті тобі надається зображення ракети.
+Ми вже додали зображення ракети у початковий проєкт.
 
-![Зображення ракети в бібліотеці зображень Trinket.](images/rocket_image.png)
+![Зображення ракети в бібліотеці зображень редактора коду Code Editor.](images/rocket_image.png)
 
 --- task ---
 
-Add code to the `setup()` function to load the rocket image into a `rocket` global variable.
+Додай код до функції `setup()`, щоб завантажити зображення ракети у глобальну змінну `rocket`.
 
 <div class="c-project-code">
 
 --- code ---
 ---
-Додай код до функції `setup()`, щоб завантажити зображення ракети в глобальну змінну `rocket`.
-line_highlights: 24, 26
+language: python filename: main.py line_numbers: true line_number_start: 17
+line_highlights: 21, 23
 ---
 
 def setup():   
-# Set up your animation here   
+# Тут налаштуй анімацію   
 size(screen_size, screen_size)   
 image_mode(CENTER)   
 global planet, rocket   
@@ -30,15 +30,15 @@ rocket = load_image('rocket.png')
 
 --- task ---
 
-Позиція ракети `y` буде починатися з 400 (висота екрану), а потім буде зменшуватися на 1 щоразу, коли буде малюватися новий кадр.
+Додай глобальну змінну `rocket_position`, щоб відстежувати положення ракети за віссю `y`.
 
 --- code ---
 ---
-Позиція ракети `y` буде починатися з 400 (висота екрану), а потім буде зменшуватися на 1 щоразу, коли буде малюватися новий кадр.
-line_highlights: 9
+language: python line_numbers: true line_number_start: 5
+line_highlights: 7
 ---
 
-# Налаштування глобальних змінних
+# Встанови глобальні змінні
 screen_size = 400    
 rocket_position = screen_size
 
@@ -47,20 +47,22 @@ rocket_position = screen_size
 --- /task ---
 
 
-language: python filename: main.py line_numbers: true line_number_start: 7
+Положення ракети за віссю `y` буде починатися з 400 (висота екрану), а потім буде зменшуватися на 1 щоразу, коли малюватиметься новий кадр.
 
 --- task ---
 
-Define a `draw_rocket()` function to make the rocket appear on the screen.
+Визнач функцію `draw_rocket()`, щоб ракета з’явилася на екрані.
 
 --- code ---
 ---
 language: python line_numbers: true line_number_start: 9
-line_highlights: 12-16
+line_highlights: 10-12
 ---
 
-# Функція draw_rocket викликається тут
-Визнач функцію `draw_rocket()`, щоб змінювати позицію ракети `y` та перемалювати її.
+# Тут буде функція draw_rocket
+def draw_rocket():   
+global rocket_position      
+image(rocket, width/2, rocket_position, 64, 64)
 
 
 --- /code ---
@@ -69,15 +71,15 @@ line_highlights: 12-16
 
 --- task ---
 
-def draw_rocket():
+Виклич функцію `draw_rocket()`.
 
 --- code ---
 ---
 language: python line_numbers: true line_number_start: 29
-line_highlights: 37
+line_highlights: 32
 ---
 
-def draw(): # Things to do in every frame draw_background() draw_rocket()
+def draw(): # Що відбувається на кожному кадрі draw_background() draw_rocket()
 
 
 --- /code ---
@@ -86,17 +88,17 @@ def draw(): # Things to do in every frame draw_background() draw_rocket()
 
 --- task ---
 
-language: python filename: main.py line_numbers: true line_number_start: 34
+**Протестуй:** запусти свій код і переконайся, що внизу зображення зʼявляється ракета.
 
 --- /task ---
 
 
-Each time a new frame is drawn, you need to move the rocket one pixel up the screen to create an animation effect.
+Щоразу, як малюється новий кадр, ти маєш перемістити ракету на один піксель вгору, щоб створити ефект анімації.
 
 
 --- task ---
 
-The `rocket_position` of the rocket will start at 400 (the screen height) and then decrease by 1 each time a new frame is drawn.
+Положення ракети `rocket_position` буде починатися з 400 (висота екрану), а потім буде зменшуватися на 1 щоразу, коли малюватиметься новий кадр.
 
 
 --- code ---
@@ -117,10 +119,10 @@ image(rocket, width/2, rocket_position, 64, 64)
 
 --- task ---
 
-**Test:** Run your code to check that the rocket blasts off from the bottom of the screen.
+**Протестуй:** запусти свій код і переконайся, що ракета злітає з нижньої частини екрану вгору.
 
 
-![A rocket flying at a steady speed from the bottom to the top of the screen.](images/fly.gif){:width="300px"}
+![Ракета, що летить з постійною швидкістю від низу до верху екрану.](images/fly.gif){:width="300px"}
 
 --- /task ---
 
