@@ -6,11 +6,11 @@ bildschirm_groesse
 
 rakete
 
-rocket_position
+orbit_y
 
 zeichne_rakete
 
-circle_size
+orbit_radius
 
 punkte
 
