@@ -2,8 +2,6 @@
   <a class="c-survey-banner__link" href="https://form.raspberrypi.org/f/code-editor-feedback" target="_blank"> Weź naszą ankietę </a>, aby pomóc ulepszyć nasz edytor kodu!
 </div>
 
-## What you will make
-
 Make an animation to launch a rocket into orbit.
 
 
