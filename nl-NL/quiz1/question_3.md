@@ -1,6 +1,6 @@
 --- question ---
 ---
-legend: Vraag 3 van 3
+legenda: Vraag 3 van 3
 ---
 
 Deze code gebruikt `tint()` om een raket in een spel te kleuren om de speler te laten zien hoe het gaat.
