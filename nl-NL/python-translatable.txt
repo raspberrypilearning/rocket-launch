@@ -6,11 +6,11 @@ scherm_grootte
 
 raket
 
-rocket_position
+raket_positie
 
 teken_raket
 
-circle_size
+cirkel_grootte
 
 punten
 
