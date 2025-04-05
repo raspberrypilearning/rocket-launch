@@ -65,7 +65,7 @@ no_stroke() circle_size = randint(5,10) ellipse( screen_size/2, rocket_position,
 
 --- task ---
 
-**Test :** exécute ton programme et vérifie que les gaz d'échappement sont visibles.
+**Test :** exécute ton programme et tu devrais voir un cercle gris apparaître au bas de la fusée.
 
 --- /task ---
 
