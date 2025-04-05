@@ -30,7 +30,7 @@ rocket = load_image('rocket.png')
 
 --- task ---
 
-Add a `rocket_position` global variable to keep track of the rocket's `y` position.
+Позиція ракети `y` буде починатися з 400 (висота екрану), а потім буде зменшуватися на 1 щоразу, коли буде малюватися новий кадр.
 
 --- code ---
 ---
