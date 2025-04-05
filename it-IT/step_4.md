@@ -113,7 +113,7 @@ for i in range(25): fill(255, 255 - i * 10, 0) ellipse(width/2, rocket_y + i, 8,
 
 --- task ---
 
-**Test:** Run your program and you should see lots of grey circles in random places at the bottom of the rocket.
+**Test:** Esegui il codice per verificare che il razzo abbia una nuova scia di scarico.
 
 --- /task ---
 
