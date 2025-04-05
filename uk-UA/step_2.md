@@ -77,7 +77,12 @@ background(0,0,0) image(planet, screen_size/2, screen_size, 300, 300)
 
 --- task ---
 
-**Test:** Run your code and check that it draws a black background with half a planet at the bottom.
+def setup():   
+#Налаштувати анімацію можна тут   
+size(screen_size, screen_size)   
+image_mode(CENTER)   
+global planet   
+planet = load_image('planet.png') #Твоя обрана планета
 
 ![A planet against a black background.](images/step_2.png){:width="300px"}
 
@@ -87,7 +92,7 @@ background(0,0,0) image(planet, screen_size/2, screen_size, 300, 300)
 
 --- task ---
 
-Click on the image icon to the left to view the image gallery.
+Визнач функцію `draw_background()`, щоб намалювати фон, внизу коментаря, який підказує, куди його треба поставити.
 
 ![Choose a different planet](images/image_gallery.png)
 
