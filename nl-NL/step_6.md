@@ -1,24 +1,24 @@
 --- challenge ---
 
-## Challenge
+## Uitdaging
 
-You could:
+Je kunt:
 
 --- task ---
 
-Give your smoke circles a range of different colours.
+Je rookcirkels verschillende kleuren geven.
 
 --- /task ---
 
 --- task ---
 
-Make your rocket move faster or slower.
+Je raket sneller of langzamer laten bewegen.
 
 --- /task ---
 
 --- task ---
 
-Add to your animation so that the rocket reappears and lands on a different planet.
+Iets toevoegen aan je animatie, zodat de raket opnieuw verschijnt en op een andere planeet landt.
 
 --- /task ---
 
