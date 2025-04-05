@@ -2,9 +2,9 @@ La funzione draw_background va qui
 
 Cose da fare in ogni fotogramma
 
-Set up your animation here
+Imposta la tua animazione qui
 
-Set up global variables
+Imposta le variabili globali
 
 La funzione draw_rocket va qui
 
