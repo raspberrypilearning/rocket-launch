@@ -1,8 +1,8 @@
 <div class="c-survey-banner" style="width:100%">
-  <a class="c-survey-banner__link" href="https://form.raspberrypi.org/f/code-editor-feedback" target="_blank">Take our survey</a> to help make our Code Editor better!
+  <a class="c-survey-banner__link" href="https://form.raspberrypi.org/f/code-editor-feedback" target="_blank">Візьми участь в опитуванні</a>, щоб покращити наш редактор коду Code Editor!
 </div>
 
-Make an animation to launch a rocket into orbit.
+Зроби анімацію, на якій ракета летить на орбіту.
 
 
 
