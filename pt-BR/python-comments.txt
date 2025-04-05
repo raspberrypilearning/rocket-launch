@@ -2,9 +2,9 @@ A função desenhar_plano_de_fundo vai aqui
 
 O que fazer em cada quadro
 
-Set up your animation here
+Configure sua animação aqui
 
-Set up global variables
+Configurar variáveis globais
 
 A função desenhar_foguete vai aqui
 
