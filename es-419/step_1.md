@@ -2,8 +2,6 @@
   <a class="c-survey-banner__link" href="https://form.raspberrypi.org/f/code-editor-feedback" target="_blank">¡Responde a nuestra encuesta</a> para ayudar a mejorar nuestro Editor de código!
 </div>
 
-## Lo que harás
-
 Haz una animación para lanzar un cohete a la órbita.
 
 
