@@ -10,7 +10,7 @@ First, you will create a black background to represent space.
 
 --- task ---
 
-Define a `draw_background()` function, and set the background colour to black.
+حدد دالة `draw_background()` ، لرسم الخلفية ، أسفل التعليق الذي يخبرك إلى أين يجب أن تذهب.
 
 --- code ---
 ---
@@ -47,7 +47,7 @@ draw_background()
 
 --- task ---
 
-**Test:** Run your code and you should see a black square.
+إذا كان لديك حساب Trinket ، فيمكنك النقر فوق الزر **Remix** لحفظ نسخة في مكتبة `My Trinkets`.
 
 --- /task ---
 
