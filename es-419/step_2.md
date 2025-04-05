@@ -10,7 +10,7 @@ Primero, crearás un fondo negro para representar el espacio.
 
 --- task ---
 
-Define a `draw_background()` function, and set the background colour to black.
+Define una función `dibujar_fondo()` y establece el color de fondo en negro.
 
 --- code ---
 ---
@@ -60,7 +60,7 @@ language: python line_numbers: true line_number_start: 13
 line_highlights: 15-16
 ---
 def draw_background():  
-background(0,0,0) image(planet, screen_size/2, screen_size, 300, 300)
+background(0,0,0) image(planeta, tamano_pantalla/2, tamano_pantalla, 300, 300)
 
 --- /code ---
 
@@ -98,7 +98,7 @@ Si quieres cambiar la imagen del planeta, cambia `planet.png` en el código por 
 language: python line_numbers: true line_number_start: 17
 line_highlights: 22
 ---
-def setup(): # Set up your animation here size(screen_size, screen_size) image_mode(CENTER) global planet planet = load_image('planet.png')
+def setup(): #Configura tu animación aquí tamano(tamano_pantalla, tamano_pantalla) image_mode(CENTER) global planeta planeta = load_image('planet.png') #Tu planeta elegido
 
 --- /code ---
 
