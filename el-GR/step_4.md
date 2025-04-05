@@ -13,7 +13,7 @@ Add some grey circles to simulate the exhaust trail.
 
 --- task ---
 
-Set the fill colour for the smoke to transparent grey.
+Σχεδιάζοντας πολλές κίτρινες ελλείψεις σε διαφορετικές θέσεις `y` δημιουργείται ένα ίχνος εξάτμισης με στρογγυλό το κάτω μέρος.
 
 --- code ---
 ---
@@ -65,13 +65,15 @@ no_stroke() circle_size = randint(5,10) ellipse( screen_size/2, rocket_position,
 
 --- task ---
 
-Η μεταβλητή `i` μπορεί επίσης να χρησιμοποιηθεί για τη δημιουργία μιας χρωματικής διαβάθμισης με λιγότερο πράσινο σε κάθε έλλειψη που σχεδιάζεται.
+Άλλαξε την κλήση σε `fill()` για να ορίσεις την ποσότητα του πράσινου σε `255 - i*10` έτσι ώστε η πρώτη έλλειψη να έχει ίσες ποσότητες κόκκινου και πράσινου και η τελευταία έλλειψη να έχει πολύ λίγο πράσινο.
 
 --- /task ---
 
 --- task ---
 
-Indent the code you used to draw the circle, and add a loop which will run the code 20 times.
+for i in range(25):   
+fill(255, 255 - i * 10, 0) #Μείωση της ποσότητας του πράσινου    
+ellipse(width/2, rocket_y + i, 8, 3)
 
 --- code ---
 ---
@@ -97,7 +99,7 @@ circle_size )
 
 --- task ---
 
-Generate a random number and add it to the x and y position of each circle so they aren't all drawn in the same place.
+Σε κάθε καρέ του κινούμενου σχεδίου, θα σχεδιαστούν 20 ελλείψεις τυχαίων μεγεθών σε τυχαίες θέσεις.
 
 
 --- code ---
