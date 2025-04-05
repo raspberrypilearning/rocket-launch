@@ -4,9 +4,9 @@ Dingen om te doen in elk frame
 
 Stel hier je animatie in
 
-Set up global variables
+Globale variabelen instellen
 
-De teken_raket functie komt hier
+De functie teken_raket komt hier
 
 Groen
 
