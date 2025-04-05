@@ -6,7 +6,7 @@ El proyecto de inicio tiene una imagen de cohete provista para tí.
 
 --- task ---
 
-Add code to the `setup()` function to load the rocket image into a `rocket` global variable.
+Agrega código a la función `setup()` para cargar la imagen del cohete en una variable global `cohete`.
 
 <div class="c-project-code">
 
@@ -107,10 +107,10 @@ language: python line_numbers: true line_number_start: 10
 line_highlights: 12
 ---
 
-def draw_rocket():   
-global rocket_position     
-rocket_position = rocket_position - 1    
-image(rocket, width/2, rocket_position, 64, 64)
+def dibujar_cohete():   
+posicion_cohete global     
+posicion_cohete = posicion_cohete - 1    
+image(cohete, ancho/2, posicion_cohete, 64, 64)
 
 --- /code ---
 
