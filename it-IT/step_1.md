@@ -2,8 +2,6 @@
   <a class="c-survey-banner__link" href="https://form.raspberrypi.org/f/code-editor-feedback" target="_blank">Partecipa al nostro sondaggio</a> per contribuire a migliorare il nostro editor di codice!
 </div>
 
-## Quello che farai
-
 Realizza un'animazione nella quale mandi un satellite in orbita, facendo trasportare da un razzo!
 
 
