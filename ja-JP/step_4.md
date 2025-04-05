@@ -30,7 +30,7 @@ def draw_rocket():
 
 --- task ---
 
-The outline around the circles is called the **stroke**. Add some code to turn it off.
+**テスト：** 楕円でできた軌跡が黄色から赤に徐々に変化することを確認します。 Add some code to turn it off.
 
 
 --- /task ---
@@ -118,7 +118,7 @@ ellipse(width/2, rocket_y + i, 8, 3)
 
 --- task ---
 
-**Test:** Run your program and you should see lots of grey circles in random places at the bottom of the rocket.
+**テスト：** コードを実行して、ロケットに新しい排気ガスの軌跡があることを確認します。
 
 --- /task ---
 
