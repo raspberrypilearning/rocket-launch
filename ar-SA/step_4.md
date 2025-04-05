@@ -118,7 +118,7 @@ ellipse(width/2 + randint(-5, 5), rocket_y + randint(20, 50), randint(5, 10), ra
 
 --- task ---
 
-**Test:** Run your program and you should see lots of grey circles in random places at the bottom of the rocket.
+**الاختبار:** لنقم بتشغيل الشفرة البرمجية للتحقق من أن الصاروخ يحتوي على مسار عادم جديد.
 
 --- /task ---
 
