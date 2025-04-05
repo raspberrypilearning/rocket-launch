@@ -10,7 +10,7 @@ First, you will create a black background to represent space.
 
 --- task ---
 
-Define a `draw_background()` function, and set the background colour to black.
+Defina uma função `desenhar_plano_de_fundo()`, para desenhar o plano de fundo, abaixo do comentário que informa para onde deve ir.
 
 --- code ---
 ---
@@ -47,7 +47,7 @@ desenhar_plano_de_fundo()
 
 --- task ---
 
-**Test:** Run your code and you should see a black square.
+Se você possui uma conta Raspberry Pi, em seu editor de código, você pode clicar no botão **Salvar** para salvar uma cópia do seu projeto em seus Projetos.
 
 --- /task ---
 
