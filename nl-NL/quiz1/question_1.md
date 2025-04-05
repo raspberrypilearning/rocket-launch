@@ -8,7 +8,7 @@ Veel plezier!
 
 --- question ---
 ---
-legend: Vraag 1 van 3
+legenda: Vraag 1 van 3
 ---
 
 Welke uitvoer zou je verwachten als je het onderstaande programma zou draaien?
@@ -48,7 +48,7 @@ Juist. De lus loopt één keer, in volgorde, voor elk item `i` in het bereik [0,
 
   --- feedback ---
 
-Not quite. Unless you have specified otherwise, a `for` loop will start at 0 and count up the number of times specified in the range.
+Niet helemaal. Tenzij je anders hebt opgegeven, begint een `for` -lus bij 0 en telt deze het aantal keren op dat is opgegeven in het bereik.
 
   --- /feedback ---
 
