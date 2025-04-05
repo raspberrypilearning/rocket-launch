@@ -6,7 +6,7 @@ O projeto inicial tem uma imagem de foguete fornecida para você.
 
 --- task ---
 
-Add code to the `setup()` function to load the rocket image into a `rocket` global variable.
+Adicione código à função `configuração()` para carregar a imagem do foguete em uma variável global `foguete`.
 
 <div class="c-project-code">
 
