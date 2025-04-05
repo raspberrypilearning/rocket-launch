@@ -6,7 +6,7 @@ Ewch ati i greu dau newidyn cyffredinol newydd i osod radiws y cylch orbit a chy
 
 --- task ---
 
-Give your smoke circles a range of different colours.
+language: python filename: main.py line_numbers: true line_number_start: 7
 
 --- /task ---
 
@@ -18,7 +18,7 @@ Make your rocket move faster or slower.
 
 --- task ---
 
-Add to your animation so that the rocket reappears and lands on a different planet.
+--- code ---
 
 --- /task ---
 
