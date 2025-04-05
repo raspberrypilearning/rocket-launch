@@ -13,7 +13,7 @@ Add some grey circles to simulate the exhaust trail.
 
 --- task ---
 
-Set the fill colour for the smoke to transparent grey.
+Намалювавши багато жовтих овалів у різних позиціях `y`, можна створити вихлопний слід із заокругленим кінцем.
 
 --- code ---
 ---
@@ -65,13 +65,15 @@ no_stroke() circle_size = randint(5,10) ellipse( screen_size/2, rocket_position,
 
 --- task ---
 
-Змінна `i` може також використовуватися для створення кольорового градієнта з меншою кількістю зеленого кольору в кожному наступному овалі, який буде малюватися.
+Зміни виклик функції `fill()`, встановивши кількість зеленого кольору на `255 - i*10` так, щоб у першому колі було однакова кількість червоного та зеленого кольорів, а в останньому - дуже мало зеленого.
 
 --- /task ---
 
 --- task ---
 
-Indent the code you used to draw the circle, and add a loop which will run the code 20 times.
+for i in range(25):   
+fill(255, 255 - i * 10, 0) #Зменшити кількість зеленого кольору    
+ellipse(width/2, rocket_y + i, 8, 3)
 
 --- code ---
 ---
@@ -97,7 +99,7 @@ circle_size )
 
 --- task ---
 
-Generate a random number and add it to the x and y position of each circle so they aren't all drawn in the same place.
+На кожному кадрі анімації буде намальовано 20 овалів випадкових розмірів на випадкових позиціях.
 
 
 --- code ---
