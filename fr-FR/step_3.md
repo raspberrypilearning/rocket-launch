@@ -30,7 +30,7 @@ fusee = load_image( 'rocket.png')
 
 --- task ---
 
-Ajoute une variable globale `fusee_y` pour suivre la position `y` de la fusée.
+Ajoute une variable globale `position_fusee` pour suivre la position `y` de la fusée.
 
 --- code ---
 ---
