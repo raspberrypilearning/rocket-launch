@@ -1,24 +1,24 @@
-## Створення фону
+## Намалюй фон
 
 --- task ---
 
-Відкрий [шаблон проєкту](https://trinket.io/python/77c37dd931){:target="_blank"}.
+Відкрий [початковий проєкт](https://editor.raspberrypi.org/en/projects/rocket-launch-starter){:target="_blank"}.
 
 --- /task ---
 
-First, you will create a black background to represent space.
+Спочатку ти створиш чорне тло, — це буде космос.
 
 --- task ---
 
-Define a `draw_background()` function, and set the background colour to black.
+Визнач функцію `draw_background()` і встанови чорний колір для тла.
 
 --- code ---
 ---
-Знайди коментар `Налаштування глобальних змінних` та додай рядок коду для створення змінної `screen_size`:
-line_highlights: 8
+language: python line_numbers: true line_number_start: 12
+line_highlights: 13-14
 ---
 
-# Налаштування глобальних змінних
+# Тут буде функція draw_background
 def draw_background():   
 background(0, 0, 0)
 
@@ -28,15 +28,15 @@ background(0, 0, 0)
 
 --- task ---
 
-Add this function to the list of things to `draw()` in every frame.
+Додай цю функцію до списку дій, які будуть виконуватися у кожному кадрі (у функції `draw()`).
 
 --- code ---
 ---
-Використовуй змінну `screen_size`, щоб створити квадрат розміром 400 на 400 пікселів:
-line_highlights: 20
+language: python line_numbers: true line_number_start: 25
+line_highlights: 27
 ---
 
-def draw(): # Things to do in every frame draw_background()
+def draw(): # Що відбувається на кожному кадрі draw_background()
 
 --- /code ---
 
@@ -44,7 +44,7 @@ def draw(): # Things to do in every frame draw_background()
 
 --- task ---
 
-**Test:** Run your code and you should see a black square.
+**Протестуй:** запусти код. Ти маєш побачити чорний квадрат.
 
 --- /task ---
 
@@ -52,12 +52,12 @@ def draw(): # Things to do in every frame draw_background()
 
 --- task ---
 
-Add a line of code to display an image of a planet.
+Додай рядок коду, який виводитиме зображення планети.
 
 --- code ---
 ---
 language: python line_numbers: true line_number_start: 13
-line_highlights: 21-23
+line_highlights: 15-16
 ---
 def draw_background():  
 background(0,0,0) image(planet, screen_size/2, screen_size, 300, 300)
