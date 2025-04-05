@@ -15,7 +15,7 @@ Fe allwch chi greu effeithiau cŵl drwy ddefnyddio dolen `for` i lunio nifer o s
 
 --- task ---
 
-Set the fill colour for the smoke to transparent grey.
+Mae llunio nifer o elipsau melyn mewn gwahanol safleoedd `y` yn creu ôl ecsôst gyda gwaelod crwn.
 
 --- code ---
 ---
@@ -67,13 +67,15 @@ no_stroke() circle_size = randint(5,10) ellipse( screen_size/2, rocket_position,
 
 --- task ---
 
-Mae modd defnyddio'r newidyn `i` hefyd i greu graddiant lliw gyda llai o wyrdd ym mhob elips sy'n cael ei lunio.
+Newidiwch yr alwad i `fill()` i osod lefel y gwyrdd ar `255 - i*10` fel bod gan yr elips cyntaf yr un faint o goch a gwyrdd, a'r elips olaf ychydig iawn o wyrdd.
 
 --- /task ---
 
 --- task ---
 
-Indent the code you used to draw the circle, and add a loop which will run the code 20 times.
+for i in range(25):   
+fill(255, 255 - i * 10, 0) #Lleihau lefel y gwyrdd    
+ellipse(width/2, roced_y + i, 8, 3)
 
 --- code ---
 ---
@@ -99,7 +101,7 @@ circle_size )
 
 --- task ---
 
-Generate a random number and add it to the x and y position of each circle so they aren't all drawn in the same place.
+Ym mhob ffrâm yn yr animeiddiad, bydd 20 elips o feintiau ar hap yn cael eu llunio mewn safleoedd ar hap.
 
 
 --- code ---
