@@ -6,7 +6,7 @@
 
 --- task ---
 
-Add code to the `setup()` function to load the rocket image into a `rocket` global variable.
+`setup()` 関数にコードを追加して、ロケットの画像を `rocket` グローバル変数にロードします。
 
 <div class="c-project-code">
 
@@ -69,7 +69,7 @@ line_highlights: 12-16
 
 --- task ---
 
-`draw()` 関数で新しい `draw_rocket()` を呼び出して、ロケットがフレームごとに再描画されるようにします。
+`draw_rocket()` 関数を定義して、ロケットの `y`座標置を変更して再描画させます。
 
 --- code ---
 ---
