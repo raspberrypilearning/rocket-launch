@@ -94,7 +94,7 @@ Clique sur l'icône d'image à gauche pour voir la galerie d'images.
 
 ![Choisir une autre planète](images/image_gallery.png)
 
-Par exemple, `orange_planet.png`.
+Si tu souhaites modifier l'image de la planète, remplace `planet.png` dans le code par le nom de fichier de la planète choisie, par exemple, `orange_planet.png`.
 
 --- code ---
 ---
