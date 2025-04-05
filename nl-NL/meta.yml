@@ -7,7 +7,7 @@ meta_description: Leer Python met de codeerprojecten van de Raspberry Pi Foundat
 version: 0.0.1
 listed: true
 copyedit: true
-last_tested: "2021-10-06"
+last_tested: "2024-10-21"
 steps:
   - 
     title: Wat ga je maken
@@ -22,7 +22,7 @@ steps:
     completion:
       - internal
   - 
-    title: Brandstof verbruik
+    title: Snelle quiz
     knowledge_quiz:
       path: quiz1
       version: 1
@@ -31,7 +31,7 @@ steps:
     completion:
       - external
   - 
-    title: Omloopbaan bereiken
+    title: Uitdaging
     challenge: true
   - 
-    title: Snelle quiz
+    title: Wat kun je verder nog doen?
