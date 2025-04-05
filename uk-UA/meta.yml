@@ -1,18 +1,18 @@
 ---
-title: Запуск ракети
+title: Ракета летить у космос
 hero_image: images/banner.png
 description: Створи анімацію польоту ракети, яка виводить супутник на орбіту
 meta_title: Проєкти з кодування для дітей і підлітків | Ракета летить у космос
-meta_description: Learn Python with the Raspberry Pi Foundation's coding projects for kids and teens. Make a Python animation that shows a rocket launching a satellite into orbit.
+meta_description: Вивчай Python за допомогою проєктів з програмування Raspberry Pi Foundation для дітей і підлітків. Зроби анімацію, на якій ракета виводить супутник на орбіту.
 version: 0.0.1
 listed: true
 copyedit: true
-last_tested: "2021-10-06"
+last_tested: "2024-10-21"
 steps:
   - 
-    title: Ти зробиш
+    title: Що ти зробиш
   - 
-    title: Створення фону
+    title: Намалюй фон
     completion:
       - engaged
   - 
@@ -22,7 +22,7 @@ steps:
     completion:
       - internal
   - 
-    title: Спалювання палива
+    title: Швидкий тест
     knowledge_quiz:
       path: quiz1
       version: 1
@@ -31,7 +31,7 @@ steps:
     completion:
       - external
   - 
-    title: Вихід на орбіту
+    title: Додаткове завдання
     challenge: true
   - 
-    title: Швидкий тест
+    title: Що робити далі?
