@@ -6,7 +6,7 @@ Het startproject heeft een raketafbeelding voor je.
 
 --- task ---
 
-Add code to the `setup()` function to load the rocket image into a `rocket` global variable.
+Voeg code toe aan de `setup()` functie om de raketafbeelding in een `raket` global variabele te laden.
 
 <div class="c-project-code">
 
@@ -51,7 +51,7 @@ De `y` positie van de raket begint bij 400 (de schermhoogte) en neemt vervolgens
 
 --- task ---
 
-Definieer een `teken_raket()` functie om de `y` positie van de raket te wijzigen en deze opnieuw te tekenen.
+Definieer een `teken_raket()` functie om de raket op het scherm te laten verschijnen.
 
 --- code ---
 ---
@@ -71,7 +71,7 @@ image(rocket, width/2, rocket_position, 64, 64)
 
 --- task ---
 
-Neem je nieuwe `teken_raket()` op in de `draw()` functie zodat de raket elk frame opnieuw wordt getekend.
+Roep de functie `teken_raket()` aan.
 
 --- code ---
 ---
@@ -88,7 +88,7 @@ def draw(): # Things to do in every frame draw_background() draw_rocket()
 
 --- task ---
 
-`raket_y -= 1` is een kortere manier om te zeggen `raket_y = raket_y - 1`.
+**Test:** Voer je code uit en controleer of de raket onderaan de afbeelding verschijnt.
 
 --- /task ---
 
@@ -98,7 +98,7 @@ Elke keer dat er een nieuw frame wordt getekend, moet de raket omhoog bewegen op
 
 --- task ---
 
-Afbeelding van de raket halverwege het scherm.
+De `raket_positie` van de raket begint bij 400 (de schermhoogte) en neemt vervolgens met 1 af telkens wanneer een nieuw frame wordt getekend.
 
 
 --- code ---
@@ -122,7 +122,7 @@ image(rocket, width/2, rocket_position, 64, 64)
 **Test:** Voer je code uit om te controleren of de raket onderaan het scherm begint en elk frame omhoog beweegt.
 
 
-![![Een raket die met een constante snelheid van de onderkant naar de bovenkant van het scherm vliegt.](images/fly.gif){:width="300px"}](images/fly.gif){:width="300px"}
+![Een raket vliegt met een constante snelheid van de onderkant naar de bovenkant van het scherm.](images/fly.gif){:width="300px"}
 
 --- /task ---
 
