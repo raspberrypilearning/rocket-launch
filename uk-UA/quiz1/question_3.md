@@ -29,7 +29,8 @@ image(rocket, width/2, height/2, 64, 64)
 
 - (x)
 
-![Зображення ракети жовтого кольору.](images/rocket_amber.png) <div style="text-align: center;">Жовтий
+![Зображення ракети жовтого кольору.](images/rocket_amber.png)
+<div style="text-align: center;">Жовтий
 
  --- feedback ---
 
@@ -39,7 +40,8 @@ image(rocket, width/2, height/2, 64, 64)
 
 - ( )
 
-![Зображення ракети без кольору](images/rocket_original.png) <div style="text-align: center;">Ніякий
+![Зображення ракети без кольору](images/rocket_original.png)
+<div style="text-align: center;">Ніякий
 
  --- feedback ---
 
@@ -49,7 +51,8 @@ image(rocket, width/2, height/2, 64, 64)
 
 - ( )
 
-![Зображення ракети зеленого кольору](images/rocket_green.png) <div style="text-align: center;">Зелений
+![Зображення ракети зеленого кольору](images/rocket_green.png)
+<div style="text-align: center;">Зелений
 
  --- feedback ---
 
@@ -59,7 +62,8 @@ image(rocket, width/2, height/2, 64, 64)
 
 - ( )
 
-![Зображення ракети червоного кольору](images/rocket_red.png) <div style="text-align: center;">Червоний
+![Зображення ракети червоного кольору](images/rocket_red.png)
+<div style="text-align: center;">Червоний
 
  --- feedback ---
 
