@@ -12,7 +12,7 @@ Give your smoke circles a range of different colours.
 
 --- task ---
 
-Make your rocket move faster or slower.
+Lance o foguete para a órbita
 
 --- /task ---
 
