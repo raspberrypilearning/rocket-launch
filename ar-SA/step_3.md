@@ -6,7 +6,7 @@
 
 --- task ---
 
-Add code to the `setup()` function to load the rocket image into a `rocket` global variable.
+أضف الشفرة البرمجية إلى الدالة `setup()` لتحميل صورة الصاروخ التي اخترناها في متغير عام `rocket`.
 
 <div class="c-project-code">
 
