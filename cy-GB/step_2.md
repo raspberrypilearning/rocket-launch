@@ -52,7 +52,7 @@ def draw(): # Things to do in every frame draw_background()
 
 --- task ---
 
-Mae gan y prosiect dechreuol dair delwedd wahanol o blaned a'r lleuad wedi'u llunio'n barod i chi. Fe allwch chi weld y rhain yn llyfrgell ddelweddau Trinket drwy ddewis y botwm **View and Add Images**.
+**Dewiswch:** Penderfynwch pa ddelwedd rydych chi am ei defnyddio a gwneud nodyn o enw'r ffeil. Er enghraifft, `orange_planet.png`.
 
 --- code ---
 ---
@@ -65,7 +65,7 @@ background(0,0,0) image(planet, screen_size/2, screen_size, 300, 300)
 --- /code ---
 
 
-Mae'n syniad da llwytho delweddau yn `setup()` fel eu bod yn barod pan fyddwch chi angen eu defnyddio a bydd eich animeiddiad yn rhedeg yn gyflym.
+Hefyd, ychwanegwch god at y swyddogaeth `setup()` i lwytho'r ddelwedd o'ch dewis i newidyn cyffredinol `planed`. Rhaid i'r newidyn fod yn un cyffredinol er mwyn i chi allu ei ddefnyddio nes ymlaen wrth lunio'r blaned ar y sgrin.
 
 - image filename - we have already loaded the planet image
 - x coordinate - we have already set the screen size
@@ -77,7 +77,12 @@ Mae'n syniad da llwytho delweddau yn `setup()` fel eu bod yn barod pan fyddwch c
 
 --- task ---
 
-Hefyd, ychwanegwch god at y swyddogaeth `setup()` i lwytho'r ddelwedd o'ch dewis i newidyn cyffredinol `planed`. Rhaid i'r newidyn fod yn un cyffredinol er mwyn i chi allu ei ddefnyddio nes ymlaen wrth lunio'r blaned ar y sgrin.
+def setup():   
+#Gosodwch eich animeiddiad yma   
+size(screen_size, screen_size)   
+image_mode(CENTER)   
+global planed   
+planed = load_image('planet.png') #Y blaned o'ch dewis
 
 ![A planet against a black background.](images/step_2.png){:width="300px"}
 
@@ -87,7 +92,7 @@ Hefyd, ychwanegwch god at y swyddogaeth `setup()` i lwytho'r ddelwedd o'ch dewis
 
 --- task ---
 
-Click on the image icon to the left to view the image gallery.
+Diffiniwch swyddogaeth `llunio_cefndir()` i lunio'r cefndir o dan y sylw sy'n dweud wrthych chi ble dylai fynd.
 
 ![Choose a different planet](images/image_gallery.png)
 
