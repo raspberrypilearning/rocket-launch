@@ -117,7 +117,7 @@ ellipse(width/2 + randint(-5, 5), foguete_y + randint(20, 50), randint(5, 10), r
 
 --- task ---
 
-**Test:** Run your program and you should see lots of grey circles in random places at the bottom of the rocket.
+**Teste:** Execute seu código para verificar que o foguete tem um novo rastro de combustão.
 
 --- /task ---
 
