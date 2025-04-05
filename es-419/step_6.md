@@ -6,19 +6,19 @@ Tú podrías:
 
 --- task ---
 
-Give your smoke circles a range of different colours.
+Dale a tus círculos de humo una gama de colores diferentes.
 
 --- /task ---
 
 --- task ---
 
-Make your rocket move faster or slower.
+Haz que tu cohete se mueva más rápido o más lento.
 
 --- /task ---
 
 --- task ---
 
-Add to your animation so that the rocket reappears and lands on a different planet.
+Añade a tu animación para que el cohete reaparezca y aterrice en un planeta diferente.
 
 --- /task ---
 
