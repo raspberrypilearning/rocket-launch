@@ -6,11 +6,11 @@ dimensione_dello_schermo
 
 razzo
 
-rocket_position
+rocket_y
 
 disegna_razzo
 
-circle_size
+raggio_orbita
 
 punti
 
