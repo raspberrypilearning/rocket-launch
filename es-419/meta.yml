@@ -20,7 +20,7 @@ steps:
   - 
     title: Efectos de escape
     completion:
-      - internal
+      - interno
   - 
     title: Examen rápido
     knowledge_quiz:
