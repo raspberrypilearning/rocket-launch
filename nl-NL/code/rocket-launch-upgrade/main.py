@@ -63,7 +63,7 @@ def teken_achtergrond():
     ellipse(width/2, height, omloopbaan_straal*2, omloopbaan_straal*2)
 
     # Teken de hogere baan
-    stroke(0, 100, 200) # Stel een blauwachtige streek in
+    stroke(0, 100, 200) # Stel een blauwachtige lijn in
     stroke_weight(2)
     ellipse(width/2, height, hoge_omloopbaan_straal*2, hoge_omloopbaan_straal*2)
 
