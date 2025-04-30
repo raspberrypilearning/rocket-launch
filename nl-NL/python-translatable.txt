@@ -1,24 +1,17 @@
-scherm_grootte
+teken_achtergrond
 
 planeet
 
-teken_achtergrond
+scherm_grootte
 
 raket
 
-raket_y
+raket_positie
 
 teken_raket
 
-verbruik
-
-brandstof
-
-omloopbaan_straal
-
-omloopbaan_y
+cirkel_grootte
 
 punten
 
 levens
-

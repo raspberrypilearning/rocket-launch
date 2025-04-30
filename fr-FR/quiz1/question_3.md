@@ -29,7 +29,8 @@ Si la variable `points` a la valeur `99` et la variable `vies` a la valeur `1`, 
 
 - (x)
 
-![Une image de fusée avec une teinte orange.](images/rocket_amber.png) <div style="text-align: center;">Orange
+![Une image de fusée avec une teinte orange.](images/rocket_amber.png)
+<div style="text-align: center;">Orange
 
  --- feedback ---
 
@@ -39,7 +40,8 @@ Si la variable `points` a la valeur `99` et la variable `vies` a la valeur `1`, 
 
 - ( )
 
-![Une image de fusée sans teinte](images/rocket_original.png) <div style="text-align: center;">Pas de teinte
+![Une image de fusée sans teinte](images/rocket_original.png)
+<div style="text-align: center;">Pas de teinte
 
  --- feedback ---
 
@@ -49,7 +51,8 @@ Si la variable `points` a la valeur `99` et la variable `vies` a la valeur `1`, 
 
 - ( )
 
-![Une image de fusée avec une teinte verte](images/rocket_green.png) <div style="text-align: center;">Vert
+![Une image de fusée avec une teinte verte](images/rocket_green.png)
+<div style="text-align: center;">Vert
 
  --- feedback ---
 
@@ -59,7 +62,8 @@ Si la variable `points` a la valeur `99` et la variable `vies` a la valeur `1`, 
 
 - ( )
 
-![Une image de fusée avec une teinte rouge](images/rocket_red.png) <div style="text-align: center;">Rouge
+![Une image de fusée avec une teinte rouge](images/rocket_red.png)
+<div style="text-align: center;">Rouge
 
  --- feedback ---
 

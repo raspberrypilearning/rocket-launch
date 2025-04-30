@@ -1,82 +1,12 @@
-Importer le code de la bibliothèque
+La fonction dessine_arriere_plan vient ici
+
+Choses à faire dans chaque image
+
+Configure ton animation ici
 
 Configurer les variables globales
 
 La fonction dessine_fusee vient ici
-
-La fonction dessine_arriere_plan vient ici
-
-Configure ton animation ici
-
-Choses à faire dans chaque image
-
-Définitions pour la compatibilité avec la bibliothèque de traitement p5py
-
-Forme
-
-Polices
-
-Texte
-
-Couleur
-
-Images
-
-Environnement
-
-Transformer
-
-Clavier
-
-Ta planète choisie
-
-Raccourci pour background(0, 0, 0) - noir
-
-Dessine l'image
-
-Commencer en bas
-
-Utiliser la variable globale fusee_y
-
-Déplace la fusée
-
-Désactive le trait
-
-Dessiner 25 ellipses d'échappement brûlant
-
-Jaune
-
-i augmente à chaque fois que la boucle se répète
-
-Réduire la quantité de vert
-
-Gris transparent
-
-Dessiner 20 ellipses de fumée aléatoire
-
-Quelle est la quantité de carburant brûlée dans chaque image
-
-Brûler du carburant
-
-Encore assez de carburant
-
-Désactive tout remplissage
-
-Définir un trait blanc
-
-Toujours en vol
-
-Plus de carburant et pas en orbite
-
-Échec
-
-Donc la planète n'est pas teintée de rouge dans l'image suivante !
-
-Succès
-
-Trop de carburant
-
-Donc la planète n'est pas teintée dans l'image suivante !
 
 Vert
 

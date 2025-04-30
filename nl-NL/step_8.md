@@ -7,8 +7,7 @@ Je project is voltooid, maar je kunt het nog beter maken als je dat wilt. Hier z
 Hier is een versie van het project met al die upgrades, zodat je kunt zien hoe ze zouden kunnen werken. Klik op Run om de raket te lanceren:
 
 <iframe src="https://editor.raspberrypi.org/nl-NL/embed/viewer/rocket-launch-upgrade" width="600" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen>
-</iframe>
-Je kunt het [voltooide upgradeproject hier](https://editor.raspberrypi.org/nl-NL/projects/rocket-launch-upgrade){:target="_blank"} bekijken.
+</iframe> Je kunt het [voltooide upgradeproject hier](https://editor.raspberrypi.org/nl-NL/projects/rocket-launch-upgrade){:target="_blank" bekijken}.
 
 --- collapse ---
 ---

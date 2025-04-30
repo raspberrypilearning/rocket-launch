@@ -15,7 +15,7 @@ def setup():
   size(400, 400)   
   image_mode(CENTER)   
   global planete   
-  planete = load_image('planet.png')
+  planete = load_image('planet.png')   
 
 --- /code ---
 
@@ -52,7 +52,7 @@ Les deuxième et troisième entrées de la fonction `image()` sont les coordonn�
 
   --- /feedback ---
 
-- (x) 
+- (x)
 ![Une image de la planète positionnée au milieu du quadrant supérieur droit.](images/planet300100.png)
 
   --- feedback ---

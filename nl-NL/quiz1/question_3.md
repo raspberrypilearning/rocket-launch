@@ -12,9 +12,9 @@ language: python
 
 if punten >= 100:    
     tint(0, 255, 0) #Groen   
-elif punten < 100 and levens == 1:   
+elif punten < 100 en levens == 1:   
     tint(255, 200, 0) #Amber    
-elif punten < 100 and levens == 0:     
+elif punten < 100 en levens == 0:     
     tint(255, 0, 0) #Rood     
 else:      
     no_tint()
