@@ -1,7 +1,7 @@
 
 --- question ---
 ---
-legenda: Vraag 2 van 3
+legend: Vraag 2 van 3
 ---
 
 Een project heeft deze `setup` code om een planeetafbeelding te laden en te zeggen dat afbeeldingen in hun midden moeten worden geplaatst:
