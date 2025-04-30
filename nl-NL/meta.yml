@@ -7,16 +7,14 @@ meta_description: Leer Python met de codeerprojecten van de Raspberry Pi Foundat
 version: 0.0.1
 listed: true
 copyedit: true
-last_tested: "2021-10-06"
+last_tested: "2024-10-21"
 steps:
   - title: Wat ga je maken
-  - title: Het opzetten van de scene
-  - title: Lancering!
+  - title: Teken achtergrond
     completion:
       - engaged
+  - title: Lancering!
   - title: Uitlaat effecten
-  - title: Brandstof verbruik
-  - title: Omloopbaan bereiken
     completion:
       - internal
   - title: Snelle quiz
@@ -27,5 +25,6 @@ steps:
       passing_score: 3
     completion:
       - external
-  - title: Verbeter je project
+  - title: Uitdaging
+    challenge: true
   - title: Wat kun je verder nog doen?

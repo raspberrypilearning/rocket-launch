@@ -1,32 +1,16 @@
-taille_ecran
-
-fusee_y
-
-brule
-
-rayon_orbite
-
-orbite_y
-
-dessine_fusee
-
-carburant
-
-Carburant restant :
-
-fusee
-
 dessine_arriere_plan
 
 planete
 
-Combien de kilos de carburant veux-tu utiliser ?
+taille_ecran
 
-Combien de carburant la fusée doit-elle brûler à chaque image ?
+fusee
 
-Quelle distance la fusée doit-elle parcourir à chaque image ?
+position_fusee
 
-Looping
+dessine_fusee
+
+taille_cercle
 
 points
 

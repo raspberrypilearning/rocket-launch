@@ -15,20 +15,20 @@ Quel résultat t'attendrais-tu si tu exécutais le programme ci-dessous ?
 
 ```python
 for i in range(5):
-  print("Looping", i)
+  print(i)
 ```
 
 --- choices ---
 
-- ( ) Looping 1 <br> Looping 2 <br> Looping 3 <br> Looping 4 <br> Looping 5
+- ( )  1 <br> 2 <br> 3 <br> 4 <br> 5
 
   --- feedback ---
 
-Pas tout à fait, une boucle `for` en Python répète son code une fois pour chaque élément dans une séquence qui lui est donnée, et ici `range` crée une séquence à partir de `0`.
+Pas tout à fait, une boucle `for` en Python commence à partir de 0, sauf indication contraire.
 
   --- /feedback ---
 
-- ( ) Looping i
+- ( ) i <br> i <br> i <br> i <br> i
 
   --- feedback ---
 
@@ -36,7 +36,7 @@ Pas tout à fait, la **variable de boucle** d'une boucle `for` - dans ce cas `i`
 
   --- /feedback ---
 
-- (x) Looping 0 <br> Looping 1 <br> Looping 2 <br> Looping 3 <br> Looping 4
+- (x) 0 <br> 1 <br> 2 <br> 3 <br> 4
 
   --- feedback ---
 
@@ -44,11 +44,11 @@ Correct. La boucle s'exécute une fois, dans l'ordre, pour chaque élément `i` 
 
   --- /feedback ---
 
-- ( ) Looping 4 <br> Looping 3 <br> Looping 2 <br> Looping 1 <br> Looping 0
+- ( ) 4 <br>  3 <br> 2 <br> 1 <br> 0
 
   --- feedback ---
 
-Pas tout à fait, une boucle `for` parcourt la séquence d'éléments qui lui est donnée dans l'ordre. Parce que `range()` donne une séquence ordonnée de 0 au nombre qui lui est passé, c'est l'ordre que tu t'attends à voir imprimé par cette boucle `for`.
+Pas tout à fait. Sauf indication contraire, une boucle `for` commence à 0 et compte le nombre de fois spécifié dans l'intervalle.
 
   --- /feedback ---
 

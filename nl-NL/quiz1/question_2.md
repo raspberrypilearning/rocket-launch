@@ -15,11 +15,11 @@ def setup():
   size(400, 400)   
   image_mode(CENTER)   
   global planeet   
-  planeet = load_image('planet.png')
+  planeet = load_image('planet.png')   
 
 --- /code ---
 
-Coördinaten beginnen bij (0, 0) in de linkerbovenhoek. In het project heb je afbeeldingen van planeten en raketten getekend met de functie `image(image_file, x-coord, y-coord, x-width, y-width)`.
+Coördinaten beginnen bij (0, 0) in de linkerbovenhoek. In het project heb je afbeeldingen van planeten en raketten getekend met de functie `image(bestandsnaam afbeelding, x-coördinaat, y-coördinaat, afbeeldingsbreedte, afbeeldingshoogte)`.
 
 Waar zal deze code het planeetbeeld positioneren?
 
@@ -34,7 +34,8 @@ image(planeet, 300, 100, 128, 128)
 
 --- choices ---
 
-- ( ) ![Een planeetafbeelding horizontaal rechts van het scherm en verticaal in het midden.](images/planet400200.png)
+- ( )
+![Een planeetafbeelding horizontaal rechts van het scherm en verticaal in het midden.](images/planet400200.png)
 
   --- feedback ---
 
@@ -42,7 +43,8 @@ De tweede en derde invoer voor de functie `image()` zijn de `x` en `y` coördina
 
   --- /feedback ---
 
-- ( ) ![Een planeetafbeelding in het midden van het kwadrant linksonder.](images/planet100300.png)
+- ( )
+![Een planeetafbeelding in het midden van het kwadrant linksonder.](images/planet100300.png)
 
   --- feedback ---
 
@@ -50,7 +52,8 @@ De tweede en derde invoer voor de functie `image()` zijn de `x` en `y` coördina
 
   --- /feedback ---
 
-- (x) ![Een planeetafbeelding in het midden van het kwadrant rechtsboven.](images/planet300100.png)
+- (x)
+![Een planeetafbeelding in het midden van het kwadrant rechtsboven.](images/planet300100.png)
 
   --- feedback ---
 
@@ -58,7 +61,8 @@ Correct! De tweede en derde invoer voor de functie `image()` zijn de `x` en `y` 
 
   --- /feedback ---
 
-- () ![Een planeetafbeelding in het kwadrant linksboven.](images/planet128128.png)
+- ()
+![Een planeetafbeelding in het kwadrant linksboven.](images/planet128128.png)
 
   --- feedback ---
 

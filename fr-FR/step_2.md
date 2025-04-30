@@ -1,160 +1,86 @@
-## Créer la scène
-
-<div style="display: flex; flex-wrap: wrap">
-<div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">
-L'animation nécessite un arrière-plan spatiale avec une planète à partir de laquelle lancer la fusée.
-</div>
-<div>
-
-![Une planète sur fond noir.](images/step_2.png){:width="300px"}
-
-</div>
-</div>
+## Dessiner l'arrière-plan
 
 --- task ---
 
-Ouvre le [modèle de projet](https://editor.raspberrypi.org/fr-FR/projects/rocket-launch-starter){:target="_blank"}.
-
-### Créer l'écran
+Ouvre le [projet de démarrage](https://editor.raspberrypi.org/fr-FR/projects/rocket-launch-starter){:target="_blank"}.
 
 --- /task ---
 
-Tu utiliseras une variable `taille_ecran` pour définir la taille de l'écran et dans les calculs. Les variables définies en dehors des fonctions sont **globales**, tu peux donc les utiliser n'importe où dans ton programme.
+Tu vas d'abord créer un arrière-plan pour représenter l'espace.
 
 --- task ---
 
-Trouve le commentaire `Configurer les variables globales` et ajoute une ligne de code pour créer ta variable `taille_ecran` :
+Crée une fonction `dessine_arriere_plan()` et définis la couleur d'arrière-plan sur noir.
 
 --- code ---
 ---
 language: python
-filename: main.py
 line_numbers: true
-line_number_start: 7 
-line_highlights: 8
+line_number_start: 12 
+line_highlights: 13-14
 ---
 
-# Configurer les variables globales
-taille_ecran = 400
-
---- /code ---
-
---- /task ---
-
---- task ---
-
-Utilise la variable `taille_ecran` pour créer un carré de 400 par 400 pixels :
-
---- code ---
----
-language: python
-filename: main.py — setup()
-line_numbers: true
-line_number_start: 18
-line_highlights: 20
----
-
-def setup():   
-    # Configure ton animation ici   
-    size(taille_ecran, taille_ecran)
-
-
---- /code ---
-
---- /task ---
-
-### Choisir une image
-
---- task ---
-
-Le projet de démarrage a trois images de planètes différentes et la lune t'est fournie. Tu peux les afficher dans la **galerie d'images** à gauche de l'éditeur de code.
-
-![Une capture d'écran de l'éditeur de code, avec la galerie d'images mise en évidence contenant des images de planètes et de la lune.](images/image_gallery.png)
-
-**Choisir :** décide quelle image tu veux utiliser et note le nom du fichier. Par exemple, `orange_planet.png`.
-
---- /task ---
-
---- task ---
-
-Ajoute du code à la fonction `setup()` pour charger et positionner ton image.
-
-La ligne `image_mode(CENTER)` indique que tu vas positionner les images en donnant les coordonnées du centre de l'image (au lieu du coin supérieur gauche).
-
-Ajoute également du code à la fonction `setup()` pour charger l'image choisie dans une variable globale `planete`. La variable doit être globale afin que tu puisses l'utiliser plus tard lorsque tu dessines la planète à l'écran.
-
---- code ---
----
-language: python
-filename: main.py
-line_numbers: true
-line_number_start: 18 
-line_highlights: 21-23
----
-
-def setup():   
-    # Configure ton animation ici   
-    size(taille_ecran, taille_ecran)   
-    image_mode(CENTER)   
-    global planete   
-    planete = load_image('planet.png') # Ta planète choisie
-
-
---- /code ---
-
---- /task ---
-
-### Dessiner l'arrière-plan
-
---- task ---
-
-Définis une fonction `dessine_arriere_plan()`, pour dessiner l'arrière-plan, sous le commentaire qui t'indique où il doit aller.
-
-Utilise `background(0)` pour définir la couleur d'arrière-plan sur noir et ajoute une fonction `image()` pour dessiner la planète. La fonction `image()` se présente comme suit :
-
-`image(nom du fichier image, coordonnée x, coordonnée y, largeur_image, hauteur_image)`
-
-La ligne de code `from p5 import *` te donne des variables globales `width` et `height` basées sur la taille de l'écran. Utilise-les dans ton code pour positionner la planète avec son centre à mi-chemin (`width/2`) et en bas (`height`) de l'écran.
-
---- code ---
----
-language: python
-filename: main.py — draw_background()
-line_numbers: true
-line_number_start: 14 
-line_highlights: 15-17
----
-
-# La fonction dessine_arriere_plan vient ici
+# La fonction dessine_arriere_plan vient ici  
 def dessine_arriere_plan():   
-    background(0) # Raccourci pour background(0, 0, 0) — noir    
-    image(planete, width/2, height, 300, 300) # Dessine l'image
-
-
+    background(0, 0, 0)    
+  
 --- /code ---
 
-Mettre tout le code pour dessiner l'arrière-plan dans une seule fonction rend ton code plus facile à comprendre.
-
---- /task --- 
+--- /task ---
 
 --- task ---
 
-Pour faire apparaître l'arrière-plan, appelle `dessine_arriere_plan()` dans `draw()`. Cela fera en sorte que l'arrière-plan soit redessiné chaque fois que `draw()` est appelé, couvrant ainsi tout dessin plus ancien :
+Ajoute cette fonction à la liste des éléments à `draw()` dans chaque image.
 
 --- code ---
 ---
 language: python
-filename: main.py — draw()
 line_numbers: true
-line_number_start: 28 
-line_highlights: 30
+line_number_start: 25 
+line_highlights: 27
 ---
 
-def draw():   
-    # Choses à faire dans chaque image    
-    dessine_arriere_plan()
+def draw():
+    # Choses à faire dans chaque image
+    dessine_arriere_plan() 
+  
+--- /code ---
+
+--- /task ---
+
+--- task ---
+
+**Test :** exécute ton code et tu devrais voir un carré noir.
+
+--- /task ---
+
+
+
+--- task ---
+
+Ajoute une ligne de code pour afficher l'image d'une planète.
+
+--- code ---
+---
+language: python
+line_numbers: true
+line_number_start: 13 
+line_highlights: 15-16
+---
+def dessine_arriere_plan():  
+    background(0,0,0)
+    image(planete, taille_ecran/2, taille_ecran, 300, 300)
 
 --- /code ---
+
+
+La fonction `image()` doit avoir les données suivantes :
+
+- nom du fichier image : nous avons déjà chargé l'image de la planète
+- coordonnée x : nous avons déjà défini la taille de l'écran
+- coordonnées y
+- largeur de l'image
+- hauteur de l'image
 
 --- /task ---
 
@@ -162,8 +88,35 @@ def draw():
 
 **Test :** exécute ton code et vérifie qu'il dessine un arrière-plan noir avec une demi-planète en bas.
 
+![Une planète sur un arrière-plan noir.](images/step_2.png){:width="300px"}
+
 --- /task ---
 
-Si tu as un compte Raspberry Pi, tu peux cliquer sur le bouton **Save** de ton éditeur de code pour enregistrer une copie de ton projet dans tes Projets.
+### Une autre planète ?
 
---- save ---
+--- task ---
+
+Clique sur l'icône d'image à gauche pour voir la galerie d'images.
+
+![Choisir une autre planète](images/image_gallery.png)
+
+Si tu souhaites modifier l'image de la planète, remplace `planet.png` dans le code par le nom de fichier de la planète choisie, par exemple, `orange_planet.png`.
+
+--- code ---
+---
+language: python
+line_numbers: true
+line_number_start: 17 
+line_highlights: 22
+---
+def setup():
+    # Configure ton animation ici
+    size(taille_ecran, taille_ecran)
+    image_mode(CENTER)
+    global planete
+    planete = load_image('planet.png')
+
+--- /code ---
+
+--- /task ---
+

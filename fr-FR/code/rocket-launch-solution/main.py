@@ -1,57 +1,33 @@
-#!/bin/python3
-
 # Importer le code de la bibliothèque
 from p5 import *
 from random import randint
 
 # Configuration des variables globales
 taille_ecran = 400
-fusee_y = 400
-brule = 100
-rayon_orbite = 250
-orbite_y = taille_ecran - rayon_orbite
+position_fusee = taille_ecran
 
 
 # La fonction dessine_fusee vient ici
 def dessine_fusee():
-    global fusee_y, carburant, brule
-
-    if carburant >= brule and fusee_y > orbite_y:
-        fusee_y -= 1
-        carburant -= brule
-        print('Carburant restant : ', carburant)
-
-        no_stroke()
-
-        for i in range(25):
-            fill(255, 255 - i * 10, 0)
-            ellipse(width/2, fusee_y + i, 8, 3)
-
-        fill(200, 200, 200, 100) # gris transparent
-        for i in range(20): # dessiner 20 ellipses de fumée aléatoire
-            ellipse(width/2 + randint(-5, 5), fusee_y +
-                    randint(20, 50), randint(5, 10), randint(5, 10))
-
-    if carburant < brule and fusee_y > orbite_y:
-        tint(255, 0, 0)
-    elif carburant < 1000 and fusee_y <= orbite_y:
-        tint(0, 255, 0)
-    elif carburant >= 1000 and fusee_y <= orbite_y:
-        tint(255, 200, 0)
-
-    image(fusee, width/2, fusee_y, 64, 64)
-    no_tint()
+    global position_fusee
+    position_fusee = position_fusee - 1
+    image(fusee, width / 2, position_fusee, 64, 64)
+    fill(200, 200, 200, 100)
+    no_stroke()
+    for i in range(20):
+        taille_cercle = randint(5, 10)
+        ellipse(
+            taille_ecran / 2 + randint(-5, 5),
+            position_fusee + randint(20, 50),
+            taille_cercle,
+            taille_cercle,
+        )
 
 
 # La fonction dessine_arriere_plan vient ici
 def dessine_arriere_plan():
-    background(0)
-    image(planete, width/2, height, 300, 300)
-
-    no_fill()
-    stroke(255)
-    stroke_weight(2)
-    ellipse(width/2, height, rayon_orbite * 2, rayon_orbite * 2)
+    background(0, 0, 0)
+    image(planete, taille_ecran / 2, taille_ecran, 300, 300)
 
 
 def setup():
@@ -59,8 +35,8 @@ def setup():
     size(taille_ecran, taille_ecran)
     image_mode(CENTER)
     global planete, fusee
-    planete = load_image('planet.png')
-    fusee = load_image('rocket.png')
+    planete = load_image("purple_planet.png")
+    fusee = load_image("rocket.png")
 
 
 def draw():
@@ -69,5 +45,4 @@ def draw():
     dessine_fusee()
 
 
-carburant = int(input('Combien de kilos de carburant veux-tu utiliser ?'))
 run()
