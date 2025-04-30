@@ -38,7 +38,7 @@ def teken_raket():
 
 --- task ---
 
-De omtrek rond de cirkels wordt de **stroke**genoemd. Voeg wat code toe om het uit te schakelen.
+De omtrek rond de cirkels wordt de **stroke** genoemd. Voeg wat code toe om het uit te schakelen.
 
 
 --- /task ---
