@@ -2,7 +2,7 @@
   <a class="c-survey-banner__link" href="https://form.raspberrypi.org/f/code-editor-feedback" target="_blank">Doe mee aan onze enquête</a> om onze Code Editor te helpen verbeteren!
 </div>
 
-Maak een animatie om een satelliet in een baan om de aarde te brengen — door mee te liften op een raket!
+Maak een animatie om een satelliet in een baan om de aarde te lanceren.
 
 
 
