@@ -8,7 +8,7 @@ Veel plezier!
 
 --- question ---
 ---
-legenda: Vraag 1 van 3
+legend: Vraag 1 van 3
 ---
 
 Welke uitvoer zou je verwachten als je het onderstaande programma zou draaien?
