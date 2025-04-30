@@ -2,7 +2,7 @@
 from p5 import *
 from random import randint
 
-# Global variabelen instellen
+# Globale variabelen instellen
 scherm_grootte = 400
 raket_positie = scherm_grootte
 
