@@ -24,7 +24,7 @@ for i in range(5):
 
   --- feedback ---
 
-Niet helemaal, een `for` lus in Python herhaalt zijn code in een gegeven reeks, en hier creëert `range` een reeks die begint bij `0`.
+Niet helemaal, een `for` lus in Python begint bij 0, tenzij anders gespecificeerd.
 
   --- /feedback ---
 
