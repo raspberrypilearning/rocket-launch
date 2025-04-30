@@ -2,7 +2,7 @@
 
 --- task ---
 
-Open het [projectsjabloon](https://editor.raspberrypi.org/nl-NL/projects/rocket-launch-starter){:target="_blank"}.
+Open het [projectsjabloon](https://editor.raspberrypi.org/en/projects/rocket-launch-starter){:target="_blank"}.
 
 --- /task ---
 
@@ -28,7 +28,7 @@ background(0, 0, 0)
 
 --- task ---
 
-Voeg deze functie toe aan de lijst met dingen om te `tekenen()` in elk frame.
+Voeg deze functie toe aan de lijst met dingen om te tekenen (`draw()`) in elk frame.
 
 --- code ---
 ---
